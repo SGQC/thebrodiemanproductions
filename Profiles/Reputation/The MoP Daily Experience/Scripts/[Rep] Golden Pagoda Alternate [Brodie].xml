@@ -1,0 +1,273 @@
+<HBProfile>
+	<Name>Golden Pagoda Alternate v0.1</Name>
+	<MinLevel>89</MinLevel>
+	<MaxLevel>91</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+		<Vendor Name="Jaluu the Generous" Entry="59908" Type="Repair" X="1228.93" Y="602.73" Z="394.21" />
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- In Enemy Hands -->
+	<Quest Id="30293" Name="In Enemy Hands"> 
+		<Objective Type="KillMob" MobId="63221" KillCount="8">
+			<Hotspots>
+				<Hotspot X="1251.10" Y="1449.01" Z="353.23" />
+				<Hotspot X="1240.74" Y="1327.85" Z="362.06" />
+				<Hotspot X="1177.40" Y="1315.05" Z="360.49" />
+				<Hotspot X="1135.47" Y="1380.12" Z="345.86" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- The Silent Approach -->
+	<Quest Id="30281" Name="The Silent Approach"> 
+		<Objective Type="KillMob" MobId="63065" KillCount="6">
+			<Hotspots>
+				<Hotspot X="1251.10" Y="1449.01" Z="353.23" />
+				<Hotspot X="1240.74" Y="1327.85" Z="362.06" />
+				<Hotspot X="1177.40" Y="1315.05" Z="360.49" />
+				<Hotspot X="1135.47" Y="1380.12" Z="345.86" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Rude Awakenings -->
+	<Quest Id="30292" Name="Rude Awakenings"> 
+		<Objective Type="KillMob" MobId="63130" KillCount="8">
+			<Hotspots>
+				<Hotspot X="1251.10" Y="1449.01" Z="353.23" />
+				<Hotspot X="1240.74" Y="1327.85" Z="362.06" />
+				<Hotspot X="1177.40" Y="1315.05" Z="360.49" />
+				<Hotspot X="1135.47" Y="1380.12" Z="345.86" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder IgnoreCheckpoints="True" >
+
+	<If Condition="((!HasQuest(30282) &amp;&amp; IsQuestCompleted(30282)) ||
+			(!HasQuest(30281) &amp;&amp; IsQuestCompleted(30281)) ||
+			(!HasQuest(30283) &amp;&amp; IsQuestCompleted(30283)) ||
+			(!HasQuest(30292) &amp;&amp; IsQuestCompleted(30292)) ||
+			(!HasQuest(30293) &amp;&amp; IsQuestCompleted(30293)))" >
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected." LogColor="Green" />
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
+
+<!-- Anji Autumnlight -->
+	<While Condition="HasQuestAvailable(58465)" >
+		<CustomBehavior File="InteractWith" MobId="58465" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Kun Autumnlight -->
+	<While Condition="HasQuestAvailable(58471)" >
+		<CustomBehavior File="InteractWith" MobId="58471" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Leven Dawnblade -->
+	<While Condition="HasQuestAvailable(58408)" >
+		<CustomBehavior File="InteractWith" MobId="58408" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Ren Firetongue -->
+	<If Condition="HasQuestAvailable(58469)" >
+		<PickUp QuestName="A Smashing Impression" QuestId="30283" GiverName="Ren Firetongue" GiverId="58469" />
+	</If>
+
+<!-- He Softfoot -->
+	<While Condition="HasQuestAvailable(58470)" >
+		<CustomBehavior File="InteractWith" MobId="58470" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+	<If Condition="(Me.Location.Distance(new WoWPoint(1215.807, 1045.988, 426.0368)) &lt; 25)" >
+		<RunTo X="1216.391" Y="1075.978" Z="420.46" />
+	</If>
+
+<!-- Burning Away the Filth -->
+	<If Condition="(HasQuest(30282)) &amp;&amp; (!IsQuestCompleted(30282))" >
+
+		<CustomBehavior File="Message" Text="Starting Burning Away the Filth" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="30282" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="1234.622" Y="1459.12" Z="351.6492" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="(HasQuest(30282)) &amp;&amp; (!IsQuestCompleted(30282))" >
+			<RunTo X="1255.798" Y="1416.6" Z="353.2284" />
+			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<RunTo X="1241.337" Y="1343.138" Z="360.4936" />
+			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<RunTo X="1153.487" Y="1332.492" Z="351.4222" />
+			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<RunTo X="1175.964" Y="1410.789" Z="343.0818" />
+			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</While>
+	</If>
+
+<!-- A Smashing Impression -->
+	<If Condition="(HasQuest(30283)) &amp;&amp; (!IsQuestCompleted(30283))" >
+
+		<CustomBehavior File="Message" Text="Starting A Smashing Impression" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="30283" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="1228.322" Y="1353.793" Z="363.7739" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="(HasQuest(30283)) &amp;&amp; (!IsQuestCompleted(30283))" >
+			<CustomBehavior File="InteractWith" MobId="63089" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
+			<CustomBehavior File="InteractWith" MobId="63088" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
+			<CustomBehavior File="InteractWith" MobId="63087" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
+			<CustomBehavior File="InteractWith" MobId="63090" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
+		</While>
+	</If>
+
+<!-- In Enemy Hands -->
+	<If Condition="(HasQuest(30293)) &amp;&amp; (!IsQuestCompleted(30293))" >
+
+		<CustomBehavior File="Message" Text="Starting In Enemy Hands" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="30293" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="In Enemy Hands" QuestId="30293" Type="KillMob" MobId="63225" KillCount="8" />
+	</If>
+
+<!-- The Silent Approach -->
+	<If Condition="(HasQuest(30281)) &amp;&amp; (!IsQuestCompleted(30281))" >
+
+		<CustomBehavior File="Message" Text="Starting The Silent Approach" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="30281" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="The Silent Approach" QuestId="30281" Type="KillMob" MobId="63065" KillCount="6" />
+	</If>
+
+<!-- Rude Awakenings -->
+	<If Condition="(HasQuest(30292)) &amp;&amp; (!IsQuestCompleted(30292))" >
+
+		<CustomBehavior File="Message" Text="Starting Rude Awakenings" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="30292" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Rude Awakenings" QuestId="30292" Type="KillMob" MobId="63130" KillCount="8" />
+	</If>
+
+<!-- Quest Turn Ins -->
+
+	<If Condition="((HasQuest(30282)) &amp;&amp; (IsQuestCompleted(30282)) ||
+			(HasQuest(30281)) &amp;&amp; (IsQuestCompleted(30281)) ||
+			(HasQuest(30283)) &amp;&amp; (IsQuestCompleted(30283)) ||
+			(HasQuest(30292)) &amp;&amp; (IsQuestCompleted(30292)) ||
+			(HasQuest(30293)) &amp;&amp; (IsQuestCompleted(30293)))" >
+		<CustomBehavior File="Message" Text="Quests Completed. Heading back to the Pagoda." LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="1215.238" Y="1063.079" Z="425.9665" />
+		<CustomBehavior File="ForcedDismount" />
+	</If>
+
+  	<If Condition="(HasQuest(30282)) &amp;&amp; (IsQuestCompleted(30282))" >
+		<TurnIn QuestName="Burning Away the Filth" QuestId="30282" TurnInName="Anji Autumnlight" TurnInId="58465" />
+	</If>
+
+  	<If Condition="(HasQuest(30293)) &amp;&amp; (IsQuestCompleted(30293))" >
+		<TurnIn QuestName="In Enemy Hands" QuestId="30293" TurnInName="Kun Autumnlight" TurnInId="58471" />
+	</If>
+
+  	<If Condition="(HasQuest(30292)) &amp;&amp; (IsQuestCompleted(30292))" >
+		<TurnIn QuestName="Rude Awakenings" QuestId="30292" TurnInName="Kun Autumnlight" TurnInId="58471" />
+	</If>
+
+  	<If Condition="(HasQuest(30281)) &amp;&amp; (IsQuestCompleted(30281))" >
+		<TurnIn QuestName="The Silent Approach" QuestId="30281" TurnInName="He Softfoot" TurnInId="58470" />
+	</If>
+
+  	<If Condition="(HasQuest(30283)) &amp;&amp; (IsQuestCompleted(30283))" >
+		<TurnIn QuestName="A Smashing Impression" QuestId="30283" TurnInName="Ren Firetongue" TurnInId="58469" />
+	</If>
+
+<!-- Next Phase Kicker check -->
+<CustomBehavior File="Message" Text="Checking for Next phase..." LogColor="Green" />
+
+<!-- Anji Autumnlight -->
+	<While Condition="HasQuestAvailable(58465)" >
+		<CustomBehavior File="InteractWith" MobId="58465" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Kun Autumnlight -->
+	<While Condition="HasQuestAvailable(58471)" >
+		<CustomBehavior File="InteractWith" MobId="58471" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Leven Dawnblade -->
+	<While Condition="HasQuestAvailable(58408)" >
+		<CustomBehavior File="InteractWith" MobId="58408" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Ren Firetongue -->
+	<While Condition="HasQuestAvailable(58469)" >
+		<CustomBehavior File="InteractWith" MobId="58469" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- He Softfoot -->
+	<While Condition="HasQuestAvailable(58470)" >
+		<CustomBehavior File="InteractWith" MobId="58470" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+	<If Condition="(Me.Location.Distance(new WoWPoint(1215.807, 1045.988, 426.0368)) &lt; 25)" >
+		<RunTo X="1216.391" Y="1075.978" Z="420.46" />
+	</If>
+
+<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Golden Lotus Dailies [Brodie]" />
+
+<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />
+
+</QuestOrder>
+</HBProfile>
