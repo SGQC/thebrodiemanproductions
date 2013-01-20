@@ -39,6 +39,22 @@
 
 <!-- Jade Forest -->
 
+<!-- Wodin's Mantid Shanker -->
+	<If Condition="!IsQuestCompleted(31397)">
+		<CustomBehavior File="FlyTo" X="3316.01" Y="-1296.73" Z="202.62" />
+		<If Condition="!IsQuestCompleted(31397)">
+			<CustomBehavior File="InteractWith" MobId="213363" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+	</If>
+
+<!-- Jade Infused Blade -->
+	<If Condition="!IsQuestCompleted(31307)">
+		<CustomBehavior File="FlyTo" X="1483.69" Y="-1282.93" Z="246.25" />
+		<If Condition="!IsQuestCompleted(31307)">
+			<CustomBehavior File="InteractWith" MobId="64272" CollectionDistance="200" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+	</If>
+
 <!-- Valley of the Four Winds -->
 
 <!-- Ancient Pandaren Fishing Charm -->
@@ -58,6 +74,22 @@
 	</If>
 
 <!-- Krasarang Wilds -->
+
+<!-- Pandaren Fishing Spear -->
+	<If Condition="!IsQuestCompleted(31409)">
+		<CustomBehavior File="FlyTo" X="-1648.84" Y="571.90" Z="1.58" />
+		<If Condition="!IsQuestCompleted(31409)">
+			<CustomBehavior File="InteractWith" MobId="213653" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+	</If>
+
+<!-- Barrel of Banana Infused Rum -->
+	<If Condition="!IsQuestCompleted(31411)">
+		<CustomBehavior File="FlyTo" X="-2891.46" Y="502.24" Z="74.32" />
+		<If Condition="!IsQuestCompleted(31411)">
+			<CustomBehavior File="InteractWith" MobId="214439" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+	</If>
 
 <!-- Dread Wastes -->
 
