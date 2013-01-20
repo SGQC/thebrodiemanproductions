@@ -100,6 +100,38 @@
 		</Objective>
 	</Quest>
 
+<!-- Runes In The Ruins -->
+	<Quest Id="30206" Name="Runes In The Ruins"> 
+		<Objective Type="CollectItem" ItemId="85278" CollectCount="12">
+			<CollectFrom>
+				<GameObject Name="Guo-Lai Runestone" Id="213180" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="1429.07" Y="1695.00" Z="344.24" />
+				<Hotspot X="1529.30" Y="1718.48" Z="370.12" />
+				<Hotspot X="1574.99" Y="1655.15" Z="389.01" />
+				<Hotspot X="1600.44" Y="1698.10" Z="406.81" />
+				<Hotspot X="1624.16" Y="1788.32" Z="427.99" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Carved In Stone -->
+	<Quest Id="30481" Name="Carved In Stone"> 
+		<Objective Type="CollectItem" ItemId="85278" CollectCount="12">
+			<CollectFrom>
+				<GameObject Name="Guo-Lai Runestone" Id="213180" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="1429.07" Y="1695.00" Z="344.24" />
+				<Hotspot X="1529.30" Y="1718.48" Z="370.12" />
+				<Hotspot X="1574.99" Y="1655.15" Z="389.01" />
+				<Hotspot X="1600.44" Y="1698.10" Z="406.81" />
+				<Hotspot X="1624.16" Y="1788.32" Z="427.99" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
 <!-- End of Quest Overrides --> 
 
 <QuestOrder IgnoreCheckpoints="True" >
@@ -236,44 +268,51 @@
 <!-- Runes in the Ruins/Carved in Stone -->
  	<If Condition="(HasQuest(30206) &amp;&amp; !IsQuestCompleted(30206)) ||
 			(HasQuest(30481) &amp;&amp; !IsQuestCompleted(30481))">
-		<If Condition="HasQuest(30206) &amp;&amp; !IsQuestCompleted(30206)" >
+		<If Condition="!IsQuestCompleted(30206)" >
 			<CustomBehavior File="Message" Text="Starting Runes in the Ruins" LogColor="Green"  />
 			<CustomBehavior File="UserSettings" QuestId="30206" LootMobs="true" PullDistance="10" />
 		</If>
-		<If Condition="HasQuest(30481) &amp;&amp; !IsQuestCompleted(30481)" >
+		<If Condition="!IsQuestCompleted(30481)" >
 			<CustomBehavior File="Message" Text="Starting Carved in Stone" LogColor="Green"  />
 			<CustomBehavior File="UserSettings" QuestId="30481" LootMobs="true" PullDistance="10" />
 		</If>
 		<CustomBehavior File="FlyTo" X="1426.948" Y="1688.124" Z="344.2366" />
 		<CustomBehavior File="ForcedDismount"/>
-		<CustomBehavior File="CollectThings" ObjectId="213180" CollectItemId="85278" CollectItemCount="12" HuntingGroundRadius="200" NonCompeteDistance="5" PostInteractDelay="1000" >
-			<Hotspot X="1429.07" Y="1695.00" Z="344.24" />
-			<Hotspot X="1529.30" Y="1718.48" Z="370.12" />
-			<Hotspot X="1574.99" Y="1655.15" Z="389.01" />
-			<Hotspot X="1600.44" Y="1698.10" Z="406.81" />
-			<Hotspot X="1624.16" Y="1788.32" Z="427.99" />
-		</CustomBehavior>
+		<If Condition="!IsQuestCompleted(30206)" >
+			<Objective QuestName="Runes In The Ruins" QuestId="30206" Type="CollectItem" ItemId="85278" CollectCount="12" />
+		</If>
+		<If Condition="!IsQuestCompleted(30481)" >
+			<Objective QuestName="Carved In Stone" QuestId="30481" Type="CollectItem" ItemId="85278" CollectCount="12" />
+		</If>
 	</If>
 
 <!-- Hard as a Rock/No Stone Unturned -->
  	<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
 			(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))">
-		<If Condition="HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)" >
+		<If Condition="!IsQuestCompleted(30304)" >
 			<CustomBehavior File="Message" Text="Starting Hard as a Rock" LogColor="Green"  />
 			<CustomBehavior File="UserSettings" QuestId="30304" LootMobs="true" PullDistance="15" />
 		</If>
-		<If Condition="HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299)" >
+		<If Condition="!IsQuestCompleted(30299)" >
 			<CustomBehavior File="Message" Text="Starting No Stone Unturned" LogColor="Green"  />
 			<CustomBehavior File="UserSettings" QuestId="30299" LootMobs="true" PullDistance="15" />
 		</If>
-		<CustomBehavior File="FlyTo" X="1368.117" Y="1676.532" Z="340.6507" />
-		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
-				(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))">
-			<CustomBehavior File="InteractWith" MobState="Alive" MobId2="63674" MobId3="63556" MobId4="63652" MobId="63333" CollectionDistance="4000" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click WorldFrame" />
-			<CustomBehavior File="InteractWith" MobId="63447" CollectionDistance="4000" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click WorldFrame" />
+		<While Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+			<If Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+				<CustomBehavior File="FlyTo" X="1397.36" Y="1677.44" Z="344.24" />
+				<CustomBehavior File="ForcedDismount"/>
+				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+				<CustomBehavior File="FlyTo" X="1268.16" Y="1837.10" Z="344.80" />
+				<CustomBehavior File="ForcedDismount"/>
+				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+				<CustomBehavior File="FlyTo" X="1613.10" Y="1804.64" Z="427.99" />
+				<CustomBehavior File="ForcedDismount"/>
+				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
 		</While>
 	</If>
 
@@ -281,7 +320,7 @@
  	<If Condition="HasQuest(30300) &amp;&amp; !IsQuestCompleted(30300)">
 		<CustomBehavior File="Message" Text="Starting The Key to Success" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="true" PullDistance="25" />
-		<If Condition="(HasQuest(30300) &amp;&amp; !IsObjectiveComplete(1,30300))" >
+		<If Condition="!IsObjectiveComplete(1,30300)" >
 
 			<CustomBehavior File="FlyTo" X="1337.732" Y="1678.051" Z="343.5833" />
 			<CustomBehavior File="ForcedDismount"/>
@@ -289,7 +328,7 @@
 		</If>
 		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="ForcedMount" MountType="Flying" />
-		<While Condition="(HasQuest(30300) &amp;&amp; !IsQuestCompleted(30300))" >
+		<While Condition="!IsQuestCompleted(30300)" >
 
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<CustomBehavior File="KeyToSuccess" />
