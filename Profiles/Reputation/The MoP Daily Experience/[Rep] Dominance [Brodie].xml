@@ -45,6 +45,28 @@
        		</Objective>
    	</Quest>
 
+<!-- Hero Killer -->
+   	<Quest Id="32135" Name="Hero Killer">
+       		<Objective Type="KillMob" MobId="67636"  KillCount="1">
+           		<Hotspots>
+				<Hotspot X="-943.44" Y="-873.70" Z="1.14" />
+           		</Hotspots>
+       		</Objective>
+   	</Quest>
+
+<!-- Worker Harassment -->
+   	<Quest Id="32132" Name="Worker Harassment">
+       		<Objective Type="KillMob" MobId="67423"  KillCount="30">
+           		<Hotspots>
+				<Hotspot X="-843.04" Y="-1018.12" Z="14.93" />
+				<Hotspot X="-805.61" Y="-970.17" Z="15.61" />
+				<Hotspot X="-775.84" Y="-1005.23" Z="23.68" />
+				<Hotspot X="-806.27" Y="-943.06" Z="15.52" />
+				<Hotspot X="-770.04" Y="-847.69" Z="13.22" />
+           		</Hotspots>
+       		</Objective>
+   	</Quest>
+
 <!-- Wanted: Chief Engineer Cogwrench -->
    	<Quest Id="32222" Name="Wanted: Chief Engineer Cogwrench">
        		<Objective Type="KillMob" MobId="68012"  KillCount="1">
@@ -84,6 +106,21 @@
 			</CollectFrom>
            		<Hotspots>
             			<Hotspot X="-816.82" Y="-975.38" Z="-82.32" />
+           		</Hotspots>
+       		</Objective>
+   	</Quest>
+
+<!-- Good Luck, Have Fun -->
+   	<Quest Id="32130" Name="Good Luck, Have Fun">
+       		<Objective Type="CollectItem" ItemId="92474" CollectCount="10">
+			<CollectFrom>
+				<Mob Name="Shieldwall Vindicator" Id="67296" />
+				<Mob Name="Shieldwall Footman" Id="67304" />
+				<Mob Name="Shieldwall Rifleman" Id="67297" />
+				<Mob Name="Shieldwall Huntress" Id="67317" />
+			</CollectFrom>
+           		<Hotspots>
+            			<Hotspot X="-923.45" Y="-853.28" Z="6.31" />
            		</Hotspots>
        		</Objective>
    	</Quest>
@@ -139,10 +176,10 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
-	<If Condition="(!HasQuest(32128) || !HasQuest(32235) || !HasQuest(32449) || !HasQuest(32450) ||
-			!HasQuest(32127) || !HasQuest(32126) || !HasQuest(32123)) &amp;&amp;
-			(!HasQuest(32222) &amp;&amp; !HasQuest(32214) &amp;&amp; !HasQuest(32136) &amp;&amp;
-			!HasQuest(32199) &amp;&amp; !HasQuest(32137) &amp;&amp; !HasQuest(32237))" >
+	<If Condition="!HasQuest(32128) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32449) &amp;&amp; !HasQuest(32450) &amp;&amp;
+			!HasQuest(32127) &amp;&amp; !HasQuest(32126) &amp;&amp; !HasQuest(32123) &amp;&amp;
+			!HasQuest(32222) &amp;&amp; !HasQuest(32214) &amp;&amp; !HasQuest(32136) &amp;&amp;
+			!HasQuest(32199) &amp;&amp; !HasQuest(32137) &amp;&amp; !HasQuest(32237)" >
 		<CustomBehavior File="FlyTo" X="-1875.92" Y="2328.38" Z="9.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -213,6 +250,33 @@
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
+
+<!-- Hero Killer -->
+	<If Condition="HasQuest(32135) &amp;&amp; !IsQuestCompleted(32135)" >
+		<CustomBehavior File="Message" Text="Starting Hero Killer" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32135" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-943.44" Y="-873.70" Z="1.14" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Hero Killer" QuestId="32135" Type="KillMob" MobId="67636" KillCount="1" />
+	</If>
+
+<!-- Good Luck, Have Fun -->
+	<If Condition="HasQuest(32130) &amp;&amp; !IsQuestCompleted(32130)" >
+		<CustomBehavior File="Message" Text="Starting Good Luck, Have Fun" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32130" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-943.44" Y="-873.70" Z="1.14" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Good Luck, Have Fun" QuestId="32135" Type="CollectItem" ItemId="92474" CollectCount="10" />
+	</If>
+
+<!-- Worker Harassment -->
+	<If Condition="HasQuest(32132) &amp;&amp; !IsQuestCompleted(32132)" >
+		<CustomBehavior File="Message" Text="Starting Worker Harassment" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32132" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-827.05" Y="-974.23" Z="18.55" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Worker Harassment" QuestId="32135" Type="KillMob" MobId="67423" KillCount="30" />
+	</If>
 
 <!-- Work Order: Fuel -->
 	<If Condition="HasQuest(32136)">
@@ -311,7 +375,7 @@
 <!-- Wanted: Chief Engineer Cogwrench -->
 	<If Condition="HasQuest(32222) &amp;&amp; !IsQuestCompleted(32222)" >
 		<CustomBehavior File="Message" Text="Starting Wanted: Chief Engineer Cogwrench" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32136" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32222" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-1711.18" Y="1932.07" Z="12.45" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Wanted: Chief Engineer Cogwrench" QuestId="32222" Type="KillMob" MobId="68012" KillCount="1" />
