@@ -307,6 +307,10 @@
 		<CustomBehavior File="MyCTM" X="3682.663" Y="547.6912" Z="639.6912" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <!-- <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of August Celestials Dailies" />

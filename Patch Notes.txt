@@ -2,6 +2,18 @@ Patch Notes
 
 1/20/13
 
+r16
+Global Update
+-- All major dailies hubs will now check and combine Motes of Harmony into Spirits of Harmony upon completion.
+Dominance Offensive
+-- Changed FlyTo path for Tear It Up, to avoid running across the map.
+
+r15
+Mistfall Village
+-- Version number update
+Ruins of Guo-Lai
+-- Fixed endless loop of trying to kick statues after quest was completed. May still try and kick one extra before leaving.
+
 r13
 Farm Dailies
 -- Added check to shapeshift cancel for Shaman. Testing phase. Need feedback, and if successful, will add to the grinding profiles.

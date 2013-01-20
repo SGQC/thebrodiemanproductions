@@ -186,12 +186,12 @@
 			!HasQuest(32222) &amp;&amp; !HasQuest(32214) &amp;&amp; !HasQuest(32136) &amp;&amp;
 			!HasQuest(32199) &amp;&amp; !HasQuest(32343) &amp;&amp; !HasQuest(32342) &amp;&amp;
 			!HasQuest(32345) &amp;&amp; !HasQuest(32120) &amp;&amp; !HasQuest(32237) &amp;&amp;
-			!HasQuest(32137)" >
+			!HasQuest(32137) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32126) &amp;&amp;
+			!HasQuest(32123) &amp;&amp; !HasQuest(32128) &amp;&amp; !HasQuest(32127)" >
 		<CustomBehavior File="Message" Text="Flying to Domination Point." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1800.39" Y="2466.03" Z="24.58" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-	</If>
 
 <!-- Blood Guard Gro'tash -->
 	<While Condition="HasQuestAvailable(67880)" >
@@ -221,6 +221,8 @@
 		<CustomBehavior File="FlyTo" X="-1875.92" Y="2328.38" Z="9.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	</If>
+
 	</If>
 
 <!-- Bounty Board -->
@@ -491,7 +493,7 @@
 	<If Condition="HasQuest(32126) &amp;&amp; !IsQuestCompleted(32126)">
 		<CustomBehavior File="Message" Text="Starting Tear It Up" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32126" LootMobs="true" PullDistance="5" />
-		<CustomBehavior File="FlyTo" X="-1974.40" Y="2581.31" Z="1.31" />
+		<CustomBehavior File="FlyTo" X="-2205.108" Y="2423.12" Z="2.368305" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32126)" >
 			<If Condition="!IsQuestCompleted(32126)" >
@@ -851,6 +853,10 @@
 	<If Condition="HasQuest(32127) &amp;&amp; IsQuestCompleted(32127)" >
 		<TurnIn QuestName="All Dead, All Dead" QuestId="32127" TurnInName="Brolic" TurnInId="67767" />
 	</If>
+
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
 
 <!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] Dailies [Brodie]" /> -->
 

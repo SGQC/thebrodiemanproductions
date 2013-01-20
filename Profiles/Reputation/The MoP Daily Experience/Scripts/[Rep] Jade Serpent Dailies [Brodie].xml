@@ -249,6 +249,10 @@
 		<TurnIn QuestName="Flames of the Void" QuestId="30068" TurnInName="Elder Sage Tai-Feng" TurnInID="57324" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <!-- <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of August Celestials Dailies" />
