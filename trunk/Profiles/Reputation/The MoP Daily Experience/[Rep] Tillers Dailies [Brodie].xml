@@ -1350,6 +1350,10 @@
 		<TurnIn QuestName="A Present for Teacher" QuestId="31820" TurnInName="Nomi" TurnInId="64337" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <CustomBehavior File="LoadProfile" ProfileName="[Rep] Cloud Serpent Dailies [Brodie]" /> 
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Tillers Dailies" />

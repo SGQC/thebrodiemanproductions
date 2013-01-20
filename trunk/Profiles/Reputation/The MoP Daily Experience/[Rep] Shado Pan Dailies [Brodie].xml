@@ -1213,6 +1213,10 @@
 		<TurnIn QuestName="Sra'thik Swarmlord" QuestId="31203" TurnInName="Ling of the Six Pools" TurnInId="63614" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Shado-Pan Dailies" />

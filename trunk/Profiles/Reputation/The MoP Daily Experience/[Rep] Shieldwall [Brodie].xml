@@ -820,6 +820,10 @@
 		<TurnIn QuestName="Siege Damage" QuestId="32152" TurnInName="Marshal Troteman" TurnInId="67631" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="MORE COMING SOON!!!" />

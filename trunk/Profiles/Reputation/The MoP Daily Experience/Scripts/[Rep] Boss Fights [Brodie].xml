@@ -409,9 +409,13 @@
 		<TurnIn QuestName="Behind Our Lines" QuestId="31136" TurnInName="Leven Dawnblade" TurnInId="58408" />
 	</If>
 
-<If Condition="HasItem(90625)" >
-	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90625)" WaitTime="1000" />
-</If>
+	<If Condition="HasItem(90625)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90625)" WaitTime="1000" />
+	</If>
+
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
 
 <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] August Celestials Dailies [Brodie]" />
 

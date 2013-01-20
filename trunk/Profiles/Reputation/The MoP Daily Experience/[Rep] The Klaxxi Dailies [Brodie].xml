@@ -1122,6 +1122,10 @@
 		<TurnIn QuestName="Rampaging Against The Machine" QuestId="31808" TurnInName="Kaz'tik the Manipulator" TurnInId="63758" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Klaxxi Dailies" />

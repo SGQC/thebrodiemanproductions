@@ -1337,6 +1337,10 @@
 		<TurnIn QuestName="The Big Brew-haha" QuestId="31713" TurnInName="Ace Longpaw" TurnInId="58506" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <If Condition="Me.IsAlliance" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" />
 </If>

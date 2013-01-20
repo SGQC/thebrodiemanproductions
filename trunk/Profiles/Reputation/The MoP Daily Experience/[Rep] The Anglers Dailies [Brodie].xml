@@ -545,6 +545,10 @@
 		<TurnIn QuestName="Shocking" QuestId="30584" TurnInName="Fisherman Haito" TurnInId="59584" />
 	</If>
 
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
 <CustomBehavior File="LoadProfile" ProfileName="[Rep] The Klaxxi Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of All the Dailies...Or are we?" />
