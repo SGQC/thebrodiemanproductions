@@ -297,18 +297,22 @@
 			<CustomBehavior File="Message" Text="Starting No Stone Unturned" LogColor="Green"  />
 			<CustomBehavior File="UserSettings" QuestId="30299" LootMobs="true" PullDistance="15" />
 		</If>
-		<While Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
-			<If Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+		<While Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
+				(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
+			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
+					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
 				<CustomBehavior File="FlyTo" X="1397.36" Y="1677.44" Z="344.24" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
 			</If>
-			<If Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
+					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
 				<CustomBehavior File="FlyTo" X="1268.16" Y="1837.10" Z="344.80" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
 			</If>
-			<If Condition="!IsQuestCompleted(30304) || !IsQuestCompleted(30299)" >
+			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
+					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
 				<CustomBehavior File="FlyTo" X="1613.10" Y="1804.64" Z="427.99" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
