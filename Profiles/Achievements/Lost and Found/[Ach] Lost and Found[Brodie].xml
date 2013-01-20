@@ -1,0 +1,117 @@
+<HBProfile>
+	<Name>Lost and Found v0.1</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>200</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<QuestOrder IgnoreCheckpoints="True" >
+
+<CustomBehavior File="Message" Text="Checking Your Achievements..." LogColor="Green" />
+
+<!-- Starting Achievement Grind -->
+
+<CustomBehavior File="Message" Text="Beginning Achievement Grind." LogColor="Green"  />
+
+<!-- Jade Forest -->
+
+<!-- Valley of the Four Winds -->
+
+<!-- Ancient Pandaren Fishing Charm -->
+	<If Condition="!IsQuestCompleted(31284)">
+		<CustomBehavior File="FlyTo" X="452.09" Y="841.98" Z="145.50" />
+		<If Condition="!IsQuestCompleted(31284)">
+			<CustomBehavior File="InteractWith" MobId="64004" CollectionDistance="200" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+	</If>
+
+<!-- Ancient Pandaren Woodcutter -->
+	<If Condition="!IsQuestCompleted(31292)">
+		<CustomBehavior File="FlyTo" X="76.77" Y="886.74" Z="174.93" />
+		<If Condition="!IsQuestCompleted(31292)">
+			<CustomBehavior File="InteractWith" MobId="64191" CollectionDistance="200" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+	</If>
+
+<!-- Krasarang Wilds -->
+
+<!-- Dread Wastes -->
+
+<!-- Blade of the Prime -->
+	<If Condition="!IsQuestCompleted(31433)">
+		<CustomBehavior File="FlyTo" X="-78.765" Y="4601.393" Z="81.11" />
+		<If Condition="!IsQuestCompleted(31433)">
+			<CustomBehavior File="InteractWith" MobId="213967" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
+		</If>
+	</If>
+
+<!-- Manipulator's Talisman -->
+	<If Condition="!IsQuestCompleted(31432)">
+		<CustomBehavior File="FlyTo" X="-935.97" Y="3836.065" Z="12.56" />
+		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+		<CustomBehavior File="FlyTo" X="-786.71" Y="3862.54" Z="18.55" />
+		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+		<CustomBehavior File="FlyTo" X="-803.78" Y="4002.68" Z="11.32" />
+		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+		<CustomBehavior File="FlyTo" X="-943.437" Y="3934.32" Z="8.31" />
+		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
+		</If>
+	</If>
+
+<!-- Blade of the Poisoned Mind -->
+	<If Condition="!IsQuestCompleted(31438)">
+		<CustomBehavior File="FlyTo" X="-78.765" Y="4601.393" Z="81.11" />
+		<If Condition="!IsQuestCompleted(31438)">
+			<CustomBehavior File="InteractWith" MobId="213972" ObjectType="GameObject" CollectionDistance="50" WaitForNpcs="false" />
+		</If>
+	</If>
+
+<!-- Townlong Steppes -->
+
+<!-- Kun-Lai Summit -->
+
+<!-- Tablet of Ren Yun -->
+	<If Condition="!IsQuestCompleted(31417)">
+		<CustomBehavior File="FlyTo" X="3434.76" Y="2036.34" Z="1215.07" />
+		<If Condition="!IsQuestCompleted(31417)">
+			<CustomBehavior File="InteractWith" MobId="213765" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+	</If>
+
+<!-- The Veiled Stair -->
+
+<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="Did we win?!" />
+
+</QuestOrder>
+</HBProfile>
