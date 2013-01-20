@@ -125,6 +125,44 @@
        		</Objective>
    	</Quest>
 
+<!-- Runnin On Empty -->
+	<Quest Id="32137" Name="Runnin On Empty">
+		<Objective Type="CollectItem" ItemId="91846" CollectCount="9">
+			<CollectFrom>
+				<GameObject Name="Distilled Fuel" Id="216314" />
+				<GameObject Name="Distilled Fuel" Id="216176" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-2033.483" Y="1754.825" Z="-0.2666285" />
+				<Hotspot X="-2119.656" Y="1785.014" Z="1.881254" />
+				<Hotspot X="-2123.813" Y="1758.504" Z="1.006732" />
+				<Hotspot X="-2102.939" Y="1718.518" Z="-2.081028" />
+				<Hotspot X="-2108.988" Y="1709.735" Z="-1.306956" />
+				<Hotspot X="-2144.143" Y="1698.098" Z="-1.823825" />
+				<Hotspot X="-2074.917" Y="1690.826" Z="-0.638281" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+ 
+<!-- Krasarang Steampot -->
+	<Quest Id="32199" Name="Krasarang Steampot">
+		<Objective Type="CollectItem" ItemId="91869" CollectCount="5">
+			<CollectFrom>
+				<Mob Name="Polluted Viseclaw Fry" Id="68583" />
+				<Mob Name="Polluted Viseclaw" Id="67896" />
+				<Mob Name="Polluted Viseclaw Scuttler" Id="68584" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-2049.798" Y="1782.826" Z="-0.7303758" />
+				<Hotspot X="-2119.979" Y="1781.818" Z="1.841014" />
+				<Hotspot X="-2219.958" Y="1826.19" Z="0.9225706" />
+				<Hotspot X="-2264.076" Y="1965.294" Z="1.989139" />
+				<Hotspot X="-2214.408" Y="1916.218" Z="-0.7799273" />
+				<Hotspot X="-2127.684" Y="1910.254" Z="-0.7461271" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
 <!-- End of Quest Overrides --> 
 
 <QuestOrder IgnoreCheckpoints="True" >
@@ -364,9 +402,31 @@
 		</While>
 	</If>
 
-	<If Condition="HasQuest(32237) &amp;&amp; IsQuestCompleted(32237)">
+<!-- Runnin On Empty -->
+	<If Condition="HasQuest(32137) &amp;&amp; !IsQuestCompleted(32137)" >
+		<CustomBehavior File="Message" Text="Starting Runnin On Empty" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32137" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Runnin On Empty" QuestId="32137" Type="CollectItem" ItemId="91846" CollectCount="9" />
+	</If>
+
+<!-- Krasarang Steampot -->
+	<If Condition="HasQuest(32199) &amp;&amp; !IsQuestCompleted(32199)" >
+		<CustomBehavior File="Message" Text="Starting Krasarang Steampot" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32199" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Krasarang Steampot" QuestId="32199" Type="CollectItem" ItemId="91869" CollectCount="5" />
+	</If>
+
+	<If Condition="HasQuest(32237) &amp;&amp; IsQuestCompleted(32237) ||
+			HasQuest(32199) &amp;&amp; IsQuestCompleted(32199)">
 		<CustomBehavior File="FlyTo" X="-1993.84" Y="1755.70" Z="2.13" />
 		<CustomBehavior File="ForcedDismount" />
+		<While Condition="HasQuest(32199)" >
+			<TurnIn QuestName="Krasarang Steampot" QuestId="32199" TurnInName="Sezik Steampot" TurnInId="67536" />
+		</While>
 		<While Condition="HasQuest(32237)">
 			<TurnIn QuestName="Precious Resource" QuestId="32237" TurnInName="Bixy Buzzsaw" TurnInId="67553" />
 		</While>
@@ -415,9 +475,7 @@
 	</If>
 
 <!-- Sentry Wards -->
-<!-- Good Luck, Have Fun -->
 <!-- We Require More Minerals -->
-<!-- Worker Harassment -->
 
 <!-- Flash! Aaaaaahhhh! -->
 	<If Condition="HasQuest(32235) &amp;&amp; !IsQuestCompleted(32235)">
@@ -470,6 +528,26 @@
 		<CustomBehavior File="FlyTo" X="-2167.76" Y="2374.60" Z="3.86" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Death on Two Legs" QuestId="32123" Type="KillMob" MobId="67354" MobId2="67425" MobId3="67913" KillCount="10" />
+	</If>
+
+	<If Condition="HasQuest(32135) &amp;&amp; IsQuestCompleted(32135) ||
+			HasQuest(32130) &amp;&amp; IsQuestCompleted(32130) ||
+			HasQuest(32132) &amp;&amp; IsQuestCompleted(32132)">
+		<CustomBehavior File="Message" Text="Quests Completed. Returning to Domination Point." LogColor="Green"  />
+		<CustomBehavior File="FlyTo" X="-1183.228" Y="-610.1541" Z="23.77427" />
+		<CustomBehavior File="ForcedDismount" />
+	</If>
+
+	<If Condition="HasQuest(32135) &amp;&amp; IsQuestCompleted(32135)" >
+		<TurnIn QuestName="Hero Killer" QuestId="32135" TurnInName="Shademaster Kiryn" TurnInId="67628" />
+	</If>
+
+	<If Condition="HasQuest(32132) &amp;&amp; IsQuestCompleted(32132)" >
+		<TurnIn QuestName="Worker Harassment" QuestId="32132" TurnInName="Shademaster Kiryn" TurnInId="67628" />
+	</If>
+
+	<If Condition="HasQuest(32130) &amp;&amp; IsQuestCompleted(32130)" >
+		<TurnIn QuestName="Good Luck, Have Fun" QuestId="32130" TurnInName="Zazzix Sparkrocket" TurnInId="67402" />
 	</If>
 
 	<If Condition="HasQuest(32235) &amp;&amp; IsQuestCompleted(32235) ||
@@ -739,6 +817,7 @@
 
 	<If Condition="HasQuest(32214) &amp;&amp; IsQuestCompleted(32214) ||
 			HasQuest(32199) &amp;&amp; IsQuestCompleted(32199) ||
+			HasQuest(32137) &amp;&amp; IsQuestCompleted(32137) ||
 			HasQuest(32222) &amp;&amp; IsQuestCompleted(32222)" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Domination Point, East." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1875.92" Y="2328.38" Z="9.44" />
@@ -747,6 +826,10 @@
 
 	<If Condition="HasQuest(32214) &amp;&amp; IsQuestCompleted(32214)" >
 		<TurnIn QuestName="Bilgewater Infiltrators" QuestId="32214" TurnInName="Rivett Clutchpop" TurnInId="67608" />
+	</If>
+
+	<If Condition="HasQuest(32137) &amp;&amp; IsQuestCompleted(32137)" >
+		<TurnIn QuestName="Runnin On Empty" QuestId="32137" TurnInName="Boss-Lady Trixel" TurnInId="67535" />
 	</If>
 
 	<If Condition="HasQuest(32127) &amp;&amp; IsQuestCompleted(32127) ||

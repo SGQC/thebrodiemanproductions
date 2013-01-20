@@ -238,6 +238,7 @@
 			(!HasQuest(30285) &amp;&amp; IsQuestCompleted(30285)) ||
 			(!HasQuest(30288) &amp;&amp; IsQuestCompleted(30288)) ||
 			(!HasQuest(30289) &amp;&amp; IsQuestCompleted(30289)) ||
+			(!HasQuest(30286) &amp;&amp; IsQuestCompleted(30286)) ||
 			(!HasQuest(30287) &amp;&amp; IsQuestCompleted(30287)) ||
 			(!HasQuest(31293) &amp;&amp; IsQuestCompleted(31293)) ||
 			(!HasQuest(30237) &amp;&amp; IsQuestCompleted(30237)))" >
@@ -367,8 +368,58 @@
 <!--		<While Condition="(Me.Class == WoWClass.Priest) &amp;&amp; !IsQuestCompleted(30289)" >
 			<CustomBehavior File="InteractWith" MobId="GOLDEN LOTUS GUARD" MobState="Alive" Range="25"
 			<If Condition="Me.CurrentTarget.HasAura(AURA)" >
-				<CustomBehavior File="CastSpellOn" SpellId="527 or 528" MobId="GOLDEN LOTUS GUARD" /> -->
+				<CustomBehavior File="CastSpellOn" SpellId="527 or 528" MobId="GOLDEN LOTUS GUARD" /> 
+			</If>
+		</While> -->
 		<Objective QuestName="Freeing Mind and Body" QuestId="30289" Type="KillMob" MobId="64201" KillCount="6" />
+	</If>
+
+<!-- Backed Into a Corner -->
+	<If Condition="(HasQuest(30286) &amp;&amp; !IsQuestCompleted(30286))" >
+
+		<CustomBehavior File="Message" Text="Starting Backed Into a Corner" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="30286" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="!IsQuestCompleted(30286)" >
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="740.30" Y="1552.09" Z="374.10" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="739.63" Y="1617.54" Z="378.73" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="696.61" Y="1620.84" Z="378.64" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="651.86" Y="1656.97" Z="377.86" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="713.08" Y="1663.08" Z="378.62" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="753.40" Y="1688.63" Z="373.39" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="760.57" Y="1619.23" Z="370.36" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="800.06" Y="1549.13" Z="378.60" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="804.53" Y="1530.61" Z="386.91" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="753.71" Y="1490.61" Z="385.75" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="732.81" Y="1506.26" Z="385.36" />
+			</If>
+			<If Condition="!IsQuestCompleted(30286)" >
+				<RunTo X="690.75" Y="1531.93" Z="380.93" />
+			</If>
+		</While>
 	</If>
 
 <!-- Wu Kao Scouting Reports -->
