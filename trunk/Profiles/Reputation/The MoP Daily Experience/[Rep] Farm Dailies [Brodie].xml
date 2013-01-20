@@ -214,7 +214,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -297,7 +297,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -380,7 +380,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -462,7 +462,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -544,7 +544,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -626,7 +626,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -708,7 +708,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -790,7 +790,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -872,7 +872,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
@@ -954,7 +954,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 
 			<!-- If druid cancel shape shift form -->
-				<If Condition="Me.Class == WoWClass.Druid" >
+				<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
 					<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 				</If>
 
