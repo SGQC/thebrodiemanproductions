@@ -37,6 +37,11 @@
 
 <CustomBehavior File="Message" Text="Beginning Achievement Grind." LogColor="Green"  />
 
+<While Condition="!IsQuestCompleted(31397) || !IsQuestCompleted(31307) || !IsQuestCompleted(31284) ||
+			!IsQuestCompleted(31292) || !IsQuestCompleted(31409) || !IsQuestCompleted(31411) ||
+			!IsQuestCompleted(31433) || !IsQuestCompleted(31432) || !IsQuestCompleted(31438) ||
+			!IsQuestCompleted(31417)" >
+
 <!-- Jade Forest -->
 
 <!-- Wodin's Mantid Shanker -->
@@ -143,7 +148,9 @@
 
 <!-- The Veiled Stair -->
 
-<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="Did we win?!" />
+</While>
+
+<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="All supported items are, or have been, obtained." />
 
 </QuestOrder>
 </HBProfile>
