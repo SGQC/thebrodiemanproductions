@@ -81,12 +81,22 @@
 			<CustomBehavior File="InteractWith" MobId="65973" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="66006" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="60172" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
-			<CustomBehavior File="InteractWith" MobId="65938" NumOfTimes="16" WaitForNpcs="False" CollectionDistance="30" WaitTime="10"/>
-			<CustomBehavior File="InteractWith" MobId="65932" NumOfTimes="16" WaitForNpcs="False" CollectionDistance="30" WaitTime="10"/>
-			<CustomBehavior File="InteractWith" MobId="65930" NumOfTimes="16" WaitForNpcs="False" CollectionDistance="30" WaitTime="10"/>
-			<CustomBehavior File="InteractWith" MobId="65933" NumOfTimes="16" WaitForNpcs="False" CollectionDistance="30" WaitTime="10"/>
-			<CustomBehavior File="InteractWith" MobId="65929" NumOfTimes="16" WaitForNpcs="False" CollectionDistance="30" WaitTime="10"/>
-			<CustomBehavior File="InteractWith" MobId="65931" NumOfTimes="16" WaitForNpcs="False" CollectionDistance="30" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="65938" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="65932" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="65930" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="65933" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="65929" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="65931" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63157" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66108" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63158" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63180" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63245" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63223" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63160" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66123" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63260" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 
 	<!-- Checking for Stubborn Weeds -->
 			<CustomBehavior File="InteractWith" MobId="60153" NumOfTimes="1" WaitForNpcs="False" WaitTime="10"/>
@@ -975,7 +985,19 @@
 				<CustomBehavior File="UseItemOn" MobType="Npc" MobId="63162" ItemId="80513" NumOfTimes="1" WaitForNpcs="False" WaitTime="1500"/>	
 				<CustomBehavior File="DeleteItems" Ids="80513,79104"/><!-- Deleting farm tools -->
 			</If>
-		</If>	
+		</If>
+
+	<!-- Check for Bursting Plants -->
+			<CustomBehavior File="InteractWith" MobId="63157" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66108" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63158" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63180" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63245" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63223" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63160" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66123" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="63260" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 		
 <!-- Turn in Farming Quests -->
 
