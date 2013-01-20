@@ -246,17 +246,17 @@
 				</If>
 		
 			<!-- Use Pest Repeller 1 -->
-			<CustomBehavior File="InteractWith" MobId="215163" ObjectType="GameObject"  WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
+			<CustomBehavior File="InteractWith" MobId="215163" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
 			
 			<!-- Use Sprinkler 1 -->
-			<CustomBehavior File="InteractWith" MobId="215137" ObjectType="GameObject"  WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
+			<CustomBehavior File="InteractWith" MobId="215137" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
 			
 			<!-- Use Pest Repeller 2 -->
-			<CustomBehavior File="InteractWith" MobId="215162" ObjectType="GameObject"  WaitTime="1000" X="-168.795" Y="643.637" Z="165.409" />
+			<CustomBehavior File="InteractWith" MobId="215162" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" X="-168.795" Y="643.637" Z="165.409" />
 			
 			<!-- Use Sprinkler 2 -->
-			<CustomBehavior File="InteractWith" MobId="215135" ObjectType="GameObject"  WaitTime="1000" X="-168.587" Y="654.073" Z="165.266" />
-		
+			<CustomBehavior File="InteractWith" MobId="215135" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" X="-168.587" Y="654.073" Z="165.266" />
+
 		<!-- Check incase they have no sprinkler system or pest control device or if we missed clicking on them-->
 		<!-- Grab the tools -->
 			<If Condition="!HasItem(80513)">
