@@ -269,6 +269,22 @@ namespace AzeniusHelper2
             }
         }
 
+        public WoWUnit StatueAttack
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63447 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
+
+        public WoWUnit StatueFall
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63556 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
+
         public List<WoWUnit> MantidNiuzao
         {
             get
@@ -442,6 +458,26 @@ u.Distance).ToList();
             {
                 if (BrazierFire != null)
                     BrazierFire[0].Interact();
+            }
+            #endregion
+
+            #region http://www.wowhead.com/quest=30304 - todo
+            if (IsOnQuest(30304))
+            {
+                if (StatueAttack != null)
+                    StatueAttack.Interact();
+                if (StatueFall != null)
+                    StatueFall.Interact();
+            }
+            #endregion
+
+            #region http://www.wowhead.com/quest=30299 - todo
+            if (IsOnQuest(30299))
+            {
+                if (StatueAttack != null)
+                    StatueAttack.Interact();
+                if (StatueFall != null)
+                    StatueFall.Interact();
             }
             #endregion
 
