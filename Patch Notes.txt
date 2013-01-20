@@ -1,211 +1,44 @@
-PATCH NOTES
+Patch Notes
 
-NEW SVN OPENED -- REVISION NUMBERS RESET!
+1/20/13
+
+r13
+Farm Dailies
+-- Added check to shapeshift cancel for Shaman. Testing phase. Need feedback, and if successful, will add to the grinding profiles.
+
+r12
+Ruins Of Guo-Lai
+-- Objective cleanup of Runes in the Ruins and Carved in Stone, should be much smarter now.
+-- Hotspots added to Hard as a Rock and No Stone Unturned, should fly to 3 different areas, check, and move between (by flight).
+
+r11
+Dominance Offensive
+-- Added Krasarang Steampot
+-- Added Runnin On Empty
+Golden Lotus
+-- Changes to Laosy Scouting flight path, should no long hunt for invisible Lao inside the mountain side...hopefully
+Mistfall Village
+-- Added Backed Into a Corner
+
+r10
+All Planting Profiles and Farm Dailies have been updated to check for Bursting Plants before and after planting.
+
+r9
+All Planting Profiles and Farm Dailies have been updated to check for the presence of the sprinklers and bug zappers BEFORE use.
 
 1/19/13
 
-r637
-Another fix to rep check.
-
-r636
-Shado Pan
--- Fixed rep check out of diagnostic mode
-August Celestials
--- fixed rep check out of diagnostic mode
-
-r635
-Shado Pan
--- Added Rep Check
-August Celestials
--- Added Rep Check
-
-1/18/13
-
-r634
-Shado Pan
--- Removed quest from cache that was not a daily. (Exalted finale)
-
-r633
-Cloud Serpent
--- Added WaitTimer to cooking quest, to make sure it finishes before attempting to turn in.
-Golden Lotus PreReqs
--- Adjustments to bombing location in Barring Entry
--- New flight location for Guo-Lai Ruins
-
-r632
-Mistfall Village
--- Removal of redundant My Town Its on Fire Override code
-Farm Daily
--- Added AoE Sprinkler and Infested Plant support
-Farm Grinds
--- Windshear Seeds - Fixed Smothered Plant, should do properly now.
--- Raptorleaf Seeds - Fixed Smothered Plant, should do properly now.
--- Added Magebulb Seeds
--- Added Snakeroot Seeds
--- Added Jade Squash Seeds
--- Added Juicyfruit Carrot Seeds
--- Added Green Cabbage Seeds
--- Added Pink Turnip Seeds
--- Added White Turnip Seeds
--- Added Witchberries Seeds
--- Added Scallion Seeds
-
-1/17/13
-
-r631
-Quest Behaviors
--- ThunderingSkies.cs - Edited to not stop/cast spell unless in range.
-Golden Lotus
--- Updated Mage pull spell to Frostfire
-Mistfall Village
--- My Town, It's On Fire - Cleaned up old attempts
-Shado Pan
--- Fixed cache check bug (Chao The Voice quest was being checked)
--- Added more quests to the cache check (dailies, of course)
--- Added 5th check to Ban Bearheart and Master Snowdrift (Ling doesn't need it)
-Niuzao Temple
--- Fixed typo causing fatal crash ColletItemId -> CollectItemId
-August Celestials
--- Removed redundant (unneeded) Quest Overrides
--- Added flight call before choosing area to fly to. Should now fly up 200 yds, then fly to quest hub.
-
-
-r630
-Quest Behaviors
--- Change to CastSpell.cs - Changes I made earlier did not commit. Fixed.
-
-r629
-Red Crane Temple
--- Added Thelonius
-
-r628
-Cloud Serpent
--- Will make sure Tradeskill window is closed before trying to toggle it.
-Red Crane Temple
--- Added Fat Long-Fat: Rematch
--- Added Huck Wheelbarrow
--- Added Mindel Sunspeaker
--- Added Minh Do-Tan
--- Added Tukka-Tuk
--- Added Yan Quillpaw
-
-1/16/13
-
-r627
-Whitepetal Lake
--- Fixed all GameObject calls, wrong numbers wrong ObjectType.
-
-r626
-Resubmit, missed file.
-
-r625
-Custom Behaviors
--- Added CastSpell.cs - Will cast spell on self. Make sure to update your QB folder!
-Cloud Serpent
--- Added ability to cast Cooking and Cooking Fire for all locales (NEEDS TESTING!)
-
-r624
-Whitepetal Lake
--- Updates to Behavior in all underwater quests. Should path downwards now 
----- (but may get stuck on objects, please let me know).
-Shado Pan
--- Blacklisted giant tree and most of the area around it. It's huge, this may break pathing to dailies all together.
-
-1/15/13
-
-r623
--- Fixed all planting profiles (and Farm) to wait a moment before tilling, should fix the "Stuck Fix" jump.
-
-r622
-Mistfall Village
--- Changed Mage's pull spell to FrostFire Bolt
-The Tillers
--- Changed Mage's pull spell to FrostFire Bolt
-
-r621
-Niuzao Temple
--- Fixed CollectItemId missing for threaded quests.
-The Tillers
--- Fixed quest givers to cycle quests other than dailies, incase theres more than 1 available.
-
-r620
-Niuzao Temple
--- Threaded Fallen Sentinels, A Blade is a Blade, Paying Tribute together, should now try and do all three at once.
-The Anglers
--- Will no longer attempt Piranha and Shocking unless you have at least 450 Fishing.
--- Attempted fix to Fo Fook's quest pickup hang.
-
-r619
-Golden Lotus
--- Should no longer get stuck at the Pagoda (Will run out in front if underneath)
--- Changed thought process on when to continue to phase 2 and when to go to August Celestials.
----- Should hopefully fix getting stuck on Levin Dawnblade.
-Golden Pagoda Alternate
--- Should no longer get stuck at the Pagoda (Will run out in front if underneath)
-The Anglers
--- Should no longer miss when flying to Fisherman Haito
--- Added IgnoreMobsInBlackspots to Jagged Abalone...hopefully works, untested as of now.
-
-1/14/13
-
-r618
+r8
+Updated Pandaria Dailies V2 plugin
+-- Will now auto tip/attack Mogu Statues during the two Guo-Lai quests involved with them.
+Guo-Lai Ruins
+-- Small update to interact. Hotspots coming soon.
 Dominance Offensive
--- Added Portal usage for Sparkrocket outpost (Use, no purchases yet)
+-- Added Hero Killer
+-- Added Good Luck, Have Fun
+-- Added Worker Harassment
 
-r617
-Added
--- Raptorleaf Seeds Grinding Profile
-
-r616
-Operation: Shieldwall
--- Disabled continuing profiles
-The Anglers
--- Fixed XML language error (&& -> &amp;&amp;)
-
-r615
-Operation: Shieldwall
--- Added Siege Damage quest (Caution, mob respawns high, recommend not afk'ing, 
----- may take a long time to clear the area)
-
-r614
-Cloud Serpent
--- Changed Alliance finisher to go to Anglers instead of Shieldwall
-
-r613
-Added
--- PerformTradeskillOn.cs -- Replace existing
-Cloud Serpent
--- Feast of the Senses - updated logic, and performing. Should now work for all clients, and 
-----only fish and make as many items as needed.
-
-r612
--- Updated all Farm related profiles to harvest Enigma seed results properly.
-
-r611
-Golden Lotus
--- Laosy Scouting - Should now properly remount after combat, however still a chance it can get stuck on the ground...
-----Should be 50% more reliable now.
--- Cannonfire - Added more hotspots to the bombing runs. Should cover a larger area now.
-
-Anglers
--- Huff and Puff - Will now attack and kill by normal means, instead of using the item.
-
-1/13/13
-
-r610
-Mistfall Village
--- Altered Merchant Benny to have PickUp instead of InteractWith/Gossip/Lua calls
-
-r609
-Setting Sun Garrison 
--- Blades and Flames: Double checked flames, it already has a "leave area before mounting" call.
----- Blades will now leave the blades area before flight.
-
-r608
-Golden Lotus
--- Changed how Golden Lotus Dailies operates: 
----- At end of phase 1, check for phase 2. If phase 2 quest available, take and reset Golden Lotus Dailies.
----- Else, if no quest, go to August Celestials. Note now that if you DO NOT HAVE a golden lotus quest in 
----- your log, and you restart this profile, and you are past phase 1, it WILL skip and go to 
----- August Celestials (if there is no quests available at Pagoda)
- 
+r6
+Initial Posting
+-- Combination of all TheBrodieMan Production's Profiles
+-- Complete list available on forum.
