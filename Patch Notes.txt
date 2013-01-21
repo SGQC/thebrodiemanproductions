@@ -2,6 +2,10 @@ Patch Notes
 
 1/21/13
 
+r21
+Lost And Found
+-- Added Hammer of Ten Thunders
+
 r20
 Niuzao Temple
 -- Fixed "Waiting for spawn" bug with ground item collection quests (hopefully)

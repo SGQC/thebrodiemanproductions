@@ -40,7 +40,7 @@
 <While Condition="!IsQuestCompleted(31397) || !IsQuestCompleted(31307) || !IsQuestCompleted(31284) ||
 			!IsQuestCompleted(31292) || !IsQuestCompleted(31409) || !IsQuestCompleted(31411) ||
 			!IsQuestCompleted(31433) || !IsQuestCompleted(31432) || !IsQuestCompleted(31438) ||
-			!IsQuestCompleted(31417)" >
+			!IsQuestCompleted(31417) || !IsQuestCompleted(31403)" >
 
 <!-- Jade Forest -->
 
@@ -49,6 +49,22 @@
 		<CustomBehavior File="FlyTo" X="3316.01" Y="-1296.73" Z="202.62" />
 		<If Condition="!IsQuestCompleted(31397)">
 			<CustomBehavior File="InteractWith" MobId="213363" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+	</If>
+
+<!-- Hammer of Ten Thunders -->
+	<If Condition="!IsQuestCompleted(31403)">
+		<CustomBehavior File="FlyTo" X="3112.61" Y="-1549.65" Z="228.08" />
+		<If Condition="!IsQuestCompleted(31403)">
+			<CustomBehavior File="InteractWith" MobId="213742" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<CustomBehavior File="FlyTo" X="3004.97" Y="-1423.80" Z="262.66" />
+		<If Condition="!IsQuestCompleted(31403)">
+			<CustomBehavior File="InteractWith" MobId="213742" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<CustomBehavior File="FlyTo" X="2837.26" Y="-1468.56" Z="291.07" />
+		<If Condition="!IsQuestCompleted(31403)">
+			<CustomBehavior File="InteractWith" MobId="213742" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
 		</If>
 	</If>
 
