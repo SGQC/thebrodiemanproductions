@@ -2,6 +2,9 @@ Patch Notes
 
 1/21/13
 
+r23
+Added revision numbers to all profiles, replacing version numbers, for better troubleshooting.
+
 r22
 Cloud Serpent
 -- Will now cast Cooking regardless of Cooking rank, but still requires Cooking 500 to pickup quest.
