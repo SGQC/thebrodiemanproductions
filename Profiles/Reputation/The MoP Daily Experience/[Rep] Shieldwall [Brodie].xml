@@ -261,7 +261,7 @@
 		<CustomBehavior File="Message" Text="Starting Kicker Quest" LogColor="Green" />
 		<If Condition="Me.Location.Distance(new WoWPoint(-1165.488, -1230.731, 28.93953)) &lt; 250" >
 
-			<CustomBehavior File="FlyTo" X="-1168.175" Y="-1231.153" Z="29.13549" />
+			<CustomBehavior File="FlyTo" X="-1168.175" Y="-1231.153" Z="35.13549" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" Nav="CTM" MobId="67656" WaitForNpcs="False" X="-1168.175" Y="-1231.153" Z="29.13549" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
