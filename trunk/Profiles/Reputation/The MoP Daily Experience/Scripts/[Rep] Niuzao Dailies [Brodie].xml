@@ -143,14 +143,14 @@
 		<CustomBehavior File="ForcedDismount" />
 
 		<While Condition="!IsQuestCompleted(30953)" >
-			<CustomBehavior File="UseItemOn" ItemId="82381" QuestId="30953" MobId="61570" CollectionDistance="100" X="2240.42" Y="4726.178" Z="146.8373" />
+			<CustomBehavior File="UseItemOn" ItemId="82381" QuestId="30953" MobId="61570" CollectionDistance="150" X="2240.42" Y="4726.178" Z="146.8373" />
 			<CustomBehavior File="WaitTimer" WaitTime="8000" />
 			<If Condition="HasQuest(30954) &amp;&amp; !IsQuestCompleted(30954)" >
 				<CustomBehavior File="CollectThings" QuestId="30954" CollectItemId="82353" ObjectId="211765" PostInteractDelay="1250" NonCompeteDistance="5" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" CollectItemCount="10" />
 			</If>
 			<If Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
 
-				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitTime="100" CollectionDistance="15" />
+				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitTime="100" WaitForNpcs="false" CollectionDistance="15" />
 			</If>
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 
@@ -171,7 +171,7 @@
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 			<If Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
 
-				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitTime="100" CollectionDistance="15" />
+				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitForNpcs="false" WaitTime="100" CollectionDistance="15" />
 			</If>
 		</While>
 	</If>
@@ -201,7 +201,7 @@
 		<CustomBehavior File="ForcedDismount" />
 
 		<While Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
-			<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" WaitTime="100" CollectionDistance="1000" X="2240.42" Y="4726.178" Z="146.8373" />
+			<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" WaitTime="100" WaitForNpcs="false" CollectionDistance="1000" X="2240.42" Y="4726.178" Z="146.8373" />
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 
 		</While>
