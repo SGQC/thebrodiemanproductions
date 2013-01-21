@@ -888,7 +888,9 @@
 	</If>
 
 <!-- A Feast for the Senses -->
-	<If Condition="HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149)">
+	<If Condition="HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149) &amp;&amp;
+		(HasSpell(104381) || HasSpell(88053) || HasSpell(51296) || HasSpell(33359) ||
+		HasSpell(18260) || HasSpell(3413) || HasSpell(3102) || HasSpell(2550))">
 		<CustomBehavior File="Message" Text="Starting A Feast for the Senses" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30149" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="ForcedDismount" />
@@ -915,7 +917,34 @@
 			<CustomBehavior File="CastSpell" SpellId="818" MobId="0" />
 		</If>
 		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeskill()" />
-		<CustomBehavior File="CastSpell" SpellId="104381" MobId="0" />
+
+		<If Condition="HasSpell(104381)" >
+			<CustomBehavior File="CastSpell" SpellId="104381" MobId="0" />
+		<ElseIf Condition="HasSpell(88053)" >
+			<CustomBehavior File="CastSpell" SpellId="88053" MobId="0" />
+		</ElseIf>
+		<ElseIf Condition="HasSpell(51296)" >
+			<CustomBehavior File="CastSpell" SpellId="51296" MobId="0" />
+		</ElseIf>
+		<ElseIf Condition="HasSpell(33359)" >
+			<CustomBehavior File="CastSpell" SpellId="33359" MobId="0" />
+		</ElseIf>
+		<ElseIf Condition="HasSpell(18260)" >
+			<CustomBehavior File="CastSpell" SpellId="18260" MobId="0" />
+		</ElseIf>
+		<ElseIf Condition="HasSpell(3413)" >
+			<CustomBehavior File="CastSpell" SpellId="3413" MobId="0" />
+		</ElseIf>
+		<ElseIf Condition="HasSpell(3102)" >
+			<CustomBehavior File="CastSpell" SpellId="3102" MobId="0" />
+		</ElseIf>
+		<ElseIf Condition="HasSpell(2550)" >
+			<CustomBehavior File="CastSpell" SpellId="2550" MobId="0" />
+		</ElseIf>
+		<Else>
+			<CustomBehavior File="Message" Text="You don't have cooking. Don't know how you got here, but unfortunately you can't finish this quest!" LogColor="Green"  />
+		</Else>
+		</If>
 		<If Condition="GetItemCount(74641) == 0" >
 			<CustomBehavior File="PerformTradeskillOn" TradeSkillId="185" TradeSkillItemId="74641" CastOnItemId="74866" NumOfTimes="5" />
 		</If>

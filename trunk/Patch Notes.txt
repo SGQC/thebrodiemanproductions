@@ -2,6 +2,10 @@ Patch Notes
 
 1/21/13
 
+r22
+Cloud Serpent
+-- Will now cast Cooking regardless of Cooking rank, but still requires Cooking 500 to pickup quest.
+
 r21
 Lost And Found
 -- Added Hammer of Ten Thunders
