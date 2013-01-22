@@ -2,6 +2,11 @@ Patch Notes
 
 1/21/13
 
+r24
+The Anglers
+-- Blackspot update to TRY and get rid of the 1 clam that gets stuck
+-- Update to MrFishIt for "Who Knew Fish Liked Eggs?"
+
 r23
 Added revision numbers to all profiles, replacing version numbers, for better troubleshooting.
 
