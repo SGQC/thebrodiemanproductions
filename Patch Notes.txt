@@ -1,5 +1,13 @@
 Patch Notes
 
+1/22/13
+
+r25
+Golden Lotus Pre-Reqs
+-- Added second call to move to White Tiger Temple, in case you're not there.
+Golden Lotus
+-- Fixed pathing issue on Laosy Scouting. Should no longer have bad path calls in air (Added CTM).
+
 1/21/13
 
 r24

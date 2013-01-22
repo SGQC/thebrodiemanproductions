@@ -128,6 +128,9 @@
 
 	<If Condition="((HasQuest(31395) &amp;&amp; !IsQuestCompleted(31395)) ||
 			(HasQuest(31394) &amp;&amp; !IsQuestCompleted(31394)))" >
+		<CustomBehavior File="FlyTo" DestName="White Tiger Temple" X="3686.266" Y="547.2056" Z="639.691" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="MyCTM" X="3819.63" Y="539.2305" Z="639.007" />
 		<CustomBehavior File="InteractWith" Nav="CTM" MobId="64528" IgnoreCombat="true" />
 		<CustomBehavior File="WaitTimer" WaitTime="40000" />
 		<If Condition="HasQuest(31395) &amp;&amp; !IsObjectiveComplete(2,31395)" >

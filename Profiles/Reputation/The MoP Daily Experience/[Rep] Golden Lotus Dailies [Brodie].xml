@@ -327,8 +327,8 @@
 					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
 				</If>
 				<CustomBehavior File="FlyTo" X="1682.15" Y="1387.73" Z="475.12" />
-				<CustomBehavior File="InteractWith" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31758)" >
 
@@ -337,8 +337,8 @@
 					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
 				</If>
 				<CustomBehavior File="FlyTo" X="1579.076" Y="1453.525" Z="475.00" />
-				<CustomBehavior File="InteractWith" QuestId="31758" MobId="65868" Range="5" Nav="CTM" CollectionDistance="500" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" Nav="CTM" CollectionDistance="500" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31758)" >
 
@@ -347,8 +347,8 @@
 					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
 				</If>
 				<CustomBehavior File="FlyTo" X="1543.88" Y="1197.10" Z="462.14" />
-				<CustomBehavior File="InteractWith" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31758)" >
 
@@ -357,8 +357,8 @@
 					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
 				</If>
 				<CustomBehavior File="FlyTo" X="1617.87" Y="1269.10" Z="478.00" />
-				<CustomBehavior File="InteractWith" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 			</If>
 		</While>
 
