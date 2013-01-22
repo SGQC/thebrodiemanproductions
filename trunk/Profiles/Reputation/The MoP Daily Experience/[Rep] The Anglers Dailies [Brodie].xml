@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r23</Name>
+	<Name>The Anglers Dailies r24</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -32,8 +32,7 @@
 	</AvoidMobs>
    
 	<Blackspots>
-		<Blackspot X="-1381.83" Y="-376.18" Z="-15.126" Radius="10" />
-		<Blackspot X="-1385.78" Y="-381.34" Z="-17.40" Radius="10" />
+		<Blackspot X="-1386.979" Y="-382.1962" Z="-17.525" Radius="20" Height="20" /> <!-- The Damn Clam -->
 		<Blackspot X="-1378.67" Y="50.84" Z="10.19" Radius="5" /> <!-- Guy on a Roof -->
 		<Blackspot X="-1423.01" Y="40.56" Z="7.12" Radius="5" /> <!-- Guy on a Roof -->
 	</Blackspots>
@@ -415,7 +414,7 @@
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(80303)" WaitTime="1000" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-        		<CustomBehavior File="MrFishIt" CollectItemId="80310" CollectItemCount="1" PoolId="211169" />
+        		<CustomBehavior File="MrFishIt" QuestId="30598" CollectItemId="80310" PoolId="211169" MoveToPool="true" />
 		</If>
         </If>
 
