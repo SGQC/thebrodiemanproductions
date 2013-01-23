@@ -2,12 +2,18 @@ Patch Notes
 
 1/23/13
 
+r29
+Golden Lotus
+-- Cannonfire - Increased waittime to 10 seconds between bombs.
+
 r28
 Ruins of Guo-Lai
 -- Code Cleanup, shortened sections and changed "Am I Done" to "Do I Have" in some sections dealing with multiple quests with same objectives.
 Golden Pagoda Alternate
 -- Code Cleanup
 -- Altered target MobId for In Enemy Hands from non-existant (oops) to mindbenders.
+The Tillers
+-- Fixed () Syntax error with "Are Quests done" check for Yoon at end of profile.
 
 1/22/13
 
