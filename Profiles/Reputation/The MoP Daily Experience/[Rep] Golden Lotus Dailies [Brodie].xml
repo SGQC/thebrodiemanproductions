@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r27</Name>
+	<Name>The Golden Lotus r29</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -495,34 +495,34 @@
 			<If Condition="!IsQuestCompleted(31754)" >
 
 				<RunTo X="1540.479" Y="1176.702" Z="443.0296" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
 			<If Condition="!IsQuestCompleted(31754)" >
 
 				<RunTo X="1529.951" Y="1181.776" Z="442.5779" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
 			<If Condition="!IsQuestCompleted(31754)" >
 				<RunTo X="1496.884" Y="1227.667" Z="437.5228" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
 			<If Condition="!IsQuestCompleted(31754)" >
 				<RunTo X="1517.748" Y="1269.749" Z="442.7838" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
 			<If Condition="!IsQuestCompleted(31754)" >
 				<RunTo X="1513.869" Y="1289.58" Z="443.8857" />
- 				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+ 				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
  
 			<If Condition="!IsQuestCompleted(31754)" >
 				<RunTo X="1575.533" Y="1208.958" Z="459.0775" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
  
 			<If Condition="!IsQuestCompleted(31754)" >
 				<RunTo X="1585.056" Y="1199.58" Z="459.0019" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="6000" />
+				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" Range="5" WaitTime="10000" />
 			</If>
 		</While>
 	</If>
