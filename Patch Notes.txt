@@ -2,6 +2,10 @@ Patch Notes
 
 1/22/13
 
+r27
+Golden Lotus
+-- Fixed Duplicate Nav call in Laosy Scouting
+
 r26
 Revision error, update only to numbers
 
