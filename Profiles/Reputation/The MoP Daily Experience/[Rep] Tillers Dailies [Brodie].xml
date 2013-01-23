@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers r23</Name>
+	<Name>Tillers r28</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1232,7 +1232,7 @@
 			(HasQuest(30333) &amp;&amp; IsQuestCompleted(30333)) ||
 			(HasQuest(30334) &amp;&amp; IsQuestCompleted(30334)) ||
 			(HasQuest(30335) &amp;&amp; IsQuestCompleted(30335)) ||
-			(HasQuest(30336) &amp;&amp; IsQuestCompleted(30336))" >
+			(HasQuest(30336) &amp;&amp; IsQuestCompleted(30336)))" >
 		<CustomBehavior File="FlyTo" DestName="Farmer Yoon" X="-184.573" Y="628.4885" Z="165.4093" />
 	</If>
 

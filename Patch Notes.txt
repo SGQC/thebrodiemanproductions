@@ -1,5 +1,14 @@
 Patch Notes
 
+1/23/13
+
+r28
+Ruins of Guo-Lai
+-- Code Cleanup, shortened sections and changed "Am I Done" to "Do I Have" in some sections dealing with multiple quests with same objectives.
+Golden Pagoda Alternate
+-- Code Cleanup
+-- Altered target MobId for In Enemy Hands from non-existant (oops) to mindbenders.
+
 1/22/13
 
 r27
