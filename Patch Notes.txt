@@ -1,5 +1,18 @@
 Patch Notes
 
+1/24/13
+
+r31
+Niuzao Temple
+-- Code Cleanup
+-- In Battle's Shadow - New hotspot search for Bricks by flight, no more standing around the center.
+Golden Lotus
+-- Thundering Skies - Altered Hunter and Mage pull spells to Arcane Shot and Fire Blast, respectively.
+Mistfall Village
+-- Ruffling Some Feathers - Altered Hunter and Mage pull spells to Arcane Shot and Fire Blast, respectively.
+The Tillers
+-- A Gift For Fung - Altered Hunter and Mage pull spells to Arcane Shot and Fire Blast, respectively.
+
 1/23/13
 
 r30

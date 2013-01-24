@@ -86,14 +86,14 @@
 		<TurnIn QuestName="Defense at Niuzao Temple" QuestId="31383" TurnInName="Ogo the Elder" TurnInID="61580" />
 	</If>
 
-	<If Condition="((!HasQuest(30953)) &amp;&amp; (IsQuestCompleted(30953)) ||
-			(!HasQuest(30954)) &amp;&amp; (IsQuestCompleted(30954)) ||
-			(!HasQuest(30955)) &amp;&amp; (IsQuestCompleted(30955)) ||
-			(!HasQuest(30952)) &amp;&amp; (IsQuestCompleted(30952)) ||
-			(!HasQuest(30956)) &amp;&amp; (IsQuestCompleted(30956)) ||
-			(!HasQuest(30957)) &amp;&amp; (IsQuestCompleted(30957)) ||
-			(!HasQuest(30958)) &amp;&amp; (IsQuestCompleted(30958)) ||
-			(!HasQuest(30959)) &amp;&amp; (IsQuestCompleted(30959)))" >
+	<If Condition="((!HasQuest(30953) &amp;&amp; IsQuestCompleted(30953)) ||
+			(!HasQuest(30954) &amp;&amp; IsQuestCompleted(30954)) ||
+			(!HasQuest(30955) &amp;&amp; IsQuestCompleted(30955)) ||
+			(!HasQuest(30952) &amp;&amp; IsQuestCompleted(30952)) ||
+			(!HasQuest(30956) &amp;&amp; IsQuestCompleted(30956)) ||
+			(!HasQuest(30957) &amp;&amp; IsQuestCompleted(30957)) ||
+			(!HasQuest(30958) &amp;&amp; IsQuestCompleted(30958)) ||
+			(!HasQuest(30959) &amp;&amp; IsQuestCompleted(30959)))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected." LogColor="Cornflowerblue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 	</If>
@@ -166,7 +166,7 @@
 
 		<CustomBehavior File="ForcedDismount" />
 
-		<While Condition="HasQuest(30954) &amp;&amp; !IsQuestCompleted(30954)" >
+		<While Condition="!IsQuestCompleted(30954)" >
 			<CustomBehavior File="InteractWith" QuestId="30954" MobId="211765" ObjectType="GameObject" WaitTime="100" CollectionDistance="150" X="2240.42" Y="4726.178" Z="146.8373" />
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 			<If Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
@@ -180,14 +180,27 @@
 	<If Condition="HasQuest(30958) &amp;&amp; !IsQuestCompleted(30958)" >
 
 		<CustomBehavior File="Message" Text="Starting In Battle's Shadow" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30958" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30958" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 
 		<CustomBehavior File="ForcedDismount" />
 
 		<While Condition="!IsQuestCompleted(30958)" >
-			<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="100" CollectionDistance="250" X="2240.42" Y="4726.178" Z="146.8373" />
-			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
+			<If Condition="!IsQuestCompleted(30958)" >
+				<CustomBehavior File="FlyTo" X="2135.29" Y="4736.10" Z="155.08" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+			</If>
+			<If Condition="!IsQuestCompleted(30958)" >
+				<CustomBehavior File="FlyTo" X="2229.70" Y="4605.89" Z="155.08" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+			</If>
+			<If Condition="!IsQuestCompleted(30958)" >
+				<CustomBehavior File="FlyTo" X="2369.13" Y="4696.05" Z="155.09" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+			</If>
 		</While>
 	</If>
 
@@ -200,7 +213,7 @@
 
 		<CustomBehavior File="ForcedDismount" />
 
-		<While Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
+		<While Condition="!IsQuestCompleted(30955)" >
 			<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" WaitTime="100" WaitForNpcs="false" CollectionDistance="1000" X="2240.42" Y="4726.178" Z="146.8373" />
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 
@@ -256,14 +269,14 @@
 
 <!-- Niuzao Quest Turn ins -->
 
-	<If Condition="((HasQuest(30953)) &amp;&amp; (IsQuestCompleted(30953)) ||
-			(HasQuest(30954)) &amp;&amp; (IsQuestCompleted(30954)) ||
-			(HasQuest(30955)) &amp;&amp; (IsQuestCompleted(30955)) ||
-			(HasQuest(30952)) &amp;&amp; (IsQuestCompleted(30952)) ||
-			(HasQuest(30956)) &amp;&amp; (IsQuestCompleted(30956)) ||
-			(HasQuest(30957)) &amp;&amp; (IsQuestCompleted(30957)) ||
-			(HasQuest(30958)) &amp;&amp; (IsQuestCompleted(30958)) ||
-			(HasQuest(30959)) &amp;&amp; (IsQuestCompleted(30959)))" >
+	<If Condition="((HasQuest(30953) &amp;&amp; IsQuestCompleted(30953)) ||
+			(HasQuest(30954) &amp;&amp; IsQuestCompleted(30954)) ||
+			(HasQuest(30955) &amp;&amp; IsQuestCompleted(30955)) ||
+			(HasQuest(30952) &amp;&amp; IsQuestCompleted(30952)) ||
+			(HasQuest(30956) &amp;&amp; IsQuestCompleted(30956)) ||
+			(HasQuest(30957) &amp;&amp; IsQuestCompleted(30957)) ||
+			(HasQuest(30958) &amp;&amp; IsQuestCompleted(30958)) ||
+			(HasQuest(30959) &amp;&amp; IsQuestCompleted(30959)))" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Niuzao Temple." LogColor="Green" />
 		<CustomBehavior File="FlyTo" X="2180.123" Y="4822.747" Z="181.9505" />
 	</If>

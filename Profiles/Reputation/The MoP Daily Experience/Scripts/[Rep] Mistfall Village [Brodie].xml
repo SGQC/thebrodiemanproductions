@@ -555,10 +555,10 @@
 				<CustomBehavior File="Silkfeather" SpellId="5176"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="Silkfeather" SpellId="75"/>
+				<CustomBehavior File="Silkfeather" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="Silkfeather" SpellId="44614"/>
+				<CustomBehavior File="Silkfeather" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
 				<CustomBehavior File="Silkfeather" SpellId="62124"/>
