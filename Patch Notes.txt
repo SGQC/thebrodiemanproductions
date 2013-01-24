@@ -2,6 +2,10 @@ Patch Notes
 
 1/24/13
 
+r33
+Added New Profiles
+-- Nat Pagle Fishing - Submitted by Tenne, translated by TheBrodieMan. THANK YOU!
+
 r32
 Version Numbers update
 
