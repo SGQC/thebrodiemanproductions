@@ -2,6 +2,14 @@ Patch Notes
 
 1/24/13
 
+r34
+The Klaxxi
+-- Code Cleanup
+August Celestials
+-- Code Cleanup
+Cloud Serpent
+-- Code Cleanup
+
 r33
 Added New Profiles
 -- Nat Pagle Fishing - Submitted by Tenne, translated by TheBrodieMan. THANK YOU!

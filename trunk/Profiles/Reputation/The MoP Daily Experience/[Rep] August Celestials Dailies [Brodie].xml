@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>August Celestials r23</Name>
+	<Name>August Celestials r34</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -129,8 +129,6 @@
 			HasQuest(30907) || HasQuest(30902)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] White Tiger Dailies [Brodie]" />
 	</If>
-
-<!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of August Celestials Dailies" />
 
