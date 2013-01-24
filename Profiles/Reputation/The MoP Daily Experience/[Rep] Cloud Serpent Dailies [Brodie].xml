@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r23</Name>
+	<Name>Cloud Serpent r34</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -517,7 +517,7 @@
 		<CustomBehavior File="FlyTo" X="1613.85" Y="-2593.837" Z="151.2305" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
-		<While Condition="HasQuest(31717) &amp;&amp; !IsQuestCompleted(31717)" >
+		<While Condition="!IsQuestCompleted(31717)" >
 			<CustomBehavior File="InteractWith" MobId="58506" GossipOptions="1" X="1613.85" Y="-2593.837" Z="151.2305" />
 		</While>
 	</If>
@@ -529,7 +529,7 @@
 		<CustomBehavior File="FlyTo" X="1598.664" Y="-2556.398" Z="152.5595" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
-		<While Condition="HasQuest(31718) &amp;&amp; !IsQuestCompleted(31718)" >
+		<While Condition="!IsQuestCompleted(31718)" >
 			<CustomBehavior File="InteractWith" MobId="58508" GossipOptions="1" X="1603.27" Y="-2562.27" Z="153.02" />
 		</While>
 	</If>
@@ -541,7 +541,7 @@
 		<CustomBehavior File="FlyTo" X="1562.646" Y="-2618.847" Z="148.724" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
-		<While Condition="HasQuest(31719) &amp;&amp; !IsQuestCompleted(31719)" >
+		<While Condition="!IsQuestCompleted(31719)" >
 			<CustomBehavior File="InteractWith" MobId="58509" GossipOptions="1" X="1555.56" Y="-2616.34" Z="148.96" />
 		</While>
 	</If>
@@ -553,7 +553,7 @@
 		<CustomBehavior File="FlyTo" X="1570.667" Y="-2627.538" Z="149.1614" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
-		<While Condition="HasQuest(31720) &amp;&amp; !IsQuestCompleted(31720)" >
+		<While Condition="!IsQuestCompleted(31720)" >
 			<CustomBehavior File="InteractWith" MobId="58510" GossipOptions="1" X="1571.74" Y="-2631.30" Z="149.41" />
 		</While>
 	</If>
@@ -565,7 +565,9 @@
 		<CustomBehavior File="FlyTo" X="1629.15" Y="-2548.51" Z="153.28" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt you'll be all set. This boss is not too tough, but the stacking debuff can hurt. Press OK to let bot fight, or do it yourself, now." />
-		<CustomBehavior File="InteractWith" MobId="58511" GossipOptions="1" X="1629.15" Y="-2548.51" Z="153.28" />
+		<While Condition="!IsQuestCompleted(31721)" >
+			<CustomBehavior File="InteractWith" MobId="58511" GossipOptions="1" X="1629.15" Y="-2548.51" Z="153.28" />
+		</While>
 	</If>
 
 <!-- Sweet as Honey -->
@@ -611,7 +613,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31705" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1720.011" Y="-2525.268" Z="155.3589" />
 		<CustomBehavior File="ForcedDismount" />
-		<If Condition="HasQuest(31705) &amp;&amp; !IsQuestCompleted(31705)" >
+		<If Condition="!IsQuestCompleted(31705)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89113)" WaitTime="1000" />
 		</If>
 		<Objective QuestName="Needle Me Not" QuestId="31705" Type="KillMob" MobId="65616" KillCount="1" />
@@ -678,7 +680,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30156" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="2473.398" Y="-3378.453" Z="4.369105" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30156) &amp;&amp; !IsQuestCompleted(30156)" >
+		<While Condition="!IsQuestCompleted(30156)" >
 			<If Condition="(GetItemCount(79028) &lt; 5) &amp;&amp; (GetItemCount(79027) &lt; 3)" >
 				<CustomBehavior File="CollectThings" MobId="58219" CollectItemId="79028" CollectItemCount="5" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
 					<Hotspot X="2431.16" Y="-3380.34" Z="-3.52" />
@@ -718,7 +720,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30157" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="2189.148" Y="-3028.586" Z="20.56" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30157) &amp;&amp; !IsQuestCompleted(30157)" >
+		<While Condition="!IsQuestCompleted(30157)" >
 			<CustomBehavior File="UseItemOn" ItemId="78947" MobId="58220" MobId2="58244" MobId3="58243" Range="5" CollectionDistance="1000" NumOfTimes="1"/>
 			<CustomBehavior File="FlyTo" X="2301.747" Y="-3039.705" Z="20.18619" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -842,7 +844,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31714" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="2366.254" Y="-2527.907" Z="5.22471" />
-		<While Condition="HasQuest(31714) &amp;&amp; !IsQuestCompleted(31714)" >
+		<While Condition="!IsQuestCompleted(31714)" >
 			<CustomBehavior File="InteractWith" MobId="65641" MobState="Alive" CollectionDistance="250" X="2399.591" Y="-2465.728" Z="6.615609" />
 		</While>
 	</If>

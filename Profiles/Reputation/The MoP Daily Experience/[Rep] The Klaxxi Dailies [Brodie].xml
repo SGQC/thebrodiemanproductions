@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r23</Name>
+	<Name>The Klaxxi r34</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -580,48 +580,48 @@
 		<CustomBehavior File="UserSettings" QuestId="31494" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="117.7218" Y="3590.625" Z="233.62" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+		<While Condition="!IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<CustomBehavior File="FlyTo" X="117.7218" Y="3590.625" Z="233.62" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="124.2532" Y="3545.715" Z="233.6779" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="174.4177" Y="3522.092" Z="240.2173" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="195.3123" Y="3505.958" Z="243.612" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="223.2865" Y="3534.368" Z="243.4393" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="249.5217" Y="3543.792" Z="243.4423" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="271.6865" Y="3523.812" Z="243.8412" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="331.1143" Y="3585.448" Z="243.4435" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="312.3785" Y="3631.742" Z="243.7822" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="312.691" Y="3660.906" Z="245.142" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
-			<If Condition="HasQuest(31494) &amp;&amp; !IsObjectiveComplete(1,31494)" >
+			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="312.078" Y="3689.349" Z="243.4429" />
 				<CustomBehavior File="InteractWith" MobId="214292" ObjectType="GameObject" Range="50" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
@@ -634,7 +634,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31510" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1661.374" Y="4837.988" Z="59.85" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31510) &amp;&amp; !IsQuestCompleted(31510)">
+		<While Condition="!IsQuestCompleted(31510)">
 			<CustomBehavior File="InteractWith" MobId="214455" ObjectType="GameObject" />
 		</While>
 	</If>
@@ -654,7 +654,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31509" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="-1235.184" Y="4816.934" Z="29.11862" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31509) &amp;&amp; !IsQuestCompleted(31509)">
+		<While Condition="!IsQuestCompleted(31509)">
 			<CustomBehavior File="InteractWith" MobId="214543" MobId2="214549" ObjectType="GameObject" CollectionDistance="10000" WaitForNpcs="false"/>
 		</While>
 	</If>
@@ -683,38 +683,38 @@
  	<If Condition="HasQuest(31496) &amp;&amp; !IsQuestCompleted(31496)">
 		<CustomBehavior File="Message" Text="Starting Sampling the Empire's Finest" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31496" LootMobs="true" PullDistance="1" />
-		<If Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(1,31496)">
+		<If Condition="!IsObjectiveComplete(1,31496)">
 			<CustomBehavior File="FlyTo" X="417.6611" Y="4158.743" Z="228.657" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(1,31496)">
+			<While Condition="!IsObjectiveComplete(1,31496)">
 				<RunTo X="377.9952" Y="4140.55" Z="217.416" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(87400)" WaitTime="1000" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(2,31496)">
+		<If Condition="!IsObjectiveComplete(2,31496)">
 			<CustomBehavior File="FlyTo" X="290.66" Y="4078.97" Z="252.10" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(2,31496)">
+			<While Condition="!IsObjectiveComplete(2,31496)">
 				<RunTo X="240.0652" Y="4112.261" Z="246.2574" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(87400)" WaitTime="1000" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(3,31496)">
+		<If Condition="!IsObjectiveComplete(3,31496)">
 			<CustomBehavior File="FlyTo" X="276.8039" Y="4216.432" Z="265.6828" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(3,31496)">
+			<While Condition="!IsObjectiveComplete(3,31496)">
 				<RunTo X="246.6184" Y="4162.151" Z="261.7031" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(87400)" WaitTime="1000" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(4,31496)">
+		<If Condition="!IsObjectiveComplete(4,31496)">
 			<CustomBehavior File="FlyTo" X="396.3942" Y="4026.442" Z="226.3343" />
 			<CustomBehavior File="ForcedDismount" />
 			<RunTo X="334.6885" Y="4048.261" Z="222.3636" />
-			<While Condition="HasQuest(31496) &amp;&amp; !IsObjectiveComplete(4,31496)">
+			<While Condition="!IsObjectiveComplete(4,31496)">
 				<RunTo X="333.5489" Y="4046.795" Z="222.3625" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(87400)" WaitTime="1000" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -755,10 +755,10 @@
 		<CustomBehavior File="UserSettings" QuestId="31235" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="384.5976" Y="2385.874" Z="219.0938" />
 		<CustomBehavior File="ForcedDismount"/>
+		<While Condition="!IsQuestCompleted(31235)">
+			<CustomBehavior File="UseItemOn" ItemId="82807" MobId="62077" QuestId="31235" Range="5" CollectionDistance="10000" WaitTime="4000" />
+		</While>
 	</If>
-	<While Condition="HasQuest(31235) &amp;&amp; !IsQuestCompleted(31235)">
-		<CustomBehavior File="UseItemOn" ItemId="82807" MobId="62077" QuestId="31235" Range="5" CollectionDistance="10000" WaitTime="4000" />
-	</While>
 
 <!-- Kunchong Treats -->
  	<If Condition="HasQuest(31024) &amp;&amp; !IsQuestCompleted(31024)">
