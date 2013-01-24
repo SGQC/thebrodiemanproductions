@@ -416,10 +416,10 @@
 				<CustomBehavior File="ThunderingSkies" SpellId="5176"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="ThunderingSkies" SpellId="75"/>
+				<CustomBehavior File="ThunderingSkies" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="ThunderingSkies" SpellId="44614"/>
+				<CustomBehavior File="ThunderingSkies" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
 				<CustomBehavior File="ThunderingSkies" SpellId="62124"/>

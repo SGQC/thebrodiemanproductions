@@ -1015,10 +1015,10 @@
 				<CustomBehavior File="GiftForFung" SpellId="5176"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="GiftForFung" SpellId="75"/>
+				<CustomBehavior File="GiftForFung" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="GiftForFung" SpellId="44614"/>
+				<CustomBehavior File="GiftForFung" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
 				<CustomBehavior File="GiftForFung" SpellId="62124"/>
