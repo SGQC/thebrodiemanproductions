@@ -2,6 +2,10 @@ Patch Notes
 
 1/23/13
 
+r30
+Mistfall Village
+-- Decreased Range on Water Buckets pickup to avoid getting stuck trying to pick up some high up buckets.
+
 r29
 Golden Lotus
 -- Cannonfire - Increased waittime to 10 seconds between bombs.
