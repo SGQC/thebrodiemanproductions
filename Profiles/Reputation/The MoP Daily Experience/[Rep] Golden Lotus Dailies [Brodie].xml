@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r35</Name>
+	<Name>The Golden Lotus r36</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -175,7 +175,7 @@
 <!-- Ruins of Guo-Lai -->
 
 	<If Condition="HasQuest(31296) || HasQuest(31248) || HasQuest(31294) || HasQuest(30226) || HasQuest(31244)
-			|| HasQuest(30200) || HasQuest(30228) || HasQuest(30205)
+			|| HasQuest(30200) || HasQuest(30228) || HasQuest(30205) || HasQuest(30301)
 			|| HasQuest(30206) || HasQuest(31240) || HasQuest(30304) || HasQuest(30204)
 			|| HasQuest(31295) || HasQuest(30298) || HasQuest(30299) || HasQuest(30300)
 			|| HasQuest(30481)" >
@@ -250,7 +250,7 @@
 		 &amp;&amp; (!HasQuest(31244)) &amp;&amp; (!HasQuest(30282)) &amp;&amp; (!HasQuest(30293))
 		 &amp;&amp; (!HasQuest(30281)) &amp;&amp; (!HasQuest(30283)) &amp;&amp; (!HasQuest(30205))
 		 &amp;&amp; (!HasQuest(30292)) &amp;&amp; (!HasQuest(30196)) &amp;&amp; (!HasQuest(30236))
-		 &amp;&amp; (!HasQuest(30481)))">
+		 &amp;&amp; (!HasQuest(30481)) &amp;&amp; (!HasQuest(30301)))">
 		<CustomBehavior File="Message" Text="Starting Golden Lotus Dailies, moving to Golden Pagoda." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="1217.194" Y="1049.704" Z="425.9666" />
 		<CustomBehavior File="ForcedDismount" />

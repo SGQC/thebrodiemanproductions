@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r28</Name>
+	<Name>Ruins of Guo-Lai r36</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -148,6 +148,7 @@
 			(!HasQuest(30299) &amp;&amp; IsQuestCompleted(30299)) ||
 			(!HasQuest(30300) &amp;&amp; IsQuestCompleted(30300)) ||
 			(!HasQuest(30481) &amp;&amp; IsQuestCompleted(30481)) ||
+			(!HasQuest(30481) &amp;&amp; IsQuestCompleted(30301)) ||
 			(!HasQuest(30206) &amp;&amp; IsQuestCompleted(30206)))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected." LogColor="Green"  />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
@@ -178,6 +179,11 @@
 	<If Condition="HasQuest(31244)">
 		<CustomBehavior File="FlyTo" X="1284.806" Y="1622.994" Z="347.649" />
 		<TurnIn QuestName="Guo-Lai Encampment" QuestId="31244" TurnInName="Leven Dawnblade" TurnInId="59332" />
+	</If>
+
+	<If Condition="HasQuest(30301)">
+		<CustomBehavior File="FlyTo" X="1284.806" Y="1622.994" Z="347.649" />
+		<TurnIn QuestName="Offering A Warm Welcome" QuestId="30301" TurnInName="Leven Dawnblade" TurnInId="59332" />
 	</If>
 
 	<If Condition="HasQuest(31295)">
@@ -337,6 +343,58 @@
 		</While>
 	</If>
 
+<!-- Offering A Warm Welcome -->
+ 	<If Condition="HasQuest(30301) &amp;&amp; !IsQuestCompleted(30301)">
+		<CustomBehavior File="Message" Text="Starting Offering A Warm Welcome" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="30301" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="1265.85" Y="1901.82" Z="349.66" />
+		<CustomBehavior File="ForcedDismount"/>
+		<While Condition="!IsQuestCompleted(30301)" >
+			<If Condition="!IsQuestCompleted(30301)" >
+				<CustomBehavior File="FlyTo" X="1249.55" Y="1892.47" Z="348.37" />
+				<CustomBehavior File="ForcedDismount"/>
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<RunTo X="1228.00" Y="1852.45" Z="347.59" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<RunTo X="1224.96" Y="1812.68" Z="345.29" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<RunTo X="1249.10" Y="1809.14" Z="344.78" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<RunTo X="1287.15" Y="1817.82" Z="344.78" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<CustomBehavior File="FlyTo" X="1442.69" Y="1802.02" Z="301.77" />
+				<CustomBehavior File="ForcedDismount"/>
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<RunTo X="1489.75" Y="1833.92" Z="308.17" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30301)" >
+				<RunTo X="1441.47" Y="1821.36" Z="301.91" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+		</While>
+	</If>
+
 <!-- Painting the Ruins Red -->
  	<If Condition="HasQuest(30298) &amp;&amp; !IsQuestCompleted(30298)">
 		<CustomBehavior File="Message" Text="Starting Painting the Ruins Red" LogColor="Green"  />
@@ -387,53 +445,54 @@
 			(HasQuest(30299) &amp;&amp; IsQuestCompleted(30299)) ||
 			(HasQuest(30300) &amp;&amp; IsQuestCompleted(30300)) ||
 			(HasQuest(30481) &amp;&amp; IsQuestCompleted(30481)) ||
+			(HasQuest(30301) &amp;&amp; IsQuestCompleted(30301)) ||
 			(HasQuest(30206) &amp;&amp; IsQuestCompleted(30206))" >
 		<CustomBehavior File="Message" Text="Quests Completed. Heading back to Quest givers." LogColor="Green" />
 		<CustomBehavior File="FlyTo" X="1284.806" Y="1622.994" Z="347.649" />
 		<CustomBehavior File="ForcedDismount" />
 	</If>
 
-  	<If Condition="(HasQuest(30200)) &amp;&amp; (IsQuestCompleted(30200))" >
+  	<If Condition="(HasQuest(30200) &amp;&amp; IsQuestCompleted(30200))" >
 		<TurnIn QuestName="In Ashen Webs" QuestId="30200" TurnInName="Anji Autumnlight" TurnInId="58503" />
 	</If>
 
-  	<If Condition="(HasQuest(30228)) &amp;&amp; (IsQuestCompleted(30228))" >
+  	<If Condition="(HasQuest(30228) &amp;&amp; IsQuestCompleted(30228))" >
 		<TurnIn QuestName="Troubling the Troublemakers" QuestId="30228" TurnInName="Anji Autumnlight" TurnInId="58503" />
 	</If>
 
-  	<If Condition="(HasQuest(30226)) &amp;&amp; (IsQuestCompleted(30226))" >
+  	<If Condition="(HasQuest(30226) &amp;&amp; IsQuestCompleted(30226))" >
 		<TurnIn QuestName="Blood on the Rise" QuestId="30226" TurnInName="Anji Autumnlight" TurnInId="58503" />
 	</If>
 
-  	<If Condition="(HasQuest(30304)) &amp;&amp; (IsQuestCompleted(30304))" >
+  	<If Condition="(HasQuest(30304) &amp;&amp; IsQuestCompleted(30304))" >
 		<TurnIn QuestName="Hard as a Rock" QuestId="30304" TurnInName="Kun Autumnlight" TurnInId="58504" />
 	</If>
 
-  	<If Condition="(HasQuest(30204)) &amp;&amp; (IsQuestCompleted(30204))" >
+  	<If Condition="(HasQuest(30204) &amp;&amp; IsQuestCompleted(30204))" >
 		<TurnIn QuestName="Thats Not a Rock" QuestId="30204" TurnInName="Kun Autumnlight" TurnInId="58504" />
 	</If>
 
-  	<If Condition="(HasQuest(30206)) &amp;&amp; (IsQuestCompleted(30206))" >
+  	<If Condition="(HasQuest(30206) &amp;&amp; IsQuestCompleted(30206))" >
 		<TurnIn QuestName="Runes in the Ruins" QuestId="30206" TurnInName="Sinan the Dreamer" TurnInId="63266" />
 	</If>
 
-  	<If Condition="(HasQuest(30205)) &amp;&amp; (IsQuestCompleted(30205))" >
+  	<If Condition="(HasQuest(30205) &amp;&amp; IsQuestCompleted(30205))" >
 		<TurnIn QuestName="Runelocked" QuestId="30205" TurnInName="Sinan the Dreamer" TurnInId="63266" />
 	</If>
 
-  	<If Condition="(HasQuest(30298)) &amp;&amp; (IsQuestCompleted(30298))" >
+  	<If Condition="(HasQuest(30298) &amp;&amp; IsQuestCompleted(30298))" >
 		<TurnIn QuestName="Painting the Ruins Red" QuestId="30298" TurnInName="Leven Dawnblade" TurnInId="59332" />
 	</If>
 
-  	<If Condition="(HasQuest(30299)) &amp;&amp; (IsQuestCompleted(30299))" >
+  	<If Condition="(HasQuest(30299) &amp;&amp; IsQuestCompleted(30299))" >
 		<TurnIn QuestName="No Stone Unturned" QuestId="30299" TurnInName="Sun Tenderheart" TurnInId="59334" />
 	</If>
 
-  	<If Condition="(HasQuest(30300)) &amp;&amp; (IsQuestCompleted(30300))" >
+  	<If Condition="(HasQuest(30300) &amp;&amp; IsQuestCompleted(30300))" >
 		<TurnIn QuestName="The Key to Success" QuestId="30300" TurnInName="Sun Tenderheart" TurnInId="59334" />
 	</If>
 
-  	<If Condition="(HasQuest(30481)) &amp;&amp; (IsQuestCompleted(30481))" >
+  	<If Condition="(HasQuest(30481) &amp;&amp; IsQuestCompleted(30481))" >
 		<TurnIn QuestName="Carved in Stone" QuestId="30481" TurnInName="Rook Stonetoe" TurnInId="59333" />
 	</If>
 
