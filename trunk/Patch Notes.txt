@@ -2,6 +2,12 @@ Patch Notes
 
 1/25/13
 
+r40
+Tillers Farm Seed Profiles
+-- Added Ripe Jade Squash to the check
+Farm Dailies
+-- Added Ripe Jade Squash to the check
+
 r39
 Dominance Offensive
 -- Added Wanted: Lieutenant Ethan Jacobson
