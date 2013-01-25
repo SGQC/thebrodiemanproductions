@@ -2,6 +2,13 @@ Patch Notes
 
 1/24/13
 
+r35
+Global Change
+-- Quest Order reconfigure. Now starting from Golden Lotus, to normal run, ending with Shado Pan, then August Celestials.
+Shado Pan
+-- Converted UseItem -> UseItemByName() (UseItem depreciated)
+-- Massive Code Cleanup
+
 r34
 The Klaxxi
 -- Code Cleanup

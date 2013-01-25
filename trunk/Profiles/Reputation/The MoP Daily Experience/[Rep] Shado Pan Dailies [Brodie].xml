@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r23</Name>
+	<Name>Shado Pan Dailies r35</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -476,12 +476,12 @@
 		<CustomBehavior File="UserSettings" QuestId="31128" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1842.04" Y="4264.08" Z="148.88" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31128) &amp;&amp; !IsObjectiveComplete(1,31128)" >
+		<While Condition="!IsObjectiveComplete(1,31128)" >
 			<CustomBehavior File="InteractWith" MobId="62978" GossipOptions="1" X="1803.88" Y="4247.88" Z="148.80" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31128) &amp;&amp; !IsQuestCompleted(31128)" >
+		<While Condition="!IsQuestCompleted(31128)" >
 			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="63135" GossipOptions="1" X="1959.65" Y="4175.24" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1831.925" Y="4258.577" Z="149.2426" />
@@ -496,12 +496,12 @@
 		<CustomBehavior File="UserSettings" QuestId="31221" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1842.04" Y="4264.08" Z="148.88" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31221) &amp;&amp; !IsObjectiveComplete(1,31221)" >
+		<While Condition="!IsObjectiveComplete(1,31221)" >
 			<CustomBehavior File="InteractWith" MobId="63616" GossipOptions="1" X="1830.88" Y="4271.50" Z="149.08" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31221) &amp;&amp; !IsQuestCompleted(31221)" >
+		<While Condition="!IsQuestCompleted(31221)" >
 			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="64471" GossipOptions="1" X="1935.40" Y="4171.55" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1831.925" Y="4258.577" Z="149.2426" />
@@ -516,12 +516,12 @@
 		<CustomBehavior File="UserSettings" QuestId="31220" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1842.04" Y="4264.08" Z="148.88" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31220) &amp;&amp; !IsObjectiveComplete(1,31220)" >
+		<While Condition="!IsObjectiveComplete(1,31220)" >
 			<CustomBehavior File="InteractWith" MobId="63618" GossipOptions="1" X="1842.04" Y="4264.08" Z="148.88" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31220) &amp;&amp; !IsQuestCompleted(31220)" >
+		<While Condition="!IsQuestCompleted(31220)" >
 			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="64470" GossipOptions="1" X="1947.71" Y="4166.86" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1831.925" Y="4258.577" Z="149.2426" />
@@ -536,12 +536,12 @@
 		<CustomBehavior File="UserSettings" QuestId="31127" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31127) &amp;&amp; !IsObjectiveComplete(1,31127)" >
+		<While Condition="!IsObjectiveComplete(1,31127)" >
 			<CustomBehavior File="InteractWith" MobId="62550" GossipOptions="1" X="1859.20" Y="4224.45" Z="150.09" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31127) &amp;&amp; !IsQuestCompleted(31127)" >
+		<While Condition="!IsQuestCompleted(31127)" >
 			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="63125" GossipOptions="1" X="1943.82" Y="4198.97" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
@@ -556,12 +556,12 @@
 		<CustomBehavior File="UserSettings" QuestId="31104" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31104) &amp;&amp; !IsObjectiveComplete(1,31104)" >
+		<While Condition="!IsObjectiveComplete(1,31104)" >
 			<CustomBehavior File="InteractWith" MobId="62303" GossipOptions="1" X="1877.03" Y="4273.26" Z="149.52" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31104) &amp;&amp; !IsQuestCompleted(31104)" >
+		<While Condition="!IsQuestCompleted(31104)" >
 			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="62850" GossipOptions="1" X="1964.84" Y="4186.96" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
@@ -576,12 +576,12 @@
 		<CustomBehavior File="UserSettings" QuestId="31038" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31038) &amp;&amp; !IsObjectiveComplete(1,31038)" >
+		<While Condition="!IsObjectiveComplete(1,31038)" >
 			<CustomBehavior File="InteractWith" MobId="62782" GossipOptions="1" X="1873.87" Y="4268.60" Z="149.50" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(31038) &amp;&amp; !IsQuestCompleted(31038)" >
+		<While Condition="!IsQuestCompleted(31038)" >
 			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="62781" GossipOptions="1" X="1943.82" Y="4198.97" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
@@ -617,37 +617,37 @@
  	<If Condition="HasQuest(31199) &amp;&amp; !IsQuestCompleted(31199)" >
 		<CustomBehavior File="Message" Text="Starting Destroy the Siege Weapons" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31199" LootMobs="true" PullDistance="10" />
-		<If Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(2,31199)" >
+		<If Condition="!IsObjectiveComplete(2,31199)" >
 			<CustomBehavior File="FlyTo" X="2450.843" Y="5500.398" Z="83.84156" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(2,31199)" >
+			<While Condition="!IsObjectiveComplete(2,31199)" >
 
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213308" CollectionDistance="200" X="2460.637" Y="5504.174" Z="82.54575" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(1,31199)" >
+		<If Condition="!IsObjectiveComplete(1,31199)" >
 
 			<CustomBehavior File="FlyTo" X="2510.925" Y="5609.593" Z="71.19161" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(1,31199)" >
+			<While Condition="!IsObjectiveComplete(1,31199)" >
 
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213307" CollectionDistance="200" X="2506.641" Y="5599.797" Z="70.86126" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(3,31199)" >
+		<If Condition="!IsObjectiveComplete(3,31199)" >
 
 			<CustomBehavior File="FlyTo" X="2971.075" Y="5517.408" Z="62.43878" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(3,31199)" >
+			<While Condition="!IsObjectiveComplete(3,31199)" >
 
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213310" CollectionDistance="200" X="2983.526" Y="5517.333" Z="62.43768" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(4,31199)" >
+		<If Condition="!IsObjectiveComplete(4,31199)" >
 
 			<CustomBehavior File="FlyTo" X="3034.689" Y="5576.127" Z="75.41873" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31199) &amp;&amp; !IsObjectiveComplete(4,31199)" >
+			<While Condition="!IsObjectiveComplete(4,31199)" >
 
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213311" CollectionDistance="200" X="3029.808" Y="5582.784" Z="75.59239" />
 			</While>
@@ -658,37 +658,37 @@
  	<If Condition="HasQuest(31198) &amp;&amp; !IsQuestCompleted(31198)">
 		<CustomBehavior File="Message" Text="Starting A Morale Victory" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31198" LootMobs="true" PullDistance="10" />
-		<If Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(2,31198)" >
+		<If Condition="!IsObjectiveComplete(2,31198)" >
 			<CustomBehavior File="FlyTo" X="2805.021" Y="6154.779" Z="75.1567" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(2,31198)" >
+			<While Condition="!IsObjectiveComplete(2,31198)" >
 
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213305" CollectionDistance="200" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(1,31198)" >
+		<If Condition="!IsObjectiveComplete(1,31198)" >
 
 			<CustomBehavior File="FlyTo" X="2435.171" Y="5721.392" Z="63.7044" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(1,31198)" >
+			<While Condition="!IsObjectiveComplete(1,31198)" >
 
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213304" CollectionDistance="200" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(3,31198)" >
+		<If Condition="!IsObjectiveComplete(3,31198)" >
 
 			<CustomBehavior File="FlyTo" X="2678.543" Y="5850.164" Z="106.0402" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(3,31198)" >
+			<While Condition="!IsObjectiveComplete(3,31198)" >
 
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213309" CollectionDistance="200" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(4,31198)" >
+		<If Condition="!IsObjectiveComplete(4,31198)" >
 
 			<CustomBehavior File="FlyTo" X="2952.004" Y="5477.272" Z="68.28373" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31198) &amp;&amp; !IsObjectiveComplete(4,31198)" >
+			<While Condition="!IsObjectiveComplete(4,31198)" >
 
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213306" CollectionDistance="200" />
 			</While>
@@ -699,52 +699,52 @@
  	<If Condition="HasQuest(31200) &amp;&amp; !IsQuestCompleted(31200)">
 		<CustomBehavior File="Message" Text="Starting Fumigation" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31200" LootMobs="true" PullDistance="10" />
-		<If Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(1,31200)" >
+		<If Condition="!IsObjectiveComplete(1,31200)" >
 			<CustomBehavior File="FlyTo" X="2800.912" Y="5876.463" Z="138.1241" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(1,31200)" >
+			<While Condition="!IsObjectiveComplete(1,31200)" >
 
 				<RunTo X="2800.912" Y="5876.463" Z="138.1241" />
-				<CustomBehavior File="UseItem" ItemId="86532" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(3,31200)" >
+		<If Condition="!IsObjectiveComplete(3,31200)" >
 
 			<CustomBehavior File="FlyTo" X="2849.064" Y="5716.589" Z="126.1583" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(3,31200)" >
+			<While Condition="!IsObjectiveComplete(3,31200)" >
 
 				<RunTo X="2849.064" Y="5716.589" Z="126.1583" />
-				<CustomBehavior File="UseItem" ItemId="86532" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(4,31200)" >
+		<If Condition="!IsObjectiveComplete(4,31200)" >
 
 			<CustomBehavior File="FlyTo" X="2970.775" Y="5814.73" Z="81.08456" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(4,31200)" >
+			<While Condition="!IsObjectiveComplete(4,31200)" >
 
 				<RunTo X="2970.775" Y="5814.73" Z="81.08456" />
-				<CustomBehavior File="UseItem" ItemId="86532" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(5,31200)" >
+		<If Condition="!IsObjectiveComplete(5,31200)" >
 
 			<CustomBehavior File="FlyTo" X="2906.76" Y="5867.02" Z="127.52" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(5,31200)" >
+			<While Condition="!IsObjectiveComplete(5,31200)" >
 				<RunTo X="2905.997" Y="5865.388" Z="127.445" />
-				<CustomBehavior File="UseItem" ItemId="86532" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
-		<If Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(2,31200)" >
+		<If Condition="!IsObjectiveComplete(2,31200)" >
 
 			<CustomBehavior File="FlyTo" X="2743.37" Y="5703.776" Z="76.66451" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="HasQuest(31200) &amp;&amp; !IsObjectiveComplete(2,31200)" >
+			<While Condition="!IsObjectiveComplete(2,31200)" >
 
 				<RunTo X="2743.37" Y="5703.776" Z="76.66451" />
-				<CustomBehavior File="UseItem" ItemId="86532" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
 	</If>
@@ -773,7 +773,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31048" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="3739.57" Y="5383.41" Z="144.41" />
 		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="HasQuest(31048) &amp;&amp; !IsQuestCompleted(31048)" >
+		<While Condition="!IsQuestCompleted(31048)" >
 
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31048" MobId="212324" CollectionDistance="10000" />
 		</While>
@@ -785,7 +785,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31043" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="3739.57" Y="5383.41" Z="144.41" />
 		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="HasQuest(31043) &amp;&amp; !IsQuestCompleted(31043)" >
+		<While Condition="!IsQuestCompleted(31043)" >
 
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31043" MobId="212318" CollectionDistance="10000" WaitForNpcs="false" />
 		</While>
@@ -797,7 +797,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31047" LootMobs="true" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="3680.37" Y="5195.96" Z="8.91" />
 		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="HasQuest(31047) &amp;&amp; !IsQuestCompleted(31047)" >
+		<While Condition="!IsQuestCompleted(31047)" >
 
 			<CustomBehavior File="InteractWith" QuestId="31047" MobId="62539" CollectionDistance="10000" />
 		</While>
@@ -816,18 +816,20 @@
  	<If Condition="HasQuest(31046) &amp;&amp; !IsQuestCompleted(31046)">
 		<CustomBehavior File="Message" Text="Starting Little Hatchlings" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31046" LootMobs="true" PullDistance="15" />
-		<While Condition="HasQuest(31046) &amp;&amp; !IsQuestCompleted(31046)">
-			<CustomBehavior File="FlyTo" X="3561.077" Y="5227.29" Z="7.006161" />
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="LittleHatchlings" />
-			<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31046" MobId21="213578" MobId20="213584" MobId19="213571" MobId18="213572" MobId17="213585" MobId16="213573" MobId15="213583" MobId14="213579" MobId13="213591" MobId12="213586" MobId11="213574" MobId10="213582" MobId9="213575" MobId8="213580" MobId7="213576" MobId6="213581" MobId5="213590" MobId4="213577" MobId3="213589" MobId2="213588" MobId="213587" WaitForNpcs="false" />
-			<If Condition="HasQuest(31046) &amp;&amp; !IsQuestCompleted(31046)">
+		<While Condition="!IsQuestCompleted(31046)">
+			<If Condition="!IsQuestCompleted(31046)">
+				<CustomBehavior File="FlyTo" X="3561.077" Y="5227.29" Z="7.006161" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="LittleHatchlings" />
+				<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31046" MobId21="213578" MobId20="213584" MobId19="213571" MobId18="213572" MobId17="213585" MobId16="213573" MobId15="213583" MobId14="213579" MobId13="213591" MobId12="213586" MobId11="213574" MobId10="213582" MobId9="213575" MobId8="213580" MobId7="213576" MobId6="213581" MobId5="213590" MobId4="213577" MobId3="213589" MobId2="213588" MobId="213587" WaitForNpcs="false" />
+			</If>
+			<If Condition="!IsQuestCompleted(31046)">
 				<CustomBehavior File="FlyTo" X="3667.552" Y="5240.583" Z="12.9497" />
 				<CustomBehavior File="ForcedDismount" />
 				<CustomBehavior File="LittleHatchlings" />
 				<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31046" MobId21="213578" MobId20="213584" MobId19="213571" MobId18="213572" MobId17="213585" MobId16="213573" MobId15="213583" MobId14="213579" MobId13="213591" MobId12="213586" MobId11="213574" MobId10="213582" MobId9="213575" MobId8="213580" MobId7="213576" MobId6="213581" MobId5="213590" MobId4="213577" MobId3="213589" MobId2="213588" MobId="213587" WaitForNpcs="false" />
 			</If>
-			<If Condition="HasQuest(31046) &amp;&amp; !IsQuestCompleted(31046)">
+			<If Condition="!IsQuestCompleted(31046)">
 				<CustomBehavior File="FlyTo" X="3646.913" Y="5134.396" Z="11.36216" />
 				<CustomBehavior File="ForcedDismount" />
 				<CustomBehavior File="LittleHatchlings" />
@@ -903,7 +905,7 @@
  	<If Condition="HasQuest(31119) &amp;&amp; !IsQuestCompleted(31119)">
 		<CustomBehavior File="Message" Text="Starting The Enemy of My Enemy...Is Still My Enemy" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31119" LootMobs="true" PullDistance="1" />
-		<While Condition="HasQuest(31119) &amp;&amp; !IsQuestCompleted(31119)" >
+		<While Condition="!IsQuestCompleted(31119)" >
 
 			<CustomBehavior File="FlyTo" X="2911.838" Y="3474.233" Z="377.3546" />
 			<CustomBehavior File="ForcedDismount"/>
@@ -953,7 +955,7 @@
 		<CustomBehavior File="FlyTo" X="2681.02" Y="4032.29" Z="174.0606" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Spirit Dust" QuestId="31116" Type="CollectItem" ItemId="84727" CollectCount="32"/>
-		<While Condition="HasQuest(31116) &amp;&amp; !IsQuestCompleted(31116)" >
+		<While Condition="!IsQuestCompleted(31116)" >
 
 			<CustomBehavior File="UserSettings" QuestId="31116" LootMobs="true" PullDistance="10" />
 			<CustomBehavior File="InteractWith" IgnoreCombat="True" CollectionDistance="5000" ObjectType="GameObject" MobId="212779" WaitForNpcs="False" />
@@ -971,33 +973,33 @@
 
 <!-- Quest Turn ins -->
 
-	<If Condition="((HasQuest(31106)) &amp;&amp; (IsQuestCompleted(31106)) ||
-			(HasQuest(31105)) &amp;&amp; (IsQuestCompleted(31105)) ||
-			(HasQuest(31039)) &amp;&amp; (IsQuestCompleted(31039)) ||
-			(HasQuest(31048)) &amp;&amp; (IsQuestCompleted(31048)) ||
-			(HasQuest(31045)) &amp;&amp; (IsQuestCompleted(31045)) ||
-			(HasQuest(31044)) &amp;&amp; (IsQuestCompleted(31044)) ||
-			(HasQuest(31042)) &amp;&amp; (IsQuestCompleted(31042)) ||
-			(HasQuest(31043)) &amp;&amp; (IsQuestCompleted(31043)) ||
-			(HasQuest(31047)) &amp;&amp; (IsQuestCompleted(31047)) ||
-			(HasQuest(31062)) &amp;&amp; (IsQuestCompleted(31062)) ||
-			(HasQuest(31127)) &amp;&amp; (IsQuestCompleted(31127)) ||
-			(HasQuest(31113)) &amp;&amp; (IsQuestCompleted(31113)) ||
-			(HasQuest(31114)) &amp;&amp; (IsQuestCompleted(31114)) ||
-			(HasQuest(31040)) &amp;&amp; (IsQuestCompleted(31040)) ||
-			(HasQuest(31118)) &amp;&amp; (IsQuestCompleted(31118)) ||
-			(HasQuest(31119)) &amp;&amp; (IsQuestCompleted(31119)) ||
-			(HasQuest(31041)) &amp;&amp; (IsQuestCompleted(31041)) ||
-			(HasQuest(31046)) &amp;&amp; (IsQuestCompleted(31046)) ||
-			(HasQuest(31049)) &amp;&amp; (IsQuestCompleted(31049)) ||
-			(HasQuest(31116)) &amp;&amp; (IsQuestCompleted(31116)) ||
-			(HasQuest(31196)) &amp;&amp; (IsQuestCompleted(31196)) ||
-			(HasQuest(31197)) &amp;&amp; (IsQuestCompleted(31197)) ||
-			(HasQuest(31198)) &amp;&amp; (IsQuestCompleted(31198)) ||
-			(HasQuest(31199)) &amp;&amp; (IsQuestCompleted(31199)) ||
-			(HasQuest(31200)) &amp;&amp; (IsQuestCompleted(31200)) ||
-			(HasQuest(31120)) &amp;&amp; (IsQuestCompleted(31120)) ||
-			(HasQuest(31266)) &amp;&amp; (IsQuestCompleted(31266)))" >
+	<If Condition="((HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)) ||
+			(HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)) ||
+			(HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)) ||
+			(HasQuest(31048) &amp;&amp; IsQuestCompleted(31048)) ||
+			(HasQuest(31045) &amp;&amp; IsQuestCompleted(31045)) ||
+			(HasQuest(31044) &amp;&amp; IsQuestCompleted(31044)) ||
+			(HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)) ||
+			(HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)) ||
+			(HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)) ||
+			(HasQuest(31062) &amp;&amp; IsQuestCompleted(31062)) ||
+			(HasQuest(31127) &amp;&amp; IsQuestCompleted(31127)) ||
+			(HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)) ||
+			(HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)) ||
+			(HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)) ||
+			(HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)) ||
+			(HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)) ||
+			(HasQuest(31041) &amp;&amp; IsQuestCompleted(31041)) ||
+			(HasQuest(31046) &amp;&amp; IsQuestCompleted(31046)) ||
+			(HasQuest(31049) &amp;&amp; IsQuestCompleted(31049)) ||
+			(HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)) ||
+			(HasQuest(31196) &amp;&amp; IsQuestCompleted(31196)) ||
+			(HasQuest(31197) &amp;&amp; IsQuestCompleted(31197)) ||
+			(HasQuest(31198) &amp;&amp; IsQuestCompleted(31198)) ||
+			(HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)) ||
+			(HasQuest(31200) &amp;&amp; IsQuestCompleted(31200)) ||
+			(HasQuest(31120) &amp;&amp; IsQuestCompleted(31120)) ||
+			(HasQuest(31266) &amp;&amp; IsQuestCompleted(31266)))" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to The Garrison." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="1853.202" Y="4261.375" Z="148.8664" />
 		<CustomBehavior File="ForcedDismount" />
@@ -1217,7 +1219,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
+<!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] August Celestials Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Shado-Pan Dailies" />
 
