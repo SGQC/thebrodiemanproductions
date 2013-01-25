@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The MoP Dailies Experience r23</Name>
+	<Name>The MoP Dailies Experience r35</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -23,7 +23,7 @@
 		<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for port {TimeRemaining}" />
 	</If>
 
-	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
 	<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Profile...but if you're seeing this something borked!" />
 
 </QuestOrder>
