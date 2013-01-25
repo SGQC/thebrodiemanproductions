@@ -2,6 +2,10 @@ Patch Notes
 
 1/24/13
 
+r37
+Boss Fights
+-- Fixed bad link to Tillers
+
 r36
 Golden Lotus
 -- Updated to check for Offering A Warm Welcome
