@@ -2,6 +2,10 @@ Patch Notes
 
 1/25/13
 
+r41
+The Anglers
+-- Loop What Lurks Below, to make sure we got the ring
+
 r40
 Tillers Farm Seed Profiles
 -- Added Ripe Jade Squash to the check
