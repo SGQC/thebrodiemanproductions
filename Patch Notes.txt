@@ -1,5 +1,13 @@
 Patch Notes
 
+1/25/13
+
+r38
+Golden Lotus
+-- Fixed bad link to Tillers
+Shado Pan
+-- Reactivated profile load to August Celestials
+
 1/24/13
 
 r37
