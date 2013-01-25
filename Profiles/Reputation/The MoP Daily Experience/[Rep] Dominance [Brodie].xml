@@ -30,6 +30,27 @@
 		<Blackspot X="-1876.213" Y="1916.132" Z="5.37" Radius="3" /> <!-- A big pipe -->
 		<Blackspot X="-1952.306" Y="2333.733" Z="8.146486" Radius="10" /> <!-- Don't go in here -->
 		<Blackspot X="-1781.708" Y="2458.493" Z="25.41364" Radius="6" /> <!-- Large Brazier -->
+		<Blackspot X="-2018.286" Y="1707.244" Z="2.422059" Radius="30" />
+		<Blackspot X="-1940.081" Y="1719.98" Z="1.430176" Radius="15" />
+		<Blackspot X="-2060.387" Y="1910.161" Z="2.301984" Radius="4" />
+		<Blackspot X="-2272.087" Y="2046.383" Z="16.77752" Radius="20" />
+		<Blackspot X="-2064.587" Y="1882.787" Z="2.106631" Radius="3" />
+		<Blackspot X="-2002.455" Y="1756.331" Z="6.199052" Radius="7" />
+		<Blackspot X="-2025.688" Y="1796.932" Z="1.259144" Radius="7" />
+		<Blackspot X="-2044.099" Y="1725.936" Z="-1.061515" Radius="4" />
+		<Blackspot X="-1876.907" Y="1846.525" Z="3.269044" Radius="6" />
+		<Blackspot X="-1878.636" Y="1833.401" Z="2.540323" Radius="6" />
+		<Blackspot X="-1911.972" Y="1821.618" Z="3.128579" Radius="3" />
+		<Blackspot X="-1866.745" Y="1835.317" Z="3.492005" Radius="3" />
+		<Blackspot X="-1841.878" Y="1831.863" Z="2.098845" Radius="4" />
+		<Blackspot X="-1156.45" Y="-1097.687" Z="4.74" Radius="7" />
+		<Blackspot X="-1998.568" Y="1757.436" Z="5.123919" Radius="2" />
+		<Blackspot X="-1037.456" Y="-1165.328" Z="21.41401" Radius="10" />
+		<Blackspot X="-1070.933" Y="-1184.963" Z="11.51922" Radius="5" />
+		<Blackspot X="-831.7863" Y="-1066.384" Z="18.8855" Radius="5" />
+		<Blackspot X="-840.877" Y="-1058.433" Z="20.84611" Radius="5" />
+		<Blackspot X="-845.2792" Y="-1068.068" Z="20.6443" Radius="20" />
+		<Blackspot X="-857.407" Y="-1012.432" Z="15.00312" Radius="5" />
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -318,6 +339,23 @@
 		<Objective QuestName="Worker Harassment" QuestId="32135" Type="KillMob" MobId="67423" KillCount="30" />
 	</If>
 
+<!-- Work Order: Iron -->
+	<If Condition="HasQuest(32140)" >
+		<CustomBehavior File="Message" Text="Starting Work Order: Iron" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32140" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="-2057.03" Y="1887.69" Z="0.94" />
+		<While Condition="HasQuest(32140)" >
+			<TurnIn QuestName="Work Order: Iron" QuestId="32140" TurnInName="Daxil Oregrind" TurnInId="67537" />
+		</While>
+
+		<!-- Daxil Oregrind -->
+		<While Condition="HasQuestAvailable(67537)" >
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="67537" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</While>
+	</If>
+
 <!-- Work Order: Fuel -->
 	<If Condition="HasQuest(32136)">
 		<CustomBehavior File="Message" Text="Starting Work Order: Fuel" LogColor="Green"  />
@@ -404,6 +442,73 @@
 		</While>
 	</If>
 
+<!-- Bug Off -->
+	<If Condition="(HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236))" >
+		<CustomBehavior File="Message" Text="Starting Bug Off" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32236" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-2058.73" Y="1996.58" Z="-5.43" />
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="!IsQuestCompleted(32236)" >
+			<CustomBehavior File="UseItemOn" QuestId="32236" MobId="67759" ItemId="93026" NumOfTimes="1" CollectionDistance="1000" />
+		</While>
+	</If>
+
+<!-- Power Metal -->
+	<If Condition="(HasQuest(32141) &amp;&amp; !IsQuestCompleted(32141))" >
+		<CustomBehavior File="Message" Text="Starting Power Metal" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32141" LootMobs="true" PullDistance="5" />
+		<While Condition="!IsQuestCompleted(32141)" >
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-2090.55" Y="1975.52" Z="24.65" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-2067.24" Y="1945.62" Z="23.05" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-2111.60" Y="1999.59" Z="5.97" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-2116.60" Y="1968.47" Z="-1.06" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-2107.06" Y="1927.64" Z="0.86" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-2079.64" Y="1914.19" Z="2.91" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-1955.44" Y="1861.40" Z="31.18" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32141)" >
+				<CustomBehavior File="FlyTo" X="-1980.32" Y="1885.04" Z="23.13" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216178" NumOfTimes="1" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32141" ObjectType="GameObject" MobId="216716" NumOfTimes="3" WaitForNpcs="False" CollectionDistance="15" WaitTime="1000" />
+			</If>
+		</While>
+	</If>
+
 <!-- Runnin On Empty -->
 	<If Condition="HasQuest(32137) &amp;&amp; !IsQuestCompleted(32137)" >
 		<CustomBehavior File="Message" Text="Starting Runnin On Empty" LogColor="Green"  />
@@ -432,6 +537,15 @@
 		<While Condition="HasQuest(32237)">
 			<TurnIn QuestName="Precious Resource" QuestId="32237" TurnInName="Bixy Buzzsaw" TurnInId="67553" />
 		</While>
+	</If>
+
+<!-- Wanted: Lieutenant Ethan Jacobson -->
+	<If Condition="(HasQuest(32223) &amp;&amp; !IsQuestCompleted(32223))" >
+		<CustomBehavior File="Message" Text="Starting Wanted: Lieutenant Ethan Jacobson" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32223" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-2330.62" Y="2060.64" Z="7.52" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Wanted: Lieutenant Ethan Jacobson" QuestId="32223" Type="KillMob" MobId="68028" KillCount="1" />
 	</If>
 
 <!-- Wanted: Chief Engineer Cogwrench -->

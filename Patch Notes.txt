@@ -2,6 +2,13 @@ Patch Notes
 
 1/25/13
 
+r39
+Dominance Offensive
+-- Added Wanted: Lieutenant Ethan Jacobson
+-- Added Bug Off! (needs testing)
+-- Added Power Metal
+-- Added Work Order: Iron
+
 r38
 Golden Lotus
 -- Fixed bad link to Tillers
