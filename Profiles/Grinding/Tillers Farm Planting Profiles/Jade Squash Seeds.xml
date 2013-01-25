@@ -50,6 +50,7 @@
 			<CustomBehavior File="InteractWith" MobId="58567" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="60113" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="66112" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+			<CustomBehavior File="InteractWith" MobId="66113" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="63154" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="63156" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 			<CustomBehavior File="InteractWith" MobId="63184" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
