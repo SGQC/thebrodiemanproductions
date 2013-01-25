@@ -257,7 +257,9 @@
 		<CustomBehavior File="UserSettings" QuestId="30585" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1087.74" Y="1332.411" Z="16.6486" />
 		<CustomBehavior File="ForcedDismount" />
-        	<CustomBehavior File="MrFishIt" CollectItemId="80262" CollectItemCount="1" X="-1100.109" Y="1346.707" Z="13.99739" />
+		<While Condition="!IsQuestCompleted(30585)" >
+        		<CustomBehavior File="MrFishIt" CollectItemId="80262" CollectItemCount="1" X="-1100.109" Y="1346.707" Z="13.99739" />
+		</While>
         </If>
 
 <!-- Shocking! -->
