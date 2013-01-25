@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r35</Name>
+	<Name>Boss Fights r37</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -417,7 +417,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] The Tillers Dailies [Brodie]" />
+<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Tillers Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />
 
