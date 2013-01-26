@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r23</Name>
+	<Name>Lost and Found r42</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -35,12 +35,13 @@
 
 <!-- Starting Achievement Grind -->
 
-<CustomBehavior File="Message" Text="Beginning Achievement Grind." LogColor="Green"  />
+<CustomBehavior File="Message" Text="Beginning the Lost and Found Achievement Grind." LogColor="Green"  />
 
 <While Condition="!IsQuestCompleted(31397) || !IsQuestCompleted(31307) || !IsQuestCompleted(31284) ||
 			!IsQuestCompleted(31292) || !IsQuestCompleted(31409) || !IsQuestCompleted(31411) ||
 			!IsQuestCompleted(31433) || !IsQuestCompleted(31432) || !IsQuestCompleted(31438) ||
-			!IsQuestCompleted(31417) || !IsQuestCompleted(31403)" >
+			!IsQuestCompleted(31417) || !IsQuestCompleted(31403) || !IsQuestCompleted(31425) ||
+			!IsQuestCompleted(31436) || !IsQuestCompleted(31431)" >
 
 <!-- Jade Forest -->
 
@@ -124,22 +125,39 @@
 
 <!-- Manipulator's Talisman -->
 	<If Condition="!IsQuestCompleted(31432)">
-		<CustomBehavior File="FlyTo" X="-935.97" Y="3836.065" Z="12.56" />
 		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="FlyTo" X="-935.97" Y="3836.065" Z="12.56" />
 			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
 		</If>
-		<CustomBehavior File="FlyTo" X="-786.71" Y="3862.54" Z="18.55" />
 		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="FlyTo" X="-786.71" Y="3862.54" Z="18.55" />
 			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
 		</If>
-		<CustomBehavior File="FlyTo" X="-803.78" Y="4002.68" Z="11.32" />
 		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="FlyTo" X="-803.78" Y="4002.68" Z="11.32" />
 			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
 		</If>
-		<CustomBehavior File="FlyTo" X="-943.437" Y="3934.32" Z="8.31" />
 		<If Condition="!IsQuestCompleted(31432)">
+			<CustomBehavior File="FlyTo" X="-943.437" Y="3934.32" Z="8.31" />
 			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
 		</If>
+	</If>
+
+<!-- Bloodsoaked Chitin Fragment -->
+	<If Condition="!IsQuestCompleted(31436)">
+		<CustomBehavior File="FlyTo" X="-513.56" Y="4748.80" Z="0.1" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="MyCTM" X="-527.85" Y="4754.66" Z="-45.77" />
+		<CustomBehavior File="MyCTM" X="-458.43" Y="4761.94" Z="-47.75" />
+		<CustomBehavior File="MyCTM" X="-414.95" Y="4766.26" Z="-31.38" />
+		<CustomBehavior File="MyCTM" X="-389.32" Y="4746.65" Z="-30.02" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="213970" ObjectType="GameObject" CollectionDistance="100" WaitForNpcs="false" />
+		<CustomBehavior File="MyCTM" X="-389.32" Y="4746.65" Z="-30.02" />
+		<CustomBehavior File="MyCTM" X="-414.95" Y="4766.26" Z="-31.38" />
+		<CustomBehavior File="MyCTM" X="-458.43" Y="4761.94" Z="-47.75" />
+		<CustomBehavior File="MyCTM" X="-527.85" Y="4754.66" Z="-45.77" />
+		<CustomBehavior File="AscendInWater" />
 	</If>
 
 <!-- Blade of the Poisoned Mind -->
@@ -150,7 +168,25 @@
 		</If>
 	</If>
 
+<!-- Lucid Amulet of the Agile Mind -->
+	<If Condition="!IsQuestCompleted(31431)">
+		<CustomBehavior File="FlyTo" X="-349.28" Y="4373.64" Z="230.54" />
+		<CustomBehavior File="InteractWith" MobId="213966" ObjectType="GameObject" CollectionDistance="50" WaitForNpcs="false" />
+	</If>
+
 <!-- Townlong Steppes -->
+
+<!-- Yaungol Fire Carrier -->
+	<If Condition="!IsQuestCompleted(31425)">
+		<If Condition="!IsQuestCompleted(31425)">
+			<CustomBehavior File="FlyTo" X="2844.91" Y="3272.24" Z="433.80" />
+			<CustomBehavior File="InteractWith" MobId="213960" ObjectType="GameObject" CollectionDistance="50" WaitForNpcs="false" />
+		</If>
+		<If Condition="!IsQuestCompleted(31425)">
+			<CustomBehavior File="FlyTo" X="2722.45" Y="3242.38" Z="429.13" />
+			<CustomBehavior File="InteractWith" MobId="213960" ObjectType="GameObject" CollectionDistance="50" WaitForNpcs="false" />
+		</If>
+	</If>
 
 <!-- Kun-Lai Summit -->
 
