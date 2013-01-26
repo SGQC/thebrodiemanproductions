@@ -2,6 +2,12 @@ Patch Notes
 
 1/25/13
 
+r42
+Lost And Found
+-- Added Yaungol Fire Carrier
+-- Added Bloodsoaked Chitin Fragment
+-- Added Lucid Amulet of the Agile Mind
+
 r41
 The Anglers
 -- Loop What Lurks Below, to make sure we got the ring
