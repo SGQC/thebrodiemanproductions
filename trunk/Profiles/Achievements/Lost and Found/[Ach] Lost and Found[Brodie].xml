@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r43</Name>
+	<Name>Lost and Found r44</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -108,10 +108,9 @@
 
 <!-- Barrel of Banana Infused Rum -->
 	<If Condition="!IsQuestCompleted(31411)">
-		<CustomBehavior File="FlyTo" X="-2891.46" Y="502.24" Z="74.32" />
-		<If Condition="!IsQuestCompleted(31411)">
-			<CustomBehavior File="InteractWith" MobId="214439" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
-		</If>
+		<CustomBehavior File="FlyTo" X="-2891.46" Y="502.24" Z="85.00" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="InteractWith" MobId="214439" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
 	</If>
 
 <!-- Dread Wastes -->
