@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r34</Name>
+	<Name>Cloud Serpent r43</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -473,7 +473,7 @@
 	</While>
 
 <!-- Jenova Longeye -->
-	<If Condition="((!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 0)" >
+	<If Condition="((!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525)" >
 		<PickUp QuestName="Snack Time" QuestId="30146" GiverName="Jenova Longeye" GiverId="58413" />
 	</If>
 	<If Condition="((!HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 499)" >
@@ -881,7 +881,7 @@
 	</While>
 
 <!-- Snack Time -->
-	<If Condition="HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)">
+	<If Condition="(HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525">
 		<CustomBehavior File="Message" Text="Starting Snack Time" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30146" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1620.015" Y="-2506.825" Z="152.6351" />

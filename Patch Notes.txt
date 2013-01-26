@@ -1,5 +1,16 @@
 Patch Notes
 
+1/26/13
+
+r43
+Cloud Serpent
+-- Snack Time now restricted to Fishing >= 525
+Lost And Found
+-- Added Swarming Cleaver of Ka'roz
+-- Added Swarmkeeper's Medallion
+-- Added Dissector's Staff of Mutilation
+-- Added Wind-Reaver's Dagger of Quick Strikes
+
 1/25/13
 
 r42
