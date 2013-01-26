@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r42</Name>
+	<Name>Lost and Found r43</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -41,7 +41,8 @@
 			!IsQuestCompleted(31292) || !IsQuestCompleted(31409) || !IsQuestCompleted(31411) ||
 			!IsQuestCompleted(31433) || !IsQuestCompleted(31432) || !IsQuestCompleted(31438) ||
 			!IsQuestCompleted(31417) || !IsQuestCompleted(31403) || !IsQuestCompleted(31425) ||
-			!IsQuestCompleted(31436) || !IsQuestCompleted(31431)" >
+			!IsQuestCompleted(31436) || !IsQuestCompleted(31431) || !IsQuestCompleted(31434) ||
+			!IsQuestCompleted(31437) || !IsQuestCompleted(31435) || !IsQuestCompleted(31429)" >
 
 <!-- Jade Forest -->
 
@@ -115,12 +116,31 @@
 
 <!-- Dread Wastes -->
 
+<!-- Wind-Reaver's Dagger of Quick Strikes -->
+	<If Condition="!IsQuestCompleted(31429)">
+		<CustomBehavior File="FlyTo" X="126.17" Y="2296.30" Z="202.68" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="InteractWith" MobId="213962" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
+	</If>
+
 <!-- Blade of the Prime -->
 	<If Condition="!IsQuestCompleted(31433)">
 		<CustomBehavior File="FlyTo" X="-78.765" Y="4601.393" Z="81.11" />
-		<If Condition="!IsQuestCompleted(31433)">
-			<CustomBehavior File="InteractWith" MobId="213967" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
-		</If>
+		<CustomBehavior File="InteractWith" MobId="213967" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
+	</If>
+
+<!-- Swarming Cleaver of Ka'roz -->
+	<If Condition="!IsQuestCompleted(31434)">
+		<CustomBehavior File="FlyTo" X="-1355.98" Y="3105.03" Z="0.1" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="213968" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
+		<CustomBehavior File="AscendInWater" />
+	</If>
+
+<!-- Swarmkeeper's Medallion -->
+	<If Condition="!IsQuestCompleted(31437)">
+		<CustomBehavior File="FlyTo" X="-594.93" Y="3236.25" Z="146.99" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="213971" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
 	</If>
 
 <!-- Manipulator's Talisman -->
@@ -141,6 +161,12 @@
 			<CustomBehavior File="FlyTo" X="-943.437" Y="3934.32" Z="8.31" />
 			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="false" GossipOptions="1" />
 		</If>
+	</If>
+
+<!-- Dissector's Staff of Mutilation -->
+	<If Condition="!IsQuestCompleted(31435)">
+		<CustomBehavior File="FlyTo" X="-1824.11" Y="4521.07" Z="47.48" />
+		<CustomBehavior File="InteractWith" MobId="213969" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
 	</If>
 
 <!-- Bloodsoaked Chitin Fragment -->

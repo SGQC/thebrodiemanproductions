@@ -339,6 +339,52 @@
 		<Objective QuestName="Worker Harassment" QuestId="32135" Type="KillMob" MobId="67423" KillCount="30" />
 	</If>
 
+<!-- Sentry Wards -->
+<!--	<If Condition="(HasQuest(32133) &amp;&amp; !IsQuestCompleted(32133))" >
+		<CustomBehavior File="Message" Text="Starting Sentry Wards" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32140" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="-1227.917" Y="-956.8947" Z="16.06746" />
+		<CustomBehavior File="FlyTo" X="-1146.109" Y="-1087.181" Z="5.144545" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" QuestId="32133" MobId="67742" NumOfTimes="1" CollectionDistance="5" X="-1146.109" Y="-1087.181" Z="5.144545" />	
+		<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" />
+		<CustomBehavior File="FlyTo" X="-1083.577" Y="-1108.683" Z="25.41268" />
+		<CustomBehavior File="FlyTo" X="-1082.221" Y="-1134.743" Z="13.61495" />
+		<CustomBehavior File="FlyTo" X="-966.2871" Y="-1066.585" Z="46.11906" />
+		<CustomBehavior File="FlyTo" X="-948.2597" Y="-1075.886" Z="14.86751" />
+		<CustomBehavior File="ForcedDismount" />
+		<RunTo X="-910.9766" Y="-1095.688" Z="14.84775" />
+		<CustomBehavior File="InteractWith" QuestId="32133" MobId="67744" NumOfTimes="1" CollectionDistance="5" X="-910.9766" Y="-1095.688" Z="14.84775" />
+		<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="This loc contains some buggy meshes so please do this Totem Quest by yourself. Press Continue Button when quest will be done" />
+		<If Condition="((HasQuest(32133)) &amp;&amp; !(IsQuestCompleted(32133)))" >
+			<CustomBehavior File="ForcedDismount" />
+			<RunTo X="-947.4448" Y="-1075.943" Z="14.86842" />
+			<CustomBehavior File="ForceMount" />
+			<!--CustomBehavior File="FlyTo" X="-970.0676" Y="-1062.609" Z="23.15234" />
+			<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" /-->
+			<CustomBehavior File="FlyTo" X="-1083.577" Y="-1108.683" Z="25.41268" />
+			<CustomBehavior File="FlyTo" X="-1082.221" Y="-1134.743" Z="13.61495" />
+			<CustomBehavior File="FlyTo" X="-1070.082" Y="-1127.354" Z="16.44895" />
+			<CustomBehavior File="ForcedDismount" />
+			<RunTo X="-1086.401" Y="-1137.535" Z="13.6144" />
+			<RunTo X="-1107.941" Y="-1150.235" Z="12.57826" />
+			<RunTo  X="-1103.294" Y="-1145.932" Z="12.59191" />
+			<RunTo  X="-1107.272" Y="-1150.264" Z="12.5783" />
+			<RunTo  X="-1092.531" Y="-1175.139" Z="13.59692" />
+			<RunTo  X="-1093.705" Y="-1176.828" Z="14.06866" />
+			<RunTo  X="-1110.629" Y="-1187.391" Z="21.72827" />
+			<RunTo  X="-1128.034" Y="-1162.849" Z="21.72103" />
+			<RunTo  X="-1132.575" Y="-1162.68" Z="21.8197" />
+			<CustomBehavior File="InteractWith" QuestId="32133" MobId="67743" NumOfTimes="1" CollectionDistance="5" X="-1131.242" Y="-1163.728" Z="21.72105" />
+			<RunTo  X="-1128.034" Y="-1162.849" Z="21.72103" />
+			<RunTo  X="-1110.629" Y="-1187.391" Z="21.72827" />
+			<RunTo  X="-1093.705" Y="-1176.828" Z="14.06866" />
+			<RunTo  X="-1092.531" Y="-1175.139" Z="13.59692" />
+			<RunTo  X="-1107.272" Y="-1150.264" Z="12.5783" />
+			<RunTo  X="-1106.149" Y="-1150.74" Z="12.57877" />
+		</If>
+	</If> -->
+
 <!-- Work Order: Iron -->
 	<If Condition="HasQuest(32140)" >
 		<CustomBehavior File="Message" Text="Starting Work Order: Iron" LogColor="Green"  />
