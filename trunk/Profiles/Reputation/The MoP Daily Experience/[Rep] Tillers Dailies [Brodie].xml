@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers r31</Name>
+	<Name>The Tillers r46</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1012,7 +1012,7 @@
 				<CustomBehavior File="GiftForFung" SpellId="49576"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="GiftForFung" SpellId="5176"/>
+				<CustomBehavior File="GiftForFung" SpellId="8921"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
 				<CustomBehavior File="GiftForFung" SpellId="3044"/>

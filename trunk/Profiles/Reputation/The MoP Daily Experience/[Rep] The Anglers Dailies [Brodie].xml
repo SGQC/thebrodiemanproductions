@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r41</Name>
+	<Name>The Anglers Dailies r46</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -141,7 +141,7 @@
 <!-- Checking if you have a quest. If you do, start, if not, fly to Nat Pagle's Man Cave -->
 	<If Condition="(!HasQuest(30613) &amp;&amp; !HasQuest(30586) &amp;&amp; !HasQuest(30658) 
 			&amp;&amp; !HasQuest(30754) &amp;&amp; !HasQuest(30588) &amp;&amp; !HasQuest(30701)
-			&amp;&amp; !HasQuest(30700) &amp;&amp; !HasQuest(30698) &amp;&amp; !HasQuest(30678)
+			&amp;&amp; !HasQuest(30700) &amp;&amp; !HasQuest(30678)
 			&amp;&amp; !HasQuest(30753) &amp;&amp; !HasQuest(30585) &amp;&amp; !HasQuest(30763)
 			&amp;&amp; !HasQuest(30584) &amp;&amp; !HasQuest(30598))" >
 		<CustomBehavior File="Message" Text="Starting The Anglers Dailies, moving to Nat Pagle's Man Cave." LogColor="Green"  />
@@ -184,7 +184,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
-	<If Condition="(!HasQuest(30584) &amp;&amp; !HasQuest(30698) &amp;&amp; !HasQuest(30588) &amp;&amp; 
+	<If Condition="(!HasQuest(30584) &amp;&amp; !HasQuest(30588) &amp;&amp; 
 			!HasQuest(30700) &amp;&amp; !HasQuest(30678) &amp;&amp; !HasQuest(30586))" >
 
 		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
