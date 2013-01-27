@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r31</Name>
+	<Name>Mistfall Village r46</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -552,7 +552,7 @@
 				<CustomBehavior File="Silkfeather" SpellId="49576"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="Silkfeather" SpellId="5176"/>
+				<CustomBehavior File="Silkfeather" SpellId="8921"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
 				<CustomBehavior File="Silkfeather" SpellId="3044"/>

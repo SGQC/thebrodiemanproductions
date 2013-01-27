@@ -1,5 +1,21 @@
 Patch Notes
 
+1/27/13
+
+r46
+Golden Lotus
+-- Converted Wrath casting to Moonfire for Thundering Skies
+Mistfall Village
+-- Converted Wrath casting to Moonfire for Ruffling Some Feathers
+The Tillers
+-- Converted Wrath casting to Moonfire for Gift For Fung
+Operation: Shieldwall
+-- Modified flight to check portal. Not where it will end, but temporary to see if fixes.
+-- Modified "Use Portal" code to use at 1 yard instead of default 4.2 yards.
+-- Added Blackspot
+The Anglers
+-- Removed Scavenger Hunt from the check. Will no longer skip Anglers because it's still in your log.
+
 1/26/13
 
 r45
