@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r23</Name>
+	<Name>Dominance Offensive r45</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -355,33 +355,32 @@
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="-910.9766" Y="-1095.688" Z="14.84775" />
 		<CustomBehavior File="InteractWith" QuestId="32133" MobId="67744" NumOfTimes="1" CollectionDistance="5" X="-910.9766" Y="-1095.688" Z="14.84775" />
-		<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="This loc contains some buggy meshes so please do this Totem Quest by yourself. Press Continue Button when quest will be done" />
 		<If Condition="((HasQuest(32133)) &amp;&amp; !(IsQuestCompleted(32133)))" >
 			<CustomBehavior File="ForcedDismount" />
 			<RunTo X="-947.4448" Y="-1075.943" Z="14.86842" />
 			<CustomBehavior File="ForceMount" />
-			<!--CustomBehavior File="FlyTo" X="-970.0676" Y="-1062.609" Z="23.15234" />
-			<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" /-->
+			<CustomBehavior File="FlyTo" X="-970.0676" Y="-1062.609" Z="23.15234" />
+			<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" />
 			<CustomBehavior File="FlyTo" X="-1083.577" Y="-1108.683" Z="25.41268" />
 			<CustomBehavior File="FlyTo" X="-1082.221" Y="-1134.743" Z="13.61495" />
 			<CustomBehavior File="FlyTo" X="-1070.082" Y="-1127.354" Z="16.44895" />
 			<CustomBehavior File="ForcedDismount" />
 			<RunTo X="-1086.401" Y="-1137.535" Z="13.6144" />
 			<RunTo X="-1107.941" Y="-1150.235" Z="12.57826" />
-			<RunTo  X="-1103.294" Y="-1145.932" Z="12.59191" />
-			<RunTo  X="-1107.272" Y="-1150.264" Z="12.5783" />
-			<RunTo  X="-1092.531" Y="-1175.139" Z="13.59692" />
-			<RunTo  X="-1093.705" Y="-1176.828" Z="14.06866" />
-			<RunTo  X="-1110.629" Y="-1187.391" Z="21.72827" />
-			<RunTo  X="-1128.034" Y="-1162.849" Z="21.72103" />
-			<RunTo  X="-1132.575" Y="-1162.68" Z="21.8197" />
+			<RunTo X="-1103.294" Y="-1145.932" Z="12.59191" />
+			<RunTo X="-1107.272" Y="-1150.264" Z="12.5783" />
+			<RunTo X="-1092.531" Y="-1175.139" Z="13.59692" />
+			<RunTo X="-1093.705" Y="-1176.828" Z="14.06866" />
+			<RunTo X="-1110.629" Y="-1187.391" Z="21.72827" />
+			<RunTo X="-1128.034" Y="-1162.849" Z="21.72103" />
+			<RunTo X="-1132.575" Y="-1162.68" Z="21.8197" />
 			<CustomBehavior File="InteractWith" QuestId="32133" MobId="67743" NumOfTimes="1" CollectionDistance="5" X="-1131.242" Y="-1163.728" Z="21.72105" />
-			<RunTo  X="-1128.034" Y="-1162.849" Z="21.72103" />
-			<RunTo  X="-1110.629" Y="-1187.391" Z="21.72827" />
-			<RunTo  X="-1093.705" Y="-1176.828" Z="14.06866" />
-			<RunTo  X="-1092.531" Y="-1175.139" Z="13.59692" />
-			<RunTo  X="-1107.272" Y="-1150.264" Z="12.5783" />
-			<RunTo  X="-1106.149" Y="-1150.74" Z="12.57877" />
+			<RunTo X="-1128.034" Y="-1162.849" Z="21.72103" />
+			<RunTo X="-1110.629" Y="-1187.391" Z="21.72827" />
+			<RunTo X="-1093.705" Y="-1176.828" Z="14.06866" />
+			<RunTo X="-1092.531" Y="-1175.139" Z="13.59692" />
+			<RunTo X="-1107.272" Y="-1150.264" Z="12.5783" />
+			<RunTo X="-1106.149" Y="-1150.74" Z="12.57877" />
 		</If>
 	</If> -->
 
