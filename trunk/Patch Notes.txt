@@ -2,6 +2,10 @@ Patch Notes
 
 1/26/13
 
+r45
+Dominance Offensive
+-- Correction to commented out section.
+
 r44
 Lost And Found
 -- Increased Height to search for Banana Infused Rum. Try to avoid the rare pull if its not there.
