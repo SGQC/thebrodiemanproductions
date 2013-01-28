@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Pagoda Alternate r28</Name>
+	<Name>Golden Pagoda Alternate r51</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -127,18 +127,26 @@
 
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30282)" >
-			<RunTo X="1255.798" Y="1416.6" Z="353.2284" />
-			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-			<RunTo X="1241.337" Y="1343.138" Z="360.4936" />
-			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-			<RunTo X="1153.487" Y="1332.492" Z="351.4222" />
-			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-			<RunTo X="1175.964" Y="1410.789" Z="343.0818" />
-			<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<If Condition="!IsQuestCompleted(30282)" >
+				<RunTo X="1255.798" Y="1416.6" Z="353.2284" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30282)" >
+				<RunTo X="1241.337" Y="1343.138" Z="360.4936" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30282)" >
+				<RunTo X="1153.487" Y="1332.492" Z="351.4222" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</If>
+			<If Condition="!IsQuestCompleted(30282)" >
+				<RunTo X="1175.964" Y="1410.789" Z="343.0818" />
+				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</If>
 		</While>
 	</If>
 
