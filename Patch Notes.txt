@@ -1,5 +1,13 @@
 Patch Notes
 
+1/28/13
+
+r47
+Shado Pan
+-- Update to Snow Blossom MobId/Location. Fixed Challenger's Ring execution.
+Pandaria Dailies v2
+-- Updated Niuzao Temple combat check. Should stop movement on combat (and not walk back and forth).
+
 1/27/13
 
 r46
