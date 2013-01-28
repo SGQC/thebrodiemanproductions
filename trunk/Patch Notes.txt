@@ -2,6 +2,10 @@ Patch Notes
 
 1/28/13
 
+r48
+Golden Lotus
+-- Reconverted Thundering Skies from QB to Objective, testing.
+
 r47
 Shado Pan
 -- Update to Snow Blossom MobId/Location. Fixed Challenger's Ring execution.

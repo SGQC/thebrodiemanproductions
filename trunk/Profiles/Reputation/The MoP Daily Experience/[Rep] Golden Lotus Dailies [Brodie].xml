@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r46</Name>
+	<Name>The Golden Lotus r48</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -393,12 +393,12 @@
 	</While>
 
 <!-- Thundering Skies -->
- 	<If Condition="((HasQuest(30310)) &amp;&amp; (!IsQuestCompleted(30310)))">
+ 	<If Condition="(HasQuest(30310) &amp;&amp; !IsQuestCompleted(30310))">
 		<CustomBehavior File="Message" Text="Starting Thundering Skies" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30310" LootMobs="true" PullDistance="35" />
 		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.926" Z="427.2217" />
 		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="!IsQuestCompleted(30310)">
+<!--		<While Condition="!IsQuestCompleted(30310)">
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<If Condition="(Me.Class == WoWClass.Rogue)">
 				<CustomBehavior File="ThunderingSkies" SpellId="121733"/>
@@ -433,7 +433,8 @@
 			<If Condition="(Me.Class == WoWClass.Monk)">
 				<CustomBehavior File="ThunderingSkies" SpellId="115546"/>
 			</If>
-		</While>
+		</While> -->
+		<Objective QuestName="Thundering Skies" QuestId="30310" Type="KillMob" MobId="59158" KillCount="3" />
 	</If>
 
 <!-- Crumbling Behemoth -->
