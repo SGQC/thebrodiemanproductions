@@ -2,6 +2,10 @@ Patch Notes
 
 1/28/13
 
+r49
+Golden Lotus
+-- Fixed Golden Pagoda Phase 2 check, pickup, and execution.
+
 r48
 Golden Lotus
 -- Reconverted Thundering Skies from QB to Objective, testing.
