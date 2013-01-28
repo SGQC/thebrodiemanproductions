@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r47</Name>
+	<Name>Shado Pan Dailies r50</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -799,7 +799,8 @@
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(31047)" >
 
-			<CustomBehavior File="InteractWith" QuestId="31047" MobId="62539" CollectionDistance="10000" />
+			<CustomBehavior File="InteractWith" QuestId="31047" MobId="62539" CollectionDistance="10000" WaitForNpcs="False" Range="1" />
+			<CustomBehavior File="ForcedDismount"/>
 		</While>
 	</If>
 

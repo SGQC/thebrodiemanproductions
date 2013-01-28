@@ -2,6 +2,11 @@ Patch Notes
 
 1/28/13
 
+r50
+Shado Pan
+-- Added "Don't wait for it" check and decreased range on Born Free.
+-- Interact should automatically dismount. If it doesn't, force dismount, and check for another spawn. Needs testing, as will only dismount AFTER attempting interaction.
+
 r49
 Golden Lotus
 -- Fixed Golden Pagoda Phase 2 check, pickup, and execution.
