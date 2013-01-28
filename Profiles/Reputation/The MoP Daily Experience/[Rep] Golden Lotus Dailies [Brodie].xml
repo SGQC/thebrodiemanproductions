@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r48</Name>
+	<Name>The Golden Lotus r49</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -681,12 +681,47 @@
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</While>
 
+<!-- Anji Autumnlight -->
+	<While Condition="HasQuestAvailable(58465)" >
+		<CustomBehavior File="InteractWith" MobId="58465" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Kun Autumnlight -->
+	<While Condition="HasQuestAvailable(58471)" >
+		<CustomBehavior File="InteractWith" MobId="58471" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
+<!-- Ren Firetongue -->
+	<If Condition="HasQuestAvailable(58469)" >
+		<PickUp QuestName="A Smashing Impression" QuestId="30283" GiverName="Ren Firetongue" GiverId="58469" />
+	</If>
+
+<!-- He Softfoot -->
+	<While Condition="HasQuestAvailable(58470)" >
+		<CustomBehavior File="InteractWith" MobId="58470" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+
 	<If Condition="HasQuest(31243) || HasQuest(31136) || HasQuest(31242) || HasQuest(31249) ||
 			HasQuest(31250) || HasQuest(31248) || HasQuest(31131)" >
 		<If Condition="(Me.Location.Distance(new WoWPoint(1215.807, 1045.988, 426.0368)) &lt; 25)" >
 			<RunTo X="1216.391" Y="1075.978" Z="420.46" />
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
+	</If>
+
+
+<!-- Golden Pagoda Phase 2 -->
+
+	<If Condition="HasQuest(30293) || HasQuest(30282) || HasQuest(30281) || HasQuest(30283)
+			|| HasQuest(30292)" >
+		<CustomBehavior File="Message" Text="Starting Golden Pagoda Phase 2" LogColor="Green" />
+		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Golden Pagoda Alternate [Brodie]" />
 	</If>
 
 	<While Condition="(GetItemCount(89112) &gt; 10)">
