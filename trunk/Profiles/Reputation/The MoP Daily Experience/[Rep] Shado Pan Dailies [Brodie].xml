@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r38</Name>
+	<Name>Shado Pan Dailies r47</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -582,7 +582,7 @@
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31038)" >
-			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="62781" GossipOptions="1" X="1943.82" Y="4198.97" Z="138.47" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="62834" GossipOptions="1" X="1956.37" Y="4195.84" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
 		<CustomBehavior File="ForcedDismount" />

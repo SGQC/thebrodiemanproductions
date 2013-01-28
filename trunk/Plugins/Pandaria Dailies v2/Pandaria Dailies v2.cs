@@ -618,6 +618,7 @@ u.Distance).ToList();
                     {
                         MantidNiuzao[0].Face();
                         MantidNiuzao[0].Target();
+                	WoWMovement.MoveStop();
                         Thread.Sleep(1000);
                     }
                 }
