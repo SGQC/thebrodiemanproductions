@@ -2,6 +2,10 @@ Patch Notes
 
 1/28/13
 
+r51
+Golden Pagoda Alternate
+-- Will no longer keep throwing flames out after all banners needed are burned.
+
 r50
 Shado Pan
 -- Added "Don't wait for it" check and decreased range on Born Free.
