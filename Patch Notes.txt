@@ -2,6 +2,11 @@ Patch Notes
 
 1/28/13
 
+r52
+Cloud Serpent
+-- Code Cleanup
+-- Added Lingering Doubt
+
 r51
 Golden Pagoda Alternate
 -- Will no longer keep throwing flames out after all banners needed are burned.

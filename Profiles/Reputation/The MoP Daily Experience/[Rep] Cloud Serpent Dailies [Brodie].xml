@@ -464,6 +464,13 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
+<!-- Big Bao -->
+	<While Condition="HasQuestAvailable(58508)" >
+		<CustomBehavior File="InteractWith" MobId="58508" WaitTime="1000" X="1603.27" Y="-2562.27" Z="153.02" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+	</While>
+
 <!-- Elder Anli -->
 	<While Condition="HasQuestAvailable(58564)" >
 		<CustomBehavior File="ForcedDismount" />
@@ -623,9 +630,31 @@
 			(HasQuest(31708) &amp;&amp; !IsQuestCompleted(31708)) ||
 			(HasQuest(31706) &amp;&amp; !IsQuestCompleted(31706)) ||
 			(HasQuest(31710) &amp;&amp; !IsQuestCompleted(31710)) ||
+			(HasQuest(31709) &amp;&amp; !IsQuestCompleted(31709)) ||
 			(HasQuest(31707) &amp;&amp; !IsQuestCompleted(31707)))
 			&amp;&amp; (Me.Location.Distance(new WoWPoint(2131.35, -2435.88, -0.31)) &gt; 200) ">
 		<CustomBehavior File="FlyTo" X="2167.811" Y="-2607.223" Z="2.312" />
+	</If>
+
+<!-- Lingering Doubt -->
+	<If Condition="HasQuest(31709) &amp;&amp; !IsQuestCompleted(31709)" >
+		<CustomBehavior File="Message" Text="Starting Lingering Doubt" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="31709" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="!IsQuestCompleted(31709)" >
+			<If Condition="!IsObjectiveComplete(2,31709)" >
+				<RunTo X="2165.20" Y="-2531.43" Z="6.62" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(88966)" WaitTime="2000" />
+			</If>
+			<If Condition="!IsObjectiveComplete(1,31709)" >
+				<RunTo X="2145.97" Y="-2447.02" Z="-8.65" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(88966)" WaitTime="2000" />
+			</If>
+			<If Condition="!IsObjectiveComplete(3,31709)" >
+				<RunTo X="2053.16" Y="-2522.87" Z="-8.20" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(88966)" WaitTime="2000" />
+			</If>
+		</While>
 	</If>
 
 <!-- The Seed of Doubt -->
@@ -999,105 +1028,111 @@
 		(HasQuest(31703) &amp;&amp; IsQuestCompleted(31703)) ||
 		(HasQuest(30149) &amp;&amp; IsQuestCompleted(30149)) ||
 		(HasQuest(30146) &amp;&amp; IsQuestCompleted(30146)) ||
+		(HasQuest(31709) &amp;&amp; IsQuestCompleted(31709)) ||
 		(HasQuest(30158) &amp;&amp; IsQuestCompleted(30158))" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Arboretum." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1560.782" Y="-2556.237" Z="151.2554" />
 		<CustomBehavior File="ForcedDismount" />
 	</If>
 
+<!-- Lingering Doubt -->
+	<If Condition="(HasQuest(31709) &amp;&amp; IsQuestCompleted(31709))" >
+		<TurnIn QuestName="Lingering Doubt" QuestId="31709" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>
+
 <!-- A Tangled Web -->
-	<If Condition="((HasQuest(31707)) &amp;&amp; (IsQuestCompleted(31707)))" >
+	<If Condition="(HasQuest(31707) &amp;&amp; IsQuestCompleted(31707))" >
 		<TurnIn QuestName="A Tangled Web" QuestId="31707" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Madcap Mayhem -->
-	<If Condition="((HasQuest(31703)) &amp;&amp; (IsQuestCompleted(31703)))" >
+	<If Condition="(HasQuest(31703) &amp;&amp; IsQuestCompleted(31703))" >
 		<TurnIn QuestName="Madcap Mayhem" QuestId="31703" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Needle Me Not -->
-	<If Condition="((HasQuest(31705)) &amp;&amp; (IsQuestCompleted(31705)))" >
+	<If Condition="(HasQuest(31705) &amp;&amp; IsQuestCompleted(31705))" >
 		<TurnIn QuestName="Needle Me Not" QuestId="31705" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Feeding Time -->
-	<If Condition="((HasQuest(30156)) &amp;&amp; (IsQuestCompleted(30156)))" >
+	<If Condition="(HasQuest(30156) &amp;&amp; IsQuestCompleted(30156))" >
 		<TurnIn QuestName="Feeding Time" QuestId="30156" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Disarming the Enemy -->
-	<If Condition="((HasQuest(30158)) &amp;&amp; (IsQuestCompleted(30158)))" >
+	<If Condition="(HasQuest(30158) &amp;&amp; IsQuestCompleted(30158))" >
 		<TurnIn QuestName="Disarming the Enemy" QuestId="30158" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Thinning the Pack -->
-	<If Condition="((HasQuest(31698)) &amp;&amp; (IsQuestCompleted(31698)))" >
+	<If Condition="(HasQuest(31698) &amp;&amp; IsQuestCompleted(31698))" >
 		<TurnIn QuestName="Thinning the Pack" QuestId="31698" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Dark Huntress -->
-	<If Condition="((HasQuest(31701)) &amp;&amp; (IsQuestCompleted(31701)))" >
+	<If Condition="(HasQuest(31701) &amp;&amp; IsQuestCompleted(31701))" >
 		<TurnIn QuestName="Dark Huntress" QuestId="31701" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- The Shoe is on The Other Foot -->
-	<If Condition="((HasQuest(31700)) &amp;&amp; (IsQuestCompleted(31700)))" >
+	<If Condition="(HasQuest(31700) &amp;&amp; IsQuestCompleted(31700))" >
 		<TurnIn QuestName="The Shoe is on The Other Foot" QuestId="31700" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- The Easiest Way to a Serpent's Heart -->
-	<If Condition="((HasQuest(30154)) &amp;&amp; (IsQuestCompleted(30154)))" >
+	<If Condition="(HasQuest(30154) &amp;&amp; IsQuestCompleted(30154))" >
 		<TurnIn QuestName="The Easiest Way to a Serpent's Heart" QuestId="30154" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Emptier Nests -->
-	<If Condition="((HasQuest(30157)) &amp;&amp; (IsQuestCompleted(30157)))" >
+	<If Condition="(HasQuest(30157) &amp;&amp; IsQuestCompleted(30157))" >
 		<TurnIn QuestName="Emptier Nests" QuestId="30157" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- Sprite Fright -->
-	<If Condition="((HasQuest(31699)) &amp;&amp; (IsQuestCompleted(31699)))" >
+	<If Condition="(HasQuest(31699) &amp;&amp; IsQuestCompleted(31699))" >
 		<TurnIn QuestName="Thinning the Pack" QuestId="31699" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 
 <!-- On The Prowl -->
-	<If Condition="((HasQuest(31702)) &amp;&amp; (IsQuestCompleted(31702)))" >
+	<If Condition="(HasQuest(31702) &amp;&amp; IsQuestCompleted(31702))" >
 		<TurnIn QuestName="Thinning the Pack" QuestId="31702" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Big kah-Oona -->
-	<If Condition="((HasQuest(31715)) &amp;&amp; (IsQuestCompleted(31715)))" >
+	<If Condition="(HasQuest(31715) &amp;&amp; IsQuestCompleted(31715))" >
 		<TurnIn QuestName="The Big Kah-Oona" QuestId="31715" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Monkey Mischief -->
-	<If Condition="((HasQuest(31712)) &amp;&amp; (IsQuestCompleted(31712)))" >
+	<If Condition="(HasQuest(31712) &amp;&amp; IsQuestCompleted(31712))" >
 		<TurnIn QuestName="Monkey Mischief" QuestId="31712" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Saving the Serpents -->
-	<If Condition="((HasQuest(31714)) &amp;&amp; (IsQuestCompleted(31714)))" >
+	<If Condition="(HasQuest(31714) &amp;&amp; IsQuestCompleted(31714))" >
 		<TurnIn QuestName="Saving the Serpents" QuestId="31714" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Trainer's Challenge: Ace Longpaw -->
-	<If Condition="((HasQuest(31717)) &amp;&amp; (IsQuestCompleted(31717)))" >
+	<If Condition="(HasQuest(31717) &amp;&amp; IsQuestCompleted(31717))" >
 		<TurnIn QuestName="The Trainer's Challenge: Ace Longpaw" QuestId="31717" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Trainer's Challenge: Big Bao -->
-	<If Condition="((HasQuest(31718)) &amp;&amp; (IsQuestCompleted(31718)))" >
+	<If Condition="(HasQuest(31718) &amp;&amp; IsQuestCompleted(31718))" >
 		<TurnIn QuestName="The Trainer's Challenge: Big Bao" QuestId="31718" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Trainer's Challenge: Ningna Darkwheel -->
-	<If Condition="((HasQuest(31719)) &amp;&amp; (IsQuestCompleted(31719)))" >
+	<If Condition="(HasQuest(31719) &amp;&amp; IsQuestCompleted(31719))" >
 		<TurnIn QuestName="The Trainer's Challenge: Ningna Darkwheel" QuestId="31719" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Trainer's Challenge: Suchi the Sweet -->
-	<If Condition="((HasQuest(31720)) &amp;&amp; (IsQuestCompleted(31720)))" >
+	<If Condition="(HasQuest(31720) &amp;&amp; IsQuestCompleted(31720))" >
 		<TurnIn QuestName="The Trainer's Challenge: Suchi the Sweet" QuestId="31720" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Trainer's Challenge: Qua-Ro Whitebrow -->
-	<If Condition="((HasQuest(31721)) &amp;&amp; (IsQuestCompleted(31721)))" >
+	<If Condition="(HasQuest(31721) &amp;&amp; IsQuestCompleted(31721))" >
 		<TurnIn QuestName="The Trainer's Challenge: Qua-Ro Whitebrow" QuestId="31721" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Seed of Doubt -->
-	<If Condition="((HasQuest(31711)) &amp;&amp; (IsQuestCompleted(31711)))" >
+	<If Condition="(HasQuest(31711) &amp;&amp; IsQuestCompleted(31711))" >
 		<TurnIn QuestName="The Seed of Doubt" QuestId="31711" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Tiny Treats -->
@@ -1336,23 +1371,23 @@
 		</While>
 	</If>
 <!-- Weeping Widows -->
-	<If Condition="((HasQuest(31706)) &amp;&amp; (IsQuestCompleted(31706)))" >
+	<If Condition="(HasQuest(31706) &amp;&amp; IsQuestCompleted(31706))" >
 		<TurnIn QuestName="Weeping Widows" QuestId="31706" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- A Tangled Web -->
-	<If Condition="((HasQuest(31707)) &amp;&amp; (IsQuestCompleted(31707)))" >
+	<If Condition="(HasQuest(31707) &amp;&amp; IsQuestCompleted(31707))" >
 		<TurnIn QuestName="A Tangled Web" QuestId="31707" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Preservation -->
-	<If Condition="((HasQuest(30159)) &amp;&amp; (IsQuestCompleted(30159)))" >
+	<If Condition="(HasQuest(30159) &amp;&amp; IsQuestCompleted(30159))" >
 		<TurnIn QuestName="Preservation" QuestId="30159" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Restoring the Balance -->
-	<If Condition="((HasQuest(30155)) &amp;&amp; (IsQuestCompleted(30155)))" >
+	<If Condition="(HasQuest(30155) &amp;&amp; IsQuestCompleted(30155))" >
 		<TurnIn QuestName="Restoring the Balance" QuestId="30155" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Slitherscale Suppression -->
-	<If Condition="((HasQuest(31194)) &amp;&amp; (IsQuestCompleted(31194)))" >
+	<If Condition="(HasQuest(31194) &amp;&amp; IsQuestCompleted(31194))" >
 		<TurnIn QuestName="Slitherscale Suppression" QuestId="31194" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- Snack Time -->
@@ -1364,7 +1399,7 @@
 		<TurnIn QuestName="A Feast for the Senses" QuestId="30149" TurnInName="Jenova Longeye" TurnInId="58413" />
 	</If>
 <!-- The Big Brew-haha -->
-	<If Condition="((HasQuest(31713)) &amp;&amp; (IsQuestCompleted(31713)))" >
+	<If Condition="(HasQuest(31713) &amp;&amp; IsQuestCompleted(31713))" >
 		<TurnIn QuestName="The Big Brew-haha" QuestId="31713" TurnInName="Ace Longpaw" TurnInId="58506" />
 	</If>
 
