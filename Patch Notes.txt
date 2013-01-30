@@ -1,5 +1,14 @@
 Patch Notes
 
+1/29/13
+
+r53
+Dominance Offensive
+-- Added We Require More Minerals
+-- Added Sentry Wards
+-- Fixed Objective to Worker Harassment
+-- Fixed Objective to Good Luck, Have Fun
+
 1/28/13
 
 r52
