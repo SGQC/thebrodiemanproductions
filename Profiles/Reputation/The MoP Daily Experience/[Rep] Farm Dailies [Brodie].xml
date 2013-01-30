@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming Daily r40</Name>
+	<Name>Farming Daily r54</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -100,6 +100,13 @@
 			<CustomBehavior File="InteractWith" MobId="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 
 	<!-- Checking for Stubborn Weeds -->
+
+			<CustomBehavior File="ForcedDismount" />
+
+			<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
+				<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
+			</If>
+
 			<CustomBehavior File="InteractWith" MobId="60153" NumOfTimes="1" WaitForNpcs="False" WaitTime="10"/>
 			<If Condition="Me.IsOnTransport" >
 				<CustomBehavior File="RunMacro" Macro="/click OverrideActionBarButton1" NumOfTimes="30" WaitTime="500" />

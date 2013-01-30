@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r46</Name>
+	<Name>Mistfall Village r54</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -335,7 +335,7 @@
 				<CustomBehavior File="UseItemTargetLocation" QuestId="30192" ItemId="85782" UseType="ToObject" ObjectId="63797" Range="30" NumOfTimes="1" />
 			</While>
 			<While Condition="(GetItemCount(85782) &lt; 5) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" MobId="213369" WaitForNpcs="false" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" ObjectType="Gameobject" Range="2" />
+				<CustomBehavior File="InteractWith" MobId="213369" WaitForNpcs="false" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" ObjectType="Gameobject" Range="4" />
 			</While>
 		</While>
 	</If>
@@ -352,7 +352,7 @@
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</While>
 			<While Condition="(GetItemCount(85950) &lt; 5) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" MobId="213463" WaitForNpcs="false" NumOfTimes="1" WaitTime="1300" CollectionDistance="5000" ObjectType="Gameobject" Range="2" />
+				<CustomBehavior File="InteractWith" MobId="213463" WaitForNpcs="false" NumOfTimes="1" WaitTime="1300" CollectionDistance="5000" ObjectType="Gameobject" Range="4" />
 			</While>
 		</While>
 	</If>

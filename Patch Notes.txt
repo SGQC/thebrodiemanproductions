@@ -1,5 +1,19 @@
 Patch Notes
 
+1/30/13
+
+r54
+The Anglers
+-- Code Cleanup
+-- Added "Head back to start" call after using the bomb, and we moved. (needs testing, might move too much)
+Mistfall Village
+-- Adjusted pick up range on water buckets for "Town on Fire" quests to 4 yards. Needs testing.
+Farm Dailies
+-- Added call to Dismount and unshapeshift before checking for weeds to pluck.
+The Klaxxi
+-- Removed multiple unneeded Quest Overrides
+-- Experimental code change to Fear Takes Root. Needs testing and feedback asap!
+
 1/29/13
 
 r53
