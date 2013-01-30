@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r46</Name>
+	<Name>The Anglers Dailies r54</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -361,12 +361,13 @@
 
 		<CustomBehavior File="Message" Text="Starting Like Bombing Fish In A Barrel" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30678" LootMobs="true" PullDistance="10" />
-		<CustomBehavior File="FlyTo" X="-1582.219" Y="135.23" Z="1.711022" />
+		<CustomBehavior File="FlyTo" X="-1582.22" Y="135.23" Z="1.71" />
 
 		<CustomBehavior File="ForcedDismount" />
 
 		<While Condition="HasQuest(30678) &amp;&amp; !IsQuestCompleted(30678)" >
 
+			<CustomBehavior File="MyCTM" X="-1582.22" Y="135.23" Z="1.71" />
 			<CustomBehavior File="UseItemOn" Nav="CTM" ItemId="80599" MobState="Alive" MobId="60278" Range="15" NumOfTimes="1" WaitTime="2000" />
 		</While>
 
@@ -382,7 +383,7 @@
 
 		<CustomBehavior File="ForcedDismount" />
 
-		<While Condition="HasQuest(30613) &amp;&amp; !IsQuestCompleted(30613)" >
+		<While Condition="!IsQuestCompleted(30613)" >
 
 			<CustomBehavior File="MyCTM" X="-1631.022" Y="-282.085" Z="0.1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />

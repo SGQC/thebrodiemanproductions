@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r34</Name>
+	<Name>The Klaxxi r54</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -63,9 +63,6 @@
 			</Hotspots>
 		</Objective>
 	</Quest>
-
-<!-- Nope Nope Nope -->
-	<!-- Might not need, search While loop doesn't need Objective call, needs UseItemOn -->
 
 <!-- Kunchong Treats -->
 	<Quest Id="31024" Name="Kunchong Treats">
@@ -155,9 +152,6 @@
 			</Hotspots>
 		</Objective>
 	</Quest>
-
-<!-- Sap Tapping -->
-	<!-- Using same pattern as the spider eggs in Nope Nope Nope -->
 
 <!-- Putting an Eye Out -->
 	<Quest Id="31234" Name="Putting an Eye Out">
@@ -252,42 +246,6 @@
 		</Objective>
 	</Quest>
 
-<!-- Sampling the Empire's Finest -->
-	<Quest Id="31496" Name="Sampling the Empire's Finest">
-	        <Objective Type="CollectItem" ItemId="215762" CollectCount="1">
-			<CollectFrom>
-				<GameObject Name="Central Feeder" Id="215762" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="371.6424" Y="4137.382" Z="217.8965" />
-			</Hotspots>
-		</Objective>
-	        <Objective Type="CollectItem" ItemId="215761" CollectCount="1">
-			<CollectFrom>
-				<GameObject Name="East Feeder" Id="215761" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="235.8472" Y="4113.993" Z="246.7377" />
-			</Hotspots>
-		</Objective>
-	        <Objective Type="CollectItem" ItemId="215703" CollectCount="1">
-			<CollectFrom>
-				<GameObject Name="North Feeder" Id="215703" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="243.9077" Y="4156.698" Z="262.1833" />
-			</Hotspots>
-		</Objective>
-	        <Objective Type="CollectItem" ItemId="215700" CollectCount="1">
-			<CollectFrom>
-				<GameObject Name="Northeast Feeder" Id="215700" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="338.8165" Y="4046.745" Z="222.3622" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
 <!-- Wing Clip -->
 	<Quest Id="31502" Name="Wing Clip">
 	        <Objective Type="CollectItem" ItemId="87401" CollectCount="24">
@@ -368,34 +326,6 @@
 			<Hotspot X="-1752.77" Y="4557.33" Z="32.45" />
 			<Hotspot X="-1785.14" Y="4575.39" Z="33.49" />
 			<Hotspot X="-1733.94" Y="4627.21" Z="61.97" />
-		</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Free From Her Clutches -->
-	<Quest Id="31494" Name="Free From Her Clutches">
-	        <Objective Type="CollectItem" ItemId="64849" CollectCount="8">
-		<CollectFrom>
-			<GameObject Name="Kunchong Cage" Id="214292" />
-		</CollectFrom>
-		<Hotspots>
-			<Hotspot X="117.7218" Y="3590.625" Z="233.62" />
-			<Hotspot X="130.3713" Y="3542.942" Z="233.6735" />
-			<Hotspot X="186.3374" Y="3509.302" Z="243.0377" />
-			<Hotspot X="240.1888" Y="3479.064" Z="243.509" />
-			<Hotspot X="253.3184" Y="3539.905" Z="243.4481" />
-		</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Dark Skies -->
-	<Quest Id="31216" Name="Dark Skies"> 
-		<Objective Type="KillMob" MobId="63635" KillCount="200">
-		<Hotspots>
-		</Hotspots>
-		</Objective>
-		<Objective Type="KillMob" MobId="65513" KillCount="3">
-		<Hotspots>
 		</Hotspots>
 		</Objective>
 	</Quest>
@@ -652,10 +582,21 @@
  	<If Condition="HasQuest(31509) &amp;&amp; !IsQuestCompleted(31509)">
 		<CustomBehavior File="Message" Text="Starting Fear Takes Root" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31509" LootMobs="true" PullDistance="1" />
-		<CustomBehavior File="FlyTo" X="-1235.184" Y="4816.934" Z="29.11862" />
-		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31509)">
-			<CustomBehavior File="InteractWith" MobId="214543" MobId2="214549" ObjectType="GameObject" CollectionDistance="10000" WaitForNpcs="false"/>
+			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
+				<CustomBehavior File="FlyTo" X="-1235.18" Y="4816.94" Z="29.12" />
+				<CustomBehavior File="ForcedDismount" />
+			</If>
+			<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
+				<CustomBehavior File="InteractWith" MobId="214543" MobId2="214549" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
+			</While>
+			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
+				<CustomBehavior File="FlyTo" X="-1046.43" Y="4435.68" Z="73.60" />
+				<CustomBehavior File="ForcedDismount" />
+			</If>
+			<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
+				<CustomBehavior File="InteractWith" MobId="214543" MobId2="214549" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
+			</While>
 		</While>
 	</If>
 
@@ -850,7 +791,6 @@
 		<CustomBehavior File="FlyTo" X="384.5976" Y="2385.874" Z="219.0938" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(31233)">
- 
 			<If Condition="!IsQuestCompleted(31233)"> 
 		<!-- 1st spot -->
 				<CustomBehavior File="FlyTo" X="384.5976" Y="2385.874" Z="219.0938" />
@@ -858,7 +798,6 @@
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
 				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
- 
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 2nd spot -->
 				<CustomBehavior File="FlyTo" X="559.2505" Y="2572.864" Z="275.9264" />
@@ -866,7 +805,6 @@
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
 				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
- 
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 3rd spot, there are two spots -->
 				<CustomBehavior File="FlyTo" X="559.2505" Y="2572.864" Z="275.9264" />
@@ -874,7 +812,6 @@
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
 				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
- 
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 4th spot -->
 				<CustomBehavior File="FlyTo" X="629.1552" Y="2628.038" Z="287.5912" />
@@ -882,7 +819,6 @@
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
 				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
- 
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 5th spot -->
 				<CustomBehavior File="FlyTo" X="709.637" Y="2716.399" Z="295.0992" />
@@ -890,7 +826,6 @@
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
 				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
- 
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 6th spot -->
 				<CustomBehavior File="FlyTo" X="691.0659" Y="2524.741" Z="304.498" />
@@ -954,7 +889,6 @@
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Klaxxi'Vess." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Klaxxi'Vess" X="138.1091" Y="3221.354" Z="214.7599" />
 	</If>
-
 
 <!-- The Matriarch's Maw -->
 	<If Condition="!HasQuest(31599) &amp;&amp; !IsQuestCompleted(31599) &amp;&amp; HasItem(87878)" >
