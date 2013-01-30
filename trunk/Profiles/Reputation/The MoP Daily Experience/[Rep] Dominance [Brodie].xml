@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r45</Name>
+	<Name>Dominance Offensive r53</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -184,6 +184,19 @@
 		</Objective>
 	</Quest>
 
+<!-- We Require More Minerals -->
+	<Quest Id="32131" Name="We Require More Minerals">
+		<Objective Type="CollectItem" ItemId="91823" CollectCount="20">
+			<CollectFrom>
+				<Mob Name="Shieldwall Engineer" Id="67441" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-691.89" Y="-684.78" Z="17.09" />
+				<Hotspot X="-684.04" Y="-771.36" Z="15.45" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
 <!-- End of Quest Overrides --> 
 
 <QuestOrder IgnoreCheckpoints="True" >
@@ -327,7 +340,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32130" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-943.44" Y="-873.70" Z="1.14" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Good Luck, Have Fun" QuestId="32135" Type="CollectItem" ItemId="92474" CollectCount="10" />
+		<Objective QuestName="Good Luck, Have Fun" QuestId="32130" Type="CollectItem" ItemId="92474" CollectCount="10" />
 	</If>
 
 <!-- Worker Harassment -->
@@ -336,53 +349,56 @@
 		<CustomBehavior File="UserSettings" QuestId="32132" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-827.05" Y="-974.23" Z="18.55" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Worker Harassment" QuestId="32135" Type="KillMob" MobId="67423" KillCount="30" />
+		<Objective QuestName="Worker Harassment" QuestId="32132" Type="KillMob" MobId="67423" KillCount="30" />
+	</If>
+
+<!-- We Require More Minerals -->
+	<If Condition="HasQuest(32131) &amp;&amp; !IsQuestCompleted(32131)" >
+		<CustomBehavior File="Message" Text="Starting We Require More Minerals" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32131" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="FlyTo"  X="-783.64" Y="-743.95" Z="12.00" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="We Require More Minerals" QuestId="32131" Type="CollectItem" ItemId="91823" CollectCount="20" />
 	</If>
 
 <!-- Sentry Wards -->
-<!--	<If Condition="(HasQuest(32133) &amp;&amp; !IsQuestCompleted(32133))" >
+	<If Condition="HasQuest(32133) &amp;&amp; !IsQuestCompleted(32133)" >
 		<CustomBehavior File="Message" Text="Starting Sentry Wards" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32140" LootMobs="true" PullDistance="5" />
-		<CustomBehavior File="FlyTo" X="-1227.917" Y="-956.8947" Z="16.06746" />
-		<CustomBehavior File="FlyTo" X="-1146.109" Y="-1087.181" Z="5.144545" />
-		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" QuestId="32133" MobId="67742" NumOfTimes="1" CollectionDistance="5" X="-1146.109" Y="-1087.181" Z="5.144545" />	
-		<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" />
-		<CustomBehavior File="FlyTo" X="-1083.577" Y="-1108.683" Z="25.41268" />
-		<CustomBehavior File="FlyTo" X="-1082.221" Y="-1134.743" Z="13.61495" />
-		<CustomBehavior File="FlyTo" X="-966.2871" Y="-1066.585" Z="46.11906" />
-		<CustomBehavior File="FlyTo" X="-948.2597" Y="-1075.886" Z="14.86751" />
-		<CustomBehavior File="ForcedDismount" />
-		<RunTo X="-910.9766" Y="-1095.688" Z="14.84775" />
-		<CustomBehavior File="InteractWith" QuestId="32133" MobId="67744" NumOfTimes="1" CollectionDistance="5" X="-910.9766" Y="-1095.688" Z="14.84775" />
-		<If Condition="((HasQuest(32133)) &amp;&amp; !(IsQuestCompleted(32133)))" >
-			<CustomBehavior File="ForcedDismount" />
-			<RunTo X="-947.4448" Y="-1075.943" Z="14.86842" />
-			<CustomBehavior File="ForceMount" />
-			<CustomBehavior File="FlyTo" X="-970.0676" Y="-1062.609" Z="23.15234" />
-			<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" />
-			<CustomBehavior File="FlyTo" X="-1083.577" Y="-1108.683" Z="25.41268" />
-			<CustomBehavior File="FlyTo" X="-1082.221" Y="-1134.743" Z="13.61495" />
-			<CustomBehavior File="FlyTo" X="-1070.082" Y="-1127.354" Z="16.44895" />
-			<CustomBehavior File="ForcedDismount" />
-			<RunTo X="-1086.401" Y="-1137.535" Z="13.6144" />
-			<RunTo X="-1107.941" Y="-1150.235" Z="12.57826" />
-			<RunTo X="-1103.294" Y="-1145.932" Z="12.59191" />
-			<RunTo X="-1107.272" Y="-1150.264" Z="12.5783" />
-			<RunTo X="-1092.531" Y="-1175.139" Z="13.59692" />
-			<RunTo X="-1093.705" Y="-1176.828" Z="14.06866" />
-			<RunTo X="-1110.629" Y="-1187.391" Z="21.72827" />
-			<RunTo X="-1128.034" Y="-1162.849" Z="21.72103" />
-			<RunTo X="-1132.575" Y="-1162.68" Z="21.8197" />
-			<CustomBehavior File="InteractWith" QuestId="32133" MobId="67743" NumOfTimes="1" CollectionDistance="5" X="-1131.242" Y="-1163.728" Z="21.72105" />
-			<RunTo X="-1128.034" Y="-1162.849" Z="21.72103" />
-			<RunTo X="-1110.629" Y="-1187.391" Z="21.72827" />
-			<RunTo X="-1093.705" Y="-1176.828" Z="14.06866" />
-			<RunTo X="-1092.531" Y="-1175.139" Z="13.59692" />
-			<RunTo X="-1107.272" Y="-1150.264" Z="12.5783" />
-			<RunTo X="-1106.149" Y="-1150.74" Z="12.57877" />
-		</If>
-	</If> -->
+		<CustomBehavior File="UserSettings" QuestId="32133" LootMobs="true" PullDistance="5" />
+		<While Condition="!IsQuestCompleted(32133)" >
+			<If Condition="!IsObjectiveComplete(2,32133)" >
+				<CustomBehavior File="FlyTo" X="-1227.92" Y="-956.90" Z="16.07" />
+				<CustomBehavior File="FlyTo" X="-1146.11" Y="-1087.18" Z="5.15" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" QuestId="32133" MobId="67742" CollectionDistance="15" X="-1146.109" Y="-1087.181" Z="5.144545" WaitTime="1000" />	
+			</If>
+			<If Condition="!IsObjectiveComplete(1,32133)" >
+				<CustomBehavior File="FlyTo" X="-1097.306" Y="-1087.093" Z="16.22491" />
+				<CustomBehavior File="FlyTo" X="-1083.577" Y="-1108.683" Z="25.41268" />
+				<CustomBehavior File="FlyTo" X="-1082.221" Y="-1134.743" Z="13.61495" />
+				<CustomBehavior File="FlyTo" X="-966.2871" Y="-1066.585" Z="46.11906" />
+				<CustomBehavior File="FlyTo" X="-948.2597" Y="-1075.886" Z="14.86751" />
+				<CustomBehavior File="ForcedDismount" />
+				<RunTo X="-910.9766" Y="-1095.688" Z="14.84775" />
+				<CustomBehavior File="InteractWith" QuestId="32133" MobId="67744" CollectionDistance="15" X="-910.9766" Y="-1095.688" Z="14.84775" WaitTime="1000" />
+				<RunTo X="-947.4448" Y="-1075.943" Z="14.86842" />
+			</If>
+			<If Condition="!IsObjectiveComplete(3,32133)" >
+				<CustomBehavior File="FlyTo" X="-1079.62" Y="-1132.98" Z="13.62" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="MyCTM" X="-1108.09" Y="-1149.39" Z="12.58" />
+				<CustomBehavior File="MyCTM" X="-1122.59" Y="-1124.55" Z="13.60" />
+				<CustomBehavior File="MyCTM" X="-1142.70" Y="-1136.30" Z="21.73" />
+				<CustomBehavior File="MyCTM" X="-1128.64" Y="-1161.94" Z="21.72" />
+				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32133" MobId="67743" CollectionDistance="15" X="-1131.242" Y="-1163.728" Z="21.72105" WaitTime="1000" />
+				<CustomBehavior File="MyCTM" X="-1128.64" Y="-1161.94" Z="21.72" />
+				<CustomBehavior File="MyCTM" X="-1142.70" Y="-1136.30" Z="21.73" />
+				<CustomBehavior File="MyCTM" X="-1122.59" Y="-1124.55" Z="13.60" />
+				<CustomBehavior File="MyCTM" X="-1108.09" Y="-1149.39" Z="12.58" />
+				<CustomBehavior File="MyCTM" X="-1079.62" Y="-1132.98" Z="13.62" />
+			</If>
+		</While>
+	</If>
 
 <!-- Work Order: Iron -->
 	<If Condition="HasQuest(32140)" >
@@ -635,9 +651,6 @@
 		</While>
 	</If>
 
-<!-- Sentry Wards -->
-<!-- We Require More Minerals -->
-
 <!-- Flash! Aaaaaahhhh! -->
 	<If Condition="HasQuest(32235) &amp;&amp; !IsQuestCompleted(32235)">
 		<CustomBehavior File="Message" Text="Starting Flash! Aaaaaahhhh!" LogColor="Green"  />
@@ -693,6 +706,8 @@
 
 	<If Condition="HasQuest(32135) &amp;&amp; IsQuestCompleted(32135) ||
 			HasQuest(32130) &amp;&amp; IsQuestCompleted(32130) ||
+			HasQuest(32131) &amp;&amp; IsQuestCompleted(32131) ||
+			HasQuest(32133) &amp;&amp; IsQuestCompleted(32133) ||
 			HasQuest(32132) &amp;&amp; IsQuestCompleted(32132)">
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Domination Point." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1183.228" Y="-610.1541" Z="23.77427" />
@@ -707,8 +722,16 @@
 		<TurnIn QuestName="Worker Harassment" QuestId="32132" TurnInName="Shademaster Kiryn" TurnInId="67628" />
 	</If>
 
+	<If Condition="HasQuest(32133) &amp;&amp; IsQuestCompleted(32133)" >
+		<TurnIn QuestName="Sentry Wards" QuestId="32133" TurnInName="Shademaster Kiryn" TurnInId="67628" />
+	</If>
+
 	<If Condition="HasQuest(32130) &amp;&amp; IsQuestCompleted(32130)" >
 		<TurnIn QuestName="Good Luck, Have Fun" QuestId="32130" TurnInName="Zazzix Sparkrocket" TurnInId="67402" />
+	</If>
+
+	<If Condition="HasQuest(32131) &amp;&amp; IsQuestCompleted(32131)" >
+		<TurnIn QuestName="We Require More Minerals" QuestId="32131" TurnInName="Zazzix Sparkrocket" TurnInId="67402" />
 	</If>
 
 	<If Condition="HasQuest(32235) &amp;&amp; IsQuestCompleted(32235) ||
