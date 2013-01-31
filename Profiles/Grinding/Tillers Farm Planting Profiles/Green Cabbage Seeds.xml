@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Green cabbage Seeds v1.8 (by Billtay, adapted by TheBrodieman)</Name>
+	<Name>Green cabbage Seeds v1.9 (by Billtay, adapted by TheBrodieman)</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -185,20 +185,135 @@
 			<If Condition="GetItemCount(79102) &lt; 16" >
 				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482" />
 				<CustomBehavior File="ForcedDismount" />
-				<While Condition="(GetItemCount(79102) &lt; 4) &amp;&amp; IsQuestCompleted(31945)">
-					<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="300" />
-				</While>
-				<While Condition="(GetItemCount(79102) &lt; 8) &amp;&amp; IsQuestCompleted(30516)">
-					<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="300" />
-				</While>
-				<While Condition="(GetItemCount(79102) &lt; 12) &amp;&amp; IsQuestCompleted(30524)">
-					<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="300" />
-				</While>
-				<While Condition="(GetItemCount(79102) &lt; 16) &amp;&amp; IsQuestCompleted(30529)">
-					<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="300" />
-				</While>
-			<CustomBehavior File="Misc\RunLua" Lua="CloseMerchant()" />
-
+				<If Condition="IsQuestCompleted(31945)">
+					<If Condition="IsQuestCompleted(30516)">
+						<If Condition="IsQuestCompleted(30524)">
+							<If Condition="IsQuestCompleted(30529)">
+								<If Condition="(GetItemCount(79102) == 0)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="16" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 1)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="15" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 2)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="14" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 3)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="13" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 4)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="12" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 5)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="11" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 6)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="10" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 7)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="9" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 8)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="8" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 9)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="7" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 10)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="6" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 11)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="5" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 12)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="4" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 13)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="3" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 14)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="2" WaitTime="2000" />
+								</If>
+								<If Condition="(GetItemCount(79102) == 15)">
+									<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="2000" />
+								</If>
+							</If>
+							<If Condition="(GetItemCount(79102) == 0)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="12" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 1)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="11" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 2)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="10" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 3)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="9" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 4)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="8" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 5)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="7" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 6)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="6" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 7)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="5" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 8)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="4" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 9)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="3" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 10)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="2" WaitTime="2000" />
+							</If>
+							<If Condition="(GetItemCount(79102) == 11)">
+								<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="2000" />
+							</If>
+						</If>
+						<If Condition="(GetItemCount(79102) == 0)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="8" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 1)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="7" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 2)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="6" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 3)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="5" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 4)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="4" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 5)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="3" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 6)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="2" WaitTime="2000" />
+						</If>
+						<If Condition="(GetItemCount(79102) == 7)">
+							<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="2000" />
+						</If>
+					</If>
+					<If Condition="(GetItemCount(79102) == 0)">
+						<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="4" WaitTime="2000" />
+					</If>
+					<If Condition="(GetItemCount(79102) == 1)">
+						<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="3" WaitTime="2000" />
+					</If>
+					<If Condition="(GetItemCount(79102) == 2)">
+						<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="2" WaitTime="2000" />
+					</If>
+					<If Condition="(GetItemCount(79102) == 3)">
+						<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" WaitTime="2000" />
+					</If>
+				</If>
+				<CustomBehavior File="Misc\RunLua" Lua="CloseMerchant()" />
 			</If>
 
 			<While Condition="HasItem(79102)" >

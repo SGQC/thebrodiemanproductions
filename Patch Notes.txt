@@ -2,6 +2,10 @@ Patch Notes
 
 1/30/13
 
+r55
+Farm Seed Grinding Profiles
+-- Fixed slow buying process. Will now buy the remainder of the seeds needed in bulk.
+
 r54
 The Anglers
 -- Code Cleanup
