@@ -154,6 +154,14 @@ namespace AzeniusHelper2
             }
         }
 
+        public WoWUnit JungleShredder
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 67285 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+            }
+        }
+
         public WoWUnit DreadKunchong
         {
             get
@@ -369,6 +377,15 @@ u.Distance).ToList();
             if (Me.IsDead || Me.IsGhost)
                 return;
             ObjectManager.Update();
+
+		//#region [Operation Shieldwall]
+
+		//#region Jungle Shredder
+		//if (IsOnQuest(32446) && (JungleShredder != null))
+		//{
+		//	UseIfNotOnCooldown(93180); //Re-Configured Remote
+		//}
+		//#endregion
 
             #region [Golden Lotus]
 

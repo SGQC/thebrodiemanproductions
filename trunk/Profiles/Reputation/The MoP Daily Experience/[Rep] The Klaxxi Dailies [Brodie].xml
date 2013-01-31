@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r54</Name>
+	<Name>The Klaxxi r56</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -374,17 +374,87 @@
 	<If Condition="(!HasQuest(31808) &amp;&amp; !HasQuest(31269) &amp;&amp; !HasQuest(31267)
 			&amp;&amp; !HasQuest(31024) &amp;&amp; !HasQuest(31270) &amp;&amp; !HasQuest(31496)
 			&amp;&amp; !HasQuest(31494) &amp;&amp; !HasQuest(31487) &amp;&amp; !HasQuest(31502)
-			&amp;&amp; !HasQuest(31755) &amp;&amp; !HasQuest(31131) &amp;&amp; !HasQuest(31242)
+			&amp;&amp; !HasQuest(31755) &amp;&amp; !HasQuest(31131) &amp;&amp; !HasQuest(31504)
 			&amp;&amp; !HasQuest(31503) &amp;&amp; !HasQuest(31109) &amp;&amp; !HasQuest(31234)
 			&amp;&amp; !HasQuest(31232) &amp;&amp; !HasQuest(31235) &amp;&amp; !HasQuest(31238)
 			&amp;&amp; !HasQuest(31231) &amp;&amp; !HasQuest(31233) &amp;&amp; !HasQuest(31237)
 			&amp;&amp; !HasQuest(31268) &amp;&amp; !HasQuest(31271) &amp;&amp; !HasQuest(31272)
 			&amp;&amp; !HasQuest(31216) &amp;&amp; !HasQuest(31508) &amp;&amp; !HasQuest(31509)
 			&amp;&amp; !HasQuest(31506) &amp;&amp; !HasQuest(31511) &amp;&amp; !HasQuest(31505)
-			&amp;&amp; !HasQuest(31507) &amp;&amp; !HasQuest(31510) &amp;&amp; !HasQuest(31504))" >
+			&amp;&amp; !HasQuest(31507) &amp;&amp; !HasQuest(31510))" >
 		<CustomBehavior File="Message" Text="Starting Klaxxi Dailies, moving to Klaxxi'Vess." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="138.1091" Y="3221.354" Z="214.7599" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	</If>
+
+<!-- Stay Klaxxi Check -->
+	<If Condition="!IsAchievementCompleted(7313, 1) || !IsAchievementCompleted(7313, 2) ||
+			!IsAchievementCompleted(7313, 3) || !IsAchievementCompleted(7313, 4) ||
+			!IsAchievementCompleted(7313, 5) || !IsAchievementCompleted(7313, 6) ||
+			!IsAchievementCompleted(7313, 7) || !IsAchievementCompleted(7313, 8) ||
+			!IsAchievementCompleted(7313, 9) || !IsAchievementCompleted(7313, 10)" >
+	<!-- Enhancements -->
+		<If Condition="(!IsAchievementCompleted(7313, 1) &amp;&amp; !IsAchievementCompleted(7312, 1))" >
+			<If Condition="!Me.HasAura(131767)" >
+				<CustomBehavior File="InteractWith" MobId="62538" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 6) &amp;&amp; !IsAchievementCompleted(7312, 2))" >
+			<If Condition="!Me.HasAura(124529)" >
+				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="215872" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="63758" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 7) &amp;&amp; !IsAchievementCompleted(7312, 3))" >
+			<If Condition="!Me.HasAura(127382)" >
+				<CustomBehavior File="InteractWith" MobId="65305" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 9) &amp;&amp; !IsAchievementCompleted(7312, 7))" >
+			<If Condition="!Me.HasAura(127794)" >
+				<CustomBehavior File="InteractWith" MobId="63072" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 5) &amp;&amp; !IsAchievementCompleted(7312, 10))" >
+			<If Condition="!Me.HasAura(127370)" >
+				<CustomBehavior File="InteractWith" MobId="62151" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		</If>
+
+	<!-- Augmentations -->
+		<If Condition="(!IsAchievementCompleted(7313, 2) &amp;&amp; !IsAchievementCompleted(7312, 4))" >
+			<If Condition="!Me.HasAura(127351)" >
+				<CustomBehavior File="InteractWith" MobId="63758" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 3) &amp;&amp; !IsAchievementCompleted(7312, 5))" >
+			<If Condition="!Me.HasAura(127703)" >
+				<CustomBehavior File="InteractWith" MobId="62180" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 4) &amp;&amp; !IsAchievementCompleted(7312, 9))" >
+			<If Condition="!Me.HasAura(127356)" >
+				<CustomBehavior File="InteractWith" MobId="63785" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 8) &amp;&amp; !IsAchievementCompleted(7312, 6))" >
+			<If Condition="!Me.HasAura(127375)" >
+				<CustomBehavior File="InteractWith" MobId="65303" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 10) &amp;&amp; !IsAchievementCompleted(7312, 8))" >
+			<If Condition="!Me.HasAura(127219)" >
+				<CustomBehavior File="InteractWith" MobId="63071" GossipOptions="1" WaitForNpcs="False" />
+			</If>
+		</ElseIf>
+		</If>
+	<Else>
+		<If Condition="!Me.HasAura(127370)" >
+			<CustomBehavior File="InteractWith" MobId="62151" GossipOptions="1" WaitForNpcs="False" />
+		</If>
+		<If Condition="!Me.HasAura(127356)" >
+			<CustomBehavior File="InteractWith" MobId="63785" GossipOptions="1" WaitForNpcs="False" />
+		</If>
+	</Else>
 	</If>
 
 <!-- Quest Pickups -->
@@ -582,22 +652,15 @@
  	<If Condition="HasQuest(31509) &amp;&amp; !IsQuestCompleted(31509)">
 		<CustomBehavior File="Message" Text="Starting Fear Takes Root" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31509" LootMobs="true" PullDistance="1" />
-		<While Condition="!IsQuestCompleted(31509)">
-			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
-				<CustomBehavior File="FlyTo" X="-1235.18" Y="4816.94" Z="29.12" />
-				<CustomBehavior File="ForcedDismount" />
-			</If>
-			<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
-				<CustomBehavior File="InteractWith" MobId="214543" MobId2="214549" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
-			</While>
-			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
-				<CustomBehavior File="FlyTo" X="-1046.43" Y="4435.68" Z="73.60" />
-				<CustomBehavior File="ForcedDismount" />
-			</If>
-			<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 214549 &amp;&amp; u.Distance &lt;= 500))" >
-				<CustomBehavior File="InteractWith" MobId="214543" MobId2="214549" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
-			</While>
-		</While>
+		<CustomBehavior File="FlyTo" X="-1168.03" Y="4896.25" Z="44.05" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="CollectThings" ObjectId="214543" ObjectId2="214549" CollectUntil="QuestComplete" QuestId="31509" HuntingGroundRadius="200" NonCompeteDistance="5" PostInteractDelay="100" >
+			<Hotspot X="-1210.71" Y="4859.17" Z="34.68" />
+			<Hotspot X="-1119.33" Y="4652.03" Z="67.44" />
+			<Hotspot X="-1063.94" Y="4522.37" Z="68.50" />
+			<Hotspot X="-1102.52" Y="4409.04" Z="79.39" />
+			<Hotspot X="-1187.26" Y="4329.15" Z="75.21" />
+		</CustomBehavior>
 	</If>
 
 <!-- Ordnance Disposal -->
@@ -747,12 +810,18 @@
 	</If>
 
 <!-- Infection -->
-	<If Condition="((HasQuest(31272)) &amp;&amp; (!IsQuestCompleted(31272)))" >
-		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="30"  />
+	<If Condition="HasQuest(31272) &amp;&amp; !IsQuestCompleted(31272)" >
 		<CustomBehavior File="Message" Text="Starting Infection" LogColor="Green" />
-		<CustomBehavior File="FlyTo"  X="-931.7175" Y="2870.845" Z="109.9965"  />
+		<CustomBehavior File="UserSettings" QuestId="31272" LootMobs="True" PullDistance="30" />
+		<CustomBehavior File="FlyTo" X="-931.72" Y="2870.85" Z="110.00"  />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="KillUntilComplete" QuestId="31272" MobId1="63726" MobId2="63729" MobId3="63725" MobId4="65118" X="-931.7175" Y="2870.845" Z="109.9965" />
+<!--		<CustomBehavior File="KillUntilComplete" QuestId="31272" MobId1="63726" MobId2="63729" MobId3="63725" MobId4="65118" X="-931.7175" Y="2870.845" Z="109.9965" /> -->
+		<CustomBehavior File="CollectThings" MobId1="63726" MobId2="63729" MobId3="63725" MobId4="65118" CollectUntil="QuestComplete" QuestId="31272" HuntingGroundRadius="200" NonCompeteDistance="5" >
+			<Hotspot X="-936.68" Y="2746.52" Z="114.49" />
+			<Hotspot X="-1076.50" Y="2683.50" Z="102.11" />
+			<Hotspot X="-845.61" Y="2886.35" Z="129.94" />
+			<Hotspot X="-1015.48" Y="2939.23" Z="76.53" />
+		</CustomBehavior>
 	</If>
 
 <!-- A Little Brain Work -->

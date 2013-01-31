@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r37</Name>
+	<Name>Boss Fights r56</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -407,6 +407,28 @@
 		<CustomBehavior File="Message" Text="Turning in Behind Our Lines" LogColor="Green" />
 		<CustomBehavior File="FlyTo" X="1218.84" Y="1045.725" Z="425.9669" />
 		<TurnIn QuestName="Behind Our Lines" QuestId="31136" TurnInName="Leven Dawnblade" TurnInId="58408" />
+	</If>
+
+  	<If Condition="HasQuest(30277) &amp;&amp; IsQuestCompleted(30277)" >
+		<CustomBehavior File="Message" Text="Turning in Crumbling Hall" LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="1284.806" Y="1622.994" Z="347.649" />
+		<While Condition="HasQuestAvailable(58503, &quot;TurnIn&quot;)" >
+			<TurnIn QuestName="The Crumbling Hall" QuestId="30277" TurnInName="Anji Autumnlight" TurnInId="58503" />
+		</While>
+		<While Condition="HasQuestAvailable(59332, &quot;TurnIn&quot;)" >
+			<TurnIn QuestName="The Crumbling Hall" QuestId="30277" TurnInName="Leven Dawnblade" TurnInId="59332" />
+		</While>
+	</If>
+
+  	<If Condition="HasQuest(30280) &amp;&amp; IsQuestCompleted(30280)" >
+		<CustomBehavior File="Message" Text="Turning in The Thunder Below" LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="1284.806" Y="1622.994" Z="347.649" />
+		<While Condition="HasQuestAvailable(58503, &quot;TurnIn&quot;)" >
+			<TurnIn QuestName="The Thunder Below" QuestId="30280" TurnInName="Anji Autumnlight" TurnInId="58503" />
+		</While>
+		<While Condition="HasQuestAvailable(59332, &quot;TurnIn&quot;)" >
+			<TurnIn QuestName="The Thunder Below" QuestId="30280" TurnInName="Leven Dawnblade" TurnInId="59332" />
+		</While>
 	</If>
 
 	<If Condition="HasItem(90625)" >

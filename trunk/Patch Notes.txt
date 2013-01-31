@@ -1,5 +1,17 @@
 Patch Notes
 
+1/31/13
+
+r56
+The Klaxxi
+-- Fear Takes Root - Overhaul complete. Will now hotspot for pickups, no more standing still.
+-- Removed "Mistfall Village" from "do I have quests" check. Should never have been in there.
+-- Added Stay Klaxxi support. Bot will now pick the next achievement augment to use, if none will use Raining Blood and Seek And Destroy.
+-- Infection - Reorder of UserSettings and bound to QuestId.
+-- Infection - KillUntilComplete removed, added CollectThings to replace (with hotspots).
+Boss Fights
+-- Turn Ins for Crumbling Hall and Thunder Below added. Will turn in at end of dailies if completed.
+
 1/30/13
 
 r55
