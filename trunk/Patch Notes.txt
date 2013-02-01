@@ -2,6 +2,10 @@ Patch Notes
 
 1/31/13
 
+r57
+Lost And Found
+-- Added Kafa Press
+
 r56
 The Klaxxi
 -- Fear Takes Root - Overhaul complete. Will now hotspot for pickups, no more standing still.
