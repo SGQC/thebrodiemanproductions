@@ -11,11 +11,11 @@ using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
-namespace Blastranaar
+namespace MantidUnderFire
 {
-    public class Blastranaar : CustomForcedBehavior
+    public class MantidUnderFire : CustomForcedBehavior
     {
-        public Blastranaar(Dictionary<string, string> args)
+        public MantidUnderFire(Dictionary<string, string> args)
             : base(args)
         {
             try
@@ -33,7 +33,6 @@ namespace Blastranaar
         private Composite _root;
         public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
         public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
-		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }
         public override bool IsDone
         {
             get
@@ -63,22 +62,25 @@ namespace Blastranaar
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdMantid && !u.IsDead && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
             }
         }
+
+        public WoWObject Vehicle
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWObject>(true).Where(o => o.Entry == 64336).
+                    OrderBy(o => o.Distance).FirstOrDefault();
+            }
+        }
+
+        private static bool IsInVehicle
+        {
+            get { return Lua.GetReturnVal<bool>("return UnitInVehicle('player')", 0); }
+        }
 	
         public bool IsQuestComplete()
         {
             var quest = StyxWoW.Me.QuestLog.GetQuestById((uint)QuestId);
             return quest == null || quest.IsCompleted;
-        }
-        private bool IsObjectiveComplete(int objectiveId, uint questId)
-        {
-            if (Me.QuestLog.GetQuestById(questId) == null)
-            {
-                return false;
-            }
-            int returnVal = Lua.GetReturnVal<int>("return GetQuestLogIndexByID(" + questId + ")", 0);
-            return
-                Lua.GetReturnVal<bool>(
-                    string.Concat(new object[] { "return GetQuestLogLeaderBoard(", objectiveId, ",", returnVal, ")" }), 2);
         }
 
         public Composite DoneYet
@@ -86,36 +88,38 @@ namespace Blastranaar
             get
             {
                 return
-                    new Decorator(ret => IsObjectiveComplete(1, (uint)QuestId), new Action(delegate
+                    new Decorator(ret => IsQuestComplete(), new Action(delegate
                     {
 			Lua.DoString("CastPetAction(12)");
                         TreeRoot.StatusText = "Finished!";
                         _isBehaviorDone = true;
                         return RunStatus.Success;
                     }));
-
             }
         }
-
 
         public Composite KillOne
         {
             get
             {
-                return new Decorator(r => !IsObjectiveComplete(1, (uint)QuestId), new Action(r =>
+                return new Decorator(r => !IsQuestComplete(), new Action(r =>
                 {
-			Lua.DoString("CastPetAction(1)");
-			SpellManager.ClickRemoteLocation(Mantid[10].Location);
 			Lua.DoString("CastPetAction(2)");
 			SpellManager.ClickRemoteLocation(Mantid[10].Location);
-			Thread.Sleep(8500);
+			Thread.Sleep(500);
+			Lua.DoString("CastPetAction(1)");
+			SpellManager.ClickRemoteLocation(Mantid[10].Location);
+			Thread.Sleep(8000);
 		}));
             }
         }
 		
         protected override Composite CreateBehavior()
         {
-            return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(DoneYet, KillOne, new ActionAlwaysSucceed())));
+            return _root ?? (_root = 
+		new Decorator(ret => !_isBehaviorDone,
+			new PrioritySelector(DoneYet, KillOne, new ActionAlwaysSucceed())
+		));
         }
     }
 }

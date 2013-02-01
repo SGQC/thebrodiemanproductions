@@ -250,8 +250,6 @@
 			</While>
 			<CustomBehavior File="MantidUnderFire2" />
 		</While>
-	</If>
-	<If Condition="(HasQuest(30243) &amp;&amp; IsQuestCompleted(30243))" >
 		<CustomBehavior File="EjectVeh" />
 		<CustomBehavior File="CompleteLogQuest" QuestId="30243" />
 	</If>
@@ -271,7 +269,7 @@
 	</If>
 
 <!-- Bloodied Skies -->
-	<If Condition="(HasQuest(30266)) &amp;&amp; (!IsQuestCompleted(30266))" >
+	<If Condition="(HasQuest(30266) &amp;&amp; !IsQuestCompleted(30266))" >
 
 		<CustomBehavior File="Message" Text="Starting Bloodied Skies" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30246" LootMobs="true" PullDistance="1" />
