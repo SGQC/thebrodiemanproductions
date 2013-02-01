@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r44</Name>
+	<Name>Lost and Found r57</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -42,7 +42,8 @@
 			!IsQuestCompleted(31433) || !IsQuestCompleted(31432) || !IsQuestCompleted(31438) ||
 			!IsQuestCompleted(31417) || !IsQuestCompleted(31403) || !IsQuestCompleted(31425) ||
 			!IsQuestCompleted(31436) || !IsQuestCompleted(31431) || !IsQuestCompleted(31434) ||
-			!IsQuestCompleted(31437) || !IsQuestCompleted(31435) || !IsQuestCompleted(31429)" >
+			!IsQuestCompleted(31437) || !IsQuestCompleted(31435) || !IsQuestCompleted(31429) ||
+			!IsQuestCompleted(31304)" >
 
 <!-- Jade Forest -->
 
@@ -215,15 +216,18 @@
 
 <!-- Kun-Lai Summit -->
 
+<!-- Kafa Press -->
+	<If Condition="!IsQuestCompleted(31304)">
+		<CustomBehavior File="FlyTo" X="2364.12" Y="2492.21" Z="683.89" />
+		<RunTo X="2411.62" Y="2627.94" Z="667.32" />
+		<CustomBehavior File="InteractWith" MobId="64227" CollectionDistance="200" WaitForNpcs="false" />
+	</If>
+
 <!-- Tablet of Ren Yun -->
 	<If Condition="!IsQuestCompleted(31417)">
 		<CustomBehavior File="FlyTo" X="3434.76" Y="2036.34" Z="1215.07" />
-		<If Condition="!IsQuestCompleted(31417)">
-			<CustomBehavior File="InteractWith" MobId="213765" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
-		</If>
+		<CustomBehavior File="InteractWith" MobId="213765" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
 	</If>
-
-<!-- The Veiled Stair -->
 
 </While>
 
