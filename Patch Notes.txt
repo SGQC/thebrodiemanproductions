@@ -2,6 +2,10 @@ Patch Notes
 
 2/1/13
 
+r60
+Cloud Serpent
+-- Feast for the Senses - Fixed issue where if you had 1 or more Fish Cakes already, it wouldn't cast.
+
 r59
 Golden Lotus
 -- Small changes to Laosy Scouting to battle the pathing bugs.
