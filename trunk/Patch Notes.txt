@@ -1,5 +1,15 @@
 Patch Notes
 
+2/1/13
+
+r59
+Golden Lotus
+-- Small changes to Laosy Scouting to battle the pathing bugs.
+Quest Behaviors
+-- MantidUnderFire.cs - Change to increase logic of "Am I Done?". Still battling "Am I Mounted?"
+Setting Sun Garrison
+-- Code Cleanup
+
 1/31/13
 
 r58
