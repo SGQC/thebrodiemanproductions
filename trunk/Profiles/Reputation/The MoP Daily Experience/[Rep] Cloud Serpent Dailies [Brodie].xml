@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r43</Name>
+	<Name>Cloud Serpent r60</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -978,7 +978,6 @@
 		</If>
 		<If Condition="GetItemCount(74641) == 0" >
 			<CustomBehavior File="PerformTradeskillOn" TradeSkillId="185" TradeSkillItemId="74641" CastOnItemId="74866" NumOfTimes="5" />
-		</If>
 		<ElseIf Condition="GetItemCount(74641) == 1" >
 			<CustomBehavior File="PerformTradeskillOn" TradeSkillId="185" TradeSkillItemId="74641" CastOnItemId="74866" NumOfTimes="4" />
 		</ElseIf>
@@ -991,6 +990,7 @@
 		<ElseIf Condition="GetItemCount(74641) == 4" >
 			<CustomBehavior File="PerformTradeskillOn" TradeSkillId="185" TradeSkillItemId="74641" CastOnItemId="74866" NumOfTimes="1" />
 		</ElseIf>
+		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeskill()" />
 	</If>
