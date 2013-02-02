@@ -2,6 +2,16 @@ Patch Notes
 
 2/2/13
 
+r64
+Lost And Found
+-- Changed Kafa Press it interact with a gossip item, not just the NPC.
+Plugins
+-- Added Chinajade's CritterAchievement plugin to assist with Squirrels achievement.
+To All The Squirrels
+-- Added Gilded Moth
+-- Added Golden Civet
+-- Added Dancing Water Skimmer (unphased Vale only)
+
 r63
 Setting Sun Garrison
 -- Bloodied Skies - Will get into the cannon, or wait until we can now.
