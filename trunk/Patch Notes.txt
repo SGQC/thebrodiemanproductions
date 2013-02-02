@@ -2,6 +2,11 @@ Patch Notes
 
 2/1/13
 
+r61
+Cloud Serpent
+-- Bot will now fly to Cloud Serpent if you: (Dont have fishing daily, dont have it completed, AND can do it (525))
+-- Bot will now turn in to the Hatchling smarter if you have more than 1 quest for it.
+
 r60
 Cloud Serpent
 -- Feast for the Senses - Fixed issue where if you had 1 or more Fish Cakes already, it wouldn't cast.

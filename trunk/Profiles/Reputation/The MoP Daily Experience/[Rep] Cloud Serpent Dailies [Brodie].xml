@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r60</Name>
+	<Name>Cloud Serpent r61</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -481,9 +481,11 @@
 
 <!-- Jenova Longeye -->
 	<If Condition="((!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525)" >
+		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
 		<PickUp QuestName="Snack Time" QuestId="30146" GiverName="Jenova Longeye" GiverId="58413" />
 	</If>
 	<If Condition="((!HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 499)" >
+		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
 		<PickUp QuestName="A Feast for the Senses" QuestId="30149" GiverName="Jenova Longeye" GiverId="58413" />
 	</If>
 
@@ -1138,235 +1140,235 @@
 <!-- Tiny Treats -->
 	<If Condition="HasQuest(31710) &amp;&amp; IsQuestCompleted(31710)" >
 		<!--[Exalted Grown-Up][Blue] Azure Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Azure Hatchling" TurnInId="65724" />
 		</While>
 
 		<!--[Exalted Grown-Up][Green] Jade Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Jade Hatchling" TurnInId="65723" />
 		</While>
 
 		<!--[Exalted Grown-Up][Yellow] Golden Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Golden Hatchling" TurnInId="65679" />
 		</While>
 
 		<!--[Grown-Up][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Your Hatchling" TurnInId="65672" />
 		</While>
 
 		<!--[Grown-Up][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Your Hatchling" TurnInId="65673" />
 		</While>
 
 		<!--[Grown-Up][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Your Hatchling" TurnInId="65674" />
 		</While>
 			
 		<!--[Baby][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Your Hatchling" TurnInId="65669" />
 		</While>
 
 		<!--[Baby][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Your Hatchling" TurnInId="65670" />
 		</While>
 
 		<!--[Baby][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31710)" >
 			<TurnIn QuestName="Tiny Treats" QuestId="31710" TurnInName="Your Hatchling" TurnInId="65671" />
 		</While>
 	</If>
 <!-- Serpent's Scale -->
 	<If Condition="HasQuest(31708) &amp;&amp; IsQuestCompleted(31708)" >
 		<!--[Exalted Grown-Up][Blue] Azure Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Azure Hatchling" TurnInId="65724" />
 		</While>
 
 		<!--[Exalted Grown-Up][Green] Jade Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Jade Hatchling" TurnInId="65723" />
 		</While>
 
 		<!--[Exalted Grown-Up][Yellow] Golden Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Golden Hatchling" TurnInId="65679" />
 		</While>
 
 		<!--[Grown-Up][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Your Hatchling" TurnInId="65672" />
 		</While>
 
 		<!--[Grown-Up][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Your Hatchling" TurnInId="65673" />
 		</While>
 
 		<!--[Grown-Up][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Your Hatchling" TurnInId="65674" />
 		</While>
 			
 		<!--[Baby][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Your Hatchling" TurnInId="65669" />
 		</While>
 
 		<!--[Baby][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Your Hatchling" TurnInId="65670" />
 		</While>
 
 		<!--[Baby][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31708)" >
 			<TurnIn QuestName="Serpent's Scale" QuestId="31708" TurnInName="Your Hatchling" TurnInId="65671" />
 		</While>
 	</If>
 <!-- Sweet as Honey -->
 	<If Condition="HasQuest(30150) &amp;&amp; IsQuestCompleted(30150)" >
 		<!--[Exalted Grown-Up][Blue] Azure Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65724, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Azure Hatchling" TurnInId="65724" />
 		</While>
 
 		<!--[Exalted Grown-Up][Green] Jade Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65723, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Jade Hatchling" TurnInId="65723" />
 		</While>
 
 		<!--[Exalted Grown-Up][Yellow] Golden Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65679, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Golden Hatchling" TurnInId="65679" />
 		</While>
 
 		<!--[Grown-Up][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65672, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Your Hatchling" TurnInId="65672" />
 		</While>
 
 		<!--[Grown-Up][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65673, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Your Hatchling" TurnInId="65673" />
 		</While>
 
 		<!--[Grown-Up][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65674, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Your Hatchling" TurnInId="65674" />
 		</While>
 			
 		<!--[Baby][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65669, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Your Hatchling" TurnInId="65669" />
 		</While>
 
 		<!--[Baby][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65670, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Your Hatchling" TurnInId="65670" />
 		</While>
 
 		<!--[Baby][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;)" >
+		<While Condition="(HasQuestAvailable(65671, &quot;TurnIn&quot;)) &amp;&amp; HasQuest(30150)" >
 			<TurnIn QuestName="Sweet as Honey" QuestId="30150" TurnInName="Your Hatchling" TurnInId="65671" />
 		</While>
 	</If>
 <!-- Pooped (Tiny) -->
 	<If Condition="HasQuest(31704) &amp;&amp; IsQuestCompleted(31704)" >
 		<!--[Exalted Grown-Up][Blue] Azure Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Azure Hatchling" TurnInId="65724" />
 		</While>
 
 		<!--[Exalted Grown-Up][Green] Jade Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Jade Hatchling" TurnInId="65723" />
 		</While>
 
 		<!--[Exalted Grown-Up][Yellow] Golden Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Golden Hatchling" TurnInId="65679" />
 		</While>
 
 		<!--[Grown-Up][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Your Hatchling" TurnInId="65672" />
 		</While>
 
 		<!--[Grown-Up][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Your Hatchling" TurnInId="65673" />
 		</While>
 
 		<!--[Grown-Up][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Your Hatchling" TurnInId="65674" />
 		</While>
 			
 		<!--[Baby][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Your Hatchling" TurnInId="65669" />
 		</While>
 
 		<!--[Baby][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Your Hatchling" TurnInId="65670" />
 		</While>
 
 		<!--[Baby][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31704)" >
 			<TurnIn QuestName="Pooped" QuestId="31704" TurnInName="Your Hatchling" TurnInId="65671" />
 		</While>
 	</If>
 <!-- Pooped (Big) -->
 	<If Condition="HasQuest(31716) &amp;&amp; IsQuestCompleted(31716)" >
 		<!--[Exalted Grown-Up][Blue] Azure Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65724, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Azure Hatchling" TurnInId="65724" />
 		</While>
 
 		<!--[Exalted Grown-Up][Green] Jade Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65723, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Jade Hatchling" TurnInId="65723" />
 		</While>
 
 		<!--[Exalted Grown-Up][Yellow] Golden Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65679, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Golden Hatchling" TurnInId="65679" />
 		</While>
 
 		<!--[Grown-Up][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65672, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65672" />
 		</While>
 
 		<!--[Grown-Up][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65673, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65673" />
 		</While>
 
 		<!--[Grown-Up][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65674, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65674" />
 		</While>
 			
 		<!--[Baby][Blue] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65669, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65669" />
 		</While>
 
 		<!--[Baby][Green] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65670, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65670" />
 		</While>
 
 		<!--[Baby][Yellow] Your Hatchling Turnin -->
-		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;)" >
+		<While Condition="HasQuestAvailable(65671, &quot;TurnIn&quot;) &amp;&amp; HasQuest(31716)" >
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65671" />
 		</While>
 	</If>
