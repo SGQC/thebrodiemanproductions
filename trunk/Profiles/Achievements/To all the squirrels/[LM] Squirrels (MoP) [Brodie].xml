@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>To All The Squirrels in Pandaria r64</Name>
+	<Name>To All The Squirrels in Pandaria r65</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -49,8 +49,19 @@
 
 	<!-- Jade Forest -->
 		<!-- Coral Adder 4 -->
+		<If Condition="!IsAchievementCompleted(6350, 4)" >
+			<CustomBehavior File="FlyTo" X="-105.49" Y="-3040.11" Z="39.70" />
+			<CustomBehavior File="FlyTo" X="-306.39" Y="-3013.97" Z="21.57" />
+			<CustomBehavior File="FlyTo" X="-245.34" Y="-3097.98" Z="34.13" />
+			<CustomBehavior File="FlyTo" X="-268.74" Y="-2959.38" Z="28.28" />
+		</If>
 		<!-- Leopard Tree Frog 9 -->
-		<!-- Sifang Otter 16 -->
+		<If Condition="!IsAchievementCompleted(6350, 9)" >
+			<CustomBehavior File="FlyTo" X="-332.56" Y="-2891.14" Z="24.70" />
+			<CustomBehavior File="FlyTo" X="-431.72" Y="-2784.81" Z="36.03" />
+			<CustomBehavior File="FlyTo" X="-479.99" Y="-2601.90" Z="22.68" />
+			<CustomBehavior File="FlyTo" X="-460.83" Y="-2426.26" Z="30.40" />
+		</If>
 	<!-- Valley of the Four Winds -->
 		<!-- Sifang Otter 16 -->
 		<!-- Bandicoon 2 -->
