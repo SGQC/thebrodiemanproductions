@@ -2,6 +2,11 @@ Patch Notes
 
 2/2/13
 
+r65
+To All The Squirrels
+-- Added Coral Adder
+-- Added Leopard Tree Frog
+
 r64
 Lost And Found
 -- Changed Kafa Press it interact with a gossip item, not just the NPC.
