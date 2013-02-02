@@ -1,5 +1,13 @@
 Patch Notes
 
+2/2/13
+
+r62
+Tillers Farm Grinding Profiles
+-- Changed "How many soil plots do I have?" check to search for Gina's Vote V instead of VI, since you can farm after V.
+Quest Behaviors
+-- ThunderingSkies.cs - Code Cleanup
+
 2/1/13
 
 r61
