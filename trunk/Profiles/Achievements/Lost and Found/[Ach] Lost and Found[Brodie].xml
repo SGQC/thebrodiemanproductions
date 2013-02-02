@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r57</Name>
+	<Name>Lost and Found r64</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -220,7 +220,7 @@
 	<If Condition="!IsQuestCompleted(31304)">
 		<CustomBehavior File="FlyTo" X="2364.12" Y="2492.21" Z="683.89" />
 		<RunTo X="2411.62" Y="2627.94" Z="667.32" />
-		<CustomBehavior File="InteractWith" MobId="64227" CollectionDistance="200" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="64227" CollectionDistance="200" WaitForNpcs="false" GossipOptions="1" />
 	</If>
 
 <!-- Tablet of Ren Yun -->

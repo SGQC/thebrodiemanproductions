@@ -1,0 +1,94 @@
+<HBProfile>
+	<Name>To All The Squirrels in Pandaria r64</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>200</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder IgnoreCheckpoints="True" >
+
+<CustomBehavior File="Message" Text="Compiling Pets Already Loved..." LogColor="Green"  />
+
+	<While Condition="!IsAchievementCompleted(6350, 1) || !IsAchievementCompleted(6350, 2) ||
+			!IsAchievementCompleted(6350, 3) || !IsAchievementCompleted(6350, 4) ||
+			!IsAchievementCompleted(6350, 5) || !IsAchievementCompleted(6350, 6) ||
+			!IsAchievementCompleted(6350, 7) || !IsAchievementCompleted(6350, 8) ||
+			!IsAchievementCompleted(6350, 9) || !IsAchievementCompleted(6350, 10) ||
+			!IsAchievementCompleted(6350, 11) || !IsAchievementCompleted(6350, 12) ||
+			!IsAchievementCompleted(6350, 13) || !IsAchievementCompleted(6350, 14) ||
+			!IsAchievementCompleted(6350, 15) || !IsAchievementCompleted(6350, 16) ||
+			!IsAchievementCompleted(6350, 17)" >
+
+	<!-- Jade Forest -->
+		<!-- Coral Adder 4 -->
+		<!-- Leopard Tree Frog 9 -->
+		<!-- Sifang Otter 16 -->
+	<!-- Valley of the Four Winds -->
+		<!-- Sifang Otter 16 -->
+		<!-- Bandicoon 2 -->
+		<!-- Malayan Quillrat 11 -->
+		<!-- Marsh Fiddler 12 -->
+		<!-- Shrine Fly 15 -->
+	<!-- Krasarang Wilds -->
+		<!-- Amethyst Spiderling 1 -->
+		<!-- Luyu Moth 10 -->
+	<!-- Dread Wastes -->
+		<!-- Clouded Hedgehog 3 -->
+		<!-- Emperor Crab 6 -->
+		<!-- Resilient Roach 14 -->
+	<!-- Townlong Steppes -->
+		<!-- Mongoose 13 -->
+		<!-- Yakrat 17 -->
+	<!-- Vale of Eternal Blossoms -->
+		<!-- Dancing Water Skimmer 5, Gilded Moth 7 -->
+		<If Condition="!IsAchievementCompleted(6350, 5) || !IsAchievementCompleted(6350, 7)" >
+			<CustomBehavior File="FlyTo" X="1462.20" Y="674.42" Z="426.72" />
+			<CustomBehavior File="FlyTo" X="1387.16" Y="668.13" Z="426.38" />
+			<CustomBehavior File="FlyTo" X="1301.40" Y="643.75" Z="426.20" />
+			<CustomBehavior File="FlyTo" X="1208.34" Y="606.44" Z="423.15" />
+			<CustomBehavior File="FlyTo" X="1200.26" Y="472.03" Z="439.54" />
+			<CustomBehavior File="FlyTo" X="1156.21" Y="276.26" Z="490.41" />
+		</If>
+		<!-- Golden Civet 8 -->
+		<If Condition="!IsAchievementCompleted(6350, 8)" >
+			<CustomBehavior File="FlyTo" X="1156.21" Y="276.26" Z="490.41" />
+			<CustomBehavior File="FlyTo" X="1033.34" Y="408.85" Z="446.83" />
+			<CustomBehavior File="FlyTo" X="1004.85" Y="753.78" Z="414.79" />
+			<CustomBehavior File="FlyTo" X="1197.16" Y="865.84" Z="420.63" />
+			<CustomBehavior File="FlyTo" X="1360.42" Y="880.53" Z="442.02" />
+			<CustomBehavior File="FlyTo" X="1504.88" Y="730.99" Z="445.79" />
+		</If>
+	</While>
+
+<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Achievement Grind. Did you get it?!" />
+
+</QuestOrder>
+</HBProfile>
