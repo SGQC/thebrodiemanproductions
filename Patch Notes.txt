@@ -2,6 +2,10 @@ Patch Notes
 
 2/2/13
 
+r63
+Setting Sun Garrison
+-- Bloodied Skies - Will get into the cannon, or wait until we can now.
+
 r62
 Tillers Farm Grinding Profiles
 -- Changed "How many soil plots do I have?" check to search for Gina's Vote V instead of VI, since you can farm after V.
