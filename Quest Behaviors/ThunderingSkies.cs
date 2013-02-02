@@ -88,24 +88,13 @@ namespace Blastranaar
             var quest = StyxWoW.Me.QuestLog.GetQuestById((uint)QuestId);
             return quest == null || quest.IsCompleted;
         }
-        private bool IsObjectiveComplete(int objectiveId, uint questId)
-        {
-            if (Me.QuestLog.GetQuestById(questId) == null)
-            {
-                return false;
-            }
-            int returnVal = Lua.GetReturnVal<int>("return GetQuestLogIndexByID(" + questId + ")", 0);
-            return
-                Lua.GetReturnVal<bool>(
-                    string.Concat(new object[] { "return GetQuestLogLeaderBoard(", objectiveId, ",", returnVal, ")" }), 2);
-        }
 
         public Composite DoneYet
         {
             get
             {
                 return
-                    new Decorator(ret => IsObjectiveComplete(1, (uint)QuestId), new Action(delegate
+                    new Decorator(ret => IsQuestComplete(), new Action(delegate
                     {
                         TreeRoot.StatusText = "Finished!";
                         _isBehaviorDone = true;
@@ -121,7 +110,7 @@ namespace Blastranaar
             get
             {
                 return
-                    new Decorator(ret => !IsObjectiveComplete(1, (uint)QuestId), new Action(c =>
+                    new Decorator(ret => !IsQuestComplete(), new Action(c =>
                     {
 			if (Serpent[0].Location.Distance(Me.Location) > 25)
 			{
@@ -138,11 +127,9 @@ namespace Blastranaar
 				}
 
 			}
-                        			TreeRoot.StatusText = "Finished Pulling!";
-                        			_isBehaviorDone = true;
-                        			return RunStatus.Success;
-	
-
+                        TreeRoot.StatusText = "Finished Pulling!";
+                        _isBehaviorDone = true;
+                        return RunStatus.Success;
                     }));
 
             }

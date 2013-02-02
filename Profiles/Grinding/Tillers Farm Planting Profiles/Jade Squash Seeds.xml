@@ -186,7 +186,7 @@
 			<If Condition="GetItemCount(89328) &lt; 16" >
 				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482" />
 				<CustomBehavior File="ForcedDismount" />
-				<If Condition="IsQuestCompleted(31945)">
+				<If Condition="IsQuestCompleted(30257)">
 					<If Condition="IsQuestCompleted(30516)">
 						<If Condition="IsQuestCompleted(30524)">
 							<If Condition="IsQuestCompleted(30529)">
