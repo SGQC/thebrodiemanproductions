@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r46</Name>
+	<Name>The Tillers r66</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -670,9 +670,7 @@
 		<While Condition="HasQuest(30319) &amp;&amp; !IsQuestCompleted(30319)">
 			<CustomBehavior File="InteractWith" MobId="59532" GossipOptions="1" WaitTime="2000" X="-92.06" Y="1126.441" Z="171.5581" />
 			<While Condition="(Me.HasAura(114573) || Me.HasAura(114517))" >
-				<While Condition="HasQuest(30319) &amp;&amp; !IsQuestCompleted(30319)" >
-					<CustomBehavior File="InteractWith" MobId="59530" WaitTime="100" IgnoreCombat="True" X="-85.90" Y="1118.68" Z="171.39" />
-				</While>
+				<CustomBehavior File="InteractWith" MobId="59530" WaitTime="100" IgnoreCombat="True" WaitForNpcs="false" X="-85.90" Y="1118.68" Z="171.39" />
 			</While>	
 		</While>
 	</If>

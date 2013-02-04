@@ -1,5 +1,13 @@
 Patch Notes
 
+2/3/13
+
+r66
+The Tillers
+-- Pest Problems - Removed a redundant While loop. Fixed endless waiting for Marmots.
+Cloud Serpent
+-- Profession quests - removed some () to turn 2 clauses into 3, to attempt to battle trying to pick up quests already done.
+
 2/2/13
 
 r65
