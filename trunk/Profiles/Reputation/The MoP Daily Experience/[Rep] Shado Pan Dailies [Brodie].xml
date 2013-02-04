@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r50</Name>
+	<Name>Shado Pan Dailies r67</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -595,21 +595,23 @@
 		<CustomBehavior File="Message" Text="Starting Friends, Not Food" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31201" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="2491.74" Y="5949.21" Z="91.05" />
-		<If Condition="!IsObjectiveComplete(1,30201)" >
-			<CustomBehavior File="FlyTo" X="2510.26" Y="6041.46" Z="55.22" />
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="64461" GossipOptions="1" WaitForNpcs="false" CollectionDistance="100" WaitTime="1000" />
-		</If>
-		<If Condition="!IsObjectiveComplete(2,30201)" >
-			<CustomBehavior File="FlyTo" X="2381.62" Y="6078.68" Z="54.32" />
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="64460" GossipOptions="1" WaitForNpcs="false" CollectionDistance="100" WaitTime="1000" />
-		</If>
-		<If Condition="!IsObjectiveComplete(3,30201)" >
-			<CustomBehavior File="FlyTo" X="2336.98" Y="6065.93" Z="54.23" />
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="64459" GossipOptions="1" WaitForNpcs="false" CollectionDistance="100" WaitTime="1000" />
-		</If>
+		<While Condition="!IsQuestCompleted(31201)" >
+			<If Condition="!IsObjectiveComplete(1,30201)" >
+				<CustomBehavior File="FlyTo" X="2510.26" Y="6041.46" Z="55.22" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" MobId="64461" GossipOptions="1" WaitForNpcs="false" CollectionDistance="100" WaitTime="1000" />
+			</If>
+			<If Condition="!IsObjectiveComplete(2,30201)" >
+				<CustomBehavior File="FlyTo" X="2381.62" Y="6078.68" Z="54.32" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" MobId="64460" GossipOptions="1" WaitForNpcs="false" CollectionDistance="100" WaitTime="1000" />
+			</If>
+			<If Condition="!IsObjectiveComplete(3,30201)" >
+					<CustomBehavior File="FlyTo" X="2336.98" Y="6065.93" Z="54.23" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" MobId="64459" GossipOptions="1" WaitForNpcs="false" CollectionDistance="100" WaitTime="1000" />
+			</If>
+		</While>
 		<CustomBehavior File="FlyTo" X="2491.74" Y="5949.21" Z="91.05" />
 	</If>
 

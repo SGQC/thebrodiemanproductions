@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r56</Name>
+	<Name>Boss Fights r67</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -215,7 +215,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30227" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1145.507" Y="1529.947" Z="350.168" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Vicejaw" QuestId="30234" Type="KillMob" MobId="58769" KillCount="1" />
+		<CustomBehavior File="KillVicejaw" />
 	</If>
 
 <!-- Quid Pro Quo -->

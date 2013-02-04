@@ -1,5 +1,13 @@
 Patch Notes
 
+2/4/13
+
+r67
+Boss Fights
+-- Converted Vicejaw to use the included KillVicejaw QB
+Shado Pan
+-- Added 2nd redundancy to Friends, Not Food to check if complete after first fly-through
+
 2/3/13
 
 r66
