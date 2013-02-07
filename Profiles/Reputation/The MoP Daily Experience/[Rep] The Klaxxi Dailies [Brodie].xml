@@ -865,42 +865,42 @@
 				<CustomBehavior File="FlyTo" X="384.5976" Y="2385.874" Z="219.0938" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="213319" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 2nd spot -->
 				<CustomBehavior File="FlyTo" X="559.2505" Y="2572.864" Z="275.9264" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="213319" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 3rd spot, there are two spots -->
 				<CustomBehavior File="FlyTo" X="559.2505" Y="2572.864" Z="275.9264" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="213319" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 4th spot -->
 				<CustomBehavior File="FlyTo" X="629.1552" Y="2628.038" Z="287.5912" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="213319" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 5th spot -->
 				<CustomBehavior File="FlyTo" X="709.637" Y="2716.399" Z="295.0992" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="213319" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(31233)">
 		<!-- 6th spot -->
 				<CustomBehavior File="FlyTo" X="691.0659" Y="2524.741" Z="304.498" />
 				<CustomBehavior File="ForcedDismount"/>
 				<CustomBehavior File="InteractWith" MobId="63740" Range="5" CollectionDistance="3000" WaitTime="6000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="213319" Range="1" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="213319" ObjectType="GameObject" WaitTime="1000" NumOfTimes="3" CollectionDistance="15" WaitForNpcs="False" />
 			</If>
 		</While>
  	</If>
