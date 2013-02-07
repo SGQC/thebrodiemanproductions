@@ -1,5 +1,11 @@
 Patch Notes
 
+2/7/13
+
+r68
+The Klaxxi
+-- Removed range check from Sap Tapping for bowl on ground. Will now default to 4.2 yards (InteractWith Range default)
+
 2/4/13
 
 r67
