@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r63</Name>
+	<Name>Setting Sun Garrison r69</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -190,7 +190,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="MountVehOnly" VehicleMountId="65336" X="821.932" Y="2080.49" Z="316.099" />
-		<CustomBehavior File="EnemyattheGates" />
+		<CustomBehavior File="SpecificQuests\30264-VOEB-EnemyattheGates" />
 		<CustomBehavior File="WaitTimer" WaitTime="8000" />
 	</If>
 
@@ -248,7 +248,7 @@
 			<While Condition="!Me.IsOnTransport" >
 				<CustomBehavior File="InteractWith" Nav="CTM" MobId="64369" CollectionDistance="100" WaitForNpcs="false" />
 			</While>
-			<CustomBehavior File="MantidUnderFire2" />
+			<CustomBehavior File="SpecificQuests\30243-VOEB-MantidUnderFire" />
 		</While>
 		<CustomBehavior File="EjectVeh" />
 		<CustomBehavior File="CompleteLogQuest" QuestId="30243" />
@@ -264,7 +264,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Along the Serpent's Spine" QuestId="30244" Type="KillMob" MobId="63974" KillCount="10" />
 	</If>
-	<If Condition="(HasQuest(30244)) &amp;&amp; (IsQuestCompleted(30244))" >
+	<If Condition="(HasQuest(30244) &amp;&amp; IsQuestCompleted(30244))" >
 		<CustomBehavior File="CompleteLogQuest" QuestId="30244" />
 	</If>
 

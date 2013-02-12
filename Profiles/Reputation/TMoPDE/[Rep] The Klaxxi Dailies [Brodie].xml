@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r56</Name>
+	<Name>The Klaxxi r69</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -513,7 +513,7 @@
 		<RunTo X="144.6462" Y="3208.307" Z="214.7614" />
 		<CustomBehavior File="InteractWith" MobId="62151" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
-		<CustomBehavior File="DarkSkies" />
+		<CustomBehavior File="SpecificQuests\31216-DreadWastes-DarkSkies" />
 	</If>
 
 <!-- Rampage Against the Machine -->
@@ -524,7 +524,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="MountVehOnly" X="-59.69" Y="3421.45" Z="103.95" VehicleMountId="63765" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="RampageAgainstTheMachine" />
+		<CustomBehavior File="SpecificQuests\31808-DreadWastes-RampageAgainstTheMachine" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 
@@ -534,7 +534,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-41.11" Y="2667.56" Z="157.18" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="DebuggingTheTerrace" />
+		<CustomBehavior File="SpecificQuests\31237-DreadWastes-DebuggingTheTerrace" />
 	</If>
 
 <!-- Specimen Request -->

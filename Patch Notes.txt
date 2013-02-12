@@ -1,5 +1,26 @@
 Patch Notes
 
+2/12/13
+
+r69
+Dailies Path
+-- Changed because names were getting too long. Should fix breaking the 256 char limit.
+Quest Behaviors
+-- Several removed due to updates with HB versions.
+-- Pathing updated to match new layout of HB folders.
+The Klaxxi
+-- Quest Behavior path changes. Should now find them.
+Golden Lotus
+-- Changed Thundering Skies from Objective back to QB. QB should path better now.
+-- Quest Behavior path changes. Should now find them.
+Setting Sun Garrison
+-- Quest Behavior path changes. Should now find them.
+-- Minor code cleanup.
+Mistfall Village
+-- Quest Behavior path changes. Should now find them.
+The Tillers
+-- Quest Behavior path changes. Should now find them.
+
 2/7/13
 
 r68

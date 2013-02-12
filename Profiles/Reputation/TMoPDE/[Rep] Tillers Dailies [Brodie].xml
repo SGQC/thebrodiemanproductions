@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r66</Name>
+	<Name>The Tillers r69</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -998,37 +998,37 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!HasItem(80232)">
 			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="GiftForFung" SpellId="121733"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="121733"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="GiftForFung" SpellId="172"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="172"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="GiftForFung" SpellId="355"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="355"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.DeathKnight )">
-				<CustomBehavior File="GiftForFung" SpellId="49576"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="49576"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="GiftForFung" SpellId="8921"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="8921"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="GiftForFung" SpellId="3044"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="GiftForFung" SpellId="2136"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="GiftForFung" SpellId="62124"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="62124"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="GiftForFung" SpellId="589"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="589"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="GiftForFung" SpellId="403"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="403"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="GiftForFung" SpellId="115546"/>
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="115546"/>
 			</If>
 		</While>
 		<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
