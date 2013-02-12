@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r59</Name>
+	<Name>The Golden Lotus r69</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -361,7 +361,7 @@
 				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 			</If>
 		</While>
-
+<!--		<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" /> -->
 	</If>
 
 <!-- High Chance of Rain -->
@@ -398,43 +398,43 @@
 		<CustomBehavior File="UserSettings" QuestId="30310" LootMobs="true" PullDistance="35" />
 		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.926" Z="427.2217" />
 		<CustomBehavior File="ForcedDismount"/>
-<!--		<While Condition="!IsQuestCompleted(30310)">
+		<While Condition="!IsQuestCompleted(30310)">
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="ThunderingSkies" SpellId="121733"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="121733"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="ThunderingSkies" SpellId="172"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="172"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="ThunderingSkies" SpellId="355"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="355"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.DeathKnight )">
-				<CustomBehavior File="ThunderingSkies" SpellId="45477"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="45477"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="ThunderingSkies" SpellId="8921"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="8921"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="ThunderingSkies" SpellId="3044"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="ThunderingSkies" SpellId="2136"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="ThunderingSkies" SpellId="62124"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="62124"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="ThunderingSkies" SpellId="589"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="589"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="ThunderingSkies" SpellId="403"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="403"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="ThunderingSkies" SpellId="115546"/>
+				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="115546"/>
 			</If>
-		</While> -->
-		<Objective QuestName="Thundering Skies" QuestId="30310" Type="KillMob" MobId="59158" KillCount="3" />
+		</While>
+<!--		<Objective QuestName="Thundering Skies" QuestId="30310" Type="KillMob" MobId="59158" KillCount="3" /> -->
 	</If>
 
 <!-- Crumbling Behemoth -->

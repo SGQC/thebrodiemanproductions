@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r54</Name>
+	<Name>Mistfall Village r69</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -514,8 +514,8 @@
 		<CustomBehavior File="FlyTo" X="1026.936" Y="1649.619" Z="352.506" />
 
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="(HasQuest(30231)) &amp;&amp; (!IsQuestCompleted(30231))" >
-			<CustomBehavior File="Pompfruit" />
+		<While Condition="!IsQuestCompleted(30231)" >
+			<CustomBehavior File="SpecificQuests\30231-VOEB-PompfruitPickup" />
 		</While>
 	</If>
 
@@ -538,39 +538,39 @@
 		<CustomBehavior File="FlyTo" X="1016.52" Y="1652.84" Z="355.04" />
 
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30232) &amp;&amp; !IsQuestCompleted(30232)">
+		<While Condition="!IsQuestCompleted(30232)">
 			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="Silkfeather" SpellId="121733"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="121733"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="Silkfeather" SpellId="172"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="172"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="Silkfeather" SpellId="355"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="355"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.DeathKnight )">
-				<CustomBehavior File="Silkfeather" SpellId="49576"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="49576"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="Silkfeather" SpellId="8921"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="8921"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="Silkfeather" SpellId="3044"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="Silkfeather" SpellId="2136"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="Silkfeather" SpellId="62124"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="62124"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="Silkfeather" SpellId="589"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="589"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="Silkfeather" SpellId="403"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="403"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="Silkfeather" SpellId="115546"/>
+				<CustomBehavior File="SpecificQuests\30232-VOEB-RufflingSomeFeathers" SpellId="115546"/>
 			</If>
 		</While>
 	</If>
@@ -581,7 +581,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30238" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="793.1332" Y="1165.867" Z="483.4868" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="(HasQuest(30238) &amp;&amp; !IsQuestCompleted(30238))" >
+		<While Condition="!IsQuestCompleted(30238)" >
 			<CustomBehavior File="InteractWith" MobId="210419" IgnoreCombat="True" Range="5" QuestId="30238" ObjectType="Gameobject"/>
 		</While>
 	</If>
