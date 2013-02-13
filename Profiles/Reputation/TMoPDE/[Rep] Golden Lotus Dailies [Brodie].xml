@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r69</Name>
+	<Name>The Golden Lotus r70</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -317,7 +317,7 @@
 
 		<CustomBehavior File="Message" Text="Starting Laosy Scouting" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31758" LootMobs="true" PullDistance="1" />
-		<While Condition="!IsQuestCompleted(31758)" >
+<!--		<While Condition="!IsQuestCompleted(31758)" >
 
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<If Condition="!IsQuestCompleted(31758)" >
@@ -360,8 +360,13 @@
 				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
 				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 			</If>
+		</While> -->
+		<While Condition="!IsQuestCompleted(31758)" >
+
+			<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
 		</While>
-<!--		<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" /> -->
 	</If>
 
 <!-- High Chance of Rain -->

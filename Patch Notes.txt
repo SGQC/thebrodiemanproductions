@@ -2,6 +2,15 @@ Patch Notes
 
 2/12/13
 
+r70
+Quest Behaviors
+-- Spelling error - AGiftForFung fixed!
+-- Readded PerformTradeskillOn.cs
+Golden Lotus
+-- Laosy Scouting - Converted back to QB. Needs testing.
+Shado Pan
+-- Removed QuestId check from Enemy of my Enemy to attempt to fix "Behavior done" issue.
+
 r69
 Dailies Path
 -- Changed because names were getting too long. Should fix breaking the 256 char limit.
