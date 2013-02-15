@@ -1,5 +1,16 @@
 Patch Notes
 
+2/15/13
+
+r72
+Operation Shieldwall
+-- Removed CTM nav from Lion's Landing
+-- Code Cleanup
+-- Burn Out - Converted UseItem to UseItemOn
+-- It's Only Right - Converted InteractWith to CollectThings for hotspots
+-- Dis-Assembly Required - Remote is now the first thing to do (But only while on quest)
+-- Reworked navigation to Sully on the Skyfire for Quest TurnIns (since he moves)
+
 2/14/13
 
 r71
