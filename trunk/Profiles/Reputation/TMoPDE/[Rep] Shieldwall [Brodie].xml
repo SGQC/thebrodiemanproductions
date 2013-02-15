@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r46</Name>
+	<Name>Operation Shieldwall r72</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -231,27 +231,27 @@
 
 <!-- Admiral Taylor -->
 	<While Condition="HasQuestAvailable(67940)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67940" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67940" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Amber Kearnen -->
 	<While Condition="HasQuestAvailable(68908)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68908" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="68908" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Mishka -->
 	<While Condition="HasQuestAvailable(67630)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67630" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67630" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Marshal Troteman -->
 	<While Condition="HasQuestAvailable(67631)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67631" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67631" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -264,7 +264,7 @@
 
 			<CustomBehavior File="FlyTo" X="-1168.175" Y="-1231.153" Z="50.14" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" Nav="CTM" MobId="67656" WaitForNpcs="False" Range="1" X="-1168.175" Y="-1231.153" Z="29.14" />
+			<CustomBehavior File="InteractWith" MobId="67656" WaitForNpcs="False" Range="1" X="-1168.175" Y="-1231.153" Z="29.14" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="Me.Location.Distance(new WoWPoint(-2598.161, 2097.101, 152.4022)) &lt; 10" >
@@ -276,8 +276,8 @@
 
 	<If Condition="HasQuest(32452)" >
 
-		<CustomBehavior File="MyCTM" X="-2585.36" Y="2175.52" Z="148.45" />
-		<TurnIn Nav="CTM" QuestName="And Then There Were Goblins" QuestId="32452" TurnInName="Sky Admiral Rogers" TurnInId="67386" />
+		<CustomBehavior File="FlyTo" X="-2585.36" Y="2175.52" Z="148.45" />
+		<TurnIn QuestName="And Then There Were Goblins" QuestId="32452" TurnInName="Sky Admiral Rogers" TurnInId="67386" />
 	</If>
 
 	<If Condition="HasQuest(32451)" >
@@ -525,20 +525,20 @@
 	<If Condition="HasQuest(32154) &amp;&amp; !IsQuestCompleted(32154)">
 		<CustomBehavior File="Message" Text="Starting Burn Out" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32154" LootMobs="true" PullDistance="10" />
-		<While Condition="HasQuest(32154) &amp;&amp; !IsObjectiveComplete(1,32154)">
+		<While Condition="!IsObjectiveComplete(1,32154)">
 			<CustomBehavior File="FlyTo" X="-1971.61" Y="1754.69" Z="2.35" />
 			<CustomBehavior File="ForcedDismount" />
-			<UseItem ItemId="93187" QuestName="Burn Out" QuestId="32154" TargetID="68784" TargetType="Npc" X="-1967.314" Y="1753.146" Z="3.326429" />
+			<CustomBehavior File="UseItemOn" ItemId="93187" QuestId="32154" MobId="68784" NumOfTimes="1" X="-1967.314" Y="1753.146" Z="3.326429" />
 		</While>
-		<While Condition="HasQuest(32154) &amp;&amp; !IsObjectiveComplete(2,32154)">
+		<While Condition="!IsObjectiveComplete(2,32154)">
 			<CustomBehavior File="FlyTo" X="-1812.273" Y="1833.404" Z="1.368482" />
 			<CustomBehavior File="ForcedDismount" />
-			<UseItem ItemId="93187" QuestName="Burn Out" QuestId="32154" TargetID="68785" TargetType="Npc" X="-1818.101" Y="1827.342" Z="2.818" />
+			<CustomBehavior File="UseItemOn" ItemId="93187" QuestId="32154" MobId="68785" NumOfTimes="1" X="-1818.101" Y="1827.342" Z="2.818" />
 		</While>
-		<While Condition="HasQuest(32154) &amp;&amp; !IsObjectiveComplete(3,32154)">
+		<While Condition="!IsObjectiveComplete(3,32154)">
 			<CustomBehavior File="FlyTo" X="-1960.793" Y="2230.317" Z="2.926838" />
 			<CustomBehavior File="ForcedDismount" />
-			<UseItem ItemId="93187" QuestName="Burn Out" QuestId="32154" TargetID="68786" TargetType="Npc" X="-1954.476" Y="2231.957" Z="4.072323" />
+			<CustomBehavior File="UseItemOn" ItemId="93187" QuestId="32154" MobId="68786" NumOfTimes="1" X="-1954.476" Y="2231.957" Z="4.072323" />
 		</While>
 	</If>
 
@@ -623,16 +623,22 @@
 		<CustomBehavior File="UserSettings" QuestId="32156" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-1867.3" Y="1918.964" Z="2.67689" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(32156) &amp;&amp; !IsQuestCompleted(32156)">
-			<CustomBehavior File="InteractWith" MobId="68700" CollectionDistance="5000" />
-		</While>
+		<CustomBehavior File="CollectThings" MobId="68700" QuestId="32156" CollectUntil="QuestComplete" HuntingGroundRadius="30" NonCompeteDistance="5" >
+			<Hotspot X="-1883.60" Y="1958.292" Z="2.544477" />
+			<Hotspot X="-1888.82" Y="1903.356" Z="2.644783" />
+			<Hotspot X="-1895.91" Y="1854.111" Z="1.280843" />
+			<Hotspot X="-1888.48" Y="1788.171" Z="2.887948" />
+			<Hotspot X="-1857.13" Y="1822.657" Z="3.794867" />
+			<Hotspot X="-1840.47" Y="1882.109" Z="3.030959" />
+			<Hotspot X="-1801.90" Y="1929.369" Z="3.082297" />
+		</CustomBehavior>
 	</If>
 
 <!-- The Only Good Goblin... -->
 	<If Condition="HasQuest(32157) &amp;&amp; !IsQuestCompleted(32157)">
 		<CustomBehavior File="Message" Text="Starting The Only Good Goblin..." LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32157" LootMobs="true" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="-1867.3" Y="1918.964" Z="2.67689" />
+		<CustomBehavior File="FlyTo" X="-1867.3" Y="1918.96" Z="2.68" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Only Good Goblin..." QuestId="32157" Type="KillMob" MobId="67873" MobId2="67283" MobId3="67638" MobId4="67281" KillCount="10" />
 	</If>
@@ -643,7 +649,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32446" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2065.803" Y="2048.407" Z="25" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CombatUseItemOn" ItemId="93180" QuestId="32446" MobHpPercentLeft="70" MobId="67285" MaxRange="25" />
+		<CustomBehavior File="CombatUseItemOn" ItemId="93180" QuestId="32446" MobHpPercentLeft="100" MobId="67285" MaxRange="25" />
 		<Objective QuestName="Dis-Assembly Required" QuestId="32446" Type="CollectItem" ItemId="93179" CollectCount="6" />
 	</If>
 
@@ -771,12 +777,12 @@
 	</If>
 
 	<If Condition="HasQuest(32154) &amp;&amp; IsQuestCompleted(32154)" >
-		<CustomBehavior File="MyCTM" X="-2568.91" Y="2134.39" Z="149.58" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68166" WaitTime="100" />
 		<TurnIn QuestName="Burn Out" QuestId="32154" TurnInName="Sully" TurnInId="68166" />
 	</If>
 
 	<If Condition="HasQuest(32446) &amp;&amp; IsQuestCompleted(32446)" >
-		<CustomBehavior File="MyCTM" X="-2568.91" Y="2134.39" Z="149.58" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68166" WaitTime="100" />
 		<TurnIn QuestName="Dis-Assembly Required" QuestId="32446" TurnInName="Sully" TurnInId="68166" />
 	</If>
 
