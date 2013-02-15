@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r70</Name>
+	<Name>Shado Pan Dailies r71</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -304,6 +304,7 @@
 			(!HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)) ||
 			(!HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)) ||
 			(!HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)) ||
+			(!HasQuest(31061) &amp;&amp; IsQuestCompleted(31061)) ||
 			(!HasQuest(31062) &amp;&amp; IsQuestCompleted(31062)) ||
 			(!HasQuest(31117) &amp;&amp; IsQuestCompleted(31117)) ||
 			(!HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)) ||
@@ -337,7 +338,8 @@
 			!HasQuest(31049) &amp;&amp; !HasQuest(31116) &amp;&amp; !HasQuest(31117) &amp;&amp;
 			!HasQuest(31220) &amp;&amp; !HasQuest(31196) &amp;&amp; !HasQuest(31198) &amp;&amp;
 			!HasQuest(31199) &amp;&amp; !HasQuest(31197) &amp;&amp; !HasQuest(31200) &amp;&amp;
-			!HasQuest(31104) &amp;&amp; !HasQuest(31266) &amp;&amp; !HasQuest(30201)" >
+			!HasQuest(31104) &amp;&amp; !HasQuest(31266) &amp;&amp; !HasQuest(30201) &amp;&amp;
+			!HasQuest(31061)" >
 		<CustomBehavior File="Message" Text="Starting Shado Pan Dailies, moving to The Garrison." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="The Garrison" X="1853.202" Y="4261.375" Z="148.8664" />
 		<CustomBehavior File="ForcedDismount" />
@@ -1181,6 +1183,49 @@
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Target of Opportunity: Sra'thik Swarmlord" QuestId="31203" Type="KillMob" MobId="63693" KillCount="1" />
 	</If>
+
+<!-- Riding the Storm -->
+<!-- 	<If Condition="HasQuest(31061) &amp;&amp; !IsQuestCompleted(31061)">
+		<CustomBehavior File="Message" Text="Starting Riding the Storm" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="31061" LootMobs="false" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="3972.71" Y="5358.88" Z="210.88" />
+		<CustomBehavior File="ForcedDismount"/>
+		<While Condition="!IsQuestCompleted(31061)">
+			<If Condition="(Me.Class == WoWClass.Rogue)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="121733"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Warlock)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="172"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Warrior)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="355"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.DeathKnight )">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="45477"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Druid)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="8921"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Hunter)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="3044"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Mage)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="2136"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Paladin)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="62124"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Priest)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="589"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Shaman)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="403"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Monk)">
+				<CustomBehavior File="SpecificQuests\31061-TownlongSteppes-RidingTheStorm" SpellId="115546"/>
+			</If>
+		</While>
+	</If> -->
 
   	<If Condition="HasQuest(31062) &amp;&amp; IsQuestCompleted(31062)" >
 		<CustomBehavior File="FlyTo" X="1853.202" Y="4261.375" Z="148.8664" />

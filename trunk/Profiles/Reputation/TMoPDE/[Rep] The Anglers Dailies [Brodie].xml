@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r54</Name>
+	<Name>The Anglers Dailies r71</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -172,8 +172,13 @@
 	<While Condition="HasQuestAvailable(60673)" >
 		<CustomBehavior File="FlyTo" X="-1425.53" Y="-255.90" Z="0.50" />
 		<CustomBehavior File="InteractWith" MobId="60673" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+		<If Condition="HasQuestAvailable(60673)" >
+			<CustomBehavior File="InteractWith" MobId="60673" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+		</If>
 	</While>
 
 <!-- John Big Hook Marsock -->
@@ -499,16 +504,19 @@
 
   	<If Condition="HasQuest(31443) &amp;&amp; IsQuestCompleted(31443)" >
 		<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
+		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Flying Tiger Gourami" QuestId="31443" TurnInName="Nat Pagle" TurnInId="63721" />
 	</If>
 
   	<If Condition="HasQuest(31444) &amp;&amp; IsQuestCompleted(31444)" >
 		<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
+		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Spinefish Alpha" QuestId="31444" TurnInName="Nat Pagle" TurnInId="63721" />
 	</If>
 
   	<If Condition="HasQuest(31446) &amp;&amp; IsQuestCompleted(31446)" >
 		<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
+		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Mimic Octopus" QuestId="31446" TurnInName="Nat Pagle" TurnInId="63721" />
 	</If>
 
@@ -519,6 +527,7 @@
 			(HasQuest(30678) &amp;&amp; IsQuestCompleted(30678)) || 
 			(HasQuest(30586) &amp;&amp; IsQuestCompleted(30586)))" >
 
+		<CustomBehavior File="ForcedMount" />
 		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
 	</If>
 

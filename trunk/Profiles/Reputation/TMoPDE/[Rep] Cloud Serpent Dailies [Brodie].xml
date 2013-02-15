@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r66</Name>
+	<Name>Cloud Serpent r71</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -480,11 +480,11 @@
 	</While>
 
 <!-- Jenova Longeye -->
-	<If Condition="!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525" >
+	<If Condition="(!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525) &amp;&amp; HasQuestAvailable(58413)" >
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
 		<PickUp QuestName="Snack Time" QuestId="30146" GiverName="Jenova Longeye" GiverId="58413" />
 	</If>
-	<If Condition="!HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149) &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 499" >
+	<If Condition="(!HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149) &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 499) &amp;&amp; HasQuestAvailable(58413)" >
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
 		<PickUp QuestName="A Feast for the Senses" QuestId="30149" GiverName="Jenova Longeye" GiverId="58413" />
 	</If>

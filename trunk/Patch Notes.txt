@@ -1,5 +1,30 @@
 Patch Notes
 
+2/14/13
+
+r71
+Dominance Offensive
+-- Updated Blackspot
+-- Bug Off - Fixed landing zone. Updated Item use and area to do so.
+-- Added The Ruins of Ogudei
+-- Added Taking Advantage
+Golden Lotus
+-- Acts of Cruelty - MobId for target in Quest Override adjusted to match Marauders not GL Guards.
+-- Minor Code cleanup.
+The Klaxxi
+-- Corrected Aura check for Battle Hymn
+-- Corrected achievement check for paragons, checking NOT, should check HAS awakened.
+The Tillers
+-- Added item use to end of Tillers profile for Goodies From Nomi.
+The Anglers
+-- Fixed issue with quest pickup at Elder Fisherman Rassan.
+-- Added dismount commands to the rare fish turnins, to reach Nat Pagle
+-- Added ForcedMount call after rare fish to make sure we're still flying.
+Cloud Serpent
+-- Will no longer try to pick up quests from Jenova Longeye if she has none available.
+Shado Pan
+-- Riding the Storm added but not complete and is commented out right now.
+
 2/12/13
 
 r70

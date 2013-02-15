@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r53</Name>
+	<Name>Dominance Offensive r71</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -32,7 +32,7 @@
 		<Blackspot X="-1781.708" Y="2458.493" Z="25.41364" Radius="6" /> <!-- Large Brazier -->
 		<Blackspot X="-2018.286" Y="1707.244" Z="2.422059" Radius="30" />
 		<Blackspot X="-1940.081" Y="1719.98" Z="1.430176" Radius="15" />
-		<Blackspot X="-2060.387" Y="1910.161" Z="2.301984" Radius="4" />
+		<Blackspot X="-2060.387" Y="1910.161" Z="2.301984" Radius="4" Height="5" />
 		<Blackspot X="-2272.087" Y="2046.383" Z="16.77752" Radius="20" />
 		<Blackspot X="-2064.587" Y="1882.787" Z="2.106631" Radius="3" />
 		<Blackspot X="-2002.455" Y="1756.331" Z="6.199052" Radius="7" />
@@ -221,11 +221,15 @@
 			!HasQuest(32199) &amp;&amp; !HasQuest(32343) &amp;&amp; !HasQuest(32342) &amp;&amp;
 			!HasQuest(32345) &amp;&amp; !HasQuest(32120) &amp;&amp; !HasQuest(32237) &amp;&amp;
 			!HasQuest(32137) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32126) &amp;&amp;
-			!HasQuest(32123) &amp;&amp; !HasQuest(32128) &amp;&amp; !HasQuest(32127)" >
+			!HasQuest(32123) &amp;&amp; !HasQuest(32128) &amp;&amp; !HasQuest(32127) &amp;&amp;
+			!HasQuest(32141) &amp;&amp; !HasQuest(32197) &amp;&amp; !HasQuest(32221) &amp;&amp;
+			!HasQuest(32223) &amp;&amp; !HasQuest(32236) &amp;&amp; !HasQuest(32449) &amp;&amp;
+			!HasQuest(32118)" >
 		<CustomBehavior File="Message" Text="Flying to Domination Point." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1800.39" Y="2466.03" Z="24.58" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	</If>
 
 <!-- Blood Guard Gro'tash -->
 	<While Condition="HasQuestAvailable(67880)" >
@@ -248,15 +252,14 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
-	<If Condition="!HasQuest(32128) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32449) &amp;&amp; !HasQuest(32450) &amp;&amp;
+	<If Condition="!HasQuest(32128) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32449) &amp;&amp;
 			!HasQuest(32127) &amp;&amp; !HasQuest(32126) &amp;&amp; !HasQuest(32123) &amp;&amp;
 			!HasQuest(32222) &amp;&amp; !HasQuest(32214) &amp;&amp; !HasQuest(32136) &amp;&amp;
-			!HasQuest(32199) &amp;&amp; !HasQuest(32137) &amp;&amp; !HasQuest(32237)" >
+			!HasQuest(32199) &amp;&amp; !HasQuest(32137) &amp;&amp; !HasQuest(32237) &amp;&amp;
+			!HasQuest(32118) &amp;&amp; !HasQuest(32450)" >
 		<CustomBehavior File="FlyTo" X="-1875.92" Y="2328.38" Z="9.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-	</If>
-
 	</If>
 
 <!-- Bounty Board -->
@@ -288,7 +291,7 @@
 	</While>
 
 <!-- KICKERS -->
-	<If Condition="HasQuest(32450)" >
+	<If Condition="HasQuest(32450) || HasQuest(32449)" >
 
 		<CustomBehavior File="Message" Text="Starting Kicker Quest" LogColor="Green" />
 		<If Condition="Me.Location.Distance(new WoWPoint(-1819.04, 2471.87, 25.09)) &lt; 250" >
@@ -309,6 +312,25 @@
 
 		<CustomBehavior File="MyCTM" X="-1185.31" Y="-609.24" Z="23.77" />
 		<TurnIn Nav="CTM" QuestName="The Time Is Now" QuestId="32450" TurnInName="Shademaster Kiryn" TurnInId="67628" />
+	</If>
+
+	<If Condition="HasQuest(32449)" >
+
+		<CustomBehavior File="MyCTM" X="-1175.17" Y="-629.53" Z="24.11" />
+		<TurnIn Nav="CTM" QuestName="The Ruins of Ogudei" QuestId="32449" TurnInName="Belloc Brightblade" TurnInId="67847" />
+		<PickUp Nav="CTM" QuestName="Taking Advantage" QuestId="32118" GiverName="Belloc Brightblade" GiverId="67847" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="216491" ObjectType="GameObject" WaitForNpcs="False" X="-1172.48" Y="-624.09" Z="23.79" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<CustomBehavior File="MyCTM" X="-681.50" Y="-873.57" Z="-84.43" />
+		<TurnIn Nav="CTM" QuestName="Taking Advantage" QuestId="32118" TurnInName="Kaelis Sunsoar" TurnInId="68274" />
+	</If>
+
+	<If Condition="HasQuest(32118)" >
+		<CustomBehavior File="FlyTo" X="-1172.48" Y="-624.09" Z="23.79" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="216491" ObjectType="GameObject" WaitForNpcs="False" X="-1172.48" Y="-624.09" Z="23.79" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<CustomBehavior File="MyCTM" X="-681.50" Y="-873.57" Z="-84.43" />
+		<TurnIn Nav="CTM" QuestName="Taking Advantage" QuestId="32118" TurnInName="Kaelis Sunsoar" TurnInId="68274" />
 	</If>
 
 <!-- Shademaster Kiryn -->
@@ -415,6 +437,11 @@
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 		</While>
+
+		<!-- Bixy Buzzsaw -->
+		<If Condition="HasQuestAvailable(67554)" >
+			<PickUp QuestName="Bug Off" QuestId="32236" GiverName="Bixy Buzzsaw" GiverId="67554" />
+		</If>
 	</If>
 
 <!-- Work Order: Fuel -->
@@ -507,11 +534,17 @@
 	<If Condition="(HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236))" >
 		<CustomBehavior File="Message" Text="Starting Bug Off" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32236" LootMobs="true" PullDistance="10" />
-		<CustomBehavior File="FlyTo" X="-2058.73" Y="1996.58" Z="-5.43" />
+		<CustomBehavior File="FlyTo" X="-2035.62" Y="1904.40" Z="0.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32236)" >
-			<CustomBehavior File="UseItemOn" QuestId="32236" MobId="67759" ItemId="93026" NumOfTimes="1" CollectionDistance="1000" />
+			<CustomBehavior File="CombatUseItemOn" QuestId="32236" MobHpPercentLeft="100" MobId="67759" ItemId="93026" X="-2035.62" Y="1904.40" Z="0.44" />
 		</While>
+	</If>
+
+	<If Condition="(HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236))" >
+		<CustomBehavior File="FlyTo" X="-2035.62" Y="1904.40" Z="0.44" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Bug Off" QuestId="32236" TurnInName="Bixy Buzzsaw" TurnInId="67554" />
 	</If>
 
 <!-- Power Metal -->
@@ -879,18 +912,12 @@
 		</If>
 	</If>
 
-<!-- Enter the Cave -->
-	<If Condition="(HasQuest(32343) &amp;&amp; !IsQuestCompleted(32343) ||
-			HasQuest(32344) &amp;&amp; !IsQuestCompleted(32344) ||
-			HasQuest(32348) &amp;&amp; !IsQuestCompleted(32348) ||
-			HasQuest(32120) &amp;&amp; !IsQuestCompleted(32120) ||
-			HasQuest(32342) &amp;&amp; !IsQuestCompleted(32342) ||
-			HasQuest(32345) &amp;&amp; !IsQuestCompleted(32345))
-			&amp;&amp; Me.Location.Distance(new WoWPoint(-654.8351, -926.4075, -49.68764)) &gt; 350">
-		<CustomBehavior File="FlyTo" X="-653.0613" Y="-815.6729" Z="2.726312" />
-		<CustomBehavior File="ForcedDismount" />
-		<RunTo X="-623.3678" Y="-813.8405" Z="2.149846" />
-	</If>
+<!-- Kaelis Sunsoar -->
+	<While Condition="HasQuestAvailable(68274)" >
+		<CustomBehavior File="InteractWith" MobId="68274" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
 
 <!-- Ogudei's Lieutenants -->
 	<If Condition="HasQuest(32343) &amp;&amp; !IsQuestCompleted(32343)">

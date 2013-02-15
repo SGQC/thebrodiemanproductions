@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r69</Name>
+	<Name>The Klaxxi r71</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -394,27 +394,27 @@
 			!IsAchievementCompleted(7313, 7) || !IsAchievementCompleted(7313, 8) ||
 			!IsAchievementCompleted(7313, 9) || !IsAchievementCompleted(7313, 10)" >
 	<!-- Enhancements -->
-		<If Condition="(!IsAchievementCompleted(7313, 1) &amp;&amp; !IsAchievementCompleted(7312, 1))" >
+		<If Condition="(!IsAchievementCompleted(7313, 1) &amp;&amp; IsAchievementCompleted(7312, 1))" >
 			<If Condition="!Me.HasAura(131767)" >
 				<CustomBehavior File="InteractWith" MobId="62538" GossipOptions="1" WaitForNpcs="False" />
 			</If>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 6) &amp;&amp; !IsAchievementCompleted(7312, 2))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 6) &amp;&amp; IsAchievementCompleted(7312, 2))" >
 			<If Condition="!Me.HasAura(124529)" >
 				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="215872" GossipOptions="1" WaitForNpcs="False" />
 				<CustomBehavior File="InteractWith" MobId="63758" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 7) &amp;&amp; !IsAchievementCompleted(7312, 3))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 7) &amp;&amp; IsAchievementCompleted(7312, 3))" >
 			<If Condition="!Me.HasAura(127382)" >
 				<CustomBehavior File="InteractWith" MobId="65305" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 9) &amp;&amp; !IsAchievementCompleted(7312, 7))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 9) &amp;&amp; IsAchievementCompleted(7312, 7))" >
 			<If Condition="!Me.HasAura(127794)" >
 				<CustomBehavior File="InteractWith" MobId="63072" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 5) &amp;&amp; !IsAchievementCompleted(7312, 10))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 5) &amp;&amp; IsAchievementCompleted(7312, 10))" >
 			<If Condition="!Me.HasAura(127370)" >
 				<CustomBehavior File="InteractWith" MobId="62151" GossipOptions="1" WaitForNpcs="False" />
 			</If>
@@ -422,27 +422,27 @@
 		</If>
 
 	<!-- Augmentations -->
-		<If Condition="(!IsAchievementCompleted(7313, 2) &amp;&amp; !IsAchievementCompleted(7312, 4))" >
+		<If Condition="(!IsAchievementCompleted(7313, 2) &amp;&amp; IsAchievementCompleted(7312, 4))" >
 			<If Condition="!Me.HasAura(127351)" >
 				<CustomBehavior File="InteractWith" MobId="63758" GossipOptions="1" WaitForNpcs="False" />
 			</If>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 3) &amp;&amp; !IsAchievementCompleted(7312, 5))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 3) &amp;&amp; IsAchievementCompleted(7312, 5))" >
 			<If Condition="!Me.HasAura(127703)" >
 				<CustomBehavior File="InteractWith" MobId="62180" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 4) &amp;&amp; !IsAchievementCompleted(7312, 9))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 4) &amp;&amp; IsAchievementCompleted(7312, 9))" >
 			<If Condition="!Me.HasAura(127356)" >
 				<CustomBehavior File="InteractWith" MobId="63785" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 8) &amp;&amp; !IsAchievementCompleted(7312, 6))" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 8) &amp;&amp; IsAchievementCompleted(7312, 6))" >
 			<If Condition="!Me.HasAura(127375)" >
 				<CustomBehavior File="InteractWith" MobId="65303" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
-		<ElseIf Condition="(!IsAchievementCompleted(7313, 10) &amp;&amp; !IsAchievementCompleted(7312, 8))" >
-			<If Condition="!Me.HasAura(127219)" >
+		<ElseIf Condition="(!IsAchievementCompleted(7313, 10) &amp;&amp; IsAchievementCompleted(7312, 8))" >
+			<If Condition="!Me.HasAura(123219)" >
 				<CustomBehavior File="InteractWith" MobId="63071" GossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
