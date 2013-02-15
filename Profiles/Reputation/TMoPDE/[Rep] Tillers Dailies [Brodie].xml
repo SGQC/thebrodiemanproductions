@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r69</Name>
+	<Name>The Tillers r71</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1346,6 +1346,10 @@
 
 	<If Condition="HasQuest(31820) &amp;&amp; IsQuestCompleted(31820)" >
 		<TurnIn QuestName="A Present for Teacher" QuestId="31820" TurnInName="Nomi" TurnInId="64337" />
+	</If>
+
+	<If Condition="HasItem(90735)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90735)" WaitTime="1500" />
 	</If>
 
 	<While Condition="(GetItemCount(89112) &gt; 10)">

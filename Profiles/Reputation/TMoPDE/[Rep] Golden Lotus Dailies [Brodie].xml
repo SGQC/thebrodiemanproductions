@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r70</Name>
+	<Name>The Golden Lotus r71</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -123,7 +123,7 @@
 
 <!-- Acts of Cruelty -->
 	<Quest Id="31755" Name="Acts of Cruelty"> 
-		<Objective Type="KillMob" MobId="65810" KillCount="5">
+		<Objective Type="KillMob" MobId="58412" KillCount="5">
 			<Hotspots>
 				<Hotspot X="1537.772" Y="1275.769" Z="442.6665" />
 				<Hotspot X="1544.448" Y="1186.748" Z="443.1485" />
@@ -534,7 +534,7 @@
 	</If>
 
 <!-- Acts of Cruelty -->
-	<If Condition="((HasQuest(31755)) &amp;&amp; (!IsQuestCompleted(31755)))" >
+	<If Condition="(HasQuest(31755) &amp;&amp; !IsQuestCompleted(31755))" >
 
 		<CustomBehavior File="Message" Text="Starting Acts of Cruelty" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31755" LootMobs="true" PullDistance="15" />
