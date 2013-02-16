@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r71</Name>
+	<Name>The Klaxxi r73</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -36,21 +36,21 @@
 
 <!-- Specimen Request -->
    	<Quest Id="31508" Name="Specimen Request">
-       		<Objective Type="CollectItem" ItemId="87874" CollectCount="6">
-		<CollectFrom>
-			<Mob Name="Kypari Crawler" Id="65231" />
-		</CollectFrom>
-           	<Hotspots>
-            		<Hotspot X="-1143.80" Y="4166.77" Z="53.56" />
-			<Hotspot X="-1190.14" Y="4157.39" Z="56.84" />
-			<Hotspot X="-1263.235" Y="4129.526" Z="58.788" />
-           	</Hotspots>
-       		</Objective>
+       	<Objective Type="CollectItem" ItemId="87874" CollectCount="6">
+			<CollectFrom>
+				<Mob Name="Kypari Crawler" Id="65231" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-1143.80" Y="4166.77" Z="53.56" />
+				<Hotspot X="-1190.14" Y="4157.39" Z="56.84" />
+				<Hotspot X="-1263.235" Y="4129.526" Z="58.788" />
+			</Hotspots>
+       	</Objective>
    	</Quest>
 
 <!-- Brain Food -->
 	<Quest Id="31238" Name="Brain Food">
-	        <Objective Type="CollectItem" ItemId="85665" CollectCount="4">
+		<Objective Type="CollectItem" ItemId="85665" CollectCount="4">
 			<CollectFrom>
 				<Mob Name="Greatback Mushan" Id="62029" />
 			</CollectFrom>
@@ -66,7 +66,7 @@
 
 <!-- Kunchong Treats -->
 	<Quest Id="31024" Name="Kunchong Treats">
-	        <Objective Type="CollectItem" ItemId="82869" KillCount="4">
+		<Objective Type="CollectItem" ItemId="82869" KillCount="4">
 			<CollectFrom>
 				<Mob Name="Chillwater Turtle" Id="62160" />
 			</CollectFrom>
@@ -82,7 +82,7 @@
 
 <!-- A Little Brain Work -->
 	<Quest Id="31268" Name="A Little Brain Work">
-	        <Objective Type="CollectItem" ItemId="85885" KillCount="3">
+		<Objective Type="CollectItem" ItemId="85885" KillCount="3">
 			<CollectFrom>
 				<Mob Name="Ik'thik Amberstinger" Id="63728" />
 			</CollectFrom>
@@ -98,7 +98,7 @@
 
 <!-- The Fight Against Fear -->
 	<Quest Id="31270" Name="The Fight Against Fear">
-	        <Objective Type="KillMob" MobId="62162" KillCount="15">
+		<Objective Type="KillMob" MobId="62162" KillCount="15">
 			<Hotspots>
 				<Hotspot X="-391.7397" Y="3045.054" Z="189.3456" />
 				<Hotspot X="-523.003" Y="3102.001" Z="182.9502" />
@@ -111,7 +111,7 @@
 
 <!-- Dreadspinner Extermination -->
 	<Quest Id="31231" Name="Dreadspinner Extermination">
-	        <Objective Type="KillMob" MobId="61981" KillCount="8">
+		<Objective Type="KillMob" MobId="61981" KillCount="8">
 			<Hotspots>
 				<!-- Only bottom tier -->
 				<Hotspot X="408.7178" Y="2293.982" Z="237.9843" />
@@ -123,7 +123,7 @@
 
 <!-- Mistblade Destruction -->
 	<Quest Id="31267" Name="Mistblade Destruction">
-	        <Objective Type="KillMob" MobId="61970" KillCount="6">
+		<Objective Type="KillMob" MobId="61970" KillCount="6">
 			<Hotspots>
 				<Hotspot X="-826.9786" Y="2738.488" Z="133.7699" />
 				<Hotspot X="-859.6467" Y="2668.667" Z="130.49" />
@@ -141,7 +141,7 @@
 
 <!-- An Ancient Empire -->
 	<Quest Id="31232" Name="An Ancient Empire">
-	        <Objective Type="CollectItem" ItemId="85634" CollectCount="8">
+		<Objective Type="CollectItem" ItemId="85634" CollectCount="8">
 			<CollectFrom>
 				<GameObject Name="Gurthani Tablet" Id="213314" />
 			</CollectFrom>
@@ -155,7 +155,7 @@
 
 <!-- Putting an Eye Out -->
 	<Quest Id="31234" Name="Putting an Eye Out">
-	        <Objective Type="CollectItem" ItemId="85635" CollectCount="1">
+		<Objective Type="CollectItem" ItemId="85635" CollectCount="1">
 			<CollectFrom>
 				<Mob Name="Mire Beast" Id="63731" />
 			</CollectFrom>
@@ -169,7 +169,7 @@
 
 <!-- Bad Genes -->
 	<Quest Id="31271" Name="Bad Genes">
-	        <Objective Type="KillMob" MobId="63257" KillCount="3">
+		<Objective Type="KillMob" MobId="63257" KillCount="3">
 			<Hotspots>
 				<Hotspot X="-959.0073" Y="2815.508" Z="104.5094" />
 				<Hotspot X="-1058.553" Y="2810.459" Z="93.06223" />
@@ -177,7 +177,7 @@
 				<Hotspot X="-1168.414" Y="2728.548" Z="77.5346" />
 			</Hotspots>
 		</Objective>
-	        <Objective Type="KillMob" MobId="63176" KillCount="6">
+		<Objective Type="KillMob" MobId="63176" KillCount="6">
 			<Hotspots>
 				<Hotspot X="-959.0073" Y="2815.508" Z="104.5094" />
 				<Hotspot X="-1058.553" Y="2810.459" Z="93.06223" />
@@ -189,7 +189,7 @@
 
 <!-- Infection -->
 	<Quest Id="31272" Name="Infection">
-	        <Objective Type="KillMob" MobId="63726" KillCount="6">
+		<Objective Type="KillMob" MobId="63726" KillCount="6">
 			<Hotspots>
 				<Hotspot X="-959.0073" Y="2815.508" Z="104.5094" />
 				<Hotspot X="-1058.553" Y="2810.459" Z="93.06223" />
@@ -201,7 +201,7 @@
 
 <!-- Sonic Disruption -->
 	<Quest Id="31487" Name="Sonic Disruption">
-	        <Objective Type="KillMob" MobId="64717" KillCount="4">
+		<Objective Type="KillMob" MobId="64717" KillCount="4">
 			<Hotspots>
 				<Hotspot X="133.52" Y="3516.55" Z="233.87" />
 				<Hotspot X="239.88" Y="3512.89" Z="244.15" />
@@ -221,7 +221,7 @@
 
 <!-- The Scale-Lord -->
 	<Quest Id="31269" Name="The Scale-Lord">
-	        <Objective Type="KillMob" MobId="63179" KillCount="1">
+		<Objective Type="KillMob" MobId="63179" KillCount="1">
 			<Hotspots>
 				<Hotspot X="-933.80" Y="2581.90" Z="101.26" />
 			</Hotspots>
@@ -230,7 +230,7 @@
 
 <!-- Vess-Guard Duty -->
 	<Quest Id="31505" Name="Vess-Guard Duty">
-	        <Objective Type="KillMob" MobId="64979" KillCount="1">
+		<Objective Type="KillMob" MobId="64979" KillCount="1">
 			<Hotspots>
 				<Hotspot X="-1227.62" Y="4561.13" Z="129.15" />
 			</Hotspots>
@@ -239,7 +239,7 @@
 
 <!-- Shortcut to Ruin -->
 	<Quest Id="31503" Name="Shortcut to Ruin">
-	        <Objective Type="KillMob" MobId="64890" KillCount="1">
+		<Objective Type="KillMob" MobId="64890" KillCount="1">
 			<Hotspots>
 				<Hotspot X="310.5345" Y="4060.702" Z="253.0492" />
 			</Hotspots>
@@ -248,7 +248,7 @@
 
 <!-- Wing Clip -->
 	<Quest Id="31502" Name="Wing Clip">
-	        <Objective Type="CollectItem" ItemId="87401" CollectCount="24">
+		<Objective Type="CollectItem" ItemId="87401" CollectCount="24">
 			<CollectFrom>
 				<Mob Name="Shek'zeer Needler" Id="64714" />
 			</CollectFrom>
@@ -262,7 +262,7 @@
 
 <!-- Culling the Swarm -->
 	<Quest Id="31109" Name="Culling the Swarm">
-	        <Objective Type="KillMob" MobId="62563" KillCount="40">
+		<Objective Type="KillMob" MobId="62563" KillCount="40">
 			<Hotspots>
 				<Hotspot X="310.5345" Y="4060.702" Z="253.0492" />
 				<Hotspot X="367.60" Y="4097.22" Z="248.50" />
@@ -273,7 +273,7 @@
 
 <!-- Meltdown -->
 	<Quest Id="31507" Name="Meltdown">
-	        <Objective Type="KillMob" MobId="64982" KillCount="6">
+		<Objective Type="KillMob" MobId="64982" KillCount="6">
 			<Hotspots>
 				<Hotspot X="-1419.12" Y="4918.8" Z="29.57" />
 				<Hotspot X="-1293.054" Y="4930.099" Z="20.542" />
@@ -284,49 +284,35 @@
 
 <!-- Ordnance Disposal -->
 	<Quest Id="31504" Name="Ordnance Disposal">
-	        <Objective Type="CollectItem" ItemId="214341" CollectCount="8">
-		<CollectFrom>
-			<GameObject Name="Pheromone Mine" Id="214341" />
-		</CollectFrom>
-		<Hotspots>
-			<Hotspot X="117.7218" Y="3590.625" Z="233.62" />
-			<Hotspot X="130.3713" Y="3542.942" Z="233.6735" />
-			<Hotspot X="186.3374" Y="3509.302" Z="243.0377" />
-			<Hotspot X="240.1888" Y="3479.064" Z="243.509" />
-			<Hotspot X="253.3184" Y="3539.905" Z="243.4481" />
-		</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Shackles of Manipulation -->
-	<Quest Id="31506" Name="Shackles of Manipulation">
-	        <Objective Type="CollectItem" ItemId="87813" CollectCount="6">
-		<CollectFrom>
-			<Mob Name="Thought-Bound Miner" Id="64970" />
-		</CollectFrom>
-		<Hotspots>
-			<Hotspot X="-1752.77" Y="4557.33" Z="32.45" />
-			<Hotspot X="-1785.14" Y="4575.39" Z="33.49" />
-			<Hotspot X="-1733.94" Y="4627.21" Z="61.97" />
-		</Hotspots>
+		<Objective Type="CollectItem" ItemId="214341" CollectCount="8">
+			<CollectFrom>
+				<GameObject Name="Pheromone Mine" Id="214341" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="117.7218" Y="3590.625" Z="233.62" />
+				<Hotspot X="130.3713" Y="3542.942" Z="233.6735" />
+				<Hotspot X="186.3374" Y="3509.302" Z="243.0377" />
+				<Hotspot X="240.1888" Y="3479.064" Z="243.509" />
+				<Hotspot X="253.3184" Y="3539.905" Z="243.4481" />
+			</Hotspots>
 		</Objective>
 	</Quest>
 
 <!-- Eradicating the Zan'thik -->
 	<Quest Id="31111" Name="Eradicating the Zan'thik">
-	        <Objective Type="KillMob" MobId="64971" KillCount="6">
-		<Hotspots>
-			<Hotspot X="-1752.77" Y="4557.33" Z="32.45" />
-			<Hotspot X="-1785.14" Y="4575.39" Z="33.49" />
-			<Hotspot X="-1733.94" Y="4627.21" Z="61.97" />
-		</Hotspots>
+		<Objective Type="KillMob" MobId="64971" KillCount="6">
+			<Hotspots>
+				<Hotspot X="-1752.77" Y="4557.33" Z="32.45" />
+				<Hotspot X="-1785.14" Y="4575.39" Z="33.49" />
+				<Hotspot X="-1733.94" Y="4627.21" Z="61.97" />
+			</Hotspots>
 		</Objective>
-	        <Objective Type="KillMob" MobId="64973" KillCount="6">
-		<Hotspots>
-			<Hotspot X="-1752.77" Y="4557.33" Z="32.45" />
-			<Hotspot X="-1785.14" Y="4575.39" Z="33.49" />
-			<Hotspot X="-1733.94" Y="4627.21" Z="61.97" />
-		</Hotspots>
+		<Objective Type="KillMob" MobId="64973" KillCount="6">
+			<Hotspots>
+				<Hotspot X="-1752.77" Y="4557.33" Z="32.45" />
+				<Hotspot X="-1785.14" Y="4575.39" Z="33.49" />
+				<Hotspot X="-1733.94" Y="4627.21" Z="61.97" />
+			</Hotspots>
 		</Objective>
 	</Quest>
 

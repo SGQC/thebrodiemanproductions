@@ -169,6 +169,14 @@ namespace AzeniusHelper2
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 64717 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
             }
         }
+		
+		public WoWUnit Amberhusk
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 64982 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
         public List<WoWUnit> PandarenSpirit
         {
@@ -202,7 +210,6 @@ namespace AzeniusHelper2
             }
         }
 
-
         public WoWUnit Behemoth
         {
             get
@@ -219,7 +226,6 @@ namespace AzeniusHelper2
             }
         }
 
-
         public WoWUnit Cracklefang
         {
             get
@@ -227,7 +233,6 @@ namespace AzeniusHelper2
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 58768 && u.IsAlive).FirstOrDefault();
             }
         }
-
 
         public List<WoWUnit> Sydow
         {
@@ -297,9 +302,7 @@ namespace AzeniusHelper2
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 61502 || u.Entry == 61508 || u.Entry == 61509 && u.Distance < 50 && !u.IsDead).OrderBy(u =>
-
-u.Distance).ToList();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 61502 || u.Entry == 61508 || u.Entry == 61509 && u.Distance < 50 && !u.IsDead).OrderBy(u => u.Distance).ToList();
             }
         }
 
@@ -327,7 +330,6 @@ u.Distance).ToList();
             return Me.QuestLog.GetQuestById(questId).IsCompleted;
         }
 
-
         public bool QuestFailed(uint questId)
         {
             return Me.QuestLog.GetQuestById(questId).IsFailed;
@@ -336,7 +338,6 @@ u.Distance).ToList();
         public bool ItemOnCooldown(uint ItemId)
         {
             return Lua.GetReturnVal<bool>("GetItemCooldown(" + ItemId + ")", 0);
-
         }
 
         public void UseQuestItem(uint ItemId)
@@ -378,14 +379,16 @@ u.Distance).ToList();
                 return;
             ObjectManager.Update();
 
-		//#region [Operation Shieldwall]
+			#region [Operation Shieldwall]
 
-		//#region Jungle Shredder
-		//if (IsOnQuest(32446) && (JungleShredder != null))
-		//{
-		//	UseIfNotOnCooldown(93180); //Re-Configured Remote
-		//}
-		//#endregion
+			#region Jungle Shredder
+			if (IsOnQuest(32446))
+			{
+				if (Me.Combat && JungleShredder.Distance2D <= 10 && JungleShredder != null)
+					UseIfNotOnCooldown(93180); //Re-Configured Remote
+			}
+			#endregion
+			#endregion
 
             #region [Golden Lotus]
 
@@ -450,14 +453,12 @@ u.Distance).ToList();
                 {
                     BarryDurex.QuestHelper.AvoidEnemyCast(Behemoth, 80, 15);
                 }
-
             }
             #endregion
 
             #region Vicejaw
             if (IsOnQuest(30234)) //TODO QuestBehavior (BarryDurex)
             {
-
                 if (Vicejaw != null && Vicejaw.IsCasting && !Me.IsBehind(Vicejaw))
                 {
                     Thread.Sleep(2000);
@@ -466,7 +467,6 @@ u.Distance).ToList();
                     Thread.Sleep(2000);
                     WoWMovement.MoveStop();
                 }
-
             }
             #endregion
 
@@ -481,9 +481,9 @@ u.Distance).ToList();
             #region http://www.wowhead.com/quest=30304 - todo
             if (IsOnQuest(30304))
             {
-                if (StatueAttack != null)
+                if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
                     StatueAttack.Interact();
-                if (StatueFall != null)
+                if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
                     StatueFall.Interact();
             }
             #endregion
@@ -491,9 +491,9 @@ u.Distance).ToList();
             #region http://www.wowhead.com/quest=30299 - todo
             if (IsOnQuest(30299))
             {
-                if (StatueAttack != null)
+                if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
                     StatueAttack.Interact();
-                if (StatueFall != null)
+                if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
                     StatueFall.Interact();
             }
             #endregion
@@ -501,7 +501,6 @@ u.Distance).ToList();
             #region http://www.wowhead.com/quest=30482 - toDo
             if (IsOnQuest(30482))
             {
-
                 if (Sydow != null && Sydow[0].CastingSpellId == 126347)
                 {
                     //Lua.DoString("StrafeLeftStart()");
@@ -509,7 +508,6 @@ u.Distance).ToList();
                     Thread.Sleep(1000);
                     WoWMovement.MoveStop();
                 }
-
             }
             #endregion
 
@@ -536,7 +534,6 @@ u.Distance).ToList();
             #region http://www.wowhead.com/quest=30249 - todo
             if (IsOnQuest(30249))
             {
-
                 if (Krichon != null && Krichon[0].IsCasting && !Me.IsBehind(Krichon[0]))
                 {
                     //Lua.DoString("StrafeLeftStart()");
@@ -544,7 +541,6 @@ u.Distance).ToList();
                     Thread.Sleep(1000);
                     WoWMovement.MoveStop();
                 }
-
             }
             #endregion
 
@@ -552,7 +548,6 @@ u.Distance).ToList();
             #region http://www.wowhead.com/quest=31394 - Allianz
             if (IsOnQuest(31394))
             {
-
                 if (SpiritofViolence != null && SpiritofViolence[0].IsCasting && !Me.IsBehind(SpiritofViolence[0]))
                 {
                     //Lua.DoString("StrafeLeftStart()");
@@ -576,14 +571,12 @@ u.Distance).ToList();
                     Thread.Sleep(1000);
                     WoWMovement.MoveStop();
                 }
-
             }
             #endregion
 
             #region http://www.wowhead.com/quest=31395 - Horde
             if (IsOnQuest(31395))
             {
-
                 if (SpiritofViolence != null && SpiritofViolence[0].IsCasting && !Me.IsBehind(SpiritofViolence[0]))
                 {
                     //Lua.DoString("StrafeLeftStart()");
@@ -607,7 +600,6 @@ u.Distance).ToList();
                     Thread.Sleep(1000);
                     WoWMovement.MoveStop();
                 }
-
             }
             #endregion
 
@@ -639,7 +631,6 @@ u.Distance).ToList();
                         Thread.Sleep(1000);
                     }
                 }
-
             }
             #endregion
 
@@ -650,6 +641,13 @@ u.Distance).ToList();
                 if (Me.Combat && DreadKunchong.Distance2D <= 15 && DreadKunchong.IsCasting && DreadKunchong.CastingSpellId == 128022)
                     BarryDurex.QuestHelper.AvoidEnemyCast(DreadKunchong, 80, 15);
             }
+			
+			// http://www.wowhead.com/quest=31507
+			//if (IsOnQuest(31507))
+			//{
+			//	if (Me.Combat && Amberhusk.Distance2D <= 10 && Amberhusk != null)
+			//		UseIfNotOnCooldown(87841);	
+			//}
             #endregion
         }
     }

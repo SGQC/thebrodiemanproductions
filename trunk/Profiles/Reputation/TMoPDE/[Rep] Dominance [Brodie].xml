@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r71</Name>
+	<Name>Dominance Offensive r73</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -57,22 +57,22 @@
 
 <!-- Death on Two Legs -->
    	<Quest Id="32123" Name="Death on Two Legs">
-       		<Objective Type="KillMob" MobId="67354" MobId2="67425" MobId3="67913" KillCount="10">
-           		<Hotspots>
+		<Objective Type="KillMob" MobId="67354" MobId2="67425" MobId3="67913" KillCount="10">
+			<Hotspots>
 				<Hotspot X="-2205.11" Y="2423.12" Z="2.37" />
 				<Hotspot X="-2226.45" Y="2373.67" Z="3.19" />
 				<Hotspot X="-2256.07" Y="2312.30" Z="2.98" />
-           		</Hotspots>
-       		</Objective>
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Hero Killer -->
    	<Quest Id="32135" Name="Hero Killer">
-       		<Objective Type="KillMob" MobId="67636"  KillCount="1">
-           		<Hotspots>
+		<Objective Type="KillMob" MobId="67636"  KillCount="1">
+			<Hotspots>
 				<Hotspot X="-943.44" Y="-873.70" Z="1.14" />
-           		</Hotspots>
-       		</Objective>
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Worker Harassment -->
@@ -698,33 +698,10 @@
 	<If Condition="HasQuest(32126) &amp;&amp; !IsQuestCompleted(32126)">
 		<CustomBehavior File="Message" Text="Starting Tear It Up" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32126" LootMobs="true" PullDistance="5" />
-		<CustomBehavior File="FlyTo" X="-2205.108" Y="2423.12" Z="2.368305" />
+		<CustomBehavior File="FlyTo" X="-2227.53" Y="2369.53" Z="3.52" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32126)" >
-			<If Condition="!IsQuestCompleted(32126)" >
-				<CustomBehavior File="MyCTM" X="-2205.108" Y="2423.12" Z="2.368305" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32126" MobId="67639" NumOfTimes="3" CollectionDistance="50" WaitForNpcs="false" />
-			<If Condition="!IsQuestCompleted(32126)" >
-				<CustomBehavior File="MyCTM" X="-2226.448" Y="2373.665" Z="3.18669" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32126" MobId="67639" NumOfTimes="3" CollectionDistance="50" WaitForNpcs="false" />
-			<If Condition="!IsQuestCompleted(32126)" >
-				<CustomBehavior File="MyCTM" X="-2256.07" Y="2312.296" Z="2.978494" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32126" MobId="67639" NumOfTimes="3" CollectionDistance="50" WaitForNpcs="false" />
-			<If Condition="!IsQuestCompleted(32126)" >
-				<CustomBehavior File="MyCTM" X="-2228.339" Y="2330.106" Z="3.674721" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32126" MobId="67639" NumOfTimes="3" CollectionDistance="50" WaitForNpcs="false" />
-			<If Condition="!IsQuestCompleted(32126)" >
-				<CustomBehavior File="MyCTM" X="-2232.115" Y="2367.212" Z="3.409373" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32126" MobId="67639" NumOfTimes="3" CollectionDistance="50" WaitForNpcs="false" />
-			<If Condition="!IsQuestCompleted(32126)" >
-				<CustomBehavior File="MyCTM" X="-2202.646" Y="2391.807" Z="2.316576" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32126" MobId="67639" NumOfTimes="3" CollectionDistance="50" WaitForNpcs="false" />
+			<CustomBehavior File="InteractWith" QuestId="32126" MobId="67639" CollectionDistance="1000" WaitForNpcs="false" X="-2227.53" Y="2369.53" Z="3.52" />
 		</While>
 	</If>
 
