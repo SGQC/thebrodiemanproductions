@@ -1,5 +1,38 @@
 Patch Notes
 
+2/16/13
+
+r73
+Golden Lotus
+-- Code Cleanup/Tidyup
+-- Laosy Scouting - won't start from Pagoda, added flight note
+-- High Chance of Rain - won't wait endlessly on one of the staves
+-- The Eternal Vigil - changes to number of kills needed and who to kill
+Ruins of Guo-Lai
+-- Runes in the Ruins/Carved in Stone - Reduced pull distance to try and make faster
+Operation Shieldwall
+-- Converting CTM to FlyTo/RunTo
+-- Added check for portal. If not there, will buy mats (if needed)
+-- Code Cleanup
+-- Don't Lose Your Head - Removed flight commands, will no longer stand still waiting for combat drop.
+-- Added Warlord Bloodhilt to the Avoid list, so you don't go looking for him.
+-- Dis-Assembly Required - Removed CombatUseItemOn call for remotes, plugin should handle now.
+Dominance Offensive
+-- Code Cleanup
+-- Tear It Up - Converted to wide area interaction with pathing
+Pandaria Dailies Plugin
+-- Changes to Interaction with Mogu Statues, should not attempt during combat (needs testing)
+-- Added Re-configured Remote usage, should be automatic now (if you have the quest only)
+The Anglers
+-- Snapclaw - Fixed hotspots pointing to...god knows where. Should go after Snapclaw no matter what.
+-- Code Cleanup
+The Klaxxi
+-- Code Cleanup
+-- Shackles of Manipulation - Removed Overrides, bot operates much more efficiently here now.
+White Tiger Temple
+-- Code Cleanup
+-- Added additional flight commands to Round 4 fights to get in.
+
 2/15/13
 
 r72

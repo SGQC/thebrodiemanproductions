@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r71</Name>
+	<Name>The Anglers Dailies r73</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -75,13 +75,7 @@
 			<Mob Name="Snapclaw" Id="60401" />
 		</CollectFrom>
            	<Hotspots>
-            		<Hotspot X="-1301.34" Y="142.37" Z="16.15" />
-            		<Hotspot X="-1233.72" Y="178.74" Z="17.02" />
-            		<Hotspot X="-1172.42" Y="34.873" Z="12.85" />
-            		<Hotspot X="-1248.10" Y="8.2248" Z="14.58" />
-            		<Hotspot X="-1245.13" Y="-34.61" Z="10.90" />
-            		<Hotspot X="-1209.39" Y="-90.14" Z="11.69" />
-            		<Hotspot X="-1113.63" Y="-69.08" Z="16.55" />
+            		<Hotspot X="-1307.36" Y="-514.03" Z="-69.62" />
            	</Hotspots>
        		</Objective>
    	</Quest>
@@ -287,37 +281,27 @@
 
 <!-- Fishing for a Bruising -->
 	<If Condition="HasQuest(30588) &amp;&amp; !IsQuestCompleted(30588)" >
-
 		<CustomBehavior File="Message" Text="Starting Fishing for a Bruising" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30588" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1412.673" Y="10.40203" Z="0.6291502" />
-
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Fishing for a Bruising" QuestId="30588" Type="KillMob" MobId="59714" KillCount="8" />
-
-
+		<Objective QuestName="Fishing for a Bruising" QuestId="30588" Type="KillMob" MobId="59714" KillCount="8" />
 	</If>
 
 <!-- Viseclaw Soup -->
 	<If Condition="HasQuest(30701) &amp;&amp; !IsQuestCompleted(30701)" >
-
 		<CustomBehavior File="Message" Text="Starting Viseclaw Soup" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30701" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1397.166" Y="144.7482" Z="3.580587" />
-
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Viseclaw Soup" QuestId="30701" Type="CollectItem" ItemId="80832" CollectCount="16" />
-
-
+		<Objective QuestName="Viseclaw Soup" QuestId="30701" Type="CollectItem" ItemId="80832" CollectCount="16" />
 	</If>
 
 <!-- Snapclaw -->
 	<If Condition="HasQuest(30700) &amp;&amp; !IsQuestCompleted(30700)" >
-
 		<CustomBehavior File="Message" Text="Starting Snapclaw" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30700" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1306.801" Y="-380.5321" Z="0.1" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="MyCTM" X="-1311.473" Y="-380.6592" Z="-92.616" />
 		<CustomBehavior File="MyCTM" X="-1308.503" Y="-455.9226" Z="-81.81419" />
@@ -326,22 +310,16 @@
 		<CustomBehavior File="MyCTM" X="-1308.519" Y="-488.3546" Z="-71.68121" />
 		<CustomBehavior File="MyCTM" X="-1308.503" Y="-455.9226" Z="-81.81419" />
 		<CustomBehavior File="MyCTM" X="-1311.473" Y="-380.6592" Z="-92.616" />
-		<CustomBehavior File="MyCTM" X="-1306.801" Y="-380.5321" Z="0.1" />
-
-
+		<CustomBehavior File="MyCTM" X="-1306.801" Y="-380.5321" Z="0.1" />
 	</If>
 
 <!-- Bright Bait -->
 	<If Condition="HasQuest(30754) &amp;&amp; !IsQuestCompleted(30754)" >
-
 		<CustomBehavior File="Message" Text="Starting Bright Bait" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30754" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1253.988" Y="195.6424" Z="16.13" />
-
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Bright Bait" QuestId="30754" Type="CollectItem" ItemId="81116" CollectCount="7" />
-
-
+		<Objective QuestName="Bright Bait" QuestId="30754" Type="CollectItem" ItemId="81116" CollectCount="7" />
 	</If>
 
 <!-- Jagged Abalone -->
@@ -351,7 +329,6 @@
 		<CustomBehavior File="FlyTo" X="-1353.003" Y="-342.6745" Z="-3.762463" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="HasQuest(30586) &amp;&amp; !IsQuestCompleted(30586)" >
-
 			<CustomBehavior File="MyCTM" X="-1347.27" Y="-332.99" Z="0.1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			<CustomBehavior File="InteractWith" Nav="CTM" ObjectType="GameObject" QuestId="30586" MobId="211118" CollectionDistance="10000" IgnoreMobsInBlackspots="true" />
@@ -363,39 +340,27 @@
 
 <!-- Like Bombing Fish In A Barrel -->
 	<If Condition="HasQuest(30678) &amp;&amp; !IsQuestCompleted(30678)" >
-
 		<CustomBehavior File="Message" Text="Starting Like Bombing Fish In A Barrel" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30678" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-1582.22" Y="135.23" Z="1.71" />
-
 		<CustomBehavior File="ForcedDismount" />
-
 		<While Condition="HasQuest(30678) &amp;&amp; !IsQuestCompleted(30678)" >
-
 			<CustomBehavior File="MyCTM" X="-1582.22" Y="135.23" Z="1.71" />
 			<CustomBehavior File="UseItemOn" Nav="CTM" ItemId="80599" MobState="Alive" MobId="60278" Range="15" NumOfTimes="1" WaitTime="2000" />
-		</While>
-
-
+		</While>
 	</If>
 
 <!-- Armored Carp -->
 	<If Condition="HasQuest(30613) &amp;&amp; !IsQuestCompleted(30613)" >
-
 		<CustomBehavior File="Message" Text="Starting Armored Carp" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30613" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-1631.022" Y="-282.085" Z="0.1" />
-
 		<CustomBehavior File="ForcedDismount" />
-
 		<While Condition="!IsQuestCompleted(30613)" >
-
 			<CustomBehavior File="MyCTM" X="-1631.022" Y="-282.085" Z="0.1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			<CustomBehavior File="UseItemOn" Nav="CTM" ItemId="80403" MobState="Alive" MobId="59936" Range="5"/>
-		</While>
-
-
+		</While>
 	</If>
 
 <!-- Huff n Puff -->
@@ -424,7 +389,7 @@
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
         		<CustomBehavior File="MrFishIt" QuestId="30598" CollectItemId="80310" PoolId="211169" MoveToPool="true" />
 		</If>
-        </If>
+	</If>
 
 <!-- Quest Turn ins -->
 
@@ -526,7 +491,6 @@
 			(HasQuest(30700) &amp;&amp; IsQuestCompleted(30700)) ||
 			(HasQuest(30678) &amp;&amp; IsQuestCompleted(30678)) || 
 			(HasQuest(30586) &amp;&amp; IsQuestCompleted(30586)))" >
-
 		<CustomBehavior File="ForcedMount" />
 		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
 	</If>

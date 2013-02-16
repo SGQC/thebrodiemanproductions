@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r72</Name>
+	<Name>Operation Shieldwall r73</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -24,6 +24,7 @@
 	</Vendors>
   
 	<AvoidMobs>
+		<Mob Name="Warlord Bloodhilt" Entry="67461" />
 	</AvoidMobs>
    
 	<Blackspots>
@@ -80,14 +81,14 @@
 <!-- Under Pressure -->
    	<Quest Id="32144" Name="Under Pressure">
        		<Objective Type="CollectItem" ItemId="216150" CollectCount="8">
-		<CollectFrom>
-			<GameObject Name="Horde Supply Crate" Id="216150" />
-		</CollectFrom>
+			<CollectFrom>
+				<GameObject Name="Horde Supply Crate" Id="216150" />
+			</CollectFrom>
            	<Hotspots>
-            		<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
-			<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
-			<Hotspot X="-1920.47" Y="2431.099" Z="6.482244" />
-			<Hotspot X="-1870.331" Y="2388.72" Z="9.218648" />
+            	<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
+				<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
+				<Hotspot X="-1920.47" Y="2431.099" Z="6.482244" />
+				<Hotspot X="-1870.331" Y="2388.72" Z="9.218648" />
            	</Hotspots>
        		</Objective>
    	</Quest>
@@ -96,10 +97,10 @@
    	<Quest Id="32142" Name="We Will Rock You">
        		<Objective Type="KillMob" MobId="67357" KillCount="10">
            	<Hotspots>
-            		<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
-			<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
-			<Hotspot X="-1920.47" Y="2431.099" Z="6.482244" />
-			<Hotspot X="-1870.331" Y="2388.72" Z="9.218648" />
+            	<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
+				<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
+				<Hotspot X="-1920.47" Y="2431.099" Z="6.482244" />
+				<Hotspot X="-1870.331" Y="2388.72" Z="9.218648" />
            	</Hotspots>
        		</Objective>
    	</Quest>
@@ -258,14 +259,30 @@
 
 <!-- KICKERS -->
 	<If Condition="HasQuest(32452) || HasQuest(32451)" >
-
 		<CustomBehavior File="Message" Text="Starting Kicker Quest" LogColor="Green" />
 		<If Condition="Me.Location.Distance(new WoWPoint(-1165.488, -1230.731, 28.93953)) &lt; 250" >
-
-			<CustomBehavior File="FlyTo" X="-1168.175" Y="-1231.153" Z="50.14" />
+			<CustomBehavior File="FlyTo" X="-1164.93" Y="-1229.95" Z="28.72" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="67656" WaitForNpcs="False" Range="1" X="-1168.175" Y="-1231.153" Z="29.14" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 67656 &amp;&amp; u.Distance &lt;= 30))" >
+				<CustomBehavior File="InteractWith" MobId="67656" WaitForNpcs="False" Range="3" />
+			<ElseIf Condition="HasItem(92432)" >
+				<RunTo X="-1169.07" Y="-1230.92" Z="29.18" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92432)" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="InteractWith" MobId="67656" WaitForNpcs="False" Range="3" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</ElseIf>
+			<ElseIf Condition="GetItemCount(91877) &gt;= 5" >
+				<CustomBehavior File="FlyTo" X="-1150.71" Y="-1245.89" Z="28.52" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" MobId="67881" BuyItemId="92432" BuyItemCount="1" X="-1158.77" Y="-1248.90" Z="28.51" />
+				<RunTo X="-1169.07" Y="-1230.92" Z="29.18" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92432)" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="InteractWith" MobId="67656" WaitForNpcs="False" Range="3" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</ElseIf>
+			</If>
 		</If>
 		<If Condition="Me.Location.Distance(new WoWPoint(-2598.161, 2097.101, 152.4022)) &lt; 10" >
 			<CustomBehavior File="MyCTM" X="-2594.216" Y="2123.227" Z="148.4623" />
@@ -275,15 +292,13 @@
 	</If>
 
 	<If Condition="HasQuest(32452)" >
-
 		<CustomBehavior File="FlyTo" X="-2585.36" Y="2175.52" Z="148.45" />
 		<TurnIn QuestName="And Then There Were Goblins" QuestId="32452" TurnInName="Sky Admiral Rogers" TurnInId="67386" />
 	</If>
 
 	<If Condition="HasQuest(32451)" >
-
-		<CustomBehavior File="MyCTM" X="-2585.36" Y="2175.52" Z="148.45" />
-		<TurnIn Nav="CTM" QuestName="Send A Message" QuestId="32451" TurnInName="Sky Admiral Rogers" TurnInId="67386" />
+		<CustomBehavior File="FlyTo" X="-2585.36" Y="2175.52" Z="148.45" />
+		<TurnIn QuestName="Send A Message" QuestId="32451" TurnInName="Sky Admiral Rogers" TurnInId="67386" />
 	</If>
 
 <!-- KICKERS 2 -->
@@ -546,22 +561,22 @@
 	<If Condition="HasQuest(32143) &amp;&amp; !IsQuestCompleted(32143)">
 		<CustomBehavior File="Message" Text="Starting A Kind of Magic" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32143" LootMobs="true" PullDistance="10" />
-		<While Condition="HasQuest(32143) &amp;&amp; !IsObjectiveComplete(1,32143)">
+		<While Condition="!IsObjectiveComplete(1,32143)">
 			<CustomBehavior File="FlyTo" X="-2238.243" Y="2402.571" Z="0.89485" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="67544" QuestId="32143" />
 		</While>
-		<While Condition="HasQuest(32143) &amp;&amp; !IsObjectiveComplete(2,32143)">
+		<While Condition="!IsObjectiveComplete(2,32143)">
 			<CustomBehavior File="FlyTo" X="-2013.359" Y="2436.496" Z="4.253854" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="67546" QuestId="32143" />
 		</While>
-		<While Condition="HasQuest(32143) &amp;&amp; !IsObjectiveComplete(3,32143)">
+		<While Condition="!IsObjectiveComplete(3,32143)">
 			<CustomBehavior File="FlyTo" X="-1878.873" Y="2354.065" Z="11.29493" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="67547" QuestId="32143" />
 		</While>
-		<If Condition="HasQuest(32143) &amp;&amp; IsQuestCompleted(32143)" >
+		<If Condition="IsQuestCompleted(32143)" >
 			<CustomBehavior File="CompleteLogQuest" QuestId="32143" />
 		</If>
 	</If>
@@ -570,21 +585,11 @@
 	<If Condition="HasQuest(32145) &amp;&amp; !IsQuestCompleted(32145)">
 		<CustomBehavior File="Message" Text="Starting Don't Lose Your Head" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32145" LootMobs="true" PullDistance="15" />
-		<If Condition="HasQuest(32145) &amp;&amp; !IsObjectiveComplete(1,32145)">
-			<CustomBehavior File="FlyTo" X="-1920.976" Y="2434.208" Z="6.820686" />
-			<CustomBehavior File="ForcedDismount" />
-			<Objective QuestName="Don't Lose Your Head" QuestId="32145" Type="KillMob" MobId="67435" KillCount="1" />
-		</If>
-		<If Condition="HasQuest(32145) &amp;&amp; !IsObjectiveComplete(2,32145)">
-			<CustomBehavior File="FlyTo" X="-1915.166" Y="2331.618" Z="8.242616" />
-			<CustomBehavior File="ForcedDismount" />
-			<Objective QuestName="Don't Lose Your Head" QuestId="32145" Type="KillMob" MobId="67429" KillCount="1" />
-		</If>
-		<If Condition="HasQuest(32145) &amp;&amp; !IsObjectiveComplete(3,32145)">
-			<CustomBehavior File="FlyTo" X="-1870.155" Y="2323.137" Z="9.479446" />
-			<CustomBehavior File="ForcedDismount" />
-			<Objective QuestName="Don't Lose Your Head" QuestId="32145" Type="KillMob" MobId="67427" KillCount="1" />
-		</If>
+		<CustomBehavior File="FlyTo" X="-1919.89" Y="2399.75" Z="6.48" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Don't Lose Your Head" QuestId="32145" Type="KillMob" MobId="67435" KillCount="1" />
+		<Objective QuestName="Don't Lose Your Head" QuestId="32145" Type="KillMob" MobId="67429" KillCount="1" />
+		<Objective QuestName="Don't Lose Your Head" QuestId="32145" Type="KillMob" MobId="67427" KillCount="1" />
 	</If>
 
 <!-- Under Pressure -->
@@ -593,8 +598,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2177.679" Y="2549.835" Z="7.886249" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(32144) &amp;&amp; !IsQuestCompleted(32144)" >
-
+		<While Condition="!IsQuestCompleted(32144)" >
 			<CustomBehavior File="InteractWith" MobId="216150" ObjectType="GameObject" WaitTime="1000" CollectionDistance="50" WaitForNpcs="False" />
 		</While>
 	</If>
@@ -649,7 +653,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32446" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2065.803" Y="2048.407" Z="25" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CombatUseItemOn" ItemId="93180" QuestId="32446" MobHpPercentLeft="100" MobId="67285" MaxRange="25" />
+		<!-- <CustomBehavior File="CombatUseItemOn" ItemId="93180" QuestId="32446" MobHpPercentLeft="100" MobId="67285" MaxRange="25" /> -->
 		<Objective QuestName="Dis-Assembly Required" QuestId="32446" Type="CollectItem" ItemId="93179" CollectCount="6" />
 	</If>
 

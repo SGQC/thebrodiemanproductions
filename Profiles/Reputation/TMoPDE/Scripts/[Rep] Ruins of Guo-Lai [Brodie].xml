@@ -272,11 +272,11 @@
 			(HasQuest(30481) &amp;&amp; !IsQuestCompleted(30481))">
 		<If Condition="HasQuest(30206)" >
 			<CustomBehavior File="Message" Text="Starting Runes in the Ruins" LogColor="Green"  />
-			<CustomBehavior File="UserSettings" QuestId="30206" LootMobs="true" PullDistance="10" />
+			<CustomBehavior File="UserSettings" QuestId="30206" LootMobs="true" PullDistance="5" />
 		</If>
 		<If Condition="HasQuest(30481)" >
 			<CustomBehavior File="Message" Text="Starting Carved in Stone" LogColor="Green"  />
-			<CustomBehavior File="UserSettings" QuestId="30481" LootMobs="true" PullDistance="10" />
+			<CustomBehavior File="UserSettings" QuestId="30481" LootMobs="true" PullDistance="5" />
 		</If>
 		<CustomBehavior File="FlyTo" X="1426.948" Y="1688.124" Z="344.2366" />
 		<CustomBehavior File="ForcedDismount"/>
