@@ -1,5 +1,16 @@
 Patch Notes
 
+2/17/13
+
+r74
+Lost and Found
+-- Added Cache of Pilfered Goods
+-- Added Staff of the Hidden Master
+-- Added Equipment Locker
+-- Added Hozen Warrior Spear
+-- Added Sturdy Yaungol Spear
+-- Added Sprite's Cloth Chest
+
 2/16/13
 
 r73
