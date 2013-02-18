@@ -2,6 +2,10 @@ Patch Notes
 
 2/17/13
 
+r78
+Lost and Found
+-- Updated While loop to include all 28 rare loot drops
+
 r77
 Niuzao Temple
 -- Version number update only
