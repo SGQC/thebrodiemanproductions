@@ -2,6 +2,14 @@ Patch Notes
 
 2/17/13
 
+r77
+Niuzao Temple
+-- Version number update only
+Lost and Found
+-- Added Malik's Stalwart Spear
+-- Added Ancient Jinyu Staff
+-- Added Ancient Pandaren Mining Pick (exterior only)
+
 r76
 Niuzao Temple
 -- Paying Tribute - Increased Hotspot locations
