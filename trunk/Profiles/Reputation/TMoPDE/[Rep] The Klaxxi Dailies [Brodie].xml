@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r73</Name>
+	<Name>The Klaxxi r75</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -664,7 +664,6 @@
 		<CustomBehavior File="UserSettings" QuestId="31487" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="190.5358" Y="3534.385" Z="243.5785" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CombatUseItemOn" ItemId="87394" QuestId="31487" MobId="64717" MobHasAuraId="128554" MaxRange="10" />
 		<Objective QuestName="Sonic Disruption" QuestId="31487" Type="KillMob" MobId="64717" KillCount="4" />
 		<Objective QuestName="Sonic Disruption" QuestId="31487" Type="KillMob" MobId="64720" KillCount="6" />
 	</If>

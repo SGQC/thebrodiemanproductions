@@ -2,6 +2,31 @@ Patch Notes
 
 2/17/13
 
+r75
+Operation Shieldwall
+-- Hero Killer - Reduced pull distance to reduce chance of wandering down the beach killing at random
+-- Resource Gathering - Converted from InteractWith to Objective
+-- Attack! Move! - Fixed HB Message name
+-- Set all Lion's Landing NPCs to "Don't wait til they're there", to avoid despawned/phased npc issues.
+-- Removal of Blackspots due to mesh updates. Will redo if needed.
+-- Added small wait timer after portal usage.
+-- Added small wait timer before portal item usage.
+Dominance Offensive
+-- Removal of Blackspots due to mesh updates. Will redo if needed.
+-- Code Cleanup.
+-- Added portal use, portal item use, and portal item purchase support
+-- MyCTM -> RunTo/FlyTo changes.
+-- Fixed Quest check to not fly back to town too early, or if stopped midway.
+Pandaria Dailies Plugin
+-- Added Sonic Disruption item support
+The Klaxxi
+-- Removed Forced item use for Sonic Disruption
+Niuzao Temple
+-- Code Cleanup
+-- A Blade is a Blade - Added 2nd object to use to get items
+-- A Blade is a Blade - Added Hotspot support to first floor only (avoid crowds)
+-- Paying Tribute - Added Hotspot support to first floor only (avoid crowds)
+
 r74
 Lost and Found
 -- Added Cache of Pilfered Goods
