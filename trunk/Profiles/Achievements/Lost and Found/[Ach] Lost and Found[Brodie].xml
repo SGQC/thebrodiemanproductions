@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r77</Name>
+	<Name>Lost and Found r78</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -43,7 +43,10 @@
 			!IsQuestCompleted(31417) || !IsQuestCompleted(31403) || !IsQuestCompleted(31425) ||
 			!IsQuestCompleted(31436) || !IsQuestCompleted(31431) || !IsQuestCompleted(31434) ||
 			!IsQuestCompleted(31437) || !IsQuestCompleted(31435) || !IsQuestCompleted(31429) ||
-			!IsQuestCompleted(31304)" >
+			!IsQuestCompleted(31304) || !IsQuestCompleted(31399) || !IsQuestCompleted(31402) ||
+			!IsQuestCompleted(31406) || !IsQuestCompleted(31407) || !IsQuestCompleted(31410) ||
+			!IsQuestCompleted(31413) || !IsQuestCompleted(31412) || !IsQuestCompleted(31421) ||
+			!IsQuestCompleted(31430)" >
 
 <!-- Jade Forest -->
 
