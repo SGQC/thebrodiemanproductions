@@ -306,16 +306,6 @@ namespace AzeniusHelper2
             }
         }
 
-        //public List<WoWUnit> DreadKunchong
-        // {
-        //   get
-        //   {
-        //      return ObjectManager.GetObjectsOfType<WoWUnit>()
-        //                        .Where(u => u.Entry == 64717 && !u.IsDead)
-        //                       .OrderBy(u => u.Distance).ToList();
-        //  }
-        //  }
-
         #endregion
 
         #region Some Quest Helper Functions
@@ -636,6 +626,11 @@ namespace AzeniusHelper2
 
             #region [Klaxxi]
             // http://www.wowhead.com/quest=31487
+			if (IsOnQuest(31487))
+			{
+				if (Me.Combat && DreadKunchong.Distance2D <= 10 && DreadKunchong != null)
+					UseIfNotOnCooldown(87394); //Sonic Disruption Fork
+			}
             if (DreadKunchong != null)
             {
                 if (Me.Combat && DreadKunchong.Distance2D <= 15 && DreadKunchong.IsCasting && DreadKunchong.CastingSpellId == 128022)

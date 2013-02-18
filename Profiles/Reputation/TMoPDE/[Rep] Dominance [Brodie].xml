@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r73</Name>
+	<Name>Dominance Offensive r75</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -27,30 +27,6 @@
 	</AvoidMobs>
    
 	<Blackspots>
-		<Blackspot X="-1876.213" Y="1916.132" Z="5.37" Radius="3" /> <!-- A big pipe -->
-		<Blackspot X="-1952.306" Y="2333.733" Z="8.146486" Radius="10" /> <!-- Don't go in here -->
-		<Blackspot X="-1781.708" Y="2458.493" Z="25.41364" Radius="6" /> <!-- Large Brazier -->
-		<Blackspot X="-2018.286" Y="1707.244" Z="2.422059" Radius="30" />
-		<Blackspot X="-1940.081" Y="1719.98" Z="1.430176" Radius="15" />
-		<Blackspot X="-2060.387" Y="1910.161" Z="2.301984" Radius="4" Height="5" />
-		<Blackspot X="-2272.087" Y="2046.383" Z="16.77752" Radius="20" />
-		<Blackspot X="-2064.587" Y="1882.787" Z="2.106631" Radius="3" />
-		<Blackspot X="-2002.455" Y="1756.331" Z="6.199052" Radius="7" />
-		<Blackspot X="-2025.688" Y="1796.932" Z="1.259144" Radius="7" />
-		<Blackspot X="-2044.099" Y="1725.936" Z="-1.061515" Radius="4" />
-		<Blackspot X="-1876.907" Y="1846.525" Z="3.269044" Radius="6" />
-		<Blackspot X="-1878.636" Y="1833.401" Z="2.540323" Radius="6" />
-		<Blackspot X="-1911.972" Y="1821.618" Z="3.128579" Radius="3" />
-		<Blackspot X="-1866.745" Y="1835.317" Z="3.492005" Radius="3" />
-		<Blackspot X="-1841.878" Y="1831.863" Z="2.098845" Radius="4" />
-		<Blackspot X="-1156.45" Y="-1097.687" Z="4.74" Radius="7" />
-		<Blackspot X="-1998.568" Y="1757.436" Z="5.123919" Radius="2" />
-		<Blackspot X="-1037.456" Y="-1165.328" Z="21.41401" Radius="10" />
-		<Blackspot X="-1070.933" Y="-1184.963" Z="11.51922" Radius="5" />
-		<Blackspot X="-831.7863" Y="-1066.384" Z="18.8855" Radius="5" />
-		<Blackspot X="-840.877" Y="-1058.433" Z="20.84611" Radius="5" />
-		<Blackspot X="-845.2792" Y="-1068.068" Z="20.6443" Radius="20" />
-		<Blackspot X="-857.407" Y="-1012.432" Z="15.00312" Radius="5" />
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -77,73 +53,73 @@
 
 <!-- Worker Harassment -->
    	<Quest Id="32132" Name="Worker Harassment">
-       		<Objective Type="KillMob" MobId="67423"  KillCount="30">
-           		<Hotspots>
+		<Objective Type="KillMob" MobId="67423"  KillCount="30">
+			<Hotspots>
 				<Hotspot X="-843.04" Y="-1018.12" Z="14.93" />
 				<Hotspot X="-805.61" Y="-970.17" Z="15.61" />
 				<Hotspot X="-775.84" Y="-1005.23" Z="23.68" />
 				<Hotspot X="-806.27" Y="-943.06" Z="15.52" />
 				<Hotspot X="-770.04" Y="-847.69" Z="13.22" />
-           		</Hotspots>
-       		</Objective>
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Wanted: Chief Engineer Cogwrench -->
    	<Quest Id="32222" Name="Wanted: Chief Engineer Cogwrench">
-       		<Objective Type="KillMob" MobId="68012"  KillCount="1">
-           		<Hotspots>
+		<Objective Type="KillMob" MobId="68012"  KillCount="1">
+			<Hotspots>
 				<Hotspot X="-1707.38" Y="1932.07" Z="13.00" />
-           		</Hotspots>
-       		</Objective>
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- All Dead, All Dead -->
    	<Quest Id="32127" Name="All Dead, All Dead">
-       		<Objective Type="KillMob" MobId="67626" KillCount="1">
-           		<Hotspots>
+		<Objective Type="KillMob" MobId="67626" KillCount="1">
+			<Hotspots>
 				<Hotspot X="-2479.12" Y="2348.02" Z="7.52" />
-           		</Hotspots>
-       		</Objective>
-       		<Objective Type="KillMob" MobId="67627" KillCount="1">
-           		<Hotspots>
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="67627" KillCount="1">
+			<Hotspots>
 				<Hotspot X="-2496.95" Y="2231.44" Z="7.55" />
-           		</Hotspots>
-       		</Objective>
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Ogudei's Lieutenants -->
    	<Quest Id="32343" Name="Ogudei's Lieutenants">
-       		<Objective Type="CollectItem" ItemId="92736" CollectCount="1">
+		<Objective Type="CollectItem" ItemId="92736" CollectCount="1">
 			<CollectFrom>
 				<Mob Name="Gen-li, Twister of Words" Id="68169" />
 			</CollectFrom>
-           		<Hotspots>
-            			<Hotspot X="-816.82" Y="-975.38" Z="-82.32" />
-           		</Hotspots>
-       		</Objective>
-       		<Objective Type="CollectItem" ItemId="92375" CollectCount="1">
+			<Hotspots>
+				<Hotspot X="-816.82" Y="-975.38" Z="-82.32" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="CollectItem" ItemId="92375" CollectCount="1">
 			<CollectFrom>
 				<Mob Name="Meng-do, Strength of Mountains" Id="68170" />
 			</CollectFrom>
-           		<Hotspots>
-            			<Hotspot X="-816.82" Y="-975.38" Z="-82.32" />
-           		</Hotspots>
-       		</Objective>
+			<Hotspots>
+				<Hotspot X="-816.82" Y="-975.38" Z="-82.32" />
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Good Luck, Have Fun -->
    	<Quest Id="32130" Name="Good Luck, Have Fun">
-       		<Objective Type="CollectItem" ItemId="92474" CollectCount="10">
+		<Objective Type="CollectItem" ItemId="92474" CollectCount="10">
 			<CollectFrom>
 				<Mob Name="Shieldwall Vindicator" Id="67296" />
 				<Mob Name="Shieldwall Footman" Id="67304" />
 				<Mob Name="Shieldwall Rifleman" Id="67297" />
 				<Mob Name="Shieldwall Huntress" Id="67317" />
 			</CollectFrom>
-           		<Hotspots>
-            			<Hotspot X="-923.45" Y="-853.28" Z="6.31" />
-           		</Hotspots>
-       		</Objective>
+			<Hotspots>
+				<Hotspot X="-923.45" Y="-853.28" Z="6.31" />
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Runnin On Empty -->
@@ -252,11 +228,16 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
-	<If Condition="!HasQuest(32128) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32449) &amp;&amp;
-			!HasQuest(32127) &amp;&amp; !HasQuest(32126) &amp;&amp; !HasQuest(32123) &amp;&amp;
+	<If Condition="!HasQuest(32450) &amp;&amp; !HasQuest(32134) &amp;&amp; !HasQuest(32130) &amp;&amp;
+			!HasQuest(32133) &amp;&amp; !HasQuest(32132) &amp;&amp; !HasQuest(32135) &amp;&amp;
 			!HasQuest(32222) &amp;&amp; !HasQuest(32214) &amp;&amp; !HasQuest(32136) &amp;&amp;
-			!HasQuest(32199) &amp;&amp; !HasQuest(32137) &amp;&amp; !HasQuest(32237) &amp;&amp;
-			!HasQuest(32118) &amp;&amp; !HasQuest(32450)" >
+			!HasQuest(32199) &amp;&amp; !HasQuest(32343) &amp;&amp; !HasQuest(32342) &amp;&amp;
+			!HasQuest(32345) &amp;&amp; !HasQuest(32120) &amp;&amp; !HasQuest(32237) &amp;&amp;
+			!HasQuest(32137) &amp;&amp; !HasQuest(32235) &amp;&amp; !HasQuest(32126) &amp;&amp;
+			!HasQuest(32123) &amp;&amp; !HasQuest(32128) &amp;&amp; !HasQuest(32127) &amp;&amp;
+			!HasQuest(32141) &amp;&amp; !HasQuest(32197) &amp;&amp; !HasQuest(32221) &amp;&amp;
+			!HasQuest(32223) &amp;&amp; !HasQuest(32236) &amp;&amp; !HasQuest(32449) &amp;&amp;
+			!HasQuest(32118)" >
 		<CustomBehavior File="FlyTo" X="-1875.92" Y="2328.38" Z="9.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -292,30 +273,46 @@
 
 <!-- KICKERS -->
 	<If Condition="HasQuest(32450) || HasQuest(32449)" >
-
 		<CustomBehavior File="Message" Text="Starting Kicker Quest" LogColor="Green" />
 		<If Condition="Me.Location.Distance(new WoWPoint(-1819.04, 2471.87, 25.09)) &lt; 250" >
-
 			<CustomBehavior File="FlyTo" X="-1819.04" Y="2471.87" Z="25.09" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" Nav="CTM" MobId="67648" Range="3" WaitForNpcs="False" X="-1823.639" Y="2470.266" Z="25.78169" />
-			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 67648 &amp;&amp; u.Distance &lt;= 30))" >
+				<CustomBehavior File="InteractWith" MobId="67648" WaitForNpcs="False" Range="3" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<ElseIf Condition="HasItem(92056)" >
+				<CustomBehavior File="FlyTo" X="-1819.04" Y="2471.87" Z="25.09" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92056)" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="InteractWith" MobId="67648" WaitForNpcs="False" Range="3" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</ElseIf>
+			<ElseIf Condition="GetItemCount(91838) &gt;= 5" >
+				<CustomBehavior File="FlyTo" X="-1784.86" Y="2447.03" Z="24.80" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="InteractWith" MobId="67751" BuyItemId="92056" BuyItemCount="1" X="-1785.43" Y="2442.93" Z="25.23" />
+				<CustomBehavior File="FlyTo" X="-1819.04" Y="2471.87" Z="25.09" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92056)" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="InteractWith" MobId="67648" WaitForNpcs="False" Range="3" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</ElseIf>
+			</If>
 		</If>
 		<If Condition="Me.Location.Distance(new WoWPoint(-1184.37, -618.91, 23.9819)) &lt; 20" >
-			<CustomBehavior File="MyCTM" X="-1183.228" Y="-610.1541" Z="23.77427" />
+			<RunTo X="-1183.228" Y="-610.1541" Z="23.77427" />
 		</If>
 		<CustomBehavior File="FlyTo" X="-1183.228" Y="-610.1541" Z="23.77427" />
 		<CustomBehavior File="ForcedDismount" /> 
 	</If>
 
 	<If Condition="HasQuest(32450)" >
-
 		<CustomBehavior File="MyCTM" X="-1185.31" Y="-609.24" Z="23.77" />
 		<TurnIn Nav="CTM" QuestName="The Time Is Now" QuestId="32450" TurnInName="Shademaster Kiryn" TurnInId="67628" />
 	</If>
 
 	<If Condition="HasQuest(32449)" >
-
 		<CustomBehavior File="MyCTM" X="-1175.17" Y="-629.53" Z="24.11" />
 		<TurnIn Nav="CTM" QuestName="The Ruins of Ogudei" QuestId="32449" TurnInName="Belloc Brightblade" TurnInId="67847" />
 		<PickUp Nav="CTM" QuestName="Taking Advantage" QuestId="32118" GiverName="Belloc Brightblade" GiverId="67847" />
