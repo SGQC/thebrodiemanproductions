@@ -198,8 +198,11 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" QuestId="30955" ObjectId="212132" ObjectId2="212133" PostInteractDelay="1250" NonCompeteDistance="5" HuntingGroundRadius="25" CollectUntil="QuestComplete" >
 			<Hotspot X="2251.32" Y="4800.74" Z="147.16" />
+			<Hotspot X="2282.682" Y="4760.854" Z="146.1078" />
 			<Hotspot X="2315.652" Y="4719.133" Z="146.6088" />
+			<Hotspot X="2276.706" Y="4691.729" Z="146.3235" />
 			<Hotspot X="2239.098" Y="4661.93" Z="146.497" />
+			<Hotspot X="2211.231" Y="4708.462" Z="146.5645" />
 		</CustomBehavior>
 	</If>
 
