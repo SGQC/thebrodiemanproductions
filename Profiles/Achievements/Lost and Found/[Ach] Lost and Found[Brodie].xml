@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lost and Found r74</Name>
+	<Name>Lost and Found r77</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>200</MaxLevel>
   
@@ -57,25 +57,59 @@
 
 <!-- Hammer of Ten Thunders -->
 	<If Condition="!IsQuestCompleted(31403)">
-		<CustomBehavior File="FlyTo" X="3112.61" Y="-1549.65" Z="228.08" />
 		<If Condition="!IsQuestCompleted(31403)">
+			<CustomBehavior File="FlyTo" X="3112.61" Y="-1549.65" Z="228.08" />
 			<CustomBehavior File="InteractWith" MobId="213742" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
 		</If>
-		<CustomBehavior File="FlyTo" X="3004.97" Y="-1423.80" Z="262.66" />
 		<If Condition="!IsQuestCompleted(31403)">
+			<CustomBehavior File="FlyTo" X="3004.97" Y="-1423.80" Z="262.66" />
 			<CustomBehavior File="InteractWith" MobId="213742" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
 		</If>
-		<CustomBehavior File="FlyTo" X="2837.26" Y="-1468.56" Z="291.07" />
 		<If Condition="!IsQuestCompleted(31403)">
+			<CustomBehavior File="FlyTo" X="2837.26" Y="-1468.56" Z="291.07" />
 			<CustomBehavior File="InteractWith" MobId="213742" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+	</If>
+	
+<!-- Ancient Pandaren Mining Pick -->
+	<If Condition="!IsQuestCompleted(31399)">
+		<If Condition="!IsQuestCompleted(31399)">
+			<CustomBehavior File="FlyTo" X="2295.99" Y="-1765.99" Z="234.47" />
+			<CustomBehavior File="InteractWith" MobId="213364" ObjectType="GameObject" CollectionDistance="1000" WaitForNpcs="false" />
 		</If>
 	</If>
 
 <!-- Jade Infused Blade -->
 	<If Condition="!IsQuestCompleted(31307)">
 		<CustomBehavior File="FlyTo" X="1483.69" Y="-1282.93" Z="246.25" />
-		<If Condition="!IsQuestCompleted(31307)">
-			<CustomBehavior File="InteractWith" MobId="64272" CollectionDistance="200" WaitForNpcs="false" GossipOptions="1" />
+		<CustomBehavior File="InteractWith" MobId="64272" CollectionDistance="200" WaitForNpcs="false" GossipOptions="1" />
+	</If>
+	
+<!-- Ancient Jinyu Staff -->
+	<If Condition="!IsQuestCompleted(31402)">
+		<If Condition="!IsQuestCompleted(31402)">
+			<CustomBehavior File="FlyTo" X="644.80" Y="-1677.94" Z="47.23" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="213741" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<If Condition="!IsQuestCompleted(31402)">
+			<CustomBehavior File="FlyTo" X="655.81" Y="-1726.32" Z="45.72" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="213741" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<If Condition="!IsQuestCompleted(31402)">
+			<CustomBehavior File="FlyTo" X="614.75" Y="-1787.49" Z="44.56" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="213741" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<If Condition="!IsQuestCompleted(31402)">
+			<CustomBehavior File="FlyTo" X="510.25" Y="-1828.33" Z="49.15" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="213741" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<If Condition="!IsQuestCompleted(31402)">
+			<CustomBehavior File="FlyTo" X="395.15" Y="-1788.52" Z="49.75" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="213741" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
+		</If>
+		<If Condition="!IsQuestCompleted(31402)">
+			<CustomBehavior File="FlyTo" X="338.66" Y="-1771.11" Z="45.87" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="213741" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="false" />
 		</If>
 	</If>
 
@@ -202,7 +236,7 @@
 		</If>
 	</If>
 
-<!-- Dissector's Staff of Mutilation -->
+<!-- Dissector's Staff of Mutation -->
 	<If Condition="!IsQuestCompleted(31435)">
 		<CustomBehavior File="FlyTo" X="-1824.11" Y="4521.07" Z="47.48" />
 		<CustomBehavior File="InteractWith" MobId="213969" ObjectType="GameObject" CollectionDistance="500" WaitForNpcs="false" />
@@ -237,6 +271,12 @@
 	<If Condition="!IsQuestCompleted(31431)">
 		<CustomBehavior File="FlyTo" X="-349.28" Y="4373.64" Z="230.54" />
 		<CustomBehavior File="InteractWith" MobId="213966" ObjectType="GameObject" CollectionDistance="50" WaitForNpcs="false" />
+	</If>
+	
+<!-- Malik's Stalwart Spear -->
+	<If Condition="!IsQuestCompleted(31430)">
+		<CustomBehavior File="FlyTo" X="354.73" Y="3526.75" Z="231.13" />
+		<CustomBehavior File="InteractWith" MobId="213964" ObjectType="GameObject" CollectionDistance="50" WaitForNpcs="false" />
 	</If>
 
 <!-- Townlong Steppes -->
