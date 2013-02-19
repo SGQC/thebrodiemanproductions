@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r26</Name>
+	<Name>Golden Lotus PreReqs r79</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -437,6 +437,9 @@
 		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Leaving an Opening" QuestId="30638" TurnInName="Leven Dawnblade" TurnInId="58408" />
 	</If>
+	
+<CustomBehavior File="Message" Text="Pre-Reqs Complete. Loading Golden Lotus Daily Profile" LogColor="Green"  />
+<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Golden Lotus PreReqs" />
 

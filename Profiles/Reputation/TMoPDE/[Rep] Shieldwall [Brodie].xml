@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r75</Name>
+	<Name>Operation Shieldwall r79</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -75,10 +75,7 @@
 
 <!-- Under Pressure -->
    	<Quest Id="32144" Name="Under Pressure">
-       		<Objective Type="CollectItem" ItemId="216150" CollectCount="8">
-			<CollectFrom>
-				<GameObject Name="Horde Supply Crate" Id="216150" />
-			</CollectFrom>
+       		<Objective Type="UseObject" ObjectId="216150" UseCount="8">
            	<Hotspots>
             	<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
 				<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
@@ -92,10 +89,11 @@
    	<Quest Id="32142" Name="We Will Rock You">
        		<Objective Type="KillMob" MobId="67357" KillCount="10">
            	<Hotspots>
-            	<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
-				<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
-				<Hotspot X="-1920.47" Y="2431.099" Z="6.482244" />
-				<Hotspot X="-1870.331" Y="2388.72" Z="9.218648" />
+				<Hotspot X="-1994.781" Y="2415.605" Z="4.300503" />
+				<Hotspot X="-1996.006" Y="2495.207" Z="7.631973" />
+				<Hotspot X="-2060.141" Y="2518.608" Z="8.345868" />
+				<Hotspot X="-2114.503" Y="2457.937" Z="4.533043" />
+				<Hotspot X="-2137.894" Y="2367.81" Z="4.023705" />
            	</Hotspots>
        		</Objective>
    	</Quest>
@@ -595,16 +593,14 @@
 		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2177.679" Y="2549.835" Z="7.886249" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(32144)" >
-			<CustomBehavior File="InteractWith" MobId="216150" ObjectType="GameObject" WaitTime="1000" CollectionDistance="50" WaitForNpcs="False" />
-		</While>
+		<Objective QuestName="Under Pressure" QuestId="32144" Type="UseObject" ObjectId="216150" UseCount="8" />
 	</If>
 
 <!-- We Will Rock You -->
 	<If Condition="HasQuest(32142) &amp;&amp; !IsQuestCompleted(32142)">
 		<CustomBehavior File="Message" Text="Starting We Will Rock You" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="true" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="-1878.873" Y="2354.065" Z="11.29493" />
+		<CustomBehavior File="FlyTo" X="-2011.07" Y="2455.51" Z="6.21" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="We Will Rock You" QuestId="32142" Type="KillMob" MobId="67334" MobId2="67429" KillCount="10" />
 	</If>

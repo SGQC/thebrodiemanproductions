@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r67</Name>
+	<Name>Boss Fights r79</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -48,7 +48,7 @@
 	<Quest Id="30227" Name="Wulon, the Granite Sentinel"> 
 		<Objective Type="KillMob" MobId="63509" MobId2="63510" KillCount="1">
 			<Hotspots>
-				<Hotspot X="1595.532" Y="1788.5" Z="264.9178" />
+				<Hotspot X="1592.71" Y="1782.71" Z="264.92" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -197,6 +197,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30227" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1492.338" Y="1911.349" Z="299.8099" />
 		<CustomBehavior File="ForcedDismount" />
+		<RunTo X="1592.71" Y="1782.71" Z="264.92" />
 		<Objective QuestName="Wulon, the Granite Sentinel" QuestId="30227" Type="KillMob" MobId="63509" MobId2="63510" KillCount="1" />
 	</If>
 

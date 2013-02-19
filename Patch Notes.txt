@@ -1,5 +1,41 @@
 Patch Notes
 
+2/18/13
+
+r79
+Pandaria Dailies Plugin
+-- Updated to v2.1.0 (Basic Item support)
+-- Added Amberhusk item support
+-- Code Cleanup
+Golden Lotus PreReqs
+-- Added auto start to dailies
+Golden Lotus
+-- Re-Added Pre-Req check
+-- Code Cleanup
+Shado Pan
+-- Snow Blossom npc Id changed again
+-- Fixed Little Hatchlings wrong QB call
+Setting Sun Garrison
+-- Awaiting location testing for RunLikeHell addition to Upon the Ramparts
+-- Code Cleanup
+The Tillers
+-- Added Pre-Req check
+-- Removed Objective Override for Money Matters
+Plugins
+-- Removed Anti-Drown (included in HB v535)
+Whitepetal Lake
+-- Code Cleanup
+-- A Thousand Pointy Teeth - Make sure it only searches for live fish
+Operation Shieldwall
+-- Under Pressure - Converted to Objective mode, larger area to pickup now
+-- We Will Rock You - Moved hotspots outside of Domination Point to avoid the Warlord altogether
+Boss Fights
+-- Updated Wulon hotspot and run to, now reflects area in front of pedestal instead of the pedestal itself
+Cloud Serpent
+-- Added Just a Flesh Wound
+-- Will now close tradeskill windows (typo in case)
+-- Made professions quests rep level dependant (must not be exalted)
+
 2/17/13
 
 r78

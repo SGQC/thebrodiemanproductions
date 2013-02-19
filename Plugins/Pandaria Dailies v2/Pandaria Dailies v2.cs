@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
         public override string Name { get { return "Pandaria Dailies v2"; } }
         public override string Author { get { return "Buddy Community"; } }
-        public override Version Version { get { return new Version(2, 0, 3); } }
+        public override Version Version { get { return new Version(2, 1, 0); } }
         public override bool WantButton { get { return true; } }
         public override string ButtonText { get { return "Credits"; } }
 
@@ -372,6 +372,7 @@ namespace AzeniusHelper2
 			#region [Operation Shieldwall]
 
 			#region Jungle Shredder
+			//http://www.wowhead.com/quest=32446
 			if (IsOnQuest(32446))
 			{
 				if (Me.Combat && JungleShredder.Distance2D <= 10 && JungleShredder != null)
@@ -603,29 +604,29 @@ namespace AzeniusHelper2
             #endregion
             #endregion
 
-            #region [The August Celestials]
-            // (Die Himmlischen Erhabenen)
-            // http://www.wowhead.com/quest=30952 http://www.wowhead.com/quest=30953 http://www.wowhead.com/quest=30954 http://www.wowhead.com/quest=30955
-            // http://www.wowhead.com/quest=30956 http://www.wowhead.com/quest=30957 http://www.wowhead.com/quest=30958 http://www.wowhead.com/quest=30959
-            if (IsOnQuest(30952) || IsOnQuest(30953) || IsOnQuest(30954) || IsOnQuest(30955) || IsOnQuest(30956) || IsOnQuest(30957) || IsOnQuest(30958) || IsOnQuest(30959))
-            {
+			#region [The August Celestials]
+			// (Die Himmlischen Erhabenen)
+			// http://www.wowhead.com/quest=30952 http://www.wowhead.com/quest=30953 http://www.wowhead.com/quest=30954 http://www.wowhead.com/quest=30955
+			// http://www.wowhead.com/quest=30956 http://www.wowhead.com/quest=30957 http://www.wowhead.com/quest=30958 http://www.wowhead.com/quest=30959
+			if (IsOnQuest(30952) || IsOnQuest(30953) || IsOnQuest(30954) || IsOnQuest(30955) || IsOnQuest(30956) || IsOnQuest(30957) || IsOnQuest(30958) || IsOnQuest(30959))
+			{
                 if (Me.Combat && Me.IsMoving)
                 {
-                    ObjectManager.Update();
-                    Thread.Sleep(200);
-                    if (MantidNiuzao != null)
-                    {
-                        MantidNiuzao[0].Face();
-                        MantidNiuzao[0].Target();
-                	WoWMovement.MoveStop();
-                        Thread.Sleep(1000);
-                    }
-                }
-            }
-            #endregion
+					ObjectManager.Update();
+					Thread.Sleep(200);
+					if (MantidNiuzao != null)
+					{
+						MantidNiuzao[0].Face();
+						MantidNiuzao[0].Target();
+						WoWMovement.MoveStop();
+						Thread.Sleep(1000);
+					}
+				}
+			}
+			#endregion
 
-            #region [Klaxxi]
-            // http://www.wowhead.com/quest=31487
+			#region [Klaxxi]
+			// http://www.wowhead.com/quest=31487
 			if (IsOnQuest(31487))
 			{
 				if (Me.Combat && DreadKunchong.Distance2D <= 10 && DreadKunchong != null)
@@ -638,11 +639,14 @@ namespace AzeniusHelper2
             }
 			
 			// http://www.wowhead.com/quest=31507
-			//if (IsOnQuest(31507))
-			//{
-			//	if (Me.Combat && Amberhusk.Distance2D <= 10 && Amberhusk != null)
-			//		UseIfNotOnCooldown(87841);	
-			//}
+			if (IsOnQuest(31507))
+			{
+				if (Me.Combat && Amberhusk.Distance2D <= 15 && Amberhusk != null)
+				{
+					UseIfNotOnCooldown(87841);
+					SpellManager.ClickRemoteLocation(Amberhusk.Location);
+				}
+			}
             #endregion
         }
     }
@@ -662,7 +666,6 @@ namespace BarryDurex
         //private static int MinDistToPools = 7;
         //private static int MaxDistToMove = 40;
         //private static int TraceStep = 50;
-
 
         #region Lightning Pool Behaviors - not yet tested!
 
@@ -881,7 +884,6 @@ namespace BarryDurex
             WoWMovement.MoveStop();
         }
 
-
         private static float getInvert(float f)
         {
             if (f < 180)
@@ -897,9 +899,5 @@ namespace BarryDurex
             return f;
         }
         #endregion
-
-
-
-
     }
 }

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r73</Name>
+	<Name>The Golden Lotus r79</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -131,6 +131,11 @@
 <QuestOrder IgnoreCheckpoints="True" >
 
 <CustomBehavior File="Message" Text="Compiling Golden Lotus Quests..." LogColor="Green"  />
+
+	<If Condition="!IsQuestCompleted(30638)" >
+		<CustomBehavior File="LoadProfile" ProfileName="[Rep] GL PreReq [Brodie]" />
+		<CustomBehavior File="Message" Text="Loading Golden Lotus Prequest Profile" LogColor="Green"  />
+	</If>
 
 <!-- Mistfall Village -->
 
@@ -301,41 +306,6 @@
 		<CustomBehavior File="Message" Text="Starting Laosy Scouting" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31758" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.93" Z="427.23" />
-<!--		<While Condition="!IsQuestCompleted(31758)" >
-			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-			<If Condition="!IsQuestCompleted(31758)" >
-				<If Condition="!Me.Mounted" >
-					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
-				</If>
-				<CustomBehavior File="FlyTo" X="1682.15" Y="1387.73" Z="475.12" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
-			</If>
-			<If Condition="!IsQuestCompleted(31758)" >
-				<If Condition="!Me.Mounted" >
-					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
-				</If>
-				<CustomBehavior File="FlyTo" X="1579.076" Y="1453.525" Z="460.00" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="500" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
-			</If>
-			<If Condition="!IsQuestCompleted(31758)" >
-				<If Condition="!Me.Mounted" >
-					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
-				</If>
-				<CustomBehavior File="FlyTo" X="1543.88" Y="1197.10" Z="462.14" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
-			</If>
-			<If Condition="!IsQuestCompleted(31758)" >
-				<If Condition="!Me.Mounted" >
-					<CustomBehavior File="ForcedMount" QuestId="31758" MountType="Flying" />
-				</If>
-				<CustomBehavior File="FlyTo" X="1617.87" Y="1269.10" Z="478.00" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="65868" Range="5" CollectionDistance="100" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
-			</If>
-		</While> -->
 		<While Condition="!IsQuestCompleted(31758)" >
 			<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" />
 			<CustomBehavior File="ForcedDismount" />

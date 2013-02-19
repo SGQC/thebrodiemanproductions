@@ -327,7 +327,6 @@
 		<CustomBehavior File="Message" Text="Starting The Key to Success" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="true" PullDistance="25" />
 		<If Condition="!IsObjectiveComplete(1,30300)" >
-
 			<CustomBehavior File="FlyTo" X="1337.732" Y="1678.051" Z="343.5833" />
 			<CustomBehavior File="ForcedDismount"/>
 			<Objective QuestName="The Key to Success" QuestId="30300" Type="CollectItem" ItemId="85582" CollectCount="1" />
@@ -335,7 +334,6 @@
 		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="ForcedMount" MountType="Flying" />
 		<While Condition="!IsQuestCompleted(30300)" >
-
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<CustomBehavior File="KeyToSuccess" />
 			<CustomBehavior File="ForcedDismount" />

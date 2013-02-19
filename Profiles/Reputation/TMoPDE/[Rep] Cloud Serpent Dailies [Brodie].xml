@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r71</Name>
+	<Name>Cloud Serpent r79</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -480,13 +480,19 @@
 	</While>
 
 <!-- Jenova Longeye -->
-	<If Condition="(!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525) &amp;&amp; HasQuestAvailable(58413)" >
-		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
-		<PickUp QuestName="Snack Time" QuestId="30146" GiverName="Jenova Longeye" GiverId="58413" />
-	</If>
-	<If Condition="(!HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149) &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 499) &amp;&amp; HasQuestAvailable(58413)" >
-		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
-		<PickUp QuestName="A Feast for the Senses" QuestId="30149" GiverName="Jenova Longeye" GiverId="58413" />
+	<If Condition="Me.GetReputationLevelWith(1271) &lt; WoWUnitReaction.Exalted" >
+		<If Condition="(!HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525) &amp;&amp; HasQuestAvailable(58413)" >
+			<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
+			<PickUp QuestName="Snack Time" QuestId="30146" GiverName="Jenova Longeye" GiverId="58413" />
+		</If>
+		<If Condition="(!HasQuest(30149) &amp;&amp; !IsQuestCompleted(30149) &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 499) &amp;&amp; HasQuestAvailable(58413)" >
+			<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
+			<PickUp QuestName="A Feast for the Senses" QuestId="30149" GiverName="Jenova Longeye" GiverId="58413" />
+		</If>
+		<If Condition="(!HasQuest(30148) &amp;&amp; !IsQuestCompleted(30148) &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt; 524) &amp;&amp; HasQuestAvailable(58413)" >
+			<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
+			<PickUp QuestName="Just A Flesh Wound" QuestId="30148" GiverName="Jenova Longeye" GiverId="58413" />
+		</If>
 	</If>
 
 <!-- Starting Quests -->
@@ -910,9 +916,35 @@
 	<While Condition="(Me.Location.Distance(new WoWPoint(2362.629, -2434.252, 7.537624)) &lt; 150)" >
 		<RunTo X="2235.132" Y="-2604.035" Z="15.85289" />
 	</While>
+	
+<!-- Just a Flesh Wound -->
+	<If Condition="(HasQuest(30148) &amp;&amp; !IsQuestCompleted(30148)) &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 525" >
+		<CustomBehavior File="Message" Text="Starting Just a Flesh Wound" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="30148" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="2189.36" Y="-3036.21" Z="18.85" />
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="GetItemCount(72985) &lt;= 7" >
+			<If Condition="!HasItem(72988)" >
+				<CustomBehavior File="CollectThings" MobId="63532" CollectItemId="72988" CollectUntil="RequiredCountReached" CollectItemCount="1" HuntingGroundRadius="200" >
+					<Hotspot X="2131.598" Y="-3040.212" Z="7.447778" />
+					<Hotspot X="2197.254" Y="-3042.888" Z="20.02104" />
+					<Hotspot X="2260.887" Y="-3053.897" Z="19.10549" />
+				</CustomBehavior>
+			</If>
+			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="110406" />
+			<While Condition="HasItem(72988) &amp;&amp; GetItemCount(72985) &lt;= 7" >
+				<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="72985" CastOnItemId="72988" NumOfTimes="1" />
+			</While>
+			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
+		</While>
+		<While Condition="!IsQuestCompleted(30148)" >
+			<CustomBehavior File="UseItemOn" QuestId="30148" MobId="58416" ItemId="72985" NumOfTimes="1" CollectionDistance="1000" WaitTime="10000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+		</While>
+	</If>
 
 <!-- Snack Time -->
-	<If Condition="(HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525">
+	<If Condition="(HasQuest(30146) &amp;&amp; !IsQuestCompleted(30146)) &amp;&amp; Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt; 525" >
 		<CustomBehavior File="Message" Text="Starting Snack Time" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30146" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1620.015" Y="-2506.825" Z="152.6351" />
@@ -949,7 +981,7 @@
 		<If Condition="!Me.HasAura(7353)" >
 			<CustomBehavior File="CastSpell" SpellId="818" MobId="0" />
 		</If>
-		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeskill()" />
+		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 
 		<If Condition="HasSpell(104381)" >
 			<CustomBehavior File="CastSpell" SpellId="104381" MobId="0" />
@@ -994,7 +1026,7 @@
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeskill()" />
+		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 	</If>
 
 <!-- Quest Turn ins -->
