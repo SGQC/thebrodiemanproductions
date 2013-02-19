@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r69</Name>
+	<Name>Setting Sun Garrison r79</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -142,13 +142,10 @@
 
 <!-- Survival Ring: Blades -->
 	<If Condition="(HasQuest(30242) &amp;&amp; !IsQuestCompleted(30242))" >
-
 		<CustomBehavior File="Message" Text="Starting Survival Ring: Blades (Safety Not Guaranteed)" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30242" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="788.5397" Y="2040.471" Z="316.0875" />
-
 		<CustomBehavior File="ForcedDismount" />
-		<!-- <CustomBehavior Text="Unable to afk this quest. Click continue after you complete it." File="UserDialog" SoundCueInterval="1" SoundCue="Asterisk" AllowBotStop="True" Title="title"/> -->
 		<While Condition="!IsQuestCompleted(30242)" >
 			<RunTo X="802.4619" Y="2000.587" Z="318.2415" />
 		</While>
@@ -157,11 +154,9 @@
 
 <!-- Survival Ring: Flames -->
 	<If Condition="(HasQuest(30240) &amp;&amp; !IsQuestCompleted(30240))" >
-
 		<CustomBehavior File="Message" Text="Starting Survival Ring: Flames (Safety Not Guaranteed)" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30240" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="812.2769" Y="1974.102" Z="316.0742" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30240)" >
 			<RunTo X="799.5345" Y="1981.939" Z="316.1925" />
@@ -182,11 +177,9 @@
 
 <!-- Enemy at the Gates -->
 	<If Condition="(HasQuest(30264)) &amp;&amp; (!IsQuestCompleted(30264))" >
-
 		<CustomBehavior File="Message" Text="Starting Enemy at the Gates" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30264" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="821.932" Y="2080.49" Z="316.099" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="MountVehOnly" VehicleMountId="65336" X="821.932" Y="2080.49" Z="316.099" />
@@ -196,12 +189,10 @@
 
 <!-- Lost Scouts -->
 	<If Condition="(HasQuest(30245)) &amp;&amp; (!IsQuestCompleted(30245))" >
-
 		<CustomBehavior File="Message" Text="Starting Lost Scouts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30245" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1242.38" Y="2177.708" Z="334.9722" />
 		<While Condition="(HasQuest(30245)) &amp;&amp; (!IsQuestCompleted(30245))" >
-
 			<CustomBehavior File="FlyTo" X="1208.51" Y="2189.03" Z="341.99" />
 			<CustomBehavior File="InteractWith" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
 			<CustomBehavior File="FlyTo" X="1302.94" Y="2157.54" Z="371.28" />
@@ -216,33 +207,30 @@
 
 <!-- No Reprieve -->
 	<If Condition="(HasQuest(30444)) &amp;&amp; (!IsQuestCompleted(30444))" >
-
 		<CustomBehavior File="Message" Text="Starting No Reprieve" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30444" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1210.793" Y="2173.061" Z="330.8089" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="No Reprieve" QuestId="30444" Type="KillMob" MobId="58927" KillCount="8" />
 	</If>
 
 <!-- Upon The Ramparts -->
 	<If Condition="(HasQuest(30246)) &amp;&amp; (!IsQuestCompleted(30246))" >
-
 		<CustomBehavior File="Message" Text="Starting Upon The Ramparts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30246" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="784.1627" Y="2302.708" Z="381.2356" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Upon The Ramparts" QuestId="30246" Type="KillMob" MobId="63974" KillCount="10" />
+<!--	<CustomBehavior File="RunLikeHell" Combat="False" >
+			<Hotspot X="4554.003" Y="-4718.743" Z="883.0464" />
+		</CustomBehavior> -->
 	</If>
 
 <!-- Mantid Under Fire -->
 	<If Condition="(HasQuest(30243)) &amp;&amp; (!IsQuestCompleted(30243))" >
-
 		<CustomBehavior File="Message" Text="Starting Mantid Under Fire" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30243" LootMobs="true" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1025.549" Y="2407.683" Z="390.7802" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30243)" >
 			<While Condition="!Me.IsOnTransport" >
@@ -256,11 +244,9 @@
 
 <!-- Along the Serpent's Spine -->
 	<If Condition="(HasQuest(30244) &amp;&amp; !IsQuestCompleted(30244))" >
-
 		<CustomBehavior File="Message" Text="Starting Along the Serpent's Spine" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30244" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="784.1627" Y="2302.708" Z="381.2356" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Along the Serpent's Spine" QuestId="30244" Type="KillMob" MobId="63974" KillCount="10" />
 	</If>
@@ -270,11 +256,9 @@
 
 <!-- Bloodied Skies -->
 	<If Condition="(HasQuest(30266) &amp;&amp; !IsQuestCompleted(30266))" >
-
 		<CustomBehavior File="Message" Text="Starting Bloodied Skies" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30246" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="721.186" Y="2340.127" Z="430.8784" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30266)" >
 			<While Condition="!Me.IsOnTransport" >

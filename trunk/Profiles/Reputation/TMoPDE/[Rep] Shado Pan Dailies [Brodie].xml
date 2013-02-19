@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r71</Name>
+	<Name>Shado Pan Dailies r79</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -579,7 +579,7 @@
 		<CustomBehavior File="FlyTo" X="1857.414" Y="4227.181" Z="148.7653" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsObjectiveComplete(1,31038)" >
-			<CustomBehavior File="InteractWith" MobId="62782" GossipOptions="1" X="1873.87" Y="4268.60" Z="149.50" />
+			<CustomBehavior File="InteractWith" MobId="62380" GossipOptions="1" X="1873.87" Y="4268.60" Z="149.50" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
@@ -825,19 +825,19 @@
 			<If Condition="!IsQuestCompleted(31046)">
 				<CustomBehavior File="FlyTo" X="3561.077" Y="5227.29" Z="7.006161" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="LittleHatchlings" />
+				<CustomBehavior File="SpecificQuests\31046-TownlongSteppes-LittleHatchlings" />
 				<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31046" MobId21="213578" MobId20="213584" MobId19="213571" MobId18="213572" MobId17="213585" MobId16="213573" MobId15="213583" MobId14="213579" MobId13="213591" MobId12="213586" MobId11="213574" MobId10="213582" MobId9="213575" MobId8="213580" MobId7="213576" MobId6="213581" MobId5="213590" MobId4="213577" MobId3="213589" MobId2="213588" MobId="213587" WaitForNpcs="false" />
 			</If>
 			<If Condition="!IsQuestCompleted(31046)">
 				<CustomBehavior File="FlyTo" X="3667.552" Y="5240.583" Z="12.9497" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="LittleHatchlings" />
+				<CustomBehavior File="SpecificQuests\31046-TownlongSteppes-LittleHatchlings" />
 				<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31046" MobId21="213578" MobId20="213584" MobId19="213571" MobId18="213572" MobId17="213585" MobId16="213573" MobId15="213583" MobId14="213579" MobId13="213591" MobId12="213586" MobId11="213574" MobId10="213582" MobId9="213575" MobId8="213580" MobId7="213576" MobId6="213581" MobId5="213590" MobId4="213577" MobId3="213589" MobId2="213588" MobId="213587" WaitForNpcs="false" />
 			</If>
 			<If Condition="!IsQuestCompleted(31046)">
 				<CustomBehavior File="FlyTo" X="3646.913" Y="5134.396" Z="11.36216" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="LittleHatchlings" />
+				<CustomBehavior File="SpecificQuests\31046-TownlongSteppes-LittleHatchlings" />
 				<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31046" MobId21="213578" MobId20="213584" MobId19="213571" MobId18="213572" MobId17="213585" MobId16="213573" MobId15="213583" MobId14="213579" MobId13="213591" MobId12="213586" MobId11="213574" MobId10="213582" MobId9="213575" MobId8="213580" MobId7="213576" MobId6="213581" MobId5="213590" MobId4="213577" MobId3="213589" MobId2="213588" MobId="213587" WaitForNpcs="false" />
 			</If>
 		</While>

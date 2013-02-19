@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r71</Name>
+	<Name>The Tillers r79</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -77,18 +77,6 @@
 <!-- The Mile-High Grub -->
 	<Quest Id="30331" Name="The Mile-High Grub"> 
 		<Objective Type="CollectItem" ItemId="79894" CollectCount="20">
-		</Objective>
-	</Quest>
-
-<!-- Money Matters -->
-	<Quest Id="30322" Name="Money Matters">
-		<Objective Type="CollectItem" ItemId="80213" CollectCount="1">
-		</Objective>
-		<Objective Type="CollectItem" ItemId="80214" CollectCount="1">
-		</Objective>
-		<Objective Type="CollectItem" ItemId="80215" CollectCount="1">
-		</Objective>
-		<Objective Type="CollectItem" ItemId="80216" CollectCount="1">
 		</Objective>
 	</Quest>
 
@@ -370,6 +358,10 @@
 			(!HasQuest(30321) &amp;&amp; IsQuestCompleted(30321)))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="Cornflowerblue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
+	
+	<If Condition="!IsQuestCompleted(30257)" >
+		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers PreReqs [Brodie]" />
 	</If>
 
 <!-- Checking if you have a quest. If you do, start, if not, fly to Halfhill -->
@@ -1356,7 +1348,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<CustomBehavior File="LoadProfile" ProfileName="[Rep] Cloud Serpent Dailies [Brodie]" /> 
+<CustomBehavior File="LoadProfile" ProfileName="[Rep] Cloud Serpent Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Tillers Dailies" />
 
