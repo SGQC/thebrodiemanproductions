@@ -1,5 +1,12 @@
 Patch Notes
 
+2/20/12
+
+r81
+Cloud Serpent
+-- Extra /If fix
+-- Just a Flesh Wound - Logic update
+
 2/19/13
 
 r80
