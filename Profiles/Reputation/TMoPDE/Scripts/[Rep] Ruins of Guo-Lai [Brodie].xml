@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r36</Name>
+	<Name>Ruins of Guo-Lai r80</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -305,19 +305,34 @@
 					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
 				<CustomBehavior File="FlyTo" X="1397.36" Y="1677.44" Z="344.24" />
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
+					<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				</If>
+				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
+					<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				</If>
 			</If>
 			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
 					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
 				<CustomBehavior File="FlyTo" X="1268.16" Y="1837.10" Z="344.80" />
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
+					<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				</If>
+				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
+					<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				</If>
 			</If>
 			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
 					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
 				<CustomBehavior File="FlyTo" X="1613.10" Y="1804.64" Z="427.99" />
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
+					<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				</If>
+				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
+					<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" CollectionDistance="4000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				</If>
 			</If>
 		</While>
 	</If>

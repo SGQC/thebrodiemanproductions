@@ -177,6 +177,14 @@ namespace AzeniusHelper2
 				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 64982 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
 			}
 		}
+		
+		public WoWUnit AScorpion
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 63728 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
         public List<WoWUnit> PandarenSpirit
         {
@@ -637,6 +645,13 @@ namespace AzeniusHelper2
                 if (Me.Combat && DreadKunchong.Distance2D <= 15 && DreadKunchong.IsCasting && DreadKunchong.CastingSpellId == 128022)
                     BarryDurex.QuestHelper.AvoidEnemyCast(DreadKunchong, 80, 15);
             }
+			
+			// http://www.wowhead.com/quest=31268
+			if (IsOnQuest(31268))
+			{
+				if (Me.Combat && AScorpion.Distance2D <= 10 && AScorpion != null)
+					UseIfNotOnCooldown(85884); //Sonic Emitter
+			}
 			
 			// http://www.wowhead.com/quest=31507
 			if (IsOnQuest(31507))

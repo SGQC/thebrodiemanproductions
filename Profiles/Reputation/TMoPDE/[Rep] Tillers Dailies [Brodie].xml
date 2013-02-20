@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r79</Name>
+	<Name>The Tillers r80</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -25,7 +25,6 @@
 	</Vendors>
   
 	<AvoidMobs>
-		<Mob Name="Kunzen Ravager" Entry="59119" />
 	</AvoidMobs>
    
 	<Blackspots>
@@ -247,11 +246,13 @@
 				<GameObject Name="Stolen Vegetable" Id="210769" />
 			</CollectFrom>
 			<Hotspots>
-				<Hotspot X="400.72" Y="1427.04" Z="430.77" />
-				<Hotspot X="340.24" Y="1483.57" Z="442.15" />
-				<Hotspot X="519.78" Y="1321.96" Z="385.88" />
-				<Hotspot X="473.54" Y="1343.28" Z="388.72" />
-				<Hotspot X="361.80" Y="1405.75" Z="418.37" />
+				<Hotspot X="343.2171" Y="1478.659" Z="442.1466" />
+				<Hotspot X="402.6873" Y="1426.938" Z="430.7084" />
+				<Hotspot X="472.7371" Y="1413.912" Z="415.4045" />
+				<Hotspot X="526.1399" Y="1322.689" Z="385.7747" />
+				<Hotspot X="492.5291" Y="1326.259" Z="386.2574" />
+				<Hotspot X="464.6505" Y="1354.64" Z="389.8053" />
+				<Hotspot X="353.7256" Y="1413.878" Z="419.5858" />
 			</Hotspots>
 		</Objective>
 	</Quest>
