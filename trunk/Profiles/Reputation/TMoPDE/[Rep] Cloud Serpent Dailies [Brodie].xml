@@ -928,7 +928,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30148" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="2189.36" Y="-3036.21" Z="18.85" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="GetItemCount(72985) &lt;= 7" >
+		<While Condition="GetItemCount(72985) &lt;= 7 &amp;&amp; !IsQuestCompleted(30148)" >
 			<If Condition="!HasItem(72988)" >
 				<CustomBehavior File="CollectThings" MobId="63532" CollectItemId="72988" CollectUntil="RequiredCountReached" CollectItemCount="1" HuntingGroundRadius="200" >
 					<Hotspot X="2131.598" Y="-3040.212" Z="7.447778" />
@@ -942,9 +942,9 @@
 				<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="72985" CastOnItemId="72988" NumOfTimes="1" />
 			</While>
 			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
-		</While>
-		<While Condition="!IsQuestCompleted(30148)" >
-			<CustomBehavior File="UseItemOn" QuestId="30148" MobId="58416" ItemId="72985" NumOfTimes="1" CollectionDistance="1000" WaitTime="10000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+			<While Condition="!IsQuestCompleted(30148) &amp;&amp; HasItem(72985)" >
+				<CustomBehavior File="UseItemOn" QuestId="30148" MobId="58416" ItemId="72985" NumOfTimes="1" CollectionDistance="1000" WaitTime="10000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+			</While>
 		</While>
 	</If>
 
@@ -1036,7 +1036,7 @@
 
 <!-- Quest Turn ins -->
 
-<If Condition="(HasQuest(31698) &amp;&amp; IsQuestCompleted(31698)) || 
+	<If Condition="(HasQuest(31698) &amp;&amp; IsQuestCompleted(31698)) || 
 		(HasQuest(31699) &amp;&amp; IsQuestCompleted(31699)) ||
 		(HasQuest(31702) &amp;&amp; IsQuestCompleted(31702)) ||
 		(HasQuest(31715) &amp;&amp; IsQuestCompleted(31715)) ||
@@ -1072,7 +1072,6 @@
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Arboretum." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1560.782" Y="-2556.237" Z="151.2554" />
 		<CustomBehavior File="ForcedDismount" />
-	</If>
 	</If>
 
 <!-- Lingering Doubt -->
