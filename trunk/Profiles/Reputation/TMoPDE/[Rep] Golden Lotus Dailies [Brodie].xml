@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r79</Name>
+	<Name>The Golden Lotus r80</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -132,9 +132,9 @@
 
 <CustomBehavior File="Message" Text="Compiling Golden Lotus Quests..." LogColor="Green"  />
 
-	<If Condition="!IsQuestCompleted(30638)" >
-		<CustomBehavior File="LoadProfile" ProfileName="[Rep] GL PreReq [Brodie]" />
+	<If Condition="!IsAchievementCompleted(7315, 2)" >
 		<CustomBehavior File="Message" Text="Loading Golden Lotus Prequest Profile" LogColor="Green"  />
+		<CustomBehavior File="LoadProfile" ProfileName="[Rep] GL PreReq [Brodie]" />
 	</If>
 
 <!-- Mistfall Village -->

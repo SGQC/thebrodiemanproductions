@@ -1,5 +1,27 @@
 Patch Notes
 
+2/19/13
+
+r80
+Pandaria Dailies v2
+-- Added A Little Brain Work item use support
+Cloud Serpent
+-- Added PreReq check
+-- Added Just a Flesh Wound turnin
+-- Increased First Aid check to minimum 526 (now you must have maxed level First Aid skill)
+Golden Lotus PreReqs
+-- Killing the Quilen - Fixed bad call to "If has quest"
+Golden Lotus
+-- Changed quest check to achievement check on prereq check
+Tillers PreReqs
+-- Added code to pickup tools (water/gas can)
+The Tillers
+-- Stealing is Bad...Re-Stealing is OK - Hotspot revamp
+Ruins of Guo-Lai
+-- Added questId check to InteractWith on Hard as a Rock/Carved in Stone, should fix interactions after completion
+Operation Shieldwall
+-- Under Pressure - Hotspots tweaked
+
 2/18/13
 
 r79

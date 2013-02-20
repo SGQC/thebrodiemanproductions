@@ -62,32 +62,33 @@
 
 <!-- The Only Good Goblin... -->
    	<Quest Id="32157" Name="The Only Good Goblin...">
-       		<Objective Type="KillMob" MobId="67873" KillCount="10">
+		<Objective Type="KillMob" MobId="67873" KillCount="10">
            	<Hotspots>
-            		<Hotspot X="-1867.30" Y="1918.96" Z="2.68" />
-			<Hotspot X="-1908.35" Y="1903.91" Z="2.12" />
-			<Hotspot X="-1897.62" Y="1830.67" Z="2.48" />
-			<Hotspot X="-1913.84" Y="1753.12" Z="1.25" />
-			<Hotspot X="-1966.47" Y="1731.61" Z="1.84" />
+            	<Hotspot X="-1867.30" Y="1918.96" Z="2.68" />
+				<Hotspot X="-1908.35" Y="1903.91" Z="2.12" />
+				<Hotspot X="-1897.62" Y="1830.67" Z="2.48" />
+				<Hotspot X="-1913.84" Y="1753.12" Z="1.25" />
+				<Hotspot X="-1966.47" Y="1731.61" Z="1.84" />
            	</Hotspots>
-       		</Objective>
+		</Objective>
    	</Quest>
 
 <!-- Under Pressure -->
    	<Quest Id="32144" Name="Under Pressure">
-       		<Objective Type="UseObject" ObjectId="216150" UseCount="8">
+		<Objective Type="UseObject" ObjectId="216150" UseCount="8">
            	<Hotspots>
-            	<Hotspot X="-1879.52" Y="2329.908" Z="9.202564" />
-				<Hotspot X="-1928.874" Y="2359.998" Z="7.006767" />
-				<Hotspot X="-1920.47" Y="2431.099" Z="6.482244" />
-				<Hotspot X="-1870.331" Y="2388.72" Z="9.218648" />
+				<Hotspot X="-2119.71" Y="2538.295" Z="5.016497" />
+				<Hotspot X="-2135.023" Y="2510.699" Z="4.517229" />
+				<Hotspot X="-2156.861" Y="2537.621" Z="8.014196" />
+				<Hotspot X="-2010.381" Y="2388.725" Z="5.889823" />
+				<Hotspot X="-2163.657" Y="2362.574" Z="5.244018" />
            	</Hotspots>
-       		</Objective>
+		</Objective>
    	</Quest>
 
 <!-- We Will Rock You -->
    	<Quest Id="32142" Name="We Will Rock You">
-       		<Objective Type="KillMob" MobId="67357" KillCount="10">
+		<Objective Type="KillMob" MobId="67357" KillCount="10">
            	<Hotspots>
 				<Hotspot X="-1994.781" Y="2415.605" Z="4.300503" />
 				<Hotspot X="-1996.006" Y="2495.207" Z="7.631973" />
@@ -95,7 +96,7 @@
 				<Hotspot X="-2114.503" Y="2457.937" Z="4.533043" />
 				<Hotspot X="-2137.894" Y="2367.81" Z="4.023705" />
            	</Hotspots>
-       		</Objective>
+		</Objective>
    	</Quest>
 
 <!-- Hammer to Fall -->

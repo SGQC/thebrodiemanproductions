@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r79</Name>
+	<Name>Golden Lotus PreReqs r80</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -377,7 +377,7 @@
 		</CustomBehavior>
 	</If>
 
-	<If Condition="!HasQuest(30635) &amp;&amp; !IsQuestCompleted(30635)" >
+	<If Condition="HasQuest(30635) &amp;&amp; !IsQuestCompleted(30635)" >
 		<CustomBehavior File="UserSettings" QuestId="30635	" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1439.403" Y="1785.866" Z="302.0502" />
 		<CustomBehavior File="ForcedDismount" />

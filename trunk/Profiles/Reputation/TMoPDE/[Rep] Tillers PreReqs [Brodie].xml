@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs</Name>
+	<Name>Tillers PreReqs r80</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -181,6 +181,13 @@
 				<CustomBehavior File="InteractWith" MobId="63166" NumOfTimes="1" WaitForNpcs="False" WaitTime="1500" />
 				<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<!-- Tool Time -->
+				<If Condition="!HasItem(80513)">
+					<CustomBehavior File="InteractWith" MobId="211331" ObjectType="GameObject"  WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+				</If>
+				<If Condition="!HasItem(79104)">
+					<CustomBehavior File="InteractWith" MobId="211330" ObjectType="GameObject"  WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+				</If>
 				<!-- Parched -->
 				<CustomBehavior File="Message" Text="Watering can" LogColor="Green" />
 				<CustomBehavior File="UseItemOn" MobType="Npc" MobId="63163" ItemId="79104" NumOfTimes="1" WaitForNpcs="False" WaitTime="1500" />
