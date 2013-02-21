@@ -1,6 +1,14 @@
 Patch Notes
 
-2/20/12
+2/21/13
+
+r84
+Pandaria Dailies v2
+-- Multiple Logic fixes (thanks WileE91!)
+Shado Pan
+-- Ghost put some code in...HBProfile clone fixed
+
+2/20/13
 
 r83
 Quest Behavior
