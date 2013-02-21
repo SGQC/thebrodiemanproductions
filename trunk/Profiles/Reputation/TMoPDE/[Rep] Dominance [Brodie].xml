@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r75</Name>
+	<Name>Dominance Offensive r82</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -169,6 +169,21 @@
 			<Hotspots>
 				<Hotspot X="-691.89" Y="-684.78" Z="17.09" />
 				<Hotspot X="-684.04" Y="-771.36" Z="15.45" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+	
+<!-- Bilgewater Infiltrators -->
+	<Quest Id="32214" Name="Bilgewater Infiltrators">
+		<Objective Type="KillMob" MobId="67689" KillCount="10">
+			<Hotspots>
+				<Hotspot X="-2024.921" Y="2456.381" Z="6.846819" />
+				<Hotspot X="-1991.656" Y="2493.09" Z="8.411781" />
+				<Hotspot X="-2056.05" Y="2533.65" Z="8.923109" />
+				<Hotspot X="-2103.991" Y="2488.924" Z="4.671427" />
+				<Hotspot X="-2127.432" Y="2391.077" Z="5.737707" />
+				<Hotspot X="-2120.4" Y="2338.787" Z="6.366756" />
+				<Hotspot X="-2007.586" Y="2346.042" Z="5.885516" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -608,6 +623,21 @@
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Runnin On Empty" QuestId="32137" Type="CollectItem" ItemId="91846" CollectCount="9" />
 	</If>
+	
+<!-- Mystery Meatloaf -->
+	<If Condition="HasQuest(32197) &amp;&amp; !IsQuestCompleted(32197)" >
+		<CustomBehavior File="Message" Text="Starting Mystery Meatloaf" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32197" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Mystery Meatloaf" QuestId="32197" Type="CollectItem" ItemId="91874" CollectCount="7" />
+	</If>
+	
+	<If Condition="HasQuest(32197) &amp;&amp; IsQuestCompleted(32197)" >
+		<CustomBehavior File="FlyTo" X="-1922.754" Y="1731.3" Z="1.924688" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Mystery Meatloaf" QuestId="32197" TurnInName="Sezik Steampot" TurnInId="67536" />
+	</If>
 
 <!-- Krasarang Steampot -->
 	<If Condition="HasQuest(32199) &amp;&amp; !IsQuestCompleted(32199)" >
@@ -654,31 +684,10 @@
 		<CustomBehavior File="UserSettings" QuestId="32214" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2005.43" Y="2429.95" Z="4.09" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(32214)" >
-			<If Condition="!Me.HasAura(133937)" >
-				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92475)" />
-			</If>
-			<If Condition="!IsQuestCompleted(32214)" >
-				<CustomBehavior File="FlyTo" X="-2025.33" Y="2446.62" Z="7.05" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="10" QuestId="32214" MobId="67689" NumOfTimes="5" WaitForNpcs="false" WaitTime="100" CollectionDistance="300" />
-			<If Condition="!IsQuestCompleted(32214)" >
-				<CustomBehavior File="FlyTo" X="-1980.98" Y="2490.09" Z="8.61" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="10" QuestId="32214" MobId="67689" NumOfTimes="5" WaitForNpcs="false" WaitTime="100" CollectionDistance="300" />
-			<If Condition="!IsQuestCompleted(32214)" >
-				<CustomBehavior File="FlyTo" X="-2005.62" Y="2521.76" Z="3.72" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="10" QuestId="32214" MobId="67689" NumOfTimes="5" WaitForNpcs="false" WaitTime="100" CollectionDistance="300" />
-			<If Condition="!IsQuestCompleted(32214)" >
-				<CustomBehavior File="FlyTo" X="-2047.94" Y="2529.98" Z="9.19" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="10" QuestId="32214" MobId="67689" NumOfTimes="5" WaitForNpcs="false" WaitTime="100" CollectionDistance="300" />
-			<If Condition="!IsQuestCompleted(32214)" >
-				<CustomBehavior File="FlyTo" X="-2096.57" Y="2476.38" Z="7.17" />
-			</If>
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="10" QuestId="32214" MobId="67689" NumOfTimes="5" WaitForNpcs="false" WaitTime="100" CollectionDistance="300" />
-		</While>
+		<If Condition="!Me.HasAura(133937)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92475)" />
+		</If>
+		<Objective QuestName="Bilgewater Infiltrators" QuestId="32214" Type="KillMob" MobId="67689" KillCount="10" />
 	</If>
 
 <!-- Flash! Aaaaaahhhh! -->
