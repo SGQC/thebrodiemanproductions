@@ -2,6 +2,10 @@ Patch Notes
 
 2/20/12
 
+r83
+Quest Behavior
+-- Modified Laosy Scouting
+
 r82
 Shado Pan
 -- Code cleanup
