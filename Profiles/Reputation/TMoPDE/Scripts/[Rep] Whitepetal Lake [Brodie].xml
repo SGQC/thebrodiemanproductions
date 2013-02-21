@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r79</Name>
+	<Name>Whitepetal Lake r82</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -67,20 +67,6 @@
 				<Hotspot X="1221.72" Y="1472.36" Z="347.76" />
 				<Hotspot X="1064.62" Y="1428.13" Z="346.61" />
 				<Hotspot X="1076.85" Y="1379.54" Z="352.93" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- A Thousand Pointy Teeth -->
-	<Quest Id="30284" Name="A Thousand Pointy Teeth"> 
-		<Objective Type="KillMob" MobId="59404" KillCount="15">
-			<Hotspots>
-				<Hotspot X="1084.92" Y="1496.22" Z="331.28" />
-				<Hotspot X="1109.97" Y="1476.79" Z="332.9" />
-				<Hotspot X="1157.42" Y="1476.45" Z="320.16" />
-				<Hotspot X="1173.49" Y="1448.37" Z="340.73" />
-				<Hotspot X="1102.34" Y="1424.07" Z="319.49" />
-				<Hotspot X="1088.20" Y="1450.57" Z="335.96" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -282,7 +268,7 @@
 		<CustomBehavior File="FlyTo" X="1061.807" Y="1491.629" Z="352.83" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30284)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" WaitForNpcs="false" MobId="59404" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
+			<CustomBehavior File="InteractWith" QuestId="30284" Nav="CTM" WaitForNpcs="false" MobId="59404" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
 	</If>

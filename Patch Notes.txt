@@ -2,6 +2,22 @@ Patch Notes
 
 2/20/12
 
+r82
+Shado Pan
+-- Code cleanup
+Operation Shieldwall
+-- Under Pressure - Moved start point
+Whitepetal Lake
+-- Thousand Pointy Teeth - Added QuestId to stop from doing after quest complete
+-- Thousand Pointy Teeth - Removed Quest Override
+Lost and Found
+-- Redundant Code Cleanup
+-- Added aggro check to every stop
+-- Added pickup pause to every stop
+Dominance Offensive
+-- Bilgewater Infiltrators - Converted to Objective
+-- Added Mystery Meatloaf
+
 r81
 Cloud Serpent
 -- Extra /If fix
