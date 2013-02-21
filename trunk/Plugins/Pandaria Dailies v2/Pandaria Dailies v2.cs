@@ -383,7 +383,7 @@ namespace AzeniusHelper2
 			//http://www.wowhead.com/quest=32446
 			if (IsOnQuest(32446))
 			{
-				if (Me.Combat && JungleShredder.Distance2D <= 10 && JungleShredder != null)
+				if (Me.Combat && JungleShredder != null && JungleShredder.Distance2D <= 10)
 					UseIfNotOnCooldown(93180); //Re-Configured Remote
 			}
 			#endregion
@@ -470,7 +470,7 @@ namespace AzeniusHelper2
             #endregion
 
             #region http://www.wowhead.com/quest=30192 - todo
-            if (IsOnQuest(30192))
+            if (IsOnQuest(30192) && !QuestComplete(30192))
             {
                 if (BrazierFire != null)
                     BrazierFire[0].Interact();
@@ -478,7 +478,7 @@ namespace AzeniusHelper2
             #endregion
 
             #region http://www.wowhead.com/quest=30304 - todo
-            if (IsOnQuest(30304))
+            if (IsOnQuest(30304) && !QuestComplete(30304))
             {
                 if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
                     StatueAttack.Interact();
@@ -488,7 +488,7 @@ namespace AzeniusHelper2
             #endregion
 
             #region http://www.wowhead.com/quest=30299 - todo
-            if (IsOnQuest(30299))
+            if (IsOnQuest(30299) && !QuestComplete(30299))
             {
                 if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
                     StatueAttack.Interact();
@@ -498,7 +498,7 @@ namespace AzeniusHelper2
             #endregion
 
             #region http://www.wowhead.com/quest=30482 - toDo
-            if (IsOnQuest(30482))
+            if (IsOnQuest(30482) && !QuestComplete(30482))
             {
                 if (Sydow != null && Sydow[0].CastingSpellId == 126347)
                 {
@@ -522,7 +522,7 @@ namespace AzeniusHelper2
 
             #region http://www.wowhead.com/quest=30293
             // In Enemy Hands
-            if (IsOnQuest(30293))
+            if (IsOnQuest(30293) && !QuestComplete(30293))
             {
                 if (ShaoTienMindbinder != null && Me.CurrentTargetGuid != ShaoTienMindbinder[0].Guid)
                     ShaoTienMindbinder[0].Target();
@@ -637,7 +637,7 @@ namespace AzeniusHelper2
 			// http://www.wowhead.com/quest=31487
 			if (IsOnQuest(31487))
 			{
-				if (Me.Combat && DreadKunchong.Distance2D <= 10 && DreadKunchong != null)
+				if (Me.Combat && DreadKunchong != null && DreadKunchong.Distance2D <= 10)
 					UseIfNotOnCooldown(87394); //Sonic Disruption Fork
 			}
             if (DreadKunchong != null)
@@ -649,14 +649,14 @@ namespace AzeniusHelper2
 			// http://www.wowhead.com/quest=31268
 			if (IsOnQuest(31268))
 			{
-				if (Me.Combat && AScorpion.Distance2D <= 10 && AScorpion != null)
+				if (Me.Combat && AScorpion != null && AScorpion.Distance2D <= 10)
 					UseIfNotOnCooldown(85884); //Sonic Emitter
 			}
 			
 			// http://www.wowhead.com/quest=31507
 			if (IsOnQuest(31507))
 			{
-				if (Me.Combat && Amberhusk.Distance2D <= 15 && Amberhusk != null)
+				if (Me.Combat && Amberhusk != null && Amberhusk.Distance2D <= 15)
 				{
 					UseIfNotOnCooldown(87841);
 					SpellManager.ClickRemoteLocation(Amberhusk.Location);
