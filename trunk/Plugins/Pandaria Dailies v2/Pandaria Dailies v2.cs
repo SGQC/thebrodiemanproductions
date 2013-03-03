@@ -395,7 +395,7 @@ namespace AzeniusHelper2
 					UseIfNotOnCooldown(93180); //Re-Configured Remote
 			}
 			#endregion
-			
+
 			#region Shredmaster Packle
 			//http://www.wowhead.com/quest=32158
 			if (ShredmasterP != null)
@@ -404,6 +404,33 @@ namespace AzeniusHelper2
                     BarryDurex.QuestHelper.AvoidEnemyCast(ShredmasterP, 80, 10);
 			}
 			#endregion
+			#endregion
+			
+			#region [Cloud Serpent]
+			
+			#region http://www.wowhead.com/quest=31717
+			if (Me.HasAura("Hot Foot!"))
+			{
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getHotFootList, "Hot Foot!", 15);
+			}
+
+            #endregion
+			
+			#region http://www.wowhead.com/quest=32158
+			if (Me.HasAura("Ignite Fuel"))
+			{
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getIgniteFuelList, "Ignite Fuel", 15);
+			}
+			
+			#endregion
+			
+			#region http://www.wowhead.com/quest=31717
+            if (Me.HasAura("Solar Beam"))
+            {
+                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getSolarBeamList, "Solar Beam", 15);
+            }
+
+            #endregion
 			#endregion
 
             #region [Golden Lotus]
@@ -419,22 +446,6 @@ namespace AzeniusHelper2
             if (Me.HasAura("Caustic Pitch"))
             {
                 BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getCausticPitchList, "Caustic Pitch", 15);
-            }
-
-            #endregion
-
-            #region http://www.wowhead.com/quest=31717
-            if (Me.HasAura("Hot Foot!"))
-            {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getHotFootList, "Hot Foot!", 15);
-            }
-
-            #endregion
-			
-			#region http://www.wowhead.com/quest=31717
-            if (Me.HasAura("Solar Beam"))
-            {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getSolarBeamList, "Solar Beam", 15);
             }
 
             #endregion
@@ -789,6 +800,19 @@ namespace BarryDurex
 				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
 						orderby lp.Distance2D ascending
 						where lp.Entry == 129556
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
+		
+		public static List<WoWDynamicObject> getIgniteFuelList
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 135862
 						where wlog(lp)
 						select lp).ToList();
 			}

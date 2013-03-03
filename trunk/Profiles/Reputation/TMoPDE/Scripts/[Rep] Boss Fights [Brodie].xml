@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r79</Name>
+	<Name>Boss Fights r87</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -159,7 +159,7 @@
 				<Mob Name="Shadowmaster Sydow" Id="63240" />
 			</CollectFrom>
 			<Hotspots>
-				<Hotspot X="1157.508" Y="1433.074" Z="342.0823" />
+				<Hotspot X="1137.22" Y="1448.16" Z="346.59" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -231,8 +231,8 @@
 <!-- The Soul-Gatherer -->
 	<If Condition="HasQuest(30482) &amp;&amp; !IsQuestCompleted(30482)">
 		<CustomBehavior File="Message" Text="Starting The Soul-Gatherer" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30482" LootMobs="true" PullDistance="30" />
-		<CustomBehavior File="FlyTo" X="1157.508" Y="1433.074" Z="342.0823" />
+		<CustomBehavior File="UserSettings" QuestId="30482" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="1137.22" Y="1448.16" Z="346.60" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Soul-Gatherer" QuestId="30482" Type="CollectItem" ItemId="85161" CollectCount="1" />
 	</If>
@@ -432,9 +432,9 @@
 		</While>
 	</If>
 
-	<If Condition="HasItem(90625)" >
+	<While Condition="HasItem(90625)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90625)" WaitTime="1000" />
-	</If>
+	</While>
 
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
