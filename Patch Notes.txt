@@ -2,6 +2,15 @@ Patch Notes
 
 3/2/13
 
+r86
+Pandaria Dailies v2
+-- Removed matrix call to Shredmaster Packle, when there can BE ONLY ONE!
+Cloud Serpent
+-- Sky Race - Added Winner's Reward and Valorous Commendation usage support
+The Anglers
+-- Code Cleanup
+-- Who Knew Fish Liked Eggs - Increased wait time on egg usage to allow pool spawn
+
 r85
 Quest Behaviors
 -- Added replacement behavior for Thundering Skies. NOT TESTED - ONLY RUN/REPLACE IF YOU PLAN TO REPORT ON IT!!!

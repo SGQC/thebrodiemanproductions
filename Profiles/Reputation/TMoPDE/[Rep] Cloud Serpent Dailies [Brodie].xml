@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r85</Name>
+	<Name>Cloud Serpent r86</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -528,6 +528,28 @@
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1560.782" Y="-2556.237" Z="151.2554" />
 		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="The Sky Race" QuestId="30152" TurnInName="Elder Anli" TurnInId="58564" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<While Condition="(HasItem(90537))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90537)" WaitTime="1500" />
+		</While>
+		<While Condition="(HasItem(90538))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90538)" WaitTime="1500" />
+		</While>
+		<While Condition="(HasItem(90539))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90539)" WaitTime="1500" />
+		</While>
+		<While Condition="(HasItem(90540))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90540)" WaitTime="1500" />
+		</While>
+		<While Condition="(HasItem(90541))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90541)" WaitTime="1500" />
+		</While>
+		<While Condition="(HasItem(90543))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90543)" WaitTime="1500" />
+		</While>
+		<While Condition="(HasItem(90544))">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90544)" WaitTime="1500" />
+		</While>
 	</If>
 
 <!-- The Trainer's Challenge: Ace Longpaw -->
