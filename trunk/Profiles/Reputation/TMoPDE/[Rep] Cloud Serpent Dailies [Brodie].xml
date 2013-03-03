@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r86</Name>
+	<Name>Cloud Serpent r88</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -162,13 +162,13 @@
    	</Quest>
 
 <!-- The Big Kah-Oona -->
-   	<Quest Id="31715" Name="The Big Kah-Oona">
-       		<Objective Type="KillMob" MobId="65628" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="2295.882" Y="-2438.325" Z="2.67" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31715" Name="The Big Kah-Oona">
+		<Objective Type="KillMob" MobId="65628" KillCount="1">
+			<Hotspots>
+				<Hotspot X="2295.882" Y="-2438.325" Z="2.67" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- The Seed of Doubt -->
    	<Quest Id="31711" Name="The Seed of Doubt">
@@ -483,6 +483,11 @@
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
+	
+	<If Condition="(Me.Location.Distance(new WoWPoint(1559.59, -2580.35, 151.96)) &lt; 10)" >
+		<CustomBehavior File="ForcedDismount" />
+		<RunTo X="1556.95" Y="-2557.13" Z="151.26" />
+	</If>
 
 <!-- Jenova Longeye -->
 	<If Condition="Me.GetReputationLevelWith(1271) &lt; WoWUnitReaction.Exalted" >
@@ -498,6 +503,11 @@
 			<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
 			<PickUp QuestName="Just A Flesh Wound" QuestId="30148" GiverName="Jenova Longeye" GiverId="58413" />
 		</If>
+	</If>
+	
+	<If Condition="(Me.Location.Distance(new WoWPoint(1559.59, -2580.35, 151.96)) &lt; 10)" >
+		<CustomBehavior File="ForcedDismount" />
+		<RunTo X="1556.95" Y="-2557.13" Z="151.26" />
 	</If>
 
 <!-- Starting Quests -->

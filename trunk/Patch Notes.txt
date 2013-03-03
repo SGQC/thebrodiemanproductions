@@ -2,6 +2,12 @@ Patch Notes
 
 3/3/13
 
+r88
+Quest Behaviors
+-- Thundering Skies - Changes to spellcast, hopefully for the better
+Cloud Serpent
+-- Added check, and move commands, to not start dailies inside Elder Anli's hut
+
 r87
 Pandaria Dailies v2
 -- Added support for Shredmaster Packle aoe avoidance (Ignite Fuel)
