@@ -40,7 +40,6 @@ namespace ThunderingSkies
         private Composite _root;
         public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
         public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
-		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }
         public override bool IsDone
         {
             get
@@ -117,19 +116,24 @@ namespace ThunderingSkies
 			DoneYet,
 
 			new DecoratorContinue(ret => !IsObjectiveComplete(1, (uint)QuestId),
-                            new Sequence(  
-				new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) > 30,
-			     	new Sequence(
-                    			new Action(ret => Navigator.MoveTo(Serpent[0].Location)),
-		    			new Action(r => Serpent[0].Face())
-					)),
-				new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) <= 30,
-			     	new Sequence(
-                    			new Action(r => WoWMovement.MoveStop()),
-		    			new Action(r => Serpent[0].Face()),
-                    			SpellManager.Cast(SpellId);
-					)))),
-				new ActionAlwaysSucceed())));
+				new Sequence(  
+					new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) > 30,
+						new Sequence(
+							new Action(ret => Navigator.MoveTo(Serpent[0].Location)),
+							new Action(r => Serpent[0].Face())
+						)
+					),
+					new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) <= 30,
+						new Sequence(
+							new Action(r => WoWMovement.MoveStop()),
+							new Action(r => Serpent[0].Face()),
+							new Action(r => SpellManager.Cast(SpellId)),
+						)
+					)
+				)
+			),
+			new ActionAlwaysSucceed()
+			)));
         }
     }
 }
