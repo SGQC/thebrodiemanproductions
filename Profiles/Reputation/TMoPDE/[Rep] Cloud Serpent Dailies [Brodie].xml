@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent r81</Name>
+	<Name>Cloud Serpent r85</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -33,132 +33,132 @@
 <!-- Quest Overrides -->
 
 <!-- Thinning the Pack -->
-   	<Quest Id="31698" Name="Thinning the Pack">
-       		<Objective Type="KillMob" MobId="63537" KillCount="8">
-           	<Hotspots>
-            		<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
-			<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
-			<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
-			<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
-			<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
-			<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
-			<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31698" Name="Thinning the Pack">
+		<Objective Type="KillMob" MobId="63537" KillCount="8">
+			<Hotspots>
+				<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
+				<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
+				<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
+				<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
+				<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
+				<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
+				<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- The Easiest Way to a Serpent's Heart -->
-   	<Quest Id="30154" Name="The Easiest Way to a Serpent's Heart">
-       		<Objective Type="CollectItem" ItemId="85282" CollectCount="5">
-		<CollectFrom>
-			<Mob Name="Windward Tiger" Id="63537" />
-			<Mob Name="Windward Alpha" Id="67085" />
-		</CollectFrom>
-           	<Hotspots>
-            		<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
-			<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
-			<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
-			<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
-			<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
-			<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
-			<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="30154" Name="The Easiest Way to a Serpent's Heart">
+		<Objective Type="CollectItem" ItemId="85282" CollectCount="5">
+			<CollectFrom>
+				<Mob Name="Windward Tiger" Id="63537" />
+				<Mob Name="Windward Alpha" Id="67085" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
+				<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
+				<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
+				<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
+				<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
+				<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
+				<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Restoring the Balance -->
-   	<Quest Id="30155" Name="Restoring the Balance">
-       		<Objective Type="KillMob" MobId="58212" KillCount="8">
-           	<Hotspots>
-            		<Hotspot X="2195.14" Y="-3358.331" Z="0.368" />
-			<Hotspot X="2296.381" Y="-3349.805" Z="4.638833" />
-			<Hotspot X="2372.883" Y="-3360.1" Z="2.674017" />
-			<Hotspot X="2442.421" Y="-3371.575" Z="2.713516" />
-			<Hotspot X="2424.182" Y="-3288.962" Z="0.4166917" />
-			<Hotspot X="2356.562" Y="-3276.115" Z="4.60577" />
-			<Hotspot X="2275.259" Y="-3288.949" Z="3.419445" />
-			<Hotspot X="2199.361" Y="-3290.765" Z="4.054585" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="30155" Name="Restoring the Balance">
+		<Objective Type="KillMob" MobId="58212" KillCount="8">
+			<Hotspots>
+				<Hotspot X="2195.14" Y="-3358.331" Z="0.368" />
+				<Hotspot X="2296.381" Y="-3349.805" Z="4.638833" />
+				<Hotspot X="2372.883" Y="-3360.1" Z="2.674017" />
+				<Hotspot X="2442.421" Y="-3371.575" Z="2.713516" />
+				<Hotspot X="2424.182" Y="-3288.962" Z="0.4166917" />
+				<Hotspot X="2356.562" Y="-3276.115" Z="4.60577" />
+				<Hotspot X="2275.259" Y="-3288.949" Z="3.419445" />
+				<Hotspot X="2199.361" Y="-3290.765" Z="4.054585" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Preservation -->
-   	<Quest Id="30159" Name="Preservation">
-       		<Objective Type="CollectItem" ItemId="79067" CollectCount="8">
-		<CollectFrom>
-			<GameObject Name="Serpent Egg" Id="210240" />
-		</CollectFrom>
-           	<Hotspots>
-            		<Hotspot X="2195.14" Y="-3358.331" Z="0.368" />
-			<Hotspot X="2296.381" Y="-3349.805" Z="4.638833" />
-			<Hotspot X="2372.883" Y="-3360.1" Z="2.674017" />
-			<Hotspot X="2442.421" Y="-3371.575" Z="2.713516" />
-			<Hotspot X="2424.182" Y="-3288.962" Z="0.4166917" />
-			<Hotspot X="2356.562" Y="-3276.115" Z="4.60577" />
-			<Hotspot X="2275.259" Y="-3288.949" Z="3.419445" />
-			<Hotspot X="2199.361" Y="-3290.765" Z="4.054585" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="30159" Name="Preservation">
+		<Objective Type="CollectItem" ItemId="79067" CollectCount="8">
+			<CollectFrom>
+				<GameObject Name="Serpent Egg" Id="210240" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2195.14" Y="-3358.331" Z="0.368" />
+				<Hotspot X="2296.381" Y="-3349.805" Z="4.638833" />
+				<Hotspot X="2372.883" Y="-3360.1" Z="2.674017" />
+				<Hotspot X="2442.421" Y="-3371.575" Z="2.713516" />
+				<Hotspot X="2424.182" Y="-3288.962" Z="0.4166917" />
+				<Hotspot X="2356.562" Y="-3276.115" Z="4.60577" />
+				<Hotspot X="2275.259" Y="-3288.949" Z="3.419445" />
+				<Hotspot X="2199.361" Y="-3290.765" Z="4.054585" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- The Shoe is on The Other Foot -->
-   	<Quest Id="31700" Name="The Shoe is on The Other Foot">
-       		<Objective Type="CollectItem" ItemId="89054" CollectCount="14">
-		<CollectFrom>
-			<GameObject Name="Stolen Boots" Id="214865" />
-		</CollectFrom>
-           	<Hotspots>
-            		<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
-			<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
-			<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
-			<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
-			<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
-			<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
-			<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31700" Name="The Shoe is on The Other Foot">
+		<Objective Type="CollectItem" ItemId="89054" CollectCount="14">
+			<CollectFrom>
+				<GameObject Name="Stolen Boots" Id="214865" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
+				<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
+				<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
+				<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
+				<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
+				<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
+				<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Sprite Fright -->
-   	<Quest Id="31699" Name="Sprite Fright">
-       		<Objective Type="KillMob" MobId="65635" KillCount="7">
-           	<Hotspots>
-            		<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
-			<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
-			<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
-			<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
-			<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
-			<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
-			<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31699" Name="Sprite Fright">
+		<Objective Type="KillMob" MobId="65635" KillCount="7">
+			<Hotspots>
+				<Hotspot X="2436.456" Y="-2814.863" Z="3.235" />
+				<Hotspot X="2497.984" Y="-2838.586" Z="4.301" />
+				<Hotspot X="2477.425" Y="-2893.754" Z="10.332" />
+				<Hotspot X="2528.899" Y="-2945.658" Z="6.239" />
+				<Hotspot X="2559.456" Y="-2893.379" Z="4.883" />
+				<Hotspot X="2623.216" Y="-2871.186" Z="6.392" />
+				<Hotspot X="2683.676" Y="-2879.798" Z="4.936" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- On The Prowl -->
-   	<Quest Id="31702" Name="On The Prowl">
-       		<Objective Type="KillMob" MobId="65612" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="2609.97" Y="-3008.14" Z="8.27" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31702" Name="On The Prowl">
+		<Objective Type="KillMob" MobId="65612" KillCount="1">
+			<Hotspots>
+				<Hotspot X="2609.97" Y="-3008.14" Z="8.27" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Slitherscale Suppression -->
-   	<Quest Id="31194" Name="Slitherscale Suppression">
-       		<Objective Type="KillMob" MobId="63536" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="2195.14" Y="-3416.31" Z="1.27" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31194" Name="Slitherscale Suppression">
+		<Objective Type="KillMob" MobId="63536" KillCount="1">
+			<Hotspots>
+				<Hotspot X="2195.14" Y="-3416.31" Z="1.27" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Dark Huntress -->
-   	<Quest Id="31701" Name="Dark Huntress">
-       		<Objective Type="KillMob" MobId="63538" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="2467.45" Y="-3079.71" Z="11.52" />
-           	</Hotspots>
-       		</Objective>
+	<Quest Id="31701" Name="Dark Huntress">
+		<Objective Type="KillMob" MobId="63538" KillCount="1">
+			<Hotspots>
+				<Hotspot X="2467.45" Y="-3079.71" Z="11.52" />
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- The Big Kah-Oona -->
@@ -508,7 +508,7 @@
 	<If Condition="HasQuest(30152) &amp;&amp; !IsQuestCompleted(30152)" >
 		<CustomBehavior File="Message" Text="Starting The Sky Race" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31720" LootMobs="true" PullDistance="1" />
-		<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="READ BEFORE CONTINUING!!! \n As of right now, the bot will start the quest, and be halfway to checkpoint 2 before the quest starts. This guarantees you first place (and 15 extra valor) BUT this is CHEATING!!! I will work to fix this, but I turned it in and have to wait. \n \n USE CAUTION as Blizz may notice this!!!" />
+	<!--<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="READ BEFORE CONTINUING!!! \n As of right now, the bot will start the quest, and be halfway to checkpoint 2 before the quest starts. This guarantees you first place (and 15 extra valor) BUT this is CHEATING!!! I will work to fix this, but I turned it in and have to wait. \n \n USE CAUTION as Blizz may notice this!!!" />-->
 		<CustomBehavior File="FlyTo" X="1620.052" Y="-2639.17" Z="149.995" />
 		<CustomBehavior File="InteractWith" MobId="58420" GossipOptions="1" X="1620.61" Y="-2641.02" Z="149.91" />
 		<CustomBehavior File="FlyTo" X="1818.97" Y="-2780.342" Z="143.7073" /> <!-- Checkpoint #1 -->

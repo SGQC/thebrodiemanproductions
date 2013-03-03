@@ -1,5 +1,29 @@
 Patch Notes
 
+3/2/13
+
+r85
+Quest Behaviors
+-- Added replacement behavior for Thundering Skies. NOT TESTED - ONLY RUN/REPLACE IF YOU PLAN TO REPORT ON IT!!!
+Pandaria Dailies v2
+-- Raised to v2.1.1
+-- Added support for Shredmaster Packle spell avoidance (Boot to the Head)
+-- Added support for Ace Longpaw ground aoe avoidance (Hot Foot!)
+-- Added support for Suchi the Sweet ground aoe avoidance (Solar Beam)
+Cloud Serpent
+-- Code Cleanup
+-- Disabled Sky Race Warning. Will now run regardless
+The Tillers
+-- PreReq check disabled temporarily
+-- Weed War II - Converted macro to gossip option to InteractWith with gossip options
+Red Crane Temple
+-- Ellia Ravenmane: Redemption - Fixed flyto location
+-- Code Cleanup
+Whitepetal Lake
+-- Code Cleanup
+-- Fiery Tongue, Fragile Feet - Converted Objective to CTM InteractWith, needs full testing
+-- Sparkle in the Eye - Removed Redundant Objective code
+
 2/21/13
 
 r84

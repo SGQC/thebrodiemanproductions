@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
         public override string Name { get { return "Pandaria Dailies v2"; } }
         public override string Author { get { return "Buddy Community"; } }
-        public override Version Version { get { return new Version(2, 1, 0); } }
+        public override Version Version { get { return new Version(2, 1, 1); } }
         public override bool WantButton { get { return true; } }
         public override string ButtonText { get { return "Credits"; } }
 
@@ -154,13 +154,21 @@ namespace AzeniusHelper2
             }
         }
 
-        public WoWUnit JungleShredder
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 67285 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
-            }
-        }
+		public WoWUnit JungleShredder
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 67285 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
+		
+		public WoWUnit ShredmasterP
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 67371 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
         public WoWUnit DreadKunchong
         {
@@ -387,6 +395,15 @@ namespace AzeniusHelper2
 					UseIfNotOnCooldown(93180); //Re-Configured Remote
 			}
 			#endregion
+			
+			#region Shredmaster Packle
+			//http://www.wowhead.com/quest=32158
+			if (ShredmasterP != null)
+			{
+				if (Me.Combat && ShredmasterP.Distance2D <= 10 && ShredmasterP[0].IsCasting && ShredmasterP.CastingSpellId == 135865)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(ShredmasterP, 80, 10);
+			}
+			#endregion
 			#endregion
 
             #region [Golden Lotus]
@@ -397,11 +414,27 @@ namespace AzeniusHelper2
                 BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getLightningPoolList, "Lightning Pool", 15); //TODO test it..
             }
             #endregion
-
+			
             #region http://www.wowhead.com/quest=30251
             if (Me.HasAura("Caustic Pitch"))
             {
                 BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getCausticPitchList, "Caustic Pitch", 15);
+            }
+
+            #endregion
+
+            #region http://www.wowhead.com/quest=31717
+            if (Me.HasAura("Hot Foot!"))
+            {
+                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getHotFootList, "Hot Foot!", 15);
+            }
+
+            #endregion
+			
+			#region http://www.wowhead.com/quest=31717
+            if (Me.HasAura("Solar Beam"))
+            {
+                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getSolarBeamList, "Solar Beam", 15);
             }
 
             #endregion
@@ -747,6 +780,19 @@ namespace BarryDurex
                         select lp).ToList();
             }
         }
+		
+		public static List<WoWDynamicObject> getHotFootList
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 129556
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
 
         public static List<WoWDynamicObject> getVenomSplashList
         {
@@ -756,6 +802,19 @@ namespace BarryDurex
                 return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
                         orderby lp.Distance2D ascending
                         where lp.Entry == 79607
+                        where wlog(lp)
+                        select lp).ToList();
+            }
+        }
+		
+		public static List<WoWDynamicObject> getSolarBeamList
+        {
+            get
+            {
+                ObjectManager.Update();
+                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+                        orderby lp.Distance2D ascending
+                        where lp.Entry == 129888
                         where wlog(lp)
                         select lp).ToList();
             }
