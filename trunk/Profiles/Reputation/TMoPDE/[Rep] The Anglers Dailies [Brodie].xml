@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r73</Name>
+	<Name>The Anglers Dailies r86</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -40,22 +40,22 @@
 <!-- Quest Overrides -->
 
 <!-- Viseclaw Soup -->
-   	<Quest Id="30701" Name="Viseclaw Soup">
-       		<Objective Type="CollectItem" ItemId="80832" CollectCount="16">
-		<CollectFrom>
-			<Mob Name="Viseclaw Fry" Id="61090" />
-			<Mob Name="Viseclaw Fisher" Id="58880" />
-			<Mob Name="Viseclaw Scuttler" Id="58881" />
-			<Mob Name="Elder Viseclaw" Id="61091" />
-		</CollectFrom>
-           	<Hotspots>
-            		<Hotspot X="-1409.04" Y="153.46" Z="3.70" />
-			<Hotspot X="-1419.89" Y="209.86" Z="1.24" />
-			<Hotspot X="-1485.05" Y="247.25" Z="1.17" />
-			<Hotspot X="-1484.86" Y="312.30" Z="2.53" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="30701" Name="Viseclaw Soup">
+		<Objective Type="CollectItem" ItemId="80832" CollectCount="16">
+			<CollectFrom>
+				<Mob Name="Viseclaw Fry" Id="61090" />
+				<Mob Name="Viseclaw Fisher" Id="58880" />
+				<Mob Name="Viseclaw Scuttler" Id="58881" />
+				<Mob Name="Elder Viseclaw" Id="61091" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-1409.04" Y="153.46" Z="3.70" />
+				<Hotspot X="-1419.89" Y="209.86" Z="1.24" />
+				<Hotspot X="-1485.05" Y="247.25" Z="1.17" />
+				<Hotspot X="-1484.86" Y="312.30" Z="2.53" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Fishing for a Bruising -->
    	<Quest Id="30588" Name="Fishing for a Bruising">
@@ -239,45 +239,42 @@
 	</If>
 
 <!-- Scavenger Hunt -->
-<!--	<If Condition="HasQuest(30698) &amp;&amp; !IsQuestCompleted(30698) &amp;&amp; (Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt;= 450)" >
-
+<!--<If Condition="HasQuest(30698) &amp;&amp; !IsQuestCompleted(30698) &amp;&amp; (Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt;= 450)" >
 		<CustomBehavior File="Message" Text="Starting Scavenger Hunt" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30698" LootMobs="true" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1656.867" Y="-26.41589" Z="0.2146372" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="MrFishIt" PoolId="211423" CollectItemId="80830" CollectItemCount="15" MoveToPool="false" />
-
-
+		<CustomBehavior File="MrFishIt" PoolId="211423" CollectItemId="80830" CollectItemCount="15" MoveToPool="false" />
 	</If> -->
 
 <!-- What Lurks Below -->
 	<If Condition="HasQuest(30585) &amp;&amp; !IsQuestCompleted(30585)" >
-        	<CustomBehavior File="Message" Text="Starting What Lurks Below" LogColor="Green" />
+		<CustomBehavior File="Message" Text="Starting What Lurks Below" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30585" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1087.74" Y="1332.411" Z="16.6486" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30585)" >
         		<CustomBehavior File="MrFishIt" CollectItemId="80262" CollectItemCount="1" X="-1100.109" Y="1346.707" Z="13.99739" />
 		</While>
-        </If>
+	</If>
 
 <!-- Shocking! -->
 	<If Condition="(HasQuest(30584) &amp;&amp; !IsQuestCompleted(30584)) &amp;&amp; (Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt;= 450)" >
-        	<CustomBehavior File="Message" Text="Starting Shocking" LogColor="Green" />
+		<CustomBehavior File="Message" Text="Starting Shocking" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30584" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-976.15" Y="-64.50" Z="23.50" />
 		<CustomBehavior File="ForcedDismount" />
-        	<CustomBehavior File="MrFishIt" CollectItemId="80260" CollectItemCount="7" X="-979.07" Y="-79.09" Z="18.18" />
-        </If>
+		<CustomBehavior File="MrFishIt" CollectItemId="80260" CollectItemCount="7" X="-979.07" Y="-79.09" Z="18.18" />
+	</If>
 
 <!-- Piranha! -->
 	<If Condition="HasQuest(30763) &amp;&amp; !IsQuestCompleted(30763) &amp;&amp; (Me.GetSkill(Styx.SkillLine.Fishing).CurrentValue &gt;= 450)" >
-        	<CustomBehavior File="Message" Text="Starting Piranha" LogColor="Green" />
+		<CustomBehavior File="Message" Text="Starting Piranha" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30763" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1368.99" Y="947.12" Z="14.20" />
 		<CustomBehavior File="ForcedDismount" />
-        	<CustomBehavior File="MrFishIt" CollectItemId="81122" CollectItemCount="5" X="-1362.18" Y="935.83" Z="13.99" />
-        </If>
+		<CustomBehavior File="MrFishIt" CollectItemId="81122" CollectItemCount="5" X="-1362.18" Y="935.83" Z="13.99" />
+	</If>
 
 <!-- Fishing for a Bruising -->
 	<If Condition="HasQuest(30588) &amp;&amp; !IsQuestCompleted(30588)" >
@@ -375,7 +372,7 @@
 
 <!-- Who Knew Fish Liked Eggs -->
 	<If Condition="HasQuest(30598) &amp;&amp; !IsQuestCompleted(30598)" >
-        	<CustomBehavior File="Message" Text="Starting Who Knew Fish Likes Eggs" LogColor="Green" />
+		<CustomBehavior File="Message" Text="Starting Who Knew Fish Likes Eggs" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30598" LootMobs="True" PullDistance="15" />
 		<If Condition="!HasItem(80303)" >
 			<CustomBehavior File="FlyTo" X="-1621.62" Y="-135.16" Z="42.35" />
@@ -386,8 +383,8 @@
 			<CustomBehavior File="FlyTo" X="-1394.035" Y="-259.272" Z="0.1" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(80303)" WaitTime="1000" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-        		<CustomBehavior File="MrFishIt" QuestId="30598" CollectItemId="80310" PoolId="211169" MoveToPool="true" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<CustomBehavior File="MrFishIt" QuestId="30598" CollectItemId="80310" PoolId="211169" MoveToPool="true" />
 		</If>
 	</If>
 

@@ -400,7 +400,7 @@ namespace AzeniusHelper2
 			//http://www.wowhead.com/quest=32158
 			if (ShredmasterP != null)
 			{
-				if (Me.Combat && ShredmasterP.Distance2D <= 10 && ShredmasterP[0].IsCasting && ShredmasterP.CastingSpellId == 135865)
+				if (Me.Combat && ShredmasterP.Distance2D <= 10 && ShredmasterP.IsCasting && ShredmasterP.CastingSpellId == 135865)
                     BarryDurex.QuestHelper.AvoidEnemyCast(ShredmasterP, 80, 10);
 			}
 			#endregion
