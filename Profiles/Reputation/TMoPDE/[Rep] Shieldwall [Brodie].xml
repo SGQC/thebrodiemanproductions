@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r82</Name>
+	<Name>Operation Shieldwall r87</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -591,8 +591,8 @@
 <!-- Under Pressure -->
 	<If Condition="HasQuest(32144) &amp;&amp; !IsQuestCompleted(32144)">
 		<CustomBehavior File="Message" Text="Starting Under Pressure" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="true" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="-2156.86" Y="2537.62" Z="8.01" />
+		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="-2118.28" Y="2511.41" Z="4.31" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Under Pressure" QuestId="32144" Type="UseObject" ObjectId="216150" UseCount="8" />
 	</If>

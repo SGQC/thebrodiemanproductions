@@ -1,5 +1,17 @@
 Patch Notes
 
+3/3/13
+
+r87
+Pandaria Dailies v2
+-- Added support for Shredmaster Packle aoe avoidance (Ignite Fuel)
+Operation Shieldwall
+-- Under Pressure - Changed landing location to move away from the boats
+-- Under Pressure - Changed Pull Distance from 25 to 5.
+Boss Fights
+-- The Soul-Gatherer - Lowered Pull Distance, updated landing location
+-- Will now keep opening Treasure of the Vale until you don't have anymore (for instances of having 2 bosses in 1 day)
+
 3/2/13
 
 r86
