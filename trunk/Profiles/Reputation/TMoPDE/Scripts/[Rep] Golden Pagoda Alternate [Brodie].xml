@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Pagoda Alternate r51</Name>
+	<Name>Golden Pagoda Alternate r89</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -120,30 +120,28 @@
 
 <!-- Burning Away the Filth -->
 	<If Condition="(HasQuest(30282) &amp;&amp; !IsQuestCompleted(30282))" >
-
 		<CustomBehavior File="Message" Text="Starting Burning Away the Filth" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30282" LootMobs="true" PullDistance="5" />
-		<CustomBehavior File="FlyTo" X="1234.622" Y="1459.12" Z="351.6492" />
-
+		<CustomBehavior File="FlyTo" X="1234.62" Y="1459.12" Z="351.65" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30282)" >
 			<If Condition="!IsQuestCompleted(30282)" >
-				<RunTo X="1255.798" Y="1416.6" Z="353.2284" />
+				<RunTo X="1255.80" Y="1416.60" Z="353.23" />
 				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</If>
 			<If Condition="!IsQuestCompleted(30282)" >
-				<RunTo X="1241.337" Y="1343.138" Z="360.4936" />
+				<RunTo X="1241.38" Y="1343.14" Z="360.50" />
 				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</If>
 			<If Condition="!IsQuestCompleted(30282)" >
-				<RunTo X="1153.487" Y="1332.492" Z="351.4222" />
+				<RunTo X="1153.49" Y="1332.49" Z="351.42" />
 				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</If>
 			<If Condition="!IsQuestCompleted(30282)" >
-				<RunTo X="1175.964" Y="1410.789" Z="343.0818" />
+				<RunTo X="1175.96" Y="1410.79" Z="343.08" />
 				<CustomBehavior File="UseItemTargetLocation" ItemId="84781" UseType="ToObject" ObjectId="212874" ObjectType="GameObject" Range="15" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</If>
@@ -152,11 +150,9 @@
 
 <!-- A Smashing Impression -->
 	<If Condition="(HasQuest(30283) &amp;&amp; !IsQuestCompleted(30283))" >
-
 		<CustomBehavior File="Message" Text="Starting A Smashing Impression" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30283" LootMobs="true" PullDistance="10" />
-		<CustomBehavior File="FlyTo" X="1228.322" Y="1353.793" Z="363.7739" />
-
+		<CustomBehavior File="FlyTo" X="1228.32" Y="1353.79" Z="363.78" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30283)" >
 			<CustomBehavior File="InteractWith" MobId="63089" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
@@ -168,33 +164,27 @@
 
 <!-- In Enemy Hands -->
 	<If Condition="(HasQuest(30293) &amp;&amp; !IsQuestCompleted(30293))" >
-
 		<CustomBehavior File="Message" Text="Starting In Enemy Hands" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30293" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="In Enemy Hands" QuestId="30293" Type="KillMob" MobId="63221" KillCount="8" />
 	</If>
 
 <!-- The Silent Approach -->
 	<If Condition="(HasQuest(30281) &amp;&amp; !IsQuestCompleted(30281))" >
-
 		<CustomBehavior File="Message" Text="Starting The Silent Approach" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30281" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Silent Approach" QuestId="30281" Type="KillMob" MobId="63065" KillCount="6" />
 	</If>
 
 <!-- Rude Awakenings -->
 	<If Condition="(HasQuest(30292) &amp;&amp; !IsQuestCompleted(30292))" >
-
 		<CustomBehavior File="Message" Text="Starting Rude Awakenings" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30292" LootMobs="true" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Rude Awakenings" QuestId="30292" Type="KillMob" MobId="63130" KillCount="8" />
 	</If>
