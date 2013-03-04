@@ -2,6 +2,12 @@ Patch Notes
 
 3/3/13
 
+r89
+Golden Lotus
+-- Cannonfire - Added check for Aura on cannons
+Golden Pagoda Alternative
+-- Code Cleanup
+
 r88
 Quest Behaviors
 -- Thundering Skies - Changes to spellcast, hopefully for the better
