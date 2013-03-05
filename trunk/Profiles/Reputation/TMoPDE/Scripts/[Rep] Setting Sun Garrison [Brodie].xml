@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r79</Name>
+	<Name>Setting Sun Garrison r90</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -257,14 +257,13 @@
 <!-- Bloodied Skies -->
 	<If Condition="(HasQuest(30266) &amp;&amp; !IsQuestCompleted(30266))" >
 		<CustomBehavior File="Message" Text="Starting Bloodied Skies" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30246" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30266" LootMobs="true" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="721.186" Y="2340.127" Z="430.8784" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30266)" >
-			<While Condition="!Me.IsOnTransport" >
-				<CustomBehavior File="InteractWith" MobId="64336" CollectionDistance="250" />
-			</While>
-			<CustomBehavior File="NoControlVehicle" MobId="63973" QuestId="30266" NumOfTimes="1" AttackButton="1" MaxRange="500" WaitTime="1000" />
+			<CustomBehavior File="Misc\FixedCannon" QuestId="30266" MinAngle="0.2" MaxAngle="1" VehicleId="64336" Buttons="1" ExitButton="12" />
+			<CustomBehavior File="Misc\RunLua" Lua="VehicleExit()" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		</While>
 		<CustomBehavior File="FlyTo" X="682.0827" Y="2394.73" Z="447.0219" />
 		<CustomBehavior File="FlyTo" X="741.7631" Y="2342.811" Z="539.0228" />

@@ -1,5 +1,13 @@
 Patch Notes
 
+3/4/13
+
+r90
+Setting Sun Garrison
+-- Bloodied Skies - Corrected UserSettings QuestId typo
+-- Bloodied Skies - Converted NoControlVehicle to FixedCannon QB (from Cava's SVN)
+-- Bloodied Skies - Added "Leave Vehicle" command, so not to wait for WoW to auto boot you
+
 3/3/13
 
 r89
