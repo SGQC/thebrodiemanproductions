@@ -525,6 +525,7 @@
 			(HasQuest(30320)) &amp;&amp; (IsQuestCompleted(30320)))" >
 		<CustomBehavior File="Message" Text="Phase 1 Completed. Returning to Golden Pagoda." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="1217.194" Y="1049.704" Z="425.9666" />
+		<CustomBehavior File="ForcedDismount" />
 	</If>
 
   	<If Condition="(HasQuest(31762)) &amp;&amp; (IsQuestCompleted(31762))" >

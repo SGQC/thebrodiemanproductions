@@ -297,6 +297,22 @@ namespace AzeniusHelper2
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 58769 && u.IsAlive && u.Distance < 30).FirstOrDefault();
             }
         }
+		
+		public WoWUnit GuardianAttack
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69894 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
+		
+		public WoWUnit GuardianFall
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69240 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
 
         public WoWUnit StatueAttack
         {
@@ -707,6 +723,18 @@ namespace AzeniusHelper2
 				}
 			}
             #endregion
+
+			#region Isle of Thunder
+            #region http://www.wowhead.com/quest=32533
+            if (IsOnQuest(32533) && !QuestComplete(32533))
+            {
+                if (!StyxWoW.Me.Combat && GuardianAttack != null && GuardianAttack.Distance2D <= 5)
+                    GuardianAttack.Interact();
+                if (!StyxWoW.Me.Combat && GuardianFall != null && GuardianFall.Distance2D <= 5)
+                    GuardianFall.Interact();
+            }
+            #endregion
+			#endregion
         }
     }
 }

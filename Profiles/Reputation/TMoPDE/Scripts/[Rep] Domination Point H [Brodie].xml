@@ -45,7 +45,7 @@
 <QuestOrder IgnoreCheckpoints="True" >
 
 	<If Condition="!IsQuestCompleted(32249) &amp;&amp; !HasQuest(32249)" >
-		<CustomBehavior File="FlyTo" X="1574.74" Y="894.62" Z="473.60" />
+		<CustomBehavior File="FlyTo" X="1613.74" Y="921.02" Z="471.15" />
 	</If>
 
 	<If Condition="HasQuest(32249)" >

@@ -1,0 +1,153 @@
+<HBProfile>
+	<Name>Thunder Bosses r91</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+	</Vendors>
+
+	<Mailboxes>
+	</Mailboxes>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder IgnoreCheckpoints="True" >
+
+<!-- Competing Magic -->
+	<If Condition="HasQuest(32576) &amp;&amp; !IsQuestCompleted(32576)" >
+		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32576" LootMobs="true" PullDistance="10" />
+		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
+		<Objective QuestName="Competing Magic" QuestId="32576" Type="KillMob" MobId="69665" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32579) &amp;&amp; !IsQuestCompleted(32579)" >
+		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32579" LootMobs="true" PullDistance="10" />
+		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
+		<Objective QuestName="Competing Magic" QuestId="32579" Type="KillMob" MobId="69665" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32561) &amp;&amp; !IsQuestCompleted(32561)" >
+		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32561" LootMobs="true" PullDistance="10" />
+		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
+		<Objective QuestName="Competing Magic" QuestId="32561" Type="KillMob" MobId="69665" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32520) &amp;&amp; !IsQuestCompleted(32520)" >
+		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32520" LootMobs="true" PullDistance="10" />
+		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
+		<Objective QuestName="Competing Magic" QuestId="32520" Type="KillMob" MobId="69665" KillCount="1" />
+	</If>
+
+<!-- Quest Turn Ins -->
+
+<!-- Alliance Return -->
+	<If Condition="HasQuest(32576) &amp;&amp; IsQuestCompleted(32576) ||
+					HasQuest(32579) &amp;&amp; IsQuestCompleted(32579)">
+		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<ElseIf Condition="Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		</ElseIf>
+		<Else>
+			<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
+			<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="true" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		</Else>
+		</If>
+	</If>
+	
+<!-- Horde Return -->
+	<If Condition="HasQuest(32561) &amp;&amp; IsQuestCompleted(32561) ||
+					HasQuest(32520) &amp;&amp; IsQuestCompleted(32520)">
+		<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<ElseIf Condition="Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		</ElseIf>
+		<Else>
+			<RunTo X="6691.65" Y="6286.90" Z="1.52" />
+			<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="true" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		</Else>
+		</If>
+	</If>
+	
+	<If Condition="HasQuest(32576) &amp;&amp; IsQuestCompleted(32576)">
+		<TurnIn QuestName="Competing Magic" QuestId="32576" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
+	</If>
+	
+	<If Condition="HasQuest(32579) &amp;&amp; IsQuestCompleted(32579)">
+		<TurnIn QuestName="Competing Magic" QuestId="32579" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
+	</If>
+	
+	<If Condition="HasQuest(32561) &amp;&amp; IsQuestCompleted(32561)">
+		<TurnIn QuestName="Competing Magic" QuestId="32561" TurnInName="Lor'themar Theron" TurnInId="67990" />
+	</If>
+	
+	<If Condition="HasQuest(32520) &amp;&amp; IsQuestCompleted(32520)">
+		<TurnIn QuestName="Competing Magic" QuestId="32520" TurnInName="Lor'themar Theron" TurnInId="67990" />
+	</If>
+
+<!-- Use Arcane Trove (Alliance Only) -->
+	<If Condition="HasItem(94219)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94219)" WaitTime="1500" />
+	</If>
+	
+<!-- Use Sunreaver Bounty (Horde Only) -->
+	<If Condition="HasItem(94220)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94220)" WaitTime="1500" />
+	</If>
+
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+	
+	<If Condition="Me.IsAlliance &amp;&amp; Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100" >
+		<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
+		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+	</If>
+	
+	<If Condition="Me.IsHorde &amp;&amp; Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100" >
+		<RunTo X="6690.58" Y="6481.38" Z="4.63" />
+		<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="true" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+	</If>
+
+<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] August Celestials Dailies [Brodie]" />
+
+<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />
+
+</QuestOrder>
+</HBProfile>
