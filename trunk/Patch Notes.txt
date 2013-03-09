@@ -2,6 +2,27 @@ Patch Notes
 
 3/9/13
 
+r92
+Isle of Thunder (Alliance)
+-- Removed redundant code to search for Zu'Tual quests in case already done.
+-- Added Dark Offerings
+-- Added The Creeping Carpet of Ihgaluk -- VERY MESSY
+-- Changed Multiple quests' Pull Distances lower to avoid chain pulling
+-- Fixed De-Constructed QuestId errors
+-- Fixed The Residents of Ihgaluk QuestId errors
+-- Subtle Encouragement - Updated to spam button more
+-- Soul Surrender - Increased speed of interaction
+-- Rise No More! - Temp disabled hotspots...was ignoring them anyways to kill mogu over targets...
+Isle of Thunder (Horde)
+-- Fixed ending if you don't have boss fight. Should no longer run to the Alliance boat!
+-- Added Quest checker to The Call of Thunder
+-- Updated Subtle Encouragement to spam buttom more
+Pandaria Dailies v2
+-- Lowered distance to log Grave Guardians for Interact
+-- Added support for Trove of the Thunder King (Work in progress)
+Quest Behaviors
+-- Updated Soul Surrender to path better in profile, removed
+
 r91
 Isle of Thunder
 -- Added Alliance and Horde Pre-Req quests
