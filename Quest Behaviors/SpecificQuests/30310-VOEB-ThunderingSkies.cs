@@ -127,7 +127,7 @@ namespace ThunderingSkies
 						new Sequence(
 							new Action(r => WoWMovement.MoveStop()),
 							new Action(r => Serpent[0].Face()),
-							new Action(r => SpellManager.Cast(SpellId)),
+							new Action(r => SpellManager.Cast(SpellId))
 						)
 					)
 				)

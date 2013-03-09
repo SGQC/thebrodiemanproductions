@@ -2,6 +2,10 @@ Patch Notes
 
 3/9/13
 
+r94
+Quest Behaviors
+-- Thundering Skies - Attempting fix to file, unknown issue.
+
 r93
 Isle of Thunder (Horde)
 -- Fixed flyto location for starters (post pre-req)
