@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
         public override string Name { get { return "Pandaria Dailies v2"; } }
         public override string Author { get { return "Buddy Community"; } }
-        public override Version Version { get { return new Version(2, 1, 1); } }
+        public override Version Version { get { return new Version(2, 1, 2); } }
         public override bool WantButton { get { return true; } }
         public override string ButtonText { get { return "Credits"; } }
 
@@ -302,7 +302,7 @@ namespace AzeniusHelper2
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69894 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69894 && u.IsAlive && u.Distance < 10).FirstOrDefault();
             }
         }
 		
@@ -310,7 +310,7 @@ namespace AzeniusHelper2
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69240 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69240 && u.IsAlive && u.Distance < 10).FirstOrDefault();
             }
         }
 
@@ -335,6 +335,14 @@ namespace AzeniusHelper2
             get
             {
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 61502 || u.Entry == 61508 || u.Entry == 61509 && u.Distance < 50 && !u.IsDead).OrderBy(u => u.Distance).ToList();
+            }
+        }
+		
+        public WoWObject ThunderTrove
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWObject>().Where(u => u.Entry == 218593 && u.Distance < 100).FirstOrDefault();
             }
         }
 
@@ -734,6 +742,13 @@ namespace AzeniusHelper2
                     GuardianFall.Interact();
             }
             #endregion
+			
+			#region Thunder King Troves
+				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D >= 5)
+					Navigator.MoveTo(ThunderTrove.Location);
+				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D <= 5)
+					ThunderTrove.Interact();
+			#endregion
 			#endregion
         }
     }

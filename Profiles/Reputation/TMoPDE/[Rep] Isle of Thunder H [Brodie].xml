@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r91</Name>
+	<Name>Isle of Thunder (Horde) r92</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -182,7 +182,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32225" LootMobs="true" PullDistance="20" />
 		<RunTo X="6609.79" Y="6290.33" Z="3.63" />
 		<While Condition="!IsQuestCompleted(32225)" >
-			<CustomBehavior File="InteractWith" MobId="69264" WaitForNpcs="false" CollectionDistance="300" />
+			<CustomBehavior File="InteractWith" QuestId="32225" MobId="69264" WaitForNpcs="false" CollectionDistance="300" />
 		</While>
 	</If>
 	
@@ -483,8 +483,13 @@
 		<CustomBehavior File="UserSettings" QuestId="32605" LootMobs="true" PullDistance="10" />
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<While Condition="!IsQuestCompleted(32605)" >
+			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
 			<CustomBehavior File="InteractWith" MobId="69227" MobId2="69210" QuestId="32605" CollectionDistance="1000" WaitForNpcs="False" MobState="Alive" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
+			<If Condition="Me.HasAura(136461)" >
+				<CustomBehavior File="Misc\RunLua" Lua="local n=GetSpellInfo(136461); CancelUnitBuff(&quot;player&quot;,n)" />
+			</If>
 			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
 		</While>
 	</If>
@@ -680,15 +685,15 @@
 	<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
-		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
+		<RunTo X="6690.58" Y="6481.38" Z="4.63" />
+		<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="true" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	<Else>
-		<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
-		<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="true" />
+		<RunTo X="6693.16" Y="6290.14" Z="1.06" />
+		<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="true" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
-		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
+		<RunTo X="6690.58" Y="6481.38" Z="4.63" />
+		<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="true" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</Else>
 	</If>
