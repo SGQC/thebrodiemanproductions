@@ -1,5 +1,53 @@
 Patch Notes
 
+3/9/13
+
+r91
+Isle of Thunder
+-- Added Alliance and Horde Pre-Req quests
+-- Added Za'Tual Kicker for Alliance
+-- Added Za'Tual Kicker for Horde
+-- Added Preventing a Future Threat (Alliance & Horde)
+-- Added Surgical Strike (Alliance)
+-- Added Surgical Death (Horde)
+-- Added Harbringers of the Loa (Alliance & Horde)
+-- Added Dangers of Za'Tual (Alliance)
+-- Added Pterrible Ptorment (Alliance & Horde)
+-- Added Heinous Sacrifice (Alliance)
+-- Added Ihgaluk Crag Kicker for Alliance
+-- Added Ihgaluk Crag Kicker for Horde
+-- Added Manipulating the Saurok (Horde)
+-- Added The Skumblade Threat (Alliance)
+-- Added The Residents of Ihgaluk (Alliance)
+-- Added Left To Rot (Alliance & Horde)
+-- Added Deconstructed (Alliance)
+-- Added Subtle Encouragement (Alliance & Horde)
+-- Added Just Some Light Clean-Up Work (Alliance)
+-- Added Court of Bones Kicker for Alliance
+-- Added Court of Bones Kicker for Horde
+-- Added Into the Crypts (Alliance & Horde)
+-- Added The Bloodletter (Alliance & Horde)
+-- Added Ashes of the Enemy (Alliance)
+-- Added Grave Circumstances (Alliance & Horde)
+-- Added The Call of Thunder (Horde)
+-- Added Rise No More! (Horde) NEEDS MORE HOTSPOTS
+-- Added Stone Cold (Alliance & Horde)
+-- Added Soul Surrender (Alliance)
+-- Added Allies in the Shadows (Alliance & Horde)
+-- Added usage support for Fortuitous Coffers, Spirits of Harmony
+-- Added placeholder for Incantations of Haqin, Vu, and Deng
+Isle of Thunder Bosses
+-- Added Competing Magic (Alliance) (Both versions)
+-- Added Arcane Trove (Alliance) and Sunreaver Bounty (Horde) item support
+Pandaria Dailies v2
+-- Added support for Isle of Thunder quest Stone Cold
+Quest Behaviors
+-- Added Soul Surrender (Isle of Thunder)
+Golden Lotus
+-- Added ForcedDismount call on Phase 1 turnins to avoid flying up during stuck fix
+Domination Point (PreReqs)
+-- Changed flyto point for Home City for first quest
+
 3/4/13
 
 r90
