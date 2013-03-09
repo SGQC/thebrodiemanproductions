@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r92</Name>
+	<Name>Isle of Thunder (Horde) r93</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -93,7 +93,7 @@
 
 	<If Condition="!(Me.ZoneId==6507)" >
 		<CustomBehavior File="Message" Text="Moving to Shado Pan Garrison." LogColor="Green"  />
-		<CustomBehavior File="FlyTo" X="-1140.584" Y="-1245.333" Z="28.51413" />
+		<CustomBehavior File="FlyTo" X="1748.19" Y="4161.71" Z="159.51" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="true" />
@@ -193,19 +193,19 @@
 		<While Condition="!IsQuestCompleted(32219)" >
 			<If Condition="!IsQuestCompleted(32219)" >
 				<RunTo X="6567.13" Y="6108.35" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" MobState="Alive" />
 			</If>
 			<If Condition="!IsQuestCompleted(32219)" >
 				<RunTo X="6561.52" Y="6201.09" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" MobState="Alive" />
 			</If>
 			<If Condition="!IsQuestCompleted(32219)" >
 				<RunTo X="6474.34" Y="6107.52" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" MobState="Alive" />
 			</If>
 			<If Condition="!IsQuestCompleted(32219)" >
 				<RunTo X="6514.89" Y="6085.92" Z="39.40" />
-				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32219" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" MobState="Alive" />
 			</If>
 		</While>
 	</If>

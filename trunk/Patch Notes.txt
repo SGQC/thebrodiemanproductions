@@ -2,6 +2,11 @@ Patch Notes
 
 3/9/13
 
+r93
+Isle of Thunder (Horde)
+-- Fixed flyto location for starters (post pre-req)
+-- Stone Cold - Should no longer try and grab dead Grave Guardians
+
 r92
 Isle of Thunder (Alliance)
 -- Removed redundant code to search for Zu'Tual quests in case already done.
