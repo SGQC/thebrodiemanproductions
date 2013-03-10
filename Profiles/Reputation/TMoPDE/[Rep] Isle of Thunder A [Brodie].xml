@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r92</Name>
+	<Name>Isle of Thunder (Alliance) r96</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -812,7 +812,9 @@
 		<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
 		<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="true" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
+		<RunTo X="5662.35" Y="6212.02" Z="12.79" />
+		<CustomBehavior File="MyCTM" X="5659.771" Y="6209.47" Z="13.21746" />
+		<CustomBehavior File="MyCTM" X="5656.402" Y="6205.382" Z="17.36683" />
 		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</Else>

@@ -2,6 +2,14 @@ Patch Notes
 
 3/10/13
 
+r96
+Pandaria Dailies v2
+-- Added Subtle Encouragement spell support, should cast more reliably
+Isle of Thunder (Alliance)
+-- Added pathing to boat to leave without falling off
+Thunder Bosses
+-- Added pathing to Alliance boat to leave without falling off
+
 r95
 Pandaria Dailies v2
 -- Added Primal Direhorn/Horned Battlebeast spell avoidance (Double Swipe)
