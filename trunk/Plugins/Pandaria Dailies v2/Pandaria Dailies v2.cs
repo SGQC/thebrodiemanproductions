@@ -757,6 +757,19 @@ namespace AzeniusHelper2
 				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D <= 5)
 					ThunderTrove.Interact();
 			#endregion
+			
+			#region Subtle Encouragement
+			if (IsOnQuest(32606) && !QuestComplete(32606))
+			{
+				SpellManager.Cast(138638);
+				Thread.Sleep(1000);
+			}
+			if (IsOnQuest(32605) && !QuestComplete(32605))
+			{
+				SpellManager.Cast(138638);
+				Thread.Sleep(1000);
+			}
+			#endregion
 			#endregion
 			
 			#region Isle of Giants
