@@ -1,5 +1,15 @@
 Patch Notes
 
+3/10/13
+
+r95
+Pandaria Dailies v2
+-- Added Primal Direhorn/Horned Battlebeast spell avoidance (Double Swipe)
+Golden Lotus
+-- Converted Acts of Cruelty from Objective to CollectThings on friendlies. Should close the gap now.
+Grinding
+-- Added The Black Prince - Isle of Thunder Zu'Tual Grind!
+
 3/9/13
 
 r94
