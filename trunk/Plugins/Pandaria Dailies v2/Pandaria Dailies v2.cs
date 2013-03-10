@@ -329,6 +329,14 @@ namespace AzeniusHelper2
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63556 && u.IsAlive && u.Distance < 30).FirstOrDefault();
             }
         }
+		
+		public WoWUnit PrimalDirehorn
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70016 || u.Entry == 69142 || u.Entry == 70017 || u.Entry == 70018 || u.Entry == 70019 || u.Entry == 69983 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
 
         public List<WoWUnit> MantidNiuzao
         {
@@ -749,6 +757,15 @@ namespace AzeniusHelper2
 				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D <= 5)
 					ThunderTrove.Interact();
 			#endregion
+			#endregion
+			
+			#region Isle of Giants
+			if (PrimalDirehorn != null)
+            {
+                if (Me.Combat && PrimalDirehorn.Distance2D <= 15 && PrimalDirehorn.IsCasting && PrimalDirehorn.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehorn, 80, 15);
+            }
+			
 			#endregion
         }
     }
