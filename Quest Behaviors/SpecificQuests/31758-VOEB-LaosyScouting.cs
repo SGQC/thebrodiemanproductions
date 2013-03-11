@@ -35,8 +35,8 @@ namespace Blastranaar
         private bool _isBehaviorDone;
         public int MobIdLao = 65868;
         private Composite _root;
-        public WoWPoint Location1 = new WoWPoint(1578.794, 1446.312, 512.7374);
-        public WoWPoint Location2 = new WoWPoint(1574.712, 1428.84, 484.7786);
+        public WoWPoint Location1 = new WoWPoint(1578.80, 1446.31, 485.0);
+        public WoWPoint Location2 = new WoWPoint(1574.71, 1428.84, 484.78);
         public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
         public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
 		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }
@@ -69,8 +69,6 @@ namespace Blastranaar
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdLao && !u.IsDead && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
             }
         }
-
-
 	
         public bool IsQuestComplete()
         {
@@ -100,7 +98,6 @@ namespace Blastranaar
                         _isBehaviorDone = true;
                         return RunStatus.Success;
                     }));
-
             }
         }
 
@@ -123,13 +120,8 @@ namespace Blastranaar
                         		_isBehaviorDone = true;
                         		return RunStatus.Success;
 				}
-
                           return RunStatus.Success;
-
-
 			})),
-
-
                     	new Decorator(ret => Lao.Count == 0, new PrioritySelector(
                     	  new Decorator(ret => Location1.Distance(Me.Location) > 50  && Me.CurrentTarget == null, new Action(c =>
 			  {
@@ -140,11 +132,8 @@ namespace Blastranaar
 			  	Lao[0].Target();
 			    }
                           return RunStatus.Success;
-
 			  }
-
 			  )),
-
                     	  new Decorator(ret => Location2.Distance(Me.Location) > 50 && Me.CurrentTarget == null, new Action(c =>
 			  {
 			  TreeRoot.StatusText = "Moving to 2nd location";
@@ -154,22 +143,11 @@ namespace Blastranaar
 			  Lao[0].Target();
 			  }
                     return RunStatus.Success;
-
 			  }
-
 			  ))))));
-
-
-
             }
         }
 
-
-
-
-
-
-		
         protected override Composite CreateBehavior()
         {
             return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(DoneYet, LaoMove, new ActionAlwaysSucceed())));
