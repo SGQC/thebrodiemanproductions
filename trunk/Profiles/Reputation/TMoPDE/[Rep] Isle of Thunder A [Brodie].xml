@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r97</Name>
+	<Name>Isle of Thunder (Alliance) r98</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -38,25 +38,6 @@
 				<Hotspot X="6522.543" Y="6169.586" Z="43.65172" />
 				<Hotspot X="6428.191" Y="6117.734" Z="31.82163" />
 				<Hotspot X="6614.313" Y="6069.032" Z="34.29219" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Dark Offerings -->
-	<Quest Id="32539" Name="Dark Offerings">
-		<Objective Type="UseObject" ObjectId="216991" UseCount="6">
-			<Hotspots>
-				<Hotspot X="6280.383" Y="6244.237" Z="15.92406" />
-				<Hotspot X="6284.976" Y="6139.48" Z="27.92483" />
-				<Hotspot X="6318.386" Y="6008.481" Z="25.94791" />
-				<Hotspot X="6221.089" Y="5949.176" Z="40.78794" />
-				<Hotspot X="6130.664" Y="6008.328" Z="50.47295" />
-				<Hotspot X="6111.66" Y="5973.602" Z="49.94812" />
-				<Hotspot X="6055.106" Y="6010.012" Z="56.07657" />
-				<Hotspot X="6010.951" Y="6075.733" Z="57.54343" />
-				<Hotspot X="6209.774" Y="6122.893" Z="46.67885" />
-				<Hotspot X="6052.726" Y="6259.134" Z="22.89777" />
-				<Hotspot X="6041.158" Y="6175.552" Z="22.89766" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -231,7 +212,6 @@
 	<If Condition="HasQuest(32540) &amp;&amp; !IsQuestCompleted(32540)" >
 		<CustomBehavior File="Message" Text="Starting Harbringers of the Loa" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32540" LootMobs="true" PullDistance="10" />
-		<RunTo X="6119.078" Y="6250.279" Z="27.93363" />
 		<Objective QuestName="Harbringers of the Loa" QuestId="32540" Type="KillMob" MobId="69281" MobId2="69285" KillCount="2" />
 	</If>
 	
@@ -239,7 +219,6 @@
 	<If Condition="HasQuest(32542) &amp;&amp; !IsQuestCompleted(32542)" >
 		<CustomBehavior File="Message" Text="Starting Surgical Strike" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32542" LootMobs="true" PullDistance="10" />
-		<RunTo X="5998.071" Y="6401.809" Z="5.729356" />
 		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69379" MobId2="69412" MobId3="70509" MobId4="69397" MobId5="69780" KillCount="3" />
 		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69171" KillCount="3" />
 		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69254" MobId2="69256" MobId3="69255" KillCount="3" />
@@ -258,8 +237,7 @@
 <!-- Dangers of Za'Tual -->
 	<If Condition="HasQuest(32543) &amp;&amp; !IsQuestCompleted(32543)" >
 		<CustomBehavior File="Message" Text="Starting Dangers of Za'Tual" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32543" LootMobs="true" PullDistance="25" />
-		<RunTo X="6051.618" Y="6209.191" Z="21.36153" />
+		<CustomBehavior File="UserSettings" QuestId="32543" LootMobs="true" PullDistance="10" />
 		<Objective QuestName="Dangers of Za'Tual" QuestId="32543" Type="KillMob" MobId="69780" MobId2="69065" KillCount="12" />
 	</If>
 	
@@ -373,14 +351,6 @@
 		<CustomBehavior File="CompleteLogQuest" QuestId="32549" />
 	</If>
 	
-<!-- The Skumblade Threat -->
-	<If Condition="HasQuest(32535) &amp;&amp; !IsQuestCompleted(32535)" >
-		<CustomBehavior File="Message" Text="Starting The Skumblade Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32535" LootMobs="true" PullDistance="10" />
-		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
-		<Objective QuestName="The Skumblade Threat" QuestId="32535" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />
-	</If>
-	
 <!-- Subtle Encouragement -->
 	<If Condition="HasQuest(32606) &amp;&amp; !IsQuestCompleted(32606)" >
 		<CustomBehavior File="Message" Text="Starting Subtle Encouragement" LogColor="Green" />
@@ -388,6 +358,9 @@
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<While Condition="!IsQuestCompleted(32606)" >
 			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
+			<If Condition="Me.HasAura(136461)" >
+				<CustomBehavior File="Misc\RunLua" Lua="local n=GetSpellInfo(136461); CancelUnitBuff(&quot;player&quot;,n)" />
+			</If>
 			<CustomBehavior File="InteractWith" MobId="69227" MobId2="69210" QuestId="32606" CollectionDistance="1000" WaitForNpcs="False" MobState="Alive" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
@@ -398,10 +371,18 @@
 		</While>
 	</If>
 	
+<!-- The Skumblade Threat -->
+	<If Condition="HasQuest(32535) &amp;&amp; !IsQuestCompleted(32535)" >
+		<CustomBehavior File="Message" Text="Starting The Skumblade Threat" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32535" LootMobs="true" PullDistance="10" />
+		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
+		<Objective QuestName="The Skumblade Threat" QuestId="32535" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />
+	</If>
+	
 <!-- The Residents of Ihgaluk -->
 	<If Condition="HasQuest(32545) &amp;&amp; !IsQuestCompleted(32545)" >
 		<CustomBehavior File="Message" Text="Starting The Residents of Ihgaluk" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32545" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="32545" LootMobs="true" PullDistance="15" />
 		<Objective QuestName="The Residents of Ihgaluk" QuestId="32545" Type="KillMob" MobId="69338" KillCount="1" />
 		<Objective QuestName="The Residents of Ihgaluk" QuestId="32545" Type="KillMob" MobId="69226" KillCount="1" />
 		<Objective QuestName="The Residents of Ihgaluk" QuestId="32545" Type="KillMob" MobId="69229" KillCount="1" />

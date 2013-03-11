@@ -42,36 +42,71 @@
 	<If Condition="HasQuest(32576) &amp;&amp; !IsQuestCompleted(32576)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32576" LootMobs="true" PullDistance="10" />
-		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
 		<Objective QuestName="Competing Magic" QuestId="32576" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32579) &amp;&amp; !IsQuestCompleted(32579)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32579" LootMobs="true" PullDistance="10" />
-		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
 		<Objective QuestName="Competing Magic" QuestId="32579" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32561) &amp;&amp; !IsQuestCompleted(32561)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32561" LootMobs="true" PullDistance="10" />
-		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
 		<Objective QuestName="Competing Magic" QuestId="32561" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32520) &amp;&amp; !IsQuestCompleted(32520)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32520" LootMobs="true" PullDistance="10" />
-		<RunTo X="6255.10" Y="5827.25" Z="5.62" />
 		<Objective QuestName="Competing Magic" QuestId="32520" Type="KillMob" MobId="69665" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32578) &amp;&amp; !IsQuestCompleted(32578)" >
+		<CustomBehavior File="Message" Text="Starting Among the Bones" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32578" LootMobs="true" PullDistance="10" />
+		<Objective QuestName="Among the Bones" QuestId="32578" Type="KillMob" MobId="69666" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32293) &amp;&amp; !IsQuestCompleted(32293)" >
+		<CustomBehavior File="Message" Text="Starting Among the Bones" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32293" LootMobs="true" PullDistance="10" />
+		<Objective QuestName="Among the Bones" QuestId="32293" Type="KillMob" MobId="69666" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32577) &amp;&amp; !IsQuestCompleted(32577)" >
+		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32577" LootMobs="true" PullDistance="10" />
+		<Objective QuestName="Imposing Threat" QuestId="32577" Type="KillMob" MobId="70176" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32581) &amp;&amp; !IsQuestCompleted(32581)" >
+		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32581" LootMobs="true" PullDistance="10" />
+		<Objective QuestName="Imposing Threat" QuestId="32581" Type="KillMob" MobId="70176" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32562) &amp;&amp; !IsQuestCompleted(32562)" >
+		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32562" LootMobs="true" PullDistance="10" />
+		<Objective QuestName="Imposing Threat" QuestId="32562" Type="KillMob" MobId="70176" KillCount="1" />
+	</If>
+	
+	<If Condition="HasQuest(32522) &amp;&amp; !IsQuestCompleted(32522)" >
+		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32522" LootMobs="true" PullDistance="10" />
+		<Objective QuestName="Imposing Threat" QuestId="32522" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 
 <!-- Quest Turn Ins -->
 
 <!-- Alliance Return -->
 	<If Condition="HasQuest(32576) &amp;&amp; IsQuestCompleted(32576) ||
-					HasQuest(32579) &amp;&amp; IsQuestCompleted(32579)">
+					HasQuest(32579) &amp;&amp; IsQuestCompleted(32579) ||
+					HasQuest(32578) &amp;&amp; IsQuestCompleted(32578) ||
+					HasQuest(32577) &amp;&amp; IsQuestCompleted(32577) ||
+					HasQuest(32581) &amp;&amp; IsQuestCompleted(32581)">
 		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -88,7 +123,10 @@
 	
 <!-- Horde Return -->
 	<If Condition="HasQuest(32561) &amp;&amp; IsQuestCompleted(32561) ||
-					HasQuest(32520) &amp;&amp; IsQuestCompleted(32520)">
+					HasQuest(32520) &amp;&amp; IsQuestCompleted(32520) ||
+					HasQuest(32293) &amp;&amp; IsQuestCompleted(32293) ||
+					HasQuest(32562) &amp;&amp; IsQuestCompleted(32562) ||
+					HasQuest(32522) &amp;&amp; IsQuestCompleted(32522)">
 		<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -111,12 +149,36 @@
 		<TurnIn QuestName="Competing Magic" QuestId="32579" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
 	</If>
 	
+	<If Condition="HasQuest(32578) &amp;&amp; IsQuestCompleted(32578)">
+		<TurnIn QuestName="Among the Bones" QuestId="32578" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
+	</If>
+	
+	<If Condition="HasQuest(32577) &amp;&amp; IsQuestCompleted(32577)">
+		<TurnIn QuestName="Imposing Threat" QuestId="32577" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
+	</If>
+	
+	<If Condition="HasQuest(32581) &amp;&amp; IsQuestCompleted(32581)">
+		<TurnIn QuestName="Imposing Threat" QuestId="32581" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
+	</If>
+	
 	<If Condition="HasQuest(32561) &amp;&amp; IsQuestCompleted(32561)">
 		<TurnIn QuestName="Competing Magic" QuestId="32561" TurnInName="Lor'themar Theron" TurnInId="67990" />
 	</If>
 	
 	<If Condition="HasQuest(32520) &amp;&amp; IsQuestCompleted(32520)">
 		<TurnIn QuestName="Competing Magic" QuestId="32520" TurnInName="Lor'themar Theron" TurnInId="67990" />
+	</If>
+	
+	<If Condition="HasQuest(32293) &amp;&amp; IsQuestCompleted(32293)">
+		<TurnIn QuestName="Among the Bones" QuestId="32293" TurnInName="Lor'themar Theron" TurnInId="67990" />
+	</If>
+	
+	<If Condition="HasQuest(32562) &amp;&amp; IsQuestCompleted(32562)">
+		<TurnIn QuestName="Imposing Threat" QuestId="32562" TurnInName="Lor'themar Theron" TurnInId="67990" />
+	</If>
+	
+	<If Condition="HasQuest(32522) &amp;&amp; IsQuestCompleted(32522)">
+		<TurnIn QuestName="Imposing Threat" QuestId="32522" TurnInName="Lor'themar Theron" TurnInId="67990" />
 	</If>
 
 <!-- Use Arcane Trove (Alliance Only) -->
@@ -132,6 +194,26 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
+
+<!-- Check for Next phase! -->
+
+<!-- Lady Jaina Proudmoore -->
+	<If Condition="Me.IsAlliance" >
+		<While Condition="HasQuestAvailable(67992)" >
+			<CustomBehavior File="InteractWith" MobId="67992" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</While>
+	</If>
+	
+<!-- Lor'themar Theron -->
+	<If Condition="Me.IsHorde" >
+		<While Condition="HasQuestAvailable(67990)" >
+			<CustomBehavior File="InteractWith" MobId="67990" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</While>
+	</If>
 	
 	<If Condition="Me.IsAlliance &amp;&amp; Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100" >
 		<RunTo X="5662.35" Y="6212.02" Z="12.79" />

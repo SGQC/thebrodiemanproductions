@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r85</Name>
+	<Name>The Tillers r98</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1048,12 +1048,16 @@
 	</If>
 
 <!-- A Gift for Haohan -->
-	<If Condition="((HasQuest(30477)) &amp;&amp; (!IsQuestCompleted(30477)))" >
+	<If Condition="(HasQuest(30477) &amp;&amp; !IsQuestCompleted(30477))" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Haohan" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30477" LootMobs="true" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="294.7198" Y="889.9475" Z="145.2052" />
+		<CustomBehavior File="FlyTo" X="348.98" Y="1021.83" Z="145.40" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="A Gift for Haohan" QuestId="30477" Type="CollectItem" ItemId="80228" CollectCount="1" />
+		<While Condition="!IsQuestCompleted(30477)" >
+			<CustomBehavior File="InteractWith" QuestId="30477" MobId="59639" MobState="Alive" Nav="CTM" WaitTime="1000" CollectionDistance="3000" />
+		</While>
+		<CustomBehavior File="AscendInWater" />
+	<!--<Objective QuestName="A Gift for Haohan" QuestId="30477" Type="CollectItem" ItemId="80228" CollectCount="1" /> -->
 	</If>
 
 <!-- Quest Turn ins -->

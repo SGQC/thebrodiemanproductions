@@ -1,5 +1,33 @@
 Patch Notes
 
+3/11/13
+
+r98
+Quest Behaviors
+-- Laosy Scouting - Lowered Location 1 Z axis, might have been too high to path if Lao wasn't at Loc 1
+The Tillers
+-- A Gift For Haohan - Will no longer wander the shores and be slow. Will head straight for target or wait in place.
+Shado Pan
+-- Changed next profile from August Celestials to Isle of Thunder
+Isle of Thunder (Alliance)
+-- Added more aura checks to Ihgaluk Crag
+-- Removed several unneeded RunTo's
+-- Changed pull distances from 25 to 10 on some quests
+Isle of Thunder (Horde)
+-- Added Ashes of the Enemy
+-- Added Soul Surrender
+-- Added Dangers of Za'Tual
+-- Added Dark Offerings
+-- Added Heinous Sacrifice
+-- Added The Creeping Carpet of Ihgaluk
+-- Added Just Some Light Clean-Up Work
+-- Added The Residents of Ihgaluk
+-- Added The Skumblade Threat
+Isle of Thunder Bosses
+-- Added Among the Bones
+-- Added Imposing Threat
+-- Added Phase 2 Check
+
 3/10/13
 
 r97
