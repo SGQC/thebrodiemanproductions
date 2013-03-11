@@ -2,6 +2,16 @@ Patch Notes
 
 3/10/13
 
+r97
+Isle of Thunder (Alliance)
+-- Added The Call of Thunder
+Thousand Faces (Alliance)
+-- Removed CTM and converted to accomadate for meshed area
+Voice of the Gods
+-- Released, not afk'able
+Shieldwall Stories
+-- Expanded to include Voice of the Gods
+
 r96
 Pandaria Dailies v2
 -- Added Subtle Encouragement spell support, should cast more reliably
