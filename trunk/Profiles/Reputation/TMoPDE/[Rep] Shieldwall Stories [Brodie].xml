@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall QuestLine v0.1</Name>
+	<Name>Operation Shieldwall QuestLine r97</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -33,15 +33,6 @@
 
 <!-- Quest Overrides -->
 
-<!-- A King Among Men -->
-	<Quest Id="32247" Name="A King Among Men"> 
-		<Objective Type="KillMob" MobId="65978" KillCount="4">
-			<Hotspots>
-				<Hotspot X="1677.37" Y="1366.47" Z="453.59" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
 <!-- End of Quest Overrides --> 
 
 <QuestOrder IgnoreCheckpoints="True" >
@@ -57,6 +48,10 @@
 
 	<If Condition="!IsQuestCompleted(32426)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thousand Faces A [Brodie]" />
+	</If>
+	
+	<If Condition="!IsQuestCompleted(32382)" >
+		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Voice of the Gods A [Brodie]" />
 	</If>
 
 <!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] Dailies [Brodie]" /> -->

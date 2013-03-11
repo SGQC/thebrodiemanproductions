@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r96</Name>
+	<Name>Isle of Thunder (Alliance) r97</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -621,6 +621,16 @@
 		<While Condition="!IsQuestCompleted(32528)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93803)" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</While>
+	</If>
+	
+<!-- The Call of Thunder -->
+	<If Condition="HasQuest(32529) &amp;&amp; !IsQuestCompleted(32529)" >
+		<CustomBehavior File="Message" Text="Starting The Call of Thunder" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32529" LootMobs="true" PullDistance="20" />
+		<RunTo X="6609.79" Y="6290.33" Z="3.63" />
+		<While Condition="!IsQuestCompleted(32529)" >
+			<CustomBehavior File="InteractWith" QuestId="32529" MobId="69264" WaitForNpcs="false" CollectionDistance="300" />
 		</While>
 	</If>
 	

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Man With A Thousand Faces</Name>
+	<Name>The Man With A Thousand Faces r97</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -61,86 +61,71 @@
 			<CustomBehavior File="FlyTo" X="-1155.29" Y="-1247.7" Z="28.5142" />
 			<CustomBehavior File="ForcedDismount" />
 			<If Condition="!HasItem(92431) &amp;&amp; (GetItemCount(91877) &gt; 4)" >
-				<CustomBehavior File="InteractWith" Nav="CTM" MobId="67881" BuyItemId="92431" BuyItemCount="1" X="-1158.77" Y="-1248.90" Z="28.51" />
+				<CustomBehavior File="InteractWith" MobId="67881" BuyItemId="92431" BuyItemCount="1" />
 			</If>
 			<If Condition="HasItem(92431)" >
 				<CustomBehavior File="FlyTo" X="-1163.095" Y="-1229.698" Z="28.65738" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="MyCTM" X="-1169.814" Y="-1226.714" Z="28.998" />
-				<CustomBehavior File="InteractWith" Nav="CTM" MobId="67738" Range="5" WaitForNpcs="False" X="-1169.814" Y="-1226.714" Z="28.998" />
-				<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				<CustomBehavior File="InteractWith" MobId="67738" Range="5" WaitForNpcs="False" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<If Condition="(Me.MapId != 0)" >
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92431)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="InteractWith" Nav="CTM" MobId="67738" WaitForNpcs="False" X="-1169.814" Y="-1226.714" Z="28.998" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="InteractWith" MobId="67738" WaitForNpcs="False" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			<Else>
-			<!-- Fly to Factional City, use portal there -->
+				<CustomBehavior File="FlyTo" X="863.86" Y="284.01" Z="503.68" />
+				<RunTo X="826.9441" Y="179.9505" Z="519.5612" />
+				<CustomBehavior File="InteractWith" MobId="215119" ObjectType="GameObject" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</Else>
 			</If>
 		</If>
 		<CustomBehavior File="FlyTo" DestName="Deeprun Tram" X="-8403.6" Y="570.7051" Z="92.18417" />
-		<CustomBehavior File="MyCTM" X="-8354.12" Y="511.17" Z="84.41" />
+		<CustomBehavior File="Misc\InInstance" X="-8354.12" Y="511.17" Z="84.41" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<RunTo X="1.57" Y="2461.00" Z="-13.86" />
-		<CustomBehavior File="MyCTM" X="-87.36" Y="2460.04" Z="-43.11" />
-		<CustomBehavior File="MyCTM" X="-90.86" Y="2471.9" Z="-43.11" />
-		<CustomBehavior File="MyCTM" X="-101.18" Y="2472.29" Z="-43.11" />
-		<CustomBehavior File="MyCTM" X="-102.82" Y="2463.07" Z="-43.11" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68526" GossipOptions="1" NumOfTimes="1" WaitTime="1000" />
+		<RunTo X="-89.00" Y="2461.68" Z="-43.11" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<TurnIn Nav="CTM" QuestName="The Best Around" QuestId="32380" TurnInName="Barkeep Townsley" TurnInId="68526" />
-		<PickUp Nav="CTM" QuestName="To Catch A Spy" QuestId="32381" GiverName="Barkeep Townsley" GiverId="68526" />
+		<TurnIn QuestName="The Best Around" QuestId="32380" TurnInName="Barkeep Townsley" TurnInId="68526" />
+		<PickUp QuestName="To Catch A Spy" QuestId="32381" GiverName="Barkeep Townsley" GiverId="68526" />
 	</If>
 
 <!-- To Catch A Spy -->
 	<If Condition="HasQuest(32381) &amp;&amp; !IsQuestCompleted(32381)" >
 
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68526" GossipOptions="1" NumOfTimes="1" WaitTime="1000" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="false" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="MyCTM" X="-99.40" Y="2471.90" Z="-43.11" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68537" GossipOptions="1" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="68537" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="MyCTM" X="-99.40" Y="2471.90" Z="-43.11" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68526" GossipOptions="1" NumOfTimes="1" WaitTime="1000" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="false" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="MyCTM" X="-99.40" Y="2471.90" Z="-43.11" />
-		<CustomBehavior File="MyCTM" X="-84.01" Y="2474.19" Z="-43.12" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68540" GossipOptions="1" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="68540" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="MyCTM" X="-84.01" Y="2474.19" Z="-43.12" />
-		<CustomBehavior File="MyCTM" X="-99.40" Y="2471.90" Z="-43.11" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68526" GossipOptions="1" NumOfTimes="1" WaitTime="1000" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="false" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="MyCTM" X="-122.997" Y="2463.93" Z="-43.11" />
-		<CustomBehavior File="InteractWith" Nav="CTM" Range="5" MobId="68539" GossipOptions="1" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" Range="5" MobId="68539" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<TurnIn Nav="CTM" QuestName="To Catch A Spy" QuestId="32381" TurnInName="Barkeep Townsley" TurnInId="68526" />
-		<PickUp Nav="CTM" QuestName="Stirred, Not Shaken" QuestId="32426" GiverName="Barkeep Townsley" GiverId="68526" />
+		<TurnIn QuestName="To Catch A Spy" QuestId="32381" TurnInName="Barkeep Townsley" TurnInId="68526" />
+		<PickUp QuestName="Stirred, Not Shaken" QuestId="32426" GiverName="Barkeep Townsley" GiverId="68526" />
 	</If>
 
 <!-- Stirred, Not Shaken -->
 	<If Condition="HasQuest(32426) &amp;&amp; !IsQuestCompleted(32426)" >
-
-		<CustomBehavior File="MyCTM" X="-99.40" Y="2471.90" Z="-43.11" />
-		<CustomBehavior File="MyCTM" X="-84.01" Y="2474.19" Z="-43.12" />
-		<CustomBehavior File="MyCTM" X="-86.13" Y="2524.04" Z="-43.12" />
-		<CustomBehavior File="MyCTM" X="-74.21" Y="2530.98" Z="-43.13" />
-		<CustomBehavior File="MyCTM" X="-76.23" Y="2541.17" Z="-43.14" />
-		<CustomBehavior File="MyCTM" X="-147.48" Y="2539.32" Z="-29.60" />
-		<CustomBehavior File="MyCTM" X="-150.43" Y="2548.58" Z="-29.44" />
-		<TurnIn Nav="CTM" QuestName="Stirred, Not Shaken" QuestId="32426" TurnInName="Professor Kilt" TurnInId="68531" />
+		<RunTo X="-150.43" Y="2548.58" Z="-29.44" />
+		<TurnIn QuestName="Stirred, Not Shaken" QuestId="32426" TurnInName="Professor Kilt" TurnInId="68531" />
 	</If>
 
 <If Condition="HasItem(6948)" >
 	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-	<CustomBehavior File="WaitTimer" WaitTime="20000" />
+	<CustomBehavior File="WaitTimer" WaitTime="5000" />
 </If>
 
 <If Condition="HasItem(64488)" >
 	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" WaitTime="1000" />
-	<CustomBehavior File="WaitTimer" WaitTime="20000" />
+	<CustomBehavior File="WaitTimer" WaitTime="5000" />
 </If>
 
 <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Shieldwall Stories [Brodie]" />
