@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r85</Name>
+	<Name>The Klaxxi r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -505,7 +505,7 @@
 <!-- Rampage Against the Machine -->
  	<If Condition="HasQuest(31808) &amp;&amp; !IsQuestCompleted(31808)">
 		<CustomBehavior File="Message" Text="Starting Rampage Against the Machine" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-47.40311" Y="3421.991" Z="105.6598" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="MountVehOnly" X="-59.69" Y="3421.45" Z="103.95" VehicleMountId="63765" />
@@ -517,7 +517,7 @@
 <!-- Debugging The Terrace -->
  	<If Condition="HasQuest(31237) &amp;&amp; !IsQuestCompleted(31237)">
 		<CustomBehavior File="Message" Text="Starting Debugging The Terrace" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-41.11" Y="2667.56" Z="157.18" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="SpecificQuests\31237-DreadWastes-DebuggingTheTerrace" />
@@ -526,7 +526,7 @@
 <!-- Specimen Request -->
  	<If Condition="HasQuest(31508) &amp;&amp; !IsQuestCompleted(31508)">
 		<CustomBehavior File="Message" Text="Starting Specimen Request" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31508" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31508" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-1212.976" Y="4149.819" Z="58.72435" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Specimen Request" QuestId="31508" Type="CollectItem" ItemId="87874" CollectCount="6" />
@@ -535,7 +535,7 @@
 <!-- Vess-Guard Duty -->
  	<If Condition="HasQuest(31505) &amp;&amp; !IsQuestCompleted(31505)">
 		<CustomBehavior File="Message" Text="Starting Vess-Guard Duty" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31505" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31505" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1227.62" Y="4561.2" Z="129.2" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Vess-Guard Duty" QuestId="31505" Type="KillMob" MobId="64979" KillCount="1" />
@@ -544,7 +544,7 @@
 <!-- Shackles of Manipulation -->
  	<If Condition="HasQuest(31506) &amp;&amp; !IsQuestCompleted(31506)">
 		<CustomBehavior File="Message" Text="Starting Shackles of Manipulation" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31508" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31508" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1753.61" Y="4516.65" Z="52.7" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Shackles of Manipulation" QuestId="31506" Type="CollectItem" ItemId="87813" CollectCount="6" />
@@ -553,7 +553,7 @@
 <!-- Eradicating the Zan'thik -->
  	<If Condition="HasQuest(31111) &amp;&amp; !IsQuestCompleted(31111)">
 		<CustomBehavior File="Message" Text="Starting Eradicating the Zan'thik" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31111" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31111" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1753.61" Y="4516.65" Z="52.7" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Eradicating the Zan'thik" QuestId="31111" Type="KillMob" MobId="64971" KillCount="6" />
@@ -563,7 +563,7 @@
 <!-- Free From Her Clutches -->
  	<If Condition="HasQuest(31494) &amp;&amp; !IsQuestCompleted(31494)" >
 		<CustomBehavior File="Message" Text="Starting Free From Her Clutches" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31494" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31494" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="117.7218" Y="3590.625" Z="233.62" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsObjectiveComplete(1,31494)" >
@@ -617,7 +617,7 @@
 <!-- Quiet Now -->
  	<If Condition="HasQuest(31510) &amp;&amp; !IsQuestCompleted(31510)">
 		<CustomBehavior File="Message" Text="Starting Quiet Now" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31510" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31510" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1661.374" Y="4837.988" Z="59.85" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31510)">
@@ -628,7 +628,7 @@
 <!-- Meltdown -->
  	<If Condition="HasQuest(31507) &amp;&amp; !IsQuestCompleted(31507)">
 		<CustomBehavior File="Message" Text="Starting Meltdown" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31507" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31507" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-1419.12" Y="4918.8" Z="29.57" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Meltdown" QuestId="31507" Type="KillMob" MobId="64982" KillCount="6" />
@@ -637,7 +637,7 @@
 <!-- Fear Takes Root -->
  	<If Condition="HasQuest(31509) &amp;&amp; !IsQuestCompleted(31509)">
 		<CustomBehavior File="Message" Text="Starting Fear Takes Root" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31509" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31509" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="-1168.03" Y="4896.25" Z="44.05" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" ObjectId="214543" ObjectId2="214549" CollectUntil="QuestComplete" QuestId="31509" HuntingGroundRadius="200" NonCompeteDistance="5" PostInteractDelay="100" >
@@ -652,7 +652,7 @@
 <!-- Ordnance Disposal -->
  	<If Condition="HasQuest(31504) &amp;&amp; !IsQuestCompleted(31504)">
 		<CustomBehavior File="Message" Text="Starting Ordnance Disposal" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31504" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31504" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="117.7218" Y="3590.625" Z="233.62" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Ordnance Disposal" QuestId="31504" Type="CollectItem" ItemId="214341" CollectCount="8" />
@@ -661,7 +661,7 @@
 <!-- Sonic Disruption -->
  	<If Condition="HasQuest(31487) &amp;&amp; !IsQuestCompleted(31487)">
 		<CustomBehavior File="Message" Text="Starting Sonic Disruption" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31487" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31487" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="190.5358" Y="3534.385" Z="243.5785" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Sonic Disruption" QuestId="31487" Type="KillMob" MobId="64717" KillCount="4" />
@@ -671,7 +671,7 @@
 <!-- Sampling the Empire's Finest -->
  	<If Condition="HasQuest(31496) &amp;&amp; !IsQuestCompleted(31496)">
 		<CustomBehavior File="Message" Text="Starting Sampling the Empire's Finest" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31496" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31496" LootMobs="True" PullDistance="1" />
 		<If Condition="!IsObjectiveComplete(1,31496)">
 			<CustomBehavior File="FlyTo" X="417.6611" Y="4158.743" Z="228.657" />
 			<CustomBehavior File="ForcedDismount" />
@@ -714,7 +714,7 @@
 <!-- Wing Clip -->
  	<If Condition="HasQuest(31502) &amp;&amp; !IsQuestCompleted(31502)">
 		<CustomBehavior File="Message" Text="Starting Wing Clip" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31502" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31502" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="310.9535" Y="4071.25" Z="253.1479" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Wing Clip" QuestId="31502" Type="CollectItem" ItemId="87401" CollectCount="24" />
@@ -723,7 +723,7 @@
 <!-- Shortcut to Ruin -->
  	<If Condition="HasQuest(31503) &amp;&amp; !IsQuestCompleted(31503)">
 		<CustomBehavior File="Message" Text="Starting Shortcut to Ruin" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31503" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31503" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="310.5345" Y="4060.702" Z="253.0492" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Shortcut to Ruin" QuestId="31503" Type="KillMob" MobId="64890" KillCount="1" />
@@ -732,7 +732,7 @@
 <!-- Brain Food -->
  	<If Condition="HasQuest(31238) &amp;&amp; !IsQuestCompleted(31238)">
 		<CustomBehavior File="Message" Text="Starting Brain Food" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31238" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31238" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="568.8157" Y="3187.079" Z="270.0579" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Brain Food" QuestId="31238" Type="CollectItem" ItemId="85665" CollectCount="4" />
@@ -741,7 +741,7 @@
 <!-- Nope Nope Nope -->
 	<If Condition="HasQuest(31235) &amp;&amp; !IsQuestCompleted(31235)">
 		<CustomBehavior File="Message" Text="Starting Nope Nope Nope" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31235" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31235" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="384.5976" Y="2385.874" Z="219.0938" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(31235)">
@@ -752,7 +752,7 @@
 <!-- Kunchong Treats -->
  	<If Condition="HasQuest(31024) &amp;&amp; !IsQuestCompleted(31024)">
 		<CustomBehavior File="Message" Text="Starting Kunchong Treats" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31024" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31024" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-391.7397" Y="3045.054" Z="189.3456" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Kunchong Treats" QuestId="31024" Type="CollectItem" ItemId="82869" KillCount="4" />
@@ -761,7 +761,7 @@
 <!-- The Fight Against Fear -->
  	<If Condition="HasQuest(31270) &amp;&amp; !IsQuestCompleted(31270)">
 		<CustomBehavior File="Message" Text="Starting The Fight Against Fear" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31270" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31270" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-391.7397" Y="3045.054" Z="189.3456" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Fight Against Fear" QuestId="31270" Type="KillMob" MobId="62162" KillCount="15" />
@@ -770,7 +770,7 @@
 <!-- Dreadspinner Extermination -->
  	<If Condition="HasQuest(31231) &amp;&amp; !IsQuestCompleted(31231)">
 		<CustomBehavior File="Message" Text="Starting Dreadspinner Extermination" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31231" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31231" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="408.7178" Y="2293.982" Z="237.9843" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Dreadspinner Extermination" QuestId="31231" Type="KillMob" MobId="61981" KillCount="8" />
@@ -779,7 +779,7 @@
 <!-- The Scale-Lord -->
  	<If Condition="HasQuest(31269) &amp;&amp; !IsQuestCompleted(31269)">
 		<CustomBehavior File="Message" Text="Starting The Scale-Lord" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31269" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31269" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-856.0918" Y="2566.866" Z="133.2105" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Scale-Lord" QuestId="31269" Type="KillMob" MobId="63179" KillCount="1" />
@@ -788,7 +788,7 @@
 <!-- Mistblade Destruction -->
  	<If Condition="HasQuest(31267) &amp;&amp; !IsQuestCompleted(31267)">
 		<CustomBehavior File="Message" Text="Starting Mistblade Destruction" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31267" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31267" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-826.9786" Y="2738.488" Z="133.7699" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Mistblade Destruction" QuestId="31267" Type="KillMob" MobId="61970" KillCount="6" />
@@ -812,7 +812,7 @@
 <!-- A Little Brain Work -->
  	<If Condition="HasQuest(31268) &amp;&amp; !IsQuestCompleted(31268)">
 		<CustomBehavior File="Message" Text="Starting A Little Brain Work" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31268" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31268" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-946.3294" Y="2873.563" Z="105.7765" />
 		<CustomBehavior File="ForcedDismount" />
 <!--		<CustomBehavior File="CombatUseItemOn" ItemId="85884" QuestId="31268" MobId="63728" MobHpPercentLeft="70" MaxRange="10" /> -->
@@ -832,7 +832,7 @@
 <!-- An Ancient Empire -->
  	<If Condition="HasQuest(31232) &amp;&amp; !IsQuestCompleted(31232)">
 		<CustomBehavior File="Message" Text="Starting An Ancient Empire" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31232" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31232" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="408.7178" Y="2293.982" Z="237.9843" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="An Ancient Empire" QuestId="31232" Type="CollectItem" ItemId="85634" CollectCount="8" />
@@ -841,7 +841,7 @@
 <!-- Sap Tapping -->
 	<If Condition="HasQuest(31233) &amp;&amp; !IsQuestCompleted(31233)">
 		<CustomBehavior File="Message" Text="Starting Sap Tapping" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31233" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31233" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="384.5976" Y="2385.874" Z="219.0938" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(31233)">
@@ -894,7 +894,7 @@
 <!-- Putting an Eye Out -->
  	<If Condition="HasQuest(31234) &amp;&amp; !IsQuestCompleted(31234)">
 		<CustomBehavior File="Message" Text="Starting Putting an Eye Out" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31234" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="31234" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="136.43" Y="2541.28" Z="148.77" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Putting an Eye Out" QuestId="31234" Type="CollectItem" ItemId="85635" CollectCount="1" />
@@ -903,7 +903,7 @@
 <!-- Culling the Swarm -->
  	<If Condition="HasQuest(31109) &amp;&amp; !IsQuestCompleted(31109)">
 		<CustomBehavior File="Message" Text="Starting Culling the Swarm" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31109" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31109" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="310.5345" Y="4060.702" Z="253.0492" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Culling the Swarm" QuestId="31109" Type="KillMob" MobId="62563" MobId2="64720" MobId3="64714" KillCount="40" />

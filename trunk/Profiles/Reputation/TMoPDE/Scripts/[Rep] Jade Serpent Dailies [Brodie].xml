@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>August Celestials r23</Name>
+	<Name>Jade Serpent Temple r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -125,7 +125,7 @@
 <!-- Arrows of Fortune -->
 	<If Condition="(HasQuest(30065) &amp;&amp; !IsQuestCompleted(30065))" >
 		<CustomBehavior File="Message" Text="Starting Arrows of Fortune" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30065" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30065" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="880.6826" Y="-2300.531" Z="139.7122" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Arrows of Fortune" QuestId="30065" Type="CollectItem" ItemId="77452" CollectCount="8" />
@@ -134,7 +134,7 @@
 <!-- Saving the Sutras -->
 	<If Condition="(HasQuest(30064) &amp;&amp; !IsQuestCompleted(30064))" >
 		<CustomBehavior File="Message" Text="Starting Saving the Sutras" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30064" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30064" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1277.841" Y="-2479.687" Z="143.5502" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" ObjectId="210085" QuestId="30064" CollectUntil="QuestComplete" NonCompeteDistance="1" HuntingGroundRadius="200" PostInteractDelay="1000" X="1277.841" Y="-2479.687" Z="143.5502" />
@@ -143,7 +143,7 @@
 <!-- Behind the Masks -->
 	<If Condition="(HasQuest(30063) &amp;&amp; !IsQuestCompleted(30063))" >
 		<CustomBehavior File="Message" Text="Starting Behind the Masks" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30063" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30063" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="844.2975" Y="-2334.138" Z="140.4092" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Behind the Masks" QuestId="30063" Type="CollectItem" ItemId="77419" CollectCount="8" />
@@ -152,7 +152,7 @@
 <!-- The Darkness Around Us -->
 	<If Condition="(HasQuest(30006) &amp;&amp; !IsQuestCompleted(30006))" >
 		<CustomBehavior File="Message" Text="Starting The Darkness Around Us" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30006" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30006" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="844.2975" Y="-2334.138" Z="140.4092" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Darkness Around Us" QuestId="30006" Type="KillMob" MobId="57330" MobId2="57396" MobId3="57389" KillCount="15" />
@@ -161,12 +161,11 @@
 <!-- Hidden Power -->
 	<If Condition="(HasQuest(30066) &amp;&amp; !IsQuestCompleted(30066))" >
 		<CustomBehavior File="Message" Text="Starting Hidden Power" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30066" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30066" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1005.98" Y="-2331.211" Z="155.51" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30066)" >
-			<CustomBehavior File="RunMacro" Macro="/target Yu'lon" />
-			<CustomBehavior File="UseItemOn" Range="10" MobId="57316" MobId2="57400" ItemId="77475" CollectionDistance="100" WaitForNpcs="false" WaitTime="1000" />
+			<CustomBehavior File="UseItemOn" IsMissingAuraId="108868" Range="10" MobId="57316" MobId2="57400" ItemId="77475" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" />
 		</While>
 	</If>
 
@@ -213,13 +212,13 @@
 <!-- Flames of the Void -->
 <!--	<If Condition="(HasQuest(30068) &amp;&amp; !IsQuestCompleted(30068))" >
 		<CustomBehavior File="Message" Text="Starting Flames of the Void" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30068" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30068" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="815.9733" Y="-2331.427" Z="128.949" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="57871" Range="10" WaitForNpcs="True" />
 		<While Condition="!IsQuestCompleted(30068)" >
 			<CustomBehavior File="FlyTo" X="938.5242" Y="-2304.787" Z="156.4555" />
-			<CustomBehavior File="InteractWith" Nav="CTM" MobId="210139" ObjectType="GameObject" Range="10" CollectionDistance="2000" WaitForNpcs="true" WaitTime="2000" />
+			<CustomBehavior File="InteractWith" Nav="CTM" MobId="210139" ObjectType="GameObject" Range="10" CollectionDistance="2000" WaitForNpcs="True" WaitTime="2000" />
 			<CustomBehavior File="FlyTo" X="1065.621" Y="-2345.234" Z="226.6013" />
 			<CustomBehavior File="CastSpellOn" MobId="57872" SpellId="109322" X="988.80" Y="-2386.12" Z="171.66" Range="100" MinRange="20" NumOfTimes="1" />
 		</While>
@@ -228,7 +227,7 @@
 <!-- The Shadow of Doubt -->
 	<If Condition="(HasQuest(30067) &amp;&amp; !IsQuestCompleted(30067))" >
 		<CustomBehavior File="Message" Text="Starting The Shadow of Doubt" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30067" LootMobs="true" PullDistance="20" />
+		<CustomBehavior File="UserSettings" QuestId="30067" LootMobs="True" PullDistance="20" />
 		<CustomBehavior File="FlyTo" X="742.73" Y="-2537.99" Z="93.66" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Shadow of Doubt" QuestId="30067" Type="KillMob" MobId="57389" KillCount="1" />

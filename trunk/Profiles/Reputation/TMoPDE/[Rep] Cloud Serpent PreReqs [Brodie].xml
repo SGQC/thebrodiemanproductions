@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent PreReqs</Name>
+	<Name>Cloud Serpent PreReqs r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -84,14 +84,14 @@
 	</If>
 
 	<If Condition="HasQuest(30135) &amp;&amp; !IsQuestCompleted(30135)" >
-		<CustomBehavior File="UserSettings" QuestId="30135" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30135" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="2109.48" Y="-3057.39" Z="4.09" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Beating the Odds" QuestId="30135" Type="KillMob" MobId="63532" MobId2="63536" KillCount="8" />
 	</If>
 
 	<If Condition="HasQuest(30136) &amp;&amp; !IsQuestCompleted(30136)" >
-		<CustomBehavior File="UserSettings" QuestId="30136" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30136" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="2189.148" Y="-3028.586" Z="20.56" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="HasQuest(30136) &amp;&amp; !IsQuestCompleted(30136)" >
@@ -102,7 +102,7 @@
 	</If>
 
 	<If Condition="HasQuest(30137) &amp;&amp; !IsQuestCompleted(30137)" >
-		<CustomBehavior File="UserSettings" QuestId="30137" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30137" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="2370.1" Y="-3198.4" Z="13.00" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" ObjectId="210238" ObjectId2="210239" ObjectId3="210240" CollectItemId="78959" CollectItemCount="6" CollectUntil="RequiredCountReached" PostInteractDelay="2000" NonCompeteDistance="5" HuntingGroundRadius="200" />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r69</Name>
+	<Name>Mistfall Village r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -327,7 +327,7 @@
 <!-- My Town, It's on Fire -->
 	<If Condition="HasQuest(30192) &amp;&amp; !IsQuestCompleted(30192)" >
 		<CustomBehavior File="Message" Text="Starting My Town Its on Fire" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30192" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30192" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="732.9484" Y="1586.01" Z="375.0465" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30192)" >
@@ -335,7 +335,7 @@
 				<CustomBehavior File="UseItemTargetLocation" QuestId="30192" ItemId="85782" UseType="ToObject" ObjectId="63797" Range="30" NumOfTimes="1" />
 			</While>
 			<While Condition="(GetItemCount(85782) &lt; 5) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" MobId="213369" WaitForNpcs="false" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" ObjectType="Gameobject" Range="4" />
+				<CustomBehavior File="InteractWith" MobId="213369" WaitForNpcs="False" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" ObjectType="GameObject" Range="4" />
 			</While>
 		</While>
 	</If>
@@ -343,7 +343,7 @@
 <!-- My Town, It's on Fire Again -->
 	<If Condition="HasQuest(30288) &amp;&amp; !IsQuestCompleted(30288)" >
 		<CustomBehavior File="Message" Text="Starting My Town Its on Fire Again" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30288" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30288" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="732.9484" Y="1586.01" Z="375.0465" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30288)" >
@@ -352,7 +352,7 @@
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</While>
 			<While Condition="(GetItemCount(85950) &lt; 5) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" MobId="213463" WaitForNpcs="false" NumOfTimes="1" WaitTime="1300" CollectionDistance="5000" ObjectType="Gameobject" Range="4" />
+				<CustomBehavior File="InteractWith" MobId="213463" WaitForNpcs="False" NumOfTimes="1" WaitTime="1300" CollectionDistance="5000" ObjectType="GameObject" Range="4" />
 			</While>
 		</While>
 	</If>
@@ -361,7 +361,7 @@
 	<If Condition="(HasQuest(30289) &amp;&amp; !IsQuestCompleted(30289))" >
 
 		<CustomBehavior File="Message" Text="Starting Freeing Mind and Body" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30289" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="30289" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -378,7 +378,7 @@
 	<If Condition="(HasQuest(30286) &amp;&amp; !IsQuestCompleted(30286))" >
 
 		<CustomBehavior File="Message" Text="Starting Backed Into a Corner" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30286" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30286" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -426,7 +426,7 @@
 	<If Condition="(HasQuest(30285) &amp;&amp; !IsQuestCompleted(30285))" >
 
 		<CustomBehavior File="Message" Text="Starting Wu Kao Scouting Reports" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30285" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30285" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -437,7 +437,7 @@
 	<If Condition="(HasQuest(30290) &amp;&amp; !IsQuestCompleted(30290))" >
 
 		<CustomBehavior File="Message" Text="Starting Stonebound Killers" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30290" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30290" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -453,11 +453,11 @@
 
 		<CustomBehavior File="ForcedDismount" />
 		<If Condition="HasQuest(31293)">
-			<CustomBehavior File="UserSettings" QuestId="31293" LootMobs="true" PullDistance="25" />
+			<CustomBehavior File="UserSettings" QuestId="31293" LootMobs="True" PullDistance="25" />
 			<Objective QuestName="Mogu Make Poor House Guests" QuestId="31293" Type="KillMob" MobId="63948" MobId2="64201" MobId3="64192" KillCount="8" />
 		</If>
 		<If Condition="HasQuest(30287)">
-			<CustomBehavior File="UserSettings" QuestId="30287" LootMobs="true" PullDistance="25" />
+			<CustomBehavior File="UserSettings" QuestId="30287" LootMobs="True" PullDistance="25" />
 			<Objective QuestName="Mogu Make Poor House Guests" QuestId="30287" Type="KillMob" MobId="63947" MobId2="64192" MobId3="64201" KillCount="6" />
 		</If>
 	</If>
@@ -466,7 +466,7 @@
 	<If Condition="(HasQuest(30191)) &amp;&amp; (!IsQuestCompleted(30191))" >
 
 		<CustomBehavior File="Message" Text="Starting Steer Clear of the Beer Here" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30191" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="30191" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="671.46" Y="1547.54" Z="381.88" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -477,7 +477,7 @@
 	<If Condition="(HasQuest(30190)) &amp;&amp; (!IsQuestCompleted(30190))" >
 
 		<CustomBehavior File="Message" Text="Starting Sprite Plight" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30190" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30190" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="671.46" Y="1547.54" Z="381.88" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -488,7 +488,7 @@
 	<If Condition="(HasQuest(30194)) &amp;&amp; (!IsQuestCompleted(30194))" >
 
 		<CustomBehavior File="Message" Text="Starting Encroaching Storm" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30194" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30194" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="610.6818" Y="1876.613" Z="381.9333" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -499,7 +499,7 @@
 	<If Condition="(HasQuest(30193)) &amp;&amp; (!IsQuestCompleted(30193))" >
 
 		<CustomBehavior File="Message" Text="Starting Meating Expectations" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30193" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30193" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1016.52" Y="1652.84" Z="355.04" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -510,7 +510,7 @@
 	<If Condition="(HasQuest(30231)) &amp;&amp; (!IsQuestCompleted(30231))" >
 
 		<CustomBehavior File="Message" Text="Starting Pomfruit Pickup" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30190" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30190" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1026.936" Y="1649.619" Z="352.506" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -523,7 +523,7 @@
 	<If Condition="(HasQuest(30263)) &amp;&amp; (!IsQuestCompleted(30263))" >
 
 		<CustomBehavior File="Message" Text="Starting Clearing in the Forest" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30263" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30263" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1016.52" Y="1652.84" Z="355.04" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -534,7 +534,7 @@
 	<If Condition="HasQuest(30232) &amp;&amp; !IsQuestCompleted(30232)" >
 
 		<CustomBehavior File="Message" Text="Starting Ruffling Some Feathers" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30232" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30232" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="1016.52" Y="1652.84" Z="355.04" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -578,11 +578,11 @@
 <!-- Return to Rest -->
 	<If Condition="(HasQuest(30238) &amp;&amp; !IsQuestCompleted(30238))" >
 		<CustomBehavior File="Message" Text="Starting Return to Rest" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30238" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30238" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="793.1332" Y="1165.867" Z="483.4868" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30238)" >
-			<CustomBehavior File="InteractWith" MobId="210419" IgnoreCombat="True" Range="5" QuestId="30238" ObjectType="Gameobject"/>
+			<CustomBehavior File="InteractWith" MobId="210419" IgnoreCombat="True" Range="5" QuestId="30238" ObjectType="GameObject"/>
 		</While>
 	</If>
 
@@ -590,7 +590,7 @@
 	<If Condition="(HasQuest(30196) &amp;&amp; !IsQuestCompleted(30196))" >
 
 		<CustomBehavior File="Message" Text="Starting Lushroom Rush" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30196" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30196" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="880.1246" Y="1397.14" Z="401.3782" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -601,7 +601,7 @@
 	<If Condition="(HasQuest(30237) &amp;&amp; !IsQuestCompleted(30237))" >
 
 		<CustomBehavior File="Message" Text="Starting Pandaren Uprising Relived" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30237" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30237" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="793.1332" Y="1165.867" Z="483.4868" />
 
 		<CustomBehavior File="ForcedDismount" />
@@ -612,7 +612,7 @@
 	<If Condition="(HasQuest(30195)) &amp;&amp; (!IsQuestCompleted(30195))" >
 
 		<CustomBehavior File="Message" Text="Starting Blooming Blossoms" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30195" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30195" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="843.9984" Y="1664.918" Z="354.8506" />
 
 		<CustomBehavior File="ForcedDismount" />

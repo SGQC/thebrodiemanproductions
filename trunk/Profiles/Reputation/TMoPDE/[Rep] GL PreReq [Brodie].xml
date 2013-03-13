@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r80</Name>
+	<Name>Golden Lotus PreReqs r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -131,7 +131,7 @@
 		<CustomBehavior File="FlyTo" DestName="White Tiger Temple" X="3686.266" Y="547.2056" Z="639.691" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="MyCTM" X="3819.63" Y="539.2305" Z="639.007" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="64528" IgnoreCombat="true" />
+		<CustomBehavior File="InteractWith" Nav="CTM" MobId="64528" IgnoreCombat="True" />
 		<CustomBehavior File="WaitTimer" WaitTime="40000" />
 		<If Condition="HasQuest(31395) &amp;&amp; !IsObjectiveComplete(2,31395)" >
 			<Objective QuestName="A Celestial Experience" QuestId="31395" Type="KillMob" MobId="64656" KillCount="1" />
@@ -319,7 +319,7 @@
 	</If>
 
 	<If Condition="HasQuest(30633) &amp;&amp; !IsQuestCompleted(30633)" >
-		<CustomBehavior File="UserSettings" QuestId="30633" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30633" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1347.357" Y="1677.096" Z="342.3698" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Out With The Scouts" QuestId="30633" Type="KillMob" MobId="59914" KillCount="8" />
@@ -367,7 +367,7 @@
 	</If>
 
 	<If Condition="HasQuest(30636) &amp;&amp; !IsQuestCompleted(30636)" >
-		<CustomBehavior File="UserSettings" QuestId="30636" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30636" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1439.403" Y="1785.866" Z="302.0502" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" ObjectId="211306" CollectItemId="80511" CollectItemCount="7" CollectUntil="RequiredCountReached" PostInteractDelay="2000" NonCompeteDistance="5" HuntingGroundRadius="50" >
@@ -378,7 +378,7 @@
 	</If>
 
 	<If Condition="HasQuest(30635) &amp;&amp; !IsQuestCompleted(30635)" >
-		<CustomBehavior File="UserSettings" QuestId="30635	" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30635	" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1439.403" Y="1785.866" Z="302.0502" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Killing The Quilen" QuestId="30635" Type="KillMob" MobId="59971" KillCount="9" />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lion's Landing</Name>
+	<Name>Lion's Landing r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -55,7 +55,7 @@
 		<TurnIn QuestName="Meet the Scout" QuestId="32246" TurnInName="Scout Lynna" TurnInId="68311" />
 	</If>
 
-	<CustomBehavior File="UserSettings" LootMobs="true" PullDistance="25" />
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" />
 
 	<If Condition="!IsQuestCompleted(32247) &amp;&amp; !HasQuest(32247)" >
 		<CustomBehavior File="FlyTo" X="-1016.577" Y="-1051.82" Z="1.0602" />

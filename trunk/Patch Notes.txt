@@ -1,5 +1,41 @@
 Patch Notes
 
+3/13/13
+
+r99
+Project-wide fix
+-- Case Sensitivity patch
+Golden Lotus
+-- Returned Acts of Cruelty to original state, post HB update.
+Isle of Giants
+-- Initial Release
+The Anglers
+-- Armored Carp - Will no longer use item, just kill!
+Jade Serpent Temple
+-- Hidden Power - Will no longer try and spam the scroll on mobs with aura already.
+Shado Pan
+-- Updated rep check to skip to August Celestials instead of back to Golden Lotus.
+Isle of Thunder (Alliance)
+-- Added checks for Phase 2
+-- Removed pickup quest code and replaced with "interact spam" for people who can't delete caches.
+-- Re-ordered pickups for kickers to adjust for phase 2
+-- Adjusted quest hub locations for phase 2 (Za'Tual, Ihgaluk, Court of Bones)
+-- Adjusted quest order for phase 2 (kickers in line)
+-- Adjusted portal locations to return (phase 2)
+-- Quest Override for Surgical Strike added (newest patch returns bad info)
+-- Just Some Light Clean-Up Work - No longer targets dead mobs
+Isle of Thunder (Horde)
+-- Added checks for Phase 2
+-- Removed pickup quest code and replaced with "interact spam" for people who can't delete caches.
+-- Quest Override for Surgical Death added (newest patch returns bad info)
+-- Adjusted quest hub locations for phase 2 (Court of Bones)
+-- Adjusted quest order for phase 2 (kickers in line)
+-- Re-ordered pickups for kickers to adjust for phase 2
+-- Added Diremoor support
+Thunder Boss
+-- Changed turnin return code to reflect phase 2 if done
+-- Changed leave code to reflect phase 2 if done
+
 3/11/13
 
 r98
@@ -269,7 +305,7 @@ Golden Lotus
 -- Re-Added Pre-Req check
 -- Code Cleanup
 Shado Pan
--- Snow Blossom npc Id changed again
+-- Snow Blossom Npc Id changed again
 -- Fixed Little Hatchlings wrong QB call
 Setting Sun Garrison
 -- Awaiting location testing for RunLikeHell addition to Upon the Ramparts
@@ -315,7 +351,7 @@ Operation Shieldwall
 -- Hero Killer - Reduced pull distance to reduce chance of wandering down the beach killing at random
 -- Resource Gathering - Converted from InteractWith to Objective
 -- Attack! Move! - Fixed HB Message name
--- Set all Lion's Landing NPCs to "Don't wait til they're there", to avoid despawned/phased npc issues.
+-- Set all Lion's Landing NPCs to "Don't wait til they're there", to avoid despawned/phased Npc issues.
 -- Removal of Blackspots due to mesh updates. Will redo if needed.
 -- Added small wait timer after portal usage.
 -- Added small wait timer before portal item usage.

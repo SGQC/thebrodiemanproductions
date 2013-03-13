@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r95</Name>
+	<Name>The Golden Lotus r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -293,7 +293,7 @@
 <!-- Given a Second Chance -->
 	<If Condition="((HasQuest(30312)) &amp;&amp; (!IsQuestCompleted(30312)))" >
 		<CustomBehavior File="Message" Text="Starting Given a Second Chance" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30312" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30312" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1419.408" Y="1197.767" Z="413.5989" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30312)" >
@@ -304,7 +304,7 @@
 <!-- Laosy Scouting -->
 	<If Condition="(HasQuest(31758) &amp;&amp; !IsQuestCompleted(31758))" >
 		<CustomBehavior File="Message" Text="Starting Laosy Scouting" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31758" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31758" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.93" Z="427.23" />
 		<While Condition="!IsQuestCompleted(31758)" >
 			<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" />
@@ -316,35 +316,35 @@
 <!-- High Chance of Rain -->
 	<If Condition="HasQuest(31756) &amp;&amp; !IsQuestCompleted(31756)">
 		<CustomBehavior File="Message" Text="Starting High Chance of Rain" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31756" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="31756" LootMobs="True" PullDistance="1" />
 	</If>
  	<While Condition="HasQuest(31756) &amp;&amp; !IsQuestCompleted(31756)">
 		<While Condition="!IsObjectiveComplete(1, 31756)" >
 			<CustomBehavior File="FlyTo" X="1568.647" Y="1185.899" Z="444.4847" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" IgnoreCombat="True" ObjectType="Gameobject" WaitForNpcs="false" />
+			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" IgnoreCombat="True" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 		<While Condition="!IsObjectiveComplete(2, 31756)" >
 			<CustomBehavior File="FlyTo" X="1625.123" Y="1269.5" Z="463.0072" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214899" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="Gameobject" WaitForNpcs="false" />
+			<CustomBehavior MobId="214899" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 		<While Condition="!IsObjectiveComplete(4, 31756)" >
 			<CustomBehavior File="FlyTo" X="1635.482" Y="1546.689" Z="440.0556" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214901" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="Gameobject" WaitForNpcs="false" />
+			<CustomBehavior MobId="214901" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 		<While Condition="!IsObjectiveComplete(3, 31756)" >
 			<CustomBehavior File="FlyTo" X="1481.446" Y="1388.026" Z="444.6272" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214900" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="Gameobject" WaitForNpcs="false" />
+			<CustomBehavior MobId="214900" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 	</While>
 
 <!-- Thundering Skies -->
  	<If Condition="(HasQuest(30310) &amp;&amp; !IsQuestCompleted(30310))">
 		<CustomBehavior File="Message" Text="Starting Thundering Skies" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30310" LootMobs="true" PullDistance="35" />
+		<CustomBehavior File="UserSettings" QuestId="30310" LootMobs="True" PullDistance="35" />
 		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.926" Z="427.2217" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(30310)">
@@ -388,7 +388,7 @@
 <!-- Crumbling Behemoth -->
 	<If Condition="((HasQuest(31762)) &amp;&amp; (!IsQuestCompleted(31762)))" >
 		<CustomBehavior File="Message" Text="Starting Crumbling Behemoth" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1681.209" Y="1362.486" Z="453.5922" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Crumbling Behemoth" QuestId="31762" Type="KillMob" MobId="65824" KillCount="1" />
@@ -397,18 +397,18 @@
 <!-- Striking First -->
 	<If Condition="((HasQuest(31760)) &amp;&amp; (!IsQuestCompleted(31760)))" >
 		<CustomBehavior File="Message" Text="Starting Striking First" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31760" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="31760" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1673.236" Y="1364.457" Z="453.5921" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="(HasQuest(31760) &amp;&amp; !IsQuestCompleted(31760))" >
-			<CustomBehavior File="InteractWith" MobId="65978" CollectionDistance="500" WaitForNpcs="false" MobState="alive" />
+			<CustomBehavior File="InteractWith" MobId="65978" CollectionDistance="500" WaitForNpcs="False" MobState="Alive" />
 		</While>
 	</If>
 
 <!-- Free Spirits -->
  	<If Condition="HasQuest(30320) &amp;&amp; !IsQuestCompleted(30320)">
 		<CustomBehavior File="Message" Text="Starting Free Spirits" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30320" LootMobs="false" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30320" LootMobs="False" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1471.91" Y="1363.68" Z="446.15" />
 		<CustomBehavior File="ForcedMount" QuestId="30320" MountType="Flying" />
 		<While Condition="!IsQuestCompleted(30320)">
@@ -416,19 +416,19 @@
 				<CustomBehavior File="FlyTo" X="1566.5" Y="1441.0" Z="441.72" />
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 				<If Condition="(!Me.HasAura(&quot;Spirit Void&quot;) &amp;&amp; !IsQuestCompleted(30320))" >
-					<CustomBehavior File="InteractWith" MobId="59219" CollectionDistance="4000" WaitForNpcs="false"/>
+					<CustomBehavior File="InteractWith" MobId="59219" CollectionDistance="4000" WaitForNpcs="False"/>
 				</If>
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 			</While>
-			<CustomBehavior File="InteractWith" MobId="59231" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="false" WaitTime="300" KeepTargetSelected="false" />
+			<CustomBehavior File="InteractWith" MobId="59231" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" WaitTime="300" KeepTargetSelected="False" />
 		</While>
 	</If>
 
 <!-- Cannonfire -->
 	<If Condition="(HasQuest(31754) &amp;&amp; !IsQuestCompleted(31754))" >
 		<CustomBehavior File="Message" Text="Starting Cannonfire" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31754" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="31754" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1540.48" Y="1176.70" Z="443.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31754)" >
@@ -466,20 +466,16 @@
 <!-- Acts of Cruelty -->
 	<If Condition="(HasQuest(31755) &amp;&amp; !IsQuestCompleted(31755))" >
 		<CustomBehavior File="Message" Text="Starting Acts of Cruelty" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31755" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="31755" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" CollectUntil="QuestComplete" QuestId="31755" MobId="65817" MobId2="65818" MobId3="65804" HuntingGroundRadius="200" NonCompeteDistance="5">
-			<Hotspot X="1563.083" Y="1407.315" Z="443.8702" />
-			<Hotspot X="1579.055" Y="1275.852" Z="453.1358" />
-		</CustomBehavior>
-<!--	<Objective QuestName="Acts of Cruelty" QuestId="31755" Type="KillMob" MobId="65810" KillCount="5" /> -->
+		<Objective QuestName="Acts of Cruelty" QuestId="31755" Type="KillMob" MobId="65810" KillCount="5" />
 	</If>
 
 <!-- Stone Hard Quilen -->
 	<If Condition="(HasQuest(30308) &amp;&amp; !IsQuestCompleted(30308))" >
 		<CustomBehavior File="Message" Text="Starting Stone Hard Quilen" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30308" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="30308" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Stone Hard Quilen" QuestId="30308" Type="KillMob" MobId="59157" KillCount="8" />
@@ -488,7 +484,7 @@
 <!-- Set in Stone -->
 	<If Condition="((HasQuest(30309)) &amp;&amp; (!IsQuestCompleted(30309)))" >
 		<CustomBehavior File="Message" Text="Starting Set in Stone" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30309" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="30309" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Set in Stone" QuestId="30309" Type="KillMob" MobId="59156" KillCount="6" />
@@ -497,7 +493,7 @@
 <!-- Unleashed Spirits -->
 	<If Condition="((HasQuest(31757)) &amp;&amp; (!IsQuestCompleted(31757)))" >
 		<CustomBehavior File="Message" Text="Starting Unleashed Spirits" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Unleashed Spirits" QuestId="31757" Type="KillMob" MobId="65935" KillCount="12" />
@@ -506,7 +502,7 @@
 <!-- The Eternal Vigil -->
 	<If Condition="((HasQuest(30307)) &amp;&amp; (!IsQuestCompleted(30307)))" >
 		<CustomBehavior File="Message" Text="Starting The Eternal Vigil" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30307" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="30307" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Eternal Vigil" QuestId="30307" Type="KillMob" MobId="65810" MobId2="58412" KillCount="8" />

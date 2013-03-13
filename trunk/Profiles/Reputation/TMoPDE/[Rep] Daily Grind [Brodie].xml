@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The MoP Dailies Experience r35</Name>
+	<Name>The MoP Dailies Experience r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -12,14 +12,14 @@
 	<If Condition="(Me.MapId == 0 &amp;&amp; Me.IsAlliance)" >
 		<CustomBehavior File="FlyTo" DestName="SW Portal" X="-8199.441" Y="529.3228" Z="117.0738" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4" X="-8194.479" Y="528.1129" Z="117.2901" />
+		<CustomBehavior File="InteractWith" MobId="215457" ObjectType="GameObject" Range="4" X="-8194.479" Y="528.1129" Z="117.2901" />
 		<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for port {TimeRemaining}" />
 	</If>
 
 	<If Condition=" (Me.MapId == 1 &amp;&amp; Me.IsHorde)" >
 		<CustomBehavior File="FlyTo" DestName="Org Portal" X="2013.813" Y="-4699.559" Z="28.61817" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="215424" ObjectType="Gameobject" Range="4.75" X="2014.819" Y="-4700.274" Z="28.62439" />
+		<CustomBehavior File="InteractWith" MobId="215424" ObjectType="GameObject" Range="4.75" X="2014.819" Y="-4700.274" Z="28.62439" />
 		<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for port {TimeRemaining}" />
 	</If>
 
