@@ -89,8 +89,13 @@
 	</If>
 	
 	<If Condition="(!HasQuest(32212) &amp;&amp; IsQuestCompleted(32212)) &amp;&amp;
-					(!HasQuest(32225) || !HasQuest(32201) || !HasQuest(32220) || !HasQuest(32224) ||
-					!HasQuest(32495) || !HasQuest(32219) || !HasQuest(32218) || !HasQuest(32226))" >
+					(!HasQuest(32225) &amp;&amp; !HasQuest(32201) &amp;&amp; !HasQuest(32220) &amp;&amp; !HasQuest(32224) &amp;&amp;
+					!HasQuest(32495) &amp;&amp; !HasQuest(32219) &amp;&amp; !HasQuest(32218) &amp;&amp; !HasQuest(32226) &amp;&amp;
+					!HasQuest(32729) &amp;&amp; !HasQuest(32227) &amp;&amp; !HasQuest(32252) &amp;&amp; !HasQuest(32275) &amp;&amp;
+					!HasQuest(32200) &amp;&amp; !HasQuest(32217) &amp;&amp; !HasQuest(32215) &amp;&amp; !HasQuest(32216) &amp;&amp;
+					!HasQuest(32730) &amp;&amp; !HasQuest(32255) &amp;&amp; !HasQuest(32254) &amp;&amp; !HasQuest(32605) &amp;&amp;
+					!HasQuest(32204) &amp;&amp; !HasQuest(32299) &amp;&amp; !HasQuest(32491) &amp;&amp; !HasQuest(32274) &amp;&amp;
+					!HasQuest(32489) &amp;&amp; !HasQuest(32517))" >
 		<CustomBehavior File="InteractWith" MobId="70567" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(48)" />
 	</If>
@@ -130,7 +135,7 @@
 
 	<If Condition="IsQuestCompleted(32212)" >
 		<If Condition="HasQuest(32728) || HasQuest(32225) || HasQuest(32201) || HasQuest(32220) || HasQuest(32224) ||
-					HasQuest(32495) || HasQuest(32219) || HasQuest(32218) || HasQuest(32226)" >
+					HasQuest(32495) || HasQuest(32219) || HasQuest(32218) || HasQuest(32226) || HasQuest(32517)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Bones H [Brodie]" />
 		</If>
 		<If Condition="HasQuest(32228) || HasQuest(32506) || HasQuest(32285)" >

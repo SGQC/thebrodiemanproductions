@@ -2,6 +2,20 @@ Patch Notes
 
 3/13/13
 
+r100
+Operation Shieldwall
+-- Ruins of Ogudei Cave pathing fixes (PLEASE REPORT ERRORS IF ANY!)
+-- Removal of redundant item code (Dis-Assembly Required)
+-- Will now continue on to Anglers
+Cloud Serpent
+-- If Alliance, will head to Shieldwall before Anglers
+Court of Bones (Horde)
+-- Added The Conquest of Stone
+Court of Bones (Alliance)
+-- Added The Conquest of Stone
+Diremoor (Horde)
+-- Added A Wing to Fly On
+
 r99
 Project-wide fix
 -- Case Sensitivity patch

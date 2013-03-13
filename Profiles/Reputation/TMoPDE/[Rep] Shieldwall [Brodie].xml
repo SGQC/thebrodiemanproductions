@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r99</Name>
+	<Name>Operation Shieldwall r100</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -297,21 +297,6 @@
 		<TurnIn QuestName="Send A Message" QuestId="32451" TurnInName="Sky Admiral Rogers" TurnInId="67386" />
 	</If>
 
-<!-- KICKERS 2 -->
-	<If Condition="HasQuest(32116)" >
-		<CustomBehavior File="Message" Text="Starting Kicker Quest" LogColor="Green" />
-		<CustomBehavior File="FlyTo" X="-653.0613" Y="-815.6729" Z="2.726312" />
-		<CustomBehavior File="ForcedDismount" />
-		<TurnIn QuestName="Priorities People" QuestId="32116" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-	</If>
-
-<!-- Hilga Hornswaggle -->
-	<While Condition="HasQuestAvailable(68275)" >
-		<CustomBehavior File="InteractWith" MobId="68275" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-
 <!-- Sky Admiral Rogers -->
 	<While Condition="HasQuestAvailable(67386)" >
 		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67386" NumOfTimes="1" WaitTime="1000" />
@@ -346,6 +331,21 @@
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
+	
+<!-- KICKER - Ruins of Ogudei -->
+	<If Condition="HasQuest(32116)" >
+		<CustomBehavior File="Message" Text="Starting Ruins of Ogudei Kicker" LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="-653.06" Y="-815.67" Z="2.72" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Priorities People" QuestId="32116" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+	</If>
+
+<!-- Hilga Hornswaggle -->
+	<While Condition="HasQuestAvailable(68275)" >
+		<CustomBehavior File="InteractWith" MobId="68275" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
 
 <!-- Enter the Cave -->
 	<If Condition="(HasQuest(32346) &amp;&amp; !IsQuestCompleted(32346) ||
@@ -363,132 +363,41 @@
 	<If Condition="HasQuest(32122) &amp;&amp; !IsQuestCompleted(32122)">
 		<CustomBehavior File="Message" Text="Starting Ogudei's Lieutenants" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32122" LootMobs="True" PullDistance="15" />
-		<CustomBehavior File="MyCTM" X="-607.36" Y="-825.81" Z="-2.26" />
-		<CustomBehavior File="MyCTM" X="-602.55" Y="-857.95" Z="-17.37" />
-		<CustomBehavior File="MyCTM" X="-630.55" Y="-880.96" Z="-22.36" />
-		<CustomBehavior File="MyCTM" X="-666.90" Y="-894.10" Z="-37.57" />
-		<CustomBehavior File="MyCTM" X="-655.49" Y="-927.51" Z="-49.65" />
-		<CustomBehavior File="MyCTM" X="-674.01" Y="-932.46" Z="-57.02" />
-		<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
-		<CustomBehavior File="MyCTM" X="-745.15" Y="-936.44" Z="-65.84" />
-		<CustomBehavior File="MyCTM" X="-736.03" Y="-977.96" Z="-64.95" />
-		<CustomBehavior File="MyCTM" X="-719.60" Y="-989.90" Z="-65.98" />
-		<CustomBehavior File="MyCTM" X="-689.69" Y="-990.24" Z="-70.51" />
-		<CustomBehavior File="MyCTM" X="-687.10" Y="-1018.77" Z="-69.71" />
-		<CustomBehavior File="MyCTM" X="-705.99" Y="-1028.82" Z="-70.60" />
-		<CustomBehavior File="MyCTM" X="-736.90" Y="-1030.09" Z="-69.91" />
-		<CustomBehavior File="MyCTM" X="-759.05" Y="-1016.21" Z="-69.70" />
-		<CustomBehavior File="MyCTM" X="-774.32" Y="-1026.58" Z="-71.37" />
-		<CustomBehavior File="MyCTM" X="-797.29" Y="-992.70" Z="-80.25" />
-		<CustomBehavior File="MyCTM" X="-816.82" Y="-975.38" Z="-82.32" />
 		<Objective QuestName="Ogudei's Lieutenants" QuestId="32122" Type="KillMob" MobId="68169" KillCount="1" />
 		<Objective QuestName="Ogudei's Lieutenants" QuestId="32122" Type="KillMob" MobId="68170" KillCount="1" />
-		<CustomBehavior File="MyCTM" X="-797.29" Y="-992.70" Z="-80.25" />
-		<CustomBehavior File="MyCTM" X="-774.32" Y="-1026.58" Z="-71.37" />
-		<CustomBehavior File="MyCTM" X="-759.05" Y="-1016.21" Z="-69.70" />
-		<CustomBehavior File="MyCTM" X="-736.90" Y="-1030.09" Z="-69.91" />
-		<CustomBehavior File="MyCTM" X="-705.99" Y="-1028.82" Z="-70.60" />
-		<CustomBehavior File="MyCTM" X="-687.10" Y="-1018.77" Z="-69.71" />
-		<CustomBehavior File="MyCTM" X="-689.69" Y="-990.24" Z="-70.51" />
-		<CustomBehavior File="MyCTM" X="-719.60" Y="-989.90" Z="-65.98" />
-		<CustomBehavior File="MyCTM" X="-736.03" Y="-977.96" Z="-64.95" />
-		<CustomBehavior File="MyCTM" X="-745.15" Y="-936.44" Z="-65.84" />
-		<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
 	</If>
 
 <!-- The Spirit Trap -->
 	<If Condition="HasQuest(32121) &amp;&amp; !IsQuestCompleted(32121)">
 		<CustomBehavior File="Message" Text="Starting The Spirit Trap" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32121" LootMobs="True" PullDistance="15" />
-		<While Condition="!IsQuestCompleted(32121)">
-			<CustomBehavior File="MyCTM" X="-744.96" Y="-937.26" Z="-65.90" />
-			<CustomBehavior File="MyCTM" X="-776.16" Y="-937.45" Z="-64.27" />
-			<CustomBehavior File="InteractWith" QuestId="32121" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-744.96" Y="-937.26" Z="-65.90" />
-			<CustomBehavior File="MyCTM" X="-733.46" Y="-984.91" Z="-62.44" />
-			<CustomBehavior File="MyCTM" X="-709.18" Y="-990.91" Z="-67.62" />
-			<CustomBehavior File="MyCTM" X="-692.05" Y="-988.52" Z="-70.44" />
-			<CustomBehavior File="InteractWith" QuestId="32121" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-636.83" Y="-987.06" Z="-67.80" />
-			<CustomBehavior File="MyCTM" X="-595.68" Y="-999.29" Z="-65.76" />
-			<CustomBehavior File="InteractWith" QuestId="32121" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-627.63" Y="-961.68" Z="-66.81" />
-			<CustomBehavior File="MyCTM" X="-629.73" Y="-927.31" Z="-63.19" />
-			<If Condition="!IsQuestCompleted(32121)">
-				<CustomBehavior File="MyCTM" X="-596.55" Y="-845.27" Z="-68.41" />
-				<CustomBehavior File="InteractWith" QuestId="32121" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
-				<CustomBehavior File="MyCTM" X="-629.73" Y="-927.31" Z="-63.19" />
-			</If>
-			<CustomBehavior File="MyCTM" X="-666.10" Y="-913.61" Z="-64.20" />
-			<CustomBehavior File="MyCTM" X="-678.93" Y="-915.87" Z="-64.31" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="32121" MobId="68061" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="30" >
+			<Hotspot X="-776.16" Y="-937.45" Z="-64.27" />
+			<Hotspot X="-692.05" Y="-988.52" Z="-70.44" />
+			<Hotspot X="-595.68" Y="-999.29" Z="-65.76" />
+			<Hotspot X="-596.55" Y="-845.27" Z="-68.41" />
+		</CustomBehavior>
 	</If>
 
 <!-- Shackles of the Past -->
 	<If Condition="HasQuest(32115) &amp;&amp; !IsQuestCompleted(32115)">
 		<CustomBehavior File="Message" Text="Starting Shackles of the Past" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32115" LootMobs="True" PullDistance="15" />
-		<While Condition="!IsQuestCompleted(32115)" >
-			<CustomBehavior File="MyCTM" X="-640.57" Y="-913.01" Z="-65.99" />
-			<CustomBehavior File="InteractWith" QuestId="32115" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-613.72" Y="-891.28" Z="-65.37" />
-			<CustomBehavior File="InteractWith" QuestId="32115" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-669.29" Y="-885.05" Z="-64.12" />
-			<CustomBehavior File="InteractWith" QuestId="32115" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-704.18" Y="-893.32" Z="-64.21" />
-			<CustomBehavior File="InteractWith" QuestId="32115" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-740.96" Y="-926.63" Z="-66.96" />
-			<CustomBehavior File="InteractWith" QuestId="32115" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-712.73" Y="-933.70" Z="-63.96" />
-			<CustomBehavior File="InteractWith" QuestId="32115" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
-		</While>
+		<Objective QuestName="Shackles of the Past" QuestId="32115" Type="KillMob" MobId="68074" KillCount="14" />
 	</If>
 
 <!-- Oi Ain't Afraid O No Ghosts -->
 	<If Condition="HasQuest(32346) &amp;&amp; !IsQuestCompleted(32346)">
 		<CustomBehavior File="Message" Text="Starting Oi Ain't Afraid O No Ghosts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32346" LootMobs="True" PullDistance="15" />
-		<While Condition="!IsQuestCompleted(32346)" >
-			<CustomBehavior File="MyCTM" X="-640.57" Y="-913.01" Z="-65.99" />
-			<CustomBehavior File="InteractWith" QuestId="32346" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-613.72" Y="-891.28" Z="-65.37" />
-			<CustomBehavior File="InteractWith" QuestId="32346" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-669.29" Y="-885.05" Z="-64.12" />
-			<CustomBehavior File="InteractWith" QuestId="32346" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-704.18" Y="-893.32" Z="-64.21" />
-			<CustomBehavior File="InteractWith" QuestId="32346" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-740.96" Y="-926.63" Z="-66.96" />
-			<CustomBehavior File="InteractWith" QuestId="32346" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-712.73" Y="-933.70" Z="-63.96" />
-			<CustomBehavior File="InteractWith" QuestId="32346" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
-			<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
-		</While>
+		<Objective QuestName="Oi Ain't Afraid O No Ghosts" QuestId="32346" Type="KillMob" MobId="68073" KillCount="12" />
 	</If>
 
 <!-- Eviction Notice -->
 	<If Condition="HasQuest(32347) &amp;&amp; !IsQuestCompleted(32347)">
 		<CustomBehavior File="Message" Text="Starting Eviction Notice" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32347" LootMobs="True" PullDistance="15" />
-		<CustomBehavior File="MyCTM" X="-691.34" Y="-929.52" Z="-64.04" />
-		<CustomBehavior File="MyCTM" X="-686.35" Y="-947.95" Z="-64.09" />
-		<CustomBehavior File="MyCTM" X="-660.72" Y="-944.24" Z="-73.25" />
-		<CustomBehavior File="MyCTM" X="-656.37" Y="-965.72" Z="-74.23" />
-		<CustomBehavior File="MyCTM" X="-685.36" Y="-966.22" Z="-87.56" />
-		<While Condition="!IsQuestCompleted(32347)">
-			<CustomBehavior File="MyCTM" X="-717.46" Y="-945.25" Z="-87.78" />
-			<CustomBehavior File="MyCTM" X="-735.82" Y="-907.48" Z="-83.79" />
-			<CustomBehavior File="MyCTM" X="-733.48" Y="-894.61" Z="-83.15" />
-			<CustomBehavior File="MyCTM" X="-672.61" Y="-876.58" Z="-84.35" />
-			<CustomBehavior File="MyCTM" X="-675.39" Y="-922.62" Z="-86.59" />
-			<CustomBehavior File="MyCTM" X="-670.84" Y="-949.10" Z="-86.48" />
-			<CustomBehavior File="MyCTM" X="-687.81" Y="-965.71" Z="-87.76" />
-		</While>
-		<CustomBehavior File="MyCTM" X="-656.37" Y="-965.72" Z="-74.23" />
-		<CustomBehavior File="MyCTM" X="-660.72" Y="-944.24" Z="-73.25" />
-		<CustomBehavior File="MyCTM" X="-686.35" Y="-947.95" Z="-64.09" />
-		<CustomBehavior File="MyCTM" X="-691.34" Y="-929.52" Z="-64.04" />
-		<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
+		<Objective QuestName="Eviction Notice" QuestId="32347" Type="KillMob" MobId="67861" MobId2="68114" MobId3="68308" KillCount="10" />
 	</If>
 
 	<If Condition="(HasQuest(32122) &amp;&amp; IsQuestCompleted(32122)) ||
@@ -497,39 +406,32 @@
 			(HasQuest(32121) &amp;&amp; IsQuestCompleted(32121)) ||
 			(HasQuest(32347) &amp;&amp; IsQuestCompleted(32347)) ||
 			(HasQuest(32119) &amp;&amp; IsQuestCompleted(32119))" >
-		<CustomBehavior File="MyCTM" X="-674.01" Y="-932.46" Z="-57.02" />
-		<CustomBehavior File="MyCTM" X="-655.49" Y="-927.51" Z="-49.65" />
-		<CustomBehavior File="MyCTM" X="-666.90" Y="-894.10" Z="-37.57" />
-		<CustomBehavior File="MyCTM" X="-630.55" Y="-880.96" Z="-22.36" />
-		<CustomBehavior File="MyCTM" X="-602.55" Y="-857.95" Z="-17.37" />
-		<CustomBehavior File="MyCTM" X="-607.36" Y="-825.81" Z="-2.26" />
-		<CustomBehavior File="MyCTM" X="-621.93" Y="-813.28" Z="1.97" />
+		<CustomBehavior File="Message" Text="Returning to cave entrance for turn-ins" LogColor="Green" />
+		<RunTo X="-621.93" Y="-813.28" Z="1.97" />
+	</If>
 
-		<If Condition="HasQuest(32122) &amp;&amp; IsQuestCompleted(32122)" >
-			<TurnIn QuestName="Ogudei's Lieutenants" QuestId="32122" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-		</If>
+	<If Condition="HasQuest(32122) &amp;&amp; IsQuestCompleted(32122)" >
+		<TurnIn QuestName="Ogudei's Lieutenants" QuestId="32122" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+	</If>
 
-		<If Condition="HasQuest(32121) &amp;&amp; IsQuestCompleted(32121)" >
-			<TurnIn QuestName="The Spirit Trap" QuestId="32121" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-		</If>
+	<If Condition="HasQuest(32121) &amp;&amp; IsQuestCompleted(32121)" >
+		<TurnIn QuestName="The Spirit Trap" QuestId="32121" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+	</If>
 
-		<If Condition="HasQuest(32115) &amp;&amp; IsQuestCompleted(32115)" >
-			<TurnIn QuestName="Shackles of the Past" QuestId="32115" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-		</If>
+	<If Condition="HasQuest(32115) &amp;&amp; IsQuestCompleted(32115)" >
+		<TurnIn QuestName="Shackles of the Past" QuestId="32115" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+	</If>
 
-		<If Condition="HasQuest(32119) &amp;&amp; IsQuestCompleted(32119)" >
-			<TurnIn QuestName="It Is a Mystery" QuestId="32119" TurnInName="Hilda Hornswaggle" TurnInId="68275" />
-		</If>
+	<If Condition="HasQuest(32119) &amp;&amp; IsQuestCompleted(32119)" >
+		<TurnIn QuestName="It Is a Mystery" QuestId="32119" TurnInName="Hilda Hornswaggle" TurnInId="68275" />
+	</If>
 
-		<If Condition="HasQuest(32346) &amp;&amp; IsQuestCompleted(32346)" >
-			<TurnIn QuestName="Oi Ain't Afraid O No Ghosts" QuestId="32346" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-		</If>
+	<If Condition="HasQuest(32346) &amp;&amp; IsQuestCompleted(32346)" >
+		<TurnIn QuestName="Oi Ain't Afraid O No Ghosts" QuestId="32346" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+	</If>
 
-		<If Condition="HasQuest(32347) &amp;&amp; IsQuestCompleted(32347)" >
-			<TurnIn QuestName="Eviction Notice" QuestId="32347" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-		</If>
-
-		<CustomBehavior File="MyCTM" X="-658.14" Y="-815.55" Z="1.85" />
+	<If Condition="HasQuest(32347) &amp;&amp; IsQuestCompleted(32347)" >
+		<TurnIn QuestName="Eviction Notice" QuestId="32347" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
 	</If>
 
 <!-- Burn Out -->
@@ -647,7 +549,6 @@
 		<CustomBehavior File="UserSettings" QuestId="32446" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2065.803" Y="2048.407" Z="25" />
 		<CustomBehavior File="ForcedDismount" />
-		<!-- <CustomBehavior File="CombatUseItemOn" ItemId="93180" QuestId="32446" MobHpPercentLeft="100" MobId="67285" MaxRange="25" /> -->
 		<Objective QuestName="Dis-Assembly Required" QuestId="32446" Type="CollectItem" ItemId="93179" CollectCount="6" />
 	</If>
 
@@ -827,7 +728,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" /> -->
+<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="MORE COMING SOON!!!" />
 
