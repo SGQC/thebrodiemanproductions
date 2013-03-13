@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r99</Name>
+	<Name>Cloud Serpent Dailies r100</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1483,7 +1483,7 @@
 	</While>
 
 <If Condition="Me.IsAlliance" >
-	<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Shieldwall [Brodie]" />
 </If>
 
 <If Condition="Me.IsHorde" >

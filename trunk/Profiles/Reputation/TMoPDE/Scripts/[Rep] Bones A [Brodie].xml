@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones r99</Name>
+	<Name>Court of Bones r100</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -83,6 +83,16 @@
 		<CustomBehavior File="UserSettings" QuestId="32530" LootMobs="True" PullDistance="15" />
 		<RunTo X="6819.12" Y="6208.25" Z="29.89" />
 		<Objective QuestName="The Bloodletter" QuestId="32530" Type="KillMob" MobId="69250" KillCount="1" />
+	</If>
+	
+<!-- The Conquest of Stone -->
+	<If Condition="HasQuest(32531) &amp;&amp; !IsQuestCompleted(32531)" >
+		<CustomBehavior File="Message" Text="Starting The Conquest of Stone" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32531" LootMobs="True" PullDistance="15" />
+		<RunTo X="6389.11" Y="6192.63" Z="45.94" />
+		<CustomBehavior File="CollectThings" QuestId="32531" CollectUntil="QuestComplete" MobId="69903" HuntingGroundRadius="100" >
+			<Hotspot X="6389.11" Y="6192.63" Z="45.94" />
+		</CustomBehavior>
 	</If>
 	
 <!-- Into The Crypts -->

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Horde) r99</Name>
+	<Name>Diremoor (Horde) r100</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -44,6 +44,13 @@
 		<CustomBehavior File="Message" Text="Starting The Shuddering Moor" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32228" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="The Shuddering Moor" QuestId="32228" Type="KillMob" MobId="69406" KillCount="1" />
+	</If>
+	
+<!-- A Wing to Fly On -->
+	<If Condition="HasQuest(32506) &amp;&amp; !IsQuestCompleted(32506)" >
+		<CustomBehavior File="Message" Text="Starting A Wing to Fly On" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32506" LootMobs="True" PullDistance="10" />
+		<Objective QuestName="A Wing to Fly On" QuestId="32506" Type="CollectItem" ItemId="94605" CollectCount="1" />
 	</If>
 	
 <!-- The Sleepless Legion -->

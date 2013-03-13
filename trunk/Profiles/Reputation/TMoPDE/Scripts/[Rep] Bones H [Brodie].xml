@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Horde) r99</Name>
+	<Name>Court of Bones (Horde) r100</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -89,8 +89,17 @@
 	<If Condition="HasQuest(32495) &amp;&amp; !IsQuestCompleted(32495)" >
 		<CustomBehavior File="Message" Text="Starting The Bloodletter" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32495" LootMobs="True" PullDistance="15" />
-		<RunTo X="6819.12" Y="6208.25" Z="29.89" />
 		<Objective QuestName="The Bloodletter" QuestId="32495" Type="KillMob" MobId="69250" KillCount="1" />
+	</If>
+	
+<!-- The Conquest of Stone -->
+	<If Condition="HasQuest(32517) &amp;&amp; !IsQuestCompleted(32517)" >
+		<CustomBehavior File="Message" Text="Starting The Conquest of Stone" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32517" LootMobs="True" PullDistance="15" />
+		<RunTo X="6389.11" Y="6192.63" Z="45.94" />
+		<CustomBehavior File="CollectThings" QuestId="32517" CollectUntil="QuestComplete" MobId="69903" HuntingGroundRadius="100" >
+			<Hotspot X="6389.11" Y="6192.63" Z="45.94" />
+		</CustomBehavior>
 	</If>
 	
 <!-- Into The Crypts -->
@@ -183,6 +192,7 @@
 					HasQuest(32495) &amp;&amp; IsQuestCompleted(32945) ||
 					HasQuest(32219) &amp;&amp; IsQuestCompleted(32219) ||
 					HasQuest(32218) &amp;&amp; IsQuestCompleted(32218) ||
+					HasQuest(32517) &amp;&amp; IsQuestCompleted(32517) ||
 					HasQuest(32226) &amp;&amp; IsQuestCompleted(32226)" >
 		<CustomBehavior File="Message" Text="Heading back to Court of Bones to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
@@ -213,6 +223,10 @@
 	
 	<If Condition="HasQuest(32224) &amp;&amp; IsQuestCompleted(32224)" >
 		<TurnIn QuestName="Rise No More!" QuestId="32224" TurnInName="Ryshelle Brightlock" TurnInId="69389" />
+	</If>
+	
+	<If Condition="HasQuest(32517) &amp;&amp; IsQuestCompleted(32517)" >
+		<TurnIn QuestName="The Conquest of Stone" QuestId="32517" TurnInName="Ryshelle Brightlock" TurnInId="69389" />
 	</If>
 	
 	<If Condition="HasQuest(32226) &amp;&amp; IsQuestCompleted(32226)" >
