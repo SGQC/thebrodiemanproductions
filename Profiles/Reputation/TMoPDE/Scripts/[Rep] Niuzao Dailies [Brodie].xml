@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Niuzao Temple r76</Name>
+	<Name>Niuzao Temple r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -136,7 +136,7 @@
 <!-- Fallen Sentinels -->
 	<If Condition="HasQuest(30953) &amp;&amp; !IsQuestCompleted(30953)" >
 		<CustomBehavior File="Message" Text="Starting Fallen Sentinels" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30953" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30953" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30953)" >
@@ -146,7 +146,7 @@
 				<CustomBehavior File="CollectThings" QuestId="30954" CollectItemId="82353" ObjectId="211765" ObjectId2="211766" PostInteractDelay="1250" NonCompeteDistance="5" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" CollectItemCount="10" />
 			</If>
 			<If Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
-				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitTime="100" WaitForNpcs="false" CollectionDistance="15" />
+				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitTime="100" WaitForNpcs="False" CollectionDistance="15" />
 			</If>
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 		</While>
@@ -155,7 +155,7 @@
 <!-- A Blade is a Blade -->
 	<If Condition="HasQuest(30954) &amp;&amp; !IsQuestCompleted(30954)" >
 		<CustomBehavior File="Message" Text="Starting A Blade is a Blade" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30954" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30954" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" QuestId="30954" ObjectId="211765" ObjectId2="211766" PostInteractDelay="1250" NonCompeteDistance="5" HuntingGroundRadius="25" CollectUntil="QuestComplete" >
@@ -168,24 +168,24 @@
 <!-- In Battle's Shadow -->
 	<If Condition="HasQuest(30958) &amp;&amp; !IsQuestCompleted(30958)" >
 		<CustomBehavior File="Message" Text="Starting In Battle's Shadow" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30958" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30958" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30958)" >
 			<If Condition="!IsQuestCompleted(30958)" >
 				<CustomBehavior File="FlyTo" X="2135.29" Y="4736.10" Z="155.08" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
 			</If>
 			<If Condition="!IsQuestCompleted(30958)" >
 				<CustomBehavior File="FlyTo" X="2229.70" Y="4605.89" Z="155.08" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
 			</If>
 			<If Condition="!IsQuestCompleted(30958)" >
 				<CustomBehavior File="FlyTo" X="2369.13" Y="4696.05" Z="155.09" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="false" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
 			</If>
 		</While>
 	</If>
@@ -193,7 +193,7 @@
 <!-- Paying Tribute -->
 	<If Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
 		<CustomBehavior File="Message" Text="Starting Paying Tribute" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30955" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30955" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" QuestId="30955" ObjectId="212132" ObjectId2="212133" PostInteractDelay="1250" NonCompeteDistance="5" HuntingGroundRadius="25" CollectUntil="QuestComplete" >
@@ -209,7 +209,7 @@
 <!-- The Siege Swells -->
 	<If Condition="HasQuest(30956) &amp;&amp; !IsQuestCompleted(30956)" >
 		<CustomBehavior File="Message" Text="Starting The Siege Swells" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30956" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30956" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Siege Swells" QuestId="30956" Type="KillMob" MobId="61502" KillCount="25" />
@@ -218,7 +218,7 @@
 <!-- The Unending Siege -->
 	<If Condition="HasQuest(30952) &amp;&amp; !IsQuestCompleted(30952)" >
 		<CustomBehavior File="Message" Text="Starting The Unending Siege" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30952" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30952" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Unending Siege" QuestId="30952" Type="KillMob" MobId="61502" KillCount="12" />
@@ -227,7 +227,7 @@
 <!-- The Big Guns -->
  	<If Condition="HasQuest(30959) &amp;&amp; !IsQuestCompleted(30959)">
 		<CustomBehavior File="Message" Text="Starting The Big Guns" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30959" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30959" LootMobs="True" PullDistance="1" />
 		<While Condition="!IsQuestCompleted(30959)" >
 			<CustomBehavior File="FlyTo" X="2155.876" Y="4574.692" Z="152.7922" />
 			<CustomBehavior File="ForcedDismount"/>	
@@ -241,7 +241,7 @@
 <!-- The Overwhelming Swarm Coded by lanbo -->
 	<If Condition="HasQuest(30957) &amp;&amp; !IsQuestCompleted(30957)" >
 		<CustomBehavior File="Message" Text="Starting The Overwhelming Swarm" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30957" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30957" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="2205.567" Y="4556.066" Z="153.4633" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Overwhelming Swarm" QuestId="30957" Type="KillMob" MobId="61509" KillCount="4" />

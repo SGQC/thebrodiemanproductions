@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Pagoda Alternate r89</Name>
+	<Name>Golden Pagoda Alternate r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -121,7 +121,7 @@
 <!-- Burning Away the Filth -->
 	<If Condition="(HasQuest(30282) &amp;&amp; !IsQuestCompleted(30282))" >
 		<CustomBehavior File="Message" Text="Starting Burning Away the Filth" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30282" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30282" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1234.62" Y="1459.12" Z="351.65" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30282)" >
@@ -151,21 +151,21 @@
 <!-- A Smashing Impression -->
 	<If Condition="(HasQuest(30283) &amp;&amp; !IsQuestCompleted(30283))" >
 		<CustomBehavior File="Message" Text="Starting A Smashing Impression" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30283" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30283" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1228.32" Y="1353.79" Z="363.78" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30283)" >
-			<CustomBehavior File="InteractWith" MobId="63089" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
-			<CustomBehavior File="InteractWith" MobId="63088" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
-			<CustomBehavior File="InteractWith" MobId="63087" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
-			<CustomBehavior File="InteractWith" MobId="63090" NumOfTimes="1" WaitTime="4000" WaitForNpcs="false" />
+			<CustomBehavior File="InteractWith" MobId="63089" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="63088" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="63087" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="63090" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
 		</While>
 	</If>
 
 <!-- In Enemy Hands -->
 	<If Condition="(HasQuest(30293) &amp;&amp; !IsQuestCompleted(30293))" >
 		<CustomBehavior File="Message" Text="Starting In Enemy Hands" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30293" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30293" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="In Enemy Hands" QuestId="30293" Type="KillMob" MobId="63221" KillCount="8" />
@@ -174,7 +174,7 @@
 <!-- The Silent Approach -->
 	<If Condition="(HasQuest(30281) &amp;&amp; !IsQuestCompleted(30281))" >
 		<CustomBehavior File="Message" Text="Starting The Silent Approach" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30281" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30281" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Silent Approach" QuestId="30281" Type="KillMob" MobId="63065" KillCount="6" />
@@ -183,7 +183,7 @@
 <!-- Rude Awakenings -->
 	<If Condition="(HasQuest(30292) &amp;&amp; !IsQuestCompleted(30292))" >
 		<CustomBehavior File="Message" Text="Starting Rude Awakenings" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30292" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30292" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Rude Awakenings" QuestId="30292" Type="KillMob" MobId="63130" KillCount="8" />

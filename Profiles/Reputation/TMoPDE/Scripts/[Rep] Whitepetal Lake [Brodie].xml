@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r85</Name>
+	<Name>Whitepetal Lake r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -165,7 +165,7 @@
 <!-- Stick in the Mud -->
 	<If Condition="(HasQuest(30340) &amp;&amp; !IsQuestCompleted(30340))" >
 		<CustomBehavior File="Message" Text="Starting Stick in the Mud" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30340" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30340" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1140.179" Y="1444.658" Z="342.9452" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30340)" >
@@ -176,7 +176,7 @@
 <!-- Getting your Hands Dirty (coded by Kam) -->
 	<If Condition="(HasQuest(30339) &amp;&amp; !IsQuestCompleted(30339))" >
 		<CustomBehavior File="Message" Text="Starting Getting your Hands Dirty" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30339" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30339" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1259.4" Y="1449.276" Z="353.3257" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Getting your Hands Dirty" QuestId="30339" Type="CollectItem" ItemId="212742" CollectCount="12" />
@@ -185,11 +185,11 @@
 <!-- Stunning Display -->
 	<If Condition="(HasQuest(30291) &amp;&amp; !IsQuestCompleted(30291))" >
 		<CustomBehavior File="Message" Text="Starting Stunning Display" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30291" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30291" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1134.59" Y="1451.09" Z="341.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30291)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" WaitForNpcs="false" MobId="62984" CollectionDistance="10000" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" Nav="CTM" WaitForNpcs="False" MobId="62984" CollectionDistance="10000" WaitTime="1000" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
 	</If>
@@ -197,7 +197,7 @@
 <!-- The Moving Mists -->
 	<If Condition="(HasQuest(30313) &amp;&amp; !IsQuestCompleted(30313))" >
 		<CustomBehavior File="Message" Text="Starting The Moving Mists" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30313" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30313" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1076.85" Y="1379.54" Z="352.93" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Moving Mists" QuestId="30313" Type="KillMob" MobId="58672" KillCount="8" />
@@ -206,7 +206,7 @@
 <!-- The Displaced Paleblade (Coded by Kam)-->
 	<If Condition="(HasQuest(30314) &amp;&amp; !IsQuestCompleted(30314))" >
 		<CustomBehavior File="Message" Text="Starting The Displaced Paleblade" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30314" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30314" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1259.4" Y="1449.276" Z="353.3257" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Displaced Paleblade" QuestId="30314" Type="KillMob" MobId="59378" KillCount="8" />
@@ -215,7 +215,7 @@
 <!-- Under Watchful Eyes -->
 	<If Condition="(HasQuest(30341) &amp;&amp; !IsQuestCompleted(30341))" >
 		<CustomBehavior File="Message" Text="Starting Under Watchful Eyes" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30341" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30341" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1076.85" Y="1379.54" Z="352.93" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Under Watchful Eyes" QuestId="30341" Type="KillMob" MobId="59379" KillCount="8" />
@@ -224,7 +224,7 @@
 <!-- A Weighty Task -->
 	<If Condition="(HasQuest(30338) &amp;&amp; !IsQuestCompleted(30338))" >
 		<CustomBehavior File="Message" Text="Starting A Weighty Task" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30338" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30338" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1140.179" Y="1444.658" Z="342.9452" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30338)" >
@@ -241,7 +241,7 @@
 <!-- Sparkle in the Eye -->
 	<If Condition="(HasQuest(30265) &amp;&amp; !IsQuestCompleted(30265))" >
 		<CustomBehavior File="Message" Text="Starting Sparkle in the Eye" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30265" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30265" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1061.807" Y="1491.629" Z="352.83" />
 		<CustomBehavior File="ForcedDismount" />
 	<!--<Objective QuestName="Sparkle in the Eye" QuestId="30265" Type="CollectItem" ItemId="84646" CollectCount="8" />-->
@@ -259,11 +259,11 @@
 <!-- A Thousand Pointy Teeth -->
 	<If Condition="(HasQuest(30284) &amp;&amp; !IsQuestCompleted(30284))" >
 		<CustomBehavior File="Message" Text="Starting A Thousand Pointy Teeth" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30284" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30284" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1061.807" Y="1491.629" Z="352.83" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30284)" >
-			<CustomBehavior File="InteractWith" QuestId="30284" Nav="CTM" WaitForNpcs="false" MobId="59404" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
+			<CustomBehavior File="InteractWith" QuestId="30284" Nav="CTM" WaitForNpcs="False" MobId="59404" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
 	</If>
@@ -271,11 +271,11 @@
 <!-- Fiery Tongue, Fragile Feet -->
 	<If Condition="(HasQuest(30342) &amp;&amp; !IsQuestCompleted(30342))" >
 		<CustomBehavior File="Message" Text="Starting Fiery Tongue, Fragile Feet" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30342" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30342" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1140.18" Y="1444.66" Z="342.95" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30342)" >
-			<CustomBehavior File="InteractWith" QuestId="30342" Nav="CTM" WaitForNpcs="false" MobId="58455" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
+			<CustomBehavior File="InteractWith" QuestId="30342" Nav="CTM" WaitForNpcs="False" MobId="58455" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
 	<!--<Objective QuestName="Fiery Tongue, Fragile Feet" QuestId="30342" Type="KillMob" MobId="58455" KillCount="6" />-->

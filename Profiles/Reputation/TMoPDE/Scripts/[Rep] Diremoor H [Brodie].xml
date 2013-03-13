@@ -1,0 +1,67 @@
+<HBProfile>
+	<Name>Diremoor (Horde) r99</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder IgnoreCheckpoints="True" >
+
+<!-- Starting Quests -->
+
+<CustomBehavior File="Message" Text="Compiling Diremoor Quests..." LogColor="CornflowerBlue"  />
+	
+<!-- The Shuddering Moor -->
+	<If Condition="HasQuest(32228) &amp;&amp; !IsQuestCompleted(32228)" >
+		<CustomBehavior File="Message" Text="Starting The Shuddering Moor" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32228" LootMobs="True" PullDistance="10" />
+		<Objective QuestName="The Shuddering Moor" QuestId="32228" Type="KillMob" MobId="69406" KillCount="1" />
+	</If>
+	
+<!-- The Sleepless Legion -->
+	<If Condition="HasQuest(32285) &amp;&amp; !IsQuestCompleted(32285)" >
+		<CustomBehavior File="Message" Text="Starting The Sleepless Legion" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32285" LootMobs="True" PullDistance="10" />
+		<Objective QuestName="The Sleepless Legion" QuestId="32285" Type="KillMob" MobId="67473" KillCount="6" />
+	</If>
+	
+	<If Condition="HasItem(94566)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
+	</If>
+	
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
+<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Isle of Thunder H [Brodie]" />
+
+</QuestOrder>
+</HBProfile>

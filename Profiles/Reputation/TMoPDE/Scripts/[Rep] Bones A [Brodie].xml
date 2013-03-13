@@ -1,0 +1,265 @@
+<HBProfile>
+	<Name>Court of Bones r99</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- Rise No More! -->
+	<Quest Id="32532" Name="Rise No More!">
+		<Objective Type="KillMob" MobId="69237" KillCount="15">
+			<Hotspots>
+				<Hotspot X="6522.543" Y="6169.586" Z="43.65172" />
+				<Hotspot X="6428.191" Y="6117.734" Z="31.82163" />
+				<Hotspot X="6614.313" Y="6069.032" Z="34.29219" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder IgnoreCheckpoints="True" >
+
+<CustomBehavior File="Message" Text="Compiling Court of Bones Quests..." LogColor="Cornflowerblue"  />
+
+<!-- Court of Bones (Kicker) -->
+	<If Condition="HasQuest(32731)" >
+		<CustomBehavior File="Message" Text="Starting The Court of Bones Kicker" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32731" LootMobs="True" PullDistance="1" />
+		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
+		<TurnIn QuestName="The Court of Bones" QuestId="32731" TurnInName="Narasi Snowdawn" TurnInId="67997" />
+	</If>
+	
+<!-- Narasi Snowdawn -->
+	<While Condition="HasQuestAvailable(67997)" >
+		<CustomBehavior File="InteractWith" MobId="67997" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Danara Silverglass -->
+	<While Condition="HasQuestAvailable(69668)" >
+		<CustomBehavior File="InteractWith" MobId="69668" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Vylene Amaranth -->
+	<While Condition="HasQuestAvailable(69670)" >
+		<CustomBehavior File="InteractWith" MobId="69670" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- The Bloodletter -->
+	<If Condition="HasQuest(32530) &amp;&amp; !IsQuestCompleted(32530)" >
+		<CustomBehavior File="Message" Text="Starting The Bloodletter" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32530" LootMobs="True" PullDistance="15" />
+		<RunTo X="6819.12" Y="6208.25" Z="29.89" />
+		<Objective QuestName="The Bloodletter" QuestId="32530" Type="KillMob" MobId="69250" KillCount="1" />
+	</If>
+	
+<!-- Into The Crypts -->
+	<If Condition="HasQuest(32528) &amp;&amp; !IsQuestCompleted(32528)" >
+		<CustomBehavior File="Message" Text="Starting Into The Crypts" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32528" LootMobs="True" PullDistance="15" />
+		<RunTo X="6581.38" Y="6131.84" Z="6.14" />
+		<While Condition="!IsQuestCompleted(32528)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93803)" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</While>
+	</If>
+	
+<!-- The Call of Thunder -->
+	<If Condition="HasQuest(32529) &amp;&amp; !IsQuestCompleted(32529)" >
+		<CustomBehavior File="Message" Text="Starting The Call of Thunder" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32529" LootMobs="True" PullDistance="20" />
+		<RunTo X="6609.79" Y="6290.33" Z="3.63" />
+		<While Condition="!IsQuestCompleted(32529)" >
+			<CustomBehavior File="InteractWith" QuestId="32529" MobId="69264" WaitForNpcs="False" CollectionDistance="300" />
+		</While>
+	</If>
+	
+<!-- Ashes of the Enemy -->
+	<If Condition="HasQuest(32525) &amp;&amp; !IsQuestCompleted(32525)" >
+		<CustomBehavior File="Message" Text="Starting Ashes of the Enemy" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32525" LootMobs="True" PullDistance="5" /> 
+		<RunTo X="6512.10" Y="6070.66" Z="39.41" />
+		<While Condition="!IsQuestCompleted(32525)" >
+			<CustomBehavior File="UseItemOn" QuestId="32525" MobId="69331" ItemId="93751" CollectionDistance="1000" />
+		</While>
+	</If>
+	
+<!-- Stone Cold -->
+	<If Condition="HasQuest(32533) &amp;&amp; !IsQuestCompleted(32533)" >
+		<CustomBehavior File="Message" Text="Starting Stone Cold" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32533" LootMobs="True" PullDistance="10" /> 
+		<While Condition="!IsQuestCompleted(32533)" >
+			<If Condition="!IsQuestCompleted(32533)" >
+				<RunTo X="6567.13" Y="6108.35" Z="36.27" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32533)" >
+				<RunTo X="6561.52" Y="6201.09" Z="36.27" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32533)" >
+				<RunTo X="6474.34" Y="6107.52" Z="36.27" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
+			<If Condition="!IsQuestCompleted(32533)" >
+				<RunTo X="6514.89" Y="6085.92" Z="39.40" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+			</If>
+		</While>
+	</If>
+	
+<!-- Soul Surrender -->
+ 	<If Condition="HasQuest(32526) &amp;&amp; !IsQuestCompleted(32526)">
+		<CustomBehavior File="Message" Text="Starting Soul Surrender" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32526" LootMobs="True" PullDistance="5" />
+		<CustomBehavior File="CollectThings" QuestId="32526" CollectUntil="QuestComplete" ObjectId="217768" HuntingGroundRadius="50" PostInteractDelay="100" NonCompeteDistance="3" >
+			<Hotspot X="6467.76" Y="6241.741" Z="36.27182" />
+			<Hotspot X="6467.807" Y="6162.531" Z="36.27105" />
+			<Hotspot X="6509.202" Y="6110.627" Z="36.27237" />
+			<Hotspot X="6557.652" Y="6174.797" Z="36.27252" />
+			<Hotspot X="6538.69" Y="6290.28" Z="36.62913" />
+		</CustomBehavior>
+	</If>
+	
+<!-- Rise No More! -->
+	<If Condition="HasQuest(32532) &amp;&amp; !IsQuestCompleted(32532)" >
+		<CustomBehavior File="Message" Text="Starting Rise No More!" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32532" LootMobs="True" PullDistance="10" />
+		<Objective QuestName="Rise No More!" QuestId="32532" Type="KillMob" MobId="69237" KillCount="15" />
+	</If>
+	
+<!-- Grave Circumstances -->
+	<If Condition="HasQuest(32527) &amp;&amp; !IsQuestCompleted(32527)" >
+		<CustomBehavior File="Message" Text="Starting Grave Circumstances" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32527" LootMobs="True" PullDistance="20" />
+		<RunTo X="6614.61" Y="6195.92" Z="32.47" />
+		<Objective QuestName="Grave Circumstances" QuestId="32527" Type="KillMob" MobId="69235" MobId2="69264" KillCount="10" />
+	</If>
+	
+<!-- Court of Bones Turn-ins -->
+	<If Condition="HasQuest(32530) &amp;&amp; IsQuestCompleted(32530) ||
+					HasQuest(32527) &amp;&amp; IsQuestCompleted(32527) ||
+					HasQuest(32533) &amp;&amp; IsQuestCompleted(32533) ||
+					HasQuest(32526) &amp;&amp; IsQuestCompleted(32526) ||
+					HasQuest(32528) &amp;&amp; IsQuestCompleted(32528) ||
+					HasQuest(32529) &amp;&amp; IsQuestCompleted(32529) ||
+					HasQuest(32531) &amp;&amp; IsQuestCompleted(32531) ||
+					HasQuest(32532) &amp;&amp; IsQuestCompleted(32532) ||
+					HasQuest(32525) &amp;&amp; IsQuestCompleted(32525)" >
+		<CustomBehavior File="Message" Text="Heading back to Court of Bones to Turn-In" LogColor="Green" />
+		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
+		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	</If>
+	
+	<If Condition="HasQuest(32527) &amp;&amp; IsQuestCompleted(32527)" >
+		<TurnIn QuestName="Grave Consequences" QuestId="32527" TurnInName="Narasi Snowdawn" TurnInId="67997" />
+	</If>
+	
+	<If Condition="HasQuest(32526) &amp;&amp; IsQuestCompleted(32526)" >
+		<TurnIn QuestName="Soul Surrender" QuestId="32526" TurnInName="Narasi Snowdawn" TurnInId="67997" />
+	</If>
+	
+	<If Condition="HasQuest(32533) &amp;&amp; IsQuestCompleted(32533)" >
+		<TurnIn QuestName="Stone Cold" QuestId="32533" TurnInName="Danara Silverglass" TurnInId="69668" />
+	</If>
+	
+	<If Condition="HasQuest(32528) &amp;&amp; IsQuestCompleted(32528)" >
+		<TurnIn QuestName="Into The Crypts" QuestId="32528" TurnInName="Danara Silverglass" TurnInId="69668" />
+	</If>
+	
+	<If Condition="HasQuest(32525) &amp;&amp; IsQuestCompleted(32525)" >
+		<TurnIn QuestName="Ashes of the Enemy" QuestId="32525" TurnInName="Danara Silverglass" TurnInId="69668" />
+	</If>
+	
+	<If Condition="HasQuest(32532) &amp;&amp; IsQuestCompleted(32532)" >
+		<TurnIn QuestName="Rise No More!" QuestId="32532" TurnInName="Danara Silverglass" TurnInId="69668" />
+	</If>
+	
+	<If Condition="HasQuest(32530) &amp;&amp; IsQuestCompleted(32530)" >
+		<TurnIn QuestName="The Bloodletter" QuestId="32530" TurnInName="Vylene Amaranth" TurnInId="69670" />
+	</If>
+	
+	<If Condition="HasQuest(32529) &amp;&amp; IsQuestCompleted(32529)" >
+		<TurnIn QuestName="The Call of Thunder" QuestId="32529" TurnInName="Vylene Amaranth" TurnInId="69670" />
+	</If>
+	
+	<If Condition="HasQuest(32531) &amp;&amp; IsQuestCompleted(32531)" >
+		<TurnIn QuestName="The Conquest of Stone" QuestId="32531" TurnInName="Vylene Amaranth" TurnInId="69670" />
+	</If>
+
+<!-- Double check for ender quests -->
+
+<!-- Narasi Snowdawn -->
+	<While Condition="HasQuestAvailable(67997)" >
+		<CustomBehavior File="InteractWith" MobId="67997" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Danara Silverglass -->
+	<While Condition="HasQuestAvailable(69668)" >
+		<CustomBehavior File="InteractWith" MobId="69668" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Vylene Amaranth -->
+	<While Condition="HasQuestAvailable(69670)" >
+		<CustomBehavior File="InteractWith" MobId="69670" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Allies in the Shadows -->
+	<If Condition="HasQuest(32706)" >
+		<CustomBehavior File="Message" Text="Starting Allies in the Shadows" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32706" LootMobs="True" PullDistance="1" />
+		<RunTo X="6874.38" Y="5523.52" Z="1.18" />
+		<TurnIn QuestName="Allies in the Shadows" QuestId="32706" TurnInName="Taran Zhu" TurnInId="70160" />
+	</If>
+	
+	<If Condition="HasItem(94566)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
+	</If>
+	
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
+<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Isle of Thunder A [Brodie]" />
+
+</QuestOrder>
+</HBProfile>

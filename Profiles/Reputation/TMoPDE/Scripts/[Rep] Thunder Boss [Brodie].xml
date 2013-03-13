@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r96</Name>
+	<Name>Thunder Bosses r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -41,61 +41,61 @@
 <!-- Competing Magic -->
 	<If Condition="HasQuest(32576) &amp;&amp; !IsQuestCompleted(32576)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32576" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32576" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32576" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32579) &amp;&amp; !IsQuestCompleted(32579)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32579" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32579" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32579" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32561) &amp;&amp; !IsQuestCompleted(32561)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32561" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32561" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32561" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32520) &amp;&amp; !IsQuestCompleted(32520)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32520" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32520" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32520" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32578) &amp;&amp; !IsQuestCompleted(32578)" >
 		<CustomBehavior File="Message" Text="Starting Among the Bones" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32578" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32578" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Among the Bones" QuestId="32578" Type="KillMob" MobId="69666" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32293) &amp;&amp; !IsQuestCompleted(32293)" >
 		<CustomBehavior File="Message" Text="Starting Among the Bones" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32293" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32293" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Among the Bones" QuestId="32293" Type="KillMob" MobId="69666" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32577) &amp;&amp; !IsQuestCompleted(32577)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32577" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32577" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32577" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32581) &amp;&amp; !IsQuestCompleted(32581)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32581" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32581" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32581" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32562) &amp;&amp; !IsQuestCompleted(32562)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32562" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32562" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32562" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32522) &amp;&amp; !IsQuestCompleted(32522)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32522" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32522" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32522" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 
@@ -107,19 +107,29 @@
 					HasQuest(32578) &amp;&amp; IsQuestCompleted(32578) ||
 					HasQuest(32577) &amp;&amp; IsQuestCompleted(32577) ||
 					HasQuest(32581) &amp;&amp; IsQuestCompleted(32581)">
-		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
-			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
-			<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<ElseIf Condition="Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100" >
-			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		<If Condition="IsQuestCompleted(32644)" >
+			<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6134.63, 5008.49, 36.78)) &lt; 100)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<Else>
+				<RunTo X="6122.84" Y="4980.87" Z="36.89" />
+			</Else>
+			</If>
+		<ElseIf Condition="!IsQuestCompleted(32644)" >
+			<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<ElseIf Condition="Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100" >
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</ElseIf>
+			<Else>
+				<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
+				<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="True" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			</Else>
+			</If>
 		</ElseIf>
-		<Else>
-			<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
-			<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="true" />
-			<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		</Else>
 		</If>
-	</If>
 	
 <!-- Horde Return -->
 	<If Condition="HasQuest(32561) &amp;&amp; IsQuestCompleted(32561) ||
@@ -127,19 +137,29 @@
 					HasQuest(32293) &amp;&amp; IsQuestCompleted(32293) ||
 					HasQuest(32562) &amp;&amp; IsQuestCompleted(32562) ||
 					HasQuest(32522) &amp;&amp; IsQuestCompleted(32522)">
-		<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100)" >
-			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
-			<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<ElseIf Condition="Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100" >
-			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		<If Condition="IsQuestCompleted(32212)" >
+			<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(7198.78, 6285.94, 12.47)) &lt; 100)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<Else>
+				<RunTo X="7167.23" Y="6309.77" Z="16.02" />
+			</Else>
+			</If>
+		<ElseIf Condition="!IsQuestCompleted(32212)" >
+			<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<ElseIf Condition="Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100" >
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</ElseIf>
+			<Else>
+				<RunTo X="6691.65" Y="6286.90" Z="1.52" />
+				<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="True" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			</Else>
+			</If>
 		</ElseIf>
-		<Else>
-			<RunTo X="6691.65" Y="6286.90" Z="1.52" />
-			<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="true" />
-			<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		</Else>
 		</If>
-	</If>
 	
 	<If Condition="HasQuest(32576) &amp;&amp; IsQuestCompleted(32576)">
 		<TurnIn QuestName="Competing Magic" QuestId="32576" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
@@ -215,23 +235,13 @@
 		</While>
 	</If>
 	
-	<If Condition="Me.IsAlliance &amp;&amp; Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100" >
-		<RunTo X="5662.35" Y="6212.02" Z="12.79" />
-		<CustomBehavior File="MyCTM" X="5659.771" Y="6209.47" Z="13.21746" />
-		<CustomBehavior File="MyCTM" X="5656.402" Y="6205.382" Z="17.36683" />
-		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+	<If Condition="Me.IsAlliance" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Isle of Thunder A [Brodie]" />
 	</If>
 	
-	<If Condition="Me.IsHorde &amp;&amp; Me.Location.Distance(new WoWPoint(6712.60, 6481.39, 4.85)) &lt; 100" >
-		<RunTo X="6690.58" Y="6481.38" Z="4.63" />
-		<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="true" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+	<If Condition="Me.IsHorde" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Isle of Thunder H [Brodie]" />
 	</If>
-
-<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] August Celestials Dailies [Brodie]" />
-
-<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />
 
 </QuestOrder>
 </HBProfile>

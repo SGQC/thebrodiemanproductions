@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs r80</Name>
+	<Name>Tillers PreReqs r99</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -122,7 +122,7 @@
 	</If>
 
 	<While Condition="HasQuest(30257) &amp;&amp; !IsQuestCompleted(30257)" >
-		<CustomBehavior File="InteractWith" MobId="210582" ObjectType="Gameobject" Range="10" X="-161.3544" Y="609.952" Z="168.9081" WaitTime="2000" />
+		<CustomBehavior File="InteractWith" MobId="210582" ObjectType="GameObject" Range="10" X="-161.3544" Y="609.952" Z="168.9081" WaitTime="2000" />
 	</While>
 
 	<If Condition="HasQuest(30257) &amp;&amp; IsQuestCompleted(30257)" >

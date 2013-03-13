@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Voice of the Gods r97</Name>
+	<Name>Voice of the Gods r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -50,7 +50,7 @@
 
 		<If Condition="!HasQuest(32382)" >
 			<CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of storyline reached...for now! Level up your rep to continue!" />
-			<CustomBehavior File="UserSettings" StopBot="true" />
+			<CustomBehavior File="UserSettings" StopBot="True" />
 		</If>
 	</If>
 	
@@ -84,7 +84,7 @@
 	
 <!-- He Won't Even Miss It -->
 	<If Condition="HasQuest(32397) &amp;&amp; !IsQuestCompleted(32397)" >
-		<CustomBehavior File="UserSettings" QuestId="32397" LootMobs="false" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="32397" LootMobs="False" PullDistance="1" />
 		<CustomBehavior File="InteractWith" QuestId="32397" MobId="68413" WaitTime="1000" />
 		<RunTo X="2105.27" Y="1182.89" Z="476.57" />
 		<CustomBehavior File="InteractWith" QuestId="32397" MobId="216664" ObjectType="GameObject" WaitTime="1000" />
@@ -93,27 +93,27 @@
 
 <!-- Bugging Out -->
 	<If Condition="HasQuest(32383) &amp;&amp; !IsQuestCompleted(32383)" >
-		<CustomBehavior File="UserSettings" QuestId="32383" LootMobs="false" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="32383" LootMobs="False" PullDistance="1" />
 		<RunTo X="2101.414" Y="1130.307" Z="483.9937" />
 		<RunTo X="2117.74" Y="1173.17" Z="476.33" />
 		<CustomBehavior File="InteractWith" QuestId="32383" MobId="68413" WaitTime="1000" />
 		<If Condition="!IsObjectiveComplete(1,32383)" >
-			<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="true" X="2111.623" Y="1188.063" Z="477.2256" />
+			<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="True" X="2111.623" Y="1188.063" Z="477.2256" />
 		</If>
 		<If Condition="!IsObjectiveComplete(3,32383)" >
 			<RunTo X="2101.414" Y="1130.307" Z="483.9937" />
 			<RunTo X="2045.51" Y="1184.72" Z="486.97" />
-			<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="true" X="2074.503" Y="1196.068" Z="477.2921" />
+			<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="True" X="2074.503" Y="1196.068" Z="477.2921" />
 			<If Condition="!IsObjectiveComplete(2,32383)" >
 				<RunTo X="2091.48" Y="1212.02" Z="475.13" />
-				<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="true" X="2090.332" Y="1204.74" Z="476.7347" />
+				<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="True" X="2090.332" Y="1204.74" Z="476.7347" />
 			</If>
 		</If>
 		<If Condition="!IsObjectiveComplete(2,32383)" >
 			<RunTo X="2101.414" Y="1130.307" Z="483.9937" />
 			<RunTo X="2045.51" Y="1184.72" Z="486.97" />
 			<RunTo X="2091.48" Y="1212.02" Z="475.13" />
-			<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="true" X="2090.332" Y="1204.74" Z="476.7347" />
+			<CustomBehavior File="InteractWith" QuestId="32383" MobId="68913" IgnoreCombat="True" X="2090.332" Y="1204.74" Z="476.7347" />
 		</If>
 		<RunTo X="2101.414" Y="1130.307" Z="483.9937" />
 	</If>

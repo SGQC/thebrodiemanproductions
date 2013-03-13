@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r82</Name>
+	<Name>Dominance Offensive r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -362,7 +362,7 @@
 <!-- Hero Killer -->
 	<If Condition="HasQuest(32135) &amp;&amp; !IsQuestCompleted(32135)" >
 		<CustomBehavior File="Message" Text="Starting Hero Killer" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32135" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32135" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-943.44" Y="-873.70" Z="1.14" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Hero Killer" QuestId="32135" Type="KillMob" MobId="67636" KillCount="1" />
@@ -371,7 +371,7 @@
 <!-- Good Luck, Have Fun -->
 	<If Condition="HasQuest(32130) &amp;&amp; !IsQuestCompleted(32130)" >
 		<CustomBehavior File="Message" Text="Starting Good Luck, Have Fun" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32130" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32130" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-943.44" Y="-873.70" Z="1.14" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Good Luck, Have Fun" QuestId="32130" Type="CollectItem" ItemId="92474" CollectCount="10" />
@@ -380,7 +380,7 @@
 <!-- Worker Harassment -->
 	<If Condition="HasQuest(32132) &amp;&amp; !IsQuestCompleted(32132)" >
 		<CustomBehavior File="Message" Text="Starting Worker Harassment" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32132" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32132" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-827.05" Y="-974.23" Z="18.55" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Worker Harassment" QuestId="32132" Type="KillMob" MobId="67423" KillCount="30" />
@@ -389,7 +389,7 @@
 <!-- We Require More Minerals -->
 	<If Condition="HasQuest(32131) &amp;&amp; !IsQuestCompleted(32131)" >
 		<CustomBehavior File="Message" Text="Starting We Require More Minerals" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32131" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32131" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo"  X="-783.64" Y="-743.95" Z="12.00" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="We Require More Minerals" QuestId="32131" Type="CollectItem" ItemId="91823" CollectCount="20" />
@@ -398,7 +398,7 @@
 <!-- Sentry Wards -->
 	<If Condition="HasQuest(32133) &amp;&amp; !IsQuestCompleted(32133)" >
 		<CustomBehavior File="Message" Text="Starting Sentry Wards" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32133" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32133" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(32133)" >
 			<If Condition="!IsObjectiveComplete(2,32133)" >
 				<CustomBehavior File="FlyTo" X="-1227.92" Y="-956.90" Z="16.07" />
@@ -437,7 +437,7 @@
 <!-- Work Order: Iron -->
 	<If Condition="HasQuest(32140)" >
 		<CustomBehavior File="Message" Text="Starting Work Order: Iron" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32140" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32140" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-2057.03" Y="1887.69" Z="0.94" />
 		<While Condition="HasQuest(32140)" >
 			<TurnIn QuestName="Work Order: Iron" QuestId="32140" TurnInName="Daxil Oregrind" TurnInId="67537" />
@@ -459,7 +459,7 @@
 <!-- Work Order: Fuel -->
 	<If Condition="HasQuest(32136)">
 		<CustomBehavior File="Message" Text="Starting Work Order: Fuel" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32136" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32136" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1993.84" Y="1755.70" Z="2.13" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="HasQuest(32136)">
@@ -484,39 +484,39 @@
 <!-- Precious Resource -->
 	<If Condition="HasQuest(32237) &amp;&amp; !IsQuestCompleted(32237)">
 		<CustomBehavior File="Message" Text="Starting Precious Resource" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32237" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32237" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2011.34" Y="1732.65" Z="2.32" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32237)" >
 			<CustomBehavior File="MyCTM" X="-2021.50" Y="1713.59" Z="0.86" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 			<CustomBehavior File="MyCTM" X="-2011.34" Y="1732.65" Z="2.32" />
 			<CustomBehavior File="MyCTM" X="-2031.18" Y="1732.12" Z="1.25" />
 			<CustomBehavior File="MyCTM" X="-2047.51" Y="1736.87" Z="7.07" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 			<CustomBehavior File="MyCTM" X="-2054.76" Y="1725.11" Z="7.19" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 			<CustomBehavior File="MyCTM" X="-2051.95" Y="1710.96" Z="7.21" />
 			<If Condition="!IsQuestCompleted(32237)" >
 				<CustomBehavior File="MyCTM" X="-2044.34" Y="1715.48" Z="7.18" />
-				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 				<CustomBehavior File="MyCTM" X="-2038.98" Y="1706.81" Z="7.18" />
-				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 				<CustomBehavior File="MyCTM" X="-2051.95" Y="1710.96" Z="7.21" />
 			</If>
 			<CustomBehavior File="MyCTM" X="-2051.32" Y="1694.61" Z="10.38" />
 			<CustomBehavior File="MyCTM" X="-2040.68" Y="1688.35" Z="14.29" />
 			<CustomBehavior File="MyCTM" X="-2036.81" Y="1696.32" Z="18.05" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 			<CustomBehavior File="MyCTM" X="-2031.59" Y="1696.91" Z="20.26" />
 			<CustomBehavior File="MyCTM" X="-2028.55" Y="1708.16" Z="20.57" />
 			<If Condition="!IsQuestCompleted(32237)" >
 				<CustomBehavior File="MyCTM" X="-2030.99" Y="1718.85" Z="20.57" />
-				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 				<CustomBehavior File="MyCTM" X="-2030.48" Y="1729.39" Z="20.58" />
 				<CustomBehavior File="MyCTM" X="-2039.14" Y="1735.43" Z="21.02" />
 				<CustomBehavior File="MyCTM" X="-2044.70" Y="1731.40" Z="21.15" />
-				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 				<CustomBehavior File="MyCTM" X="-2052.50" Y="1726.67" Z="20.57" />
 				<CustomBehavior File="MyCTM" X="-2049.88" Y="1713.80" Z="20.67" />
 				<CustomBehavior File="MyCTM" X="-2043.29" Y="1709.76" Z="20.96" />
@@ -524,28 +524,28 @@
 			</If>
 			<CustomBehavior File="MyCTM" X="-2031.59" Y="1696.91" Z="20.26" />
 			<CustomBehavior File="MyCTM" X="-2036.81" Y="1696.32" Z="18.05" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 			<CustomBehavior File="MyCTM" X="-2040.68" Y="1688.35" Z="14.29" />
 			<CustomBehavior File="MyCTM" X="-2051.32" Y="1694.61" Z="10.38" />
 			<CustomBehavior File="MyCTM" X="-2051.95" Y="1710.96" Z="7.21" />
 			<If Condition="!IsQuestCompleted(32237)" >
 				<CustomBehavior File="MyCTM" X="-2044.34" Y="1715.48" Z="7.18" />
-				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 				<CustomBehavior File="MyCTM" X="-2038.98" Y="1706.81" Z="7.18" />
-				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+				<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 				<CustomBehavior File="MyCTM" X="-2051.95" Y="1710.96" Z="7.21" />
 			</If>
 			<CustomBehavior File="MyCTM" X="-2054.76" Y="1725.11" Z="7.19" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 			<CustomBehavior File="MyCTM" X="-2047.51" Y="1736.87" Z="7.07" />
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="false" WaitTime="1000" CollectionDistance="10" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
 		</While>
 	</If>
 
 <!-- Bug Off -->
 	<If Condition="(HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236))" >
 		<CustomBehavior File="Message" Text="Starting Bug Off" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32236" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32236" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2035.62" Y="1904.40" Z="0.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32236)" >
@@ -562,7 +562,7 @@
 <!-- Power Metal -->
 	<If Condition="(HasQuest(32141) &amp;&amp; !IsQuestCompleted(32141))" >
 		<CustomBehavior File="Message" Text="Starting Power Metal" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32141" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32141" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(32141)" >
 			<If Condition="!IsQuestCompleted(32141)" >
 				<CustomBehavior File="FlyTo" X="-2090.55" Y="1975.52" Z="24.65" />
@@ -618,7 +618,7 @@
 <!-- Runnin On Empty -->
 	<If Condition="HasQuest(32137) &amp;&amp; !IsQuestCompleted(32137)" >
 		<CustomBehavior File="Message" Text="Starting Runnin On Empty" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32137" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32137" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Runnin On Empty" QuestId="32137" Type="CollectItem" ItemId="91846" CollectCount="9" />
@@ -627,7 +627,7 @@
 <!-- Mystery Meatloaf -->
 	<If Condition="HasQuest(32197) &amp;&amp; !IsQuestCompleted(32197)" >
 		<CustomBehavior File="Message" Text="Starting Mystery Meatloaf" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32197" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="32197" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Mystery Meatloaf" QuestId="32197" Type="CollectItem" ItemId="91874" CollectCount="7" />
@@ -642,7 +642,7 @@
 <!-- Krasarang Steampot -->
 	<If Condition="HasQuest(32199) &amp;&amp; !IsQuestCompleted(32199)" >
 		<CustomBehavior File="Message" Text="Starting Krasarang Steampot" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32199" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32199" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Krasarang Steampot" QuestId="32199" Type="CollectItem" ItemId="91869" CollectCount="5" />
@@ -663,7 +663,7 @@
 <!-- Wanted: Lieutenant Ethan Jacobson -->
 	<If Condition="(HasQuest(32223) &amp;&amp; !IsQuestCompleted(32223))" >
 		<CustomBehavior File="Message" Text="Starting Wanted: Lieutenant Ethan Jacobson" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32223" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32223" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2330.62" Y="2060.64" Z="7.52" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Wanted: Lieutenant Ethan Jacobson" QuestId="32223" Type="KillMob" MobId="68028" KillCount="1" />
@@ -672,7 +672,7 @@
 <!-- Wanted: Chief Engineer Cogwrench -->
 	<If Condition="HasQuest(32222) &amp;&amp; !IsQuestCompleted(32222)" >
 		<CustomBehavior File="Message" Text="Starting Wanted: Chief Engineer Cogwrench" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32222" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32222" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-1711.18" Y="1932.07" Z="12.45" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Wanted: Chief Engineer Cogwrench" QuestId="32222" Type="KillMob" MobId="68012" KillCount="1" />
@@ -681,7 +681,7 @@
 <!-- Bilgewater Infiltrators -->
 	<If Condition="HasQuest(32214) &amp;&amp; !IsQuestCompleted(32214)">
 		<CustomBehavior File="Message" Text="Starting Bilgewater Infiltrators" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32214" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="32214" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2005.43" Y="2429.95" Z="4.09" />
 		<CustomBehavior File="ForcedDismount" />
 		<If Condition="!Me.HasAura(133937)" >
@@ -693,7 +693,7 @@
 <!-- Flash! Aaaaaahhhh! -->
 	<If Condition="HasQuest(32235) &amp;&amp; !IsQuestCompleted(32235)">
 		<CustomBehavior File="Message" Text="Starting Flash! Aaaaaahhhh!" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32235" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32235" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1911.61" Y="2414.90" Z="57.35" />
 		<While Condition="!IsQuestCompleted(32235)" >
 			<CustomBehavior File="UseItemOn" Nav="CTM" Range="30" QuestId="32235" MobType="Npc" MobId="67359" ItemId="92019" NumOfTimes="1" WaitTime="1000" CollectionDistance="3000" />
@@ -703,18 +703,18 @@
 <!-- Tear It Up -->
 	<If Condition="HasQuest(32126) &amp;&amp; !IsQuestCompleted(32126)">
 		<CustomBehavior File="Message" Text="Starting Tear It Up" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32126" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32126" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-2227.53" Y="2369.53" Z="3.52" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32126)" >
-			<CustomBehavior File="InteractWith" QuestId="32126" MobId="67639" CollectionDistance="1000" WaitForNpcs="false" X="-2227.53" Y="2369.53" Z="3.52" />
+			<CustomBehavior File="InteractWith" QuestId="32126" MobId="67639" CollectionDistance="1000" WaitForNpcs="False" X="-2227.53" Y="2369.53" Z="3.52" />
 		</While>
 	</If>
 
 <!-- Death on Two Legs -->
 	<If Condition="HasQuest(32123) &amp;&amp; !IsQuestCompleted(32123)">
 		<CustomBehavior File="Message" Text="Starting Death on Two Legs" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32123" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="32123" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-2167.76" Y="2374.60" Z="3.86" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Death on Two Legs" QuestId="32123" Type="KillMob" MobId="67354" MobId2="67425" MobId3="67913" KillCount="10" />
@@ -789,7 +789,7 @@
 <!-- Another One Bites The Dust -->
 	<If Condition="HasQuest(32128) &amp;&amp; !IsQuestCompleted(32128)">
 		<CustomBehavior File="Message" Text="Starting Another One Bites The Dust" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32128" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32128" LootMobs="True" PullDistance="15" />
 		<If Condition="!IsObjectiveComplete(1,32128)" >
 			<CustomBehavior File="FlyTo" X="-2496.60" Y="2268.81" Z="27.23" />
 			<CustomBehavior File="FlyTo" X="-2503.57" Y="2264.48" Z="12.86" />
@@ -810,7 +810,7 @@
 			<CustomBehavior File="MyCTM" X="-2515.77" Y="2263.14" Z="0.23" />
 			<CustomBehavior File="MyCTM" X="-2507.60" Y="2242.57" Z="0.23" />
 			<While Condition="!IsObjectiveComplete(1,32128)" >
-				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="216231" QuestId="32128" CollectionDistance="100" WaitForNpcs="false" />
+				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="216231" QuestId="32128" CollectionDistance="100" WaitForNpcs="False" />
 			</While>
 			<CustomBehavior File="MyCTM" X="-2515.77" Y="2263.14" Z="0.23" />
 			<CustomBehavior File="MyCTM" X="-2519.15" Y="2288.74" Z="4.29" />
@@ -841,7 +841,7 @@
 			<CustomBehavior File="MyCTM" X="-2472.47" Y="2386.50" Z="0.20" />
 			<CustomBehavior File="MyCTM" X="-2474.14" Y="2369.87" Z="0.20" />
 			<While Condition="!IsObjectiveComplete(2,32128)" >
-				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="216231" QuestId="32128" CollectionDistance="100" WaitForNpcs="false" />
+				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="216231" QuestId="32128" CollectionDistance="100" WaitForNpcs="False" />
 			</While>
 			<CustomBehavior File="MyCTM" X="-2472.47" Y="2386.50" Z="0.20" />
 			<CustomBehavior File="MyCTM" X="-2457.68" Y="2406.72" Z="4.27" />
@@ -858,7 +858,7 @@
 <!-- All Dead, All Dead -->
 	<If Condition="HasQuest(32127) &amp;&amp; !IsQuestCompleted(32127)">
 		<CustomBehavior File="Message" Text="Starting All Dead, All Dead" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32127" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32127" LootMobs="True" PullDistance="15" />
 		<If Condition="!IsObjectiveComplete(1,32127)" >
 			<CustomBehavior File="FlyTo" X="-2455.07" Y="2382.04" Z="23.65" />
 			<CustomBehavior File="FlyTo" X="-2468.27" Y="2380.10" Z="12.97" />
@@ -905,7 +905,7 @@
 <!-- Ogudei's Lieutenants -->
 	<If Condition="HasQuest(32343) &amp;&amp; !IsQuestCompleted(32343)">
 		<CustomBehavior File="Message" Text="Starting Ogudei's Lieutenants" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32343" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32343" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="MyCTM" X="-607.36" Y="-825.81" Z="-2.26" />
 		<CustomBehavior File="MyCTM" X="-602.55" Y="-857.95" Z="-17.37" />
 		<CustomBehavior File="MyCTM" X="-630.55" Y="-880.96" Z="-22.36" />
@@ -942,24 +942,24 @@
 <!-- The Spirit Trap -->
 	<If Condition="HasQuest(32342) &amp;&amp; !IsQuestCompleted(32342)">
 		<CustomBehavior File="Message" Text="Starting The Spirit Trap" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32342" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32342" LootMobs="True" PullDistance="15" />
 		<While Condition="HasQuest(32342) &amp;&amp; !IsQuestCompleted(32342)">
 			<CustomBehavior File="MyCTM" X="-744.96" Y="-937.26" Z="-65.90" />
 			<CustomBehavior File="MyCTM" X="-776.16" Y="-937.45" Z="-64.27" />
-			<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-744.96" Y="-937.26" Z="-65.90" />
 			<CustomBehavior File="MyCTM" X="-733.46" Y="-984.91" Z="-62.44" />
 			<CustomBehavior File="MyCTM" X="-709.18" Y="-990.91" Z="-67.62" />
 			<CustomBehavior File="MyCTM" X="-692.05" Y="-988.52" Z="-70.44" />
-			<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-636.83" Y="-987.06" Z="-67.80" />
 			<CustomBehavior File="MyCTM" X="-595.68" Y="-999.29" Z="-65.76" />
-			<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-627.63" Y="-961.68" Z="-66.81" />
 			<CustomBehavior File="MyCTM" X="-629.73" Y="-927.31" Z="-63.19" />
 			<If Condition="!IsQuestCompleted(32342)">
 				<CustomBehavior File="MyCTM" X="-596.55" Y="-845.27" Z="-68.41" />
-				<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="false" WaitTime="100" />
+				<CustomBehavior File="InteractWith" QuestId="32342" Nav="CTM" MobId="68061" MobState="Alive" CollectionDistance="10" WaitForNpcs="False" WaitTime="100" />
 				<CustomBehavior File="MyCTM" X="-629.73" Y="-927.31" Z="-63.19" />
 			</If>
 			<CustomBehavior File="MyCTM" X="-666.10" Y="-913.61" Z="-64.20" />
@@ -970,20 +970,20 @@
 <!-- We're Not Monsters! -->
 	<If Condition="HasQuest(32345) &amp;&amp; !IsQuestCompleted(32345)">
 		<CustomBehavior File="Message" Text="Starting We're Not Monsters" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32345" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32345" LootMobs="True" PullDistance="15" />
 		<While Condition="!IsQuestCompleted(32345)" >
 			<CustomBehavior File="MyCTM" X="-640.57" Y="-913.01" Z="-65.99" />
-			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-613.72" Y="-891.28" Z="-65.37" />
-			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-669.29" Y="-885.05" Z="-64.12" />
-			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-704.18" Y="-893.32" Z="-64.21" />
-			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="20" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-740.96" Y="-926.63" Z="-66.96" />
-			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-712.73" Y="-933.70" Z="-63.96" />
-			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32345" Nav="CTM" MobId="68074" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
 		</While>
 	</If>
@@ -991,20 +991,20 @@
 <!-- Legacy of Ogudei -->
 	<If Condition="HasQuest(32120) &amp;&amp; !IsQuestCompleted(32120)">
 		<CustomBehavior File="Message" Text="Starting Legacy of Ogudei" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32120" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32120" LootMobs="True" PullDistance="15" />
 		<While Condition="!IsQuestCompleted(32120)" >
 			<CustomBehavior File="MyCTM" X="-640.57" Y="-913.01" Z="-65.99" />
-			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-613.72" Y="-891.28" Z="-65.37" />
-			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-669.29" Y="-885.05" Z="-64.12" />
-			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-704.18" Y="-893.32" Z="-64.21" />
-			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-740.96" Y="-926.63" Z="-66.96" />
-			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-712.73" Y="-933.70" Z="-63.96" />
-			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="false" WaitTime="100" />
+			<CustomBehavior File="InteractWith" QuestId="32120" Nav="CTM" MobId="68073" MobState="Alive" CollectionDistance="15" WaitForNpcs="False" WaitTime="100" />
 			<CustomBehavior File="MyCTM" X="-679.16" Y="-916.53" Z="-64.26" />
 		</While>
 	</If>

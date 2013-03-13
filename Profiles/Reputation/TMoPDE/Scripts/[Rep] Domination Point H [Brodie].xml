@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Domination Point r91</Name>
+	<Name>Domination Point r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -56,7 +56,7 @@
 		<CustomBehavior File="WaitTimer" WaitTime="35000" />
 	</If>
 
-	<CustomBehavior File="UserSettings" LootMobs="true" PullDistance="25" />
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" />
 
 	<If Condition="!IsQuestCompleted(32250) &amp;&amp; !HasQuest(32250)" >
 		<CustomBehavior File="FlyTo" X="-2124.40" Y="2543.98" Z="3.81" />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r80</Name>
+	<Name>Ruins of Guo-Lai r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -238,7 +238,7 @@
 <!-- That's Not a Rock -->
  	<If Condition="HasQuest(30204) &amp;&amp; !IsQuestCompleted(30204)">
 		<CustomBehavior File="Message" Text="Starting That's Not a Rock" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30204" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30204" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1426.496" Y="1677.714" Z="344.2368" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(30204)">
@@ -250,7 +250,7 @@
 <!-- Runelocked -->
  	<If Condition="HasQuest(30205) &amp;&amp; !IsQuestCompleted(30205)">
 		<CustomBehavior File="Message" Text="Starting Runelocked" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30205" LootMobs="true" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="30205" LootMobs="True" PullDistance="10" />
 		<While Condition="!IsQuestCompleted(30205)">
 			<If Condition="!IsQuestCompleted(30205)">
 				<CustomBehavior File="FlyTo" X="1426.948" Y="1688.124" Z="344.2366" />
@@ -272,11 +272,11 @@
 			(HasQuest(30481) &amp;&amp; !IsQuestCompleted(30481))">
 		<If Condition="HasQuest(30206)" >
 			<CustomBehavior File="Message" Text="Starting Runes in the Ruins" LogColor="Green"  />
-			<CustomBehavior File="UserSettings" QuestId="30206" LootMobs="true" PullDistance="5" />
+			<CustomBehavior File="UserSettings" QuestId="30206" LootMobs="True" PullDistance="5" />
 		</If>
 		<If Condition="HasQuest(30481)" >
 			<CustomBehavior File="Message" Text="Starting Carved in Stone" LogColor="Green"  />
-			<CustomBehavior File="UserSettings" QuestId="30481" LootMobs="true" PullDistance="5" />
+			<CustomBehavior File="UserSettings" QuestId="30481" LootMobs="True" PullDistance="5" />
 		</If>
 		<CustomBehavior File="FlyTo" X="1426.948" Y="1688.124" Z="344.2366" />
 		<CustomBehavior File="ForcedDismount"/>
@@ -293,11 +293,11 @@
 			(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))">
 		<If Condition="HasQuest(30304)" >
 			<CustomBehavior File="Message" Text="Starting Hard as a Rock" LogColor="Green"  />
-			<CustomBehavior File="UserSettings" QuestId="30304" LootMobs="true" PullDistance="15" />
+			<CustomBehavior File="UserSettings" QuestId="30304" LootMobs="True" PullDistance="15" />
 		</If>
 		<If Condition="HasQuest(30299)" >
 			<CustomBehavior File="Message" Text="Starting No Stone Unturned" LogColor="Green"  />
-			<CustomBehavior File="UserSettings" QuestId="30299" LootMobs="true" PullDistance="15" />
+			<CustomBehavior File="UserSettings" QuestId="30299" LootMobs="True" PullDistance="15" />
 		</If>
 		<While Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
 				(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
@@ -340,13 +340,13 @@
 <!-- The Key to Success -->
  	<If Condition="HasQuest(30300) &amp;&amp; !IsQuestCompleted(30300)">
 		<CustomBehavior File="Message" Text="Starting The Key to Success" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="True" PullDistance="25" />
 		<If Condition="!IsObjectiveComplete(1,30300)" >
 			<CustomBehavior File="FlyTo" X="1337.732" Y="1678.051" Z="343.5833" />
 			<CustomBehavior File="ForcedDismount"/>
 			<Objective QuestName="The Key to Success" QuestId="30300" Type="CollectItem" ItemId="85582" CollectCount="1" />
 		</If>
-		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30300" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="ForcedMount" MountType="Flying" />
 		<While Condition="!IsQuestCompleted(30300)" >
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
@@ -359,7 +359,7 @@
 <!-- Offering A Warm Welcome -->
  	<If Condition="HasQuest(30301) &amp;&amp; !IsQuestCompleted(30301)">
 		<CustomBehavior File="Message" Text="Starting Offering A Warm Welcome" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30301" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30301" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1265.85" Y="1901.82" Z="349.66" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(30301)" >
@@ -411,7 +411,7 @@
 <!-- Painting the Ruins Red -->
  	<If Condition="HasQuest(30298) &amp;&amp; !IsQuestCompleted(30298)">
 		<CustomBehavior File="Message" Text="Starting Painting the Ruins Red" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30298" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30298" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1345.516" Y="1676.909" Z="942.6889" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Painting the Ruins Red" QuestId="30298" Type="KillMob" MobId="63610" MobId2="63611" KillCount="8" />
@@ -420,7 +420,7 @@
 <!-- Blood on the Rise -->
  	<If Condition="HasQuest(30226) &amp;&amp; !IsQuestCompleted(30226)">
 		<CustomBehavior File="Message" Text="Starting Blood on the Rise" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30226" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30226" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1345.516" Y="1676.909" Z="942.6889" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Blood on the Rise" QuestId="30226" Type="KillMob" MobId="65133" KillCount="8" />
@@ -429,7 +429,7 @@
 <!-- In Ashen Webs -->
  	<If Condition="HasQuest(30200) &amp;&amp; !IsQuestCompleted(30200)">
 		<CustomBehavior File="Message" Text="Starting In Ashen Webs" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30200" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30200" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1436.471" Y="2006.359" Z="324.0304" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="In Ashen Webs" QuestId="30200" Type="KillMob" MobId="58475" MobId2="58459" KillCount="8" />
@@ -438,7 +438,7 @@
 <!-- Troubling the Troublemakers -->
  	<If Condition="HasQuest(30228) &amp;&amp; !IsQuestCompleted(30228)">
 		<CustomBehavior File="Message" Text="Starting Troubling the Troublemakers" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30228" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30228" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1590.5" Y="1704.54" Z="407.6538" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Troubling the Troublemakers" QuestId="30228" Type="KillMob" MobId="58545" KillCount="8" />

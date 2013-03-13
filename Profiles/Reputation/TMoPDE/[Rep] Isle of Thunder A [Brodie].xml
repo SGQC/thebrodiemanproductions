@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r98</Name>
+	<Name>Isle of Thunder (Alliance) r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -30,17 +30,6 @@
 	</Blackspots>
 
 <!-- Quest Overrides -->
-
-<!-- Rise No More! -->
-	<Quest Id="32532" Name="Rise No More!">
-		<Objective Type="KillMob" MobId="69237" KillCount="15">
-			<Hotspots>
-				<Hotspot X="6522.543" Y="6169.586" Z="43.65172" />
-				<Hotspot X="6428.191" Y="6117.734" Z="31.82163" />
-				<Hotspot X="6614.313" Y="6069.032" Z="34.29219" />
-			</Hotspots>
-		</Objective>
-	</Quest>
 
 <!-- End of Quest Overrides --> 
 
@@ -76,16 +65,11 @@
 		<If Condition="HasQuest(32681)" >
 			<CustomBehavior File="FlyTo" X="1915.20" Y="4220.78" Z="132.44" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="70360" GossipOptions="1" WaitForNpcs="true" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="70360" GossipOptions="1" WaitForNpcs="True" WaitTime="1000" />
 			<CustomBehavior File="WaitTimer" WaitTime="75000" />
 			<TurnIn QuestName="A Storm Gathers" QuestId="32681" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
 			<CustomBehavior File="WaitTimer" WaitTime="60000" />
 		</If>
-	</If>
-	
-<!-- Do we have an ender? -->
-	<If Condition="HasQuest(32576) || HasQuest(32579)" >
-		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
 <CustomBehavior File="Message" Text="Beginning Isle of Thunder Quests." LogColor="Green"  />
@@ -95,24 +79,18 @@
 		<CustomBehavior File="FlyTo" X="1921.81" Y="4223.25" Z="132.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="true" />
+		<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="True" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
-	<If Condition="!HasQuest(32706) &amp;&amp; !IsQuestCompleted(32706)" >
-		<PickUp QuestName="Allies in the Shadows" QuestId="32706" GiverName="Lady Jaina Proudmoore" GiverId="67992" />
+	<If Condition="!HasQuest(32644) &amp;&amp; IsQuestCompleted(32644)" >
+		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
 	</If>
 
 <!-- Lady Jaina Proudmoore -->
 	<While Condition="HasQuestAvailable(67992)" >
 		<CustomBehavior File="InteractWith" MobId="67992" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Captain Elleane Wavecrest -->
-	<While Condition="HasQuestAvailable(67995)" >
-		<CustomBehavior File="InteractWith" MobId="67995" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -124,659 +102,55 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
+<!-- Captain Elleane Wavecrest -->
+	<While Condition="HasQuestAvailable(67995)" >
+		<CustomBehavior File="InteractWith" MobId="67995" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
 	<If Condition="Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 50" >
 		<CustomBehavior File="InteractWith" MobId="218837" ObjectType="GameObject" WaitForNpcs="True" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
-
-<!-- Za'Tual (Kicker Area 1) -->
-	<If Condition="HasQuest(32733)" >
-		<CustomBehavior File="Message" Text="Starting Za'Tual Quests" LogColor="Green" />
-		<RunTo X="5853.921" Y="6349.672" Z="2.23" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<TurnIn QuestName="Za'Tual" QuestId="32733" TurnInName="Archmage Lan'dalock" TurnInId="70517" />
+	
+	<If Condition="!HasQuest(32644) &amp;&amp; IsQuestCompleted(32644)" >
+		<If Condition="HasQuest(32732) || HasQuest(32606) || HasQuest(32545) || HasQuest(32535) ||
+					HasQuest(32548) || HasQuest(32547) || HasQuest(32536) || HasQuest(32537) ||
+					HasQuest(32546)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Ihgaluk A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||
+					HasQuest(32542) || HasQuest(32544) || HasQuest(32539) || HasQuest(32538)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Zatual A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32731) || HasQuest(32530) || HasQuest(32527) || HasQuest(32533) ||
+					HasQuest(32526) || HasQuest(32528) || HasQuest(32529) || HasQuest(32531) ||
+					HasQuest(32532) || HasQuest(32525)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Bones A [Brodie]" />
+		</If>
+	<ElseIf Condition="!IsQuestCompleted(32644)" >
+		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||
+					HasQuest(32542) || HasQuest(32544) || HasQuest(32539) || HasQuest(32538)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Zatual A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32732) || HasQuest(32606) || HasQuest(32545) || HasQuest(32535) ||
+					HasQuest(32548) || HasQuest(32547) || HasQuest(32536) || HasQuest(32537) ||
+					HasQuest(32546)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Ihgaluk A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32731) || HasQuest(32530) || HasQuest(32527) || HasQuest(32533) ||
+					HasQuest(32526) || HasQuest(32528) || HasQuest(32529) || HasQuest(32531) ||
+					HasQuest(32532) || HasQuest(32525)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Bones A [Brodie]" />
+		</If>
+	</ElseIf>
 	</If>
-	
-<!-- Archmage Lan'dalock -->
-	<While Condition="HasQuestAvailable(70517)" >
-		<CustomBehavior File="InteractWith" MobId="70517" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Ako -->
-	<While Condition="HasQuestAvailable(69673)" >
-		<CustomBehavior File="InteractWith" MobId="69673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Dalvin Jaacor -->
-	<While Condition="HasQuestAvailable(69674)" >
-		<CustomBehavior File="InteractWith" MobId="69674" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Preventing a Future Threat -->
-	<If Condition="HasQuest(32541) &amp;&amp; !IsQuestCompleted(32541)" >
-		<CustomBehavior File="Message" Text="Starting Preventing a Future Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32541" LootMobs="true" PullDistance="5" />
-		<RunTo X="5998.071" Y="6401.809" Z="5.729356" />
-		<CustomBehavior File="CollectThings" MobId="69128" CollectUntil="QuestComplete" QuestId="32541" HuntingGroundRadius="100" NonCompeteDistance="5" PostInteractDelay="1000" >
-			<Hotspot X="5956.03" Y="6407.93" Z="7.34" />
-			<Hotspot X="5920.20" Y="6445.44" Z="20.20" />
-		</CustomBehavior>
-	</If>
-	
-<!-- Heinous Sacrifice -->
-	<If Condition="HasQuest(32538) &amp;&amp; !IsQuestCompleted(32538)" >
-		<CustomBehavior File="Message" Text="Starting Heinous Sacrifice" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32538" LootMobs="true" PullDistance="10" />
-		<While Condition="!IsQuestCompleted(32538)" >
-			<If Condition="!IsObjectiveComplete(1,32538)" >
-				<RunTo X="6047.05" Y="6245.00" Z="22.96" />
-				<CustomBehavior File="InteractWith" MobId="218424" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(3,32538)" >
-				<RunTo X="5981.98" Y="6054.16" Z="58.59" />
-				<CustomBehavior File="InteractWith" MobId="218426" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(2,32538)" >
-				<RunTo X="6348.41" Y="6015.33" Z="29.35" />
-				<CustomBehavior File="InteractWith" MobId="218425" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-		</While>
-	</If>
-	
-<!-- Dark Offerings -->
-	<If Condition="HasQuest(32539) &amp;&amp; !IsQuestCompleted(32539)" >
-		<CustomBehavior File="Message" Text="Starting Dark Offerings" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32539" LootMobs="true" PullDistance="10" />
-		<CustomBehavior File="CollectThings" QuestId="32539" ObjectId="216991" CollectUntil="QuestComplete" HuntingGroundRadius="120" NonCompeteDistance="5" PostInteractDelay="1000" >
-			<Hotspot X="6280.383" Y="6244.237" Z="15.92406" />
-			<Hotspot X="6284.976" Y="6139.48" Z="27.92483" />
-			<Hotspot X="6318.386" Y="6008.481" Z="25.94791" />
-			<Hotspot X="6221.089" Y="5949.176" Z="40.78794" />
-			<Hotspot X="6130.664" Y="6008.328" Z="50.47295" />
-			<Hotspot X="6111.66" Y="5973.602" Z="49.94812" />
-			<Hotspot X="6055.106" Y="6010.012" Z="56.07657" />
-			<Hotspot X="6010.951" Y="6075.733" Z="57.54343" />
-			<Hotspot X="6209.774" Y="6122.893" Z="46.67885" />
-			<Hotspot X="6052.726" Y="6259.134" Z="22.89777" />
-			<Hotspot X="6041.158" Y="6175.552" Z="22.89766" />
-		</CustomBehavior>
-	</If>
-	
-<!-- Harbringers of the Loa -->
-	<If Condition="HasQuest(32540) &amp;&amp; !IsQuestCompleted(32540)" >
-		<CustomBehavior File="Message" Text="Starting Harbringers of the Loa" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32540" LootMobs="true" PullDistance="10" />
-		<Objective QuestName="Harbringers of the Loa" QuestId="32540" Type="KillMob" MobId="69281" MobId2="69285" KillCount="2" />
-	</If>
-	
-<!-- Surgical Strike -->
-	<If Condition="HasQuest(32542) &amp;&amp; !IsQuestCompleted(32542)" >
-		<CustomBehavior File="Message" Text="Starting Surgical Strike" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32542" LootMobs="true" PullDistance="10" />
-		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69379" MobId2="69412" MobId3="70509" MobId4="69397" MobId5="69780" KillCount="3" />
-		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69171" KillCount="3" />
-		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69254" MobId2="69256" MobId3="69255" KillCount="3" />
-	</If>
-	
-<!-- Pterrible Ptorment -->
-	<If Condition="HasQuest(32544) &amp;&amp; !IsQuestCompleted(32544)" >
-		<CustomBehavior File="Message" Text="Starting Pterrible Ptorment" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32544" LootMobs="true" PullDistance="10" />
-		<RunTo X="6213.471" Y="5955.08" Z="40.78753" />
-		<While Condition="!IsQuestCompleted(32544)" >
-			<CustomBehavior File="InteractWith" MobId="69224" CollectionDistance="500" WaitForNpcs="false" MobState="alive" />
-		</While>
-	</If>
-	
-<!-- Dangers of Za'Tual -->
-	<If Condition="HasQuest(32543) &amp;&amp; !IsQuestCompleted(32543)" >
-		<CustomBehavior File="Message" Text="Starting Dangers of Za'Tual" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32543" LootMobs="true" PullDistance="10" />
-		<Objective QuestName="Dangers of Za'Tual" QuestId="32543" Type="KillMob" MobId="69780" MobId2="69065" KillCount="12" />
-	</If>
-	
-<!-- Za'Tual Turn-ins -->
-	<If Condition="HasQuest(32541) &amp;&amp; IsQuestCompleted(32541) ||
-					HasQuest(32540) &amp;&amp; IsQuestCompleted(32540) ||
-					HasQuest(32543) &amp;&amp; IsQuestCompleted(32543) ||
-					HasQuest(32542) &amp;&amp; IsQuestCompleted(32542) ||
-					HasQuest(32544) &amp;&amp; IsQuestCompleted(32544) ||
-					HasQuest(32539) &amp;&amp; IsQuestCompleted(32539) ||
-					HasQuest(32538) &amp;&amp; IsQuestCompleted(32538)" >
-		<CustomBehavior File="Message" Text="Heading back to Zu'Tual to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="true" PullDistance="1" />
-		<RunTo X="5853.921" Y="6349.672" Z="2.226076" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-	</If>
-	
-	<If Condition="HasQuest(32544) &amp;&amp; IsQuestCompleted(32544)" >
-		<TurnIn QuestName="Pterrible Ptorment" QuestId="32544" TurnInName="Ako" TurnInId="69673" />
-	</If>
-	
-	<If Condition="HasQuest(32541) &amp;&amp; IsQuestCompleted(32541)" >
-		<TurnIn QuestName="Preventing a Future Threat" QuestId="32541" TurnInName="Ako" TurnInId="69673" />
-	</If>
-	
-	<If Condition="HasQuest(32542) &amp;&amp; IsQuestCompleted(32542)" >
-		<TurnIn QuestName="Surgical Strike" QuestId="32542" TurnInName="Archmage Lan'dalock" TurnInId="70517" />
-	</If>
-	
-	<If Condition="HasQuest(32540) &amp;&amp; IsQuestCompleted(32540)" >
-		<TurnIn QuestName="Harbringers of the Loa" QuestId="32540" TurnInName="Archmage Lan'dalock" TurnInId="70517" />
-	</If>
-	
-	<If Condition="HasQuest(32543) &amp;&amp; IsQuestCompleted(32543)" >
-		<TurnIn QuestName="Dangers of Za'Tual" QuestId="32543" TurnInName="Archmage Lan'dalock" TurnInId="70517" />
-	</If>
-	
-	<If Condition="HasQuest(32538) &amp;&amp; IsQuestCompleted(32538)" >
-		<TurnIn QuestName="Heinous Sacrifice" QuestId="32538" TurnInName="Dalvin Jaacor" TurnInId="69674" />
-	</If>
-	
-	<If Condition="HasQuest(32539) &amp;&amp; IsQuestCompleted(32539)" >
-		<TurnIn QuestName="Dark Offerings" QuestId="32539" TurnInName="Dalvin Jaacor" TurnInId="69674" />
-	</If>
-	
-<!-- Double Check for ender quests -->
-
-<!-- Archmage Lan'dalock -->
-	<While Condition="HasQuestAvailable(70517)" >
-		<CustomBehavior File="InteractWith" MobId="70517" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Ako -->
-	<While Condition="HasQuestAvailable(69673)" >
-		<CustomBehavior File="InteractWith" MobId="69673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Dalvin Jaacor -->
-	<While Condition="HasQuestAvailable(69674)" >
-		<CustomBehavior File="InteractWith" MobId="69674" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Ihgaluk Crag (Kicker Area 2) -->
-	<If Condition="HasQuest(32732)" >
-		<CustomBehavior File="Message" Text="Starting Ihgaluk Crag Quests" LogColor="Green" />
-		<RunTo X="6080.85" Y="5903.22" Z="7.93" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<TurnIn QuestName="Ihgaluk Crag" QuestId="32732" TurnInName="Archmage Modera" TurnInId="67996" />
-	</If>
-	
-<!-- Archmage Modera -->
-	<While Condition="HasQuestAvailable(67996)" >
-		<CustomBehavior File="InteractWith" MobId="67996" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Lyalia -->
-	<While Condition="HasQuestAvailable(69675)" >
-		<CustomBehavior File="InteractWith" MobId="69675" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Sanitation Sorcerer Stephen Litmatch -->
-	<While Condition="HasQuestAvailable(69677)" >
-		<CustomBehavior File="InteractWith" MobId="69677" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Image of Archmage Vargoth -->
-	<If Condition="!HasQuest(32549) &amp;&amp; !IsQuestCompleted(32549)" >
-		<PickUp QuestName="Skin of the Saurok" QuestId="32549" GiverName="Image of Archmage Vargoth" GiverId="69678" />
-	</If>
-	
-<!-- Skin of the Saurok (one time only buff enabler) -->
-	<If Condition="HasQuest(32549) &amp;&amp; !IsQuestCompleted(32549)" >
-		<CustomBehavior File="Message" Text="Starting Skin of the Saurok" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32549" LootMobs="true" PullDistance="10" />
-		<Objective QuestName="Skin of the Saurok" QuestId="32549" Type="KillMob" MobId="69227" MobId2="69210" KillCount="1" />
-	</If>
-	
-	<If Condition="HasQuest(32549) &amp;&amp; IsQuestCompleted(32549)" >
-		<CustomBehavior File="CompleteLogQuest" QuestId="32549" />
-	</If>
-	
-<!-- Subtle Encouragement -->
-	<If Condition="HasQuest(32606) &amp;&amp; !IsQuestCompleted(32606)" >
-		<CustomBehavior File="Message" Text="Starting Subtle Encouragement" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32606" LootMobs="true" PullDistance="10" />
-		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
-		<While Condition="!IsQuestCompleted(32606)" >
-			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
-			<If Condition="Me.HasAura(136461)" >
-				<CustomBehavior File="Misc\RunLua" Lua="local n=GetSpellInfo(136461); CancelUnitBuff(&quot;player&quot;,n)" />
-			</If>
-			<CustomBehavior File="InteractWith" MobId="69227" MobId2="69210" QuestId="32606" CollectionDistance="1000" WaitForNpcs="False" MobState="Alive" />
-			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
-			<If Condition="Me.HasAura(136461)" >
-				<CustomBehavior File="Misc\RunLua" Lua="local n=GetSpellInfo(136461); CancelUnitBuff(&quot;player&quot;,n)" />
-			</If>
-			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
-		</While>
-	</If>
-	
-<!-- The Skumblade Threat -->
-	<If Condition="HasQuest(32535) &amp;&amp; !IsQuestCompleted(32535)" >
-		<CustomBehavior File="Message" Text="Starting The Skumblade Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32535" LootMobs="true" PullDistance="10" />
-		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
-		<Objective QuestName="The Skumblade Threat" QuestId="32535" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />
-	</If>
-	
-<!-- The Residents of Ihgaluk -->
-	<If Condition="HasQuest(32545) &amp;&amp; !IsQuestCompleted(32545)" >
-		<CustomBehavior File="Message" Text="Starting The Residents of Ihgaluk" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32545" LootMobs="true" PullDistance="15" />
-		<Objective QuestName="The Residents of Ihgaluk" QuestId="32545" Type="KillMob" MobId="69338" KillCount="1" />
-		<Objective QuestName="The Residents of Ihgaluk" QuestId="32545" Type="KillMob" MobId="69226" KillCount="1" />
-		<Objective QuestName="The Residents of Ihgaluk" QuestId="32545" Type="KillMob" MobId="69229" KillCount="1" />
-	</If>
-	
-<!-- Deconstructed -->
-	<If Condition="HasQuest(32537) &amp;&amp; !IsQuestCompleted(32537)" >
-		<CustomBehavior File="Message" Text="Starting Deconstructed" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32537" LootMobs="true" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(32537)" >
-			<If Condition="!IsObjectiveComplete(4,32537)" >
-				<RunTo X="6160.3" Y="5730.055" Z="7.020272" />
-				<CustomBehavior File="InteractWith" MobId="69697" QuestId="32537" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(1,32537)" >
-				<RunTo X="5893.066" Y="5827.657" Z="21.64524" />
-				<CustomBehavior File="InteractWith" MobId="69693" QuestId="32537" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(2,32537)" >
-				<RunTo X="5635.40" Y="5441.19" Z="2.31" />
-				<CustomBehavior File="InteractWith" MobId="69688" QuestId="32537" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<While Condition="!IsObjectiveComplete(3,32537)" >
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5839.262" Y="5590.107" Z="40.07038" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5705.648" Y="5629.287" Z="14.65259" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5626.132" Y="5522.049" Z="3.948158" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5695.5" Y="5429.003" Z="3.434925" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5845.18" Y="5325.857" Z="5.576776" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5913.124" Y="5398.176" Z="33.1066" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="6011.305" Y="5437.688" Z="39.40099" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="6106.173" Y="5532.547" Z="68.11538" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5973.005" Y="5588.532" Z="41.45647" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-				<If Condition="!IsObjectiveComplete(3,32537)" >
-					<RunTo X="5914.528" Y="5639.815" Z="44.99718" />
-					<CustomBehavior File="InteractWith" MobId="69695" QuestId="32537" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" NumOfTimes="3" />
-				</If>
-			</While>
-		</While>
-	</If>
-	
-<!-- Left To Rot -->
-	<If Condition="HasQuest(32548) &amp;&amp; !IsQuestCompleted(32548)" >
-		<CustomBehavior File="Message" Text="Starting Left To Rot" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32548" LootMobs="true" PullDistance="10" />
-		<Objective QuestName="Left To Rot" QuestId="32548" Type="KillMob" MobId="69247" KillCount="3" />
-	</If>
-
-<!-- Just Some Light Clean-Up Work -->
-	<If Condition="HasQuest(32546) &amp;&amp; !IsQuestCompleted(32546)" >
-		<CustomBehavior File="Message" Text="Starting Just Some Light Clean-Up Work" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32546" LootMobs="true" PullDistance="25" />
-		<RunTo X="5936.555" Y="5465.421" Z="30.49908" />
-		<CustomBehavior File="CollectThings" CollectUntil="QuestComplete" QuestId="32546" MobId="69251" MobId2="69282" NonCompeteDistance="1" HuntingGroundRadius="50" >
-			<Hotspot X="5944.483" Y="5445.594" Z="30.49892" />
-			<Hotspot X="5932.566" Y="5494.266" Z="30.49921" />
-			<Hotspot X="5913.896" Y="5534.81" Z="30.49941" />
-			<Hotspot X="5914.896" Y="5579.35" Z="30.5411" />
-			<Hotspot X="5942.059" Y="5640.925" Z="43.29585" />
-		</CustomBehavior>
-	</If>
-	
-<!-- The Creeping Carpet of Ihgaluk -->
-	<If Condition="HasQuest(32547) &amp;&amp; !IsQuestCompleted(32547)" >
-		<CustomBehavior File="Message" Text="Starting The Creeping Carpet of Ihgaluk" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32547" LootMobs="true" PullDistance="1" />
-		<While Condition="!IsQuestCompleted(32547)" >
-			<RunTo X="5981.361" Y="5512.725" Z="40.1333" />
-			<RunTo X="5977.61" Y="5579.485" Z="40.98503" />
-			<RunTo X="5949.524" Y="5639.886" Z="42.83137" />
-			<RunTo X="5886.573" Y="5610.742" Z="41.95531" />
-			<RunTo X="5844.389" Y="5572.482" Z="41.42295" />
-			<RunTo X="5855.642" Y="5515.049" Z="41.42038" />
-			<RunTo X="5879.044" Y="5472.708" Z="42.74852" />
-			<RunTo X="5894.469" Y="5434.867" Z="40.07657" />
-		</While>
-	</If>
-	
-<!-- Ihgaluk Crag Turn-ins -->
-	<If Condition="HasQuest(32606) &amp;&amp; IsQuestCompleted(32606) ||
-					HasQuest(32545) &amp;&amp; IsQuestCompleted(32545) ||
-					HasQuest(32535) &amp;&amp; IsQuestCompleted(32535) ||
-					HasQuest(32548) &amp;&amp; IsQuestCompleted(32548) ||
-					HasQuest(32547) &amp;&amp; IsQuestCompleted(32547) ||
-					HasQuest(32536) &amp;&amp; IsQuestCompleted(32536) ||
-					HasQuest(32537) &amp;&amp; IsQuestCompleted(32537) ||
-					HasQuest(32546) &amp;&amp; IsQuestCompleted(32546)" >
-		<CustomBehavior File="Message" Text="Heading back to Ihgaluk Crag to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="true" PullDistance="1" />
-		<RunTo X="6081.01" Y="5899.94" Z="7.60" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-	</If>
-	
-	<If Condition="HasQuest(32545) &amp;&amp; IsQuestCompleted(32545)" >
-		<TurnIn QuestName="The Residents of Ihgaluk" QuestId="32545" TurnInName="Lyalia" TurnInId="69675" />
-	</If>
-	
-	<If Condition="HasQuest(32537) &amp;&amp; IsQuestCompleted(32537)" >
-		<TurnIn QuestName="De-constructed" QuestId="32537" TurnInName="Archmage Modera" TurnInId="67996" />
-	</If>
-	
-	<If Condition="HasQuest(32535) &amp;&amp; IsQuestCompleted(32535)" >
-		<TurnIn QuestName="The Skumblade Threat" QuestId="32535" TurnInName="Archmage Modera" TurnInId="67996" />
-	</If>
-	
-	<If Condition="HasQuest(32536) &amp;&amp; IsQuestCompleted(32536)" >
-		<TurnIn QuestName="Manipulating the Saurok" QuestId="32536" TurnInName="Archmage Modera" TurnInId="67996" />
-	</If>
-	
-	<If Condition="HasQuest(32606) &amp;&amp; IsQuestCompleted(32606)" >
-		<TurnIn QuestName="Subtle Encouragement" QuestId="32606" TurnInName="Archmage Modera" TurnInId="67996" />
-	</If>
-	
-	<If Condition="HasQuest(32546) &amp;&amp; IsQuestCompleted(32546)" >
-		<TurnIn QuestName="Just Some Light Clean-Up Work" QuestId="32546" TurnInName="Sanitation Sorcerer Stephen Litmatch" TurnInId="69677" />
-	</If>
-	
-	<If Condition="HasQuest(32547) &amp;&amp; IsQuestCompleted(32547)" >
-		<TurnIn QuestName="The Creeping Carpet of Ihgaluk" QuestId="32547" TurnInName="Sanitation Sorcerer Stephen Litmatch" TurnInId="69677" />
-	</If>
-	
-	<If Condition="HasQuest(32548) &amp;&amp; IsQuestCompleted(32548)" >
-		<TurnIn QuestName="Left To Rot" QuestId="32548" TurnInName="Sanitation Sorcerer Stephen Litmatch" TurnInId="69677" />
-	</If>
-	
-<!-- Double check for ender quests -->
-
-<!-- Archmage Modera -->
-	<While Condition="HasQuestAvailable(67996)" >
-		<CustomBehavior File="InteractWith" MobId="67996" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Lyalia -->
-	<While Condition="HasQuestAvailable(69675)" >
-		<CustomBehavior File="InteractWith" MobId="69675" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Sanitation Sorcerer Stephen Litmatch -->
-	<While Condition="HasQuestAvailable(69677)" >
-		<CustomBehavior File="InteractWith" MobId="69677" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Court of Bones (Kicker Area 3) -->
-	<If Condition="HasQuest(32731)" >
-		<CustomBehavior File="Message" Text="Starting The Court of Bones" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32731" LootMobs="true" PullDistance="1" />
-		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
-		<TurnIn QuestName="The Court of Bones" QuestId="32731" TurnInName="Narasi Snowdawn" TurnInId="67997" />
-	</If>
-	
-<!-- Narasi Snowdawn -->
-	<While Condition="HasQuestAvailable(67997)" >
-		<CustomBehavior File="InteractWith" MobId="67997" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Danara Silverglass -->
-	<While Condition="HasQuestAvailable(69668)" >
-		<CustomBehavior File="InteractWith" MobId="69668" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Vylene Amaranth -->
-	<While Condition="HasQuestAvailable(69670)" >
-		<CustomBehavior File="InteractWith" MobId="69670" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- The Bloodletter -->
-	<If Condition="HasQuest(32530) &amp;&amp; !IsQuestCompleted(32530)" >
-		<CustomBehavior File="Message" Text="Starting The Bloodletter" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32530" LootMobs="true" PullDistance="15" />
-		<RunTo X="6819.12" Y="6208.25" Z="29.89" />
-		<Objective QuestName="The Bloodletter" QuestId="32530" Type="KillMob" MobId="69250" KillCount="1" />
-	</If>
-	
-<!-- Into The Crypts -->
-	<If Condition="HasQuest(32528) &amp;&amp; !IsQuestCompleted(32528)" >
-		<CustomBehavior File="Message" Text="Starting Into The Crypts" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32528" LootMobs="true" PullDistance="15" />
-		<RunTo X="6581.38" Y="6131.84" Z="6.14" />
-		<While Condition="!IsQuestCompleted(32528)" >
-			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93803)" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		</While>
-	</If>
-	
-<!-- The Call of Thunder -->
-	<If Condition="HasQuest(32529) &amp;&amp; !IsQuestCompleted(32529)" >
-		<CustomBehavior File="Message" Text="Starting The Call of Thunder" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32529" LootMobs="true" PullDistance="20" />
-		<RunTo X="6609.79" Y="6290.33" Z="3.63" />
-		<While Condition="!IsQuestCompleted(32529)" >
-			<CustomBehavior File="InteractWith" QuestId="32529" MobId="69264" WaitForNpcs="false" CollectionDistance="300" />
-		</While>
-	</If>
-	
-<!-- Ashes of the Enemy -->
-	<If Condition="HasQuest(32525) &amp;&amp; !IsQuestCompleted(32525)" >
-		<CustomBehavior File="Message" Text="Starting Ashes of the Enemy" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32525" LootMobs="true" PullDistance="5" /> 
-		<RunTo X="6512.10" Y="6070.66" Z="39.41" />
-		<While Condition="!IsQuestCompleted(32525)" >
-			<CustomBehavior File="UseItemOn" QuestId="32525" MobId="69331" ItemId="93751" CollectionDistance="1000" />
-		</While>
-	</If>
-	
-<!-- Stone Cold -->
-	<If Condition="HasQuest(32533) &amp;&amp; !IsQuestCompleted(32533)" >
-		<CustomBehavior File="Message" Text="Starting Stone Cold" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32533" LootMobs="true" PullDistance="10" /> 
-		<While Condition="!IsQuestCompleted(32533)" >
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6567.13" Y="6108.35" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6561.52" Y="6201.09" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6474.34" Y="6107.52" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6514.89" Y="6085.92" Z="39.40" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-		</While>
-	</If>
-	
-<!-- Soul Surrender -->
- 	<If Condition="HasQuest(32526) &amp;&amp; !IsQuestCompleted(32526)">
-		<CustomBehavior File="Message" Text="Starting Soul Surrender" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32526" LootMobs="true" PullDistance="5" />
-		<CustomBehavior File="CollectThings" QuestId="32526" CollectUntil="QuestComplete" ObjectId="217768" HuntingGroundRadius="50" PostInteractDelay="100" NonCompeteDistance="3" >
-			<Hotspot X="6467.76" Y="6241.741" Z="36.27182" />
-			<Hotspot X="6467.807" Y="6162.531" Z="36.27105" />
-			<Hotspot X="6509.202" Y="6110.627" Z="36.27237" />
-			<Hotspot X="6557.652" Y="6174.797" Z="36.27252" />
-			<Hotspot X="6538.69" Y="6290.28" Z="36.62913" />
-		</CustomBehavior>
-	</If>
-	
-<!-- Rise No More! -->
-	<If Condition="HasQuest(32532) &amp;&amp; !IsQuestCompleted(32532)" >
-		<CustomBehavior File="Message" Text="Starting Rise No More!" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32532" LootMobs="true" PullDistance="10" />
-		<Objective QuestName="Rise No More!" QuestId="32532" Type="KillMob" MobId="69237" KillCount="15" />
-	</If>
-	
-<!-- Grave Circumstances -->
-	<If Condition="HasQuest(32527) &amp;&amp; !IsQuestCompleted(32527)" >
-		<CustomBehavior File="Message" Text="Starting Grave Circumstances" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32527" LootMobs="true" PullDistance="20" />
-		<RunTo X="6614.61" Y="6195.92" Z="32.47" />
-		<Objective QuestName="Grave Circumstances" QuestId="32527" Type="KillMob" MobId="69235" MobId2="69264" KillCount="10" />
-	</If>
-	
-<!-- Incantation of Haqin Placeholder -->
-<!--<If Condition="HasItem(94130) &amp;&amp; !IsAchievementCompleted(8110,1)" >
-		<RunTo />
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94130)" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-	</If> -->
-	
-<!-- Incantation of Vu Placeholder -->
-<!--<If Condition="HasItem(95350) &amp;&amp; !IsAchievementCompleted(8110,3)" >
-		<RunTo />
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95350)" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-	</If> -->
-	
-<!-- Incantation of Deng Placeholder -->
-<!--<If Condition="HasItem(94233) &amp;&amp; !IsAchievementCompleted(8110,2)" >
-		<RunTo />
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94233)" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-	</If> -->
-	
-<!-- Court of Bones Turn-ins -->
-	<If Condition="HasQuest(32530) &amp;&amp; IsQuestCompleted(32530) ||
-					HasQuest(32527) &amp;&amp; IsQuestCompleted(32527) ||
-					HasQuest(32533) &amp;&amp; IsQuestCompleted(32533) ||
-					HasQuest(32526) &amp;&amp; IsQuestCompleted(32526) ||
-					HasQuest(32528) &amp;&amp; IsQuestCompleted(32528) ||
-					HasQuest(32529) &amp;&amp; IsQuestCompleted(32529) ||
-					HasQuest(32531) &amp;&amp; IsQuestCompleted(32531) ||
-					HasQuest(32532) &amp;&amp; IsQuestCompleted(32532) ||
-					HasQuest(32525) &amp;&amp; IsQuestCompleted(32525)" >
-		<CustomBehavior File="Message" Text="Heading back to Court of Bones to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="true" PullDistance="1" />
-		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-	</If>
-	
-	<If Condition="HasQuest(32527) &amp;&amp; IsQuestCompleted(32527)" >
-		<TurnIn QuestName="Grave Consequences" QuestId="32527" TurnInName="Narasi Snowdawn" TurnInId="67997" />
-	</If>
-	
-	<If Condition="HasQuest(32526) &amp;&amp; IsQuestCompleted(32526)" >
-		<TurnIn QuestName="Soul Surrender" QuestId="32526" TurnInName="Narasi Snowdawn" TurnInId="67997" />
-	</If>
-	
-	<If Condition="HasQuest(32533) &amp;&amp; IsQuestCompleted(32533)" >
-		<TurnIn QuestName="Stone Cold" QuestId="32533" TurnInName="Danara Silverglass" TurnInId="69668" />
-	</If>
-	
-	<If Condition="HasQuest(32528) &amp;&amp; IsQuestCompleted(32528)" >
-		<TurnIn QuestName="Into The Crypts" QuestId="32528" TurnInName="Danara Silverglass" TurnInId="69668" />
-	</If>
-	
-	<If Condition="HasQuest(32525) &amp;&amp; IsQuestCompleted(32525)" >
-		<TurnIn QuestName="Ashes of the Enemy" QuestId="32525" TurnInName="Danara Silverglass" TurnInId="69668" />
-	</If>
-	
-	<If Condition="HasQuest(32532) &amp;&amp; IsQuestCompleted(32532)" >
-		<TurnIn QuestName="Rise No More!" QuestId="32532" TurnInName="Danara Silverglass" TurnInId="69668" />
-	</If>
-	
-	<If Condition="HasQuest(32530) &amp;&amp; IsQuestCompleted(32530)" >
-		<TurnIn QuestName="The Bloodletter" QuestId="32530" TurnInName="Vylene Amaranth" TurnInId="69670" />
-	</If>
-	
-	<If Condition="HasQuest(32529) &amp;&amp; IsQuestCompleted(32529)" >
-		<TurnIn QuestName="The Call of Thunder" QuestId="32529" TurnInName="Vylene Amaranth" TurnInId="69670" />
-	</If>
-	
-	<If Condition="HasQuest(32531) &amp;&amp; IsQuestCompleted(32531)" >
-		<TurnIn QuestName="The Conquest of Stone" QuestId="32531" TurnInName="Vylene Amaranth" TurnInId="69670" />
-	</If>
-
-<!-- Double check for ender quests -->
-
-<!-- Narasi Snowdawn -->
-	<While Condition="HasQuestAvailable(67997)" >
-		<CustomBehavior File="InteractWith" MobId="67997" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Danara Silverglass -->
-	<While Condition="HasQuestAvailable(69668)" >
-		<CustomBehavior File="InteractWith" MobId="69668" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Vylene Amaranth -->
-	<While Condition="HasQuestAvailable(69670)" >
-		<CustomBehavior File="InteractWith" MobId="69670" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
 	
 <!-- Allies in the Shadows -->
 	<If Condition="HasQuest(32706)" >
 		<CustomBehavior File="Message" Text="Starting Allies in the Shadows" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32706" LootMobs="true" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="32706" LootMobs="True" PullDistance="1" />
 		<RunTo X="6874.38" Y="5523.52" Z="1.18" />
 		<TurnIn QuestName="Allies in the Shadows" QuestId="32706" TurnInName="Taran Zhu" TurnInId="70160" />
 	</If>
@@ -785,30 +159,43 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
 	</If>
 	
-<!-- Do we have an ender? -->
-	<If Condition="HasQuest(32576) || HasQuest(32579)" >
+	<!-- Do we have an ender? -->
+	<If Condition="HasQuest(32576) || HasQuest(32579) || HasQuest(32578) || HasQuest(32577) || HasQuest(32581)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
-<!-- End of Phase 1 -->
-
 <!-- All Done, hearth to the boat and leave the island -->
-	<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
-		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-	<Else>
-		<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
-		<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="true" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-		<RunTo X="5662.35" Y="6212.02" Z="12.79" />
-		<CustomBehavior File="MyCTM" X="5659.771" Y="6209.47" Z="13.21746" />
-		<CustomBehavior File="MyCTM" X="5656.402" Y="6205.382" Z="17.36683" />
-		<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="true" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-	</Else>
+	<If Condition="!IsQuestCompleted(32644)" >
+		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
+			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<Else>
+			<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
+			<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<RunTo X="5662.35" Y="6212.02" Z="12.79" />
+			<CustomBehavior File="MyCTM" X="5659.771" Y="6209.47" Z="13.21746" />
+			<CustomBehavior File="MyCTM" X="5656.402" Y="6205.382" Z="17.36683" />
+			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</Else>
+		</If>
+	<ElseIf Condition="IsQuestCompleted(32644)" >
+		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6134.63, 5008.49, 36.78)) &lt; 100)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<Else>
+			<RunTo X="6122.84" Y="4980.87" Z="36.89" />
+			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</Else>
+		</If>
+	</ElseIf>
 	</If>
 	
 	<While Condition="(GetItemCount(89112) &gt; 10)">

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Man With A Thousand Faces r97</Name>
+	<Name>The Man With A Thousand Faces r99</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -51,7 +51,7 @@
 
 		<If Condition="!HasQuest(32380)" >
 			<CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of storyline reached...for now! Level up your rep to continue!" />
-			<CustomBehavior File="UserSettings" StopBot="true" />
+			<CustomBehavior File="UserSettings" StopBot="True" />
 		</If>
 	</If>
 
@@ -96,15 +96,15 @@
 <!-- To Catch A Spy -->
 	<If Condition="HasQuest(32381) &amp;&amp; !IsQuestCompleted(32381)" >
 
-		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
 		<CustomBehavior File="InteractWith" MobId="68537" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
 		<CustomBehavior File="InteractWith" MobId="68540" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="false" />
+		<CustomBehavior File="InteractWith" MobId="68526" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
 		<CustomBehavior File="InteractWith" Range="5" MobId="68539" GossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />

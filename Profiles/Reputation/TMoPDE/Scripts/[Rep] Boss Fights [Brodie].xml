@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r87</Name>
+	<Name>Boss Fights r99</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -185,7 +185,7 @@
 <!-- The Imperion Threat -->
 	<If Condition="HasQuest(30302) &amp;&amp; !IsQuestCompleted(30302)">
 		<CustomBehavior File="Message" Text="Starting The Imperion Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30302" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30302" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1492.338" Y="1911.349" Z="299.8099" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Imperion Threat" QuestId="30302" Type="KillMob" MobId="62880" KillCount="1" />
@@ -194,7 +194,7 @@
 <!-- Wulon, the Granite Sentinel -->
 	<If Condition="HasQuest(30227) &amp;&amp; !IsQuestCompleted(30227)">
 		<CustomBehavior File="Message" Text="Starting Wulon, the Granite Sentinel" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30227" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30227" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1492.338" Y="1911.349" Z="299.8099" />
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="1592.71" Y="1782.71" Z="264.92" />
@@ -204,7 +204,7 @@
 <!-- The Ashweb Matriarch -->
 	<If Condition="HasQuest(30225) &amp;&amp; !IsQuestCompleted(30225)">
 		<CustomBehavior File="Message" Text="Starting Ashweb Matriarch" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30225" LootMobs="true" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="30225" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1492.338" Y="1911.349" Z="299.8099" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Ashweb Matriarch" QuestId="30225" Type="KillMob" MobId="58474" KillCount="1" />
@@ -213,7 +213,7 @@
 <!-- Vicejaw -->
 	<If Condition="HasQuest(30234) &amp;&amp; !IsQuestCompleted(30234)">
 		<CustomBehavior File="Message" Text="Starting Vicejaw" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30227" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30227" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1145.507" Y="1529.947" Z="350.168" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="KillVicejaw" />
@@ -222,7 +222,7 @@
 <!-- Quid Pro Quo -->
 	<If Condition="HasQuest(30235) &amp;&amp; !IsQuestCompleted(30235)">
 		<CustomBehavior File="Message" Text="Starting Quid Pro Quo" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30235" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30235" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="624.0627" Y="1707.591" Z="360.3988" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Quid Pro Quo" QuestId="30235" Type="KillMob" MobId="58771" KillCount="1" />
@@ -231,7 +231,7 @@
 <!-- The Soul-Gatherer -->
 	<If Condition="HasQuest(30482) &amp;&amp; !IsQuestCompleted(30482)">
 		<CustomBehavior File="Message" Text="Starting The Soul-Gatherer" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30482" LootMobs="true" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="30482" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1137.22" Y="1448.16" Z="346.60" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Soul-Gatherer" QuestId="30482" Type="CollectItem" ItemId="85161" CollectCount="1" />
@@ -240,7 +240,7 @@
 <!-- Gaohun the Soul-Severer -->
 	<If Condition="HasQuest(30296) &amp;&amp; !IsQuestCompleted(30296)">
 		<CustomBehavior File="Message" Text="Starting Gaohun the Soul-Severer" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30296" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30296" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="670.5461" Y="1491.956" Z="412.3427" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Gaohun the Soul-Severer" QuestId="30296" Type="KillMob" MobId="62881" KillCount="1" />
@@ -249,7 +249,7 @@
 <!-- Vyraxxis, the Krik'thik Swarm-Lord -->
 	<If Condition="HasQuest(30251) &amp;&amp; !IsQuestCompleted(30251)">
 		<CustomBehavior File="Message" Text="Starting Vyraxxis, the Krik'thik Swarm-Lord" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30251" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30251" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="1353.476" Y="2292.451" Z="396.4315" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Vyraxxis, the Krik'thik Swarm-Lord" QuestId="30251" Type="KillMob" MobId="63977" KillCount="1" />
@@ -258,7 +258,7 @@
 <!-- The Butcher -->
 	<If Condition="HasQuest(30248) &amp;&amp; !IsQuestCompleted(30248)">
 		<CustomBehavior File="Message" Text="Starting The Butcher" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30248" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30248" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="1489.385" Y="2126.309" Z="366.8058" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="The Butcher" QuestId="30248" Type="KillMob" MobId="58949" KillCount="1" />
@@ -267,7 +267,7 @@
 <!-- Aetha -->
 	<If Condition="HasQuest(30236) &amp;&amp; !IsQuestCompleted(30236)">
 		<CustomBehavior File="Message" Text="Starting Aetha" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30236" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30236" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="429.4662" Y="1585.006" Z="514.201" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Aetha" QuestId="30236" Type="KillMob" MobId="58778" KillCount="1" />
@@ -276,7 +276,7 @@
 <!-- Lao-fe the Slavebinder -->
 	<If Condition="HasQuest(30239) &amp;&amp; !IsQuestCompleted(30239)">
 		<CustomBehavior File="Message" Text="Starting Lao-fe the Slavebinder" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30239" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30239" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="794.2872" Y="1278.47" Z="466.41" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Lao-fe the Slavebinder" QuestId="30239" Type="KillMob" MobId="58817" KillCount="1" />
@@ -285,7 +285,7 @@
 <!-- Cracklefang -->
 	<If Condition="HasQuest(30233) &amp;&amp; !IsQuestCompleted(30233)">
 		<CustomBehavior File="Message" Text="Starting Cracklefang" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30233" LootMobs="true" PullDistance="30" />
+		<CustomBehavior File="UserSettings" QuestId="30233" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="946.51" Y="1304.57" Z="391.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Cracklefang" QuestId="30233" Type="KillMob" MobId="58768" KillCount="1" />
@@ -294,7 +294,7 @@
 <!-- Under the Setting Sun -->
 	<If Condition="HasQuest(30249) &amp;&amp; !IsQuestCompleted(30249)">
 		<CustomBehavior File="Message" Text="Starting Under the Setting Sun" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30249" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30249" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="960.0143" Y="2278.753" Z="296.1057" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Under the Setting Sun" QuestId="30249" Type="KillMob" MobId="63978" KillCount="1" />
@@ -303,7 +303,7 @@
 <!-- Baolai the Immolator -->
 	<If Condition="HasQuest(30297) &amp;&amp; !IsQuestCompleted(30297)">
 		<CustomBehavior File="Message" Text="Starting Baolai the Immolator" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="30297" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="30297" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="577.6843" Y="1516.992" Z="412.3568" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Baolai the Immolator" QuestId="30297" Type="KillMob" MobId="63695" KillCount="1" />
@@ -312,7 +312,7 @@
 <!-- Behind Our Lines -->
 	<If Condition="HasQuest(31136) &amp;&amp; !IsQuestCompleted(31136)">
 		<CustomBehavior File="Message" Text="Starting Behind Our Lines" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31136" LootMobs="true" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="31136" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1056.882" Y="715.9199" Z="388.3811" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Behind Our Lines" QuestId="31136" Type="KillMob" MobId="63101" KillCount="1" />
