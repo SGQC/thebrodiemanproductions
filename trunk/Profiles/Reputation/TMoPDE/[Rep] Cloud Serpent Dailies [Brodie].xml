@@ -343,7 +343,7 @@
 		(!HasQuest(31703) &amp;&amp; IsQuestCompleted(31703)) ||
 		(!HasQuest(30149) &amp;&amp; IsQuestCompleted(30149)) ||
 		(!HasQuest(30158) &amp;&amp; IsQuestCompleted(30158))" >
-		<CustomBehavior File="Message" Text="Previously Quests Completed Detected." LogColor="Cornflowerblue"  />
+		<CustomBehavior File="Message" Text="Previously Quests Completed Detected." LogColor="CornflowerBlue"  />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 	</If>
 

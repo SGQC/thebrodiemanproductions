@@ -1,5 +1,9 @@
 Patch Notes
 
+r101
+Operation Shieldwall
+-- Removal of more CTM code
+
 3/13/13
 
 r100

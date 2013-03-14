@@ -357,7 +357,7 @@
 			(!HasQuest(30479) &amp;&amp; IsQuestCompleted(30479)) ||
 			(!HasQuest(30478) &amp;&amp; IsQuestCompleted(30478)) ||
 			(!HasQuest(30321) &amp;&amp; IsQuestCompleted(30321)))" >
-		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="Cornflowerblue" />
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 	</If>
 	
@@ -555,7 +555,7 @@
 				(!HasQuest(31675) &amp;&amp; IsQuestCompleted(31675)) ||
 				(!HasQuest(31943) &amp;&amp; IsQuestCompleted(31943)) ||
 				(!HasQuest(31671) &amp;&amp; IsQuestCompleted(31671)))" >
-			<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="Cornflowerblue" />
+			<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
 			<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 		</If>
 		<CustomBehavior File="ForcedDismount" />

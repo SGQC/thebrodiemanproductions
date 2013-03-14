@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r100</Name>
+	<Name>Operation Shieldwall r101</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -695,32 +695,26 @@
 	</If>
 
 	<If Condition="HasQuest(32149) &amp;&amp; IsQuestCompleted(32149)" >
-		<CustomBehavior File="MyCTM" X="-1135.06" Y="-1255.27" Z="28.51" />
 		<TurnIn QuestName="Resource Gathering" QuestId="32149" TurnInName="Mishka" TurnInId="67630" />
 	</If>
 
 	<If Condition="HasQuest(32150) &amp;&amp; IsQuestCompleted(32150)" >
-		<CustomBehavior File="MyCTM" X="-1135.06" Y="-1255.27" Z="28.51" />
 		<TurnIn QuestName="Supply Block" QuestId="32150" TurnInName="Mishka" TurnInId="67630" />
 	</If>
 
 	<If Condition="HasQuest(32148) &amp;&amp; IsQuestCompleted(32148)" >
-		<CustomBehavior File="MyCTM" X="-1144.21" Y="-1256.26" Z="28.51" />
 		<TurnIn QuestName="Attack! Move!" QuestId="32148" TurnInName="Marshal Troteman" TurnInId="67631" />
 	</If>
 
 	<If Condition="HasQuest(32151) &amp;&amp; IsQuestCompleted(32151)" >
-		<CustomBehavior File="MyCTM" X="-1144.21" Y="-1256.26" Z="28.51" />
 		<TurnIn QuestName="Tower Defense" QuestId="32151" TurnInName="Marshal Troteman" TurnInId="67631" />
 	</If>
 
 	<If Condition="HasQuest(32153) &amp;&amp; IsQuestCompleted(32153)" >
-		<CustomBehavior File="MyCTM" X="-1144.21" Y="-1256.26" Z="28.51" />
 		<TurnIn QuestName="Hero Killer" QuestId="32153" TurnInName="Marshal Troteman" TurnInId="67631" />
 	</If>
 
 	<If Condition="HasQuest(32152) &amp;&amp; IsQuestCompleted(32152)" >
-		<CustomBehavior File="MyCTM" X="-1144.21" Y="-1256.26" Z="28.51" />
 		<TurnIn QuestName="Siege Damage" QuestId="32152" TurnInName="Marshal Troteman" TurnInId="67631" />
 	</If>
 
