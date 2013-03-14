@@ -1,8 +1,34 @@
 Patch Notes
 
+3/14/13
+
+r102
+Thunder Boss
+-- Missing If statement enders
+Isle of Thunder (Alliance)
+-- Added Phase 2 portal entry code
+-- Added Warmage Yurias pickups
+Isle of Thunder (Horde)
+-- Reordered Quest hub order
+-- Removed Diremoor turn ins
+-- Moved item use code to end of profile
+-- Added Phase 2 portal entry code
+Diremoor (Horde)
+-- Added turn ins
+-- Added Enemies Beneath the Tower (Missing turn in)
+-- Added The Zandalari Colossus (Missing turn in)
+Diremoor (Alliance)
+-- Added A Wing to Fly On
+-- Added The Shuddering Moor
+-- Added The Sleepless Legion
+-- Added Enemies Beneath the Tower
+-- Added The Zandalari Colossus
+
 r101
 Operation Shieldwall
 -- Removal of more CTM code
+All code
+-- More CaSe IsSuEs
 
 3/13/13
 

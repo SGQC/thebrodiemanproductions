@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r99</Name>
+	<Name>Thunder Bosses r102</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -130,6 +130,7 @@
 			</If>
 		</ElseIf>
 		</If>
+	</If>
 	
 <!-- Horde Return -->
 	<If Condition="HasQuest(32561) &amp;&amp; IsQuestCompleted(32561) ||
@@ -160,6 +161,7 @@
 			</If>
 		</ElseIf>
 		</If>
+	</If>
 	
 	<If Condition="HasQuest(32576) &amp;&amp; IsQuestCompleted(32576)">
 		<TurnIn QuestName="Competing Magic" QuestId="32576" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />

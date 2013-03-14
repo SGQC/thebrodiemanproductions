@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Horde) r100</Name>
+	<Name>Diremoor (Horde) r102</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -46,6 +46,20 @@
 		<Objective QuestName="The Shuddering Moor" QuestId="32228" Type="KillMob" MobId="69406" KillCount="1" />
 	</If>
 	
+<!-- The Zandalari Colossus -->
+	<If Condition="HasQuest(32230) &amp;&amp; !IsQuestCompleted(32230)" >
+		<CustomBehavior File="Message" Text="Starting The Zandalari Colossus" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32230" LootMobs="True" PullDistance="10" />
+		<Objective QuestName="The Zandalari Colossus" QuestId="32230" Type="KillMob" MobId="69405" KillCount="1" />
+	</If>
+	
+<!-- Enemies Beneath the Tower -->
+	<If Condition="HasQuest(32287) &amp;&amp; !IsQuestCompleted(32287)" >
+		<CustomBehavior File="Message" Text="Starting Enemies Beneath the Tower" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32287" LootMobs="True" PullDistance="10" />
+		<Objective QuestName="Enemies Beneath the Tower" QuestId="32287" Type="KillMob" MobId="70069" MobId2="69431" KillCount="7" />
+	</If>
+	
 <!-- A Wing to Fly On -->
 	<If Condition="HasQuest(32506) &amp;&amp; !IsQuestCompleted(32506)" >
 		<CustomBehavior File="Message" Text="Starting A Wing to Fly On" LogColor="Green" />
@@ -59,6 +73,58 @@
 		<CustomBehavior File="UserSettings" QuestId="32285" LootMobs="True" PullDistance="10" />
 		<Objective QuestName="The Sleepless Legion" QuestId="32285" Type="KillMob" MobId="67473" KillCount="6" />
 	</If>
+	
+<!-- Diremoor Turn-ins -->
+	<If Condition="HasQuest(32228) &amp;&amp; IsQuestCompleted(32228) ||
+					HasQuest(32285) &amp;&amp; IsQuestCompleted(32285) ||
+					HasQuest(32506) &amp;&amp; IsQuestCompleted(32506)" >
+		<CustomBehavior File="Message" Text="Heading back to camp to Turn-In" LogColor="Green" />
+		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
+		<RunTo X="7178.75" Y="6284.85" Z="12.47" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	</If>
+	
+	<If Condition="HasQuest(32506) &amp;&amp; IsQuestCompleted(32506)" >
+		<TurnIn QuestName="A Wing to Fly On" QuestId="32506" TurnInName="Magister Hathorel" TurnInId="67663" />
+	</If>
+	
+	<If Condition="HasQuest(32228) &amp;&amp; IsQuestCompleted(32228)" >
+		<TurnIn QuestName="The Shuddering Moor" QuestId="32228" TurnInName="Girana the Blooded" TurnInId="67673" />
+	</If>
+	
+	<If Condition="HasQuest(32285) &amp;&amp; IsQuestCompleted(32285)" >
+		<TurnIn QuestName="The Sleepless Legion" QuestId="32285" TurnInName="High Arcanist Savor" TurnInId="67662" />
+	</If>
+	
+<!-- Double Check for Ender Quest -->
+
+<!-- Girana the Blooded -->
+	<While Condition="HasQuestAvailable(67673)" >
+		<CustomBehavior File="InteractWith" MobId="67673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Magister Hathorel -->
+	<While Condition="HasQuestAvailable(67663)" >
+		<CustomBehavior File="InteractWith" MobId="67663" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Lor'themar Theron -->
+	<While Condition="HasQuestAvailable(67990)" >
+		<CustomBehavior File="InteractWith" MobId="67990" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- High Arcanist Savor -->
+	<While Condition="HasQuestAvailable(67662)" >
+		<CustomBehavior File="InteractWith" MobId="67662" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
 	
 	<If Condition="HasItem(94566)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
