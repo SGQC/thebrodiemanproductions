@@ -35,7 +35,7 @@
 
 <QuestOrder IgnoreCheckpoints="True" >
 
-<CustomBehavior File="Message" Text="Compiling Ihgaluk Crag Quests..." LogColor="Cornflowerblue"  />
+<CustomBehavior File="Message" Text="Compiling Ihgaluk Crag Quests..." LogColor="CornflowerBlue"  />
 	
 <!-- Ihgaluk Crag (Kicker Area 2) -->
 	<If Condition="HasQuest(32732)" >

@@ -80,7 +80,7 @@
 
 <!-- Starting Quests -->
 
-<CustomBehavior File="Message" Text="Compiling Za'Tual Quests..." LogColor="Cornflowerblue"  />
+<CustomBehavior File="Message" Text="Compiling Za'Tual Quests..." LogColor="CornflowerBlue"  />
 
 <!-- Za'Tual (Kicker) -->
 	<If Condition="HasQuest(32733)" >

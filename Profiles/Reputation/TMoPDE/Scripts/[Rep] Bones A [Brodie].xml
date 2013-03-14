@@ -46,7 +46,7 @@
 
 <QuestOrder IgnoreCheckpoints="True" >
 
-<CustomBehavior File="Message" Text="Compiling Court of Bones Quests..." LogColor="Cornflowerblue"  />
+<CustomBehavior File="Message" Text="Compiling Court of Bones Quests..." LogColor="CornflowerBlue"  />
 
 <!-- Court of Bones (Kicker) -->
 	<If Condition="HasQuest(32731)" >
