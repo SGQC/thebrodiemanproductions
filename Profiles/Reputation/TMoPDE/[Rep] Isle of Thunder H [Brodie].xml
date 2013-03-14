@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r99</Name>
+	<Name>Isle of Thunder (Horde) r102</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -84,7 +84,12 @@
 		<CustomBehavior File="FlyTo" X="1748.19" Y="4161.71" Z="159.51" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="True" />
+		<If Condition="!IsQuestCompleted(32212)" >
+			<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="True" />
+		<ElseIf Condition="IsQuestCompleted(32212)" >
+			<CustomBehavior File="InteractWith" MobId="218462" ObjectType="GameObject" WaitForNpcs="True" />
+		</ElseIf>
+		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -138,9 +143,6 @@
 					HasQuest(32495) || HasQuest(32219) || HasQuest(32218) || HasQuest(32226) || HasQuest(32517)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Bones H [Brodie]" />
 		</If>
-		<If Condition="HasQuest(32228) || HasQuest(32506) || HasQuest(32285)" >
-			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Diremoor H [Brodie]" />
-		</If>
 		<If Condition="HasQuest(32729) || HasQuest(32227) || HasQuest(32252) || HasQuest(32275) ||
 					HasQuest(32200) || HasQuest(32217) || HasQuest(32215) || HasQuest(32216)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Zatual H [Brodie]" />
@@ -149,6 +151,9 @@
 					HasQuest(32204) || HasQuest(32299) || HasQuest(32491) || HasQuest(32274) ||
 					HasQuest(32489)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Ihgaluk H [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32228) || HasQuest(32506) || HasQuest(32285) || HasQuest(32287)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Diremoor H [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32212)" >
 		<If Condition="HasQuest(32728) || HasQuest(32225) || HasQuest(32201) || HasQuest(32220) || HasQuest(32224) ||
@@ -173,62 +178,6 @@
 		<CustomBehavior File="UserSettings" QuestId="32709" LootMobs="True" PullDistance="1" />
 		<RunTo X="6874.38" Y="5523.52" Z="1.18" />
 		<TurnIn QuestName="Allies in the Shadows" QuestId="32709" TurnInName="Taran Zhu" TurnInId="70160" />
-	</If>
-	
-<!-- Diremoor Turn-ins -->
-	<If Condition="HasQuest(32228) &amp;&amp; IsQuestCompleted(32228) ||
-					HasQuest(32285) &amp;&amp; IsQuestCompleted(32285) ||
-					HasQuest(32506) &amp;&amp; IsQuestCompleted(32506)" >
-		<CustomBehavior File="Message" Text="Heading back to camp to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
-		<RunTo X="7178.75" Y="6284.85" Z="12.47" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
-	</If>
-	
-	<If Condition="HasQuest(32506) &amp;&amp; IsQuestCompleted(32506)" >
-		<TurnIn QuestName="A Wing to Fly On" QuestId="32506" TurnInName="Magister Hathorel" TurnInId="67663" />
-	</If>
-	
-	<If Condition="HasQuest(32228) &amp;&amp; IsQuestCompleted(32228)" >
-		<TurnIn QuestName="The Shuddering Moor" QuestId="32228" TurnInName="Girana the Blooded" TurnInId="67673" />
-	</If>
-	
-	<If Condition="HasQuest(32285) &amp;&amp; IsQuestCompleted(32285)" >
-		<TurnIn QuestName="The Sleepless Legion" QuestId="32285" TurnInName="High Arcanist Savor" TurnInId="67662" />
-	</If>
-	
-<!-- Double Check for Ender Quest -->
-
-<!-- Girana the Blooded -->
-	<While Condition="HasQuestAvailable(67673)" >
-		<CustomBehavior File="InteractWith" MobId="67673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Magister Hathorel -->
-	<While Condition="HasQuestAvailable(67663)" >
-		<CustomBehavior File="InteractWith" MobId="67663" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- Lor'themar Theron -->
-	<While Condition="HasQuestAvailable(67990)" >
-		<CustomBehavior File="InteractWith" MobId="67990" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-<!-- High Arcanist Savor -->
-	<While Condition="HasQuestAvailable(67662)" >
-		<CustomBehavior File="InteractWith" MobId="67662" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-	
-	<If Condition="HasItem(94566)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
 	</If>
 	
 <!-- Do we have an ender? -->
@@ -266,6 +215,10 @@
 		</Else>
 		</If>
 	</ElseIf>
+	</If>
+	
+	<If Condition="HasItem(94566)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
 	</If>
 	
 	<While Condition="(GetItemCount(89112) &gt; 10)">

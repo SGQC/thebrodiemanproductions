@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r99</Name>
+	<Name>Isle of Thunder (Alliance) r102</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -79,11 +79,24 @@
 		<CustomBehavior File="FlyTo" X="1921.81" Y="4223.25" Z="132.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="True" />
+		<If Condition="!IsQuestCompleted(32644)" >
+			<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="True" />
+		<ElseIf Condition="IsQuestCompleted(32644)" >
+			<CustomBehavior File="InteractWith" MobId="218463" ObjectType="GameObject" WaitForNpcs="True" />
+		</ElseIf>
+		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
-	<If Condition="!HasQuest(32644) &amp;&amp; IsQuestCompleted(32644)" >
+	<If Condition="(!HasQuest(32644) &amp;&amp; IsQuestCompleted(32644)) &amp;&amp; (!HasQuest(32732) &amp;&amp; 
+					!HasQuest(32606) &amp;&amp; !HasQuest(32545) &amp;&amp; !HasQuest(32535) &amp;&amp; !HasQuest(32548) &amp;&amp; 
+					!HasQuest(32547) &amp;&amp; !HasQuest(32536) &amp;&amp; !HasQuest(32537) &amp;&amp; !HasQuest(32546) &amp;&amp;
+					!HasQuest(32733) &amp;&amp; !HasQuest(32541) &amp;&amp; !HasQuest(32540) &amp;&amp; !HasQuest(32543) &amp;&amp;
+					!HasQuest(32542) &amp;&amp; !HasQuest(32544) &amp;&amp; !HasQuest(32539) &amp;&amp; !HasQuest(32538) &amp;&amp;
+					!HasQuest(32731) &amp;&amp; !HasQuest(32530) &amp;&amp; !HasQuest(32527) &amp;&amp; !HasQuest(32533) &amp;&amp;
+					!HasQuest(32526) &amp;&amp; !HasQuest(32528) &amp;&amp; !HasQuest(32529) &amp;&amp; !HasQuest(32531) &amp;&amp;
+					!HasQuest(32532) &amp;&amp; !HasQuest(32525) &amp;&amp; !HasQuest(32571) &amp;&amp; !HasQuest(32572) &amp;&amp;
+					!HasQuest(32573) &amp;&amp; !HasQuest(32574) &amp;&amp; !HasQuest(32575))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
 	</If>
@@ -98,6 +111,13 @@
 <!-- Vereesa Windrunner -->
 	<While Condition="HasQuestAvailable(67993)" >
 		<CustomBehavior File="InteractWith" MobId="67993" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Warmage Yurias -->
+	<While Condition="HasQuestAvailable(67994)" >
+		<CustomBehavior File="InteractWith" MobId="67994" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -128,6 +148,9 @@
 					HasQuest(32526) || HasQuest(32528) || HasQuest(32529) || HasQuest(32531) ||
 					HasQuest(32532) || HasQuest(32525)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Bones A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32571) || HasQuest(32572) || HasQuest(32573) || HasQuest(32574) || HasQuest(32575)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Diremoor A [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32644)" >
 		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||
