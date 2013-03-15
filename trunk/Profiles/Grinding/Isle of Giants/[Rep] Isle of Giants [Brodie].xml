@@ -9,7 +9,7 @@
 	
   
   <QuestOrder>
-		<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="20" />
+		<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="25" />
 	
 		<If Condition="Me.ZoneId != 6661" >
 			<CustomBehavior File="Message" Text="Moving to Isle of Giants" LogColor="Green"  />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones r100</Name>
+	<Name>Court of Bones r104</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -133,19 +133,19 @@
 		<While Condition="!IsQuestCompleted(32533)" >
 			<If Condition="!IsQuestCompleted(32533)" >
 				<RunTo X="6567.13" Y="6108.35" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
 			</If>
 			<If Condition="!IsQuestCompleted(32533)" >
 				<RunTo X="6561.52" Y="6201.09" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
 			</If>
 			<If Condition="!IsQuestCompleted(32533)" >
 				<RunTo X="6474.34" Y="6107.52" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
 			</If>
 			<If Condition="!IsQuestCompleted(32533)" >
 				<RunTo X="6514.89" Y="6085.92" Z="39.40" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
 			</If>
 		</While>
 	</If>
