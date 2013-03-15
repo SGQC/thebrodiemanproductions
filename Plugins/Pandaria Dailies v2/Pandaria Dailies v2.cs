@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
         public override string Name { get { return "Pandaria Dailies v2"; } }
         public override string Author { get { return "Buddy Community"; } }
-        public override Version Version { get { return new Version(2, 1, 2); } }
+        public override Version Version { get { return new Version(2, 1, 3); } }
         public override bool WantButton { get { return true; } }
         public override string ButtonText { get { return "Credits"; } }
 
@@ -337,6 +337,22 @@ namespace AzeniusHelper2
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70016 || u.Entry == 69142 || u.Entry == 70017 || u.Entry == 70018 || u.Entry == 70019 || u.Entry == 69983 && u.IsAlive && u.Distance < 30).FirstOrDefault();
             }
         }
+		
+		public WoWUnit ZColossus
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69405 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
+		
+		public WoWUnit MDevilsaur
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69406 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+            }
+        }
 
         public List<WoWUnit> MantidNiuzao
         {
@@ -444,6 +460,11 @@ namespace AzeniusHelper2
 			if (Me.HasAura("Hot Foot!"))
 			{
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getHotFootList, "Hot Foot!", 15);
+			}
+			
+			if (Me.HasAura("Vile Spit"))
+			{
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVileSpitList, "Vile Spit", 15);
 			}
 
             #endregion
@@ -744,12 +765,30 @@ namespace AzeniusHelper2
             #region http://www.wowhead.com/quest=32533
             if (IsOnQuest(32533) && !QuestComplete(32533))
             {
-                if (!StyxWoW.Me.Combat && GuardianAttack != null && GuardianAttack.Distance2D <= 5)
-                    GuardianAttack.Interact();
-                if (!StyxWoW.Me.Combat && GuardianFall != null && GuardianFall.Distance2D <= 5)
-                    GuardianFall.Interact();
+				if (!StyxWoW.Me.Combat && GuardianAttack != null && GuardianAttack.Distance2D <= 5)
+					GuardianAttack.Interact();
+				if (!StyxWoW.Me.Combat && GuardianFall != null && GuardianFall.Distance2D <= 5)
+					GuardianFall.Interact();
             }
             #endregion
+			
+			if (ZColossus != null)
+			{
+				if (Me.Combat && ZColossus.Distance2D <= 15 && ZColossus.IsCasting && ZColossus.CastingSpellId == 140239)
+					BarryDurex.QuestHelper.AvoidEnemyCast(ZColossus, 80, 15);
+				if (Me.Combat && ZColossus.Distance2D <= 15 && ZColossus.IsCasting && ZColossus.CastingSpellId == 140254)
+					BarryDurex.QuestHelper.AvoidEnemyCast(ZColossus, 80, 15);
+			}
+			
+			if (MDevilsaur != null)
+			{
+				if (Me.Combat && MDevilsaur.Distance2D <= 15 && MDevilsaur.IsCasting && MDevilsaur.CastingSpellId == 140424)
+					BarryDurex.QuestHelper.AvoidEnemyCast(MDevilsaur, 150, 15);
+				if (Me.Combat && MDevilsaur.Distance2D <= 15 && MDevilsaur.IsCasting && MDevilsaur.CastingSpellId == 140427)
+					BarryDurex.QuestHelper.AvoidEnemyCast(MDevilsaur, 150, 15);
+				if (Me.Combat && MDevilsaur.Distance2D <= 15 && MDevilsaur.IsCasting && MDevilsaur.CastingSpellId == 140397)
+					BarryDurex.QuestHelper.AvoidEnemyCast(MDevilsaur, 80, 15);
+			}
 			
 			#region Thunder King Troves
 				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D >= 5)
@@ -860,6 +899,19 @@ namespace BarryDurex
                 return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
                         orderby lp.Distance2D ascending
                         where lp.Entry == 126336
+                        where wlog(lp)
+                        select lp).ToList();
+            }
+        }
+		
+        public static List<WoWDynamicObject> getVileSpitList
+        {
+            get
+            {
+                ObjectManager.Update();
+                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+                        orderby lp.Distance2D ascending
+                        where lp.Entry == 140454
                         where wlog(lp)
                         select lp).ToList();
             }
