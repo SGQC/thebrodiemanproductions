@@ -2,6 +2,22 @@ Patch Notes
 
 3/14/13
 
+r103
+Dominance Offensive
+-- Multiple CTM removals
+-- Should now interact with Ogudei quest giver reliably
+-- Precious Resource - No longer follows track, now Objective based and will seek items
+-- Power Metal - Should now actively seek items
+-- Ogudei's Lieutenants - Removed CTM code
+-- The Spirit Trap - Removed CTM code
+-- We're Not Monsters - Removed CTM code
+-- Legacy of Ogudei - Removed CTM code
+-- Added Kick 'em While They're Down
+-- Added Ruins of Ogudei quest turnins
+Pandaria Dailies v2
+-- Added Zandalari Colossus spell avoidance (Lightning Crack, Wave of Might)
+-- Added Mighty Devilsaur spell avoidance (Acidic Regurgitation, Fetid Quake)
+
 r102
 Thunder Boss
 -- Missing If statement enders
