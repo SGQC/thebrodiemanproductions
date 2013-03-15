@@ -2,6 +2,12 @@ Patch Notes
 
 3/14/13
 
+r104
+Court of Bones (Alliance)
+-- Should reduce number of interactions with dead Guardians
+Isle of Giants
+-- Increased Pull distance to avoid grouping better
+
 r103
 Dominance Offensive
 -- Multiple CTM removals
