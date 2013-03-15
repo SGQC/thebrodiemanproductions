@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r103</Name>
+	<Name>Dominance Offensive r105</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -486,7 +486,10 @@
 		<CustomBehavior File="UserSettings" QuestId="32237" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2011.34" Y="1732.65" Z="2.32" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Precious Resource" QuestId="32237" Type="UseObject" ObjectId="216253" UseCount="8" />
+		<CustomBehavior File="CollectThings" QuestId="32237" CollectUntil="QuestComplete" MobId="216253" HuntingGroundRadius="200" NonCompeteDistance="3" PostInteractDelay="1000" >
+			<Hotspot X="-2035.178" Y="1711.146" Z="7.181152" />
+		</CustomBehavior>
+	<!--<Objective QuestName="Precious Resource" QuestId="32237" Type="UseObject" ObjectId="216253" UseCount="8" />-->
 	<!--<While Condition="!IsQuestCompleted(32237)" >
 			<CustomBehavior File="MyCTM" X="-2021.50" Y="1713.59" Z="0.86" />
 			<CustomBehavior File="InteractWith" Nav="CTM" Range="6" QuestId="32237" MobId="216253" ObjectType="GameObject" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" CollectionDistance="10" />
@@ -621,7 +624,7 @@
 	<If Condition="HasQuest(32137) &amp;&amp; !IsQuestCompleted(32137)" >
 		<CustomBehavior File="Message" Text="Starting Runnin On Empty" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32137" LootMobs="True" PullDistance="10" />
-		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.02675502" />
+		<CustomBehavior File="FlyTo" X="-2138.175" Y="1772.779" Z="0.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Runnin On Empty" QuestId="32137" Type="CollectItem" ItemId="91846" CollectCount="9" />
 	</If>
@@ -935,7 +938,7 @@
 	<If Condition="HasQuest(32348) &amp;&amp; !IsQuestCompleted(32348)">
 		<CustomBehavior File="Message" Text="Starting Kick 'em While They're Down" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32348" LootMobs="True" PullDistance="15" />
-		<Objective QuestName="Kick 'em While They're Down" QuestId="32348" Type="KillMob" MobId="67297" MobId="68310" KillCount="12" />
+		<Objective QuestName="Kick 'em While They're Down" QuestId="32348" Type="KillMob" MobId="67297" MobId2="68310" KillCount="12" />
 	</If>
 
 <!-- Legacy of Ogudei -->

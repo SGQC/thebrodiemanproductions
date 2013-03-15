@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Horde) r99</Name>
+	<Name>Ihgaluk Crag (Horde) r105</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -223,7 +223,7 @@
 		<CustomBehavior File="Message" Text="Starting Just Some Light Clean-Up Work" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32299" LootMobs="True" PullDistance="25" />
 		<RunTo X="5936.555" Y="5465.421" Z="30.49908" />
-		<CustomBehavior File="CollectThings" CollectUntil="QuestComplete" QuestId="32299" MobId="69251" MobId2="69282" NonCompeteDistance="1" HuntingGroundRadius="50" >
+		<CustomBehavior File="CollectThings" CollectUntil="QuestComplete" QuestId="32299" MobId="69251" MobId2="69282" MobState="Alive" NonCompeteDistance="5" HuntingGroundRadius="50" >
 			<Hotspot X="5944.483" Y="5445.594" Z="30.49892" />
 			<Hotspot X="5932.566" Y="5494.266" Z="30.49921" />
 			<Hotspot X="5913.896" Y="5534.81" Z="30.49941" />

@@ -1,5 +1,14 @@
 Patch Notes
 
+3/15/13
+
+r105
+Dominance Offensive
+-- Kick 'Em While They're Down - fixed MobId issue
+-- Precious Resource - Converted Objective to CollectThings
+Ihgaluk Crag (Horde)
+-- Just Some Light Clean-Up Work - should no longer attack dead mobs
+
 3/14/13
 
 r104

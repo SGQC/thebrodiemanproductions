@@ -135,7 +135,7 @@
 <!-- Checking if you have a quest. If you do, start, if not, fly to Nat Pagle's Man Cave -->
 	<If Condition="(!HasQuest(30613) &amp;&amp; !HasQuest(30586) &amp;&amp; !HasQuest(30658) 
 			&amp;&amp; !HasQuest(30754) &amp;&amp; !HasQuest(30588) &amp;&amp; !HasQuest(30701)
-			&amp;&amp; !HasQuest(30700) &amp;&amp; !HasQuest(30678)
+			&amp;&amp; !HasQuest(30700) &amp;&amp; !HasQuest(30678) 
 			&amp;&amp; !HasQuest(30753) &amp;&amp; !HasQuest(30585) &amp;&amp; !HasQuest(30763)
 			&amp;&amp; !HasQuest(30584) &amp;&amp; !HasQuest(30598))" >
 		<CustomBehavior File="Message" Text="Starting The Anglers Dailies, moving to Nat Pagle's Man Cave." LogColor="Green"  />
@@ -244,8 +244,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30698" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1656.867" Y="-26.41589" Z="0.2146372" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="MrFishIt" PoolId="211423" CollectItemId="80830" CollectItemCount="15" MoveToPool="False" />
-	</If> -->
+		<CustomBehavior File="MrFishIt" PoolId="211423" CollectItemId="80830" CollectItemCount="15" MoveToPool="True" MinCastRange="15" MaxCastRange="20" />
+	</If>-->
 
 <!-- What Lurks Below -->
 	<If Condition="HasQuest(30585) &amp;&amp; !IsQuestCompleted(30585)" >
