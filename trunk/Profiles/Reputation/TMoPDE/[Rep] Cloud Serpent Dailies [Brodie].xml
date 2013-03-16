@@ -637,7 +637,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31704" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1487.67" Y="-2519.948" Z="153.7524" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" ObjectId="214862" MobId="65711" MobId2="67084" CollectItemId="89052" CollectItemCount="5" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
+		<CustomBehavior File="CollectThings" ObjectId="214862" MobId="65711" MobId2="67084" CollectItemId="89052" CollectItemCount="5" MobState="Alive" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
 			<Hotspot X="1453.10" Y="-2550.30" Z="151.15" />
 			<Hotspot X="1404.18" Y="-2544.84" Z="150.95" />
 			<Hotspot X="1405.23" Y="-2474.56" Z="148.17" />
@@ -651,7 +651,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31716" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1487.67" Y="-2519.948" Z="153.7524" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" ObjectId="214862" MobId="65711" MobId2="67084" CollectItemId="89053" CollectItemCount="5" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
+		<CustomBehavior File="CollectThings" ObjectId="214862" MobId="65711" MobId2="67084" CollectItemId="89053" CollectItemCount="5" MobState="Alive" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
 			<Hotspot X="1453.10" Y="-2550.30" Z="151.15" />
 			<Hotspot X="1404.18" Y="-2544.84" Z="150.95" />
 			<Hotspot X="1405.23" Y="-2474.56" Z="148.17" />

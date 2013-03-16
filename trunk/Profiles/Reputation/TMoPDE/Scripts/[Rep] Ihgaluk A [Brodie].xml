@@ -33,7 +33,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder IgnoreCheckpoints="True" KillBetweenHotspots="False" >
 
 <CustomBehavior File="Message" Text="Compiling Ihgaluk Crag Quests..." LogColor="CornflowerBlue"  />
 	

@@ -31,6 +31,18 @@
 
 <!-- Quest Overrides -->
 
+<!-- A Wing to Fly On -->
+	<Quest Id="32506" Name="A Wing to Fly On">
+		<Objective Type="CollectItem" ItemId="94605" CollectCount="1" >
+			<CollectFrom>
+				<Mob Name="Wild Pterrorwing Hatchling" Id="69428" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="6910.31" Y="5755.111" Z="5.858855" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
 <!-- End of Quest Overrides --> 
 
 <QuestOrder IgnoreCheckpoints="True" >
