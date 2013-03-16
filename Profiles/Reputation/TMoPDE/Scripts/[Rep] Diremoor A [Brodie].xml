@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Alliance) r102</Name>
+	<Name>Diremoor (Alliance) r108</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -30,18 +30,6 @@
 	</Blackspots>
 
 <!-- Quest Overrides -->
-
-<!-- A Wing to Fly On -->
-	<Quest Id="32571" Name="A Wing to Fly On">
-		<Objective Type="CollectItem" ItemId="94605" CollectCount="1" >
-			<CollectFrom>
-				<Mob Name="Wild Pterrorwing Hatchling" Id="69428" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="6910.31" Y="5755.111" Z="5.858855" />
-			</Hotspots>
-		</Objective>
-	</Quest>
 
 <!-- End of Quest Overrides --> 
 
@@ -76,7 +64,10 @@
 	<If Condition="HasQuest(32571) &amp;&amp; !IsQuestCompleted(32571)" >
 		<CustomBehavior File="Message" Text="Starting A Wing to Fly On" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32571" LootMobs="True" PullDistance="10" />
-		<Objective QuestName="A Wing to Fly On" QuestId="32571" Type="CollectItem" ItemId="94605" CollectCount="1" />
+		<RunTo X="6911.082" Y="5755.634" Z="5.792727" />
+		<While Condition="!IsQuestCompleted(32571)" >
+			<CustomBehavior File="InteractWith" MobId="69428" Range="3" CollectionDistance="10" WaitForNpcs="False" />
+		</While>
 	</If>
 	
 <!-- The Sleepless Legion -->
@@ -94,7 +85,7 @@
 					HasQuest(32575) &amp;&amp; IsQuestCompleted(32575)" >
 		<CustomBehavior File="Message" Text="Heading back to camp to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
-		<RunTo X="7178.75" Y="6284.85" Z="12.47" />
+		<RunTo X="6132.62" Y="5060.85" Z="37.39" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 	

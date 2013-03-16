@@ -1,6 +1,22 @@
 Patch Notes
 
+3/16/13
+
+r108
+Diremoor
+-- A Wing to Fly On - Removed Objectives, interactwith pause spam
+The Tillers
+-- Added You Want Fish?
+-- Added Ben of the Booming Voice NPC
+-- Added No Fishing Pole Necessary
+Pandaria Dailies v2
+-- Duplicate code removal
+
 3/15/13
+
+r107
+Ihgaluk Crag (Alliance)
+-- Added Manipulating the Saurok
 
 r106
 Pandaria Dailies v2

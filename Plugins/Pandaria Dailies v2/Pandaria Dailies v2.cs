@@ -500,11 +500,6 @@ namespace AzeniusHelper2
 			{
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getCausticPitchList, "Caustic Pitch", 15);
 			}
-			
-			if (Me.HasAura("Ignite Fuel"))
-            {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getIgniteFuelList, "Ignite Fuel", 15);
-            }
 
             #endregion
 
@@ -943,19 +938,6 @@ namespace BarryDurex
 				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
 						orderby lp.Distance2D ascending
 						where lp.Entry == 129556
-						where wlog(lp)
-						select lp).ToList();
-			}
-		}
-		
-		public static List<WoWDynamicObject> getIgniteFuelList
-		{
-			get
-			{
-				ObjectManager.Update();
-				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-						orderby lp.Distance2D ascending
-						where lp.Entry == 135862
 						where wlog(lp)
 						select lp).ToList();
 			}
