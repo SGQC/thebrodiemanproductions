@@ -496,9 +496,14 @@ namespace AzeniusHelper2
             #endregion
 			
             #region http://www.wowhead.com/quest=30251
-            if (Me.HasAura("Caustic Pitch"))
+			if (Me.HasAura("Caustic Pitch"))
+			{
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getCausticPitchList, "Caustic Pitch", 15);
+			}
+			
+			if (Me.HasAura("Ignite Fuel"))
             {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getCausticPitchList, "Caustic Pitch", 15);
+                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getIgniteFuelList, "Ignite Fuel", 15);
             }
 
             #endregion
@@ -899,6 +904,19 @@ namespace BarryDurex
                 return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
                         orderby lp.Distance2D ascending
                         where lp.Entry == 126336
+                        where wlog(lp)
+                        select lp).ToList();
+            }
+        }
+		
+        public static List<WoWDynamicObject> getIgniteFuelList
+        {
+            get
+            {
+                ObjectManager.Update();
+                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+                        orderby lp.Distance2D ascending
+                        where lp.Entry == 135862
                         where wlog(lp)
                         select lp).ToList();
             }

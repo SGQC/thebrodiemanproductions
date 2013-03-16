@@ -35,8 +35,8 @@ namespace Blastranaar
         private bool _isBehaviorDone;
         public int MobIdLao = 65868;
         private Composite _root;
-        public WoWPoint Location1 = new WoWPoint(1578.80, 1446.31, 485.0);
-        public WoWPoint Location2 = new WoWPoint(1574.71, 1428.84, 484.78);
+        public WoWPoint Location1 = new WoWPoint(1578.80, 1446.31, 465.0);
+        public WoWPoint Location2 = new WoWPoint(1574.71, 1428.84, 465.0);
         public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
         public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
 		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }

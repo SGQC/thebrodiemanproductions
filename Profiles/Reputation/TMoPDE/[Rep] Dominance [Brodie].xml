@@ -919,7 +919,7 @@
 	<If Condition="HasQuest(32342) &amp;&amp; !IsQuestCompleted(32342)">
 		<CustomBehavior File="Message" Text="Starting The Spirit Trap" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32342" LootMobs="True" PullDistance="15" />
-		<CustomBehavior File="CollectThings" QuestId="32342" MobId="68061" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="30" >
+		<CustomBehavior File="CollectThings" QuestId="32342" MobId="68061" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="60" >
 			<Hotspot X="-776.16" Y="-937.45" Z="-64.27" />
 			<Hotspot X="-692.05" Y="-988.52" Z="-70.44" />
 			<Hotspot X="-595.68" Y="-999.29" Z="-65.76" />

@@ -33,7 +33,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder LootMobs="True" KillBetweenHotspots="False" >
 
 <If Condition="Me.IsHorde" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder H [Brodie]" />

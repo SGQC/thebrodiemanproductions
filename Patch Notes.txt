@@ -2,6 +2,18 @@ Patch Notes
 
 3/15/13
 
+r106
+Pandaria Dailies v2
+-- Added aoe avoidance to Ignite Fuel
+Cloud Serpent
+-- Pooped (Tiny and Grown) - will no longer target dead mobs
+Quest Behaviors
+-- Laosy Scouting - Lowered height again to try and avoid pathing issues
+Diremoor
+-- A Wing to Fly On - Added overrides
+Dominance Offensive
+-- CollectThings range increase on Spirit Trap
+
 r105
 Dominance Offensive
 -- Kick 'Em While They're Down - fixed MobId issue
