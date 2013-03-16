@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r99</Name>
+	<Name>The Tillers r108</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -22,6 +22,7 @@
 
 	<Vendors>
 		<Vendor Name="Gina Mudclaw" Entry="58706" Type="Repair" X="-259.5399" Y="592.5469" Z="167.5478" />
+		<Vendor Name="Ben of the Booming Voice" Entry="70398" Type="Food" X="-131.74" Y="366.67" Z="147.48" />
 	</Vendors>
   
 	<AvoidMobs>
@@ -385,6 +386,13 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
+	
+<!-- Sungshin Ironpaw -->
+	<While Condition="HasQuestAvailable(64231)" >
+		<CustomBehavior File="InteractWith"  MobId="64231" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+	</While>
 
 <!-- Anthea Ironpaw -->
 	<If Condition="HasQuestAvailable(58713)" >
@@ -574,6 +582,31 @@
 			|| HasQuest(31671)" >
 		<CustomBehavior File="Message" Text="Starting The Seed Daily." LogColor="Green"  />
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Farm Dailies [Brodie]" /> 
+	</If>
+	
+<!-- You Want Fish? -->
+	<If Condition="HasQuest(32684)" >
+		<CustomBehavior File="Message" Text="Starting You Want Fish?" LogColor="Green"  />
+		<CustomBehavior File="FlyTo" X="-129.49" Y="369.72" Z="147.49" />
+		<TurnIn QuestName="You Want Fish?" QuestId="32684" TurnInName="Ben of the Booming Voice" TurnInId="70398" />
+	</If>
+	
+<!-- Ben of the Booming Voice -->
+	<While Condition="HasQuestAvailable(70398)" >
+		<CustomBehavior File="InteractWith"  MobId="70398" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+	</While>
+	
+<!-- No Fishing Pole Necessary -->
+	<If Condition="HasQuest(32685) &amp;&amp; !IsQuestCompleted(32685)" >
+		<CustomBehavior File="Message" Text="Starting No Fishing Pole Necessary" LogColor="Green"  />
+		<CustomBehavior File="FlyTo" X="-129.49" Y="369.72" Z="147.49" />
+		<CustomBehavior File="MrFishIt" CollectItemId="74866" CollectItemCount="5" X="-135.56" Y="355.43" Z="146.0" />
+	</If>
+	<If Condition="HasQuest(32685) &amp;&amp; IsQuestCompleted(32685)" >
+		<CustomBehavior File="FlyTo" X="-129.49" Y="369.72" Z="147.49" />
+		<TurnIn QuestName="No Fishing Pole Necessary" QuestId="32685" TurnInName="Ben of the Booming Voice" TurnInId="70398" />
 	</If>
 
 <!-- A Gift for Jogu -->

@@ -117,6 +117,32 @@
 		<Objective QuestName="The Skumblade Threat" QuestId="32535" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />
 	</If>
 	
+<!-- Manipulating the Saurok -->
+	<If Condition="HasQuest(32536) &amp;&amp; !IsQuestCompleted(32536)" >
+		<CustomBehavior File="Message" Text="Starting Manipulating the Saurok" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32536" LootMobs="True" PullDistance="1" />
+		<If Condition="!IsObjectiveComplete(3,32536)" >
+			<RunTo X="6106.76" Y="5523.68" Z="67.94" />
+			<While Condition="!IsObjectiveComplete(3,32536)" >
+				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69685" WaitForNpcs="False" CollectionDistance="300" WaitTime="100" />
+				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69686" WaitForNpcs="False" CollectionDistance="300" />
+			</While>
+		</If>
+		<If Condition="!IsObjectiveComplete(2,32536)" >
+			<RunTo X="5804.76" Y="5524.77" Z="40.25" />
+			<While Condition="!IsObjectiveComplete(2,32536)" >
+				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69684" WaitForNpcs="False" />
+			</While>
+		</If>
+		<If Condition="!IsObjectiveComplete(1,32536)" >
+			<RunTo X="5859.02" Y="5814.50" Z="20.52" />
+			<While Condition="!IsObjectiveComplete(1,32536)" >
+				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69681" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69682" WaitForNpcs="False" />
+			</While>
+		</If>
+	</If>
+	
 <!-- The Residents of Ihgaluk -->
 	<If Condition="HasQuest(32545) &amp;&amp; !IsQuestCompleted(32545)" >
 		<CustomBehavior File="Message" Text="Starting The Residents of Ihgaluk" LogColor="Green" />
