@@ -8,28 +8,38 @@
 	</Vendors>
 	
   
-  <QuestOrder>
-		<CustomBehavior File="UserSettings" LootMobs="False" UseMount="True" PullDistance="20" />
-	
+<QuestOrder>
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="20" />
+
 		<If Condition="Me.ZoneId != 6507" >
 			<CustomBehavior File="Message" Text="Moving to Shado Pan Garrison." LogColor="Green"  />
 			<If Condition="Me.IsAlliance" >
 				<CustomBehavior File="FlyTo" X="1921.81" Y="4223.25" Z="132.44" />
 				<CustomBehavior File="ForcedDismount" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-				<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="true" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="InteractWith" MobId="218837" ObjectType="GameObject" WaitForNpcs="True" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<If Condition="!IsQuestCompleted(32644)" >
+					<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="True" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="InteractWith" MobId="218837" ObjectType="GameObject" WaitForNpcs="True" />
+				<ElseIf Condition="IsQuestCompleted(32644)" >
+					<CustomBehavior File="InteractWith" MobId="218463" ObjectType="GameObject" WaitForNpcs="True" />
+				</ElseIf>
+				</If>
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</If>
 			<If Condition="Me.IsHorde" >
 				<CustomBehavior File="FlyTo" X="1748.19" Y="4161.71" Z="159.51" />
 				<CustomBehavior File="ForcedDismount" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-				<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="true" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="InteractWith" MobId="218839" ObjectType="GameObject" WaitForNpcs="True" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<If Condition="!IsQuestCompleted(32212)" >
+					<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="True" />
+					<CustomBehavior File="InteractWith" MobId="218839" ObjectType="GameObject" WaitForNpcs="True" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<ElseIf Condition="IsQuestCompleted(32212)" >
+					<CustomBehavior File="InteractWith" MobId="218462" ObjectType="GameObject" WaitForNpcs="True" />
+				</ElseIf>
+				</If>
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</If>
 		</If>
 		

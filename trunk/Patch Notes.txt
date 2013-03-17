@@ -2,6 +2,18 @@ Patch Notes
 
 3/17/13
 
+r111
+Black Prince Rep Grind
+-- Turned on looting by default
+-- Added Alliance and Horde Phase 2 portal support
+Pandaria Dailies v2
+-- Attempted code to stop combat pulls while under Triple Puncture debuff
+Isle of Thunder
+-- Za'Tual profile refit to not Kill Between Hotspots
+-- Court of Bones profile refit to not Kill Between Hotspots
+-- Diremoor profile refit to not Kill Between Hotspots
+-- Thunder Isle Bosses profile refit to not Kill Between Hotspots
+
 r110
 Isle of Thunder
 -- Ihgaluk Crag profile refit to not Kill Between Hotspots
