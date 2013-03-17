@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Alliance) r108</Name>
+	<Name>Diremoor (Alliance) r111</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -42,28 +42,28 @@
 <!-- The Shuddering Moor -->
 	<If Condition="HasQuest(32574) &amp;&amp; !IsQuestCompleted(32574)" >
 		<CustomBehavior File="Message" Text="Starting The Shuddering Moor" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32574" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32574" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="The Shuddering Moor" QuestId="32574" Type="KillMob" MobId="69406" KillCount="1" />
 	</If>
 	
 <!-- The Zandalari Colossus -->
 	<If Condition="HasQuest(32575) &amp;&amp; !IsQuestCompleted(32575)" >
 		<CustomBehavior File="Message" Text="Starting The Zandalari Colossus" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32575" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32575" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="The Zandalari Colossus" QuestId="32575" Type="KillMob" MobId="69405" KillCount="1" />
 	</If>
 	
 <!-- Enemies Beneath the Tower -->
 	<If Condition="HasQuest(32573) &amp;&amp; !IsQuestCompleted(32573)" >
 		<CustomBehavior File="Message" Text="Starting Enemies Beneath the Tower" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32573" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32573" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Enemies Beneath the Tower" QuestId="32573" Type="KillMob" MobId="70069" MobId2="69431" KillCount="7" />
 	</If>
 	
 <!-- A Wing to Fly On -->
 	<If Condition="HasQuest(32571) &amp;&amp; !IsQuestCompleted(32571)" >
 		<CustomBehavior File="Message" Text="Starting A Wing to Fly On" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32571" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32571" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6911.082" Y="5755.634" Z="5.792727" />
 		<While Condition="!IsQuestCompleted(32571)" >
 			<CustomBehavior File="InteractWith" MobId="69428" Range="3" CollectionDistance="10" WaitForNpcs="False" />
@@ -73,7 +73,7 @@
 <!-- The Sleepless Legion -->
 	<If Condition="HasQuest(32572) &amp;&amp; !IsQuestCompleted(32572)" >
 		<CustomBehavior File="Message" Text="Starting The Sleepless Legion" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32572" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32572" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="The Sleepless Legion" QuestId="32572" Type="KillMob" MobId="67473" KillCount="6" />
 	</If>
 	

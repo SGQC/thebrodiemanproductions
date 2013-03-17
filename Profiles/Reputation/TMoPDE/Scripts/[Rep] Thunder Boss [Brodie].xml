@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r102</Name>
+	<Name>Thunder Bosses r111</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -36,66 +36,66 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder IgnoreCheckpoints="True" KillBetweenHotspots="False" >
 
 <!-- Competing Magic -->
 	<If Condition="HasQuest(32576) &amp;&amp; !IsQuestCompleted(32576)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32576" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32576" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32576" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32579) &amp;&amp; !IsQuestCompleted(32579)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32579" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32579" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32579" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32561) &amp;&amp; !IsQuestCompleted(32561)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32561" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32561" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32561" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32520) &amp;&amp; !IsQuestCompleted(32520)" >
 		<CustomBehavior File="Message" Text="Starting Competing Magic" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32520" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32520" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Competing Magic" QuestId="32520" Type="KillMob" MobId="69665" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32578) &amp;&amp; !IsQuestCompleted(32578)" >
 		<CustomBehavior File="Message" Text="Starting Among the Bones" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32578" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32578" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Among the Bones" QuestId="32578" Type="KillMob" MobId="69666" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32293) &amp;&amp; !IsQuestCompleted(32293)" >
 		<CustomBehavior File="Message" Text="Starting Among the Bones" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32293" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32293" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Among the Bones" QuestId="32293" Type="KillMob" MobId="69666" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32577) &amp;&amp; !IsQuestCompleted(32577)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32577" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32577" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32577" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32581) &amp;&amp; !IsQuestCompleted(32581)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32581" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32581" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32581" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32562) &amp;&amp; !IsQuestCompleted(32562)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32562" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32562" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32562" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 	
 	<If Condition="HasQuest(32522) &amp;&amp; !IsQuestCompleted(32522)" >
 		<CustomBehavior File="Message" Text="Starting Imposing Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32522" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32522" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Imposing Threat" QuestId="32522" Type="KillMob" MobId="70176" KillCount="1" />
 	</If>
 

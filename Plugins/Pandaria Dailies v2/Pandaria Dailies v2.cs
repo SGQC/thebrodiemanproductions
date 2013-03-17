@@ -815,7 +815,12 @@ namespace AzeniusHelper2
 			if (PrimalDirehorn != null)
             {
                 if (Me.Combat && PrimalDirehorn.Distance2D <= 15 && PrimalDirehorn.IsCasting && PrimalDirehorn.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehorn, 80, 15);
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehorn, 90, 15);
+				if (!Me.Combat && Me.HasAura(138768))
+				{
+					WoWMovement.MoveStop();
+					Thread.Sleep(1000);
+				}
             }
 			
 			#endregion

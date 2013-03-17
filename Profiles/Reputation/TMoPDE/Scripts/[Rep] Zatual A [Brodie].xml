@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual r99</Name>
+	<Name>Za'Tual r111</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -76,7 +76,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder IgnoreCheckpoints="True" KillBetweenHotspots="False" >
 
 <!-- Starting Quests -->
 
@@ -119,7 +119,7 @@
 <!-- Preventing a Future Threat -->
 	<If Condition="HasQuest(32541) &amp;&amp; !IsQuestCompleted(32541)" >
 		<CustomBehavior File="Message" Text="Starting Preventing a Future Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32541" LootMobs="True" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32541" LootMobs="True" KillBetweenHotspots="False" PullDistance="5" />
 		<RunTo X="5998.071" Y="6401.809" Z="5.729356" />
 		<CustomBehavior File="CollectThings" MobId="69128" CollectUntil="QuestComplete" QuestId="32541" HuntingGroundRadius="100" NonCompeteDistance="5" PostInteractDelay="1000" >
 			<Hotspot X="5956.03" Y="6407.93" Z="7.34" />
@@ -130,7 +130,7 @@
 <!-- Heinous Sacrifice -->
 	<If Condition="HasQuest(32538) &amp;&amp; !IsQuestCompleted(32538)" >
 		<CustomBehavior File="Message" Text="Starting Heinous Sacrifice" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32538" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32538" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<While Condition="!IsQuestCompleted(32538)" >
 			<If Condition="!IsObjectiveComplete(1,32538)" >
 				<RunTo X="6047.05" Y="6245.00" Z="22.96" />
@@ -150,7 +150,7 @@
 <!-- Dark Offerings -->
 	<If Condition="HasQuest(32539) &amp;&amp; !IsQuestCompleted(32539)" >
 		<CustomBehavior File="Message" Text="Starting Dark Offerings" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32539" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32539" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<CustomBehavior File="CollectThings" QuestId="32539" ObjectId="216991" CollectUntil="QuestComplete" HuntingGroundRadius="120" NonCompeteDistance="5" PostInteractDelay="1000" >
 			<Hotspot X="6280.383" Y="6244.237" Z="15.92406" />
 			<Hotspot X="6284.976" Y="6139.48" Z="27.92483" />
@@ -169,14 +169,14 @@
 <!-- Harbringers of the Loa -->
 	<If Condition="HasQuest(32540) &amp;&amp; !IsQuestCompleted(32540)" >
 		<CustomBehavior File="Message" Text="Starting Harbringers of the Loa" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32540" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32540" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Harbringers of the Loa" QuestId="32540" Type="KillMob" MobId="69281" MobId2="69285" KillCount="2" />
 	</If>
 	
 <!-- Surgical Strike -->
 	<If Condition="HasQuest(32542) &amp;&amp; !IsQuestCompleted(32542)" >
 		<CustomBehavior File="Message" Text="Starting Surgical Strike" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32542" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32542" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69379" MobId2="69412" MobId3="70509" MobId4="69397" MobId5="69780" KillCount="3" />
 		<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69171" KillCount="3" />
 		<CustomBehavior File="CollectThings" QuestId="32542" CollectUntil="QuestComplete" MobId="69254" MobId2="69256" MobId3="69255" MobId4="69225" HuntingGroundRadius="120" >
@@ -196,7 +196,7 @@
 <!-- Pterrible Ptorment -->
 	<If Condition="HasQuest(32544) &amp;&amp; !IsQuestCompleted(32544)" >
 		<CustomBehavior File="Message" Text="Starting Pterrible Ptorment" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32544" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32544" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6213.471" Y="5955.08" Z="40.78753" />
 		<While Condition="!IsQuestCompleted(32544)" >
 			<CustomBehavior File="InteractWith" MobId="69224" CollectionDistance="500" WaitForNpcs="False" MobState="Alive" />
@@ -206,7 +206,7 @@
 <!-- Dangers of Za'Tual -->
 	<If Condition="HasQuest(32543) &amp;&amp; !IsQuestCompleted(32543)" >
 		<CustomBehavior File="Message" Text="Starting Dangers of Za'Tual" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32543" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32543" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Dangers of Za'Tual" QuestId="32543" Type="KillMob" MobId="69780" MobId2="69065" KillCount="12" />
 	</If>
 	
