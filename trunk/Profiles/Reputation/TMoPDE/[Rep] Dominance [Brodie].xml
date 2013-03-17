@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r105</Name>
+	<Name>Dominance Offensive r109</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -184,6 +184,26 @@
 				<Hotspot X="-2127.432" Y="2391.077" Z="5.737707" />
 				<Hotspot X="-2120.4" Y="2338.787" Z="6.366756" />
 				<Hotspot X="-2007.586" Y="2346.042" Z="5.885516" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+	
+<!-- Hard Counter -->
+	<Quest Id="32134" Name="Hard Counter">
+		<Objective Type="KillMob" MobId="67541" KillCount="2">
+			<Hotspots>
+				<Hotspot X="-913.1929" Y="-909.3918" Z="3.209585" />
+				<Hotspot X="-864.0526" Y="-918.2073" Z="6.283766" />
+				<Hotspot X="-895.9004" Y="-956.0966" Z="7.38683" />
+				<Hotspot X="-921.8217" Y="-1010.994" Z="10.17015" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="67545" KillCount="8">
+			<Hotspots>
+				<Hotspot X="-913.1929" Y="-909.3918" Z="3.209585" />
+				<Hotspot X="-864.0526" Y="-918.2073" Z="6.283766" />
+				<Hotspot X="-895.9004" Y="-956.0966" Z="7.38683" />
+				<Hotspot X="-921.8217" Y="-1010.994" Z="10.17015" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -374,6 +394,16 @@
 		<CustomBehavior File="FlyTo" X="-943.44" Y="-873.70" Z="1.14" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Good Luck, Have Fun" QuestId="32130" Type="CollectItem" ItemId="92474" CollectCount="10" />
+	</If>
+	
+<!-- Hard Counter -->
+	<If Condition="HasQuest(32134) &amp;&amp; !IsQuestCompleted(32134)" >
+		<CustomBehavior File="Message" Text="Starting Hard Counter" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32134" LootMobs="True" PullDistance="20" />
+		<CustomBehavior File="FlyTo"  X="-892.36" Y="-910.21" Z="5.44" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Hard Counter" QuestId="32134" Type="KillMob" MobId="67541" KillCount="2" />
+		<Objective QuestName="Hard Counter" QuestId="32134" Type="KillMob" MobId="67545" KillCount="8" />
 	</If>
 
 <!-- Worker Harassment -->
@@ -903,7 +933,7 @@
 <!-- Kaelis Sunsoar -->
 	<While Condition="HasQuestAvailable(68274)" >
 		<CustomBehavior File="InteractWith" MobId="68274" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
@@ -934,6 +964,13 @@
 		<Objective QuestName="We're Not Monsters" QuestId="32345" Type="KillMob" MobId="68074" KillCount="14" />
 	</If>
 	
+<!-- It Is a Mystery -->
+	<If Condition="HasQuest(32344) &amp;&amp; !IsQuestCompleted(32344)">
+		<CustomBehavior File="Message" Text="Starting It Is A Mystery" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32344" LootMobs="True" PullDistance="1" />
+		<RunTo X="-638.0913" Y="-925.3087" Z="-64.07933" />
+	</If>
+	
 <!-- Kick 'em While They're Down -->
 	<If Condition="HasQuest(32348) &amp;&amp; !IsQuestCompleted(32348)">
 		<CustomBehavior File="Message" Text="Starting Kick 'em While They're Down" LogColor="Green" />
@@ -952,6 +989,7 @@
 				HasQuest(32342) &amp;&amp; IsQuestCompleted(32342) ||
 				HasQuest(32345) &amp;&amp; IsQuestCompleted(32345) ||
 				HasQuest(32348) &amp;&amp; IsQuestCompleted(32348) ||
+				HasQuest(32344) &amp;&amp; IsQuestCompleted(32344) ||
 				HasQuest(32120) &amp;&amp; IsQuestCompleted(32120)" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Lower Ogudei." LogColor="Green"  />
 		<RunTo X="-681.50" Y="-873.57" Z="-84.43" />
@@ -975,6 +1013,10 @@
 	
 	<If Condition="HasQuest(32120) &amp;&amp; IsQuestCompleted(32120)" >
 		<TurnIn QuestName="Legacy of Ogudei" QuestId="32120" TurnInName="Kaelis Sunsoar" TurnInId="68274" />
+	</If>
+	
+	<If Condition="HasQuest(32344) &amp;&amp; IsQuestCompleted(32344)" >
+		<TurnIn QuestName="It Is A Mystery" QuestId="32344" TurnInName="Kaelis Sunsoar" TurnInId="68274" />
 	</If>
 
 	<If Condition="HasQuest(32214) &amp;&amp; IsQuestCompleted(32214) ||
