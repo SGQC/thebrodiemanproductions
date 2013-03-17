@@ -924,7 +924,7 @@ namespace BarryDurex
                 ObjectManager.Update();
                 return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
                         orderby lp.Distance2D ascending
-                        where lp.Entry == 140454
+                        where lp.Entry == 70571
                         where wlog(lp)
                         select lp).ToList();
             }

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r99</Name>
+	<Name>The Golden Lotus r108</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -469,7 +469,15 @@
 		<CustomBehavior File="UserSettings" QuestId="31755" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Acts of Cruelty" QuestId="31755" Type="KillMob" MobId="65810" KillCount="5" />
+		<CustomBehavior File="CollectThings" QuestId="31755" CollectUntil="QuestComplete" MobId="65804" MobId2="65817" MobId3="65818" HuntingGroundRadius="100" >
+			<Hotspot X="1537.772" Y="1275.769" Z="442.6665" />
+			<Hotspot X="1544.448" Y="1186.748" Z="443.1485" />
+			<Hotspot X="1589.529" Y="1260.953" Z="458.064" />
+			<Hotspot X="1608.952" Y="1368.481" Z="445.2224" />
+			<Hotspot X="1532.999" Y="1460.761" Z="442.2372" />
+			<Hotspot X="1609.153" Y="1526.843" Z="440.0296" />
+		</CustomBehavior>
+	<!--<Objective QuestName="Acts of Cruelty" QuestId="31755" Type="KillMob" MobId="65810" KillCount="5" />-->
 	</If>
 
 <!-- Stone Hard Quilen -->

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r101</Name>
+	<Name>Operation Shieldwall r108</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -371,12 +371,19 @@
 	<If Condition="HasQuest(32121) &amp;&amp; !IsQuestCompleted(32121)">
 		<CustomBehavior File="Message" Text="Starting The Spirit Trap" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32121" LootMobs="True" PullDistance="15" />
-		<CustomBehavior File="CollectThings" QuestId="32121" MobId="68061" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="30" >
+		<CustomBehavior File="CollectThings" QuestId="32121" MobId="68061" MobState="Alive" CollectUntil="QuestComplete" NonCompeteDistance="1" HuntingGroundRadius="120" >
 			<Hotspot X="-776.16" Y="-937.45" Z="-64.27" />
 			<Hotspot X="-692.05" Y="-988.52" Z="-70.44" />
 			<Hotspot X="-595.68" Y="-999.29" Z="-65.76" />
 			<Hotspot X="-596.55" Y="-845.27" Z="-68.41" />
 		</CustomBehavior>
+	</If>
+	
+<!-- It Is a Mystery -->
+	<If Condition="HasQuest(32119) &amp;&amp; !IsQuestCompleted(32119)">
+		<CustomBehavior File="Message" Text="Starting It Is A Mystery" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32119" LootMobs="True" PullDistance="1" />
+		<RunTo X="-638.0913" Y="-925.3087" Z="-64.07933" />
 	</If>
 
 <!-- Shackles of the Past -->
@@ -408,30 +415,32 @@
 			(HasQuest(32119) &amp;&amp; IsQuestCompleted(32119))" >
 		<CustomBehavior File="Message" Text="Returning to cave entrance for turn-ins" LogColor="Green" />
 		<RunTo X="-621.93" Y="-813.28" Z="1.97" />
-	</If>
 
-	<If Condition="HasQuest(32122) &amp;&amp; IsQuestCompleted(32122)" >
-		<TurnIn QuestName="Ogudei's Lieutenants" QuestId="32122" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-	</If>
+		<If Condition="HasQuest(32122) &amp;&amp; IsQuestCompleted(32122)" >
+			<TurnIn QuestName="Ogudei's Lieutenants" QuestId="32122" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+		</If>
 
-	<If Condition="HasQuest(32121) &amp;&amp; IsQuestCompleted(32121)" >
-		<TurnIn QuestName="The Spirit Trap" QuestId="32121" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-	</If>
+		<If Condition="HasQuest(32121) &amp;&amp; IsQuestCompleted(32121)" >
+			<TurnIn QuestName="The Spirit Trap" QuestId="32121" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+		</If>
 
-	<If Condition="HasQuest(32115) &amp;&amp; IsQuestCompleted(32115)" >
-		<TurnIn QuestName="Shackles of the Past" QuestId="32115" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-	</If>
+		<If Condition="HasQuest(32115) &amp;&amp; IsQuestCompleted(32115)" >
+			<TurnIn QuestName="Shackles of the Past" QuestId="32115" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+		</If>
 
-	<If Condition="HasQuest(32119) &amp;&amp; IsQuestCompleted(32119)" >
-		<TurnIn QuestName="It Is a Mystery" QuestId="32119" TurnInName="Hilda Hornswaggle" TurnInId="68275" />
-	</If>
+		<If Condition="HasQuest(32119) &amp;&amp; IsQuestCompleted(32119)" >
+			<TurnIn QuestName="It Is a Mystery" QuestId="32119" TurnInName="Hilda Hornswaggle" TurnInId="68275" />
+		</If>
 
-	<If Condition="HasQuest(32346) &amp;&amp; IsQuestCompleted(32346)" >
-		<TurnIn QuestName="Oi Ain't Afraid O No Ghosts" QuestId="32346" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
-	</If>
+		<If Condition="HasQuest(32346) &amp;&amp; IsQuestCompleted(32346)" >
+			<TurnIn QuestName="Oi Ain't Afraid O No Ghosts" QuestId="32346" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+		</If>
 
-	<If Condition="HasQuest(32347) &amp;&amp; IsQuestCompleted(32347)" >
-		<TurnIn QuestName="Eviction Notice" QuestId="32347" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+		<If Condition="HasQuest(32347) &amp;&amp; IsQuestCompleted(32347)" >
+			<TurnIn QuestName="Eviction Notice" QuestId="32347" TurnInName="Hilga Hornswaggle" TurnInId="68275" />
+		</If>
+		
+		<RunTo X="-662.798" Y="-815.4231" Z="1.641182" />
 	</If>
 
 <!-- Burn Out -->
