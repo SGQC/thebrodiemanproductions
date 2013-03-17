@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Horde) r105</Name>
+	<Name>Ihgaluk Crag (Horde) r110</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -78,7 +78,7 @@
 <!-- Skin of the Saurok (one time only buff enabler) -->
 	<If Condition="HasQuest(32507) &amp;&amp; !IsQuestCompleted(32507)" >
 		<CustomBehavior File="Message" Text="Starting Skin of the Saurok" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32507" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32507" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Skin of the Saurok" QuestId="32507" Type="KillMob" MobId="69227" MobId2="69210" KillCount="1" />
 	</If>
 	
@@ -89,7 +89,7 @@
 <!-- Subtle Encouragement -->
 	<If Condition="HasQuest(32605) &amp;&amp; !IsQuestCompleted(32605)" >
 		<CustomBehavior File="Message" Text="Starting Subtle Encouragement" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32605" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32605" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<While Condition="!IsQuestCompleted(32605)" >
 			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
@@ -106,7 +106,7 @@
 <!-- The Skumblade Threat -->
 	<If Condition="HasQuest(32204) &amp;&amp; !IsQuestCompleted(32204)" >
 		<CustomBehavior File="Message" Text="Starting The Skumblade Threat" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32204" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32204" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<Objective QuestName="The Skumblade Threat" QuestId="32204" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />
 	</If>
@@ -114,7 +114,7 @@
 <!-- Manipulating the Saurok -->
 	<If Condition="HasQuest(32254) &amp;&amp; !IsQuestCompleted(32254)" >
 		<CustomBehavior File="Message" Text="Starting Manipulating the Saurok" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32254" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="32254" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<If Condition="!IsObjectiveComplete(3,32254)" >
 			<RunTo X="6104.23" Y="5532.87" Z="68.09" />
 			<While Condition="!IsObjectiveComplete(3,32254)" >
@@ -140,7 +140,7 @@
 <!-- The Residents of Ihgaluk -->
 	<If Condition="HasQuest(32274) &amp;&amp; !IsQuestCompleted(32274)" >
 		<CustomBehavior File="Message" Text="Starting The Residents of Ihgaluk" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32274" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32274" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
 		<Objective QuestName="The Residents of Ihgaluk" QuestId="32274" Type="KillMob" MobId="69338" KillCount="1" />
 		<Objective QuestName="The Residents of Ihgaluk" QuestId="32274" Type="KillMob" MobId="69226" KillCount="1" />
 		<Objective QuestName="The Residents of Ihgaluk" QuestId="32274" Type="KillMob" MobId="69229" KillCount="1" />
@@ -149,7 +149,7 @@
 <!-- Deconstructed -->
 	<If Condition="HasQuest(32255) &amp;&amp; !IsQuestCompleted(32255)" >
 		<CustomBehavior File="Message" Text="Starting Deconstructed" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32255" LootMobs="True" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32255" LootMobs="True" KillBetweenHotspots="False" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(32255)" >
 			<If Condition="!IsObjectiveComplete(4,32255)" >
 				<RunTo X="6166.83" Y="5728.69" Z="5.85" />
@@ -214,14 +214,14 @@
 <!-- Left To Rot -->
 	<If Condition="HasQuest(32491) &amp;&amp; !IsQuestCompleted(32491)" >
 		<CustomBehavior File="Message" Text="Starting Left To Rot" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32491" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32491" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<Objective QuestName="Left To Rot" QuestId="32491" Type="KillMob" MobId="69247" KillCount="3" />
 	</If>
 	
 <!-- Just Some Light Clean-Up Work -->
 	<If Condition="HasQuest(32299) &amp;&amp; !IsQuestCompleted(32299)" >
 		<CustomBehavior File="Message" Text="Starting Just Some Light Clean-Up Work" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32299" LootMobs="True" PullDistance="25" />
+		<CustomBehavior File="UserSettings" QuestId="32299" LootMobs="True" KillBetweenHotspots="False" PullDistance="25" />
 		<RunTo X="5936.555" Y="5465.421" Z="30.49908" />
 		<CustomBehavior File="CollectThings" CollectUntil="QuestComplete" QuestId="32299" MobId="69251" MobId2="69282" MobState="Alive" NonCompeteDistance="5" HuntingGroundRadius="50" >
 			<Hotspot X="5944.483" Y="5445.594" Z="30.49892" />
@@ -235,7 +235,7 @@
 <!-- The Creeping Carpet of Ihgaluk -->
 	<If Condition="HasQuest(32547) &amp;&amp; !IsQuestCompleted(32547)" >
 		<CustomBehavior File="Message" Text="Starting The Creeping Carpet of Ihgaluk" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32547" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="32547" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<While Condition="!IsQuestCompleted(32547)" >
 			<RunTo X="5981.361" Y="5512.725" Z="40.1333" />
 			<RunTo X="5977.61" Y="5579.485" Z="40.98503" />
@@ -258,7 +258,7 @@
 					HasQuest(32274) &amp;&amp; IsQuestCompleted(32274) ||
 					HasQuest(32489) &amp;&amp; IsQuestCompleted(32489)" >
 		<CustomBehavior File="Message" Text="Heading back to Ihgaluk Crag to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<RunTo X="6305.70" Y="5716.74" Z="9.01" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>

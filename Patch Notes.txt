@@ -2,6 +2,13 @@ Patch Notes
 
 3/17/13
 
+r110
+Isle of Thunder
+-- Ihgaluk Crag profile refit to not Kill Between Hotspots
+-- Pause time on Subtle Encouragement drastically lowered
+Pandaria Dailies v2
+-- Removed Vile Spit temporarily
+
 r109
 Dominance Offensive
 -- Added Hard Counter
