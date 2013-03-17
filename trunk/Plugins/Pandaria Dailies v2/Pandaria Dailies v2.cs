@@ -462,10 +462,10 @@ namespace AzeniusHelper2
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getHotFootList, "Hot Foot!", 15);
 			}
 			
-			if (Me.HasAura("Vile Spit"))
-			{
-				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVileSpitList, "Vile Spit", 15);
-			}
+//			if (Me.HasAura("Vile Spit"))
+//			{
+//				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVileSpitList, "Vile Spit", 15);
+//			}
 
             #endregion
 			
@@ -917,18 +917,18 @@ namespace BarryDurex
             }
         }
 		
-        public static List<WoWDynamicObject> getVileSpitList
-        {
-            get
-            {
-                ObjectManager.Update();
-                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-                        orderby lp.Distance2D ascending
-                        where lp.Entry == 70571
-                        where wlog(lp)
-                        select lp).ToList();
-            }
-        }
+//		public static List<WoWDynamicObject> getVileSpitList
+//        {
+//            get
+//            {
+//                ObjectManager.Update();
+//               return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+//                        orderby lp.Distance2D ascending
+//                        where lp.Entry == 70571
+//                        where wlog(lp)
+//                        select lp).ToList();
+//            }
+//        }
 		
 		public static List<WoWDynamicObject> getHotFootList
 		{
