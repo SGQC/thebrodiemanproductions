@@ -1,0 +1,91 @@
+<HBProfile>
+	<Name>Isle of Giants - Direhorns Giant Dinosaur Bones</Name>
+	
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<Blackspots>
+    </Blackspots>
+	
+	<Vendors>
+	</Vendors>
+	
+	<TargetElites>True</TargetElites>	
+  
+  <QuestOrder>
+		<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" KillBetweenHotspots="True" PullDistance="25" />
+	
+		<If Condition="Me.ZoneId != 6661" >
+			<CustomBehavior File="Message" Text="Moving to Isle of Giants" LogColor="Green"  />
+			<CustomBehavior File="FlyTo" X="5772.52" Y="1212.49" Z="0.81" />
+		</If>
+		
+<!--	<While Condition="GetItemCount(94288) &lt; 9999" >
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5851.349" Y="1025.546" Z="17.9261" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5846.584" Y="1096.255" Z="7.545632" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5805.53" Y="1176.312" Z="6.462414" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5786.686" Y="1266.786" Z="7.677085" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5767.857" Y="1367.687" Z="28.67043" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5848.178" Y="1379.897" Z="28.38594" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+			<CustomBehavior File="CollectThings" CollectItemId="94288" CollectItemCount="10000" CollectUntil="NoTargetsInArea" HuntingGroundRadius="75" NonCompeteDistance="5"
+				MobId="70016" MobId2="70013" MobId3="70012" MobId4="69992" MobId5="70015" MobId6="70014" MobId7="70017" MobId8="69983" MobId9="70019" MobId10="70018" >
+				<Hotspot X="5848.767" Y="1490.893" Z="47.35931" />
+			</CustomBehavior>
+			<While Condition="Me.HasAura(138768)" >
+			</While>
+		</While> -->
+		
+		<SetGrindArea>
+			<GrindArea>
+				<Factions>16</Factions>
+				<Hotspots>
+					<Hotspot X="5851.349" Y="1025.546" Z="17.9261" />
+					<Hotspot X="5846.584" Y="1096.255" Z="7.545632" />
+					<Hotspot X="5805.53" Y="1176.312" Z="6.462414" />
+					<Hotspot X="5786.686" Y="1266.786" Z="7.677085" />
+					<Hotspot X="5767.857" Y="1367.687" Z="28.67043" />
+					<Hotspot X="5848.178" Y="1379.897" Z="28.38594" />
+					<Hotspot X="5848.767" Y="1490.893" Z="47.35931" />
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Condition="False" GoalText="Dinosaur Bones" />
+
+</QuestOrder>
+</HBProfile>  

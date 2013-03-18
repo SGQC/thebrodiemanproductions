@@ -330,13 +330,53 @@ namespace AzeniusHelper2
             }
         }
 		
-		public WoWUnit PrimalDirehorn
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70016 || u.Entry == 69142 || u.Entry == 70017 || u.Entry == 70018 || u.Entry == 70019 || u.Entry == 69983 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		public WoWUnit PrimalDirehornA
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70016 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
+		
+		public WoWUnit PrimalDirehornC
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69142 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
+		
+		public WoWUnit PrimalDirehornD
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70017 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
+		
+		public WoWUnit PrimalDirehornE
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70018 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
+		
+		public WoWUnit PrimalDirehornF
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 70019 || u.Entry == 69983 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
+		
+		public WoWUnit PrimalDirehornB
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69983 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 		
 		public WoWUnit ZColossus
         {
@@ -812,16 +852,47 @@ namespace AzeniusHelper2
 			#endregion
 			
 			#region Isle of Giants
-			if (PrimalDirehorn != null)
+			if (PrimalDirehornA != null)
             {
-                if (Me.Combat && PrimalDirehorn.Distance2D <= 15 && PrimalDirehorn.IsCasting && PrimalDirehorn.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehorn, 90, 15);
-				if (!Me.Combat && Me.HasAura(138768))
-				{
-					WoWMovement.MoveStop();
-					Thread.Sleep(1000);
-				}
+                if (Me.Combat && PrimalDirehornA.Distance2D <= 15 && PrimalDirehornA.IsCasting && PrimalDirehornA.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornA, 90, 15);
             }
+			
+			if (PrimalDirehornB != null)
+            {
+                if (Me.Combat && PrimalDirehornB.Distance2D <= 15 && PrimalDirehornB.IsCasting && PrimalDirehornB.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornB, 90, 15);
+            }
+			
+			if (PrimalDirehornC != null)
+            {
+                if (Me.Combat && PrimalDirehornC.Distance2D <= 15 && PrimalDirehornC.IsCasting && PrimalDirehornC.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornC, 90, 15);
+            }
+			
+			if (PrimalDirehornD != null)
+            {
+                if (Me.Combat && PrimalDirehornD.Distance2D <= 15 && PrimalDirehornD.IsCasting && PrimalDirehornD.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornD, 90, 15);
+            }
+			
+			if (PrimalDirehornE != null)
+            {
+                if (Me.Combat && PrimalDirehornE.Distance2D <= 15 && PrimalDirehornE.IsCasting && PrimalDirehornE.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornE, 90, 15);
+            }
+			
+			if (PrimalDirehornF != null)
+            {
+                if (Me.Combat && PrimalDirehornF.Distance2D <= 15 && PrimalDirehornF.IsCasting && PrimalDirehornF.CastingSpellId == 138772)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornF, 90, 15);
+            }
+			
+			if (!Me.Combat && Me.HasAura(138768))
+			{
+				WoWMovement.MoveStop();
+				Thread.Sleep(1000);
+			}
 			
 			#endregion
         }
