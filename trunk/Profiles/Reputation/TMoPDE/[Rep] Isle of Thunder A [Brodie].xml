@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r102</Name>
+	<Name>Isle of Thunder (Alliance) r112</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -96,7 +96,8 @@
 					!HasQuest(32731) &amp;&amp; !HasQuest(32530) &amp;&amp; !HasQuest(32527) &amp;&amp; !HasQuest(32533) &amp;&amp;
 					!HasQuest(32526) &amp;&amp; !HasQuest(32528) &amp;&amp; !HasQuest(32529) &amp;&amp; !HasQuest(32531) &amp;&amp;
 					!HasQuest(32532) &amp;&amp; !HasQuest(32525) &amp;&amp; !HasQuest(32571) &amp;&amp; !HasQuest(32572) &amp;&amp;
-					!HasQuest(32573) &amp;&amp; !HasQuest(32574) &amp;&amp; !HasQuest(32575))" >
+					!HasQuest(32573) &amp;&amp; !HasQuest(32574) &amp;&amp; !HasQuest(32575) &amp;&amp; !HasQuest(32580) &amp;&amp;
+					!HasQuest(32584) &amp;&amp; !HasQuest(32585))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
 	</If>
@@ -178,12 +179,9 @@
 		<TurnIn QuestName="Allies in the Shadows" QuestId="32706" TurnInName="Taran Zhu" TurnInId="70160" />
 	</If>
 	
-	<If Condition="HasItem(94566)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
-	</If>
-	
 	<!-- Do we have an ender? -->
-	<If Condition="HasQuest(32576) || HasQuest(32579) || HasQuest(32578) || HasQuest(32577) || HasQuest(32581)" >
+	<If Condition="HasQuest(32576) || HasQuest(32579) || HasQuest(32578) || HasQuest(32577) || 
+					HasQuest(32581) || HasQuest(32580) || HasQuest(32584) || HasQuest(32585)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
@@ -219,6 +217,10 @@
 		</Else>
 		</If>
 	</ElseIf>
+	</If>
+	
+	<If Condition="HasItem(94566)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
 	</If>
 	
 	<While Condition="(GetItemCount(89112) &gt; 10)">

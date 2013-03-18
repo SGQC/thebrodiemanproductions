@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r102</Name>
+	<Name>Isle of Thunder (Horde) r112</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -71,11 +71,6 @@
 			<CustomBehavior File="WaitTimer" WaitTime="97000" />
 		</If>
 	</If>
-	
-<!-- Do we have an ender? -->
-	<If Condition="HasQuest(32561) || HasQuest(32520)" >
-		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
-	</If>
 
 <CustomBehavior File="Message" Text="Beginning Isle of Thunder Quests." LogColor="Green"  />
 
@@ -100,7 +95,8 @@
 					!HasQuest(32200) &amp;&amp; !HasQuest(32217) &amp;&amp; !HasQuest(32215) &amp;&amp; !HasQuest(32216) &amp;&amp;
 					!HasQuest(32730) &amp;&amp; !HasQuest(32255) &amp;&amp; !HasQuest(32254) &amp;&amp; !HasQuest(32605) &amp;&amp;
 					!HasQuest(32204) &amp;&amp; !HasQuest(32299) &amp;&amp; !HasQuest(32491) &amp;&amp; !HasQuest(32274) &amp;&amp;
-					!HasQuest(32489) &amp;&amp; !HasQuest(32517))" >
+					!HasQuest(32489) &amp;&amp; !HasQuest(32517) &amp;&amp; !HasQuest(32521) &amp;&amp; !HasQuest(32563) &amp;&amp;
+					!HasQuest(32565))" >
 		<CustomBehavior File="InteractWith" MobId="70567" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(48)" />
 	</If>
@@ -181,7 +177,8 @@
 	</If>
 	
 <!-- Do we have an ender? -->
-	<If Condition="HasQuest(32561) || HasQuest(32520) || HasQuest(32293) || HasQuest(32562) || HasQuest(32522)" >
+	<If Condition="HasQuest(32561) || HasQuest(32520) || HasQuest(32293) || HasQuest(32562) ||
+					HasQuest(32522) || HasQuest(32521) || HasQuest(32563) || HasQuest(32565)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
