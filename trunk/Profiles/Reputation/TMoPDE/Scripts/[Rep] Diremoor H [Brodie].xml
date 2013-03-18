@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Horde) r111</Name>
+	<Name>Diremoor (Horde) r114</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -38,6 +38,15 @@
 <!-- Starting Quests -->
 
 <CustomBehavior File="Message" Text="Compiling Diremoor Quests..." LogColor="CornflowerBlue"  />
+
+	<If Condition="(!HasQuest(32228) &amp;&amp; IsQuestCompleted(32228) ||
+					!HasQuest(32285) &amp;&amp; IsQuestCompleted(32285) ||
+					!HasQuest(32287) &amp;&amp; IsQuestCompleted(32287) ||
+					!HasQuest(32230) &amp;&amp; IsQuestCompleted(32230) ||
+					!HasQuest(32506) &amp;&amp; IsQuestCompleted(32506))" >
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
 	
 <!-- The Shuddering Moor -->
 	<If Condition="HasQuest(32228) &amp;&amp; !IsQuestCompleted(32228)" >

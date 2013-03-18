@@ -1,10 +1,21 @@
 Patch Notes
 
+3/18/13
+
+r114
+Isle of Thunder
+-- Court of Bones cache verification code added
+-- Za'Tual cache verification code added
+-- Ihgaluk Crag cache verification code added
+-- Diremoor cache verification code added
+
 3/17/13
 
 r113
 Isle of Giants
 -- Updates and new profiles
+Pandaria Dailies v2
+-- Re-edit of Wait for Triple Puncture code
 
 r112
 Isle of Thunder

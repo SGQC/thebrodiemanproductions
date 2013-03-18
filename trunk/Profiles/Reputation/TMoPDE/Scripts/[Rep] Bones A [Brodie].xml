@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones r104</Name>
+	<Name>Court of Bones (Alliance) r114</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -47,6 +47,20 @@
 <QuestOrder IgnoreCheckpoints="True" KillBetweenHotspots="False" >
 
 <CustomBehavior File="Message" Text="Compiling Court of Bones Quests..." LogColor="CornflowerBlue"  />
+
+	<If Condition="(!HasQuest(32530) &amp;&amp; IsQuestCompleted(32530) ||
+					!HasQuest(32527) &amp;&amp; IsQuestCompleted(32527) ||
+					!HasQuest(32533) &amp;&amp; IsQuestCompleted(32533) ||
+					!HasQuest(32526) &amp;&amp; IsQuestCompleted(32526) ||
+					!HasQuest(32528) &amp;&amp; IsQuestCompleted(32528) ||
+					!HasQuest(32529) &amp;&amp; IsQuestCompleted(32529) ||
+					!HasQuest(32531) &amp;&amp; IsQuestCompleted(32531) ||
+					!HasQuest(32532) &amp;&amp; IsQuestCompleted(32532) ||
+					!HasQuest(32731) &amp;&amp; IsQuestCompleted(32731) ||
+					!HasQuest(32525) &amp;&amp; IsQuestCompleted(32525))" >
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
 
 <!-- Court of Bones (Kicker) -->
 	<If Condition="HasQuest(32731)" >

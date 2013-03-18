@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag r110</Name>
+	<Name>Ihgaluk Crag (Alliance) r114</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -36,6 +36,19 @@
 <QuestOrder IgnoreCheckpoints="True" KillBetweenHotspots="False" >
 
 <CustomBehavior File="Message" Text="Compiling Ihgaluk Crag Quests..." LogColor="CornflowerBlue"  />
+
+	<If Condition="(!HasQuest(32606) &amp;&amp; IsQuestCompleted(32606) ||
+					!HasQuest(32545) &amp;&amp; IsQuestCompleted(32545) ||
+					!HasQuest(32535) &amp;&amp; IsQuestCompleted(32535) ||
+					!HasQuest(32548) &amp;&amp; IsQuestCompleted(32548) ||
+					!HasQuest(32547) &amp;&amp; IsQuestCompleted(32547) ||
+					!HasQuest(32536) &amp;&amp; IsQuestCompleted(32536) ||
+					!HasQuest(32537) &amp;&amp; IsQuestCompleted(32537) ||
+					!HasQuest(32732) &amp;&amp; IsQuestCompleted(32732) ||
+					!HasQuest(32546) &amp;&amp; IsQuestCompleted(32546))" >
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
 	
 <!-- Ihgaluk Crag (Kicker Area 2) -->
 	<If Condition="HasQuest(32732)" >
