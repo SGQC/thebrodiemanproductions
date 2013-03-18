@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Horde) r111</Name>
+	<Name>Za'Tual (Horde) r114</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -81,6 +81,18 @@
 <!-- Starting Quests -->
 
 <CustomBehavior File="Message" Text="Compiling Za'Tual Quests..." LogColor="CornflowerBlue"  />
+
+	<If Condition="(!HasQuest(32227) &amp;&amp; IsQuestCompleted(32227) ||
+					!HasQuest(32252) &amp;&amp; IsQuestCompleted(32252) ||
+					!HasQuest(32275) &amp;&amp; IsQuestCompleted(32275) ||
+					!HasQuest(32200) &amp;&amp; IsQuestCompleted(32200) ||
+					!HasQuest(32217) &amp;&amp; IsQuestCompleted(32217) ||
+					!HasQuest(32215) &amp;&amp; IsQuestCompleted(32215) ||
+					!HasQuest(32729) &amp;&amp; IsQuestCompleted(32729) ||
+					!HasQuest(32216) &amp;&amp; IsQuestCompleted(32216))" >
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
 	
 <!-- Za'Tual (Kicker) -->
 	<If Condition="HasQuest(32729)" >
