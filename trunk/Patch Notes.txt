@@ -2,6 +2,10 @@ Patch Notes
 
 3/17/13
 
+r113
+Isle of Giants
+-- Updates and new profiles
+
 r112
 Isle of Thunder
 -- Added more Thunder Bosses support (Should cover all Phase 1 and 2)
