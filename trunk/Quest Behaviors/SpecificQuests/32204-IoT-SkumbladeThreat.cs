@@ -113,32 +113,31 @@ namespace SkumbladeThreat
             }
         }
 
-        public Composite PullMob
-        {
-            get
-            {
-                return
-                    new Decorator(ret => !IsObjectiveComplete(1, (uint)QuestId), new Action(c =>
-                    {
-			if (Skumblade[0].Location.Distance(Me.Location) < 30)
-			{
-				TreeRoot.StatusText = "Pulling Skumblade";
-				Skumblade[0].Target();
-				Skumblade[0].Face();
-				Thread.Sleep(1000);
-				SpellManager.Cast(SpellId);
-				Thread.Sleep(1000);
-			}
-			TreeRoot.StatusText = "Finished Pulling!";
-			_isBehaviorDone = true;
-			return RunStatus.Success;
-					}));
-            }
-        }
-		
         protected override Composite CreateBehavior()
         {
-            return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(DoneYet, PullMob, new ActionAlwaysSucceed())));
+            return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(
+			DoneYet,
+
+			new DecoratorContinue(ret => !IsObjectiveComplete(1, (uint)QuestId),
+				new Sequence(  
+					new DecoratorContinue(ret => Skumblade[0].Location.Distance(Me.Location) > 30,
+						new Sequence(
+							new Action(ret => Navigator.MoveTo(Skumblade[0].Location)),
+							new Action(r => Skumblade[0].Face())
+						)
+					),
+					new DecoratorContinue(ret => Skumblade[0].Location.Distance(Me.Location) <= 30,
+						new Sequence(
+							new Action(r => WoWMovement.MoveStop()),
+							new Action(r => Skumblade[0].Target()),
+							new Action(r => Skumblade[0].Face()),
+							new Action(r => SpellManager.Cast(SpellId))
+						)
+					)
+				)
+			),
+			new ActionAlwaysSucceed()
+			)));
         }
     }
 }
