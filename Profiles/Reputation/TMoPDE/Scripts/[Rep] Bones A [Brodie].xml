@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Alliance) r114</Name>
+	<Name>Court of Bones (Alliance) r115</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -94,7 +94,7 @@
 <!-- The Bloodletter -->
 	<If Condition="HasQuest(32530) &amp;&amp; !IsQuestCompleted(32530)" >
 		<CustomBehavior File="Message" Text="Starting The Bloodletter" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32530" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32530" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
 		<RunTo X="6819.12" Y="6208.25" Z="29.89" />
 		<Objective QuestName="The Bloodletter" QuestId="32530" Type="KillMob" MobId="69250" KillCount="1" />
 	</If>
@@ -102,7 +102,7 @@
 <!-- The Conquest of Stone -->
 	<If Condition="HasQuest(32531) &amp;&amp; !IsQuestCompleted(32531)" >
 		<CustomBehavior File="Message" Text="Starting The Conquest of Stone" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32531" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32531" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
 		<RunTo X="6389.11" Y="6192.63" Z="45.94" />
 		<CustomBehavior File="CollectThings" QuestId="32531" CollectUntil="QuestComplete" MobId="69903" HuntingGroundRadius="100" >
 			<Hotspot X="6389.11" Y="6192.63" Z="45.94" />
@@ -112,7 +112,7 @@
 <!-- Into The Crypts -->
 	<If Condition="HasQuest(32528) &amp;&amp; !IsQuestCompleted(32528)" >
 		<CustomBehavior File="Message" Text="Starting Into The Crypts" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32528" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32528" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
 		<RunTo X="6581.38" Y="6131.84" Z="6.14" />
 		<While Condition="!IsQuestCompleted(32528)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93803)" />
@@ -123,7 +123,7 @@
 <!-- The Call of Thunder -->
 	<If Condition="HasQuest(32529) &amp;&amp; !IsQuestCompleted(32529)" >
 		<CustomBehavior File="Message" Text="Starting The Call of Thunder" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32529" LootMobs="True" KillBetweenHotspots="False" PullDistance="20" />
+		<CustomBehavior File="UserSettings" QuestId="32529" LootMobs="True" KillBetweenHotspots="True" PullDistance="20" />
 		<RunTo X="6609.79" Y="6290.33" Z="3.63" />
 		<While Condition="!IsQuestCompleted(32529)" >
 			<CustomBehavior File="InteractWith" QuestId="32529" MobId="69264" WaitForNpcs="False" CollectionDistance="300" />
@@ -133,7 +133,7 @@
 <!-- Ashes of the Enemy -->
 	<If Condition="HasQuest(32525) &amp;&amp; !IsQuestCompleted(32525)" >
 		<CustomBehavior File="Message" Text="Starting Ashes of the Enemy" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32525" LootMobs="True" KillBetweenHotspots="False" PullDistance="5" /> 
+		<CustomBehavior File="UserSettings" QuestId="32525" LootMobs="True" KillBetweenHotspots="True" PullDistance="5" /> 
 		<RunTo X="6512.10" Y="6070.66" Z="39.41" />
 		<While Condition="!IsQuestCompleted(32525)" >
 			<CustomBehavior File="UseItemOn" QuestId="32525" MobId="69331" ItemId="93751" CollectionDistance="1000" />
@@ -143,7 +143,7 @@
 <!-- Stone Cold -->
 	<If Condition="HasQuest(32533) &amp;&amp; !IsQuestCompleted(32533)" >
 		<CustomBehavior File="Message" Text="Starting Stone Cold" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32533" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" /> 
+		<CustomBehavior File="UserSettings" QuestId="32533" LootMobs="True" KillBetweenHotspots="True" PullDistance="10" /> 
 		<While Condition="!IsQuestCompleted(32533)" >
 			<If Condition="!IsQuestCompleted(32533)" >
 				<RunTo X="6567.13" Y="6108.35" Z="36.27" />
@@ -167,7 +167,7 @@
 <!-- Soul Surrender -->
  	<If Condition="HasQuest(32526) &amp;&amp; !IsQuestCompleted(32526)">
 		<CustomBehavior File="Message" Text="Starting Soul Surrender" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32526" LootMobs="True" KillBetweenHotspots="False" PullDistance="5" />
+		<CustomBehavior File="UserSettings" QuestId="32526" LootMobs="True" KillBetweenHotspots="True" PullDistance="5" />
 		<CustomBehavior File="CollectThings" QuestId="32526" CollectUntil="QuestComplete" ObjectId="217768" HuntingGroundRadius="50" PostInteractDelay="100" NonCompeteDistance="3" >
 			<Hotspot X="6467.76" Y="6241.741" Z="36.27182" />
 			<Hotspot X="6467.807" Y="6162.531" Z="36.27105" />
@@ -180,14 +180,14 @@
 <!-- Rise No More! -->
 	<If Condition="HasQuest(32532) &amp;&amp; !IsQuestCompleted(32532)" >
 		<CustomBehavior File="Message" Text="Starting Rise No More!" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32532" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32532" LootMobs="True" KillBetweenHotspots="True" PullDistance="10" />
 		<Objective QuestName="Rise No More!" QuestId="32532" Type="KillMob" MobId="69237" KillCount="15" />
 	</If>
 	
 <!-- Grave Circumstances -->
 	<If Condition="HasQuest(32527) &amp;&amp; !IsQuestCompleted(32527)" >
 		<CustomBehavior File="Message" Text="Starting Grave Circumstances" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32527" LootMobs="True" KillBetweenHotspots="False" PullDistance="20" />
+		<CustomBehavior File="UserSettings" QuestId="32527" LootMobs="True" KillBetweenHotspots="True" PullDistance="20" />
 		<RunTo X="6614.61" Y="6195.92" Z="32.47" />
 		<Objective QuestName="Grave Circumstances" QuestId="32527" Type="KillMob" MobId="69235" MobId2="69264" KillCount="10" />
 	</If>
@@ -203,7 +203,7 @@
 					HasQuest(32532) &amp;&amp; IsQuestCompleted(32532) ||
 					HasQuest(32525) &amp;&amp; IsQuestCompleted(32525)" >
 		<CustomBehavior File="Message" Text="Heading back to Court of Bones to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>

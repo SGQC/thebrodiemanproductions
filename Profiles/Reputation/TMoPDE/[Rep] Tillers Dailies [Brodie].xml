@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r108</Name>
+	<Name>The Tillers r115</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -156,18 +156,6 @@
 			<Hotspots>
 				<Hotspot X="195.6467" Y="1516.928" Z="427.4137" />
 				<Hotspot X="331.3852" Y="1467.327" Z="442.3755" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- A Gift for Fung -->
-	<Quest Id="30475" Name="Gift for Fung"> 
-		<Objective Type="CollectItem" ItemId="80233" CollectCount="1">
-			<CollectFrom>
-				<Mob Name="Monstrous Plainshawk" Id="59641" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="-28.8835" Y="1048.007" Z="218.7255" />
 			</Hotspots>
 		</Objective>
 	</Quest>

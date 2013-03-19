@@ -2,6 +2,19 @@ Patch Notes
 
 3/18/13
 
+r115
+Quest Behaviors
+-- Added The Skumblade Threat (Horde and Alliance)
+Court of Bones
+-- Reworked when to kill between hotspots, and when to ignore mobs
+Ihgaluk Crag (Alliance
+-- The Skumblade Threat - Quest Behavior enabled
+Ihgaluk Crag (Horde)
+-- The Creeping Carpet of Ihgaluk - fixed incorrect questId
+-- The Skumblade Threat - Quest Behavior enabled
+The Tillers
+-- Removed unneeded Override code (Gift for Fung)
+
 r114
 Isle of Thunder
 -- Court of Bones cache verification code added

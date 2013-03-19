@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Horde) r114</Name>
+	<Name>Ihgaluk Crag (Horde) r115</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -121,7 +121,42 @@
 		<CustomBehavior File="Message" Text="Starting The Skumblade Threat" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32204" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
-		<Objective QuestName="The Skumblade Threat" QuestId="32204" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />
+		<While Condition="!IsQuestCompleted(32204)">
+			<If Condition="(Me.Class == WoWClass.Rogue)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="121733"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Warlock)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="172"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Warrior)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="355"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.DeathKnight)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="49576"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Druid)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="8921"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Hunter)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="3044"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Mage)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="2136"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Paladin)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="62124"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Priest)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="589"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Shaman)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="403"/>
+			</If>
+			<If Condition="(Me.Class == WoWClass.Monk)">
+				<CustomBehavior File="SpecificQuests\32204-IoT-SkumbladeThreat" SpellId="115546"/>
+			</If>
+		</While>
+	<!--<Objective QuestName="The Skumblade Threat" QuestId="32204" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />-->
 	</If>
 	
 <!-- Manipulating the Saurok -->
@@ -246,10 +281,10 @@
 	</If>
 	
 <!-- The Creeping Carpet of Ihgaluk -->
-	<If Condition="HasQuest(32547) &amp;&amp; !IsQuestCompleted(32547)" >
+	<If Condition="HasQuest(32489) &amp;&amp; !IsQuestCompleted(32489)" >
 		<CustomBehavior File="Message" Text="Starting The Creeping Carpet of Ihgaluk" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32547" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<While Condition="!IsQuestCompleted(32547)" >
+		<CustomBehavior File="UserSettings" QuestId="32489" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
+		<While Condition="!IsQuestCompleted(32489)" >
 			<RunTo X="5981.361" Y="5512.725" Z="40.1333" />
 			<RunTo X="5977.61" Y="5579.485" Z="40.98503" />
 			<RunTo X="5949.524" Y="5639.886" Z="42.83137" />
