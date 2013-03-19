@@ -2,6 +2,10 @@ Patch Notes
 
 3/18/13
 
+r116
+Isle of Thunder
+-- Island wide vendor support
+
 r115
 Quest Behaviors
 -- Added The Skumblade Threat (Horde and Alliance)

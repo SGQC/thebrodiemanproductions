@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r112</Name>
+	<Name>Isle of Thunder (Alliance) r116</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -21,6 +21,7 @@
 	<TargetElites>True</TargetElites>
 
 	<Vendors>
+		<Vendor Name="Teng of the Flying Daggers" Entry="70535" Type="Repair" X="6865.31" Y="5515.42" Z="1.28" />
 	</Vendors>
   
 	<AvoidMobs>
