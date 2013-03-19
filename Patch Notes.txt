@@ -2,6 +2,12 @@ Patch Notes
 
 3/18/13
 
+r117
+Quest Behaviors
+-- Fixes to facing/movement to Ihgaluk Crag Sauroks
+Ihgaluk Crag
+-- Converted messy aura drop spam to CastSpellOn QB
+
 r116
 Isle of Thunder
 -- Island wide vendor support
