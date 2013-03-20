@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r99</Name>
+	<Name>Golden Lotus PreReqs r118</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -132,26 +132,43 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="MyCTM" X="3819.63" Y="539.2305" Z="639.007" />
 		<CustomBehavior File="InteractWith" Nav="CTM" MobId="64528" IgnoreCombat="True" />
-		<CustomBehavior File="WaitTimer" WaitTime="40000" />
-		<If Condition="HasQuest(31395) &amp;&amp; !IsObjectiveComplete(2,31395)" >
-			<Objective QuestName="A Celestial Experience" QuestId="31395" Type="KillMob" MobId="64656" KillCount="1" />
+		<If Condition="HasQuest(31395)" >
+			<CustomBehavior File="GetOutOfGroundEffectAndAuras" StartNpcId="64528" QuestId="31395"
+				EventX="3783.071" EventY="535.3829" EventZ="639.0076"
+				MoveOutOfGroundEffectAuraId1="126625"
+				MoveBehindMobCastingSpellId1="126631"
+				MoveAwayFromMobCastingSpellId1="126633"
+				MoveAwayFromMobWithAuraId1="23719"
+				MoveAwayFromMobWithAuraId2="126633">
+				<Safespots>
+					<!-- safe spots in the room are the gold circles that comprise the big circle -->
+					<Hotspot X="3825.954" Y="550.3646" Z="639.8345" />
+					<Hotspot X="3800.181" Y="567.9801" Z="639.8226" />
+					<Hotspot X="3770.128" Y="557.3201" Z="639.8259" />
+					<Hotspot X="3765.737" Y="516.8966" Z="639.8144" />
+					<Hotspot X="3791.67"  Y="499.2032" Z="639.825" />
+					<Hotspot X="3821.244" Y="509.5078" Z="639.8226" />
+				</Safespots>
+			</CustomBehavior>
 		</If>
-		<If Condition="HasQuest(31394) &amp;&amp; !IsObjectiveComplete(2,31394)" >
-			<Objective QuestName="A Celestial Experience" QuestId="31394" Type="KillMob" MobId="64656" KillCount="1" />
-		</If>
-		<CustomBehavior File="WaitTimer" WaitTime="15000" />
-		<If Condition="HasQuest(31395) &amp;&amp; !IsObjectiveComplete(3,31395)" >
-			<Objective QuestName="A Celestial Experience" QuestId="31395" Type="KillMob" MobId="64684" KillCount="1" />
-		</If>
-		<If Condition="HasQuest(31394) &amp;&amp; !IsObjectiveComplete(3,31394)" >
-			<Objective QuestName="A Celestial Experience" QuestId="31394" Type="KillMob" MobId="64684" KillCount="1" />
-		</If>
-		<CustomBehavior File="WaitTimer" WaitTime="13000" />
-		<If Condition="HasQuest(31395) &amp;&amp; !IsObjectiveComplete(4,31395)" >
-			<Objective QuestName="A Celestial Experience" QuestId="31395" Type="KillMob" MobId="64742" KillCount="1" />
-		</If>
-		<If Condition="HasQuest(31394) &amp;&amp; !IsObjectiveComplete(4,31394)" >
-			<Objective QuestName="A Celestial Experience" QuestId="31394" Type="KillMob" MobId="64744" KillCount="1" />
+		<If Condition="HasQuest(31394)" >
+			<CustomBehavior File="GetOutOfGroundEffectAndAuras" StartNpcId="64528" QuestId="31394"
+				EventX="3783.071" EventY="535.3829" EventZ="639.0076"
+				MoveOutOfGroundEffectAuraId1="126625"
+				MoveBehindMobCastingSpellId1="126631"
+				MoveAwayFromMobCastingSpellId1="126633"
+				MoveAwayFromMobWithAuraId1="23719"
+				MoveAwayFromMobWithAuraId2="126633">
+				<Safespots>
+					<!-- safe spots in the room are the gold circles that comprise the big circle -->
+					<Hotspot X="3825.954" Y="550.3646" Z="639.8345" />
+					<Hotspot X="3800.181" Y="567.9801" Z="639.8226" />
+					<Hotspot X="3770.128" Y="557.3201" Z="639.8259" />
+					<Hotspot X="3765.737" Y="516.8966" Z="639.8144" />
+					<Hotspot X="3791.67"  Y="499.2032" Z="639.825" />
+					<Hotspot X="3821.244" Y="509.5078" Z="639.8226" />
+				</Safespots>
+			</CustomBehavior>
 		</If>
 	</If>
 

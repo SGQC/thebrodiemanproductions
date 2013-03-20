@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r116</Name>
+	<Name>Isle of Thunder (Alliance) r118</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -98,7 +98,8 @@
 					!HasQuest(32526) &amp;&amp; !HasQuest(32528) &amp;&amp; !HasQuest(32529) &amp;&amp; !HasQuest(32531) &amp;&amp;
 					!HasQuest(32532) &amp;&amp; !HasQuest(32525) &amp;&amp; !HasQuest(32571) &amp;&amp; !HasQuest(32572) &amp;&amp;
 					!HasQuest(32573) &amp;&amp; !HasQuest(32574) &amp;&amp; !HasQuest(32575) &amp;&amp; !HasQuest(32580) &amp;&amp;
-					!HasQuest(32584) &amp;&amp; !HasQuest(32585))" >
+					!HasQuest(32584) &amp;&amp; !HasQuest(32585) &amp;&amp; !HasQuest(32550) &amp;&amp; !HasQuest(32552) &amp;&amp;
+					!HasQuest(32554) &amp;&amp; !HasQuest(32583))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
 	</If>
@@ -154,6 +155,9 @@
 		<If Condition="HasQuest(32571) || HasQuest(32572) || HasQuest(32573) || HasQuest(32574) || HasQuest(32575)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Diremoor A [Brodie]" />
 		</If>
+		<If Condition="HasQuest(32567) || HasQuest(32552) || HasQuest(32554) || HasQuest(32550)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Beast Pens A [Brodie]" />
+		</If>
 	<ElseIf Condition="!IsQuestCompleted(32644)" >
 		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||
 					HasQuest(32542) || HasQuest(32544) || HasQuest(32539) || HasQuest(32538)" >
@@ -182,11 +186,12 @@
 	
 	<!-- Do we have an ender? -->
 	<If Condition="HasQuest(32576) || HasQuest(32579) || HasQuest(32578) || HasQuest(32577) || 
-					HasQuest(32581) || HasQuest(32580) || HasQuest(32584) || HasQuest(32585)" >
+					HasQuest(32581) || HasQuest(32580) || HasQuest(32584) || HasQuest(32585) ||
+					HasQuest(32583)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
-<!-- All Done, hearth to the boat and leave the island -->
+<!-- All Done, hearth out and leave the island -->
 	<If Condition="!IsQuestCompleted(32644)" >
 		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 100)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />

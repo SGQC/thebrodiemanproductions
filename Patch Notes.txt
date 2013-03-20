@@ -1,5 +1,37 @@
 Patch Notes
 
+3/19/13
+
+r118
+Cloud Serpent
+-- Feeding Time - Fixed item use of Saltback Meat Scrap to universal client support (not to feed yet)
+Court of Bones
+-- Call of Thunder - Changed from InteractWith to CollectThings
+The Beast Pens (Alliance)
+-- Added Loa-Saur
+-- Added Saur Loser
+-- Added Dino Might
+Ihgaluk Crag
+-- Disabled all mounting post kicker (NO COMPLAINTS)
+-- Alliance side only - Removed call to boss fights profile (not needed)
+-- Alliance side only - Added ending item support (missing)
+Thunder Bosses
+-- Added Zandalari on the Rise
+Shado Pan
+-- Added Isle of Thunder profile support
+The Anglers
+-- Jagged Abalone - Reworked to CTM, please report stucks
+-- Like Bombing Fish In A Barrel - Reworked to kill instead of use items
+Pandaria Dailies v2 (v2.2.0)
+-- Removed all avoidance code for Golden Lotus Prereqs (now supported by QB)
+-- Removed "Don't move if i have triple puncture" code. It screamed "imma bot"
+-- Code Cleanup, size reduction
+Golden Lotus PreReqs
+-- Updated Celestial Experience with new QB support
+Isle of Giants (Direhorns)
+-- Hotspots reduced
+-- Forced avoidmob on Adult Direhorns
+
 3/18/13
 
 r117

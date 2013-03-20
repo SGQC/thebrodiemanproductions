@@ -31,26 +31,26 @@ using System.IO;
 
 namespace AzeniusHelper2
 {
-    public class AzeniusHelper : HBPlugin
-    {
-        #region Plugin overrides
+	public class AzeniusHelper : HBPlugin
+	{
+		#region Plugin overrides
 
-        public override string Name { get { return "Pandaria Dailies v2"; } }
-        public override string Author { get { return "Buddy Community"; } }
-        public override Version Version { get { return new Version(2, 1, 3); } }
-        public override bool WantButton { get { return true; } }
-        public override string ButtonText { get { return "Credits"; } }
+		public override string Name { get { return "Pandaria Dailies v2"; } }
+		public override string Author { get { return "Buddy Community"; } }
+		public override Version Version { get { return new Version(2, 2, 0); } }
+		public override bool WantButton { get { return true; } }
+		public override string ButtonText { get { return "Credits"; } }
 
-        public override void OnButtonPress()
-        {
-            MessageBox.Show("This Plugin [" + Name + "] is originally made by Megser. \n(Modified by Vego, TheBrodieMan and BarryDurex)", 
-                Name, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+		public override void OnButtonPress()
+		{
+			MessageBox.Show("This Plugin [" + Name + "] is originally made by Megser. \n(Modified by Vego, TheBrodieMan and BarryDurex)", 
+				Name, MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
 
-        public static void dlog(string message, params object[] args)
-        { Logging.WriteDiagnostic(System.Windows.Media.Colors.Firebrick, "[Pandaria Dailies]: " + message, args); }
-        public static void dlog(System.Windows.Media.Color color, string message, params object[] args)
-        { Logging.WriteDiagnostic(color, "[Pandaria Dailies]: " + message, args); }
+		public static void dlog(string message, params object[] args)
+		{ Logging.WriteDiagnostic(System.Windows.Media.Colors.Firebrick, "[Pandaria Dailies]: " + message, args); }
+		public static void dlog(System.Windows.Media.Color color, string message, params object[] args)
+		{ Logging.WriteDiagnostic(color, "[Pandaria Dailies]: " + message, args); }
 
         public override void Initialize()
         {
@@ -255,38 +255,6 @@ namespace AzeniusHelper2
             get
             {
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63240 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
-            }
-        }
-
-        public List<WoWUnit> SpiritofViolence
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 64656 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
-            }
-        }
-
-        public List<WoWUnit> SpiritofAnger
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 64684 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
-            }
-        }
-
-        public List<WoWUnit> SpiritofHatredA
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 64744 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
-            }
-        }
-
-        public List<WoWUnit> SpiritofHatredH
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 64742 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
             }
         }
 
@@ -645,7 +613,7 @@ namespace AzeniusHelper2
                     WoWMovement.MoveStop();
                 }
             }
-            #endregion
+			#endregion
 
             #region http://www.wowhead.com/quest=30233 - done
             if (/*IsOnQuest(30233)*/ true)
@@ -677,74 +645,6 @@ namespace AzeniusHelper2
                     Thread.Sleep(1000);
                     WoWMovement.MoveStop();
                 }
-            }
-            #endregion
-
-            #region A Celestial Experience - todo
-            #region http://www.wowhead.com/quest=31394 - Allianz
-            if (IsOnQuest(31394))
-            {
-                if (SpiritofViolence != null && SpiritofViolence[0].IsCasting && !Me.IsBehind(SpiritofViolence[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
-
-                if (SpiritofAnger != null && SpiritofAnger[0].IsCasting && !Me.IsBehind(SpiritofAnger[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
-
-                if (SpiritofHatredA != null && SpiritofHatredA[0].IsCasting && !Me.IsBehind(SpiritofHatredA[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
-            }
-            #endregion
-
-            #region http://www.wowhead.com/quest=31395 - Horde
-            if (IsOnQuest(31395))
-            {
-                if (SpiritofViolence != null && SpiritofViolence[0].IsCasting && !Me.IsBehind(SpiritofViolence[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
-
-                if (SpiritofAnger != null && SpiritofAnger[0].IsCasting && !Me.IsBehind(SpiritofAnger[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
-
-                if (SpiritofHatredH != null && SpiritofHatredH[0].IsCasting && !Me.IsBehind(SpiritofHatredH[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
-            }
-            #endregion
-
-            if (Me.HasAura("Sha Corruption"))
-            {
-                //Lua.DoString("StrafeLeftStart()"); // Strafe Left if we're in a pool
-                WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                Thread.Sleep(1000);
-                WoWMovement.MoveStop();
             }
             #endregion
             #endregion
@@ -887,12 +787,6 @@ namespace AzeniusHelper2
                 if (Me.Combat && PrimalDirehornF.Distance2D <= 15 && PrimalDirehornF.IsCasting && PrimalDirehornF.CastingSpellId == 138772)
                     BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornF, 90, 15);
             }
-			
-			if (!Me.Combat && Me.HasAura(138768))
-			{
-				WoWMovement.MoveStop();
-				Thread.Sleep(1000);
-			}
 			
 			#endregion
         }

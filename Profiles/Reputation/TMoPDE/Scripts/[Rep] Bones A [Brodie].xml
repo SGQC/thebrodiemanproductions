@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Alliance) r116</Name>
+	<Name>Court of Bones (Alliance) r118</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -126,9 +126,9 @@
 		<CustomBehavior File="Message" Text="Starting The Call of Thunder" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32529" LootMobs="True" KillBetweenHotspots="True" PullDistance="20" />
 		<RunTo X="6609.79" Y="6290.33" Z="3.63" />
-		<While Condition="!IsQuestCompleted(32529)" >
-			<CustomBehavior File="InteractWith" QuestId="32529" MobId="69264" WaitForNpcs="False" CollectionDistance="300" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="32529" CollectUntil="QuestComplete" MobState="Alive" MobId="69264" HuntingGroundRadius="50" NonCompeteDistance="5" >
+			<Hotspot X="6611.16" Y="6289.20" Z="3.95" />
+		</CustomBehavior>
 	</If>
 	
 <!-- Ashes of the Enemy -->
@@ -267,14 +267,6 @@
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
-	
-<!-- Allies in the Shadows -->
-	<If Condition="HasQuest(32706)" >
-		<CustomBehavior File="Message" Text="Starting Allies in the Shadows" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32706" LootMobs="True" PullDistance="1" />
-		<RunTo X="6874.38" Y="5523.52" Z="1.18" />
-		<TurnIn QuestName="Allies in the Shadows" QuestId="32706" TurnInName="Taran Zhu" TurnInId="70160" />
-	</If>
 	
 	<If Condition="HasItem(94566)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />

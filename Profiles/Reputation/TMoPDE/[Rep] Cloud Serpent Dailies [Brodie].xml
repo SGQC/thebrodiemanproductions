@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r100</Name>
+	<Name>Cloud Serpent Dailies r118</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -755,15 +755,17 @@
 		<CustomBehavior File="FlyTo" X="2473.398" Y="-3378.453" Z="4.369105" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30156)" >
-			<If Condition="(GetItemCount(79028) &lt; 5) &amp;&amp; (GetItemCount(79027) &lt; 3)" >
-				<CustomBehavior File="CollectThings" MobId="58219" CollectItemId="79028" CollectItemCount="5" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
-					<Hotspot X="2431.16" Y="-3380.34" Z="-3.52" />
-					<Hotspot X="2466.667" Y="-3304.208" Z="3.218886" />
-					<Hotspot X="2433.864" Y="-3206.561" Z="2.5114" />
-				</CustomBehavior>
-			</If>
-			<While Condition="(GetItemCount(79028) &gt; 4)" >
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat Scrap" />
+			<While Condition="GetItemCount(79027) &lt; 3" >
+				<If Condition="GetItemCount(79028) &lt; 5" >
+					<CustomBehavior File="CollectThings" MobId="58219" CollectItemId="79028" CollectItemCount="5" CollectUntil="RequiredCountReached" NonCompeteDistance="5" HuntingGroundRadius="30" >
+						<Hotspot X="2431.16" Y="-3380.34" Z="-3.52" />
+						<Hotspot X="2466.667" Y="-3304.208" Z="3.218886" />
+						<Hotspot X="2433.864" Y="-3206.561" Z="2.5114" />
+					</CustomBehavior>
+				</If>
+				<While Condition="GetItemCount(79028) &gt; 4" >
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(79028)" />
+				</While>
 			</While>
 			<While Condition="HasItem(79027) &amp;&amp; !IsQuestCompleted(30156)" >
 				<CustomBehavior File="RunMacro" Macro="/target Azure Cloud Serpent" />
@@ -775,15 +777,18 @@
 				<CustomBehavior File="RunMacro" Macro="/target Jade Cloud Serpent" />
 				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Jade Hatchling" />
+				<CustomBehavior File="RunMacro" Macro="/target Azure Hatchling" />
 				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Azure Hatchling" />
+				<CustomBehavior File="RunMacro" Macro="/target Jade Hatchling" />
 				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 				<CustomBehavior File="RunMacro" Macro="/target Golden Hatchling" />
 				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
+			<!--<CustomBehavior File="UseItemOn" QuestId="30156" ItemId="79027" NumOfTimes="1" WaitTime="1000" CollectionDistance="8" 
+					MobId="64968" MobId2="58384" MobId3="58348" MobId4="58324" MobId5="65724"
+					MobId6="58581" MobId7="58599" MobId8="63552" MobId9="58552" MobId10="58497" MobId11="58526" MobId12="58428" MobId13="65732" MobId14="58441" /> -->
 			</While>
 		</While>
 	</If>
