@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r99</Name>
+	<Name>The Anglers Dailies r118</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -325,14 +325,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30586" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="-1353.003" Y="-342.6745" Z="-3.762463" />
 		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="HasQuest(30586) &amp;&amp; !IsQuestCompleted(30586)" >
-			<CustomBehavior File="MyCTM" X="-1347.27" Y="-332.99" Z="0.1" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-			<CustomBehavior File="InteractWith" Nav="CTM" ObjectType="GameObject" QuestId="30586" MobId="211118" CollectionDistance="10000" IgnoreMobsInBlackspots="True" />
-		</While>
-		<If Condition="IsQuestCompleted(30586)" >
-			<CustomBehavior File="MyCTM" X="-1347.27" Y="-332.99" Z="0.1" />
-		</If>
+		<CustomBehavior File="CollectThings" QuestId="30586" CollectUntil="QuestComplete" ObjectId="211118" HuntingGroundRadius="120" NonCompeteDistance="5" PostInteractDealy="1000" />
+		<CustomBehavior File="AscendInWater" />
 	</If>
 
 <!-- Like Bombing Fish In A Barrel -->
@@ -341,10 +335,11 @@
 		<CustomBehavior File="UserSettings" QuestId="30678" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-1582.22" Y="135.23" Z="1.71" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30678) &amp;&amp; !IsQuestCompleted(30678)" >
+		<Objective QuestName="Like Bombing Fish In A Barrel" QuestId="30678" Type="CollectItem" ItemId="80600" CollectCount="3" />
+	<!--<While Condition="!IsQuestCompleted(30678)" >
 			<CustomBehavior File="MyCTM" X="-1582.22" Y="135.23" Z="1.71" />
 			<CustomBehavior File="UseItemOn" Nav="CTM" ItemId="80599" MobState="Alive" MobId="60278" Range="15" NumOfTimes="1" WaitTime="2000" />
-		</While>
+		</While>-->
 	</If>
 
 <!-- Armored Carp -->

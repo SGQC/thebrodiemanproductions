@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r99</Name>
+	<Name>Shado Pan Dailies r118</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1265,7 +1265,13 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<CustomBehavior File="LoadProfile" ProfileName="[Rep] August Celestials Dailies [Brodie]" />
+<If Condition="Me.IsAlliance" >
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder A [Brodie]" />
+</If>
+
+<If Condition="Me.IsHorde" >
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder H [Brodie]" />
+</If>
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Shado-Pan Dailies" />
 
