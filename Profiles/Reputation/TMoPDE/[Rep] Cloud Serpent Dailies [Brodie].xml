@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r118</Name>
+	<Name>Cloud Serpent Dailies r119</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -965,7 +965,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30148" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="2189.36" Y="-3036.21" Z="18.85" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="GetItemCount(72985) &lt;= 7 &amp;&amp; !IsQuestCompleted(30148)" >
+		<While Condition="GetItemCount(72985) &lt; 8 &amp;&amp; !IsQuestCompleted(30148)" >
 			<If Condition="!HasItem(72988)" >
 				<CustomBehavior File="CollectThings" MobId="63532" CollectItemId="72988" CollectUntil="RequiredCountReached" CollectItemCount="1" HuntingGroundRadius="200" >
 					<Hotspot X="2131.598" Y="-3040.212" Z="7.447778" />

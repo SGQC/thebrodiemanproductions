@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r118</Name>
+	<Name>Isle of Thunder (Alliance) r119</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -99,9 +99,11 @@
 					!HasQuest(32532) &amp;&amp; !HasQuest(32525) &amp;&amp; !HasQuest(32571) &amp;&amp; !HasQuest(32572) &amp;&amp;
 					!HasQuest(32573) &amp;&amp; !HasQuest(32574) &amp;&amp; !HasQuest(32575) &amp;&amp; !HasQuest(32580) &amp;&amp;
 					!HasQuest(32584) &amp;&amp; !HasQuest(32585) &amp;&amp; !HasQuest(32550) &amp;&amp; !HasQuest(32552) &amp;&amp;
-					!HasQuest(32554) &amp;&amp; !HasQuest(32583))" >
+					!HasQuest(32554) &amp;&amp; !HasQuest(32583) &amp;&amp; !HasQuest(32582) &amp;&amp; !HasQuest(32568) &amp;&amp;
+					!HasQuest(32555) &amp;&amp; !HasQuest(32558) &amp;&amp; !HasQuest(32560))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 
 <!-- Lady Jaina Proudmoore -->
@@ -152,11 +154,16 @@
 					HasQuest(32532) || HasQuest(32525)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Bones A [Brodie]" />
 		</If>
-		<If Condition="HasQuest(32571) || HasQuest(32572) || HasQuest(32573) || HasQuest(32574) || HasQuest(32575)" >
+		<If Condition="HasQuest(32571) || HasQuest(32572) || HasQuest(32573) || HasQuest(32574) ||
+					HasQuest(32575)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Diremoor A [Brodie]" />
 		</If>
-		<If Condition="HasQuest(32567) || HasQuest(32552) || HasQuest(32554) || HasQuest(32550)" >
+		<If Condition="HasQuest(32567) || HasQuest(32552) || HasQuest(32554) || HasQuest(32550) ||
+					HasQuest(32551) || HasQuest(32553)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Beast Pens A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32568) || HasQuest(32555) || HasQuest(32558) || HasQuest(32560)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] C Terrace A [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32644)" >
 		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||
@@ -187,7 +194,7 @@
 	<!-- Do we have an ender? -->
 	<If Condition="HasQuest(32576) || HasQuest(32579) || HasQuest(32578) || HasQuest(32577) || 
 					HasQuest(32581) || HasQuest(32580) || HasQuest(32584) || HasQuest(32585) ||
-					HasQuest(32583)" >
+					HasQuest(32583) || HasQuest(32582)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
@@ -214,6 +221,7 @@
 		<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6134.63, 5008.49, 36.78)) &lt; 100)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<RunTo X="6122.84" Y="4980.87" Z="36.89" />
 			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>

@@ -107,8 +107,16 @@
 		<TurnIn QuestName="The Shuddering Moor" QuestId="32228" TurnInName="Girana the Blooded" TurnInId="67673" />
 	</If>
 	
+	<If Condition="HasQuest(32230) &amp;&amp; IsQuestCompleted(32230)" >
+		<TurnIn QuestName="The Zandalari Colossus" QuestId="32230" TurnInName="Girana the Blooded" TurnInId="67673" />
+	</If>
+	
 	<If Condition="HasQuest(32285) &amp;&amp; IsQuestCompleted(32285)" >
 		<TurnIn QuestName="The Sleepless Legion" QuestId="32285" TurnInName="High Arcanist Savor" TurnInId="67662" />
+	</If>
+	
+	<If Condition="HasQuest(32287) &amp;&amp; IsQuestCompleted(32287)" >
+		<TurnIn QuestName="Enemies Beneath the Tower" QuestId="32287" TurnInName="High Arcanist Savor" TurnInId="67662" />
 	</If>
 	
 <!-- Double Check for Ender Quest -->

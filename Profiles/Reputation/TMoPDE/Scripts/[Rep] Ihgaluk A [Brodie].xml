@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Alliance) r118</Name>
+	<Name>Ihgaluk Crag (Alliance) r119</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -155,40 +155,39 @@
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<While Condition="!IsQuestCompleted(32535)">
 			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="121733"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="121733"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="172"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="172"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="355"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="355"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.DeathKnight)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="49576"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="49576"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="8921"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="8921"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="3044"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="3044"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="2136"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="2136"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="62124"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="62124"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="589"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="589"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="403"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="403"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="SpecificQuests\32535-IoT-SkumbladeThreat" SpellId="115546"/>
+				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="115546"/>
 			</If>
 		</While>
-	<!--<Objective QuestName="The Skumblade Threat" QuestId="32535" Type="KillMob" MobId="69227" MobId2="69210" KillCount="10" />-->
 	</If>
 	
 <!-- Manipulating the Saurok -->
