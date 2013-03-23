@@ -1,5 +1,43 @@
 Patch Notes
 
+3/23/13
+
+r119
+Quest Behaviors
+-- Removed The Skumblade Threat
+-- Removed PerformTradeSkillOn, HB QBs now reflects updates
+Cloud Serpent
+-- Minor numerical changes, no real update
+Dominance Offensive
+-- Bug Off - Converted CombatUseItemOn to version 2.0
+-- Power Metal - Item sources and hotspot updates
+-- Heavy code cleanup
+Ihgaluk Crag
+-- Skumblade Threat - Converted from QB to CastSpellOn
+The Beast Pens (Alliance)
+-- Added all quests turn in support
+-- Added Direhorn vs Devilsaur
+The Beast Pens (Horde)
+-- Added Loa-Saur
+-- Added Direhorn or Devilsaur
+-- Added Dino Might
+-- Added Saur Loser
+Isle of Thunder (Alliance)
+-- Added Conqueror's Terrace support
+Isle of Thunder (Horde)
+-- Added Beast Pens support
+-- Added missing quests to Diremoor check
+-- Added missing quest (Zandalari on the Rise) to Thunder Boss check
+Thunder Boss
+-- Added Remaining bosses (A & H)
+-- Corrected some Encroaching Force turn in locations
+Conqueror's Terrace (Alliance)
+-- Added Keep It Secret
+-- Added All In the family
+-- Added Centuries in Sentries
+-- Added The More You Know
+-- Added Out of Enemy Hands
+
 3/19/13
 
 r118

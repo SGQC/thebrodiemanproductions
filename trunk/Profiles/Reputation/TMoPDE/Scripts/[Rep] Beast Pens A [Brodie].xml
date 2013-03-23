@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Alliance) r118</Name>
+	<Name>The Beast Pens (Alliance) r119</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -38,9 +38,10 @@
 
 <CustomBehavior File="Message" Text="Compiling The Beast Pens Quests..." LogColor="CornflowerBlue"  />
 
-	<If Condition="(!HasQuest(32567) &amp;&amp; IsQuestCompleted(32567) ||
-					!HasQuest(32550) &amp;&amp; IsQuestCompleted(32550) ||
+	<If Condition="(!HasQuest(32550) &amp;&amp; IsQuestCompleted(32550) ||
 					!HasQuest(32554) &amp;&amp; IsQuestCompleted(32554) ||
+					!HasQuest(32551) &amp;&amp; IsQuestCompleted(32551) ||
+					!HasQuest(32553) &amp;&amp; IsQuestCompleted(32553) ||
 					!HasQuest(32552) &amp;&amp; IsQuestCompleted(32552))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
@@ -68,6 +69,16 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
+<!-- Direhorn vs Devilsaur -->
+	<If Condition="HasQuest(32553) &amp;&amp; !IsQuestCompleted(32553)" >
+		<CustomBehavior File="Message" Text="Starting Direhorn vs Devilsaur" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32553" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
+		<RunTo X="6976.67" Y="5420.00" Z="28.04" />
+		<CustomBehavior File="CollectThings" QuestId="32553" CollectUntil="QuestComplete" MobState="Alive" MobId="69286" HuntingGroundRadius="75" NonCompeteDistance="1" >
+			<Hotspot X="6976.67" Y="5420.00" Z="28.04" />
+		</CustomBehavior>
+	</If>
+	
 <!-- Loa-Saur -->
 	<If Condition="HasQuest(32552) &amp;&amp; !IsQuestCompleted(32552)" >
 		<CustomBehavior File="Message" Text="Starting Loa-Saur" LogColor="Green" />
@@ -90,7 +101,7 @@
 			</CustomBehavior>
 			<RunTo X="6958.09" Y="5559.07" Z="30.73" />
 			<While Condition="HasItem(93668) &amp;&amp; !IsQuestCompleted(32554)" >
-				<CustomBehavior File="UseItemOn" QuestId="32554" MobId="58071" MobId2="69271" ItemId="93668" Range="10" CollectionDistance="1000" />
+				<CustomBehavior File="UseItemOn" QuestId="32554" MobId="58071" MobId2="69271" ItemId="93668" Range="10" CollectionDistance="1000" WaitTime="10000" />
 			</While>
 		</While>
 	</If>
@@ -99,12 +110,14 @@
 	<If Condition="HasQuest(32550) &amp;&amp; !IsQuestCompleted(32550)" >
 		<CustomBehavior File="Message" Text="Starting Saur Loser" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32550" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
-		<Objective QuestName="Loa-Saur" QuestId="32550" Type="KillMob" MobId="69154" KillCount="10" />
+		<Objective QuestName="Loa-Saur" QuestId="32550" Type="KillMob" MobId="69154" MobId2="69286" MobId3="69144" MobId4="70328" MobId5="69155" MobId6="70401" KillCount="10" />
 	</If>
 	
 <!-- Beast Pens Turn-ins -->
 	<If Condition="HasQuest(32552) &amp;&amp; IsQuestCompleted(32552) ||
 					HasQuest(32554) &amp;&amp; IsQuestCompleted(32554) ||
+					HasQuest(32551) &amp;&amp; IsQuestCompleted(32551) ||
+					HasQuest(32553) &amp;&amp; IsQuestCompleted(32553) ||
 					HasQuest(32550) &amp;&amp; IsQuestCompleted(32550)" >
 		<CustomBehavior File="Message" Text="Heading back to Beast Pens to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
@@ -116,12 +129,20 @@
 		<TurnIn QuestName="Loa Saur" QuestId="32552" TurnInName="Miura Brightweaver" TurnInId="67999" />
 	</If>
 	
+	<If Condition="HasQuest(32553) &amp;&amp; IsQuestCompleted(32553)" >
+		<TurnIn QuestName="Direhorn vs Devilsaur" QuestId="32553" TurnInName="Miura Brightweaver" TurnInId="67999" />
+	</If>
+	
 	<If Condition="HasQuest(32550) &amp;&amp; IsQuestCompleted(32550)" >
 		<TurnIn QuestName="Saur Loser" QuestId="32550" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 	</If>
 	
 	<If Condition="HasQuest(32554) &amp;&amp; IsQuestCompleted(32554)" >
-		<TurnIn QuestName="Saur Loser" QuestId="32554" TurnInName="Scout Captain Daelin" TurnInId="67998" />
+		<TurnIn QuestName="Dino Might" QuestId="32554" TurnInName="Scout Captain Daelin" TurnInId="67998" />
+	</If>
+	
+	<If Condition="HasQuest(32551) &amp;&amp; IsQuestCompleted(32551)" >
+		<TurnIn QuestName="Compy Stomp" QuestId="32551" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 	</If>
 
 <!-- Double check for ender quests -->

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r116</Name>
+	<Name>Isle of Thunder (Horde) r119</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -97,9 +97,11 @@
 					!HasQuest(32730) &amp;&amp; !HasQuest(32255) &amp;&amp; !HasQuest(32254) &amp;&amp; !HasQuest(32605) &amp;&amp;
 					!HasQuest(32204) &amp;&amp; !HasQuest(32299) &amp;&amp; !HasQuest(32491) &amp;&amp; !HasQuest(32274) &amp;&amp;
 					!HasQuest(32489) &amp;&amp; !HasQuest(32517) &amp;&amp; !HasQuest(32521) &amp;&amp; !HasQuest(32563) &amp;&amp;
-					!HasQuest(32565))" >
+					!HasQuest(32565) &amp;&amp; !HasQuest(32294) &amp;&amp; !HasQuest(32523) &amp;&amp; !HasQuest(32207) &amp;&amp;
+					!HasQuest(32298) &amp;&amp; !HasQuest(32297) &amp;&amp; !HasQuest(32282) &amp;&amp; !HasQuest(32283))" >
 		<CustomBehavior File="InteractWith" MobId="70567" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(48)" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 	
 <!-- Girana the Blooded -->
@@ -149,8 +151,12 @@
 					HasQuest(32489)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Ihgaluk H [Brodie]" />
 		</If>
-		<If Condition="HasQuest(32228) || HasQuest(32506) || HasQuest(32285) || HasQuest(32287)" >
+		<If Condition="HasQuest(32228) || HasQuest(32506) || HasQuest(32285) || HasQuest(32287) || HasQuest(32230)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Diremoor H [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32283) || HasQuest(32298) || HasQuest(32523) || HasQuest(32207) ||
+					HasQuest(32297) || HasQuest(32282)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Beast Pens H [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32212)" >
 		<If Condition="HasQuest(32728) || HasQuest(32225) || HasQuest(32201) || HasQuest(32220) || HasQuest(32224) ||
@@ -179,7 +185,8 @@
 	
 <!-- Do we have an ender? -->
 	<If Condition="HasQuest(32561) || HasQuest(32520) || HasQuest(32293) || HasQuest(32562) ||
-					HasQuest(32522) || HasQuest(32521) || HasQuest(32563) || HasQuest(32565)" >
+					HasQuest(32522) || HasQuest(32521) || HasQuest(32563) || HasQuest(32565) ||
+					HasQuest(32564) || HasQuest(32294)" >
 		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
 	</If>
 
