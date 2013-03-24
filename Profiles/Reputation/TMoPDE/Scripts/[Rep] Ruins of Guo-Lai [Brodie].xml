@@ -350,7 +350,7 @@
 		<CustomBehavior File="ForcedMount" MountType="Flying" />
 		<While Condition="!IsQuestCompleted(30300)" >
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-			<CustomBehavior File="KeyToSuccess" />
+			<CustomBehavior File="SpecificQuests\30300-VOEB-KeyToSuccess" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="213289" CollectionDistance="30" WaitForNpcs="False" />
 		</While>

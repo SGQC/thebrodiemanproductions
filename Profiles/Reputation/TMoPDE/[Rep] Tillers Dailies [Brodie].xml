@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r115</Name>
+	<Name>The Tillers r120</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1242,6 +1242,59 @@
 	<If Condition="(HasQuest(30332) &amp;&amp; IsQuestCompleted(30332))" >
 		<TurnIn QuestName="Fatty Goatsteak" QuestId="30332" TurnInName="Kol Ironpaw" TurnInId="58712" />
 	</If>
+	
+<!-- Lovely Apple -->
+	<While Condition="HasItem(79267)" >
+		<If Condition="!IsQuestCompleted(31350)" >
+			<If Condition="!HasItem(79264)" >
+				<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Misc\RunLua" Lua="GetQuestReward(1)" />
+			<ElseIf Condition="HasItem(79264)" >
+				<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(2)" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Misc\RunLua" Lua="GetQuestReward(1)" />
+			</ElseIf>
+			</If>
+		</If>
+		<ElseIf Condition="" >
+			<!-- Turn In for Old Hillpaw -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Ella -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Fung -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Fish -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Gina -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Haohan -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Chee Chee -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Sho -->
+		</ElseIf>
+		<ElseIf Condition="" >
+			<!-- Turn In for Tina -->
+		</ElseIf>
+		<Else>
+			<!-- Delete Item -->
+		</Else>
+		</If>
+	</While>
 
 	<If Condition="((HasQuest(30337) &amp;&amp; IsQuestCompleted(30337)) ||
 			(HasQuest(30333) &amp;&amp; IsQuestCompleted(30333)) ||

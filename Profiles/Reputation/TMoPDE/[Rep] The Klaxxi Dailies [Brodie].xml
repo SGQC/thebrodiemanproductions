@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r99</Name>
+	<Name>The Klaxxi r120</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -321,6 +321,11 @@
 <QuestOrder IgnoreCheckpoints="True" >
 
 <CustomBehavior File="Message" Text="Compiling Klaxxi Quests..." LogColor="Green"  />
+
+	<If Condition="!IsAchievementCompleted(6540,2)" >
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="Unable to start Klaxxi Dailies: You must progress further in the storyline for Dread Wastes. Recommend downloading and using Kick's Dread Wastes profile. Press Continue to move on to next area." />
+		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />
+	</If>
 
 	<If Condition="(!HasQuest(31216) &amp;&amp; IsQuestCompleted(31216) ||
 			!HasQuest(31272) &amp;&amp; IsQuestCompleted(31272) ||
