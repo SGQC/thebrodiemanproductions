@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r119</Name>
+	<Name>Cloud Serpent Dailies r122</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -768,27 +768,13 @@
 				</While>
 			</While>
 			<While Condition="HasItem(79027) &amp;&amp; !IsQuestCompleted(30156)" >
-				<CustomBehavior File="RunMacro" Macro="/target Azure Cloud Serpent" />
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Golden Cloud Serpent" />
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Jade Cloud Serpent" />
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Azure Hatchling" />
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Jade Hatchling" />
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="RunMacro" Macro="/target Golden Hatchling" />
-				<CustomBehavior File="RunMacro" Macro="/use Saltback Meat" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-			<!--<CustomBehavior File="UseItemOn" QuestId="30156" ItemId="79027" NumOfTimes="1" WaitTime="1000" CollectionDistance="8" 
+				<CustomBehavior File="UseItemOn" QuestId="30156" ItemId="79027" NumOfTimes="1" WaitTime="1000" CollectionDistance="8" 
 					MobId="64968" MobId2="58384" MobId3="58348" MobId4="58324" MobId5="65724"
-					MobId6="58581" MobId7="58599" MobId8="63552" MobId9="58552" MobId10="58497" MobId11="58526" MobId12="58428" MobId13="65732" MobId14="58441" /> -->
+					MobId6="58581" MobId7="58599" MobId8="63552" MobId9="58552" MobId10="58497" MobId11="58526" MobId12="58428" MobId13="65732" MobId14="58441"
+					MobId15="58385" MobId16="64967" MobId17="58349" MobId18="58325" MobId19="65723"
+					MobId20="58386" MobId21="64966" MobId22="58350" MobId23="58326" MobId24="65679" 
+					MobId25="58575" MobId26="58597" MobId27="63553" MobId28="58554" MobId29="58499" MobId30="58528" MobId31="58429" MobId32="65733" MobId33="58443"
+					MobId34="58582" MobId35="58598" MobId36="59101" MobId37="58553" MobId38="58498" MobId39="58527" MobId40="58430" MobId41="65731" MobId42="58442" />
 			</While>
 		</While>
 	</If>
@@ -965,9 +951,9 @@
 		<CustomBehavior File="UserSettings" QuestId="30148" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="2189.36" Y="-3036.21" Z="18.85" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="GetItemCount(72985) &lt; 8 &amp;&amp; !IsQuestCompleted(30148)" >
+		<While Condition="!IsQuestCompleted(30148)" >
 			<If Condition="!HasItem(72988)" >
-				<CustomBehavior File="CollectThings" MobId="63532" CollectItemId="72988" CollectUntil="RequiredCountReached" CollectItemCount="1" HuntingGroundRadius="200" >
+				<CustomBehavior File="CollectThings" MobId="63532" CollectItemId="72988" CollectUntil="RequiredCountReached" CollectItemCount="1" HuntingGroundRadius="200" NonCompeteDistance="5" >
 					<Hotspot X="2131.598" Y="-3040.212" Z="7.447778" />
 					<Hotspot X="2197.254" Y="-3042.888" Z="20.02104" />
 					<Hotspot X="2260.887" Y="-3053.897" Z="19.10549" />
@@ -980,7 +966,7 @@
 			</While>
 			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 			<While Condition="!IsQuestCompleted(30148) &amp;&amp; HasItem(72985)" >
-				<CustomBehavior File="UseItemOn" QuestId="30148" MobId="58416" ItemId="72985" NumOfTimes="1" CollectionDistance="1000" WaitTime="10000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+				<CustomBehavior File="UseItemOn" QuestId="30148" MobId="58416" ItemId="72985" IsMissingAuraId="11196" NumOfTimes="1" CollectionDistance="1000" WaitTime="10000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
 			</While>
 		</While>
 	</If>

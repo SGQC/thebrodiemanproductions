@@ -2,6 +2,12 @@ Patch Notes
 
 3/24/13
 
+r122
+Cloud Serpent
+-- Just a Flesh Wound - Fixed fatal error in "do i do this" predicate
+-- Just a Flesh Wound - Should no longer chase bandaged serpents
+-- Feeding Time - No longer targets serpents (locale issues), instead UseItemOn will give food
+
 r121
 Golden Lotus
 -- Striking First - Should attack a bit more efficiently
