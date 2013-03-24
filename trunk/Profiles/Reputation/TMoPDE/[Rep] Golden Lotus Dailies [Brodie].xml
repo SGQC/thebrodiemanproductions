@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r108</Name>
+	<Name>The Golden Lotus r121</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -395,14 +395,12 @@
 	</If>
 
 <!-- Striking First -->
-	<If Condition="((HasQuest(31760)) &amp;&amp; (!IsQuestCompleted(31760)))" >
+	<If Condition="(HasQuest(31760) &amp;&amp; !IsQuestCompleted(31760))" >
 		<CustomBehavior File="Message" Text="Starting Striking First" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31760" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1673.236" Y="1364.457" Z="453.5921" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="(HasQuest(31760) &amp;&amp; !IsQuestCompleted(31760))" >
-			<CustomBehavior File="InteractWith" MobId="65978" CollectionDistance="500" WaitForNpcs="False" MobState="Alive" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="31760" CollectUntil="QuestComplete" MobId="65978" MobState="Alive" HuntingGroundRadius="100" NonCompeteDistance="1" />
 	</If>
 
 <!-- Free Spirits -->

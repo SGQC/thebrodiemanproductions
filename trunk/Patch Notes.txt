@@ -1,6 +1,26 @@
 Patch Notes
 
-3/23/13
+3/24/13
+
+r121
+Golden Lotus
+-- Striking First - Should attack a bit more efficiently
+Ihgaluk Crag
+-- Removed Kicker from cache check
+-- Added Residents of Ihgaluk Overrides
+Court of Bones
+-- Into the Crypts - Item use location updated
+Beast Pens
+-- Added Compy Stomp
+Conqueror's Terrace (Alliance)
+-- Added Even Giants Fall
+-- Added missing object types to The More You Know
+Conqueror's Terrace (Horde)
+-- Added all quests
+Isle of Thunder (Horde)
+-- Added Conqueror's Terrace support
+Thunder Bosses
+-- Alliance turn ins code cleanup
 
 r120
 Quest Behaviors
@@ -11,6 +31,8 @@ Tillers
 -- Preliminary addition to friends support
 The Klaxxi
 -- Will now skip profile if you are not eligible for dailies.
+
+3/23/13
 
 r119
 Quest Behaviors

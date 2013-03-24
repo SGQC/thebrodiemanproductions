@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Horde) r119</Name>
+	<Name>Ihgaluk Crag (Horde) r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -32,6 +32,28 @@
 
 <!-- Quest Overrides -->
 
+<!-- Residents of Ihgaluk -->
+	<Quest Id="32274" Name="Residents of Ihgaluk"> 
+		<Objective Type="KillMob" MobId="69338" KillCount="1">
+			<Hotspots>
+				<Hotspot X="6195.27" Y="5735.79" Z="8.39" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="69226" KillCount="1">
+			<Hotspots>
+				<Hotspot X="5652.013" Y="5597.862" Z="5.126498" />
+				<Hotspot X="5622.337" Y="5537.509" Z="2.464661" />
+				<Hotspot X="5639.372" Y="5478.289" Z="3.234082" />
+				<Hotspot X="5686.018" Y="5426.031" Z="4.090561" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="69229" KillCount="1">
+			<Hotspots>
+				<Hotspot X="6059.674" Y="5594.538" Z="80.23376" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
 <!-- End of Quest Overrides --> 
 
 <QuestOrder UseMount="True" KillBetweenHotspots="False" >
@@ -47,7 +69,6 @@
 					!HasQuest(32299) &amp;&amp; IsQuestCompleted(32299) ||
 					!HasQuest(32491) &amp;&amp; IsQuestCompleted(32491) ||
 					!HasQuest(32274) &amp;&amp; IsQuestCompleted(32274) ||
-					!HasQuest(32730) &amp;&amp; IsQuestCompleted(32730) ||
 					!HasQuest(32489) &amp;&amp; IsQuestCompleted(32489))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Alliance) r118</Name>
+	<Name>Court of Bones (Alliance) r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -114,7 +114,7 @@
 	<If Condition="HasQuest(32528) &amp;&amp; !IsQuestCompleted(32528)" >
 		<CustomBehavior File="Message" Text="Starting Into The Crypts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32528" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
-		<RunTo X="6581.38" Y="6131.84" Z="6.14" />
+		<RunTo X="6588.30" Y="6132.71" Z="6.14" />
 		<While Condition="!IsQuestCompleted(32528)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93803)" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />

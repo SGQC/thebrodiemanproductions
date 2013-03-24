@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Alliance) r121</Name>
+	<Name>Conqueror's Terrace (Horde) r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -32,8 +32,8 @@
 
 <!-- Quest Overrides -->
 
-<!-- Out of Enemy Hands -->
-	<Quest Id="32557" Name="Out of Enemy Hands">
+<!-- Very Disarming -->
+	<Quest Id="32233" Name="Very Disarming">
 		<Objective Type="CollectItem" ItemId="93736" CollectCount="7">
 			<CollectFrom>
 				<GameObject Name="Loa-Infused Blade" Id="218055" />
@@ -47,8 +47,8 @@
 		</Objective>
 	</Quest>
 
-<!-- The More You Know -->
-	<Quest Id="32556" Name="The More You Know">
+<!-- Knowledge Is Power -->
+	<Quest Id="32234" Name="Knowledge Is Power">
 		<Objective Type="CollectItem" ItemId="93735" CollectCount="6">
 			<CollectFrom>
 				<GameObject Name="Ritual Artifact" Id="218049" />
@@ -62,8 +62,8 @@
 		</Objective>
 	</Quest>
 
-<!-- All In the Family -->
-	<Quest Id="32558" Name="All In the Family">
+<!-- Power Play -->
+	<Quest Id="32494" Name="Power Play">
 		<Objective Type="CollectItem" ItemId="93733" CollectCount="1">
 			<CollectFrom>
 				<Mob Name="Spiritbinder Tu'chek" Id="69301" />
@@ -88,12 +88,12 @@
 
 <CustomBehavior File="Message" Text="Compiling Conqueror's Terrace Quests..." LogColor="CornflowerBlue"  />
 
-	<If Condition="((!HasQuest(32555) &amp;&amp; IsQuestCompleted(32555)) ||
-					(!HasQuest(32558) &amp;&amp; IsQuestCompleted(32558)) ||
+	<If Condition="((!HasQuest(32493) &amp;&amp; IsQuestCompleted(32493)) ||
+					(!HasQuest(32494) &amp;&amp; IsQuestCompleted(32494)) ||
 					(!HasQuest(32560) &amp;&amp; IsQuestCompleted(32560)) ||
 					(!HasQuest(32557) &amp;&amp; IsQuestCompleted(32557)) ||
 					(!HasQuest(32559) &amp;&amp; IsQuestCompleted(32559)) ||
-					(!HasQuest(32556) &amp;&amp; IsQuestCompleted(32556)))" >
+					(!HasQuest(32234) &amp;&amp; IsQuestCompleted(32234)))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 	</If>
@@ -103,67 +103,60 @@
 		<CustomBehavior File="Message" Text="Starting Conqueror's Terrrace Kicker" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32568" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<RunTo X="6711.15" Y="5095.72" Z="31.21" />
-		<TurnIn QuestName="No Time to Rest" QuestId="32568" TurnInName="Scout Captain Daelin" TurnInId="67998" />
+		<TurnIn QuestName="The Beating of Troll Drums" QuestId="32524" TurnInName="Scout Captain Elisa" TurnInId="67985" />
 	</If>
 	
-<!-- Scout Captain Daelin -->
-	<While Condition="HasQuestAvailable(67998)" >
-		<CustomBehavior File="InteractWith" MobId="67998" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+<!-- Scout Captain Elisa -->
+	<While Condition="HasQuestAvailable(67985)" >
+		<CustomBehavior File="InteractWith" MobId="67985" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Miura Brightweaver -->
-	<While Condition="HasQuestAvailable(67999)" >
-		<CustomBehavior File="InteractWith" MobId="67999" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+<!-- Magister Edien Sunhollow -->
+	<While Condition="HasQuestAvailable(67986)" >
+		<CustomBehavior File="InteractWith" MobId="67986" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Even Giants Fall -->
-	<If Condition="HasQuest(32559) &amp;&amp; !IsQuestCompleted(32559)" >
-		<CustomBehavior File="Message" Text="Starting Even Giants Fall" LogColor="Green" />
+<!-- What's Inside Counts -->
+	<If Condition="HasQuest(32232) &amp;&amp; !IsQuestCompleted(32232)" >
+		<CustomBehavior File="Message" Text="Starting What's Inside Counts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<CustomBehavior File="CollectThings" QuestId="32559" CollectUntil="QuestComplete" MobId="69567" MobId2="69568" MobId3="69569" MobId4="69570" MobId5="69336" HuntingGroundRadius="100" NonCompeteDistance="1" >
+		<CustomBehavior File="CollectThings" QuestId="32232" CollectUntil="QuestComplete" MobId="69567" MobId2="69568" MobId3="69569" MobId4="69570" MobId5="69336" HuntingGroundRadius="100" NonCompeteDistance="1" >
 			<Hotspot X="6655.33" Y="5163.00" Z="31.78" />
 		</CustomBehavior>
 	</If>
 	
-<!-- All In the Family -->
-	<If Condition="HasQuest(32558) &amp;&amp; !IsQuestCompleted(32558)" >
-		<CustomBehavior File="Message" Text="Starting All In the Family" LogColor="Green" />
+<!-- Power Play -->
+	<If Condition="HasQuest(32494) &amp;&amp; !IsQuestCompleted(32494)" >
+		<CustomBehavior File="Message" Text="Starting Power Play" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<Objective QuestName="All In the Family" QuestId="32558" Type="CollectItem" ItemId="93733" CollectCount="1" />
-		<Objective QuestName="All In the Family" QuestId="32558" Type="CollectItem" ItemId="93734" CollectCount="1" />
+		<Objective QuestName="Power Play" QuestId="32494" Type="CollectItem" ItemId="93733" CollectCount="1" />
+		<Objective QuestName="Power Play" QuestId="32494" Type="CollectItem" ItemId="93734" CollectCount="1" />
 	</If>
 	
-<!-- The More You Know -->
-	<If Condition="HasQuest(32556) &amp;&amp; !IsQuestCompleted(32556)" >
-		<CustomBehavior File="Message" Text="Starting The More You Know" LogColor="Green" />
+<!-- Knowledge Is Power -->
+	<If Condition="HasQuest(32234) &amp;&amp; !IsQuestCompleted(32234)" >
+		<CustomBehavior File="Message" Text="Starting Knowledge Is Power" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<CustomBehavior File="CollectThings" QuestId="32556" CollectUntil="QuestComplete" ObjectId="218049" ObjectId2="218050" ObjectId3="218052" ObjectId4="218053" HuntingGroundRadius="100" NonCompeteDistance="5" >
-			<Hotspot X="6587.73" Y="5200.61" Z="32.91" />
-			<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
-			<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
-			<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
-			<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
-			<Hotspot X="6875.18" Y="5304.74" Z="34.58" />
-		</CustomBehavior>
+		<Objective QuestName="Knowledge Is Power" QuestId="32234" Type="CollectItem" ItemId="93735" CollectCount="6" />
 	</If>
 	
-<!-- Out of Enemy Hands -->
-	<If Condition="HasQuest(32557) &amp;&amp; !IsQuestCompleted(32557)" >
-		<CustomBehavior File="Message" Text="Starting Out of Enemy Hands" LogColor="Green" />
+<!-- Very Disarming -->
+	<If Condition="HasQuest(32233) &amp;&amp; !IsQuestCompleted(32233)" >
+		<CustomBehavior File="Message" Text="Starting Very Disarming" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<Objective QuestName="Out of Enemy Hands" QuestId="32557" Type="CollectItem" ItemId="93736" CollectCount="7" />
+		<Objective QuestName="Very Disarming" QuestId="32233" Type="CollectItem" ItemId="93736" CollectCount="7" />
 	</If>
 	
-<!-- Centuries in Sentries -->
-	<If Condition="HasQuest(32555) &amp;&amp; !IsQuestCompleted(32555)" >
-		<CustomBehavior File="Message" Text="Starting Centuries in Sentries" LogColor="Green" />
+<!-- They All Fall Down -->
+	<If Condition="HasQuest(32493) &amp;&amp; !IsQuestCompleted(32493)" >
+		<CustomBehavior File="Message" Text="Starting They All Fall Down" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
-		<While Condition="!IsQuestCompleted(32555)" >
-			<CustomBehavior File="UseItemOn" QuestId="32555" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" >
+		<While Condition="!IsQuestCompleted(32493)" >
+			<CustomBehavior File="UseItemOn" QuestId="32493" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" >
 				<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
 				<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
 				<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
@@ -172,62 +165,62 @@
 		</While>
 	</If>
 	
-<!-- Keep It Secret -->
-	<If Condition="HasQuest(32560) &amp;&amp; !IsQuestCompleted(32560)" >
-		<CustomBehavior File="Message" Text="Starting Keep It Secret" LogColor="Green" />
+<!-- This Just Won't Do -->
+	<If Condition="HasQuest(32206) &amp;&amp; !IsQuestCompleted(32206)" >
+		<CustomBehavior File="Message" Text="Starting This Just Won't Do" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
-		<Objective QuestName="Keep It Secret" QuestId="32560" Type="KillMob" MobId="69294" MobId2="62927" MobId3="62926" KillCOunt="8" />
+		<Objective QuestName="This Just Won't Do" QuestId="32206" Type="KillMob" MobId="69294" MobId2="62927" MobId3="62926" KillCOunt="8" />
 	</If>
 	
 <!-- Conqueror's Terrace Turn-ins -->
-	<If Condition="HasQuest(32558) &amp;&amp; IsQuestCompleted(32558) ||
-					HasQuest(32555) &amp;&amp; IsQuestCompleted(32555) ||
-					HasQuest(32560) &amp;&amp; IsQuestCompleted(32560) ||
-					HasQuest(32557) &amp;&amp; IsQuestCompleted(32557) ||
-					HasQuest(32559) &amp;&amp; IsQuestCompleted(32559) ||
-					HasQuest(32556) &amp;&amp; IsQuestCompleted(32556)" >
+	<If Condition="HasQuest(32233) &amp;&amp; IsQuestCompleted(32233) ||
+					HasQuest(32493) &amp;&amp; IsQuestCompleted(32493) ||
+					HasQuest(32494) &amp;&amp; IsQuestCompleted(32494) ||
+					HasQuest(32234) &amp;&amp; IsQuestCompleted(32234) ||
+					HasQuest(32206) &amp;&amp; IsQuestCompleted(32206) ||
+					HasQuest(32232) &amp;&amp; IsQuestCompleted(32232)" >
 		<CustomBehavior File="Message" Text="Heading back to Conqueror's Terrace to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<RunTo X="6711.15" Y="5095.72" Z="31.21" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 	
-	<If Condition="HasQuest(32555) &amp;&amp; IsQuestCompleted(32555)" >
-		<TurnIn QuestName="Centuries in Sentries" QuestId="32555" TurnInName="Miura Brightweaver" TurnInId="67999" />
+	<If Condition="HasQuest(32493) &amp;&amp; IsQuestCompleted(32493)" >
+		<TurnIn QuestName="They All Fall Down" QuestId="32493" TurnInName="Magister Edien Sunhollow" TurnInId="67986" />
 	</If>
 	
-	<If Condition="HasQuest(32558) &amp;&amp; IsQuestCompleted(32558)" >
-		<TurnIn QuestName="All In the Family" QuestId="32558" TurnInName="Miura Brightweaver" TurnInId="67999" />
+	<If Condition="HasQuest(32494) &amp;&amp; IsQuestCompleted(32494)" >
+		<TurnIn QuestName="Power Play" QuestId="32494" TurnInName="Magister Edien Sunhollow" TurnInId="67986" />
 	</If>
 	
-	<If Condition="HasQuest(32556) &amp;&amp; IsQuestCompleted(32556)" >
-		<TurnIn QuestName="The More You Know" QuestId="32556" TurnInName="Miura Brightweaver" TurnInId="67999" />
+	<If Condition="HasQuest(32234) &amp;&amp; IsQuestCompleted(32234)" >
+		<TurnIn QuestName="Knowledge Is Power" QuestId="32234" TurnInName="Magister Edien Sunhollow" TurnInId="67986" />
 	</If>
 	
-	<If Condition="HasQuest(32560) &amp;&amp; IsQuestCompleted(32560)" >
-		<TurnIn QuestName="Keep It Secret" QuestId="32560" TurnInName="Scout Captain Daelin" TurnInId="67998" />
+	<If Condition="HasQuest(32206) &amp;&amp; IsQuestCompleted(32206)" >
+		<TurnIn QuestName="This Just Won't Do" QuestId="32206" TurnInName="Scout Captain Elsia" TurnInId="67985" />
 	</If>
 	
-	<If Condition="HasQuest(32557) &amp;&amp; IsQuestCompleted(32557)" >
-		<TurnIn QuestName="Out of Enemy Hands" QuestId="32557" TurnInName="Scout Captain Daelin" TurnInId="67998" />
+	<If Condition="HasQuest(32233) &amp;&amp; IsQuestCompleted(32233)" >
+		<TurnIn QuestName="Very Disarming" QuestId="32233" TurnInName="Scout Captain Elsia" TurnInId="67985" />
 	</If>
 	
-	<If Condition="HasQuest(32559) &amp;&amp; IsQuestCompleted(32559)" >
-		<TurnIn QuestName="Even Giants Fall" QuestId="32559" TurnInName="Scout Captain Daelin" TurnInId="67998" />
+	<If Condition="HasQuest(32232) &amp;&amp; IsQuestCompleted(32232)" >
+		<TurnIn QuestName="What's Inside Counts" QuestId="32232" TurnInName="Scout Captain Elsia" TurnInId="67985" />
 	</If>
 
 <!-- Double check for ender quests -->
 
-<!-- Scout Captain Daelin -->
-	<While Condition="HasQuestAvailable(67998)" >
-		<CustomBehavior File="InteractWith" MobId="67998" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+<!-- Scout Captain Elsia -->
+	<While Condition="HasQuestAvailable(67985)" >
+		<CustomBehavior File="InteractWith" MobId="67985" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Miura Brightweaver -->
-	<While Condition="HasQuestAvailable(67999)" >
-		<CustomBehavior File="InteractWith" MobId="67999" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+<!-- Magister Edien Sunhollow -->
+	<While Condition="HasQuestAvailable(67986)" >
+		<CustomBehavior File="InteractWith" MobId="67986" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

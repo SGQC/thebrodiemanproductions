@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Alliance) r119</Name>
+	<Name>The Beast Pens (Alliance) r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -68,6 +68,14 @@
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
+	
+<!-- Compy Stomp -->
+	<If Condition="HasQuest(32551) &amp;&amp; !IsQuestCompleted(32551)" >
+		<CustomBehavior File="Message" Text="Starting Compy Stomp" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32551" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
+		<Objective QuestName="Compy Stomp" QuestId="32551" Type="KillMob" MobId="69183" KillCount="5" />
+		<Objective QuestName="Compy Stomp" QuestId="32551" Type="KillMob" MobId="58071" KillCount="10" />
+	</If>
 	
 <!-- Direhorn vs Devilsaur -->
 	<If Condition="HasQuest(32553) &amp;&amp; !IsQuestCompleted(32553)" >

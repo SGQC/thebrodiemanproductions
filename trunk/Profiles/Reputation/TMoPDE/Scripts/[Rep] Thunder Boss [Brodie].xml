@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r119</Name>
+	<Name>Thunder Bosses r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -167,47 +167,17 @@
 					HasQuest(32584) &amp;&amp; IsQuestCompleted(32584) ||
 					HasQuest(32585) &amp;&amp; IsQuestCompleted(32585)" >
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<RunTo X="6849.81" Y="5510.09" Z="29.85" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<If Condition="HasQuest(32583) &amp;&amp; IsQuestCompleted(32583)" >
-			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 67998 &amp;&amp; u.Distance &lt;= 20))" >
-				<TurnIn QuestName="Zandalari on the Rise" QuestId="32583" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			<Else>
-				<RunTo X="6711.15" Y="5095.72" Z="31.21" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-				<TurnIn QuestName="Zandalari on the Rise" QuestId="32583" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			</Else>
-			</If>
+			<TurnIn QuestName="Zandalari on the Rise" QuestId="32583" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 		</If>
 		<If Condition="HasQuest(32582) &amp;&amp; IsQuestCompleted(32582)" >
-			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 67998 &amp;&amp; u.Distance &lt;= 20))" >
-				<TurnIn QuestName="Raining Bones" QuestId="32582" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			<Else>
-				<RunTo X="6711.15" Y="5095.72" Z="31.21" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-				<TurnIn QuestName="Raining Bones" QuestId="32582" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			</Else>
-			</If>
+			<TurnIn QuestName="Raining Bones" QuestId="32582" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 		</If>
 		<If Condition="HasQuest(32585) &amp;&amp; IsQuestCompleted(32585)">
-			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 67998 &amp;&amp; u.Distance &lt;= 20))" >
-				<TurnIn QuestName="Encroaching Force" QuestId="32585" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			<Else>
-				<RunTo X="6711.15" Y="5095.72" Z="31.21" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-				<TurnIn QuestName="Encroaching Force" QuestId="32585" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			</Else>
-			</If>
+			<TurnIn QuestName="Encroaching Force" QuestId="32585" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 		</If>
 		<If Condition="HasQuest(32584) &amp;&amp; IsQuestCompleted(32584)">
-			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 67998 &amp;&amp; u.Distance &lt;= 20))" >
-				<TurnIn QuestName="Encroaching Force" QuestId="32584" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			<Else>
-				<RunTo X="6711.15" Y="5095.72" Z="31.21" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-				<TurnIn QuestName="Encroaching Force" QuestId="32584" TurnInName="Scout Captain Daelin" TurnInId="67998" />
-			</Else>
-			</If>
+			<TurnIn QuestName="Encroaching Force" QuestId="32584" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 		</If>
 		<If Condition="IsQuestCompleted(32644)" >
 			<If Condition="HasItem(95567) &amp;&amp; !(Me.Location.Distance(new WoWPoint(6134.63, 5008.49, 36.78)) &lt; 100)" >

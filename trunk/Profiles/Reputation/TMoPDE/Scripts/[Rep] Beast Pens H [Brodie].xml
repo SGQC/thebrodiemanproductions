@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Horde) r119</Name>
+	<Name>The Beast Pens (Horde) r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -68,6 +68,14 @@
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
+	
+<!-- Compy Stomp -->
+	<If Condition="HasQuest(32282) &amp;&amp; !IsQuestCompleted(32282)" >
+		<CustomBehavior File="Message" Text="Starting Compy Stomp" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32282" LootMobs="True" KillBetweenHotspots="True" PullDistance="15" />
+		<Objective QuestName="Compy Stomp" QuestId="32282" Type="KillMob" MobId="69183" KillCount="5" />
+		<Objective QuestName="Compy Stomp" QuestId="32282" Type="KillMob" MobId="58071" KillCount="10" />
+	</If>
 	
 <!-- Direhorn or Devilsaur -->
 	<If Condition="HasQuest(32297) &amp;&amp; !IsQuestCompleted(32297)" >
