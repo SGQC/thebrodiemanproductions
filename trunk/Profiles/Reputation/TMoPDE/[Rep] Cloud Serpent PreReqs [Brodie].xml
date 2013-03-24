@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent PreReqs r99</Name>
+	<Name>Cloud Serpent PreReqs r125</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -168,7 +168,7 @@
 		<CustomBehavior File="WaitTimer" WaitTime="60000" />
 	</If>
 
-	<If Condition="HasQuest(30142) &amp;&amp; IsQuestCompleted(30412)" >
+	<If Condition="HasQuest(30142) &amp;&amp; IsQuestCompleted(30142)" >
 		<TurnIn QuestName="It's A..." QuestId="30142" TurnInName="Instructor Skythorn" TurnInId="58228" />
 	</If>
 

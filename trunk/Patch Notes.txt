@@ -2,6 +2,13 @@ Patch Notes
 
 3/24/13
 
+r125
+Cloud Serpent PreReqs
+-- Incorrect QuestId on ending quest
+Ruins of Guo-Lai
+-- Painting the Ruins Red - Should no longer fly to the ceiling
+-- Blood on the Rise - Should no longer fly to the ceiling
+
 r124
 Dominance Offensive
 -- Sentry Wards - Removal of CTM code, smoother but still lengthy flights

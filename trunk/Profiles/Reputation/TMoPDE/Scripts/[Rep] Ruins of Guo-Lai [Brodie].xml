@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r99</Name>
+	<Name>Ruins of Guo-Lai r125</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -412,7 +412,7 @@
  	<If Condition="HasQuest(30298) &amp;&amp; !IsQuestCompleted(30298)">
 		<CustomBehavior File="Message" Text="Starting Painting the Ruins Red" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30298" LootMobs="True" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="1345.516" Y="1676.909" Z="942.6889" />
+		<CustomBehavior File="FlyTo" X="1387.52" Y="1677.24" Z="341.47" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Painting the Ruins Red" QuestId="30298" Type="KillMob" MobId="63610" MobId2="63611" KillCount="8" />
 	</If>
@@ -421,7 +421,7 @@
  	<If Condition="HasQuest(30226) &amp;&amp; !IsQuestCompleted(30226)">
 		<CustomBehavior File="Message" Text="Starting Blood on the Rise" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30226" LootMobs="True" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="1345.516" Y="1676.909" Z="942.6889" />
+		<CustomBehavior File="FlyTo" X="1387.52" Y="1677.24" Z="341.47" />
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Blood on the Rise" QuestId="30226" Type="KillMob" MobId="65133" KillCount="8" />
 	</If>
