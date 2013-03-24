@@ -2,6 +2,10 @@ Patch Notes
 
 3/24/13
 
+r124
+Dominance Offensive
+-- Sentry Wards - Removal of CTM code, smoother but still lengthy flights
+
 r123
 Tillers
 -- Removal of gifting code until completed
