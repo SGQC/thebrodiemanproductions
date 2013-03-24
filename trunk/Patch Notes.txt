@@ -2,6 +2,16 @@ Patch Notes
 
 3/23/13
 
+r120
+Quest Behaviors
+-- Key To Success - Fixed repetitive targeting null mobs
+Ruins of Guo-Lai
+-- Update to reflect new QB name
+Tillers
+-- Preliminary addition to friends support
+The Klaxxi
+-- Will now skip profile if you are not eligible for dailies.
+
 r119
 Quest Behaviors
 -- Removed The Skumblade Threat

@@ -13,13 +13,11 @@ using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
-
-
-namespace Blastranaar
+namespace KeyToSuccess
 {
-    public class Blastranaar : CustomForcedBehavior
+    public class KeyToSuccess : CustomForcedBehavior
     {
-        public Blastranaar(Dictionary<string, string> args)
+        public KeyToSuccess(Dictionary<string, string> args)
             : base(args)
         {
             try
@@ -119,7 +117,6 @@ namespace Blastranaar
                         _isBehaviorDone = true;
                         return RunStatus.Success;
                     }));
-
             }
         }
 
@@ -129,165 +126,135 @@ namespace Blastranaar
             {
                 return
                     new Decorator(ret => !IsObjectiveComplete(2, (uint)QuestId), new PrioritySelector(
-
                     	new Decorator(ret => CaptiveA.Count > 0, new Action(c =>
 			{
-			  TreeRoot.StatusText = "Got a Captive, moving to them!";
-			  CaptiveA[0].Target();
-			  Flightor.MoveTo(CaptiveA[0].Location);
+				TreeRoot.StatusText = "Got a Captive, moving to them!";
+				CaptiveA[0].Target();
+				Flightor.MoveTo(CaptiveA[0].Location);
 
 				if(CaptiveA[0].Location.Distance(Me.Location) < 10)
 				{
-                        		TreeRoot.StatusText = "Finished!";
-                        		_isBehaviorDone = true;
-                        		return RunStatus.Success;
+					TreeRoot.StatusText = "Finished!";
+					_isBehaviorDone = true;
+					return RunStatus.Success;
 				}
 
-                          return RunStatus.Success;
-
-
+				return RunStatus.Success;
 			})),
-
                     	new Decorator(ret => CaptiveB.Count > 0, new Action(c =>
 			{
-			  TreeRoot.StatusText = "Got a Captive, moving to them!";
-			  CaptiveB[0].Target();
-			  Flightor.MoveTo(CaptiveB[0].Location);
+				TreeRoot.StatusText = "Got a Captive, moving to them!";
+				CaptiveB[0].Target();
+				Flightor.MoveTo(CaptiveB[0].Location);
 
 				if(CaptiveB[0].Location.Distance(Me.Location) < 10)
 				{
-                        		TreeRoot.StatusText = "Finished!";
-                        		_isBehaviorDone = true;
-                        		return RunStatus.Success;
+					TreeRoot.StatusText = "Finished!";
+					_isBehaviorDone = true;
+					return RunStatus.Success;
 				}
 
-                          return RunStatus.Success;
-
-
+				return RunStatus.Success;
 			})),
-
-                    	new Decorator(ret => CaptiveC.Count > 0, new Action(c =>
+						new Decorator(ret => CaptiveC.Count > 0, new Action(c =>
 			{
-			  TreeRoot.StatusText = "Got a Captive, moving to them!";
-			  CaptiveC[0].Target();
-			  Flightor.MoveTo(CaptiveC[0].Location);
+				TreeRoot.StatusText = "Got a Captive, moving to them!";
+				CaptiveC[0].Target();
+				Flightor.MoveTo(CaptiveC[0].Location);
 
 				if(CaptiveC[0].Location.Distance(Me.Location) < 10)
 				{
-                        		TreeRoot.StatusText = "Finished!";
-                        		_isBehaviorDone = true;
-                        		return RunStatus.Success;
+					TreeRoot.StatusText = "Finished!";
+					_isBehaviorDone = true;
+					return RunStatus.Success;
+				}
+				
+				return RunStatus.Success;
+			})),
+						new Decorator(ret => CaptiveA.Count == 0 && CaptiveB.Count == 0 && CaptiveC.Count == 0, new PrioritySelector(
+							new Decorator(ret => Location1.Distance(Me.Location) > 20  && Me.CurrentTarget == null, new Action(c =>
+				{
+				TreeRoot.StatusText = "Moving to 1st location";
+				Flightor.MoveTo(Location1);
+				if(CaptiveA.Count > 0)
+				{
+					CaptiveA[0].Target();
+			    }
+			    if(CaptiveB.Count > 0)
+				{
+					CaptiveB[0].Target();
+				}
+			    if(CaptiveC.Count > 0)
+				{
+					CaptiveC[0].Target();
+				}
+				return RunStatus.Success;
+
+			  }
+
+			  )),
+
+							new Decorator(ret => Location2.Distance(Me.Location) > 20 && Me.CurrentTarget == null, new Action(c =>
+				{
+				TreeRoot.StatusText = "Moving to 2nd location";
+				Flightor.MoveTo(Location2);
+			    if(CaptiveA.Count > 0)
+			    {
+					CaptiveA[0].Target();
+			    }
+			    if(CaptiveB.Count > 0)
+			    {
+					CaptiveB[0].Target();
+			    }
+			    if(CaptiveC.Count > 0)
+			    {
+					CaptiveC[0].Target();
+			    }
+				return RunStatus.Success;
+
+			  }
+
+			  )),
+
+							new Decorator(ret => Location3.Distance(Me.Location) > 20 && Me.CurrentTarget == null, new Action(c =>
+				{
+				TreeRoot.StatusText = "Moving to 3rd location";
+				Flightor.MoveTo(Location3);
+			    if(CaptiveA.Count > 0)
+			    {
+					CaptiveA[0].Target();
+			    }
+			    if(CaptiveB.Count > 0)
+			    {
+					CaptiveB[0].Target();
+			    }
+			    if(CaptiveC.Count > 0)
+			    {
+					CaptiveC[0].Target();
+			    }
+				return RunStatus.Success;
 				}
 
-                          return RunStatus.Success;
-
-
-			})),
-
-
-                    	new Decorator(ret => CaptiveA.Count == 0 && CaptiveB.Count == 0 && CaptiveC.Count == 0, new PrioritySelector(
-                    	  new Decorator(ret => Location1.Distance(Me.Location) > 20  && Me.CurrentTarget == null, new Action(c =>
-			  {
-			  TreeRoot.StatusText = "Moving to 1st location";
-			  Flightor.MoveTo(Location1);
-			  CaptiveA[0].Target();
-			    if(CaptiveA.Count > 0)
-			    {
-			  	CaptiveA[0].Target();
-			    }
-			  CaptiveB[0].Target();
-			    if(CaptiveB.Count > 0)
-			    {
-			  	CaptiveB[0].Target();
-			    }
-			  CaptiveC[0].Target();
-			    if(CaptiveC.Count > 0)
-			    {
-			  	CaptiveC[0].Target();
-			    }
-                          return RunStatus.Success;
-
-			  }
-
 			  )),
-
-                    	  new Decorator(ret => Location2.Distance(Me.Location) > 20 && Me.CurrentTarget == null, new Action(c =>
-			  {
-			  TreeRoot.StatusText = "Moving to 2nd location";
-			  Flightor.MoveTo(Location2);
-			  CaptiveA[0].Target();
+							new Decorator(ret => Location4.Distance(Me.Location) > 20 && Me.CurrentTarget == null, new Action(c =>
+				{
+				TreeRoot.StatusText = "Moving to 4th location";
+				Flightor.MoveTo(Location4);
 			    if(CaptiveA.Count > 0)
 			    {
-			  	CaptiveA[0].Target();
+					CaptiveA[0].Target();
 			    }
-			  CaptiveB[0].Target();
 			    if(CaptiveB.Count > 0)
 			    {
-			  	CaptiveB[0].Target();
+					CaptiveB[0].Target();
 			    }
-			  CaptiveC[0].Target();
 			    if(CaptiveC.Count > 0)
 			    {
-			  	CaptiveC[0].Target();
+					CaptiveC[0].Target();
 			    }
-                          return RunStatus.Success;
-
-			  }
-
-			  )),
-
-                    	  new Decorator(ret => Location3.Distance(Me.Location) > 20 && Me.CurrentTarget == null, new Action(c =>
-			  {
-			  TreeRoot.StatusText = "Moving to 3rd location";
-			  Flightor.MoveTo(Location3);
-			  CaptiveA[0].Target();
-			    if(CaptiveA.Count > 0)
-			    {
-			  	CaptiveA[0].Target();
-			    }
-			  CaptiveB[0].Target();
-			    if(CaptiveB.Count > 0)
-			    {
-			  	CaptiveB[0].Target();
-			    }
-			  CaptiveC[0].Target();
-			    if(CaptiveC.Count > 0)
-			    {
-			  	CaptiveC[0].Target();
-			    }
-                          return RunStatus.Success;
-
-			  }
-
-			  )),
-
-                    	  new Decorator(ret => Location4.Distance(Me.Location) > 20 && Me.CurrentTarget == null, new Action(c =>
-			  {
-			  TreeRoot.StatusText = "Moving to 4th location";
-			  Flightor.MoveTo(Location4);
-			  CaptiveA[0].Target();
-			    if(CaptiveA.Count > 0)
-			    {
-			  	CaptiveA[0].Target();
-			    }
-			  CaptiveB[0].Target();
-			    if(CaptiveB.Count > 0)
-			    {
-			  	CaptiveB[0].Target();
-			    }
-			  CaptiveC[0].Target();
-			    if(CaptiveC.Count > 0)
-			    {
-			  	CaptiveC[0].Target();
-			    }
-                          return RunStatus.Success;
-
-			  }
-
-			  ))))));
-
-
-
+				return RunStatus.Success;
+				}
+			))))));
             }
         }
 	
