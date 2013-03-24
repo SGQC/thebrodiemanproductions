@@ -2,6 +2,10 @@ Patch Notes
 
 3/24/13
 
+r123
+Tillers
+-- Removal of gifting code until completed
+
 r122
 Cloud Serpent
 -- Just a Flesh Wound - Fixed fatal error in "do i do this" predicate
