@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Dominance Offensive r119</Name>
+	<Name>Dominance Offensive r124</Name>
 	<MinLevel>90</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -471,16 +471,9 @@
 			<If Condition="!IsObjectiveComplete(3,32133)" >
 				<CustomBehavior File="FlyTo" X="-1079.62" Y="-1132.98" Z="13.62" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="MyCTM" X="-1108.09" Y="-1149.39" Z="12.58" />
-				<CustomBehavior File="MyCTM" X="-1122.59" Y="-1124.55" Z="13.60" />
-				<CustomBehavior File="MyCTM" X="-1142.70" Y="-1136.30" Z="21.73" />
-				<CustomBehavior File="MyCTM" X="-1128.64" Y="-1161.94" Z="21.72" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="32133" MobId="67743" CollectionDistance="15" X="-1131.242" Y="-1163.728" Z="21.72105" WaitTime="1000" />
-				<CustomBehavior File="MyCTM" X="-1128.64" Y="-1161.94" Z="21.72" />
-				<CustomBehavior File="MyCTM" X="-1142.70" Y="-1136.30" Z="21.73" />
-				<CustomBehavior File="MyCTM" X="-1122.59" Y="-1124.55" Z="13.60" />
-				<CustomBehavior File="MyCTM" X="-1108.09" Y="-1149.39" Z="12.58" />
-				<CustomBehavior File="MyCTM" X="-1079.62" Y="-1132.98" Z="13.62" />
+				<RunTo X="-1128.64" Y="-1161.94" Z="21.72" />
+				<CustomBehavior File="InteractWith" QuestId="32133" MobId="67743" CollectionDistance="15" X="-1131.242" Y="-1163.728" Z="21.72105" WaitTime="1000" />
+				<RunTo X="-1079.62" Y="-1132.98" Z="13.62" />
 			</If>
 		</While>
 	</If>
