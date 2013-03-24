@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r119</Name>
+	<Name>Isle of Thunder (Horde) r121</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -157,6 +157,10 @@
 		<If Condition="HasQuest(32283) || HasQuest(32298) || HasQuest(32523) || HasQuest(32207) ||
 					HasQuest(32297) || HasQuest(32282)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Beast Pens H [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32568) || HasQuest(32233) || HasQuest(32493) || HasQuest(32494) ||
+					HasQuest(32234) || HasQuest(32206) || HasQuest(32232)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] C Terrace H [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32212)" >
 		<If Condition="HasQuest(32728) || HasQuest(32225) || HasQuest(32201) || HasQuest(32220) || HasQuest(32224) ||
