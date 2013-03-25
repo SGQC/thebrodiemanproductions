@@ -1,5 +1,11 @@
 Patch Notes
 
+3/25/13
+
+r126
+Conqueror's Terrace (Horde)
+-- The Beating of Troll Drums - Fixed incorrect questIds, should complete now.
+
 3/24/13
 
 r125

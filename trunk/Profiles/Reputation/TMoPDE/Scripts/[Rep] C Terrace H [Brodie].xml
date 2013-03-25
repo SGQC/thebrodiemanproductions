@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Horde) r121</Name>
+	<Name>Conqueror's Terrace (Horde) r126</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -98,10 +98,10 @@
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 	</If>
 
-<!-- No Time to Rest (Kicker) -->
-	<If Condition="HasQuest(32568)" >
-		<CustomBehavior File="Message" Text="Starting Conqueror's Terrrace Kicker" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32568" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
+<!-- The Beating of Troll Drums (Kicker) -->
+	<If Condition="HasQuest(32524)" >
+		<CustomBehavior File="Message" Text="Starting Conqueror's Terrace Kicker" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32524" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<RunTo X="6711.15" Y="5095.72" Z="31.21" />
 		<TurnIn QuestName="The Beating of Troll Drums" QuestId="32524" TurnInName="Scout Captain Elisa" TurnInId="67985" />
 	</If>
