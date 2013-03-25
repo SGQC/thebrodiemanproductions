@@ -2,6 +2,10 @@ Patch Notes
 
 3/25/13
 
+r127
+The Anglers
+-- Who Knew Fish Liked Eggs - Added second dismount call in attempts to cancel shapeshift
+
 r126
 Conqueror's Terrace (Horde)
 -- The Beating of Troll Drums - Fixed incorrect questIds, should complete now.

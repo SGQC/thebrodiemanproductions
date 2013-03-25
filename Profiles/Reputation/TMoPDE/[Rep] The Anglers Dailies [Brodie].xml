@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r118</Name>
+	<Name>The Anglers Dailies r127</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -376,6 +376,7 @@
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(80303)" WaitTime="1000" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="MrFishIt" QuestId="30598" CollectItemId="80310" PoolId="211169" MoveToPool="True" />
 		</If>
 	</If>
