@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r119</Name>
+	<Name>Isle of Thunder (Alliance) r129</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -100,9 +100,15 @@
 					!HasQuest(32573) &amp;&amp; !HasQuest(32574) &amp;&amp; !HasQuest(32575) &amp;&amp; !HasQuest(32580) &amp;&amp;
 					!HasQuest(32584) &amp;&amp; !HasQuest(32585) &amp;&amp; !HasQuest(32550) &amp;&amp; !HasQuest(32552) &amp;&amp;
 					!HasQuest(32554) &amp;&amp; !HasQuest(32583) &amp;&amp; !HasQuest(32582) &amp;&amp; !HasQuest(32568) &amp;&amp;
-					!HasQuest(32555) &amp;&amp; !HasQuest(32558) &amp;&amp; !HasQuest(32560))" >
+					!HasQuest(32555) &amp;&amp; !HasQuest(32558) &amp;&amp; !HasQuest(32560) &amp;&amp; !HasQuest(32586) &amp;&amp;
+					!HasQuest(32587) &amp;&amp; !HasQuest(32588))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
+		<If Condition="IsQuestCompleted(32652)" >
+			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(62)" />
+		<Else>
+			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
+		</Else>
+		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 
@@ -164,6 +170,9 @@
 		</If>
 		<If Condition="HasQuest(32568) || HasQuest(32555) || HasQuest(32558) || HasQuest(32560)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] C Terrace A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32588) || HasQuest(32586) || HasQuest(32587)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Forge A [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32644)" >
 		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||

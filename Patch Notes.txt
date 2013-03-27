@@ -1,6 +1,26 @@
 Patch Notes
 
+3/26/13
+
+r129
+Golden Lotus
+-- Unleashed Spirits - Fixed incorrect QuestID in settings call.
+Shado Pan
+-- Corrected typo in "continue" code to move on if not revered with Golden Lotus
+Isle of Thunder (Alliance)
+-- Added Phase 4 support to "Assignment Map"
+-- Added Thunder Forge support
+Thunder Forge (Alliance)
+-- Added On Her Magic-ey Secret Service
+-- Added Forge Ahead!
+Court of Bones
+-- Added missing MobId for Ashes of the Enemy
+
 3/25/13
+
+r128
+The Tillers
+-- Code Cleanup
 
 r127
 The Anglers

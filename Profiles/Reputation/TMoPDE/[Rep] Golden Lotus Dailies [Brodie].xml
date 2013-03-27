@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r121</Name>
+	<Name>The Golden Lotus r129</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -497,9 +497,9 @@
 	</If>
 
 <!-- Unleashed Spirits -->
-	<If Condition="((HasQuest(31757)) &amp;&amp; (!IsQuestCompleted(31757)))" >
+	<If Condition="(HasQuest(31757) &amp;&amp; !IsQuestCompleted(31757))" >
 		<CustomBehavior File="Message" Text="Starting Unleashed Spirits" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="31757" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Unleashed Spirits" QuestId="31757" Type="KillMob" MobId="65935" KillCount="12" />
