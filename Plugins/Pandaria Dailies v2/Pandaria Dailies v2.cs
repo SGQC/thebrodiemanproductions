@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
 		public override string Name { get { return "Pandaria Dailies v2"; } }
 		public override string Author { get { return "Buddy Community"; } }
-		public override Version Version { get { return new Version(2, 2, 0); } }
+		public override Version Version { get { return new Version(2, 2, 1); } }
 		public override bool WantButton { get { return true; } }
 		public override string ButtonText { get { return "Credits"; } }
 
@@ -367,14 +367,6 @@ namespace AzeniusHelper2
             get
             {
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 61502 || u.Entry == 61508 || u.Entry == 61509 && u.Distance < 50 && !u.IsDead).OrderBy(u => u.Distance).ToList();
-            }
-        }
-		
-        public WoWObject ThunderTrove
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWObject>().Where(u => u.Entry == 218593 && u.Distance < 100).FirstOrDefault();
             }
         }
 
@@ -729,13 +721,6 @@ namespace AzeniusHelper2
 				if (Me.Combat && MDevilsaur.Distance2D <= 15 && MDevilsaur.IsCasting && MDevilsaur.CastingSpellId == 140397)
 					BarryDurex.QuestHelper.AvoidEnemyCast(MDevilsaur, 80, 15);
 			}
-			
-			#region Thunder King Troves
-				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D >= 5)
-					Navigator.MoveTo(ThunderTrove.Location);
-				if (!StyxWoW.Me.Combat && ThunderTrove != null && ThunderTrove.Distance2D <= 5)
-					ThunderTrove.Interact();
-			#endregion
 			
 			#region Subtle Encouragement
 			if (IsOnQuest(32606) && !QuestComplete(32606))
