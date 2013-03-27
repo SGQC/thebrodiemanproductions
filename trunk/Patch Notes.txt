@@ -2,6 +2,10 @@ Patch Notes
 
 3/27/13
 
+r130
+Pandaria Dailies v2
+-- removal of Trove of the Thunder King support (buggy, not working)
+
 r129
 Shado Pan
 -- Corrected typo in "continue" code to move on if not revered with Golden Lotus
