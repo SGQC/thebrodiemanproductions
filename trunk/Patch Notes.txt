@@ -2,6 +2,10 @@ Patch Notes
 
 3/27/13
 
+r131
+The Klaxxi
+-- Added quest determinate to "Klaxxi prereq" check. Testing, may remove check altogether
+
 r130
 Pandaria Dailies v2
 -- removal of Trove of the Thunder King support (buggy, not working)
