@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r123</Name>
+	<Name>The Tillers r128</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1244,7 +1244,7 @@
 	</If>
 	
 <!-- Lovely Apple -->
-<!--	<While Condition="HasItem(79267)" >
+<!--<While Condition="HasItem(79267)" >
 		<If Condition="!IsQuestCompleted(31350)" >
 			<If Condition="!HasItem(79264)" >
 				<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
@@ -1342,7 +1342,7 @@
 	<If Condition="HasQuest(31332) &amp;&amp; !IsQuestCompleted(31332)">
 		<CustomBehavior File="Message" Text="Starting Lesson 1: Sliced Peaches" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31332" LootMobs="True" PullDistance="5" />
-		<While Condition="HasQuest(31332) &amp;&amp; !IsQuestCompleted(31332)">
+		<While Condition="!IsQuestCompleted(31332)">
 			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="74660" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -1352,7 +1352,7 @@
 	<If Condition="HasQuest(31333) &amp;&amp; !IsQuestCompleted(31333)">
 		<CustomBehavior File="Message" Text="Starting Lesson 2: Instant Noodles" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31333" LootMobs="True" PullDistance="5" />
-		<While Condition="HasQuest(31333) &amp;&amp; !IsQuestCompleted(31333)">
+		<While Condition="!IsQuestCompleted(31333)">
 			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="74854" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -1372,7 +1372,7 @@
 	<If Condition="HasQuest(31335) &amp;&amp; !IsQuestCompleted(31335)">
 		<CustomBehavior File="Message" Text="Starting Lesson 4: Dried Needle Mushrooms" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31335" LootMobs="True" PullDistance="5" />
-		<While Condition="HasQuest(31335) &amp;&amp; !IsQuestCompleted(31335)">
+		<While Condition="!IsQuestCompleted(31335)">
 			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="85583" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -1382,7 +1382,7 @@
 	<If Condition="HasQuest(31336) &amp;&amp; !IsQuestCompleted(31336)">
 		<CustomBehavior File="Message" Text="Starting Lesson 5: Pounded Rice Cake" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31336" LootMobs="True" PullDistance="5" />
-		<While Condition="HasQuest(31336) &amp;&amp; !IsQuestCompleted(31336)">
+		<While Condition="!IsQuestCompleted(31336)">
 			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="74851" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />

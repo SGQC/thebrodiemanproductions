@@ -1,0 +1,144 @@
+<HBProfile>
+	<Name>Thunder Forge (Alliance) r129</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+		<Vendor Name="Teng of the Flying Daggers" Entry="70535" Type="Repair" X="6865.31" Y="5515.42" Z="1.28" />
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder KillBetweenHotspots="False" >
+
+<CustomBehavior File="Message" Text="Compiling Thunder Forge Quests..." LogColor="CornflowerBlue"  />
+
+	<If Condition="((!HasQuest(32588) &amp;&amp; IsQuestCompleted(32588)) ||
+					(!HasQuest(32586) &amp;&amp; IsQuestCompleted(32586)) ||
+					(!HasQuest(32587) &amp;&amp; IsQuestCompleted(32587)))" >
+		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
+		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
+	</If>
+
+<!-- Maximum Capacitor -->
+<!--<If Condition="HasQuest(32586) &amp;&amp; !IsQuestCompleted(32586)" >
+		<CustomBehavior File="Message" Text="Starting Maximum Capacitor" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32586" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
+	</If> -->
+	
+	<If Condition="HasQuest(32586) &amp;&amp; IsQuestCompleted(32586)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="32586" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</If>
+	
+<!-- On Her Magic-ey Secret Service -->
+	<If Condition="HasQuest(32588) &amp;&amp; !IsQuestCompleted(32588)" >
+		<CustomBehavior File="Message" Text="Starting On Her Magic-ey Secret Service" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32588" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
+		<If Condition="!IsObjectiveComplete(4,32588)" >
+			<Objective QuestName="On Her Magic-ey Secret Service" QuestId="32588" Type="KillMob" MobId="69326" KillCount="1" />
+		</If>
+		<While Condition="!IsQuestCompleted(32588)" >
+			<If Condition="!IsObjectiveComplete(3,32588)" >
+				<RunTo X="7389.191" Y="5532.316" Z="50.32116" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" />
+			</If>
+			<If Condition="!IsObjectiveComplete(2,32588)" >
+				<RunTo X="7358.583" Y="5575.728" Z="29.44196" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" />
+			</If>
+			<If Condition="!IsObjectiveComplete(1,32588)" >
+				<RunTo X="7303.608" Y="5605.65" Z="31.16815" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" />
+			</If>
+		</While>
+		<CustomBehavior File="CompleteLogQuest" QuestId="32588" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</If>
+	
+	<If Condition="HasQuest(32588) &amp;&amp; IsQuestCompleted(32588)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="32588" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</If>
+	
+<!-- Forge Ahead! -->
+	<If Condition="HasQuest(32587) &amp;&amp; !IsQuestCompleted(32587)" >
+		<CustomBehavior File="Message" Text="Starting Forge Ahead!" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32587" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
+		<Objective QuestName="Forge Ahead!" QuestId="32587" Type="KillMob" MobId="69461" KillCount="1" />
+		<Objective QuestName="Forge Ahead!" QuestId="32587" Type="CollectItem" ItemId="93731" CollectCount="1" />
+	</If>
+	
+<!-- Forge Ahead! -->
+	<If Condition="HasQuest(32724) &amp;&amp; !IsQuestCompleted(32724)" >
+		<CustomBehavior File="Message" Text="Starting Forge Ahead!" LogColor="Green" />
+		<CustomBehavior File="UserSettings" QuestId="32724" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
+		<Objective QuestName="Forge Ahead!" QuestId="32724" Type="KillMob" MobId="69461" KillCount="1" />
+		<Objective QuestName="Forge Ahead!" QuestId="32724" Type="CollectItem" ItemId="93731" CollectCount="1" />
+	</If>
+	
+<!-- Thunder Forge Turn-ins -->
+	<If Condition="HasQuest(32587) &amp;&amp; IsQuestCompleted(32587) ||
+					HasQuest(32724) &amp;&amp; IsQuestCompleted(32724)" >
+		<CustomBehavior File="Message" Text="Heading back to Thunder Forge to Turn-In" LogColor="Green" />
+		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
+		<RunTo X="6990.02" Y="5237.74" Z="84.25" />
+	</If>
+	
+	<If Condition="HasQuest(32587) &amp;&amp; IsQuestCompleted(32587)" >
+		<TurnIn QuestName="Forge Ahead!" QuestId="32587" TurnInName="Scout Captain Daelin" TurnInId="70552" />
+	</If>
+	
+	<If Condition="HasQuest(32724) &amp;&amp; IsQuestCompleted(32724)" >
+		<TurnIn QuestName="Forge Ahead!" QuestId="32724" TurnInName="Scout Captain Daelin" TurnInId="70552" />
+	</If>
+
+<!-- Double check for ender quests -->
+
+<!-- Scout Captain Daelin -->
+	<While Condition="HasQuestAvailable(70552)" >
+		<CustomBehavior File="InteractWith" MobId="70552" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+	<If Condition="HasItem(94566)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
+	</If>
+	
+	<While Condition="(GetItemCount(89112) &gt; 10)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
+	</While>
+
+<CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Isle of Thunder A [Brodie]" />
+
+</QuestOrder>
+</HBProfile>
