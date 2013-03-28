@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r121</Name>
+	<Name>Isle of Thunder (Horde) r133</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -100,7 +100,12 @@
 					!HasQuest(32565) &amp;&amp; !HasQuest(32294) &amp;&amp; !HasQuest(32523) &amp;&amp; !HasQuest(32207) &amp;&amp;
 					!HasQuest(32298) &amp;&amp; !HasQuest(32297) &amp;&amp; !HasQuest(32282) &amp;&amp; !HasQuest(32283))" >
 		<CustomBehavior File="InteractWith" MobId="70567" WaitForNpcs="False" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(48)" />
+		<If Condition="!IsQuestCompleted(32277)" >
+			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(48)" />
+		<ElseIf Condition="IsQuestCompleted(32277)" >
+			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(52)" />
+		</ElseIf>
+		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 	
