@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r124</Name>
+	<Name>Dominance Offensive r132</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -27,6 +27,7 @@
 	</AvoidMobs>
    
 	<Blackspots>
+		<Blackspot X="-1964.895" Y="1994.898" Z="17.15557" Radius="4.92802" Height="2" />
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -229,6 +230,18 @@
 			</Hotspots>
 		</Objective>
    	</Quest>
+	
+<!-- Stacked! -->
+   	<Quest Id="32139" Name="Stacked!">
+		<Objective Type="UseObject" ObjectId="216177" UseCount="9">
+			<Hotspots>
+				<Hotspot X="-1984.842" Y="2016.927" Z="8.870264" />
+				<Hotspot X="-1968.908" Y="1967.277" Z="9.214913" />
+				<Hotspot X="-1995.995" Y="2001.503" Z="8.420388" />
+				<Hotspot X="-2012.881" Y="2051.05" Z="8.410788" />
+			</Hotspots>
+		</Objective>
+   	</Quest>
 
 <!-- End of Quest Overrides --> 
 
@@ -257,7 +270,8 @@
 			!HasQuest(32123) &amp;&amp; !HasQuest(32128) &amp;&amp; !HasQuest(32127) &amp;&amp;
 			!HasQuest(32141) &amp;&amp; !HasQuest(32197) &amp;&amp; !HasQuest(32221) &amp;&amp;
 			!HasQuest(32223) &amp;&amp; !HasQuest(32236) &amp;&amp; !HasQuest(32449) &amp;&amp;
-			!HasQuest(32118)" >
+			!HasQuest(32118) &amp;&amp; !HasQuest(32138) &amp;&amp; !HasQuest(32139) &amp;&amp;
+			!HasQuest(32238)" >
 		<CustomBehavior File="Message" Text="Flying to Domination Point." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1800.39" Y="2466.03" Z="24.58" />
 		<CustomBehavior File="ForcedDismount" />
@@ -524,6 +538,74 @@
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 		</While>
 	</If>
+	
+<!-- Work Order: Lumber -->
+	<If Condition="HasQuest(32138)">
+		<CustomBehavior File="Message" Text="Starting Work Order: Lumber" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32138" LootMobs="True" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="-1930.89" Y="1984.88" Z="9.93" />
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="HasQuest(32138)">
+			<TurnIn QuestName="Work Order: Lumber" QuestId="32138" TurnInName="Zino Quickchop" TurnInId="67534" />
+		</While>
+
+		<!-- Zino Quickchop -->
+		<While Condition="HasQuestAvailable(67534)" >
+			<CustomBehavior File="InteractWith" MobId="67534" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</While>
+
+		<!-- Bixy Buzzsaw -->
+		<While Condition="HasQuestAvailable(67533)" >
+			<CustomBehavior File="InteractWith" MobId="67533" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</While>
+	</If>
+	
+<!-- Stacked! -->
+	<If Condition="HasQuest(32139) &amp;&amp; !IsQuestCompleted(32139)">
+		<CustomBehavior File="Message" Text="Starting Stacked!" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32139" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="FlyTo" X="-1930.89" Y="1984.88" Z="9.93" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="CollectThings" QuestId="32139" CollectUntil="QuestComplete" ObjectId="216177" HuntingGroundRadius="100" NonCompeteDistance="2" PostInteractDelay="1000" >
+			<Hotspot X="-1984.842" Y="2016.927" Z="8.870264" />
+			<Hotspot X="-1968.908" Y="1967.277" Z="9.214913" />
+			<Hotspot X="-1995.995" Y="2001.503" Z="8.420388" />
+			<Hotspot X="-2012.881" Y="2051.05" Z="8.410788" />
+		</CustomBehavior>
+<!--		<Objective QuestName="Stacked!" QuestId="32139" Type="UseObject" ObjectId="216177" UseCount="9" /> -->
+	</If>
+	
+<!-- Universal Remote-Explode -->
+	<If Condition="HasQuest(32238) &amp;&amp; !IsQuestCompleted(32238)">
+		<CustomBehavior File="Message" Text="Starting Universal Remote-Explode" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32238" LootMobs="True" PullDistance="25" />
+		<CustomBehavior File="FlyTo" X="-1930.89" Y="1984.88" Z="9.93" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="CombatUseItemOnV2" QuestId="32238" MobId="67967" ItemId="91902" ItemAppliesAuraId="133955" UseWhenMobMissingAuraId="133955" >
+			<HuntingGrounds>
+				<Hotspot X="-1984.842" Y="2016.927" Z="8.870264" />
+				<Hotspot X="-1968.908" Y="1967.277" Z="9.214913" />
+				<Hotspot X="-1995.995" Y="2001.503" Z="8.420388" />
+				<Hotspot X="-2012.881" Y="2051.05" Z="8.410788" />
+			</HuntingGrounds>
+		</CustomBehavior>
+	</If>
+	
+	<If Condition="HasQuest(32139) &amp;&amp; IsQuestCompleted(32139)" >
+		<CustomBehavior File="FlyTo" X="-1930.89" Y="1984.88" Z="9.93" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Stacked!" QuestId="32139" TurnInName="Zino Quickchop" TurnInId="67534" />
+	</If>
+	
+	<If Condition="HasQuest(32238) &amp;&amp; IsQuestCompleted(32238)" >
+		<CustomBehavior File="FlyTo" X="-1930.89" Y="1984.88" Z="9.93" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Universal Remote-Explode" QuestId="32238" TurnInName="Bixy Buzzsaw" TurnInId="67533" />
+	</If>
 
 <!-- Precious Resource -->
 	<If Condition="HasQuest(32237) &amp;&amp; !IsQuestCompleted(32237)">
@@ -634,6 +716,14 @@
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(92475)" />
 		</If>
 		<Objective QuestName="Bilgewater Infiltrators" QuestId="32214" Type="KillMob" MobId="67689" KillCount="10" />
+	</If>
+	
+<!-- Storming the Beach -->
+	<If Condition="(HasQuest(32221) &amp;&amp; !IsQuestCompleted(32221))" >
+		<CustomBehavior File="Message" Text="Starting Storming the Beach" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32221" LootMobs="True" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="-1930.89" Y="1984.88" Z="9.93" />
+		<Objective QuestName="Storming the Beach" QuestId="32221" Type="KillMob" MobId="67971" KillCount="10" />
 	</If>
 
 <!-- Flash! Aaaaaahhhh! -->
@@ -933,7 +1023,8 @@
 	<If Condition="HasQuest(32214) &amp;&amp; IsQuestCompleted(32214) ||
 			HasQuest(32199) &amp;&amp; IsQuestCompleted(32199) ||
 			HasQuest(32137) &amp;&amp; IsQuestCompleted(32137) ||
-			HasQuest(32222) &amp;&amp; IsQuestCompleted(32222)" >
+			HasQuest(32222) &amp;&amp; IsQuestCompleted(32222) ||
+			HasQuest(32221) &amp;&amp; IsQuestCompleted(32221)" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Domination Point, East." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1875.92" Y="2328.38" Z="9.44" />
 		<CustomBehavior File="ForcedDismount" />
@@ -942,6 +1033,10 @@
 	<If Condition="HasQuest(32214) &amp;&amp; IsQuestCompleted(32214)" >
 		<TurnIn QuestName="Bilgewater Infiltrators" QuestId="32214" TurnInName="Rivett Clutchpop" TurnInId="67608" />
 	</If>
+	
+	<If Condition="HasQuest(32221) &amp;&amp; IsQuestCompleted(32221)" >
+		<TurnIn QuestName="Storming the Beach" QuestId="32221" TurnInName="Rivett Clutchpop" TurnInId="67608" />
+	</If>
 
 	<If Condition="HasQuest(32137) &amp;&amp; IsQuestCompleted(32137)" >
 		<TurnIn QuestName="Runnin On Empty" QuestId="32137" TurnInName="Boss-Lady Trixel" TurnInId="67535" />
@@ -949,7 +1044,8 @@
 
 	<If Condition="HasQuest(32127) &amp;&amp; IsQuestCompleted(32127) ||
 			HasQuest(32128) &amp;&amp; IsQuestCompleted(32128) ||
-			HasQuest(32222) &amp;&amp; IsQuestCompleted(32222)">
+			HasQuest(32222) &amp;&amp; IsQuestCompleted(32222) ||
+			HasQuest(32223) &amp;&amp; IsQuestCompleted(32223)">
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Domination Point, West." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-1800.39" Y="2466.03" Z="24.58" />
 		<CustomBehavior File="ForcedDismount" />
@@ -957,6 +1053,10 @@
 
 	<If Condition="HasQuest(32222) &amp;&amp; IsQuestCompleted(32222)" >
 		<TurnIn QuestName="Wanted: Chief Engineer Cogwrench" QuestId="32222" TurnInName="Blood Guard Gro'tash" TurnInId="67880" />
+	</If>
+	
+	<If Condition="HasQuest(32223) &amp;&amp; IsQuestCompleted(32223)" >
+		<TurnIn QuestName="Wanted: Lieutenant Ethan Jacobson" QuestId="32223" TurnInName="Blood Guard Gro'tash" TurnInId="67880" />
 	</If>
 
 	<If Condition="HasQuest(32128) &amp;&amp; IsQuestCompleted(32128)" >
@@ -971,7 +1071,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<!-- <CustomBehavior File="LoadProfile" ProfileName="[Rep] Dailies [Brodie]" /> -->
+ <CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="MORE COMING SOON!!!" />
 

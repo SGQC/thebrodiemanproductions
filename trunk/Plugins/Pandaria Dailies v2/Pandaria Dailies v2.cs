@@ -162,6 +162,14 @@ namespace AzeniusHelper2
 			}
 		}
 		
+		public WoWUnit MechaPounder
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 67967 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
+		
 		public WoWUnit ShredmasterP
 		{
 			get
@@ -433,7 +441,7 @@ namespace AzeniusHelper2
                 return;
             ObjectManager.Update();
 
-			#region [Operation Shieldwall]
+			#region [Operation Shieldwall/Dominance Offensive]
 
 			#region Jungle Shredder
 			//http://www.wowhead.com/quest=32446
@@ -441,6 +449,15 @@ namespace AzeniusHelper2
 			{
 				if (Me.Combat && JungleShredder != null && JungleShredder.Distance2D <= 10)
 					UseIfNotOnCooldown(93180); //Re-Configured Remote
+			}
+			#endregion
+			
+			#region Mecha-Pounder
+			//http://www.wowhead.com/quest=32238
+			if (IsOnQuest(32238))
+			{
+				if (Me.Combat && MechaPounder != null && MechaPounder.Distance2D <= 10)
+					UseIfNotOnCooldown(91902); //Universal remote
 			}
 			#endregion
 
