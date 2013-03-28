@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r108</Name>
+	<Name>Operation Shieldwall r134</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -505,7 +505,14 @@
 		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-2118.28" Y="2511.41" Z="4.31" />
 		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Under Pressure" QuestId="32144" Type="UseObject" ObjectId="216150" UseCount="8" />
+		<CustomBehavior File="CollectThings" QuestId="32144" CollectUntil="QuestComplete" ObjectId="216150" HuntingGroundRadius="200" NonCompeteDistance="3" PostInteractDelay="1000" >
+			<Hotspot X="-2119.71" Y="2538.295" Z="5.016497" />
+			<Hotspot X="-2135.023" Y="2510.699" Z="4.517229" />
+			<Hotspot X="-2156.861" Y="2537.621" Z="8.014196" />
+			<Hotspot X="-2010.381" Y="2388.725" Z="5.889823" />
+			<Hotspot X="-2163.657" Y="2362.574" Z="5.244018" />
+		</CustomBehavior>
+	<!--	<Objective QuestName="Under Pressure" QuestId="32144" Type="UseObject" ObjectId="216150" UseCount="8" /> -->
 	</If>
 
 <!-- We Will Rock You -->
