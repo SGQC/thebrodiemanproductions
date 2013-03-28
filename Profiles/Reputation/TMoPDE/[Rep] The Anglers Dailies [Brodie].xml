@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r127</Name>
+	<Name>The Anglers Dailies r132</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -514,7 +514,13 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 
-<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Klaxxi Dailies [Brodie]" />
+<If Condition="Me.IsAlliance" >
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Klaxxi Dailies [Brodie]" />
+</If>
+
+<If Condition="Me.IsHorde" >
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Dominance [Brodie]" />
+</If>
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of All the Dailies...Or are we?" />
 
