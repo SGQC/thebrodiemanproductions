@@ -1,6 +1,10 @@
 Patch Notes
 
-3/27/13
+3/28/13
+
+r134
+Operation: Shieldwall
+-- Under Pressure - Soft patch to attempt fix
 
 r133
 Isle of Thunder (Horde)
