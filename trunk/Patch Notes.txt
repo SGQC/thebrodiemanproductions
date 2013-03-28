@@ -2,6 +2,10 @@ Patch Notes
 
 3/27/13
 
+r133
+Isle of Thunder (Horde)
+-- Basic Phase 4 support (Assignment Map only)
+
 r132
 Pandaria Dailies v2
 -- Added support for Universal Remote-Explode
