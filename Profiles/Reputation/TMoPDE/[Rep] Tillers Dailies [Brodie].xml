@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r128</Name>
+	<Name>The Tillers r137</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -799,15 +799,6 @@
 		<Objective QuestName="The Mile-High Grub" QuestId="30331" Type="CollectItem" ItemId="79894" CollectCount="20" />
 	</If>
 
-<!-- Not in Chee Chee's Backyard -->
- 	<If Condition="HasQuest(30324) &amp;&amp; !IsQuestCompleted(30324)">
-		<CustomBehavior File="Message" Text="Starting Not in Chee Chee's Backyard" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30327" LootMobs="True" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="343.9983" Y="1484.133" Z="442.1457" />
-		<CustomBehavior File="ForcedDismount" />
-		<Objective QuestName="Not in Chee Chee's Backyard" QuestId="30324" Type="KillMob" MobId="59119" KillCount="8" />
-	</If>
-
 <!-- Where it Counts -->
 	<If Condition="HasQuest(30325) &amp;&amp; !IsQuestCompleted(30325)">
 		<CustomBehavior File="Message" Text="Starting Where It Counts" LogColor="Green"  />
@@ -935,6 +926,15 @@
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Kunzen Legend-Chief" QuestId="30326" Type="CollectItem" ItemId="79866" CollectCount="1" />
 	</If>
+	
+<!-- Not in Chee Chee's Backyard -->
+ 	<If Condition="HasQuest(30324) &amp;&amp; !IsQuestCompleted(30324)">
+		<CustomBehavior File="Message" Text="Starting Not in Chee Chee's Backyard" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="30327" LootMobs="True" PullDistance="25" />
+		<CustomBehavior File="FlyTo" X="343.9983" Y="1484.133" Z="442.1457" />
+		<CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Not in Chee Chee's Backyard" QuestId="30324" Type="KillMob" MobId="59119" KillCount="8" />
+	</If>
 
 <!-- Stalling the Ravage -->
 	<If Condition="((HasQuest(30335)) &amp;&amp; (!IsQuestCompleted(30335)))" >
@@ -964,11 +964,11 @@
 	</If>
 
 <!-- A Gift for Tina -->
-	<If Condition="((HasQuest(30470)) &amp;&amp; (!IsQuestCompleted(30470)))" >
+	<If Condition="(HasQuest(30470) &amp;&amp; !IsQuestCompleted(30470))" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Tina" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="541.0898" Y="1124.186" Z="330.5667" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="(HasQuest(30334)) &amp;&amp; (!IsObjectiveComplete(1,30334))">
+		<While Condition="!IsObjectiveComplete(1,30334)">
 			<CustomBehavior File="InteractWith" QuestId="30470" ObjectType="GameObject" MobId="210958" CollectionDistance="500" />
 		</While>
 		<Objective QuestName="A Gift for Tina" QuestId="30470" Type="CollectItem" ItemId="80134" CollectCount="1" />
