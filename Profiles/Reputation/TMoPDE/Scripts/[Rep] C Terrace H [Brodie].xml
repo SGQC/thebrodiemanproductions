@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Horde) r126</Name>
+	<Name>Conqueror's Terrace (Horde) r139</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -88,12 +88,12 @@
 
 <CustomBehavior File="Message" Text="Compiling Conqueror's Terrace Quests..." LogColor="CornflowerBlue"  />
 
-	<If Condition="((!HasQuest(32493) &amp;&amp; IsQuestCompleted(32493)) ||
+	<If Condition="((!HasQuest(32206) &amp;&amp; IsQuestCompleted(32206)) ||
+					(!HasQuest(32232) &amp;&amp; IsQuestCompleted(32232)) ||
 					(!HasQuest(32494) &amp;&amp; IsQuestCompleted(32494)) ||
-					(!HasQuest(32560) &amp;&amp; IsQuestCompleted(32560)) ||
-					(!HasQuest(32557) &amp;&amp; IsQuestCompleted(32557)) ||
-					(!HasQuest(32559) &amp;&amp; IsQuestCompleted(32559)) ||
-					(!HasQuest(32234) &amp;&amp; IsQuestCompleted(32234)))" >
+					(!HasQuest(32234) &amp;&amp; IsQuestCompleted(32234)) ||
+					(!HasQuest(32233) &amp;&amp; IsQuestCompleted(32233)) ||
+					(!HasQuest(32493) &amp;&amp; IsQuestCompleted(32493)))" >
 		<CustomBehavior File="Message" Text="Previously Completed Quests Detected" LogColor="CornflowerBlue" />
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 	</If>
