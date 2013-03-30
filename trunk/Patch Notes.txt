@@ -2,6 +2,12 @@ Patch Notes
 
 3/30/13
 
+r139
+Isle of Thunder (Horde)
+-- Corrected Conqueror's Terrace QuestId errors
+Conqueror's Terrace (Horde)
+-- Corrected Conqueror's Terrace QuestId errors
+
 r138
 Domination Point
 -- Fixed lack of dismount to finish at signal fire
