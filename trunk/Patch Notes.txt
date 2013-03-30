@@ -2,6 +2,11 @@ Patch Notes
 
 3/30/13
 
+r137
+The Tillers
+-- Code cleanup
+-- Quest logic order change
+
 r136
 Shado Pan
 -- Changed rep check to head to Isle of Thunder after if not revered
