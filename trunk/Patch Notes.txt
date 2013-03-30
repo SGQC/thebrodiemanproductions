@@ -1,5 +1,12 @@
 Patch Notes
 
+3/29/13
+
+r135
+Za'Tual
+-- Heinous Sacrifice - Added missing quest tags
+-- Heinous Sacrifice - Converted from If to While
+
 3/28/13
 
 r134

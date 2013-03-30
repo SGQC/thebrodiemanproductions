@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Horde) r116</Name>
+	<Name>Za'Tual (Horde) r135</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -140,21 +140,21 @@
 		<CustomBehavior File="Message" Text="Starting Heinous Sacrifice" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32215" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<While Condition="!IsQuestCompleted(32215)" >
-			<If Condition="!IsObjectiveComplete(1,32215)" >
+			<While Condition="!IsObjectiveComplete(1,32215)" >
 				<RunTo X="6047.05" Y="6245.00" Z="22.96" />
-				<CustomBehavior File="InteractWith" MobId="217201" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" MobId="218424" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(3,32215)" >
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217201" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218424" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+			</While>
+			<While Condition="!IsObjectiveComplete(3,32215)" >
 				<RunTo X="5981.98" Y="6054.16" Z="58.59" />
-				<CustomBehavior File="InteractWith" MobId="217202" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" MobId="218426" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(2,32215)" >
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217202" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218426" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+			</While>
+			<While Condition="!IsObjectiveComplete(2,32215)" >
 				<RunTo X="6348.41" Y="6015.33" Z="29.35" />
-				<CustomBehavior File="InteractWith" MobId="217203" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" MobId="218425" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-			</If>
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217203" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218425" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+			</While>
 		</While>
 	</If>
 	
