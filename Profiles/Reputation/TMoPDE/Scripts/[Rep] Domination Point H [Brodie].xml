@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Domination Point r99</Name>
+	<Name>Domination Point r138</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -89,6 +89,7 @@
 
 	<If Condition="HasQuest(32108)" >
 		<CustomBehavior File="FlyTo" X="-2116.30" Y="2557.63" Z="3.49" />
+		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Domination Point" QuestId="32108" TurnInName="Signal Fire" TurnInId="216274" />
 		<CustomBehavior File="WaitTimer" WaitTime="35000" />
 	</If>
