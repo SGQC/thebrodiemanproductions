@@ -1,5 +1,11 @@
 Patch Notes
 
+3/30/13
+
+r136
+Shado Pan
+-- Changed rep check to head to Isle of Thunder after if not revered
+
 3/29/13
 
 r135
