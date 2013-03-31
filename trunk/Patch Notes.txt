@@ -2,6 +2,20 @@ Patch Notes
 
 3/31/13
 
+r142
+The Tillers
+-- Gift for Tina - Conversion from InteractWith back to Objective (both were in, no clue why InteractWith wasn't deleted)
+-- Removal of obsolete Overrides
+-- Massive Code cleanup for size
+-- Gift for Gina - added checks to not fly to multiple areas after finishing, before checking if finished
+-- Added Inherit the Earth
+-- Updated Farmer Yoon locations post-buying the farm (supports both locations)
+Lorewalkers
+-- Updated location to land for Birthplace of Liu Lang
+-- What is Worth Fighting For - Will stay here until used, in case of attack
+Tillers Union Votes
+-- Added Farmer Fung's Quest Line
+
 r141
 Pandaria Dailies v2
 -- Fixed Sydow code to truly be off list mode

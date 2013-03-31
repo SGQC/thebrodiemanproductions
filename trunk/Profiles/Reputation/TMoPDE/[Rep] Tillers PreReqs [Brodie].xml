@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs r99</Name>
+	<Name>Tillers PreReqs r142</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -135,11 +135,11 @@
 	</If>
 
 	<If Condition="HasQuest(31945) &amp;&amp; !IsQuestCompleted(31945)" >
-		<If Condition="HasQuest(31945) &amp;&amp; IsObjectiveComplete(1,31945)" >
+		<If Condition="IsObjectiveComplete(1,31945)" >
 			<CustomBehavior File="Message" Text="Checking for plant." LogColor="Green" />
 			<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="63165" NumOfTimes="1" WaitForNpcs="False"/>
+			<CustomBehavior File="InteractWith" MobId="63165" NumOfTimes="1" WaitForNpcs="False" />
 		<Else>
 			<If Condition="!HasItem(80591)" >
 				<CustomBehavior File="Message" Text="I don't have the seed I need. Going to buy one." LogColor="LawnGreen" />
