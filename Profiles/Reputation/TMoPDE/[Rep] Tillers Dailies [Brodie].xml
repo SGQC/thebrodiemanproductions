@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r142</Name>
+	<Name>The Tillers r143</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1326,7 +1326,9 @@
 			(HasQuest(30334) &amp;&amp; IsQuestCompleted(30334)) ||
 			(HasQuest(30335) &amp;&amp; IsQuestCompleted(30335)) ||
 			(HasQuest(30336) &amp;&amp; IsQuestCompleted(30336)))" >
-		<CustomBehavior File="FlyTo" DestName="Farmer Yoon" X="-184.573" Y="628.4885" Z="165.4093" />
+		<If Condition="!IsQuestCompleted(32682)" >
+			<CustomBehavior File="FlyTo" DestName="Farmer Yoon" X="-184.573" Y="628.4885" Z="165.4093" />
+		</If>
 	</If>
 
 <!-- Simian Sabotage -->
