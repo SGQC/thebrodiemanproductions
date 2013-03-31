@@ -2,6 +2,10 @@ Patch Notes
 
 3/31/13
 
+r143
+The Tillers
+-- Updated Farmer Yoon locations for Turn Ins
+
 r142
 The Tillers
 -- Gift for Tina - Conversion from InteractWith back to Objective (both were in, no clue why InteractWith wasn't deleted)
