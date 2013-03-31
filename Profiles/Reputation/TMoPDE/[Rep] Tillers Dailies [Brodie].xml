@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r143</Name>
+	<Name>The Tillers r144</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -330,7 +330,7 @@
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers PreReqs [Brodie]" />
 	</If>
 	
-	<If Condition="((!HasQuest(32682) &amp;&amp; !IsQuestCompleted(32682)) || HasQuest(32682)) &amp;&amp; Me.GetReputationLevelWith(1272) == WoWUnitReaction.Exalted" >
+	<If Condition="((!HasQuest(32682) &amp;&amp; !IsQuestCompleted(32682)) || HasQuest(32682)) &amp;&amp; Me.GetReputationLevelWith(1272) == WoWUnitReaction.Exalted &amp;&amp; IsQuestCompleted(30529)" >
 		<If Condition="!HasQuest(32682)" >
 			<CustomBehavior File="FlyTo" X="-144.37" Y="522.68" Z="214.31" />
 			<CustomBehavior File="ForcedDismount" />
