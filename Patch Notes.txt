@@ -2,6 +2,22 @@ Patch Notes
 
 3/30/13
 
+r140
+Pandaria Dailies v2
+-- Removed List function from Sydow spellcast avoidance
+Profile-wide update
+-- Added code for upcoming plugin for profile selection (More info soon)
+Dominance Offensive
+-- Bug Off - Fixed CombatUseItemOnV2 usage to use item all the time when not on CD
+-- Bug Off - Fixed Bug Off turn in
+-- Removal of Overrides for Stacked! (obsolete)
+Isle of Thunder
+-- Support for more than 1 Arcane Trove/Sunreaver Bounty
+Thunder Forge (Alliance)
+-- Added Maximum Capacitor
+-- Changes to spell avoidance on Her Magic-ey Secret Service
+-- Hotspot additions to Forge Ahead! to be more accurate than stock versions.
+
 r139
 Isle of Thunder (Horde)
 -- Corrected Conqueror's Terrace QuestId errors

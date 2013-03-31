@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r129</Name>
+	<Name>The Golden Lotus r140</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -632,7 +632,6 @@
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
 	</If>
 
-
 <!-- Golden Pagoda Phase 2 -->
 
 	<If Condition="HasQuest(30293) || HasQuest(30282) || HasQuest(30281) || HasQuest(30283)
@@ -644,6 +643,16 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
+	
+<!--
+	<CustomBehavior File="ForcedDismount" />
+	<If Condition="HasItem(64488)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
+	</If>
+	<If Condition="HasItem(6948)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+	</If>
+-->
 
 <CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />
 

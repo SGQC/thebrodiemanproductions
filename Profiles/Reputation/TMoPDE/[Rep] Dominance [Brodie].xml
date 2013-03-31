@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r132</Name>
+	<Name>Dominance Offensive r140</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -227,18 +227,6 @@
 				<Hotspot X="-2079.64" Y="1914.19" Z="2.91" />
 				<Hotspot X="-1955.44" Y="1861.40" Z="31.18" />
 				<Hotspot X="-1980.32" Y="1885.04" Z="23.13" />
-			</Hotspots>
-		</Objective>
-   	</Quest>
-	
-<!-- Stacked! -->
-   	<Quest Id="32139" Name="Stacked!">
-		<Objective Type="UseObject" ObjectId="216177" UseCount="9">
-			<Hotspots>
-				<Hotspot X="-1984.842" Y="2016.927" Z="8.870264" />
-				<Hotspot X="-1968.908" Y="1967.277" Z="9.214913" />
-				<Hotspot X="-1995.995" Y="2001.503" Z="8.420388" />
-				<Hotspot X="-2012.881" Y="2051.05" Z="8.410788" />
 			</Hotspots>
 		</Objective>
    	</Quest>
@@ -576,7 +564,6 @@
 			<Hotspot X="-1995.995" Y="2001.503" Z="8.420388" />
 			<Hotspot X="-2012.881" Y="2051.05" Z="8.410788" />
 		</CustomBehavior>
-<!--		<Objective QuestName="Stacked!" QuestId="32139" Type="UseObject" ObjectId="216177" UseCount="9" /> -->
 	</If>
 	
 <!-- Universal Remote-Explode -->
@@ -619,17 +606,17 @@
 	</If>
 
 <!-- Bug Off -->
-	<If Condition="(HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236))" >
+	<If Condition="HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236)" >
 		<CustomBehavior File="Message" Text="Starting Bug Off" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32236" LootMobs="True" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32236" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="-2035.62" Y="1904.40" Z="0.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32236)" >
-			<CustomBehavior File="CombatUseItemOnV2" QuestId="32236" MobId="67759" ItemId="93026" X="-2035.62" Y="1904.40" Z="0.44" />
+			<CustomBehavior File="CombatUseItemOnV2" QuestId="32236" MobId="67759" ItemId="93026" UseItemStrategy="UseItemContinuouslyOnTarget" X="-2035.62" Y="1904.40" Z="0.44" />
 		</While>
 	</If>
 
-	<If Condition="(HasQuest(32236) &amp;&amp; !IsQuestCompleted(32236))" >
+	<If Condition="HasQuest(32236) &amp;&amp; IsQuestCompleted(32236)" >
 		<CustomBehavior File="FlyTo" X="-2035.62" Y="1904.40" Z="0.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Bug Off" QuestId="32236" TurnInName="Bixy Buzzsaw" TurnInId="67554" />
@@ -1070,6 +1057,16 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
+	
+<!--
+	<CustomBehavior File="ForcedDismount" />
+	<If Condition="HasItem(64488)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
+	</If>
+	<If Condition="HasItem(6948)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+	</If>
+-->
 
  <CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />
 

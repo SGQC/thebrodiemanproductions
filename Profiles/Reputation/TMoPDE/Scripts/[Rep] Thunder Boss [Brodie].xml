@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r121</Name>
+	<Name>Thunder Bosses r140</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -378,14 +378,14 @@
 	</If>
 
 <!-- Use Arcane Trove (Alliance Only) -->
-	<If Condition="HasItem(94219)">
+	<While Condition="HasItem(94219)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94219)" WaitTime="1500" />
-	</If>
+	</While>
 	
 <!-- Use Sunreaver Bounty (Horde Only) -->
-	<If Condition="HasItem(94220)">
+	<While Condition="HasItem(94220)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94220)" WaitTime="1500" />
-	</If>
+	</While>
 
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
