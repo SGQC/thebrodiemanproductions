@@ -262,7 +262,7 @@ namespace AzeniusHelper2
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63240 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63240 && u.IsAlive && u.Distance < 30).FirstOrDefault();
             }
         }
 
