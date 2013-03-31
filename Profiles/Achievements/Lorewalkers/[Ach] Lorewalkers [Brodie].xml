@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lorewalkers r23</Name>
+	<Name>Lorewalkers r142</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -45,11 +45,11 @@
 		</If>
 
 	<!-- The First Monks :: What is Worth Fighting For 35,30 -->
-		<If Condition="!IsAchievementCompleted(6858,3)">
+		<While Condition="!IsAchievementCompleted(6858,3)">
 			<CustomBehavior File="FlyTo" X="2228.745" Y="-1043.703" Z="450.7707" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" Range="4" MobId="213415" WaitForNpcs="False" WaitTime="100" />
-		</If>
+		</While>
 
 	<!-- Xin Wo Yin the Broken Hearted :: Legend of the Brewfathers 37,30 -->
 		<If Condition="!IsAchievementCompleted(7230,2)">
@@ -193,7 +193,7 @@
 
 	<!-- Ballad of Liu Lang - The Birthplace of Liu Lang 20,55 -->
 		<If Condition="!IsAchievementCompleted(6856,1)">
-			<CustomBehavior File="FlyTo" X="-363.3819" Y="1881.281" Z="142.6816" />
+			<CustomBehavior File="FlyTo" X="-366.07" Y="1882.07" Z="142.68" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" Range="4" MobId="213459" WaitForNpcs="False" WaitTime="100" />
 		</If>
@@ -312,7 +312,7 @@
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" Range="4" MobId="213455" WaitForNpcs="False" WaitTime="100" />
 		</If>
 
-	<!-- The Dark Heart of the Mogu - valley of the Emperors 53,46 -->
+	<!-- The Dark Heart of the Mogu - Valley of the Emperors 53,46 -->
 		<If Condition="!IsAchievementCompleted(6754,1)">
 			<CustomBehavior File="FlyTo" X="3681.819" Y="1517.052" Z="782.5496" />
 			<CustomBehavior File="ForcedDismount" />
