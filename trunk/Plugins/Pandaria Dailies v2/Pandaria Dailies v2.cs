@@ -258,7 +258,7 @@ namespace AzeniusHelper2
             }
         }
 
-        public List<WoWUnit> Sydow
+        public WoWUnit Sydow
         {
             get
             {
@@ -614,7 +614,7 @@ namespace AzeniusHelper2
             #region http://www.wowhead.com/quest=30482 - toDo
             if (IsOnQuest(30482) && !QuestComplete(30482))
             {
-                if (Sydow != null && Sydow[0].CastingSpellId == 126347)
+                if (Sydow != null && Sydow.CastingSpellId == 126347)
                 {
                     //Lua.DoString("StrafeLeftStart()");
                     WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));

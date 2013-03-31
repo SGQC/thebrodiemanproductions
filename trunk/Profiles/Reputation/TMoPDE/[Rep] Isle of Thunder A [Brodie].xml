@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r129</Name>
+	<Name>Isle of Thunder (Alliance) r140</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -249,6 +249,16 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
+	
+<!--
+	<CustomBehavior File="ForcedDismount" />
+	<If Condition="HasItem(64488)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
+	</If>
+	<If Condition="HasItem(6948)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+	</If>
+-->
 
 <CustomBehavior File="LoadProfile" ProfileName="[Rep] August Celestials Dailies [Brodie]" />
 

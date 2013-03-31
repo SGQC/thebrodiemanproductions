@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Jade Serpent Temple r99</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>Jade Serpent Temple r140</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -251,6 +251,16 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
+	
+<!--
+	<CustomBehavior File="ForcedDismount" />
+	<If Condition="HasItem(64488)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
+	</If>
+	<If Condition="HasItem(6948)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+	</If>
+-->
 
 <!-- <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Dailies [Brodie]" /> -->
 

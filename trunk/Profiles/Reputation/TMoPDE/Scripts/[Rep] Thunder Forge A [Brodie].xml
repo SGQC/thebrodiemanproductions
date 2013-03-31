@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Alliance) r129</Name>
+	<Name>Thunder Forge (Alliance) r140</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -32,6 +32,49 @@
 
 <!-- Quest Overrides -->
 
+<!-- Maximum Capacitor -->
+   	<Quest Id="32586" Name="Maximum Capacitor">
+		<Objective Type="KillMob" MobId="69326" KillCount="1">
+			<Hotspots>
+				<Hotspot X="7312.25" Y="5365.44" Z="47.85" />
+			</Hotspots>
+		</Objective>
+   	</Quest>
+	
+<!-- Forge Ahead! -->
+   	<Quest Id="32724" Name="Forge Ahead!">
+		<Objective Type="KillMob" MobId="69461" KillCount="1">
+			<Hotspots>
+				<Hotspot X="7225.765" Y="5285.303" Z="65.98432" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="CollectItem" ItemId="93731" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="Fleshcrafter Hoku" Id="69435" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="7087.47" Y="5359.25" Z="65.98" />
+			</Hotspots>
+		</Objective>
+   	</Quest>
+	
+<!-- Forge Ahead! -->
+   	<Quest Id="32587" Name="Forge Ahead!">
+		<Objective Type="KillMob" MobId="69461" KillCount="1">
+			<Hotspots>
+				<Hotspot X="7225.765" Y="5285.303" Z="65.98432" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="CollectItem" ItemId="93731" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="Fleshcrafter Hoku" Id="69435" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="7087.47" Y="5359.25" Z="65.98" />
+			</Hotspots>
+		</Objective>
+   	</Quest>
+
 <!-- End of Quest Overrides --> 
 
 <QuestOrder KillBetweenHotspots="False" >
@@ -46,10 +89,41 @@
 	</If>
 
 <!-- Maximum Capacitor -->
-<!--<If Condition="HasQuest(32586) &amp;&amp; !IsQuestCompleted(32586)" >
+	<If Condition="HasQuest(32586) &amp;&amp; !IsQuestCompleted(32586)" >
 		<CustomBehavior File="Message" Text="Starting Maximum Capacitor" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32586" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-	</If> -->
+		<While Condition="!IsQuestCompleted(32586)" >
+			<If Condition="!IsObjectiveComplete(3,32586)" >
+				<RunTo X="7478.02" Y="5476.50" Z="57.61" />
+				<CustomBehavior File="InteractWith" QuestId="32586" MobId="69320" />
+			</If>
+			<If Condition="!IsObjectiveComplete(2,32586)" >
+				<RunTo X="7400.76" Y="5615.24" Z="23.15" />
+				<CustomBehavior File="InteractWith" QuestId="32586" MobId="69319" />
+			</If>
+			<If Condition="!IsObjectiveComplete(1,32586)" >
+				<RunTo X="7307.81" Y="5666.43" Z="31.69" />
+				<CustomBehavior File="InteractWith" QuestId="32586" MobId="69316" />
+			</If>
+			<If Condition="!IsObjectiveComplete(4,32586)" >
+				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32586"
+					EventX="7312.25" EventY="5365.44" EventZ="47.85"
+					MoveOutOfGroundEffectAuraId1="137542"
+					MoveAwayFromMobCastingSpellId1="137545"
+					MoveAwayFromMobCastingSpellId2="136906"
+					MoveAwayFromMobWithAuraId1="136906" >
+					<Safespots>
+						<Hotspot X="7317.73" Y="5347.32" Z="48.10" />
+						<Hotspot X="7293.82" Y="5346.548" Z="56.87947" />
+						<Hotspot X="7323.026" Y="5378.004" Z="48.02763" />
+					</Safespots>
+				</CustomBehavior>
+			</If>
+		</While>
+		<CustomBehavior File="CompleteLogQuest" QuestId="32586" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</If>
 	
 	<If Condition="HasQuest(32586) &amp;&amp; IsQuestCompleted(32586)" >
 		<CustomBehavior File="CompleteLogQuest" QuestId="32586" />
@@ -61,9 +135,6 @@
 	<If Condition="HasQuest(32588) &amp;&amp; !IsQuestCompleted(32588)" >
 		<CustomBehavior File="Message" Text="Starting On Her Magic-ey Secret Service" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32588" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<If Condition="!IsObjectiveComplete(4,32588)" >
-			<Objective QuestName="On Her Magic-ey Secret Service" QuestId="32588" Type="KillMob" MobId="69326" KillCount="1" />
-		</If>
 		<While Condition="!IsQuestCompleted(32588)" >
 			<If Condition="!IsObjectiveComplete(3,32588)" >
 				<RunTo X="7389.191" Y="5532.316" Z="50.32116" />
@@ -76,6 +147,20 @@
 			<If Condition="!IsObjectiveComplete(1,32588)" >
 				<RunTo X="7303.608" Y="5605.65" Z="31.16815" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" />
+			</If>
+			<If Condition="!IsObjectiveComplete(4,32588)" >
+				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32588"
+					EventX="7312.25" EventY="5365.44" EventZ="47.85"
+					MoveOutOfGroundEffectAuraId1="137542"
+					MoveAwayFromMobCastingSpellId1="137545"
+					MoveAwayFromMobCastingSpellId2="136906"
+					MoveAwayFromMobWithAuraId1="136906" >
+					<Safespots>
+						<Hotspot X="7317.73" Y="5347.32" Z="48.10" />
+						<Hotspot X="7293.82" Y="5346.548" Z="56.87947" />
+						<Hotspot X="7323.026" Y="5378.004" Z="48.02763" />
+					</Safespots>
+				</CustomBehavior>
 			</If>
 		</While>
 		<CustomBehavior File="CompleteLogQuest" QuestId="32588" />
