@@ -1,5 +1,11 @@
 Patch Notes
 
+3/31/13
+
+r141
+Pandaria Dailies v2
+-- Fixed Sydow code to truly be off list mode
+
 3/30/13
 
 r140
@@ -51,6 +57,8 @@ Za'Tual
 r134
 Operation: Shieldwall
 -- Under Pressure - Soft patch to attempt fix
+
+3/27/13
 
 r133
 Isle of Thunder (Horde)
