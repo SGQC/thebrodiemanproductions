@@ -2,6 +2,11 @@ Patch Notes
 
 4/1/13
 
+r148
+Golden Lotus
+-- Striking First - Converted CollectThings from 100 yds from player to 100 yds at point
+-- Removed obsolete override for Striking First
+
 r147
 Thunder Forge (Alliance)
 -- Extended waitime on item usage

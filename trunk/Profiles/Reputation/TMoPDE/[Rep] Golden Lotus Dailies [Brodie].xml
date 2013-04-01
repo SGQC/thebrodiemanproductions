@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r145</Name>
+	<Name>The Golden Lotus r148</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -99,15 +99,6 @@
 				<Hotspot X="1605.34" Y="1332.53" Z="445.84" />
 				<Hotspot X="1548.60" Y="1447.88" Z="441.90" />
 				<Hotspot X="1595.82" Y="1453.17" Z="441.99" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Striking First -->
-	<Quest Id="31760" Name="Striking First"> 
-		<Objective Type="KillMob" MobId="65978" KillCount="4">
-			<Hotspots>
-				<Hotspot X="1677.37" Y="1366.47" Z="453.59" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -400,7 +391,9 @@
 		<CustomBehavior File="UserSettings" QuestId="31760" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1673.236" Y="1364.457" Z="453.5921" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" QuestId="31760" CollectUntil="QuestComplete" MobId="65978" MobState="Alive" HuntingGroundRadius="100" NonCompeteDistance="1" />
+		<CustomBehavior File="CollectThings" QuestId="31760" CollectUntil="QuestComplete" MobId="65978" MobState="Alive" HuntingGroundRadius="100" NonCompeteDistance="1" >
+			<Hotspot X="1673.236" Y="1364.457" Z="453.5921" />
+		</CustomBehavior>
 	</If>
 
 <!-- Free Spirits -->
