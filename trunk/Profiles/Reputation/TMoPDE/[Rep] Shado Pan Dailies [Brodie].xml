@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r136</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>Shado Pan Dailies r149</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -30,6 +30,7 @@
    
 	<Blackspots>
 		<Blackspot X="1337.77" Y="2655.481" Z="429.9347" Radius="500" Height="200" />
+		<Blackspot X="2896.737" Y="3431.529" Z="377.3549" Radius="4.5" /> 
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -356,27 +357,17 @@
 <CustomBehavior File="Message" Text="Beginning Shado Pan Quests." LogColor="Green"  />
 
 <!-- Ban Bearheart -->
-	<While Condition="HasQuestAvailable(62304)" >
- 		<CustomBehavior File="InteractWith" MobId="62304" X="1860.69" Y="4263.85" Z="148.87" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
- 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
- 		<CustomBehavior File="InteractWith" MobId="62304" X="1860.69" Y="4263.85" Z="148.87" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
- 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
- 		<CustomBehavior File="InteractWith" MobId="62304" X="1860.69" Y="4263.85" Z="148.87" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
- 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
- 		<CustomBehavior File="InteractWith" MobId="62304" X="1860.69" Y="4263.85" Z="148.87" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
- 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
- 		<CustomBehavior File="InteractWith" MobId="62304" X="1860.69" Y="4263.85" Z="148.87" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
- 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+	<If Condition="HasQuestAvailable(62304)" >
+		<While Condition="HasQuestAvailable(62304)" >
+			<CustomBehavior File="InteractWith" MobId="62304" X="1860.69" Y="4263.85" Z="148.87" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 1)" >
 			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<ElseIf Condition="!IsAchievementCompleted(7298, 4) &amp;&amp; IsQuestCompleted(31038)" >
+		<ElseIf Condition="!IsAchievementCompleted(7298, 4) &amp;&amp; IsQuestCompleted(31038)" >	
 			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		</ElseIf>
@@ -397,7 +388,7 @@
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		</Else>
 		</If>
-	</While>
+	</If>
 
 <!-- Ling of the Six Pools -->
 	<If Condition="HasQuestAvailable(63614)" >
@@ -614,7 +605,7 @@
 				<CustomBehavior File="InteractWith" MobId="64460" GossipOptions="1" WaitForNpcs="False" CollectionDistance="100" WaitTime="1000" />
 			</If>
 			<If Condition="!IsObjectiveComplete(3,30201)" >
-					<CustomBehavior File="FlyTo" X="2336.98" Y="6065.93" Z="54.23" />
+				<CustomBehavior File="FlyTo" X="2336.98" Y="6065.93" Z="54.23" />
 				<CustomBehavior File="ForcedDismount" />
 				<CustomBehavior File="InteractWith" MobId="64459" GossipOptions="1" WaitForNpcs="False" CollectionDistance="100" WaitTime="1000" />
 			</If>
@@ -630,34 +621,27 @@
 			<CustomBehavior File="FlyTo" X="2450.843" Y="5500.398" Z="83.84156" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(2,31199)" >
-
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213308" CollectionDistance="200" X="2460.637" Y="5504.174" Z="82.54575" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(1,31199)" >
-
 			<CustomBehavior File="FlyTo" X="2510.925" Y="5609.593" Z="71.19161" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(1,31199)" >
-
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213307" CollectionDistance="200" X="2506.641" Y="5599.797" Z="70.86126" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(3,31199)" >
-
 			<CustomBehavior File="FlyTo" X="2971.075" Y="5517.408" Z="62.43878" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(3,31199)" >
-
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213310" CollectionDistance="200" X="2983.526" Y="5517.333" Z="62.43768" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(4,31199)" >
-
 			<CustomBehavior File="FlyTo" X="3034.689" Y="5576.127" Z="75.41873" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(4,31199)" >
-
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" ObjectType="GameObject" QuestId="31199" MobId="213311" CollectionDistance="200" X="3029.808" Y="5582.784" Z="75.59239" />
 			</While>
 		</If>
@@ -671,34 +655,27 @@
 			<CustomBehavior File="FlyTo" X="2805.021" Y="6154.779" Z="75.1567" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(2,31198)" >
-
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213305" CollectionDistance="200" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(1,31198)" >
-
 			<CustomBehavior File="FlyTo" X="2435.171" Y="5721.392" Z="63.7044" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(1,31198)" >
-
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213304" CollectionDistance="200" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(3,31198)" >
-
 			<CustomBehavior File="FlyTo" X="2678.543" Y="5850.164" Z="106.0402" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(3,31198)" >
-
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213309" CollectionDistance="200" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(4,31198)" >
-
 			<CustomBehavior File="FlyTo" X="2952.004" Y="5477.272" Z="68.28373" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(4,31198)" >
-
 				<CustomBehavior File="InteractWith" Range="5" WaitForNpcs="False" ObjectType="GameObject" QuestId="31198" MobId="213306" CollectionDistance="200" />
 			</While>
 		</If>
@@ -712,33 +689,27 @@
 			<CustomBehavior File="FlyTo" X="2800.912" Y="5876.463" Z="138.1241" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(1,31200)" >
-
 				<RunTo X="2800.912" Y="5876.463" Z="138.1241" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(3,31200)" >
-
 			<CustomBehavior File="FlyTo" X="2849.064" Y="5716.589" Z="126.1583" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(3,31200)" >
-
 				<RunTo X="2849.064" Y="5716.589" Z="126.1583" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(4,31200)" >
-
 			<CustomBehavior File="FlyTo" X="2970.775" Y="5814.73" Z="81.08456" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(4,31200)" >
-
 				<RunTo X="2970.775" Y="5814.73" Z="81.08456" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(5,31200)" >
-
 			<CustomBehavior File="FlyTo" X="2906.76" Y="5867.02" Z="127.52" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(5,31200)" >
@@ -747,11 +718,9 @@
 			</While>
 		</If>
 		<If Condition="!IsObjectiveComplete(2,31200)" >
-
 			<CustomBehavior File="FlyTo" X="2743.37" Y="5703.776" Z="76.66451" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="!IsObjectiveComplete(2,31200)" >
-
 				<RunTo X="2743.37" Y="5703.776" Z="76.66451" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86532)" WaitTime="2000" />
 			</While>
@@ -783,7 +752,6 @@
 		<CustomBehavior File="FlyTo" X="3739.57" Y="5383.41" Z="144.41" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(31048)" >
-
 			<CustomBehavior File="InteractWith" ObjectType="GameObject" QuestId="31048" MobId="212324" CollectionDistance="10000" />
 		</While>
 	</If>
@@ -914,11 +882,10 @@
 		<CustomBehavior File="Message" Text="Starting The Enemy of My Enemy...Is Still My Enemy" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31119" LootMobs="True" PullDistance="1" />
 		<While Condition="!IsQuestCompleted(31119)" >
-
 			<CustomBehavior File="FlyTo" X="2911.838" Y="3474.233" Z="377.3546" />
 			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="(GetItemCount(84762) &lt; 10)" >
-				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="212877" NumOfTimes="1" Range="5" WaitTime="100" CollectionDistance="2000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="212877" IgnoreMobsInBlackspots="True" NumOfTimes="1" Range="5" WaitTime="100" CollectionDistance="2000" WaitForNpcs="False" />
 			</While>
 			<CustomBehavior File="FlyTo" X="2704.885" Y="3608.939" Z="315.2162" />
 			<While Condition="(GetItemCount(84762) &gt; 1) &amp;&amp; !IsQuestCompleted(31119)" >
@@ -964,7 +931,6 @@
 		<CustomBehavior File="ForcedDismount"/>
 		<Objective QuestName="Spirit Dust" QuestId="31116" Type="CollectItem" ItemId="84727" CollectCount="32"/>
 		<While Condition="!IsQuestCompleted(31116)" >
-
 			<CustomBehavior File="UserSettings" QuestId="31116" LootMobs="True" PullDistance="10" />
 			<CustomBehavior File="InteractWith" IgnoreCombat="True" CollectionDistance="5000" ObjectType="GameObject" MobId="212779" WaitForNpcs="False" />
 		</While>
@@ -1116,6 +1082,11 @@
 		<CustomBehavior File="InteractWith" MobId="62304" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<If Condition="HasQuestAvailable(62304)" >
+			<CustomBehavior File="InteractWith" MobId="62304" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</If>
 	</While>
 
 <!-- Ling of the Six Pools -->
@@ -1123,6 +1094,11 @@
 		<CustomBehavior File="InteractWith" MobId="63614" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<If Condition="HasQuestAvailable(63614)" >
+			<CustomBehavior File="InteractWith" MobId="63614" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</If>
 	</While>
 
 <!-- Master Snowdrift -->
@@ -1130,6 +1106,11 @@
 		<CustomBehavior File="InteractWith" MobId="63009" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<If Condition="HasQuestAvailable(63009)" >
+			<CustomBehavior File="InteractWith" MobId="63009" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		</If>
 	</While>
 
 <!-- In Sprite of Everything -->
