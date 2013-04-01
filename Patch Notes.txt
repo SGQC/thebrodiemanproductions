@@ -1,5 +1,11 @@
 Patch Notes
 
+4/1/13
+
+r146
+Za'Tual (Horde)
+-- Heinous Sacrifice - Corrected MobIds
+
 3/31/13
 
 r145
