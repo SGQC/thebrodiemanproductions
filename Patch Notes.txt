@@ -2,6 +2,15 @@ Patch Notes
 
 4/1/13
 
+r150
+Thunder Forge (Horde)
+-- Added Maximum Capacitor
+-- Added Forge Ahead!
+-- Added Save our Scouts (MISSING ALL XYZs ON SCOUTS TO SAVE, THIS QUEST IS BROKEN UNTIL UPDATED)
+Isle of Thunder (Horde)
+-- Added more quests to the "use assignment map" check
+-- Added Thunder Forge (Phase 4) support
+
 r149
 The Anglers
 -- Added dismount call to each quest giver if they have quests
