@@ -2,6 +2,10 @@ Patch Notes
 
 4/1/13
 
+r147
+Thunder Forge (Alliance)
+-- Extended waitime on item usage
+
 r146
 Za'Tual (Horde)
 -- Heinous Sacrifice - Corrected MobIds
