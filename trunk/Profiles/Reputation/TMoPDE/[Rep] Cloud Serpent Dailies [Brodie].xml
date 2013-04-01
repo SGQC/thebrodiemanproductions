@@ -307,7 +307,7 @@
 
 <CustomBehavior File="Message" Text="Compiling Cloud Serpent Quests..." LogColor="Green"  />
 
-	<If Condition="!IsQuestCompleted(30142)" >
+	<If Condition="!IsQuestCompleted(30139) || !IsQuestCompleted(30140) || !IsQuestCompleted(30141)" >
 		<CustomBehavior File="Message" Text="Loading Cloud Serpent Prequest Profile" LogColor="Green"  />
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Cloud Serpent PreReqs [Brodie]" />
 	</If>

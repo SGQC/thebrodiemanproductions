@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r140</Name>
+	<Name>Dominance Offensive r145</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -921,14 +921,14 @@
 <!-- Kaelis Sunsoar -->
 	<While Condition="HasQuestAvailable(68274)" >
 		<CustomBehavior File="InteractWith" MobId="68274" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton5" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Ogudei's Lieutenants -->
 	<If Condition="HasQuest(32343) &amp;&amp; !IsQuestCompleted(32343)">
 		<CustomBehavior File="Message" Text="Starting Ogudei's Lieutenants" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32343" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32343" UseMount="False" LootMobs="True" PullDistance="15" />
 		<Objective QuestName="Ogudei's Lieutenants" QuestId="32343" Type="CollectItem" ItemId="92736" CollectCount="1" />
 		<Objective QuestName="Ogudei's Lieutenants" QuestId="32343" Type="CollectItem" ItemId="92735" CollectCount="1" />
 	</If>
@@ -936,7 +936,7 @@
 <!-- The Spirit Trap -->
 	<If Condition="HasQuest(32342) &amp;&amp; !IsQuestCompleted(32342)">
 		<CustomBehavior File="Message" Text="Starting The Spirit Trap" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32342" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32342" UseMount="False" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="CollectThings" QuestId="32342" MobId="68061" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="60" >
 			<Hotspot X="-776.16" Y="-937.45" Z="-64.27" />
 			<Hotspot X="-692.05" Y="-988.52" Z="-70.44" />
@@ -948,28 +948,28 @@
 <!-- We're Not Monsters! -->
 	<If Condition="HasQuest(32345) &amp;&amp; !IsQuestCompleted(32345)">
 		<CustomBehavior File="Message" Text="Starting We're Not Monsters" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32345" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32345" UseMount="False" LootMobs="True" PullDistance="15" />
 		<Objective QuestName="We're Not Monsters" QuestId="32345" Type="KillMob" MobId="68074" KillCount="14" />
 	</If>
 	
 <!-- It Is a Mystery -->
 	<If Condition="HasQuest(32344) &amp;&amp; !IsQuestCompleted(32344)">
 		<CustomBehavior File="Message" Text="Starting It Is A Mystery" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32344" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="32344" UseMount="False" LootMobs="True" PullDistance="1" />
 		<RunTo X="-638.0913" Y="-925.3087" Z="-64.07933" />
 	</If>
 	
 <!-- Kick 'em While They're Down -->
 	<If Condition="HasQuest(32348) &amp;&amp; !IsQuestCompleted(32348)">
 		<CustomBehavior File="Message" Text="Starting Kick 'em While They're Down" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32348" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32348" UseMount="False" LootMobs="True" PullDistance="15" />
 		<Objective QuestName="Kick 'em While They're Down" QuestId="32348" Type="KillMob" MobId="67297" MobId2="68310" KillCount="12" />
 	</If>
 
 <!-- Legacy of Ogudei -->
 	<If Condition="HasQuest(32120) &amp;&amp; !IsQuestCompleted(32120)">
 		<CustomBehavior File="Message" Text="Starting Legacy of Ogudei" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32120" LootMobs="True" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32120" UseMount="False" LootMobs="True" PullDistance="15" />
 		<Objective QuestName="Legacy of Ogudei" QuestId="32120" Type="CollectItem" ItemId="92704" CollectCount="5" />
 	</If>
 	
@@ -980,6 +980,7 @@
 				HasQuest(32344) &amp;&amp; IsQuestCompleted(32344) ||
 				HasQuest(32120) &amp;&amp; IsQuestCompleted(32120)" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Lower Ogudei." LogColor="Green"  />
+		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="True" PullDistance="1" />
 		<RunTo X="-681.50" Y="-873.57" Z="-84.43" />
 	</If>
 	
@@ -1005,6 +1006,12 @@
 	
 	<If Condition="HasQuest(32344) &amp;&amp; IsQuestCompleted(32344)" >
 		<TurnIn QuestName="It Is A Mystery" QuestId="32344" TurnInName="Kaelis Sunsoar" TurnInId="68274" />
+	</If>
+	
+	<If Condition="Me.Location.Distance(new WoWPoint(-681.36, -873.96, -84.45)) &lt; 30" >
+		<RunTo X="-684.42" Y="-875.02" Z="-84.48" />
+		<CustomBehavior File="InteractWith" MobId="216492" ObjectType="GameObject" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
 	<If Condition="HasQuest(32214) &amp;&amp; IsQuestCompleted(32214) ||

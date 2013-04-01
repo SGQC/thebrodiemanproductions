@@ -2,6 +2,15 @@ Patch Notes
 
 3/31/13
 
+r145
+Golden Lotus
+-- Mogu Rune of Fate support in but not on (Alliance)
+Cloud Serpent
+-- Changed PreReq check from final quest to egg pickups (2nd to last) quest
+Dominance Offensive
+-- Ogudei Cave - Quest pickups fixed
+-- Ogudei Cave - Return thru portal set
+
 r144
 The Tillers
 -- Updated Inherit the Earth, you must have farm fully expanded
