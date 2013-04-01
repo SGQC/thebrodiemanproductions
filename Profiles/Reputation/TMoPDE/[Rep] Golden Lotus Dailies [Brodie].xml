@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r140</Name>
+	<Name>The Golden Lotus r145</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -643,6 +643,43 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
+	
+<!--
+	<If Condition="Me.IsAlliance" >
+		<If Condition="!HasQuest(32719) &amp;&amp; !IsQuestCompleted(32719)" >
+			<CustomBehavior File="Message" Text="Starting Mogu Runes of Fate" LogColor="Green" />
+			<If Condition="Random(100) &lt; 33">
+				<CustomBehavior File="FlyTo" DestName="Alliance Starter 1" X="944.6064" Y="339.0539" Z="455.8447" />   
+			<ElseIf Condition="Random(100) &lt; 66"> 
+				<CustomBehavior File="FlyTo" DestName="Alliance Starter 2" X="946.3147" Y="334.8687" Z="456.0771" />
+			</ElseIf>
+			<Else>
+				<CustomBehavior File="FlyTo" DestName="Alliance Starter 3" X="950.6328" Y="350.7334" Z="455.12" /> 
+			</Else>
+			</If>
+			<CustomBehavior File="ForcedDismount" />
+			<RunTo X="909.771" Y="316.0804" Z="456.5158" />
+			<While Condition="HasQuestAvailable(64029)" >
+				<CustomBehavior File="InteractWith"  MobId="64029" WaitTime="3000" /> 
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" /> 
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			</While>
+		</If>
+		
+		<If Condition="HasQuest(32719) &amp;&amp; !IsQuestCompleted(32719)" >
+			<CustomBehavior File="Message" Text="Don't have enough marks, coming back later." LogColor="Green" />
+			<CustomBehavior File="Misc\RunLua" Lua="ClearTarget()" />
+			<RunTo X="963.9176" Y="350.7879" Z="450.1089" />
+		</If>
+		
+		<If Condition="HasQuest(32719) &amp;&amp; IsQuestCompleted(32719)" >
+			<CustomBehavior File="Message" Text="Attempting to turn in 'Mogu Runes of Fate'" LogColor="Green"  />
+			<TurnIn QuestName="Mogu Runes of Fate" QuestId="32719" TurnInName="Elder Lin" TurnInId="64029" />
+			<CustomBehavior File="Misc\RunLua" Lua="ClearTarget()" />
+			<RunTo X="963.9176" Y="350.7879" Z="450.1089" />
+		</If>
+	</If> -->
 	
 <!--
 	<CustomBehavior File="ForcedDismount" />
