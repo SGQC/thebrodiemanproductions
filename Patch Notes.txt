@@ -2,6 +2,17 @@ Patch Notes
 
 4/1/13
 
+r149
+The Anglers
+-- Added dismount call to each quest giver if they have quests
+Shado Pan
+-- Shortened quest pickup code
+-- Added Blackspots
+-- Enemy of my Enemy is... - Ignore Mobs in blackspots added
+-- Added secondary quest pickup code to phase 2 (boss phase) in case you became eligible for new partner during dailies
+Thunder Bosses
+-- Added missing turn in support for Imposing Threat
+
 r148
 Golden Lotus
 -- Striking First - Converted CollectThings from 100 yds from player to 100 yds at point

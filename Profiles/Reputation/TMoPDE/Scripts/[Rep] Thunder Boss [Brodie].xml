@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r140</Name>
+	<Name>Thunder Bosses r149</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -359,6 +359,10 @@
 	
 	<If Condition="HasQuest(32562) &amp;&amp; IsQuestCompleted(32562)">
 		<TurnIn QuestName="Imposing Threat" QuestId="32562" TurnInName="Lor'themar Theron" TurnInId="67990" />
+	</If>
+	
+	<If Condition="HasQuest(32522) &amp;&amp; IsQuestCompleted(32522)">
+		<TurnIn QuestName="Imposing Threat" QuestId="32522" TurnInName="Lor'themar Theron" TurnInId="67990" />
 	</If>
 	
 	<If Condition="HasQuest(32521) &amp;&amp; IsQuestCompleted(32521)">
