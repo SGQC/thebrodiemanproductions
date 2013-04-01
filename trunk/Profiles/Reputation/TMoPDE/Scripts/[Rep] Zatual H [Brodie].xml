@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Horde) r135</Name>
+	<Name>Za'Tual (Horde) r146</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -147,12 +147,12 @@
 			</While>
 			<While Condition="!IsObjectiveComplete(3,32215)" >
 				<RunTo X="5981.98" Y="6054.16" Z="58.59" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217202" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217203" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
 				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218426" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 			<While Condition="!IsObjectiveComplete(2,32215)" >
 				<RunTo X="6348.41" Y="6015.33" Z="29.35" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217203" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217202" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
 				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218425" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 		</While>
