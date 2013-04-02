@@ -2,6 +2,14 @@ Patch Notes
 
 4/1/13
 
+r151
+The Tillers
+-- Added A Very Nice Necklace
+-- Added Tina's Tasteful Tiara
+-- Added An Exquisite Earring
+-- Added A Beautiful Brooch
+-- Added more code towards friend's turnins (not ready yet)
+
 r150
 Thunder Forge (Horde)
 -- Added Maximum Capacitor
