@@ -2,6 +2,10 @@ Patch Notes
 
 4/1/13
 
+r152
+Dominance Offensive
+-- Bug Off - added missing HP determinate
+
 r151
 The Tillers
 -- Added A Very Nice Necklace
