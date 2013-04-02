@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r145</Name>
+	<Name>Dominance Offensive r152</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -612,7 +612,7 @@
 		<CustomBehavior File="FlyTo" X="-2035.62" Y="1904.40" Z="0.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32236)" >
-			<CustomBehavior File="CombatUseItemOnV2" QuestId="32236" MobId="67759" ItemId="93026" UseItemStrategy="UseItemContinuouslyOnTarget" X="-2035.62" Y="1904.40" Z="0.44" />
+			<CustomBehavior File="CombatUseItemOnV2" QuestId="32236" MobId="67759" ItemId="93026" UseWhenMobHasHealthPercent="100" UseItemStrategy="UseItemContinuouslyOnTarget" X="-2035.62" Y="1904.40" Z="0.44" />
 		</While>
 	</If>
 
