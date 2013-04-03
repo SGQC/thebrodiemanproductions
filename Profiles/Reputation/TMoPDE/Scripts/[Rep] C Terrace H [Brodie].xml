@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Horde) r139</Name>
+	<Name>Conqueror's Terrace (Horde) r153</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -156,12 +156,26 @@
 		<CustomBehavior File="Message" Text="Starting They All Fall Down" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
 		<While Condition="!IsQuestCompleted(32493)" >
-			<CustomBehavior File="UseItemOn" QuestId="32493" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" >
-				<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
-				<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
-				<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
-				<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
-			</CustomBehavior>
+			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 69335 &amp;&amp; !u.IsAlive &amp;&amp; u.Distance &lt;= 150))" >
+				<CustomBehavior File="UseItemOn" QuestId="32493" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" CollectionDistance="1000" >
+					<HuntingGrounds>
+						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
+						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
+						<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
+						<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
+					</HuntingGrounds>
+				</CustomBehavior>
+			<Else>
+				<CustomBehavior File="InteractWith" QuestId="32493" MobId="69335" MobState="Alive" WaitForNpcs="False" WaitTime="100" CollectionDistance="1000" >
+					<HuntingGrounds>
+						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
+						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
+						<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
+						<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
+					</HuntingGrounds>
+				</CustomBehavior>
+			</Else>
+			</If>
 		</While>
 	</If>
 	

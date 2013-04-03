@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r125</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>Ruins of Guo-Lai r153</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -242,7 +242,7 @@
 		<CustomBehavior File="FlyTo" X="1426.496" Y="1677.714" Z="344.2368" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(30204)">
-			<CustomBehavior File="UseItemTargetLocation" ItemId="85261" UseType="ToObject" ObjectId="210376" ObjectType="GameObject" Range="15" />
+			<CustomBehavior File="UseItemTargetLocation" ItemId="85261" UseType="ToObject" ObjectId="210376" ObjectType="GameObject" CollectionDistance="1000" Range="15" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		</While>
 	</If>

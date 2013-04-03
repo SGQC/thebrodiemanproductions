@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Alliance) r129</Name>
+	<Name>Conqueror's Terrace (Alliance) r153</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -141,7 +141,7 @@
 	<If Condition="HasQuest(32556) &amp;&amp; !IsQuestCompleted(32556)" >
 		<CustomBehavior File="Message" Text="Starting The More You Know" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<CustomBehavior File="CollectThings" QuestId="32556" CollectUntil="QuestComplete" ObjectId="218049" ObjectId2="218050" ObjectId3="218052" ObjectId4="218053" HuntingGroundRadius="100" NonCompeteDistance="5" >
+		<CustomBehavior File="CollectThings" QuestId="32556" CollectUntil="QuestComplete" ObjectId="218049" ObjectId2="218050" ObjectId3="218052" ObjectId4="218053" HuntingGroundRadius="100" NonCompeteDistance="5" Range="5" >
 			<Hotspot X="6587.73" Y="5200.61" Z="32.91" />
 			<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
 			<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
@@ -163,12 +163,26 @@
 		<CustomBehavior File="Message" Text="Starting Centuries in Sentries" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
 		<While Condition="!IsQuestCompleted(32555)" >
-			<CustomBehavior File="UseItemOn" QuestId="32555" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" >
-				<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
-				<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
-				<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
-				<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
-			</CustomBehavior>
+			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 69335 &amp;&amp; !u.IsAlive &amp;&amp; u.Distance &lt;= 150))" >
+				<CustomBehavior File="UseItemOn" QuestId="32555" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" CollectionDistance="1000" >
+					<HuntingGrounds>
+						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
+						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
+						<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
+						<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
+					</HuntingGrounds>
+				</CustomBehavior>
+			<Else>
+				<CustomBehavior File="InteractWith" QuestId="32555" MobId="69335" MobState="Alive" WaitForNpcs="False" WaitTime="100" CollectionDistance="1000" >
+					<HuntingGrounds>
+						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
+						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
+						<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
+						<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
+					</HuntingGrounds>
+				</CustomBehavior>
+			</Else>
+			</If>
 		</While>
 	</If>
 	
