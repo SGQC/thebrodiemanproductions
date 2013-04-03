@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r148</Name>
+	<Name>The Golden Lotus r154</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -296,11 +296,11 @@
 	<If Condition="(HasQuest(31758) &amp;&amp; !IsQuestCompleted(31758))" >
 		<CustomBehavior File="Message" Text="Starting Laosy Scouting" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31758" LootMobs="True" PullDistance="1" />
-		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.93" Z="427.23" />
+		<CustomBehavior File="FlyTo" X="1667.50" Y="1364.39" Z="473.09" />
 		<While Condition="!IsQuestCompleted(31758)" >
 			<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="5" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" Range="5" CollectionDistance="10" WaitForNpcs="False" />
 		</While>
 	</If>
 
