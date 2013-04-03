@@ -2,6 +2,12 @@ Patch Notes
 
 4/2/13
 
+r154
+Golden Lotus
+-- Update to Laosy Scouting FlyTo Start point
+Quest Behaviors
+-- Update to Laosy Scouting FlyTo nav points (attempt to fix pathing issue of being in air)
+
 r153
 Ruins of Guo-Lai
 -- That's Not a Rock - Increased CollectionDistance from default to 1000, should stand still less.

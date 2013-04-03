@@ -35,8 +35,8 @@ namespace Blastranaar
         private bool _isBehaviorDone;
         public int MobIdLao = 65868;
         private Composite _root;
-        public WoWPoint Location1 = new WoWPoint(1578.80, 1446.31, 465.0);
-        public WoWPoint Location2 = new WoWPoint(1574.71, 1428.84, 465.0);
+        public WoWPoint Location1 = new WoWPoint(1573.43, 1432.78, 441.81);
+        public WoWPoint Location2 = new WoWPoint(1572.78, 1254.33, 456.19);
         public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
         public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
 		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }
@@ -123,7 +123,7 @@ namespace Blastranaar
                           return RunStatus.Success;
 			})),
                     	new Decorator(ret => Lao.Count == 0, new PrioritySelector(
-                    	  new Decorator(ret => Location1.Distance(Me.Location) > 50  && Me.CurrentTarget == null, new Action(c =>
+                    	  new Decorator(ret => Location1.Distance(Me.Location) > 30  && Me.CurrentTarget == null, new Action(c =>
 			  {
 			  TreeRoot.StatusText = "Moving to 1st location";
 			  Flightor.MoveTo(Location1);
