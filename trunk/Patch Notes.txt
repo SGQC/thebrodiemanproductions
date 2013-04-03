@@ -1,5 +1,13 @@
 Patch Notes
 
+4/2/13
+
+r153
+Ruins of Guo-Lai
+-- That's Not a Rock - Increased CollectionDistance from default to 1000, should stand still less.
+Conqueror's Terrace
+-- They All Fall Down/Centuries of Sentries - Added interactions to hunt down live sentries if no dead ones nearby
+
 4/1/13
 
 r152
