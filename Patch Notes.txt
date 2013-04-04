@@ -1,5 +1,31 @@
 Patch Notes
 
+4/3/13
+
+r155
+The Tillers
+-- Added check for work orders
+-- Added Work Order: Golden Lotus II
+-- Added Work Order: Dominance Offensive II
+-- Added Work Order: Operation Shieldwall II
+-- Added Work Order: Shado-Pan II
+-- Added Work Order: The August Celestials II
+-- Added Work Order: The Klaxxi II
+Farm Dailies
+-- Code Cleanup
+-- Added check for work orders
+-- Added Work Order: Golden Lotus I
+-- Added Work Order: Dominance Offensive I
+-- Added Work Order: Operation Shieldwall I
+-- Should no longer use sprinkers, watering can, zappers or sprayers UNLESS there is a bush around that needs it (more shortening coming soon)
+-- Adjusted RunTo for Tangled plants, should be able to clear all 16 plots now
+Isle of Thunder (Alliance)
+-- Support for Assignment Map, phase 5
+Thunder Forge (Alliance)
+-- Added Taoshi pickup support (Phase 5)
+Stormsea Landing (Alliance)
+-- Added Extended Shore Leave (Presently bugged in game)
+
 4/2/13
 
 r154

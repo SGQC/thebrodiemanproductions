@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Alliance) r147</Name>
+	<Name>Thunder Forge (Alliance) r155</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -136,18 +136,18 @@
 		<CustomBehavior File="Message" Text="Starting On Her Magic-ey Secret Service" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32588" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<While Condition="!IsQuestCompleted(32588)" >
-			<If Condition="!IsObjectiveComplete(3,32588)" >
+			<While Condition="!IsObjectiveComplete(3,32588)" >
 				<RunTo X="7389.191" Y="5532.316" Z="50.32116" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" WaitTime="6000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(2,32588)" >
+			</While>
+			<While Condition="!IsObjectiveComplete(2,32588)" >
 				<RunTo X="7358.583" Y="5575.728" Z="29.44196" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" WaitTime="6000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(1,32588)" >
+			</While>
+			<While Condition="!IsObjectiveComplete(1,32588)" >
 				<RunTo X="7303.608" Y="5605.65" Z="31.16815" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" WaitTime="6000" />
-			</If>
+			</While>
 			<If Condition="!IsObjectiveComplete(4,32588)" >
 				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32588"
 					EventX="7312.25" EventY="5365.44" EventZ="47.85"
@@ -211,6 +211,13 @@
 <!-- Scout Captain Daelin -->
 	<While Condition="HasQuestAvailable(70552)" >
 		<CustomBehavior File="InteractWith" MobId="70552" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+	</While>
+	
+<!-- Taoshi -->
+	<While Condition="HasQuestAvailable(69413)" >
+		<CustomBehavior File="InteractWith" MobId="69413" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

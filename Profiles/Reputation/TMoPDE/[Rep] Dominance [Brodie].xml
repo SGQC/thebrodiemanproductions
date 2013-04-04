@@ -32,8 +32,6 @@
 
 <!-- Quest Overrides -->
 
-
-
 <!-- Death on Two Legs -->
    	<Quest Id="32123" Name="Death on Two Legs">
 		<Objective Type="KillMob" MobId="67354" MobId2="67425" MobId3="67913" KillCount="10">
