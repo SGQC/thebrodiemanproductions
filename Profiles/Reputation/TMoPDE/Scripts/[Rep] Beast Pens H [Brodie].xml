@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Horde) r121</Name>
+	<Name>The Beast Pens (Horde) r157</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -25,6 +25,7 @@
 	</Vendors>
   
 	<AvoidMobs>
+		<Mob Name="Horned Battlebeast" Entry="69142" />
 	</AvoidMobs>
    
 	<Blackspots>
