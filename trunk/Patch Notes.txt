@@ -1,5 +1,15 @@
 Patch Notes
 
+4/4/13
+
+r157
+Tillers PreReqs
+-- Added call back to Tillers Dailies
+The Tillers
+-- Added Learn and Grow (Day 2 only) support to avoid endless loop
+Beast Pens
+-- Added AvoidMob Horned Battlebeast
+
 4/3/13
 
 r156

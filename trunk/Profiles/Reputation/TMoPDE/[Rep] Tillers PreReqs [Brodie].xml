@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs r142</Name>
+	<Name>Tillers PreReqs r157</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -139,7 +139,7 @@
 			<CustomBehavior File="Message" Text="Checking for plant." LogColor="Green" />
 			<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="63165" NumOfTimes="1" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="63165" NumOfTimes="16" WaitForNpcs="False" />
 		<Else>
 			<If Condition="!HasItem(80591)" >
 				<CustomBehavior File="Message" Text="I don't have the seed I need. Going to buy one." LogColor="LawnGreen" />
@@ -199,12 +199,8 @@
 		</Else>
 		</If>
 	</If>
-
-	<If Condition="HasQuest(31945) &amp;&amp; IsQuestCompleted(31945)" >
-		<TurnIn QuestName="Learn and Grow VI: Gina's Vote" QuestId="31945" TurnInName="Gina Mudclaw" TurnInId="58706" X="-259.5399" Y="592.5469" Z="167.5478" />
-		<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
-		<CustomBehavior File="WaitTimer" WaitTime="15000" />
-	</If>
+	
+	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Tillers PreReqs! You Should Be Set!" />
 

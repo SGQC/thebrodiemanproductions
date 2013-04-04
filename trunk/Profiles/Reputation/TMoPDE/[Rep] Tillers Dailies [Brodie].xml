@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r155</Name>
+	<Name>The Tillers r157</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -326,7 +326,7 @@
 	</If>
 	
 	<If Condition="!IsQuestCompleted(30257) || (HasQuest(30535) || HasQuest(30254) ||
-					HasQuest(30255) || HasQuest(30256) || HasQuest(30257) || HasQuest(31945))" >
+					HasQuest(30255) || HasQuest(30256) || HasQuest(30257))" >
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers PreReqs [Brodie]" />
 	</If>
 	
@@ -606,6 +606,21 @@
 					HasQuest(32642) || HasQuest(32653) || HasQuest(32658) || HasQuest(32649)" >
 		<CustomBehavior File="Message" Text="Starting The Seed/Work Order Daily." LogColor="Green"  />
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Farm Dailies [Brodie]" /> 
+	</If>
+	
+	<If Condition="HasQuest(31945) &amp;&amp; !IsQuestCompleted(31945)" >
+		<If Condition="IsObjectiveComplete(1,31945)" >
+			<CustomBehavior File="Message" Text="Checking for plant." LogColor="Green" />
+			<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="InteractWith" MobId="63165" NumOfTimes="16" WaitForNpcs="False" />
+		</If>
+	</If>
+	
+	<If Condition="HasQuest(31945) &amp;&amp; IsQuestCompleted(31945)" >
+		<TurnIn QuestName="Learn and Grow VI: Gina's Vote" QuestId="31945" TurnInName="Gina Mudclaw" TurnInId="58706" X="-259.5399" Y="592.5469" Z="167.5478" />
+		<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
+		<CustomBehavior File="WaitTimer" WaitTime="15000" />
 	</If>
 	
 	<If Condition="HasQuest(32648) || HasQuest(32646) || HasQuest(32643) || HasQuest(32654) || HasQuest(32659) ||
