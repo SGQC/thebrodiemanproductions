@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming/Work Order Daily r155</Name>
+	<Name>Farming/Work Order Daily r156</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -1058,10 +1058,6 @@
 				<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
 				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
 				<CustomBehavior File="ForcedDismount" />
-				<If Condition="!HasItem(80593) || (GetItemCount(80593) &lt; 8)" >
-				<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
-				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
-				<CustomBehavior File="ForcedDismount" />
 				<If Condition="(GetItemCount(80593) &lt; 1)" >
 					<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="80593" BuyItemCount="8" />
 				<ElseIf Condition="(GetItemCount(80593) &lt; 2)" >
@@ -1175,10 +1171,6 @@
 				<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
 				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
 				<CustomBehavior File="ForcedDismount" />
-				<If Condition="!HasItem(89326) || (GetItemCount(89326) &lt; 8)" >
-				<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
-				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
-				<CustomBehavior File="ForcedDismount" />
 				<If Condition="(GetItemCount(89326) &lt; 1)" >
 					<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="89326" BuyItemCount="8" />
 				<ElseIf Condition="(GetItemCount(89326) &lt; 2)" >
@@ -1278,6 +1270,10 @@
 				<!-- Deleting farm tools -->
 				<CustomBehavior File="DeleteItems" Ids="80513,79104"/>
 			</While>
+		</If>
+		
+		<If Condition="HasQuest(32645) &amp;&amp; IsQuestCompleted(32645)" >
+				<CustomBehavior File="CompleteLogQuest" QuestId="32645" />
 		</If>
 
 	<!-- Check for Bursting Plants -->

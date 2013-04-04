@@ -2,6 +2,10 @@ Patch Notes
 
 4/3/13
 
+r156
+Farm Dailies
+-- Deleted erroneous duplications of code within new Work Orders
+
 r155
 The Tillers
 -- Added check for work orders
