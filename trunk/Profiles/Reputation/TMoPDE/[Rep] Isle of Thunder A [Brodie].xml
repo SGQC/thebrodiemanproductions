@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r140</Name>
+	<Name>Isle of Thunder (Alliance) r155</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -103,8 +103,11 @@
 					!HasQuest(32555) &amp;&amp; !HasQuest(32558) &amp;&amp; !HasQuest(32560) &amp;&amp; !HasQuest(32586) &amp;&amp;
 					!HasQuest(32587) &amp;&amp; !HasQuest(32588))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
-		<If Condition="IsQuestCompleted(32652)" >
+		<If Condition="IsQuestCompleted(32655)" >
+			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(64)" />
+		<ElseIf Condition="IsQuestCompleted(32652)" >
 			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(62)" />
+		</ElseIf>
 		<Else>
 			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
 		</Else>
@@ -173,6 +176,9 @@
 		</If>
 		<If Condition="HasQuest(32588) || HasQuest(32586) || HasQuest(32587)" >
 			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Forge A [Brodie]" />
+		</If>
+		<If Condition="HasQuest(32607)" >
+			<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Stormsea Landing A [Brodie]" />
 		</If>
 	<ElseIf Condition="!IsQuestCompleted(32644)" >
 		<If Condition="HasQuest(32733) || HasQuest(32541) || HasQuest(32540) || HasQuest(32543) ||
