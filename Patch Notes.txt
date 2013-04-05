@@ -1,5 +1,11 @@
 Patch Notes
 
+4/5/13
+
+r158
+Isle of Thunder
+-- Changed quest accept code from Assignment map - Should now always select regardless of phase
+
 4/4/13
 
 r157
