@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r155</Name>
+	<Name>Isle of Thunder (Alliance) r158</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -103,15 +103,7 @@
 					!HasQuest(32555) &amp;&amp; !HasQuest(32558) &amp;&amp; !HasQuest(32560) &amp;&amp; !HasQuest(32586) &amp;&amp;
 					!HasQuest(32587) &amp;&amp; !HasQuest(32588))" >
 		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
-		<If Condition="IsQuestCompleted(32655)" >
-			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(64)" />
-		<ElseIf Condition="IsQuestCompleted(32652)" >
-			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(62)" />
-		</ElseIf>
-		<Else>
-			<CustomBehavior File="Misc\RunLua" Lua="SendQuestChoiceResponse(58)" />
-		</Else>
-		</If>
+		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption1.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 
