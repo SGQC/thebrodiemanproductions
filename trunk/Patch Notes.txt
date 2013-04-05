@@ -2,6 +2,11 @@ Patch Notes
 
 4/5/13
 
+r159
+Cloud Serpent
+-- Added Overrides to Disarming the Enemy, converted to Objective
+-- Correction to settings' QuestId for Preservation
+
 r158
 Isle of Thunder
 -- Changed quest accept code from Assignment map - Should now always select regardless of phase

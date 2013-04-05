@@ -100,6 +100,20 @@
 			</Hotspots>
 		</Objective>
 	</Quest>
+	
+<!-- Disarming the Enemy -->
+	<Quest Id="30158" Name="Disarming the Enemy">
+		<Objective Type="CollectItem" ItemId="79025" CollectCount="5" >
+			<CollectFrom>
+				<GameObject Name="Slitherscale Weapons" Id="210277" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2178.317" Y="-3333.267" Z="3.802965" />
+				<Hotspot X="2211.463" Y="-3299.465" Z="3.523714" />
+				<Hotspot X="2274.652" Y="-3302.124" Z="1.73271" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- The Shoe is on The Other Foot -->
 	<Quest Id="31700" Name="The Shoe is on The Other Foot">
@@ -804,7 +818,7 @@
 <!-- Preservation -->
 	<If Condition="HasQuest(30159) &amp;&amp; !IsQuestCompleted(30159)">
 		<CustomBehavior File="Message" Text="Starting Preservation" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31700" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30159" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="2204.71" Y="-3399.112" Z="1.711274" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Preservation" QuestId="30159" Type="CollectItem" ItemId="79067" CollectCount="8" />
@@ -816,12 +830,13 @@
 		<CustomBehavior File="UserSettings" QuestId="30158" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="2160.791" Y="-3346.696" Z="3.117623" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" ObjectId="210277" CollectUntil="RequiredCountReached" 
+	<!--	<CustomBehavior File="CollectThings" ObjectId="210277" CollectUntil="RequiredCountReached" 
 			CollectItemCount="5" CollectItemId="79025" NonCompeteDistance="5" HuntingGroundRadius="120" >
 			<Hotspot X="2178.317" Y="-3333.267" Z="3.802965" />
 			<Hotspot X="2211.463" Y="-3299.465" Z="3.523714" />
 			<Hotspot X="2274.652" Y="-3302.124" Z="1.73271" />
-		</CustomBehavior>
+		</CustomBehavior>-->
+		<Objective QuestName="Disarming the Enemy" QuestId="30158" Type="CollectItem" ItemId="79025" CollectCount="5" />
 	</If>
 
 <!-- Restoring the Balance -->
