@@ -2,6 +2,10 @@ Patch Notes
 
 4/6/13
 
+r168
+Golden Lotus
+-- Removed ForcedMount call after using spirit void.
+
 r167
 Beast Pens
 -- Added overrides to Compy Stomp

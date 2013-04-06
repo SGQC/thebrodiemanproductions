@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r160</Name>
+	<Name>The Golden Lotus r168</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -410,9 +410,9 @@
 					<CustomBehavior File="InteractWith" MobId="59219" CollectionDistance="4000" WaitForNpcs="False"/>
 				</If>
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<CustomBehavior File="ForcedMount" MountType="Flying" />
+				<!--<CustomBehavior File="ForcedMount" MountType="Flying" /> -->
 			</While>
-			<CustomBehavior File="InteractWith" MobId="59231" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" WaitTime="300" KeepTargetSelected="False" />
+			<CustomBehavior File="InteractWith" QuestId="30320" MobId="59231" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" WaitTime="300" KeepTargetSelected="False" />
 		</While>
 	</If>
 
