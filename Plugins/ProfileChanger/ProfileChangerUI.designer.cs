@@ -173,6 +173,7 @@ namespace ProfileChanger
             // CB2
             // 
             this.CB2.AutoSize = true;
+            this.CB2.Enabled = false;
             this.CB2.Location = new System.Drawing.Point(12, 54);
             this.CB2.Name = "CB2";
             this.CB2.Size = new System.Drawing.Size(15, 14);
@@ -182,6 +183,7 @@ namespace ProfileChanger
             // CB3
             // 
             this.CB3.AutoSize = true;
+            this.CB3.Enabled = false;
             this.CB3.Location = new System.Drawing.Point(12, 80);
             this.CB3.Name = "CB3";
             this.CB3.Size = new System.Drawing.Size(15, 14);
@@ -191,6 +193,7 @@ namespace ProfileChanger
             // CB4
             // 
             this.CB4.AutoSize = true;
+            this.CB4.Enabled = false;
             this.CB4.Location = new System.Drawing.Point(12, 106);
             this.CB4.Name = "CB4";
             this.CB4.Size = new System.Drawing.Size(15, 14);
@@ -200,6 +203,7 @@ namespace ProfileChanger
             // CB5
             // 
             this.CB5.AutoSize = true;
+            this.CB5.Enabled = false;
             this.CB5.Location = new System.Drawing.Point(12, 132);
             this.CB5.Name = "CB5";
             this.CB5.Size = new System.Drawing.Size(15, 14);
@@ -209,6 +213,7 @@ namespace ProfileChanger
             // CB6
             // 
             this.CB6.AutoSize = true;
+            this.CB6.Enabled = false;
             this.CB6.Location = new System.Drawing.Point(12, 158);
             this.CB6.Name = "CB6";
             this.CB6.Size = new System.Drawing.Size(15, 14);
@@ -218,6 +223,7 @@ namespace ProfileChanger
             // CB1
             // 
             this.CB1.AutoSize = true;
+            this.CB1.Enabled = false;
             this.CB1.Location = new System.Drawing.Point(12, 28);
             this.CB1.Name = "CB1";
             this.CB1.Size = new System.Drawing.Size(15, 14);
@@ -287,6 +293,7 @@ namespace ProfileChanger
             // CB7
             // 
             this.CB7.AutoSize = true;
+            this.CB7.Enabled = false;
             this.CB7.Location = new System.Drawing.Point(12, 184);
             this.CB7.Name = "CB7";
             this.CB7.Size = new System.Drawing.Size(15, 14);
@@ -296,6 +303,7 @@ namespace ProfileChanger
             // CB8
             // 
             this.CB8.AutoSize = true;
+            this.CB8.Enabled = false;
             this.CB8.Location = new System.Drawing.Point(12, 210);
             this.CB8.Name = "CB8";
             this.CB8.Size = new System.Drawing.Size(15, 14);
@@ -315,6 +323,7 @@ namespace ProfileChanger
             // CB10
             // 
             this.CB10.AutoSize = true;
+            this.CB10.Enabled = false;
             this.CB10.Location = new System.Drawing.Point(12, 262);
             this.CB10.Name = "CB10";
             this.CB10.Size = new System.Drawing.Size(15, 14);

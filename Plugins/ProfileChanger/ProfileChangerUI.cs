@@ -48,6 +48,26 @@ namespace ProfileChanger
             CB11.Checked = ProfileChanger.Settings.Active11;
             CB12.Checked = ProfileChanger.Settings.Active12;
 
+            if (ProfileChanger.Settings.DGProfile == "C:\\dailygrind.xml")
+            {
+                Logging.Write(Colors.Red, "Profile Changer: You must select select your DailyGrind [Brodie].xml file. Commonly located in BrodieMan\\Profiles\\Reputation\\TMoPDE");
+            }
+
+            if (ProfileChanger.Settings.DGProfile != "C:\\dailygrind.xml")
+            {
+                CB1.Enabled = true;
+                CB2.Enabled = true;
+                CB3.Enabled = true;
+                CB4.Enabled = true;
+                CB5.Enabled = true;
+                CB6.Enabled = true;
+                CB7.Enabled = true;
+                CB8.Enabled = true;
+                //CB9.Enabled = true;
+                CB10.Enabled = true;
+                //CB11.Enabled = true;
+                //CB12.Enabled = true;
+            }
 
             DG.Text = ProfileChanger.Settings.DGProfile;
 
@@ -380,6 +400,22 @@ namespace ProfileChanger
                 {
                     DG.Text = fileName1;
                 }
+            }
+
+            if (DG.Text.ToString() != "C:\\dailygrind.xml")
+            {
+                CB1.Enabled = true;
+                CB2.Enabled = true;
+                CB3.Enabled = true;
+                CB4.Enabled = true;
+                CB5.Enabled = true;
+                CB6.Enabled = true;
+                CB7.Enabled = true;
+                CB8.Enabled = true;
+                //CB9.Enabled = true;
+                CB10.Enabled = true;
+                //CB11.Enabled = true;
+                //CB12.Enabled = true;
             }
         }
 

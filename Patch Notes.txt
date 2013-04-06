@@ -1,5 +1,11 @@
 Patch Notes
 
+4/6/13
+
+r163
+Plugins
+-- ProfileChanger - Will no longer allow you to select profiles UNTIL you choose Daily Grind's location.
+
 4/5/13
 
 r162
