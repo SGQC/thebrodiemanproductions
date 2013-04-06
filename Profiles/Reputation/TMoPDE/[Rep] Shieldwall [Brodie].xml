@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r160</Name>
+	<Name>Operation Shieldwall r162</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -69,19 +69,6 @@
 				<Hotspot X="-1897.62" Y="1830.67" Z="2.48" />
 				<Hotspot X="-1913.84" Y="1753.12" Z="1.25" />
 				<Hotspot X="-1966.47" Y="1731.61" Z="1.84" />
-           	</Hotspots>
-		</Objective>
-   	</Quest>
-
-<!-- Under Pressure -->
-   	<Quest Id="32144" Name="Under Pressure">
-		<Objective Type="UseObject" ObjectId="216150" UseCount="8">
-           	<Hotspots>
-				<Hotspot X="-2119.71" Y="2538.295" Z="5.016497" />
-				<Hotspot X="-2135.023" Y="2510.699" Z="4.517229" />
-				<Hotspot X="-2156.861" Y="2537.621" Z="8.014196" />
-				<Hotspot X="-2010.381" Y="2388.725" Z="5.889823" />
-				<Hotspot X="-2163.657" Y="2362.574" Z="5.244018" />
            	</Hotspots>
 		</Objective>
    	</Quest>
@@ -503,14 +490,14 @@
 	<If Condition="HasQuest(32144) &amp;&amp; !IsQuestCompleted(32144)">
 		<CustomBehavior File="Message" Text="Starting Under Pressure" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32142" LootMobs="True" PullDistance="5" />
-		<CustomBehavior File="FlyTo" X="-2118.28" Y="2511.41" Z="4.31" />
+		<CustomBehavior File="FlyTo" X="-2008.043" Y="2392.704" Z="5.490005" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="CollectThings" QuestId="32144" CollectUntil="QuestComplete" ObjectId="216150" HuntingGroundRadius="200" NonCompeteDistance="3" PostInteractDelay="1000" >
-			<Hotspot X="-2119.71" Y="2538.295" Z="5.016497" />
-			<Hotspot X="-2135.023" Y="2510.699" Z="4.517229" />
-			<Hotspot X="-2156.861" Y="2537.621" Z="8.014196" />
-			<Hotspot X="-2010.381" Y="2388.725" Z="5.889823" />
-			<Hotspot X="-2163.657" Y="2362.574" Z="5.244018" />
+			<Hotspot X="-2008.043" Y="2392.704" Z="5.490005" />
+			<Hotspot X="-1944.545" Y="2362.576" Z="7.431448" />
+			<Hotspot X="-1860.609" Y="2309.441" Z="8.76289" />
+			<Hotspot X="-2098.098" Y="2499.457" Z="7.132452" />
+			<Hotspot X="-2160.167" Y="2359.855" Z="6.670245" />
 		</CustomBehavior>
 	<!--	<Objective QuestName="Under Pressure" QuestId="32144" Type="UseObject" ObjectId="216150" UseCount="8" /> -->
 	</If>
@@ -593,7 +580,7 @@
 		<CustomBehavior File="FlyTo" X="-1010.54" Y="-638.13" Z="13.93" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32150)" >
-			<CustomBehavior File="InteractWith" MobId="67756" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" CollectionDistance="500" />
+			<CustomBehavior File="InteractWith" MobId="67756" IgnoreCombat="True" WaitTime="100" WaitForNpcs="False" CollectionDistance="500" />
 		</While>
 	</If>
 
@@ -631,7 +618,7 @@
 
 <!-- Attack! Move! -->
 	<If Condition="HasQuest(32148) &amp;&amp; !IsQuestCompleted(32148)">
-		<CustomBehavior File="Message" Text="Starting Attack Move" LogColor="Green"  />
+		<CustomBehavior File="Message" Text="Starting Attack! Move!" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32153" LootMobs="True" PullDistance="20" />
 		<CustomBehavior File="FlyTo" X="-875.33" Y="-664.16" Z="10.51" />
 		<CustomBehavior File="ForcedDismount" />
