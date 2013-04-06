@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Horde) r167</Name>
+	<Name>The Beast Pens (Horde) r169</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -124,7 +124,7 @@
 			</CustomBehavior>
 			<RunTo X="6958.09" Y="5559.07" Z="30.73" />
 			<While Condition="HasItem(93668) &amp;&amp; !IsQuestCompleted(32298)" >
-				<CustomBehavior File="UseItemOn" QuestId="32298" MobId="58071" MobId2="69271" ItemId="93668" Range="10" CollectionDistance="1000" />
+				<CustomBehavior File="CombatUseItemOnV2" QuestId="32298" MobId="58071" MobId2="69271" MobState="Alive" UseWhenMobMissingAuraId="136483" ItemId="93668" Range="10" CollectionDistance="1000" />
 			</While>
 		</While>
 	</If>
