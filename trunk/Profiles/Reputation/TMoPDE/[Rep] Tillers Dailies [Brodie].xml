@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r160</Name>
+	<Name>The Tillers r161</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -554,6 +554,40 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
+	<If Condition="HasQuest(32648) || HasQuest(32646) || HasQuest(32643) || HasQuest(32654) || HasQuest(32659) ||
+					HasQuest(32650)" >
+		<CustomBehavior File="Message" Text="Checking for harvestable plants." LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="-180.84" Y="628.36" Z="165.41" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" MobId="58567" MobId2="60113" MobId3="66112" MobId4="66113" MobId5="63154"
+											MobId6="63156" MobId7="63184" MobId8="63185" MobId9="63249" MobId10="63250"
+											MobId11="63228" MobId12="63229" MobId13="63164" MobId14="63165" MobId15="66128"
+											MobId16="66129" MobId17="63264" MobId18="63265" MobId19="66084" MobId20="66085"
+											MobId21="66043" MobId22="65989" MobId23="66016" MobId24="65973" MobId25="66006"
+											MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
+											MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
+											MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
+											MobId41="63260" MobId42="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+		<If Condition="HasQuest(32648) &amp;&amp; IsQuestCompleted(32648)" >
+			<TurnIn QuestName="Work Order: Golden Lotus II" QuestId="32648" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
+		</If>
+		<If Condition="HasQuest(32643) &amp;&amp; IsQuestCompleted(32643)" >
+			<TurnIn QuestName="Work Order: Dominance Offensive II" QuestId="32643" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
+		</If>
+		<If Condition="HasQuest(32646) &amp;&amp; IsQuestCompleted(32646)" >
+			<TurnIn QuestName="Work Order: Operation Shieldwall II" QuestId="32646" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
+		</If>
+		<If Condition="HasQuest(32650) &amp;&amp; IsQuestCompleted(32650)" >
+			<TurnIn QuestName="Work Order: Shado-Pan II" QuestId="32650" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
+		</If>
+		<If Condition="HasQuest(32657) &amp;&amp; IsQuestCompleted(32657)" >
+			<TurnIn QuestName="Work Order: The August Celestials II" QuestId="32657" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
+		</If>
+		<If Condition="HasQuest(32659) &amp;&amp; IsQuestCompleted(32659)" >
+			<TurnIn QuestName="Work Order: The Klaxxi II" QuestId="32659" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
+		</If>
+	</If>
+	
 <!-- Farm Posting -->
 	<If Condition="IsQuestCompleted(32682) &amp;&amp; ((!HasQuest(32645) || !HasQuest(32646)) &amp;&amp;
 				(!HasQuest(32647) || !HasQuest(32648)) &amp;&amp; (!HasQuest(32642) || !HasQuest(32643)) &amp;&amp;
@@ -621,40 +655,6 @@
 		<TurnIn QuestName="Learn and Grow VI: Gina's Vote" QuestId="31945" TurnInName="Gina Mudclaw" TurnInId="58706" X="-259.5399" Y="592.5469" Z="167.5478" />
 		<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
 		<CustomBehavior File="WaitTimer" WaitTime="15000" />
-	</If>
-	
-	<If Condition="HasQuest(32648) || HasQuest(32646) || HasQuest(32643) || HasQuest(32654) || HasQuest(32659) ||
-					HasQuest(32650)" >
-		<CustomBehavior File="Message" Text="Checking for harvestable plants." LogColor="Green" />
-		<CustomBehavior File="FlyTo" X="-180.84" Y="628.36" Z="165.41" />
-		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="58567" MobId2="60113" MobId3="66112" MobId4="66113" MobId5="63154"
-											MobId6="63156" MobId7="63184" MobId8="63185" MobId9="63249" MobId10="63250"
-											MobId11="63228" MobId12="63229" MobId13="63164" MobId14="63165" MobId15="66128"
-											MobId16="66129" MobId17="63264" MobId18="63265" MobId19="66084" MobId20="66085"
-											MobId21="66043" MobId22="65989" MobId23="66016" MobId24="65973" MobId25="66006"
-											MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
-											MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
-											MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
-											MobId41="63260" MobId42="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
-		<If Condition="HasQuest(32648) &amp;&amp; IsQuestCompleted(32648)" >
-			<TurnIn QuestName="Work Order: Golden Lotus II" QuestId="32648" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
-		</If>
-		<If Condition="HasQuest(32643) &amp;&amp; IsQuestCompleted(32643)" >
-			<TurnIn QuestName="Work Order: Dominance Offensive II" QuestId="32643" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
-		</If>
-		<If Condition="HasQuest(32646) &amp;&amp; IsQuestCompleted(32646)" >
-			<TurnIn QuestName="Work Order: Operation Shieldwall II" QuestId="32646" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
-		</If>
-		<If Condition="HasQuest(32650) &amp;&amp; IsQuestCompleted(32650)" >
-			<TurnIn QuestName="Work Order: Shado-Pan II" QuestId="32650" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
-		</If>
-		<If Condition="HasQuest(32657) &amp;&amp; IsQuestCompleted(32657)" >
-			<TurnIn QuestName="Work Order: The August Celestials II" QuestId="32657" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
-		</If>
-		<If Condition="HasQuest(32659) &amp;&amp; IsQuestCompleted(32659)" >
-			<TurnIn QuestName="Work Order: The Klaxxi II" QuestId="32659" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
-		</If>
 	</If>
 	
 	<If Condition="HasQuest(30517) || HasQuest(30518) || HasQuest(31947)" >
