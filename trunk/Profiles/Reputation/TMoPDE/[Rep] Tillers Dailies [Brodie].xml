@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r161</Name>
+	<Name>The Tillers r164</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -30,7 +30,7 @@
    
 	<Blackspots>
 		<Blackspot X="-229.8389" Y="1422.793" Z="223.3444" Radius="2"/>
-		<Blackspot X="-260.692" Y="610.3264" Z="168.9762" Radius="2"/> <!-- Antheas Pot -->
+		<!--<Blackspot X="-260.692" Y="610.3264" Z="168.9762" Radius="2"/>--> <!-- Antheas Pot -->
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -496,7 +496,7 @@
 <!-- Jogu the Drunk -->
 	<While Condition="HasQuestAvailable(58710)" >
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith"  MobId="58710" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -782,14 +782,19 @@
 	<If Condition="HasQuest(30321) &amp;&amp; !IsQuestCompleted(30321)" >
 		<CustomBehavior File="Message" Text="Starting Weed War II" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-249.2745" Y="1165.031" Z="165.9371" />
+		<CustomBehavior File="UserSettings" QuestId="30321" LootMobs="True" UseMount="False" PullDistance="1" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30321)" >
 			<If Condition="!Me.HasAura(114494)" >
 				<CustomBehavior File="InteractWith" MobId="57385" Range="5" X="-257.53" Y="1164.85" Z="169.60" GossipOptions="1" />
 			</If>
-			<CustomBehavior File="InteractWith" MobId="57306" MobId2="57308" Range="5" WaitTime="100" CollectionDistance="1000" WaitForNpcs="False" />
-			<CustomBehavior File="InteractWith" MobId="210056" WaitTime="100" CollectionDistance="1000" WaitForNpcs="False" />
+	<!--	<CustomBehavior File="InteractWith" QuestId="30321" MobId="210057" ObjectType="GameObject" WaitForNpcs="False" />
+			<If Condition="Me.HasAura(108237) >
+			</If> -->
+			<CustomBehavior File="InteractWith" QuestId="30321" MobId="57306" MobId2="57308" Range="5" WaitTime="10" CollectionDistance="1000" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30321" MobId="210056" WaitTime="10" CollectionDistance="1000" WaitForNpcs="False" />
 		</While>
+		<CustomBehavior File="UserSettings" UseMount="True" />
 	</If>
 
 <!-- A Gift for Old Hillpaw -->

@@ -214,7 +214,15 @@ namespace AzeniusHelper2
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63221 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63221 && u.Distance < 5 && !u.IsDead).OrderBy(u => u.Distance).ToList();
+            }
+        }
+		
+		public WoWUnit ShaoTienSorcerer
+        {
+            get
+            {
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 65133 && u.Distance < 5 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
             }
         }
 
@@ -558,15 +566,10 @@ namespace AzeniusHelper2
             #endregion
 
             #region http://www.wowhead.com/quest=31762 - done
-            // dont use IsOnQuest! 
             // we need this behavior if we are (again) in combat with Behemoth
-            if (Behemoth != null)
-            {
-                if (StyxWoW.Me.Combat && Behemoth.Distance2D <= 15 && Behemoth.IsCasting && Behemoth.CastingSpellId == 131043)
-                {
-                    BarryDurex.QuestHelper.AvoidEnemyCast(Behemoth, 80, 15);
-                }
-            }
+			if (Behemoth != null && StyxWoW.Me.Combat && Behemoth.Distance2D <= 15 && Behemoth.IsCasting && Behemoth.CastingSpellId == 131043)
+				BarryDurex.QuestHelper.AvoidEnemyCast(Behemoth, 80, 15);
+
             #endregion
 
             #region Vicejaw
@@ -574,7 +577,6 @@ namespace AzeniusHelper2
             {
                 if (Vicejaw != null && Vicejaw.IsCasting && !Me.IsBehind(Vicejaw))
                 {
-                    Thread.Sleep(2000);
                     //Lua.DoString("StrafeLeftStart()");
                     WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(2));
                     Thread.Sleep(2000);
@@ -615,23 +617,13 @@ namespace AzeniusHelper2
             if (IsOnQuest(30482) && !QuestComplete(30482))
             {
                 if (Sydow != null && Sydow.CastingSpellId == 126347)
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
+					BarryDurex.QuestHelper.AvoidEnemyCast(Sydow, 80, 15);
             }
 			#endregion
 
             #region http://www.wowhead.com/quest=30233 - done
-            if (/*IsOnQuest(30233)*/ true)
-            {
-                if (Cracklefang != null && Cracklefang.Distance2D <= 20 && Cracklefang.IsCasting /*&& Cracklefang.CastingSpellId == 126032*/)
-                {
-                    BarryDurex.QuestHelper.AvoidEnemyCast(Cracklefang, 0, 20);
-                }
-            }
+			if (Cracklefang != null && Cracklefang.Distance2D <= 20 && Cracklefang.IsCasting /*&& Cracklefang.CastingSpellId == 126032*/)
+				BarryDurex.QuestHelper.AvoidEnemyCast(Cracklefang, 0, 20);
             #endregion
 
             #region http://www.wowhead.com/quest=30293
@@ -648,14 +640,16 @@ namespace AzeniusHelper2
             if (IsOnQuest(30249))
             {
                 if (Krichon != null && Krichon[0].IsCasting && !Me.IsBehind(Krichon[0]))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(1));
-                    Thread.Sleep(1000);
-                    WoWMovement.MoveStop();
-                }
+					BarryDurex.QuestHelper.AvoidEnemyCast(Krichon, 80, 15);
             }
             #endregion
+			
+			if (ShaoTienSorcerer != null)
+            {
+                if (Me.Combat && ShaoTienSorcerer.Distance2D <= 10 && ShaoTienSorcerer.IsCasting && ShaoTienSorcerer.CastingSpellId == 127552)
+                    BarryDurex.QuestHelper.AvoidEnemyCast(ShaoTienSorcerer, 80, 15);
+            }
+			
             #endregion
 
 			#region [The August Celestials]
@@ -739,18 +733,6 @@ namespace AzeniusHelper2
 					BarryDurex.QuestHelper.AvoidEnemyCast(MDevilsaur, 80, 15);
 			}
 			
-			#region Subtle Encouragement
-			if (IsOnQuest(32606) && !QuestComplete(32606))
-			{
-				SpellManager.Cast(138638);
-				Thread.Sleep(1000);
-			}
-			if (IsOnQuest(32605) && !QuestComplete(32605))
-			{
-				SpellManager.Cast(138638);
-				Thread.Sleep(1000);
-			}
-			#endregion
 			#endregion
 			
 			#region Isle of Giants
