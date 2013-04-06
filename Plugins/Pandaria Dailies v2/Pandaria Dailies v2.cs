@@ -639,7 +639,7 @@ namespace AzeniusHelper2
             #region http://www.wowhead.com/quest=30249 - todo
             if (IsOnQuest(30249))
             {
-                if (Krichon != null && Krichon[0].IsCasting && !Me.IsBehind(Krichon[0]))
+                if (Krichon != null && Krichon.IsCasting && !Me.IsBehind(Krichon))
 					BarryDurex.QuestHelper.AvoidEnemyCast(Krichon, 80, 15);
             }
             #endregion
