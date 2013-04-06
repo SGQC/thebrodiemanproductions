@@ -2,6 +2,10 @@ Patch Notes
 
 4/6/13
 
+r167
+Beast Pens
+-- Added overrides to Compy Stomp
+
 r166
 Pandaria Dailies v2
 -- Compiler error resolved
