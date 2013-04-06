@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r160</Name>
+	<Name>Shado Pan Dailies r164</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -293,11 +293,12 @@
 	<If Condition="Me.GetReputationLevelWith(1269) &lt; WoWUnitReaction.Revered" >
 		<CustomBehavior File="Message" Text="You are not Revered with Golden Lotus. Skipping in 15 seconds." LogColor="Green"  />
 		<CustomBehavior File="UserDialog" ExpiryTime="15" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="Your current reputation level with Golden Lotus is too low! \n\n This profile requires at least Revered with Golden Lotus to operate.\n Skipping profile and continuing grind." />
-		<If Condition="Me.IsAlliance" >
-			<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder A [Brodie]" />
+		<CustomBehavior File="ForcedDismount" />
+		<If Condition="HasItem(64488)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
 		</If>
-		<If Condition="Me.IsHorde" >
-			<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder H [Brodie]" />
+		<If Condition="HasItem(6948)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 		</If>
 	</If>
 

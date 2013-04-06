@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r161</Name>
+	<Name>The Anglers Dailies r164</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -206,7 +206,7 @@
 		<CustomBehavior File="FlyTo" X="-1503.70" Y="-219.3447" Z="0.643862" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="60136" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 

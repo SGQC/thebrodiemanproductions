@@ -2,6 +2,19 @@ Patch Notes
 
 4/6/13
 
+r164
+Pandaria Dailies v2
+-- Added Shao-Tien Sorcerer Lightning Crash spell avoidance
+-- Code Cleanup, reimplementation and deletion of Sleep code
+-- Removed forced spellcast for Subtle Encouragement
+The Tillers
+-- Weed War II - Disabled mount usage during quest
+-- Weed War II - Preliminary usage of Weed-B-Gone, not yet implemented
+Anglers
+-- Update to Fiznix's quest pickup
+ShadoPan
+-- If you are not eligible, it will cycle to next profile in your list, not Thunder by default.
+
 r163
 Plugins
 -- ProfileChanger - Will no longer allow you to select profiles UNTIL you choose Daily Grind's location.
