@@ -250,11 +250,11 @@ namespace AzeniusHelper2
             }
         }
 
-        public List<WoWUnit> Krichon
+        public WoWUnit Krichon
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63978 && u.Distance < 30).OrderBy(u => u.Distance).ToList();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63978 && u.Distance < 30).OrderBy(u => u.Distance).FirstOrDefault();
             }
         }
 
