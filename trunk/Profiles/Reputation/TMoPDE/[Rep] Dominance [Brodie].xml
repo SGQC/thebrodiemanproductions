@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r152</Name>
+	<Name>Dominance Offensive r160</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -1062,8 +1062,7 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
-	
-<!--
+
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="HasItem(64488)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
@@ -1071,9 +1070,8 @@
 	<If Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</If>
--->
 
- <CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />
+<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />-->
 
 <CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="MORE COMING SOON!!!" />
 

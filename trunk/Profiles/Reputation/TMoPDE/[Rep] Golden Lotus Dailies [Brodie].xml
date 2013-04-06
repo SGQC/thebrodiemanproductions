@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r154</Name>
+	<Name>The Golden Lotus r160</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -674,7 +674,7 @@
 		</If>
 	</If> -->
 	
-<!--
+
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="HasItem(64488)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
@@ -682,9 +682,9 @@
 	<If Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</If>
--->
 
-<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />
+
+<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />-->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />
 

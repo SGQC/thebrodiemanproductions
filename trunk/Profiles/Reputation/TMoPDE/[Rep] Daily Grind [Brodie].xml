@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The MoP Dailies Experience r140</Name>
+	<Name>The MoP Dailies Experience r160</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -7,6 +7,9 @@
 	<MinFreeBagSlots>2</MinFreeBagSlots>
 
 <QuestOrder>
+
+	<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+	<CustomBehavior File="EnablePlugin" Names="Anti Drown,Pandaria Dailies v2" />
 
 	<!-- If I am in EK, take the SW portal -->
 	<If Condition="(Me.MapId == 0 &amp;&amp; Me.IsAlliance)" >
@@ -22,8 +25,7 @@
 		<CustomBehavior File="InteractWith" MobId="215424" ObjectType="GameObject" Range="4.75" X="2014.819" Y="-4700.274" Z="28.62439" />
 		<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for port {TimeRemaining}" />
 	</If>
-	
-<!--
+
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="HasItem(64488)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
@@ -31,9 +33,8 @@
 	<If Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</If>
--->
 
-	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />
+<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] Golden Lotus Dailies [Brodie]" />-->
 	<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Profile...but if you're seeing this something borked!" />
 
 </QuestOrder>
