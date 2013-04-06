@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r140</Name>
+	<Name>Cloud Serpent Dailies r160</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -1488,7 +1488,6 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 	
-<!--
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="HasItem(64488)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
@@ -1496,8 +1495,8 @@
 	<If Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</If>
--->
 
+<!--
 <If Condition="Me.IsAlliance" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Shieldwall [Brodie]" />
 </If>
@@ -1505,7 +1504,7 @@
 <If Condition="Me.IsHorde" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" />
 </If>
-
+-->
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Cloud Serpent Dailies" />
 
 </QuestOrder>

@@ -2,6 +2,12 @@ Patch Notes
 
 4/5/13
 
+r160
+Profile Set-wide update
+-- Converted all profiles to use new ProfileChanger plugin (required)
+Plugins
+-- Added ProfileChanger (thanks Obliv!)
+
 r159
 Cloud Serpent
 -- Added Overrides to Disarming the Enemy, converted to Objective
