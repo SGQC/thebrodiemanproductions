@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs r157</Name>
+	<Name>Tillers PreReqs r169/Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -42,13 +42,13 @@
 <CustomBehavior File="Message" Text="Compiling Tiller PreReq Quests..." LogColor="Green"  />
 
 <!-- A Helping Hand -->
-	<If Condition="(!HasQuest(30252) &amp;&amp; !IsQuestCompleted(30252)) &amp;&amp; !IsQuestCompleted(31945)" >
+	<If Condition="(!HasQuest(30252) &amp;&amp; !IsQuestCompleted(30252)) &amp;&amp; (!HasQuest(30535) &amp;&amp; !IsQuestCompleted(30535)" >
 		<CustomBehavior File="FlyTo" X="-181.0804" Y="631.8439" Z="165.4094" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<PickUp QuestName="A Helping Hand" QuestId="30252" GiverName="Farmer Yoon" GiverId="58721" />
 	</If>
 	<While Condition="HasQuest(30252) &amp;&amp; !IsQuestCompleted(30252)" >
-		<CustomBehavior File="InteractWith" MobId="58719" NumOfTimes="8" WaitTime="2000" CollectionDistance="150" X="-178.1711" Y="641.2398" Z="165.4093" />
+		<CustomBehavior File="InteractWith" QuestId="30252" MobId="58719" NumOfTimes="8" WaitTime="2000" CollectionDistance="150" X="-178.1711" Y="641.2398" Z="165.4093" />
 	</While>
 	<If Condition="HasQuest(30252) &amp;&amp; IsQuestCompleted(30252)" >
 		<TurnIn QuestName="A Helping Hand" QuestId="30252" TurnInName="Farmer Yoon" TurnInId="58646" />

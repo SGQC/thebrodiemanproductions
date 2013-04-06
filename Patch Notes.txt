@@ -2,6 +2,12 @@ Patch Notes
 
 4/6/13
 
+r169
+Beast Pens
+-- Dino Might - UseItemOn -> CombatUseItemOnV2, hopefully will use item on all that are missing the aura.
+Tillers Prereqs
+-- Changed breadcrumb quest check to ignore if already did/has Learn and Grow 1
+
 r168
 Golden Lotus
 -- Removed ForcedMount call after using spirit void.
