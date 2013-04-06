@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r99</Name>
+	<Name>Whitepetal Lake r161</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -40,6 +40,9 @@
 				<Hotspot X="1221.72" Y="1472.36" Z="347.76" />
 				<Hotspot X="1064.62" Y="1428.13" Z="346.61" />
 				<Hotspot X="1076.85" Y="1379.54" Z="352.93" />
+				<Hotspot X="1187.024" Y="1329.697" Z="360.4905" />
+				<Hotspot X="1249.32" Y="1333.969" Z="361.5744" />
+				<Hotspot X="1254.015" Y="1416.927" Z="353.2285" />
 			</Hotspots>
 		</Objective>
 	</Quest>

@@ -297,7 +297,7 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active3 = false;
 
-					if (Settings.Active4)
+					if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile4);
@@ -353,42 +353,42 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active4 = false;
 
-					if (Settings.Active5)
+					if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();		
 					    ChangeProfile(Settings.Profile5);
 					}
-					if (Settings.Active6)
+					if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-					if (Settings.Active7)
+					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-					if (Settings.Active8)
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9)
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10)
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -404,37 +404,37 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active5 = false;
 
-					if (Settings.Active6)
+					if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-					if (Settings.Active7)
+					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-					if (Settings.Active8)
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9)
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10)
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -450,32 +450,32 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active6 = false;
 
-					if (Settings.Active7)
+					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-					if (Settings.Active8)
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9)
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10)
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -491,27 +491,27 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active7 = false;
 
-					if (Settings.Active8)
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9)
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10)
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -527,22 +527,22 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active8 = false;
 
-					if (Settings.Active9)
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10)
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -558,17 +558,17 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active9 = false;
 
-					if (Settings.Active10)
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -584,7 +584,12 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active10 = false;
 
-					if (Settings.Active12)
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					{
+						SpellManager.StopCasting();	
+					    ChangeProfile(Settings.Profile11);
+					}
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -600,7 +605,7 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active11 = false;
 
-					if (Settings.Active12)
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);

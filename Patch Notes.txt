@@ -2,6 +2,16 @@ Patch Notes
 
 4/5/13
 
+r161
+Whitepetal Lake
+-- Under Watchful Eyes - Hotspot area expansion
+The Tillers
+-- Reorder of Work Order II before Work Order I so it can pick up same and repeat
+The Anglers
+-- Removal of PostInteractDelay from Jagged Abalone. It was misspelled, and ran fine without it.
+Plugins
+-- ProfileChanger - Missing segment causing all profiles after Anglers to not load. Corrected.
+
 r160
 Profile Set-wide update
 -- Converted all profiles to use new ProfileChanger plugin (required)
