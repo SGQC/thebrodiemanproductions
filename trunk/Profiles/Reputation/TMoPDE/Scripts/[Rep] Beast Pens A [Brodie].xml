@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Alliance) r157</Name>
+	<Name>The Beast Pens (Alliance) r165</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -26,6 +26,7 @@
   
 	<AvoidMobs>
 		<Mob Name="Horned Battlebeast" Entry="69142" />
+		<Mob Name="Disciple of Jalak" Entry="69376" />
 	</AvoidMobs>
    
 	<Blackspots>

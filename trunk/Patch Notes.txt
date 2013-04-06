@@ -2,6 +2,12 @@ Patch Notes
 
 4/6/13
 
+r165
+Beast Pens
+-- Added Disciple of Jalak to the avoid list, as he's riding the big Direhorn.
+Pandaria Dailies v2
+-- Compiler error resolved
+
 r164
 Pandaria Dailies v2
 -- Added Shao-Tien Sorcerer Lightning Crash spell avoidance
