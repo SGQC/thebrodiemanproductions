@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Alliance) r165</Name>
+	<Name>The Beast Pens (Alliance) r167</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -33,6 +33,19 @@
 	</Blackspots>
 
 <!-- Quest Overrides -->
+
+<!-- Compy Stomp -->
+	<Quest Id="32551" Name="Compy Stomp"> 
+		<Objective Type="KillMob" MobId="58071" KillCount="10" >
+			<Hotspots>
+				<Hotspot X="6958.926" Y="5485.224" Z="29.57454" />
+				<Hotspot X="6947.429" Y="5583.052" Z="31.91465" />
+				<Hotspot X="6913.555" Y="5550.122" Z="29.82876" />
+				<Hotspot X="6892.14" Y="5519.236" Z="29.20298" />
+				<Hotspot X="6994.41" Y="5618.381" Z="31.13311" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- End of Quest Overrides --> 
 
