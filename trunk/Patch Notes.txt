@@ -2,6 +2,12 @@ Patch Notes
 
 4/5/13
 
+r162
+Operation Shieldwall
+-- Supply Block - Shortened postinteraction time
+-- Removal of obsolete Overrides
+-- Under Pressure - Landing spot and hotspots redo
+
 r161
 Whitepetal Lake
 -- Under Watchful Eyes - Hotspot area expansion
