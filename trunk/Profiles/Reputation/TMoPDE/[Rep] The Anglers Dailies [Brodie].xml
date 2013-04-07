@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r171</Name>
+	<Name>The Anglers Dailies r172</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -329,11 +329,12 @@
 <!-- Jagged Abalone -->
  	<If Condition="HasQuest(30586) &amp;&amp; !IsQuestCompleted(30586)">
 		<CustomBehavior File="Message" Text="Starting Jagged Abalone" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30586" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30586" UseMount="False" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="-1353.003" Y="-342.6745" Z="-3.762463" />
 		<CustomBehavior File="ForcedDismount"/>
 		<CustomBehavior File="CollectThings" QuestId="30586" CollectUntil="QuestComplete" ObjectId="211118" HuntingGroundRadius="120" NonCompeteDistance="5" />
 		<CustomBehavior File="AscendInWater" />
+		<CustomBehavior File="UserSettings" UseMount="True" />
 	</If>
 
 <!-- Like Bombing Fish In A Barrel -->
