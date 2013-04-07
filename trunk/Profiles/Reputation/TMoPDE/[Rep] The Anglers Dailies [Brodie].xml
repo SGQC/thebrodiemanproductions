@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r164</Name>
+	<Name>The Anglers Dailies r171</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -189,6 +189,7 @@
 
 	<If Condition="(!HasQuest(30584) &amp;&amp; !HasQuest(30588) &amp;&amp; 
 			!HasQuest(30700) &amp;&amp; !HasQuest(30678) &amp;&amp; !HasQuest(30586))" >
+		<CustomBehavior File="ForcedMount" />
 		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
 	</If>
 

@@ -2,6 +2,10 @@ Patch Notes
 
 4/7/13
 
+r171
+The Anglers
+-- Issue with not mounting to flight when too close. ForcedMount call implemented.
+
 r170
 Beast Pens
 -- Dino Might - Adjusted CombatUseItemOnV2 to remove extra/unneeded info, and fixed missing info
