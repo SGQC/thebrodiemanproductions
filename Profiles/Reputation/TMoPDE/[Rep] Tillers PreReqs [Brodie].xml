@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs r169/Name>
+	<Name>Tillers PreReqs r172</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -42,7 +42,7 @@
 <CustomBehavior File="Message" Text="Compiling Tiller PreReq Quests..." LogColor="Green"  />
 
 <!-- A Helping Hand -->
-	<If Condition="(!HasQuest(30252) &amp;&amp; !IsQuestCompleted(30252)) &amp;&amp; (!HasQuest(30535) &amp;&amp; !IsQuestCompleted(30535)" >
+	<If Condition="(!HasQuest(30252) &amp;&amp; !IsQuestCompleted(30252)) &amp;&amp; (!HasQuest(30535) &amp;&amp; !IsQuestCompleted(30535))" >
 		<CustomBehavior File="FlyTo" X="-181.0804" Y="631.8439" Z="165.4094" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<PickUp QuestName="A Helping Hand" QuestId="30252" GiverName="Farmer Yoon" GiverId="58721" />

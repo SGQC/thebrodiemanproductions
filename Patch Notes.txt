@@ -2,6 +2,16 @@ Patch Notes
 
 4/7/13
 
+r172
+The Anglers
+-- Jagged Abalone - Mounting underwater disabled
+Dominance Offensive
+-- Power Metal - Converted Objective to CollectThings (not looting?)
+Tillers PreReqs
+-- Fixed code syntax error (missing ')')
+Beast Pens
+-- Dino Might - fixed item use issues, SHOULD be more reliable too
+
 r171
 The Anglers
 -- Issue with not mounting to flight when too close. ForcedMount call implemented.

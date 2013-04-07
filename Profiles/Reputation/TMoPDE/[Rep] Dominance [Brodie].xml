@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r160</Name>
+	<Name>Dominance Offensive r172</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -625,7 +625,17 @@
 		<CustomBehavior File="Message" Text="Starting Power Metal" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32141" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-2090.55" Y="1975.52" Z="24.65" />
-		<Objective QuestName="Power Metal" QuestId="32141" Type="CollectItem" ItemId="91848" CollectCount="7" />
+		<CustomBehavior File="CollectThings" QuestId="32141" CollectUntil="QuestComplete" ObjectId="216178" ObjectId2="216716" HuntingGroundRadius="100" NonCompeteDistance="5" >
+			<Hotspot X="-2090.55" Y="1975.52" Z="24.65" />
+			<Hotspot X="-2067.24" Y="1945.62" Z="23.05" />
+			<Hotspot X="-2111.60" Y="1999.59" Z="5.97" />
+			<Hotspot X="-2116.60" Y="1968.47" Z="-1.06" />
+			<Hotspot X="-2107.06" Y="1927.64" Z="0.86" />
+			<Hotspot X="-2079.64" Y="1914.19" Z="2.91" />
+			<Hotspot X="-1955.44" Y="1861.40" Z="31.18" />
+			<Hotspot X="-1980.32" Y="1885.04" Z="23.13" />
+		</CustomBehavior>
+	<!--<Objective QuestName="Power Metal" QuestId="32141" Type="CollectItem" ItemId="91848" CollectCount="7" />-->
 	</If>
 
 <!-- Runnin On Empty -->
