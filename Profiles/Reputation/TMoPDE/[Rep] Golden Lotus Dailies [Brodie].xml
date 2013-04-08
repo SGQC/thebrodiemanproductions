@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>The Golden Lotus r168</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>The Golden Lotus r173</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -99,20 +99,6 @@
 				<Hotspot X="1605.34" Y="1332.53" Z="445.84" />
 				<Hotspot X="1548.60" Y="1447.88" Z="441.90" />
 				<Hotspot X="1595.82" Y="1453.17" Z="441.99" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Acts of Cruelty -->
-	<Quest Id="31755" Name="Acts of Cruelty"> 
-		<Objective Type="KillMob" MobId="65810" KillCount="5">
-			<Hotspots>
-				<Hotspot X="1537.772" Y="1275.769" Z="442.6665" />
-				<Hotspot X="1544.448" Y="1186.748" Z="443.1485" />
-				<Hotspot X="1589.529" Y="1260.953" Z="458.064" />
-				<Hotspot X="1608.952" Y="1368.481" Z="445.2224" />
-				<Hotspot X="1532.999" Y="1460.761" Z="442.2372" />
-				<Hotspot X="1609.153" Y="1526.843" Z="440.0296" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -377,7 +363,7 @@
 	</If>
 
 <!-- Crumbling Behemoth -->
-	<If Condition="((HasQuest(31762)) &amp;&amp; (!IsQuestCompleted(31762)))" >
+	<If Condition="(HasQuest(31762) &amp;&amp; !IsQuestCompleted(31762))" >
 		<CustomBehavior File="Message" Text="Starting Crumbling Behemoth" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1681.209" Y="1362.486" Z="453.5922" />
@@ -410,7 +396,7 @@
 					<CustomBehavior File="InteractWith" MobId="59219" CollectionDistance="4000" WaitForNpcs="False"/>
 				</If>
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-				<!--<CustomBehavior File="ForcedMount" MountType="Flying" /> -->
+				<CustomBehavior File="ForcedMount" MountType="Flying" />
 			</While>
 			<CustomBehavior File="InteractWith" QuestId="30320" MobId="59231" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" WaitTime="300" KeepTargetSelected="False" />
 		</While>
@@ -423,34 +409,17 @@
 		<CustomBehavior File="FlyTo" X="1540.48" Y="1176.70" Z="443.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31754)" >
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1540.479" Y="1176.702" Z="443.0296" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1529.951" Y="1181.776" Z="442.5779" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1496.884" Y="1227.667" Z="437.5228" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1517.748" Y="1269.749" Z="442.7838" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1513.869" Y="1289.58" Z="443.8857" />
- 				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1575.533" Y="1208.958" Z="459.0775" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
-			<If Condition="!IsQuestCompleted(31754)" >
-				<RunTo X="1585.056" Y="1199.58" Z="459.0019" />
-				<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" />
-			</If>
+			<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" >
+				<HuntingGrounds>
+					<Hotspot X="1540.479" Y="1176.702" Z="443.0296" />
+					<Hotspot X="1529.951" Y="1181.776" Z="442.5779" />
+					<Hotspot X="1496.884" Y="1227.667" Z="437.5228" />
+					<Hotspot X="1517.748" Y="1269.749" Z="442.7838" />
+					<Hotspot X="1513.869" Y="1289.58" Z="443.8857" />
+					<Hotspot X="1575.533" Y="1208.958" Z="459.0775" />
+					<Hotspot X="1585.056" Y="1199.58" Z="459.0019" />
+				</HuntingGrounds>
+			</CustomBehavior>
 		</While>
 	</If>
 
@@ -468,7 +437,6 @@
 			<Hotspot X="1532.999" Y="1460.761" Z="442.2372" />
 			<Hotspot X="1609.153" Y="1526.843" Z="440.0296" />
 		</CustomBehavior>
-	<!--<Objective QuestName="Acts of Cruelty" QuestId="31755" Type="KillMob" MobId="65810" KillCount="5" />-->
 	</If>
 
 <!-- Stone Hard Quilen -->
@@ -481,7 +449,7 @@
 	</If>
 
 <!-- Set in Stone -->
-	<If Condition="((HasQuest(30309)) &amp;&amp; (!IsQuestCompleted(30309)))" >
+	<If Condition="(HasQuest(30309) &amp;&amp; !IsQuestCompleted(30309))" >
 		<CustomBehavior File="Message" Text="Starting Set in Stone" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30309" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
@@ -499,7 +467,7 @@
 	</If>
 
 <!-- The Eternal Vigil -->
-	<If Condition="((HasQuest(30307)) &amp;&amp; (!IsQuestCompleted(30307)))" >
+	<If Condition="(HasQuest(30307) &amp;&amp; !IsQuestCompleted(30307))" >
 		<CustomBehavior File="Message" Text="Starting The Eternal Vigil" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30307" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1576.917" Y="1270.373" Z="453.586" />
@@ -509,73 +477,73 @@
 
 <!-- Phase 1 Turn ins -->
 
-	<If Condition="((HasQuest(31762)) &amp;&amp; (IsQuestCompleted(31762)) ||
-			(HasQuest(30312)) &amp;&amp; (IsQuestCompleted(30312)) ||
-			(HasQuest(30309)) &amp;&amp; (IsQuestCompleted(30309)) ||
-			(HasQuest(31760)) &amp;&amp; (IsQuestCompleted(31760)) ||
-			(HasQuest(30310)) &amp;&amp; (IsQuestCompleted(30310)) ||
-			(HasQuest(31757)) &amp;&amp; (IsQuestCompleted(31757)) ||
-			(HasQuest(30308)) &amp;&amp; (IsQuestCompleted(30308)) ||
-			(HasQuest(30307)) &amp;&amp; (IsQuestCompleted(30307)) ||
-			(HasQuest(31756)) &amp;&amp; (IsQuestCompleted(31756)) ||
-			(HasQuest(31754)) &amp;&amp; (IsQuestCompleted(31754)) ||
-			(HasQuest(31758)) &amp;&amp; (IsQuestCompleted(31758)) ||
-			(HasQuest(31755)) &amp;&amp; (IsQuestCompleted(31755)) ||
-			(HasQuest(30320)) &amp;&amp; (IsQuestCompleted(30320)))" >
+	<If Condition="((HasQuest(31762) &amp;&amp; IsQuestCompleted(31762)) ||
+			(HasQuest(30312) &amp;&amp; IsQuestCompleted(30312)) ||
+			(HasQuest(30309) &amp;&amp; IsQuestCompleted(30309)) ||
+			(HasQuest(31760) &amp;&amp; IsQuestCompleted(31760)) ||
+			(HasQuest(30310) &amp;&amp; IsQuestCompleted(30310)) ||
+			(HasQuest(31757) &amp;&amp; IsQuestCompleted(31757)) ||
+			(HasQuest(30308) &amp;&amp; IsQuestCompleted(30308)) ||
+			(HasQuest(30307) &amp;&amp; IsQuestCompleted(30307)) ||
+			(HasQuest(31756) &amp;&amp; IsQuestCompleted(31756)) ||
+			(HasQuest(31754) &amp;&amp; IsQuestCompleted(31754)) ||
+			(HasQuest(31758) &amp;&amp; IsQuestCompleted(31758)) ||
+			(HasQuest(31755) &amp;&amp; IsQuestCompleted(31755)) ||
+			(HasQuest(30320) &amp;&amp; IsQuestCompleted(30320)))" >
 		<CustomBehavior File="Message" Text="Phase 1 Completed. Returning to Golden Pagoda." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="1217.194" Y="1049.704" Z="425.9666" />
 		<CustomBehavior File="ForcedDismount" />
 	</If>
 
-  	<If Condition="(HasQuest(31762)) &amp;&amp; (IsQuestCompleted(31762))" >
+  	<If Condition="(HasQuest(31762) &amp;&amp; IsQuestCompleted(31762))" >
 		<TurnIn QuestName="Crumbling Behemoth" QuestId="31762" TurnInName="Anji Autumnlight" TurnInId="58465" />
 	</If>
 
-  	<If Condition="(HasQuest(30309)) &amp;&amp; (IsQuestCompleted(30309))" >
+  	<If Condition="(HasQuest(30309) &amp;&amp; IsQuestCompleted(30309))" >
 		<TurnIn QuestName="Set in Stone" QuestId="30309" TurnInName="Anji Autumnlight" TurnInId="58465" />
 	</If>
 
-  	<If Condition="(HasQuest(31760)) &amp;&amp; (IsQuestCompleted(31760))" >
+  	<If Condition="(HasQuest(31760) &amp;&amp; IsQuestCompleted(31760))" >
 		<TurnIn QuestName="Striking First" QuestId="31760" TurnInName="Anji Autumnlight" TurnInId="58465" />
 	</If>
 
-	<If Condition="(HasQuest(30310)) &amp;&amp; (IsQuestCompleted(30310))" >
+	<If Condition="(HasQuest(30310) &amp;&amp; IsQuestCompleted(30310))" >
 		<TurnIn QuestName="Thundering Skies" QuestId="30310" TurnInName="Anji Autumnlight" TurnInId="58465" />
 	</If>
 
-	<If Condition="(HasQuest(31757)) &amp;&amp; (IsQuestCompleted(31757))" >
+	<If Condition="(HasQuest(31757) &amp;&amp; IsQuestCompleted(31757))" >
 		<TurnIn QuestName="Unleashed Spirits" QuestId="31757" TurnInName="Anji Autumnlight" TurnInId="58465" />
 	</If>
 
-	<If Condition="(HasQuest(30308)) &amp;&amp; (IsQuestCompleted(30308))" >
+	<If Condition="(HasQuest(30308) &amp;&amp; IsQuestCompleted(30308))" >
 		<TurnIn QuestName="Stone Hard Quilen" QuestId="30308" TurnInName="Anji Autumnlight" TurnInId="58465" />
 	</If>
 
-  	<If Condition="(HasQuest(30307)) &amp;&amp; (IsQuestCompleted(30307))" >
+  	<If Condition="(HasQuest(30307) &amp;&amp; IsQuestCompleted(30307))" >
 		<TurnIn QuestName="The Eternal Vigil" QuestId="30307" TurnInName="Leven Dawnblade" TurnInId="58408" />
 	</If>
 
-  	<If Condition="(HasQuest(31756)) &amp;&amp; (IsQuestCompleted(31756))" >
+  	<If Condition="(HasQuest(31756) &amp;&amp; IsQuestCompleted(31756))" >
 		<TurnIn QuestName="High Chance of Rain" QuestId="31756" TurnInName="Kun Autumnlight" TurnInId="58471" />
 	</If>
 
-  	<If Condition="(HasQuest(31754)) &amp;&amp; (IsQuestCompleted(31754))" >
+  	<If Condition="(HasQuest(31754) &amp;&amp; IsQuestCompleted(31754))" >
 		<TurnIn QuestName="Cannonfire" QuestId="31754" TurnInName="Kun Autumnlight" TurnInId="58471" />
 	</If>
 
-  	<If Condition="(HasQuest(31758)) &amp;&amp; (IsQuestCompleted(31758))" >
+  	<If Condition="(HasQuest(31758) &amp;&amp; IsQuestCompleted(31758))" >
 		<TurnIn QuestName="Laosy Scouting" QuestId="31758" TurnInName="Kun Autumnlight" TurnInId="58471" />
 	</If>
 
-  	<If Condition="(HasQuest(30312)) &amp;&amp; (IsQuestCompleted(30312))" >
+  	<If Condition="(HasQuest(30312) &amp;&amp; IsQuestCompleted(30312))" >
 		<TurnIn QuestName="Given a Second Chance" QuestId="30312" TurnInName="Sun Tenderheart" TurnInId="58468" />
 	</If>
 
-  	<If Condition="(HasQuest(31755)) &amp;&amp; (IsQuestCompleted(31755))" >
+  	<If Condition="(HasQuest(31755) &amp;&amp; IsQuestCompleted(31755))" >
 		<TurnIn QuestName="Acts of Cruelty" QuestId="31755" TurnInName="Sun Tenderheart" TurnInId="58468" />
 	</If>
 
-  	<If Condition="(HasQuest(30320)) &amp;&amp; (IsQuestCompleted(30320))" >
+  	<If Condition="(HasQuest(30320) &amp;&amp; IsQuestCompleted(30320))" >
 		<TurnIn QuestName="Free Spirits" QuestId="30320" TurnInName="Sun Tenderheart" TurnInId="58468" />
 	</If>
 
@@ -636,44 +604,6 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
-	
-<!--
-	<If Condition="Me.IsAlliance" >
-		<If Condition="!HasQuest(32719) &amp;&amp; !IsQuestCompleted(32719)" >
-			<CustomBehavior File="Message" Text="Starting Mogu Runes of Fate" LogColor="Green" />
-			<If Condition="Random(100) &lt; 33">
-				<CustomBehavior File="FlyTo" DestName="Alliance Starter 1" X="944.6064" Y="339.0539" Z="455.8447" />   
-			<ElseIf Condition="Random(100) &lt; 66"> 
-				<CustomBehavior File="FlyTo" DestName="Alliance Starter 2" X="946.3147" Y="334.8687" Z="456.0771" />
-			</ElseIf>
-			<Else>
-				<CustomBehavior File="FlyTo" DestName="Alliance Starter 3" X="950.6328" Y="350.7334" Z="455.12" /> 
-			</Else>
-			</If>
-			<CustomBehavior File="ForcedDismount" />
-			<RunTo X="909.771" Y="316.0804" Z="456.5158" />
-			<While Condition="HasQuestAvailable(64029)" >
-				<CustomBehavior File="InteractWith"  MobId="64029" WaitTime="3000" /> 
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" /> 
-				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-			</While>
-		</If>
-		
-		<If Condition="HasQuest(32719) &amp;&amp; !IsQuestCompleted(32719)" >
-			<CustomBehavior File="Message" Text="Don't have enough marks, coming back later." LogColor="Green" />
-			<CustomBehavior File="Misc\RunLua" Lua="ClearTarget()" />
-			<RunTo X="963.9176" Y="350.7879" Z="450.1089" />
-		</If>
-		
-		<If Condition="HasQuest(32719) &amp;&amp; IsQuestCompleted(32719)" >
-			<CustomBehavior File="Message" Text="Attempting to turn in 'Mogu Runes of Fate'" LogColor="Green"  />
-			<TurnIn QuestName="Mogu Runes of Fate" QuestId="32719" TurnInName="Elder Lin" TurnInId="64029" />
-			<CustomBehavior File="Misc\RunLua" Lua="ClearTarget()" />
-			<RunTo X="963.9176" Y="350.7879" Z="450.1089" />
-		</If>
-	</If> -->
-	
 
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="HasItem(64488)" >
@@ -682,9 +612,6 @@
 	<If Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</If>
-
-
-<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />-->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />
 

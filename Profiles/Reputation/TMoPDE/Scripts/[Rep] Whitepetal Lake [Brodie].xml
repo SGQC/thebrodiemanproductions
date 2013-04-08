@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Whitepetal Lake r161</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>Whitepetal Lake r173</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -74,39 +74,6 @@
 		</Objective>
 	</Quest>
 
-<!-- Fiery Tongue, Fragile Feet -->
-	<Quest Id="30342" Name="A Thousand Pointy Teeth"> 
-		<Objective Type="KillMob" MobId="58455" KillCount="6">
-			<Hotspots>
-				<Hotspot X="1084.92" Y="1496.22" Z="342" />
-				<Hotspot X="1109.97" Y="1476.79" Z="342" />
-				<Hotspot X="1157.42" Y="1476.45" Z="342" />
-				<Hotspot X="1173.49" Y="1448.37" Z="342" />
-				<Hotspot X="1102.34" Y="1424.07" Z="342" />
-				<Hotspot X="1088.20" Y="1450.57" Z="342" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Sparkle in the Eye -->
-<!--<Quest Id="30265" Name="Sparkle in the Eye"> 
-		<Objective Type="CollectItem" ItemId="84646" CollectCount="8">
-			<CollectFrom>
-				<GameObject Name="Ruby Eye" Id="212759" />
-				<GameObject Name="Ruby Eye" Id="212760" />
-				<GameObject Name="Ruby Eye" Id="212761" />
-			</CollectFrom>
-			<Hotspots>
-				<Hotspot X="1084.92" Y="1496.22" Z="331.28" />
-				<Hotspot X="1109.97" Y="1476.79" Z="332.9" />
-				<Hotspot X="1157.42" Y="1476.45" Z="320.16" />
-				<Hotspot X="1173.49" Y="1448.37" Z="340.73" />
-				<Hotspot X="1102.34" Y="1424.07" Z="319.49" />
-				<Hotspot X="1088.20" Y="1450.57" Z="335.96" />
-			</Hotspots>
-		</Objective>
-	</Quest> -->
-
 <!-- The Displaced Paleblade -->
 	<Quest Id="30314" Name="The Displaced Paleblade"> 
 		<Objective Type="KillMob" MobId="59378" KillCount="8">
@@ -172,11 +139,11 @@
 		<CustomBehavior File="FlyTo" X="1140.179" Y="1444.658" Z="342.9452" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30340)" >
-			<CustomBehavior File="InteractWith" MobId="212744" ObjectType="GameObject" WaitTime="100" CollectionDistance="10000" />
+			<CustomBehavior File="InteractWith" MobId="212744" ObjectType="GameObject" WaitTime="100" CollectionDistance="10000" X="1140.179" Y="1444.658" Z="342.9452" />
 		</While>
 	</If>
 
-<!-- Getting your Hands Dirty (coded by Kam) -->
+<!-- Getting your Hands Dirty -->
 	<If Condition="(HasQuest(30339) &amp;&amp; !IsQuestCompleted(30339))" >
 		<CustomBehavior File="Message" Text="Starting Getting your Hands Dirty" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30339" LootMobs="True" PullDistance="1" />
@@ -206,7 +173,7 @@
 		<Objective QuestName="The Moving Mists" QuestId="30313" Type="KillMob" MobId="58672" KillCount="8" />
 	</If>
 
-<!-- The Displaced Paleblade (Coded by Kam)-->
+<!-- The Displaced Paleblade -->
 	<If Condition="(HasQuest(30314) &amp;&amp; !IsQuestCompleted(30314))" >
 		<CustomBehavior File="Message" Text="Starting The Displaced Paleblade" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30314" LootMobs="True" PullDistance="25" />
@@ -230,14 +197,14 @@
 		<CustomBehavior File="UserSettings" QuestId="30338" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1140.179" Y="1444.658" Z="342.9452" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30338)" >
-			<CustomBehavior File="InteractWith" QuestId="30338" ObjectType="GameObject" MobId="212762" MobId2="212763" MobId3="212764" MobId4="212765" MobId5="212766" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1084.92" Y="1496.22" Z="331.28" />
-			<CustomBehavior File="InteractWith" QuestId="30338" ObjectType="GameObject" MobId="212762" MobId2="212763" MobId3="212764" MobId4="212765" MobId5="212766" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1112.97" Y="1470.79" Z="336.00" />
-			<CustomBehavior File="InteractWith" QuestId="30338" ObjectType="GameObject" MobId="212762" MobId2="212763" MobId3="212764" MobId4="212765" MobId5="212766" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1157.42" Y="1476.45" Z="320.16" />
-			<CustomBehavior File="InteractWith" QuestId="30338" ObjectType="GameObject" MobId="212762" MobId2="212763" MobId3="212764" MobId4="212765" MobId5="212766" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1173.49" Y="1448.37" Z="340.73" />
-			<CustomBehavior File="InteractWith" QuestId="30338" ObjectType="GameObject" MobId="212762" MobId2="212763" MobId3="212764" MobId4="212765" MobId5="212766" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1102.34" Y="1424.07" Z="319.49" />
-			<CustomBehavior File="InteractWith" QuestId="30338" ObjectType="GameObject" MobId="212762" MobId2="212763" MobId3="212764" MobId4="212765" MobId5="212766" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1088.20" Y="1450.57" Z="335.96" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="30338" CollectUntil="QuestComplete" ObjectId="212762" ObjectId2="212763" ObjectId3="212764" ObjectId4="212765" ObjectId5="212766" HuntingGroundRadius="120" NonCompeteDistance="3" >
+			<Hotspot X="1084.92" Y="1496.22" Z="331.28" />
+			<Hotspot X="1112.97" Y="1470.79" Z="336.00" />
+			<Hotspot X="1157.42" Y="1476.45" Z="320.16" />
+			<Hotspot X="1173.49" Y="1448.37" Z="340.73" />
+			<Hotspot X="1102.34" Y="1424.07" Z="319.49" />
+			<Hotspot X="1088.20" Y="1450.57" Z="335.96" />
+		</CustomBehavior>
 		<CustomBehavior File="AscendInWater" />
 	</If>
 
@@ -247,15 +214,14 @@
 		<CustomBehavior File="UserSettings" QuestId="30265" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1061.807" Y="1491.629" Z="352.83" />
 		<CustomBehavior File="ForcedDismount" />
-	<!--<Objective QuestName="Sparkle in the Eye" QuestId="30265" Type="CollectItem" ItemId="84646" CollectCount="8" />-->
-		<While Condition="!IsQuestCompleted(30265)" >
-			<CustomBehavior File="InteractWith" QuestId="30265" ObjectType="GameObject" MobId="212759" MobId2="212760" MobId3="212761" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1084.92" Y="1496.22" Z="331.28" />
-			<CustomBehavior File="InteractWith" QuestId="30265" ObjectType="GameObject" MobId="212759" MobId2="212760" MobId3="212761" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1109.97" Y="1476.79" Z="332.9" />
-			<CustomBehavior File="InteractWith" QuestId="30265" ObjectType="GameObject" MobId="212759" MobId2="212760" MobId3="212761" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1157.42" Y="1476.45" Z="320.16" />
-			<CustomBehavior File="InteractWith" QuestId="30265" ObjectType="GameObject" MobId="212759" MobId2="212760" MobId3="212761" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1173.49" Y="1448.37" Z="340.73" />
-			<CustomBehavior File="InteractWith" QuestId="30265" ObjectType="GameObject" MobId="212759" MobId2="212760" MobId3="212761" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1102.34" Y="1424.07" Z="319.49" />
-			<CustomBehavior File="InteractWith" QuestId="30265" ObjectType="GameObject" MobId="212759" MobId2="212760" MobId3="212761" Nav="CTM" WaitForNpcs="False" NumOfTimes="5" CollectionDistance="1000" X="1088.20" Y="1450.57" Z="335.96" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="30265" CollectUntil="QuestComplete" ObjectId="212759" ObjectId2="212760" ObjectId3="212761" HuntingGroundRadius="120" NonCompeteDistance="3" >
+			<Hotspot X="1084.92" Y="1496.22" Z="331.28" />
+			<Hotspot X="1109.97" Y="1476.79" Z="332.9" />
+			<Hotspot X="1157.42" Y="1476.45" Z="320.16" />
+			<Hotspot X="1173.49" Y="1448.37" Z="340.73" />
+			<Hotspot X="1102.34" Y="1424.07" Z="319.49" />
+			<Hotspot X="1088.20" Y="1450.57" Z="335.96" />
+		</CustomBehavior>
 		<CustomBehavior File="AscendInWater" />
 	</If>
 
@@ -277,11 +243,15 @@
 		<CustomBehavior File="UserSettings" QuestId="30342" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1140.18" Y="1444.66" Z="342.95" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30342)" >
-			<CustomBehavior File="InteractWith" QuestId="30342" Nav="CTM" WaitForNpcs="False" MobId="58455" CollectionDistance="10000" WaitTime="10" MobState="Alive" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="30342" CollectUntil="QuestComplete" MobId="58455" HuntingGroundRadius="120" NonCompeteDistance="5" >
+			<Hotspot X="1084.92" Y="1496.22" Z="342" />
+			<Hotspot X="1109.97" Y="1476.79" Z="342" />
+			<Hotspot X="1157.42" Y="1476.45" Z="342" />
+			<Hotspot X="1173.49" Y="1448.37" Z="342" />
+			<Hotspot X="1102.34" Y="1424.07" Z="342" />
+			<Hotspot X="1088.20" Y="1450.57" Z="342" />
+		</CustomBehavior>
 		<CustomBehavior File="AscendInWater" />
-	<!--<Objective QuestName="Fiery Tongue, Fragile Feet" QuestId="30342" Type="KillMob" MobId="58455" KillCount="6" />-->
 	</If>
 
 <!-- Quest Turn Ins -->
