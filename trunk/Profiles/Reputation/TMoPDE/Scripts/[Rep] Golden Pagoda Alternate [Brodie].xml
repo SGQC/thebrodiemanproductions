@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Golden Pagoda Alternate r99</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>Golden Pagoda Alternate r173</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -155,10 +155,7 @@
 		<CustomBehavior File="FlyTo" X="1228.32" Y="1353.79" Z="363.78" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30283)" >
-			<CustomBehavior File="InteractWith" MobId="63089" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
-			<CustomBehavior File="InteractWith" MobId="63088" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
-			<CustomBehavior File="InteractWith" MobId="63087" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
-			<CustomBehavior File="InteractWith" MobId="63090" NumOfTimes="1" WaitTime="4000" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30283" MobId="63089" MobId2="63088" MobId3="63087" MobId4="63090" WaitTime="4000" WaitForNpcs="False" />
 		</While>
 	</If>
 

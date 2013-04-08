@@ -2,6 +2,25 @@ Patch Notes
 
 4/7/13
 
+r173
+Golden Lotus
+-- Code Cleanup
+-- Free Spirits - Reactivated Forced Mount
+-- Cannonfire - Code condensed, should search areas instead of walking between areas only
+-- Acts of Cruelty - Removed Objective support
+Golden Pagoda Phase 2
+-- A Smashing Impression - Code condensed
+Whitepetal Lake
+-- Code Cleanup
+-- Stick in the Mud - Will now detect from center of lake, instead of from player location
+-- A Weighty Task - Convert to CollectThings, condensed code
+-- Sparkle in the Eye - Convert to CollectThings, condensed code
+-- Fiery Feet, Fragile Toes - Convert to CollectThings, condensed code
+Mistfall Village
+-- Code Cleanup
+Ruins of Guo-Lai
+-- Code Cleanup
+
 r172
 The Anglers
 -- Jagged Abalone - Mounting underwater disabled
