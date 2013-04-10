@@ -1,4 +1,24 @@
-Patch Notes
+Patch Notesb
+
+4/10/13
+
+r175
+Cloud Serpent
+-- Code Cleanup
+-- Removal of obsolete Overrides
+-- Update Quest pickups to accomidate for multiple available quests more reliably
+-- GossipOptions -> InteractByGossipOptions
+-- Feeding Time - UseItemOn -> InteractWith
+-- Emptier Nests - UseItemOn -> InteractWith
+-- Leave cave(s) by NoCombatMoveTo instead of RunTo
+-- Just a Flesh Wound - UseItemOn -> InteractWith
+-- Reorder of Turnins, always finish with Elder Anli before doing rest
+Cloud Serpent PreReqs
+-- Code Cleanup
+-- Logic fix to Quest Pickup from Tong, no more repeating of FlyTo
+-- Logic fix to Quest TurnIn from Tong, no more repeating of FlyTo
+-- Empty Nests - UseItemOn -> InteractWith
+-- Added ForcedDismount to Ending quests
 
 4/9/13
 

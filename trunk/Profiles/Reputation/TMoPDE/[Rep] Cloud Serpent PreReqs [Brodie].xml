@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Cloud Serpent PreReqs r125</Name>
+	<Name>Cloud Serpent PreReqs r175</Name>
 	<MinLevel>90</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -33,16 +33,16 @@
 <!-- Quest Overrides -->
 
 <!-- Beating the Odds -->
-   	<Quest Id="30135" Name="Beating the Odds">
-       		<Objective Type="KillMob" MobId="63532" MobId2="63536" KillCount="8">
-           	<Hotspots>
-            		<Hotspot X="2128.24" Y="-3061.00" Z="7.94" />
-            		<Hotspot X="2187.40" Y="-3048.37" Z="19.67" />
-            		<Hotspot X="2262.38" Y="-3050.66" Z="19.01" />
-            		<Hotspot X="2204.59" Y="-2992.41" Z="32.68" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="30135" Name="Beating the Odds">
+		<Objective Type="KillMob" MobId="63532" MobId2="63536" KillCount="8">
+			<Hotspots>
+				<Hotspot X="2128.24" Y="-3061.00" Z="7.94" />
+				<Hotspot X="2187.40" Y="-3048.37" Z="19.67" />
+				<Hotspot X="2262.38" Y="-3050.66" Z="19.01" />
+				<Hotspot X="2204.59" Y="-2992.41" Z="32.68" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- End of Quest Overrides --> 
 
@@ -65,22 +65,20 @@
 		<TurnIn QuestName="Wild Things" QuestId="30134" TurnInName="Instructor Tong" TurnInId="58225" />
 	</If>
 
-	<If Condition="!HasQuest(30135) &amp;&amp; !IsQuestCompleted(30135)" >
+	<If Condition="!HasQuest(30135) &amp;&amp; !IsQuestCompleted(30135) ||
+					!HasQuest(30136) &amp;&amp; !IsQuestCompleted(30136) ||
+					!HasQuest(30137) &amp;&amp; !IsQuestCompleted(30137)" >
 		<CustomBehavior File="FlyTo" X="2174.7" Y="-3113.505" Z="42.48155" />
 		<CustomBehavior File="ForcedDismount" />
-		<PickUp QuestName="Beating the Odds" QuestId="30135" GiverName="Instructor Tong" GiverId="58225" />
-	</If>
-
-	<If Condition="!HasQuest(30136) &amp;&amp; !IsQuestCompleted(30136)" >
-		<CustomBehavior File="FlyTo" X="2174.7" Y="-3113.505" Z="42.48155" />
-		<CustomBehavior File="ForcedDismount" />
-		<PickUp QuestName="Empty Nests" QuestId="30136" GiverName="Instructor Tong" GiverId="58225" />
-	</If>
-
-	<If Condition="!HasQuest(30137) &amp;&amp; !IsQuestCompleted(30137)" >
-		<CustomBehavior File="FlyTo" X="2174.7" Y="-3113.505" Z="42.48155" />
-		<CustomBehavior File="ForcedDismount" />
-		<PickUp QuestName="Egg Collection" QuestId="30137" GiverName="Instructor Tong" GiverId="58225" />
+		<If Condition="!HasQuest(30135) &amp;&amp; !IsQuestCompleted(30135)" >
+			<PickUp QuestName="Beating the Odds" QuestId="30135" GiverName="Instructor Tong" GiverId="58225" />
+		</If>
+		<If Condition="!HasQuest(30136) &amp;&amp; !IsQuestCompleted(30136)" >
+			<PickUp QuestName="Empty Nests" QuestId="30136" GiverName="Instructor Tong" GiverId="58225" />
+		</If>
+		<If Condition="!HasQuest(30137) &amp;&amp; !IsQuestCompleted(30137)" >
+			<PickUp QuestName="Egg Collection" QuestId="30137" GiverName="Instructor Tong" GiverId="58225" />
+		</If>
 	</If>
 
 	<If Condition="HasQuest(30135) &amp;&amp; !IsQuestCompleted(30135)" >
@@ -94,8 +92,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30136" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="2189.148" Y="-3028.586" Z="20.56" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30136) &amp;&amp; !IsQuestCompleted(30136)" >
-			<CustomBehavior File="UseItemOn" ItemId="78947" MobId="58220" MobId2="58244" MobId3="58243" Range="5" CollectionDistance="1000" NumOfTimes="1"/>
+		<While Condition="!IsQuestCompleted(30136)" >
+			<CustomBehavior File="InteractWith" QuestId="30136" InteractByUsingItemId="78947" MobId="58220" MobId2="58244" MobId3="58243" Range="5" CollectionDistance="1000" />
 			<CustomBehavior File="FlyTo" X="2301.747" Y="-3039.705" Z="20.18619" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</While>
@@ -108,22 +106,20 @@
 		<CustomBehavior File="CollectThings" ObjectId="210238" ObjectId2="210239" ObjectId3="210240" CollectItemId="78959" CollectItemCount="6" CollectUntil="RequiredCountReached" PostInteractDelay="2000" NonCompeteDistance="5" HuntingGroundRadius="200" />
 	</If>
 
-	<If Condition="HasQuest(30135) &amp;&amp; IsQuestCompleted(30135)" >
+	<If Condition="HasQuest(30135) &amp;&amp; IsQuestCompleted(30135) ||
+					HasQuest(30136) &amp;&amp; IsQuestCompleted(30136) ||
+					HasQuest(30137) &amp;&amp; IsQuestCompleted(30137)" >
 		<CustomBehavior File="FlyTo" X="2174.7" Y="-3113.505" Z="42.48155" />
 		<CustomBehavior File="ForcedDismount" />
-		<TurnIn QuestName="Beating the Odds" QuestId="30135" TurnInName="Instructor Tong" TurnInId="58225" />
-	</If>
-
-	<If Condition="HasQuest(30136) &amp;&amp; IsQuestCompleted(30136)" >
-		<CustomBehavior File="FlyTo" X="2174.7" Y="-3113.505" Z="42.48155" />
-		<CustomBehavior File="ForcedDismount" />
-		<TurnIn QuestName="Empty Nests" QuestId="30136" TurnInName="Instructor Tong" TurnInId="58225" />
-	</If>
-
-	<If Condition="HasQuest(30137) &amp;&amp; IsQuestCompleted(30137)" >
-		<CustomBehavior File="FlyTo" X="2174.7" Y="-3113.505" Z="42.48155" />
-		<CustomBehavior File="ForcedDismount" />
-		<TurnIn QuestName="Egg Collection" QuestId="30137" TurnInName="Instructor Tong" TurnInId="58225" />
+		<If Condition="HasQuest(30135) &amp;&amp; IsQuestCompleted(30135)" >
+			<TurnIn QuestName="Beating the Odds" QuestId="30135" TurnInName="Instructor Tong" TurnInId="58225" />
+		</If>
+		<If Condition="HasQuest(30136) &amp;&amp; IsQuestCompleted(30136)" >
+			<TurnIn QuestName="Empty Nests" QuestId="30136" TurnInName="Instructor Tong" TurnInId="58225" />
+		</If>
+		<If Condition="HasQuest(30137) &amp;&amp; IsQuestCompleted(30137)" >
+			<TurnIn QuestName="Egg Collection" QuestId="30137" TurnInName="Instructor Tong" TurnInId="58225" />
+		</If>
 	</If>
 
 	<If Condition="!HasQuest(30138) &amp;&amp; !IsQuestCompleted(30138)" >
@@ -153,6 +149,7 @@
 
 	<If Condition="HasQuest(30139) || HasQuest(30140) || HasQuest(30141)" >
 		<CustomBehavior File="FlyTo" X="1554.104" Y="-2563.499" Z="151.3746" />
+		<CustomBehavior File="ForcedDismount" />
 		<If Condition="HasQuest(30139)" >
 			<TurnIn QuestName="The Rider's Journey" QuestId="30139" TurnInName="Instructor Skythorn" TurnInId="58228" />
 			<PickUp QuestName="It's A..." QuestId="30142" GiverName="Instructor Skythorn" GiverId="58228" />
