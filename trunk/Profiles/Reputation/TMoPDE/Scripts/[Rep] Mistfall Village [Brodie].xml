@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r173</Name>
+	<Name>Mistfall Village r174</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -330,11 +330,11 @@
 		<CustomBehavior File="FlyTo" X="732.9484" Y="1586.01" Z="375.0465" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30192)" >
-			<While Condition="(GetItemCount(85782) &gt; 1) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="UseItemTargetLocation" QuestId="30192" ItemId="85782" UseType="ToObject" ObjectId="63797" Range="30" NumOfTimes="1" />
-			</While>
-			<While Condition="(GetItemCount(85782) &lt; 5) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" MobId="213369" WaitForNpcs="False" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" ObjectType="GameObject" Range="4" />
+			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
+				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" MobId="63797" Range="20" />
+			</If>
+			<If Condition="!HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
+				<CustomBehavior File="InteractWith" QuestId="30192" ObjectType="GameObject" MobId="213369" WaitForNpcs="False" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" Range="4" />
 			</While>
 		</While>
 	</If>
@@ -346,12 +346,11 @@
 		<CustomBehavior File="FlyTo" X="732.9484" Y="1586.01" Z="375.0465" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30288)" >
-			<While Condition="(GetItemCount(85950) &gt; 1) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85950" UseType="ToObject" ObjectId="63943" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
-			</While>
-			<While Condition="(GetItemCount(85950) &lt; 5) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" MobId="213463" WaitForNpcs="False" NumOfTimes="1" WaitTime="1300" CollectionDistance="5000" ObjectType="GameObject" Range="4" />
+			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
+				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" MobId="63797" Range="20" />
+			</If>
+			<If Condition="!HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
+				<CustomBehavior File="InteractWith" QuestId="30288" ObjectType="GameObject" MobId="213369" WaitForNpcs="False" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" Range="4" />
 			</While>
 		</While>
 	</If>

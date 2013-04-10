@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r162</Name>
+	<Name>Operation Shieldwall r174</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -726,14 +726,24 @@
 	</While>
 
 	<CustomBehavior File="ForcedDismount" />
-	<If Condition="HasItem(64488)" >
+	<If Condition="Me.Class == WoWClass.Shaman" >
+		<CustomBehavior File="CastSpell" SpellId="556" MobId="0" />
+	<ElseIf Condition="HasItem(60498)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60498)" />
+	</ElseIf>
+	<ElseIf Condition="HasItem(93672)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93672)" />
+	</ElseIf>
+	<ElseIf Condition="HasItem(54452)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(54452)" />
+	</ElseIf>
+	<ElseIf Condition="HasItem(64488)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
-	</If>
-	<If Condition="HasItem(6948)" >
+	</ElseIf>
+	<ElseIf Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+	</ElseIf>
 	</If>
-
-<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] The Anglers Dailies [Brodie]" />-->
 
 <CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="MORE COMING SOON!!!" />
 

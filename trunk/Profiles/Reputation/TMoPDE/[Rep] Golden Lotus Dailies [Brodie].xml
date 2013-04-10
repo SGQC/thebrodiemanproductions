@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r173</Name>
+	<Name>The Golden Lotus r174</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -268,13 +268,13 @@
 <!-- Phase 1 Quests -->
 
 <!-- Given a Second Chance -->
-	<If Condition="((HasQuest(30312)) &amp;&amp; (!IsQuestCompleted(30312)))" >
+	<If Condition="(HasQuest(30312) &amp;&amp; !IsQuestCompleted(30312))" >
 		<CustomBehavior File="Message" Text="Starting Given a Second Chance" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30312" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1419.408" Y="1197.767" Z="413.5989" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30312)" >
-			<CustomBehavior File="UseItemOn" ItemId="84242" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="6000" />
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="84242" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="6000" />
 		</While>
 	</If>
 
@@ -409,7 +409,7 @@
 		<CustomBehavior File="FlyTo" X="1540.48" Y="1176.70" Z="443.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31754)" >
-			<CustomBehavior File="UseItemOn" ItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" >
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="89123" QuestId="31754" MobId="65762" IsMissingAuraId="129380" Range="5" WaitTime="5000" >
 				<HuntingGrounds>
 					<Hotspot X="1540.479" Y="1176.702" Z="443.0296" />
 					<Hotspot X="1529.951" Y="1181.776" Z="442.5779" />
@@ -606,11 +606,23 @@
 	</While>
 
 	<CustomBehavior File="ForcedDismount" />
-	<If Condition="HasItem(64488)" >
+	<If Condition="Me.Class == WoWClass.Shaman" >
+		<CustomBehavior File="CastSpell" SpellId="556" MobId="0" />
+	<ElseIf Condition="HasItem(60498)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60498)" />
+	</ElseIf>
+	<ElseIf Condition="HasItem(93672)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93672)" />
+	</ElseIf>
+	<ElseIf Condition="HasItem(54452)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(54452)" />
+	</ElseIf>
+	<ElseIf Condition="HasItem(64488)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
-	</If>
-	<If Condition="HasItem(6948)" >
+	</ElseIf>
+	<ElseIf Condition="HasItem(6948)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+	</ElseIf>
 	</If>
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies" />

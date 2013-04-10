@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r173</Name>
+	<Name>Ruins of Guo-Lai r174</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -363,48 +363,30 @@
 		<CustomBehavior File="FlyTo" X="1265.85" Y="1901.82" Z="349.66" />
 		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(30301)" >
-			<If Condition="!IsQuestCompleted(30301)" >
-				<CustomBehavior File="FlyTo" X="1249.55" Y="1892.47" Z="348.37" />
+			<CustomBehavior File="FlyTo" X="1249.55" Y="1892.47" Z="348.37" />
+			<While Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; u.Entry == 210680 &amp;&amp; u.Distance &lt;= 500)" >
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<RunTo X="1228.00" Y="1852.45" Z="347.59" />
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<RunTo X="1224.96" Y="1812.68" Z="345.29" />
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<RunTo X="1249.10" Y="1809.14" Z="344.78" />
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<RunTo X="1287.15" Y="1817.82" Z="344.78" />
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<CustomBehavior File="FlyTo" X="1442.69" Y="1802.02" Z="301.77" />
+				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" ObjectType="GameObject" Range="20" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
+					<HuntingGrounds>
+						<Hotspot X="1249.55" Y="1892.47" Z="348.37" />
+						<Hotspot X="1228.00" Y="1852.45" Z="347.59" />
+						<Hotspot X="1224.96" Y="1812.68" Z="345.29" />
+						<Hotspot X="1249.10" Y="1809.14" Z="344.78" />
+						<Hotspot X="1287.15" Y="1817.82" Z="344.78" />
+					</HuntingGrounds>
+				</CustomBehavior>
+			</While>
+			<CustomBehavior File="FlyTo" X="1442.69" Y="1802.02" Z="301.77" />
+			<While Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; u.Entry == 210680 &amp;&amp; u.Distance &lt;= 500)" >
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<RunTo X="1489.75" Y="1833.92" Z="308.17" />
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(30301)" >
-				<RunTo X="1441.47" Y="1821.36" Z="301.91" />
-				<CustomBehavior File="UseItemTargetLocation" ItemId="85581" UseType="ToObject" ObjectId="210680" ObjectType="GameObject" Range="30" NumOfTimes="1" WaitTime="2000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
+				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" ObjectType="GameObject" Range="20" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
+					<HuntingGrounds>
+						<Hotspot X="1442.69" Y="1802.02" Z="301.77" />
+						<Hotspot X="1489.75" Y="1833.92" Z="308.17" />
+						<Hotspot X="1441.47" Y="1821.36" Z="301.91" />
+					</HuntingGrounds>
+				</CustomBehavior>
+			</While>
 		</While>
 	</If>
 
