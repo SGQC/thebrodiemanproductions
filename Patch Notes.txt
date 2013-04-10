@@ -1,5 +1,30 @@
 Patch Notes
 
+4/9/13
+
+r174
+Profile-wide Update
+-- Added support for Astral Recall, Ethereal Portal, Dark Portal and Trans-Dimensional Fabricator
+Quest Behaviors (Temporary til HB carries)
+-- Updated InteractWith (v419) which may or may not be in next HB revision
+-- Updated ForcedDismount - Now covers Druid/Shaman shapeshifts
+Golden Lotus PreReqs
+-- Updated for new InteractWith (GossipOptions)
+Golden Pagoda Phase 2
+-- Burning Away the Filth - Will now burn any banners it finds within the Hotspots
+Mistfall Village
+-- My Town, Its on Fire - Will now pick up buckets, then use, then repeat. (Hotspots coming soon!)
+-- My Town, Its on Fire Again - Will now pick up buckets, then use, then repeat. (Hotspots coming soon!)
+Ruins of Guo-Lai
+-- Offering a Warm Welcome - Reworked, should more reliably use item, and check areas
+Setting Sun Garrison
+-- Code Cleanup
+Golden Lotus
+-- Given a Second Chance - UseItemOn -> InteractWith
+-- Cannonfire - UseItemOn -> InteractWith
+Whitepetal Lake
+-- A Thousand Pointy Teeth - InteractWith -> CollectThings
+
 4/7/13
 
 r173

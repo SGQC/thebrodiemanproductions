@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r118</Name>
+	<Name>Golden Lotus PreReqs r174</Name>
 	<MinLevel>90</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -203,14 +203,14 @@
 	<If Condition="HasQuest(31512) &amp;&amp; !IsQuestCompleted(31512)" >
 		<CustomBehavior File="FlyTo" DestName="Vale Gate" X="1795.701" Y="1391.481" Z="468.855" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="64848" GossipOptions="1" />
+		<CustomBehavior File="InteractWith" MobId="64848" InteractByGossipOptions="1" />
 		<CustomBehavior File="WaitTimer" WaitTime="55000" />
 	</If>
 
 	<If Condition="HasQuest(31511) &amp;&amp; !IsQuestCompleted(31511)" >
 		<CustomBehavior File="FlyTo" DestName="Vale Gate" X="1803.922" Y="1325.357" Z="468.854" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="64853" GossipOptions="1" />
+		<CustomBehavior File="InteractWith" MobId="64853" InteractByGossipOptions="1" />
 		<CustomBehavior File="WaitTimer" WaitTime="55000" />
 	</If>
 
@@ -244,24 +244,24 @@
 		<If Condition="!IsObjectiveComplete(4,30631)" >
 			<CustomBehavior File="FlyTo" DestName="Alliance Starter" X="944.6064" Y="339.0539" Z="455.8447" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="64029" GossipOptions="1" />
+			<CustomBehavior File="InteractWith" MobId="64029" InteractByGossipOptions="1" />
 			<RunTo X="944.6064" Y="339.0539" Z="455.8447" />
 		</If>
 		<If Condition="!IsObjectiveComplete(2,30631)" >
 			<CustomBehavior File="FlyTo" X="975.2001" Y="361.4172" Z="526.0383" />
 			<CustomBehavior File="FlyTo" X="925.8339" Y="309.2366" Z="506.1105" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59961" GossipOptions="1" />
+			<CustomBehavior File="InteractWith" MobId="59961" InteractByGossipOptions="1" />
 		</If>
 		<If Condition="!IsObjectiveComplete(3,30631)" >
 			<CustomBehavior File="FlyTo" DestName="Front Door" X="867.4457" Y="285.8521" Z="503.6778" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="64149" GossipOptions="2" X="784.08" Y="280.39" Z="503.42" />
+			<CustomBehavior File="InteractWith" MobId="64149" InteractByGossipOptions="2" X="784.08" Y="280.39" Z="503.42" />
 		</If>
 		<If Condition="!IsObjectiveComplete(1,30631)" >
 			<CustomBehavior File="FlyTo" DestName="Repair Vendor" X="1223.032" Y="602.6687" Z="394.04" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59908" GossipOptions="1" />
+			<CustomBehavior File="InteractWith" MobId="59908" InteractByGossipOptions="1" />
 		</If>
 	</If>
 
@@ -269,24 +269,24 @@
 		<If Condition="!IsObjectiveComplete(4,30649)" >
 			<CustomBehavior File="FlyTo" DestName="Horde Starter" X="1553.2" Y="890.477" Z="424.1" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="63996" GossipOptions="1" />
+			<CustomBehavior File="InteractWith" MobId="63996" InteractByGossipOptions="1" />
 			<RunTo X="1553.2" Y="890.477" Z="424.1" />
 		</If>
 		<If Condition="!IsObjectiveComplete(2,30649)" >
 			<CustomBehavior File="FlyTo" X="1503.036" Y="905.7311" Z="494.7501" />
 			<CustomBehavior File="FlyTo" X="1566.38" Y="929.62" Z="494.7501" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59959" GossipOptions="1" />
+			<CustomBehavior File="InteractWith" MobId="59959" InteractByGossipOptions="1" />
 		</If>
 		<If Condition="!IsObjectiveComplete(3,30649)" >
 			<CustomBehavior File="FlyTo" DestName="Front Door" X="1623.753" Y="923.2146" Z="471.1835" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="62996" GossipOptions="2" X="1700.95" Y="893.58" Z="470.98" />
+			<CustomBehavior File="InteractWith" MobId="62996" InteractByGossipOptions="2" X="1700.95" Y="893.58" Z="470.98" />
 		</If>
 		<If Condition="!IsObjectiveComplete(1,30649)" >
 			<CustomBehavior File="FlyTo" DestName="Repair Vendor" X="1223.032" Y="602.6687" Z="394.04" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59908" GossipOptions="1" />
+			<CustomBehavior File="InteractWith" MobId="59908" InteractByGossipOptions="1" />
 		</If>
 	</If>
 
@@ -356,7 +356,7 @@
 
 	<If Condition="HasQuest(30634) &amp;&amp; !IsQuestCompleted(30634)" >
 		<CustomBehavior File="FlyTo" X="1564.09" Y="1625.977" Z="386.9979" />
-		<CustomBehavior File="InteractWith" MobId="65252" GossipOptions="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="65252" InteractByGossipOptions="1" WaitTime="1000" />
 		<While Condition="!IsQuestCompleted(30634)" >
 			<CustomBehavior File="FlyTo" X="1697.30" Y="1781.58" Z="458.00" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />

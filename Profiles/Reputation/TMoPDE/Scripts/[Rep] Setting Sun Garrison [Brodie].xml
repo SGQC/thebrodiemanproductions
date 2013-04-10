@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r99</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>Setting Sun Garrison r174</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -126,15 +126,12 @@
 	</While>
 
 <!-- The Battle Ring -->
-	<If Condition="(HasQuest(30306)) &amp;&amp; (!IsQuestCompleted(30306))" >
-
+	<If Condition="(HasQuest(30306) &amp;&amp; !IsQuestCompleted(30306))" >
 		<CustomBehavior File="Message" Text="Starting The Battle Ring" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30306" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="693.7659" Y="1984.032" Z="326.9627" />
-
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="HasQuest(30306) &amp;&amp; !IsQuestCompleted(30306)" >
-
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<RunTo X="694.0622" Y="1983.266" Z="325.4342" />
 		</While>
@@ -176,7 +173,7 @@
 	</If>
 
 <!-- Enemy at the Gates -->
-	<If Condition="(HasQuest(30264)) &amp;&amp; (!IsQuestCompleted(30264))" >
+	<If Condition="(HasQuest(30264) &amp;&amp; !IsQuestCompleted(30264))" >
 		<CustomBehavior File="Message" Text="Starting Enemy at the Gates" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30264" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="821.932" Y="2080.49" Z="316.099" />
@@ -188,11 +185,11 @@
 	</If>
 
 <!-- Lost Scouts -->
-	<If Condition="(HasQuest(30245)) &amp;&amp; (!IsQuestCompleted(30245))" >
+	<If Condition="(HasQuest(30245) &amp;&amp; !IsQuestCompleted(30245))" >
 		<CustomBehavior File="Message" Text="Starting Lost Scouts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30245" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1242.38" Y="2177.708" Z="334.9722" />
-		<While Condition="(HasQuest(30245)) &amp;&amp; (!IsQuestCompleted(30245))" >
+		<While Condition="!IsQuestCompleted(30245)" >
 			<CustomBehavior File="FlyTo" X="1208.51" Y="2189.03" Z="341.99" />
 			<CustomBehavior File="InteractWith" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
 			<CustomBehavior File="FlyTo" X="1302.94" Y="2157.54" Z="371.28" />
@@ -206,7 +203,7 @@
 	</If>
 
 <!-- No Reprieve -->
-	<If Condition="(HasQuest(30444)) &amp;&amp; (!IsQuestCompleted(30444))" >
+	<If Condition="(HasQuest(30444) &amp;&amp; !IsQuestCompleted(30444))" >
 		<CustomBehavior File="Message" Text="Starting No Reprieve" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30444" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1210.793" Y="2173.061" Z="330.8089" />
@@ -215,7 +212,7 @@
 	</If>
 
 <!-- Upon The Ramparts -->
-	<If Condition="(HasQuest(30246)) &amp;&amp; (!IsQuestCompleted(30246))" >
+	<If Condition="(HasQuest(30246) &amp;&amp; !IsQuestCompleted(30246))" >
 		<CustomBehavior File="Message" Text="Starting Upon The Ramparts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30246" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="784.1627" Y="2302.708" Z="381.2356" />
@@ -227,7 +224,7 @@
 	</If>
 
 <!-- Mantid Under Fire -->
-	<If Condition="(HasQuest(30243)) &amp;&amp; (!IsQuestCompleted(30243))" >
+	<If Condition="(HasQuest(30243) &amp;&amp; !IsQuestCompleted(30243))" >
 		<CustomBehavior File="Message" Text="Starting Mantid Under Fire" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30243" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1025.549" Y="2407.683" Z="390.7802" />
@@ -283,35 +280,35 @@
 		<CustomBehavior File="FlyTo" X="733.8275" Y="1938.643" Z="320.5783" />
 	</If>
 
-  	<If Condition="(HasQuest(30306)) &amp;&amp; (IsQuestCompleted(30306))" >
+  	<If Condition="(HasQuest(30306) &amp;&amp; IsQuestCompleted(30306))" >
 		<TurnIn QuestName="The Battle Ring" QuestId="30306" TurnInName="Anji Autumnlight" TurnInId="58919" />
 	</If>
 
-  	<If Condition="(HasQuest(30246)) &amp;&amp; (IsQuestCompleted(30246))" >
+  	<If Condition="(HasQuest(30246) &amp;&amp; IsQuestCompleted(30246))" >
 		<TurnIn QuestName="Upon The Ramparts" QuestId="30246" TurnInName="Anji Autumnlight" TurnInId="58919" />
 	</If>
 
-  	<If Condition="(HasQuest(30264)) &amp;&amp; (IsQuestCompleted(30264))" >
+  	<If Condition="(HasQuest(30264) &amp;&amp; IsQuestCompleted(30264))" >
 		<TurnIn QuestName="Enemy at the Gates" QuestId="30264" TurnInName="Anji Autumnlight" TurnInId="58919" />
 	</If>
 
-  	<If Condition="(HasQuest(30444)) &amp;&amp; (IsQuestCompleted(30444))" >
+  	<If Condition="(HasQuest(30444) &amp;&amp; IsQuestCompleted(30444))" >
 		<TurnIn QuestName="No Reprieve" QuestId="30444" TurnInName="Anji Autumnlight" TurnInId="58919" />
 	</If>
 
-  	<If Condition="(HasQuest(30245)) &amp;&amp; (IsQuestCompleted(30245))" >
+  	<If Condition="(HasQuest(30245) &amp;&amp; IsQuestCompleted(30245))" >
 		<TurnIn QuestName="Lost Scouts" QuestId="30245" TurnInName="Kun Autumnlight" TurnInId="58920" />
 	</If>
 
-  	<If Condition="(HasQuest(30242)) &amp;&amp; (IsQuestCompleted(30242))" >
+  	<If Condition="(HasQuest(30242) &amp;&amp; IsQuestCompleted(30242))" >
 		<TurnIn QuestName="Survival Ring: Blades" QuestId="30242" TurnInName="Leven Dawnblade" TurnInId="59340" />
 	</If>
 
-  	<If Condition="(HasQuest(30240)) &amp;&amp; (IsQuestCompleted(30240))" >
+  	<If Condition="(HasQuest(30240) &amp;&amp; IsQuestCompleted(30240))" >
 		<TurnIn QuestName="Survival Ring: Flames" QuestId="30240" TurnInName="Leven Dawnblade" TurnInId="59340" />
 	</If>
 
-  	<If Condition="(HasQuest(30266)) &amp;&amp; (IsQuestCompleted(30266))" >
+  	<If Condition="(HasQuest(30266) &amp;&amp; IsQuestCompleted(30266))" >
 		<TurnIn QuestName="Bloodied Skies" QuestId="30266" TurnInName="Leven Dawnblade" TurnInId="59340" />
 	</If>
 
