@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r174</Name>
+	<Name>Cloud Serpent Dailies r175</Name>
 	<MinLevel>90</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -185,133 +185,122 @@
 	</Quest>
 
 <!-- The Seed of Doubt -->
-   	<Quest Id="31711" Name="The Seed of Doubt">
-       		<Objective Type="KillMob" MobId="65614" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="2131.35" Y="-2435.88" Z="-0.31" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31711" Name="The Seed of Doubt">
+		<Objective Type="KillMob" MobId="65614" KillCount="1">
+			<Hotspots>
+				<Hotspot X="2131.35" Y="-2435.88" Z="-0.31" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Madcap Mayhem -->
-   	<Quest Id="31703" Name="Madcap Mayhem">
-       		<Objective Type="KillMob" MobId="65613" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="2374.12" Y="-2922.58" Z="8.38" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31703" Name="Madcap Mayhem">
+		<Objective Type="KillMob" MobId="65613" KillCount="1">
+			<Hotspots>
+				<Hotspot X="2374.12" Y="-2922.58" Z="8.38" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Needle Me Not -->
-   	<Quest Id="31705" Name="Needle Me Not">
-       		<Objective Type="KillMob" MobId="65616" KillCount="1">
-           	<Hotspots>
-            		<Hotspot X="1720.011" Y="-2525.268" Z="155.3589" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31705" Name="Needle Me Not">
+		<Objective Type="KillMob" MobId="65616" KillCount="1">
+			<Hotspots>
+				<Hotspot X="1720.011" Y="-2525.268" Z="155.3589" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Monkey Mischief -->
-   	<Quest Id="31712" Name="Monkey Mischief">
-       		<Objective Type="KillMob" MobId="65621" KillCount="13">
-           	<Hotspots>
-			<Hotspot X="2295.882" Y="-2438.325" Z="2.67" />
-           	</Hotspots>
-       		</Objective>
+	<Quest Id="31712" Name="Monkey Mischief">
+		<Objective Type="KillMob" MobId="65621" KillCount="13">
+			<Hotspots>
+				<Hotspot X="2295.882" Y="-2438.325" Z="2.67" />
+			</Hotspots>
+		</Objective>
 	</Quest>
 
 <!-- A Tangled Web -->
-   	<Quest Id="31707" Name="A Tangled Web">
-       		<Objective Type="KillMob" MobId="65634" KillCount="5">
-           	<Hotspots>
-            		<Hotspot X="2175.19" Y="-2587.68" Z="2.06" />
-            		<Hotspot X="2166.33" Y="-2526.71" Z="6.55" />
-            		<Hotspot X="2182.50" Y="-2470.20" Z="2.16" />
-            		<Hotspot X="2122.69" Y="-2512.78" Z="-3.40" />
-            		<Hotspot X="2058.39" Y="-2525.82" Z="-9.38" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31707" Name="A Tangled Web">
+		<Objective Type="KillMob" MobId="65634" KillCount="5">
+			<Hotspots>
+				<Hotspot X="2175.19" Y="-2587.68" Z="2.06" />
+				<Hotspot X="2166.33" Y="-2526.71" Z="6.55" />
+				<Hotspot X="2182.50" Y="-2470.20" Z="2.16" />
+				<Hotspot X="2122.69" Y="-2512.78" Z="-3.40" />
+				<Hotspot X="2058.39" Y="-2525.82" Z="-9.38" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Weeping Widows -->
-   	<Quest Id="31706" Name="Weeping Widows">
-       		<Objective Type="KillMob" MobId="65622" KillCount="7">
-           	<Hotspots>
-            		<Hotspot X="2175.19" Y="-2587.68" Z="2.06" />
-            		<Hotspot X="2166.33" Y="-2526.71" Z="6.55" />
-            		<Hotspot X="2182.50" Y="-2470.20" Z="2.16" />
-            		<Hotspot X="2122.69" Y="-2512.78" Z="-3.40" />
-            		<Hotspot X="2058.39" Y="-2525.82" Z="-9.38" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="31706" Name="Weeping Widows">
+		<Objective Type="KillMob" MobId="65622" KillCount="7">
+			<Hotspots>
+				<Hotspot X="2175.19" Y="-2587.68" Z="2.06" />
+				<Hotspot X="2166.33" Y="-2526.71" Z="6.55" />
+				<Hotspot X="2182.50" Y="-2470.20" Z="2.16" />
+				<Hotspot X="2122.69" Y="-2512.78" Z="-3.40" />
+				<Hotspot X="2058.39" Y="-2525.82" Z="-9.38" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- The Big Brew-haha -->
 	<Quest Id="31713" Name="The Big Brew-haha"> 
 		<Objective Type="CollectItem" ItemId="88855" CollectCount="100">
-		<CollectFrom>
-			<Mob Name="Oona Brewchugger" Id="65624" />
-			<GameObject Name="Oona Brew Mug" Id="214845" />
-		</CollectFrom>
-		<Hotspots>
-			<Hotspot X="2295.882" Y="-2438.325" Z="2.67" />
-		</Hotspots>
+			<CollectFrom>
+				<Mob Name="Oona Brewchugger" Id="65624" />
+				<GameObject Name="Oona Brew Mug" Id="214845" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2295.882" Y="-2438.325" Z="2.67" />
+			</Hotspots>
 		</Objective>
 	</Quest>
 
 <!-- Serpent's Scale -->
 	<Quest Id="31708" Name="Serpent's Scale"> 
 		<Objective Type="CollectItem" ItemId="88895" CollectCount="25">
-		<CollectFrom>
-			<GameObject Name="Serpent's Scale" Id="214843" />
-			<GameObject Name="Serpent's Scale" Id="214844" />
-		</CollectFrom>
-		<Hotspots>
-			<Hotspot X="2131.35" Y="-2435.88" Z="-0.31" />
-		</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Saving the Serpents -->
-	<Quest Id="31714" Name="Saving the Serpents"> 
-		<Objective Type="CollectItem" ItemId="88894" CollectCount="10">
-		<CollectFrom>
-			<GameObject Name="Misguided Serpent" Id="65641" />
-		</CollectFrom>
-		<Hotspots>
-		</Hotspots>
+			<CollectFrom>
+				<GameObject Name="Serpent's Scale" Id="214843" />
+				<GameObject Name="Serpent's Scale" Id="214844" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2131.35" Y="-2435.88" Z="-0.31" />
+			</Hotspots>
 		</Objective>
 	</Quest>
 
 <!-- Tiny Treats -->
 	<Quest Id="31710" Name="Tiny Treats"> 
 		<Objective Type="CollectItem" ItemId="88907" CollectCount="100">
-		<CollectFrom>
-			<Mob Name="Widowspawn" Id="65658" />
-		</CollectFrom>
-		<Hotspots>
-            		<Hotspot X="2175.19" Y="-2587.68" Z="2.06" />
-            		<Hotspot X="2166.33" Y="-2526.71" Z="6.55" />
-            		<Hotspot X="2182.50" Y="-2470.20" Z="2.16" />
-            		<Hotspot X="2122.69" Y="-2512.78" Z="-3.40" />
-            		<Hotspot X="2058.39" Y="-2525.82" Z="-9.38" />
-		</Hotspots>
+			<CollectFrom>
+				<Mob Name="Widowspawn" Id="65658" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="2175.19" Y="-2587.68" Z="2.06" />
+				<Hotspot X="2166.33" Y="-2526.71" Z="6.55" />
+				<Hotspot X="2182.50" Y="-2470.20" Z="2.16" />
+				<Hotspot X="2122.69" Y="-2512.78" Z="-3.40" />
+				<Hotspot X="2058.39" Y="-2525.82" Z="-9.38" />
+			</Hotspots>
 		</Objective>
 	</Quest>
 
 <!-- Sweet as Honey -->
 	<Quest Id="30150" Name="Sweet as Honey"> 
 		<Objective Type="CollectItem" ItemId="79030" CollectCount="30">
-		<CollectFrom>
-			<Mob Name="Honeykeeper" Id="58363" />
-		</CollectFrom>
-		<Hotspots>
-			<Hotspot X="1471.447" Y="-2534.513" Z="153.5948" />
-			<Hotspot X="1437.292" Y="-2520.142" Z="153.6138" />
-			<Hotspot X="1397.941" Y="-2500.585" Z="147.547" />
-			<Hotspot X="1445.15" Y="-2440.557" Z="152.7464" />
-			<Hotspot X="1491.508" Y="-2519.546" Z="153.868" />
-		</Hotspots>
+			<CollectFrom>
+				<Mob Name="Honeykeeper" Id="58363" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="1471.447" Y="-2534.513" Z="153.5948" />
+				<Hotspot X="1437.292" Y="-2520.142" Z="153.6138" />
+				<Hotspot X="1397.941" Y="-2500.585" Z="147.547" />
+				<Hotspot X="1445.15" Y="-2440.557" Z="152.7464" />
+				<Hotspot X="1491.508" Y="-2519.546" Z="153.868" />
+			</Hotspots>
 		</Objective>
 	</Quest>
 
@@ -381,112 +370,112 @@
 <!-- Instructor Windblade -->
 	<While Condition="HasQuestAvailable(58420)" >
 		<CustomBehavior File="InteractWith"  MobId="58420" WaitTime="1000" X="1618.37" Y="-2599.55" Z="150.76" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Exalted Blue) -->
 	<While Condition="HasQuestAvailable(65724)" >
 		<CustomBehavior File="InteractWith" MobId="65724" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Exalted Green) -->
 	<While Condition="HasQuestAvailable(65723)" >
 		<CustomBehavior File="InteractWith" MobId="65723" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Exalted Yellow) -->
 	<While Condition="HasQuestAvailable(65679)" >
 		<CustomBehavior File="InteractWith" MobId="65679" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Big Blue) -->
 	<While Condition="HasQuestAvailable(65672)" >
 		<CustomBehavior File="InteractWith" MobId="65672" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Big Green) -->
 	<While Condition="HasQuestAvailable(65673)" >
 		<CustomBehavior File="InteractWith" MobId="65673" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Big Yellow) -->
 	<While Condition="HasQuestAvailable(65674)" >
 		<CustomBehavior File="InteractWith" MobId="65674" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Young Blue) -->
 	<While Condition="HasQuestAvailable(65669)" >
 		<CustomBehavior File="InteractWith" MobId="65669" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Young Green) -->
 	<While Condition="HasQuestAvailable(65670)" >
 		<CustomBehavior File="InteractWith" MobId="65670" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Young Yellow) -->
 	<While Condition="HasQuestAvailable(65671)" >
 		<CustomBehavior File="InteractWith" MobId="65671" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Instructor Skythorn -->
 	<While Condition="HasQuestAvailable(58228)" >
 		<CustomBehavior File="InteractWith" MobId="58228" WaitTime="1000" X="1552.85" Y="-2567.15" Z="151.51" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Ningna Darkwheel -->
 	<While Condition="HasQuestAvailable(58509)" >
 		<CustomBehavior File="InteractWith" MobId="58509" WaitTime="1000" X="1555.56" Y="-2616.34" Z="148.96" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Ace Longpaw -->
 	<While Condition="HasQuestAvailable(58506)" >
 		<CustomBehavior File="InteractWith" MobId="58506" WaitTime="1000" X="1618.37" Y="-2599.55" Z="150.76" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Qua-Ro Whitebrow -->
 	<While Condition="HasQuestAvailable(58511)" >
 		<CustomBehavior File="InteractWith" MobId="58511" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Suchi the Sweet -->
 	<While Condition="HasQuestAvailable(58510)" >
 		<CustomBehavior File="InteractWith" MobId="58510" WaitTime="1000" X="1552.85" Y="-2567.15" Z="151.51" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Big Bao -->
 	<While Condition="HasQuestAvailable(58508)" >
 		<CustomBehavior File="InteractWith" MobId="58508" WaitTime="1000" X="1603.27" Y="-2562.27" Z="153.02" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
@@ -494,7 +483,7 @@
 	<While Condition="HasQuestAvailable(58564)" >
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="58564" WaitTime="1000" X="1565.40" Y="-2579.63" Z="151.96" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
@@ -532,9 +521,8 @@
 	<If Condition="HasQuest(30152) &amp;&amp; !IsQuestCompleted(30152)" >
 		<CustomBehavior File="Message" Text="Starting The Sky Race" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31720" LootMobs="True" PullDistance="1" />
-	<!--<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="READ BEFORE CONTINUING!!! \n As of right now, the bot will start the quest, and be halfway to checkpoint 2 before the quest starts. This guarantees you first place (and 15 extra valor) BUT this is CHEATING!!! I will work to fix this, but I turned it in and have to wait. \n \n USE CAUTION as Blizz may notice this!!!" />-->
 		<CustomBehavior File="FlyTo" X="1620.052" Y="-2639.17" Z="149.995" />
-		<CustomBehavior File="InteractWith" MobId="58420" GossipOptions="1" X="1620.61" Y="-2641.02" Z="149.91" />
+		<CustomBehavior File="InteractWith" MobId="58420" InteractByGossipOptions="1" X="1620.61" Y="-2641.02" Z="149.91" />
 		<CustomBehavior File="FlyTo" X="1818.97" Y="-2780.342" Z="143.7073" /> <!-- Checkpoint #1 -->
 		<CustomBehavior File="FlyTo" X="2186.009" Y="-2714.092" Z="104.8387" /> <!-- Checkpoint #2 -->
 		<CustomBehavior File="FlyTo" X="2479.27" Y="-2825.192" Z="100.4787" /> <!-- Checkpoint #3 -->
@@ -584,7 +572,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31717)" >
-			<CustomBehavior File="InteractWith" MobId="58506" GossipOptions="1" X="1613.85" Y="-2593.837" Z="151.2305" />
+			<CustomBehavior File="InteractWith" MobId="58506" InteractByGossipOptions="1" X="1613.85" Y="-2593.837" Z="151.2305" />
 		</While>
 	</If>
 
@@ -596,7 +584,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31718)" >
-			<CustomBehavior File="InteractWith" MobId="58508" GossipOptions="1" X="1603.27" Y="-2562.27" Z="153.02" />
+			<CustomBehavior File="InteractWith" MobId="58508" InteractByGossipOptions="1" X="1603.27" Y="-2562.27" Z="153.02" />
 		</While>
 	</If>
 
@@ -608,7 +596,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31719)" >
-			<CustomBehavior File="InteractWith" MobId="58509" GossipOptions="1" X="1555.56" Y="-2616.34" Z="148.96" />
+			<CustomBehavior File="InteractWith" MobId="58509" InteractByGossipOptions="1" X="1555.56" Y="-2616.34" Z="148.96" />
 		</While>
 	</If>
 
@@ -620,7 +608,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31720)" >
-			<CustomBehavior File="InteractWith" MobId="58510" GossipOptions="1" X="1571.74" Y="-2631.30" Z="149.41" />
+			<CustomBehavior File="InteractWith" MobId="58510" InteractByGossipOptions="1" X="1571.74" Y="-2631.30" Z="149.41" />
 		</While>
 	</If>
 
@@ -632,7 +620,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt you'll be all set. This boss is not too tough, but the stacking debuff can hurt. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31721)" >
-			<CustomBehavior File="InteractWith" MobId="58511" GossipOptions="1" X="1629.15" Y="-2548.51" Z="153.28" />
+			<CustomBehavior File="InteractWith" MobId="58511" InteractByGossipOptions="1" X="1629.15" Y="-2548.51" Z="153.28" />
 		</While>
 	</If>
 
@@ -757,10 +745,9 @@
 	</If>
 
 <!-- INSIDE THE CAVE -->
-	<While Condition="(Me.Location.Distance(new WoWPoint(2131.35, -2435.88, -0.31)) &lt; 150)" >
-		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="5" />
-		<RunTo X="2173.319" Y="-2608.869" Z="2.595" />
-	</While>
+	<If Condition="(Me.Location.Distance(new WoWPoint(2131.35, -2435.88, -0.31)) &lt; 150)" >
+		<CustomBehavior File="NoCombatMoveTo" X="2173.319" Y="-2608.869" Z="2.595" />
+	</If>
 
 <!-- Feeding Time -->
 	<If Condition="HasQuest(30156) &amp;&amp; !IsQuestCompleted(30156)" >
@@ -782,7 +769,7 @@
 				</While>
 			</While>
 			<While Condition="HasItem(79027) &amp;&amp; !IsQuestCompleted(30156)" >
-				<CustomBehavior File="UseItemOn" QuestId="30156" ItemId="79027" NumOfTimes="1" WaitTime="1000" CollectionDistance="8" 
+				<CustomBehavior File="InteractWith" QuestId="30156" InteractByUsingItemId="79027" WaitTime="1000" CollectionDistance="8" 
 					MobId="64968" MobId2="58384" MobId3="58348" MobId4="58324" MobId5="65724"
 					MobId6="58581" MobId7="58599" MobId8="63552" MobId9="58552" MobId10="58497" MobId11="58526" MobId12="58428" MobId13="65732" MobId14="58441"
 					MobId15="58385" MobId16="64967" MobId17="58349" MobId18="58325" MobId19="65723"
@@ -800,7 +787,7 @@
 		<CustomBehavior File="FlyTo" X="2189.148" Y="-3028.586" Z="20.56" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30157)" >
-			<CustomBehavior File="UseItemOn" ItemId="78947" MobId="58220" MobId2="58244" MobId3="58243" Range="5" CollectionDistance="1000" NumOfTimes="1"/>
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="78947" MobId="58220" MobId2="58244" MobId3="58243" Range="5" CollectionDistance="1000" />
 			<CustomBehavior File="FlyTo" X="2301.747" Y="-3039.705" Z="20.18619" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</While>
@@ -830,12 +817,6 @@
 		<CustomBehavior File="UserSettings" QuestId="30158" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="2160.791" Y="-3346.696" Z="3.117623" />
 		<CustomBehavior File="ForcedDismount" />
-	<!--	<CustomBehavior File="CollectThings" ObjectId="210277" CollectUntil="RequiredCountReached" 
-			CollectItemCount="5" CollectItemId="79025" NonCompeteDistance="5" HuntingGroundRadius="120" >
-			<Hotspot X="2178.317" Y="-3333.267" Z="3.802965" />
-			<Hotspot X="2211.463" Y="-3299.465" Z="3.523714" />
-			<Hotspot X="2274.652" Y="-3302.124" Z="1.73271" />
-		</CustomBehavior>-->
 		<Objective QuestName="Disarming the Enemy" QuestId="30158" Type="CollectItem" ItemId="79025" CollectCount="5" />
 	</If>
 
@@ -953,12 +934,10 @@
 		<Objective QuestName="The Big Brew-haha" QuestId="31713" Type="CollectItem" ItemId="88855" CollectCount="100" />
 	</If>
 
-<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
-
 <!-- INSIDE THE CAVE -->
-	<While Condition="(Me.Location.Distance(new WoWPoint(2362.629, -2434.252, 7.537624)) &lt; 150)" >
-		<RunTo X="2235.132" Y="-2604.035" Z="15.85289" />
-	</While>
+	<If Condition="(Me.Location.Distance(new WoWPoint(2362.629, -2434.252, 7.537624)) &lt; 150)" >
+		<CustomBehavior File="NoCombatMoveTo" X="2235.132" Y="-2604.035" Z="15.85289" />
+	</If>
 	
 <!-- Just a Flesh Wound -->
 	<If Condition="(HasQuest(30148) &amp;&amp; !IsQuestCompleted(30148)) &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 526" >
@@ -981,7 +960,7 @@
 			</While>
 			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 			<While Condition="!IsQuestCompleted(30148) &amp;&amp; HasItem(72985)" >
-				<CustomBehavior File="UseItemOn" QuestId="30148" MobId="58416" ItemId="72985" IsMissingAuraId="11196" NumOfTimes="1" CollectionDistance="1000" WaitTime="10000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+				<CustomBehavior File="InteractWith" QuestId="30148" MobId="58416" InteractByUsingItemId="72985" AuraIdMissingFromMob="11196" NumOfTimes="1" CollectionDistance="1000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
 			</While>
 		</While>
 	</If>
@@ -1207,6 +1186,26 @@
 <!-- The Trainer's Challenge: Qua-Ro Whitebrow -->
 	<If Condition="(HasQuest(31721) &amp;&amp; IsQuestCompleted(31721))" >
 		<TurnIn QuestName="The Trainer's Challenge: Qua-Ro Whitebrow" QuestId="31721" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>
+<!-- Weeping Widows -->
+	<If Condition="(HasQuest(31706) &amp;&amp; IsQuestCompleted(31706))" >
+		<TurnIn QuestName="Weeping Widows" QuestId="31706" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>
+<!-- A Tangled Web -->
+	<If Condition="(HasQuest(31707) &amp;&amp; IsQuestCompleted(31707))" >
+		<TurnIn QuestName="A Tangled Web" QuestId="31707" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>
+<!-- Preservation -->
+	<If Condition="(HasQuest(30159) &amp;&amp; IsQuestCompleted(30159))" >
+		<TurnIn QuestName="Preservation" QuestId="30159" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>
+<!-- Restoring the Balance -->
+	<If Condition="(HasQuest(30155) &amp;&amp; IsQuestCompleted(30155))" >
+		<TurnIn QuestName="Restoring the Balance" QuestId="30155" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>
+<!-- Slitherscale Suppression -->
+	<If Condition="(HasQuest(31194) &amp;&amp; IsQuestCompleted(31194))" >
+		<TurnIn QuestName="Slitherscale Suppression" QuestId="31194" TurnInName="Elder Anli" TurnInId="58564" />
 	</If>
 <!-- The Seed of Doubt -->
 	<If Condition="(HasQuest(31711) &amp;&amp; IsQuestCompleted(31711))" >
@@ -1447,26 +1446,6 @@
 			<TurnIn QuestName="Pooped" QuestId="31716" TurnInName="Your Hatchling" TurnInId="65671" />
 		</While>
 	</If>
-<!-- Weeping Widows -->
-	<If Condition="(HasQuest(31706) &amp;&amp; IsQuestCompleted(31706))" >
-		<TurnIn QuestName="Weeping Widows" QuestId="31706" TurnInName="Elder Anli" TurnInId="58564" />
-	</If>
-<!-- A Tangled Web -->
-	<If Condition="(HasQuest(31707) &amp;&amp; IsQuestCompleted(31707))" >
-		<TurnIn QuestName="A Tangled Web" QuestId="31707" TurnInName="Elder Anli" TurnInId="58564" />
-	</If>
-<!-- Preservation -->
-	<If Condition="(HasQuest(30159) &amp;&amp; IsQuestCompleted(30159))" >
-		<TurnIn QuestName="Preservation" QuestId="30159" TurnInName="Elder Anli" TurnInId="58564" />
-	</If>
-<!-- Restoring the Balance -->
-	<If Condition="(HasQuest(30155) &amp;&amp; IsQuestCompleted(30155))" >
-		<TurnIn QuestName="Restoring the Balance" QuestId="30155" TurnInName="Elder Anli" TurnInId="58564" />
-	</If>
-<!-- Slitherscale Suppression -->
-	<If Condition="(HasQuest(31194) &amp;&amp; IsQuestCompleted(31194))" >
-		<TurnIn QuestName="Slitherscale Suppression" QuestId="31194" TurnInName="Elder Anli" TurnInId="58564" />
-	</If>
 <!-- Snack Time -->
 	<If Condition="(HasQuest(30146) &amp;&amp; IsQuestCompleted(30146))" >
 		<TurnIn QuestName="Snack Time" QuestId="30146" TurnInName="Jenova Longeye" TurnInId="58413" />
@@ -1507,6 +1486,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</ElseIf>
 	</If>
+	
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Cloud Serpent Dailies" />
 
 </QuestOrder>
