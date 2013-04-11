@@ -25,6 +25,7 @@ using System.Windows.Media;
 
 namespace Styx.Bot.Quest_Behaviors.KillVicejaw
 {
+	[CustomBehaviorFileName(@"KillVicejaw")]
     class KillVicejaw : CustomForcedBehavior
     {
         public KillVicejaw(Dictionary<string, string> args)

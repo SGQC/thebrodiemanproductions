@@ -13,8 +13,9 @@ using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
-namespace KeyToSuccess
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.KeyToSuccess
 {
+	[CustomBehaviorFileName(@"SpecificQuests\30300-VOEB-KeyToSuccess")]
     public class KeyToSuccess : CustomForcedBehavior
     {
         public KeyToSuccess(Dictionary<string, string> args)
