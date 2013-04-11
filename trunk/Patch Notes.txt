@@ -2,6 +2,16 @@ Patch Notesb
 
 4/10/13
 
+r178
+Golden Lotus
+-- High Chance of Rain - removed IgnoreCombat call so will defend during quest
+-- Removed obsolete Overrides
+-- New faster quest pickups!
+Mistfall Village
+-- My Town, Its On Fire - If statement error
+-- My Town, Its On Fire Again - If statement error
+-- New faster quest pickups!
+
 r177
 Quest Behaviors
 -- Removed MrFishIt - Included with HB release (v556+)
