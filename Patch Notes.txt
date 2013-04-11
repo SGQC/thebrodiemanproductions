@@ -2,6 +2,20 @@ Patch Notesb
 
 4/10/13
 
+r176
+The Anglers
+-- Code Cleanup
+Operation Shieldwall
+-- Code Cleanup
+-- New InteractWith code conversions
+The Klaxxi
+-- Code Cleanup
+-- If ineligible, will hearth instead of going to Shado Pan
+-- New InteractWith code conversions
+Quest Behaviors
+-- Laosy Scouting - Combined updates from HB release (v556) with code corrections for Namespace duplication
+-- Removed InteractWith and ForcedDismount. Now included in v556+
+
 r175
 Cloud Serpent
 -- Code Cleanup

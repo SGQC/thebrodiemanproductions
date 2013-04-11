@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>The Klaxxi r174</Name>
-	<MinLevel>89</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>The Klaxxi r176</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -35,8 +35,8 @@
 <!-- Quest Overrides -->
 
 <!-- Specimen Request -->
-   	<Quest Id="31508" Name="Specimen Request">
-       	<Objective Type="CollectItem" ItemId="87874" CollectCount="6">
+	<Quest Id="31508" Name="Specimen Request">
+		<Objective Type="CollectItem" ItemId="87874" CollectCount="6">
 			<CollectFrom>
 				<Mob Name="Kypari Crawler" Id="65231" />
 			</CollectFrom>
@@ -45,8 +45,8 @@
 				<Hotspot X="-1190.14" Y="4157.39" Z="56.84" />
 				<Hotspot X="-1263.235" Y="4129.526" Z="58.788" />
 			</Hotspots>
-       	</Objective>
-   	</Quest>
+		</Objective>
+	</Quest>
 
 <!-- Brain Food -->
 	<Quest Id="31238" Name="Brain Food">
@@ -324,7 +324,25 @@
 
 	<If Condition="!IsAchievementCompleted(6540,2) || !IsQuestCompleted(31398)" >
 		<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="Unable to start Klaxxi Dailies: You must progress further in the storyline for Dread Wastes. Recommend downloading and using Kick's Dread Wastes profile. Press Continue to move on to next area." />
-		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Shado Pan Dailies [Brodie]" />
+		<CustomBehavior File="ForcedDismount" />
+		<If Condition="Me.Class == WoWClass.Shaman" >
+			<CustomBehavior File="CastSpell" SpellId="556" MobId="0" />
+		<ElseIf Condition="HasItem(60498)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60498)" />
+		</ElseIf>
+		<ElseIf Condition="HasItem(93672)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93672)" />
+		</ElseIf>
+		<ElseIf Condition="HasItem(54452)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(54452)" />
+		</ElseIf>
+		<ElseIf Condition="HasItem(64488)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
+		</ElseIf>
+		<ElseIf Condition="HasItem(6948)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
+		</ElseIf>
+		</If>
 	</If>
 
 	<If Condition="(!HasQuest(31216) &amp;&amp; IsQuestCompleted(31216) ||
@@ -387,27 +405,27 @@
 	<!-- Enhancements -->
 		<If Condition="(!IsAchievementCompleted(7313, 1) &amp;&amp; IsAchievementCompleted(7312, 1))" >
 			<If Condition="!Me.HasAura(131767)" >
-				<CustomBehavior File="InteractWith" MobId="62538" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="62538" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 6) &amp;&amp; IsAchievementCompleted(7312, 2))" >
 			<If Condition="!Me.HasAura(124529)" >
-				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="215872" GossipOptions="1" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="63758" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="215872" InteractByGossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="63758" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 7) &amp;&amp; IsAchievementCompleted(7312, 3))" >
 			<If Condition="!Me.HasAura(127382)" >
-				<CustomBehavior File="InteractWith" MobId="65305" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="65305" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 9) &amp;&amp; IsAchievementCompleted(7312, 7))" >
 			<If Condition="!Me.HasAura(127794)" >
-				<CustomBehavior File="InteractWith" MobId="63072" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="63072" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 5) &amp;&amp; IsAchievementCompleted(7312, 10))" >
 			<If Condition="!Me.HasAura(127370)" >
-				<CustomBehavior File="InteractWith" MobId="62151" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="62151" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		</If>
@@ -415,35 +433,35 @@
 	<!-- Augmentations -->
 		<If Condition="(!IsAchievementCompleted(7313, 2) &amp;&amp; IsAchievementCompleted(7312, 4))" >
 			<If Condition="!Me.HasAura(127351)" >
-				<CustomBehavior File="InteractWith" MobId="63758" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="63758" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 3) &amp;&amp; IsAchievementCompleted(7312, 5))" >
 			<If Condition="!Me.HasAura(127703)" >
-				<CustomBehavior File="InteractWith" MobId="62180" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="62180" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 4) &amp;&amp; IsAchievementCompleted(7312, 9))" >
 			<If Condition="!Me.HasAura(127356)" >
-				<CustomBehavior File="InteractWith" MobId="63785" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="63785" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 8) &amp;&amp; IsAchievementCompleted(7312, 6))" >
 			<If Condition="!Me.HasAura(127375)" >
-				<CustomBehavior File="InteractWith" MobId="65303" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="65303" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		<ElseIf Condition="(!IsAchievementCompleted(7313, 10) &amp;&amp; IsAchievementCompleted(7312, 8))" >
 			<If Condition="!Me.HasAura(123219)" >
-				<CustomBehavior File="InteractWith" MobId="63071" GossipOptions="1" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="63071" InteractByGossipOptions="1" WaitForNpcs="False" />
 			</If>
 		</ElseIf>
 		</If>
 	<Else>
 		<If Condition="!Me.HasAura(127370)" >
-			<CustomBehavior File="InteractWith" MobId="62151" GossipOptions="1" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="62151" InteractByGossipOptions="1" WaitForNpcs="False" />
 		</If>
 		<If Condition="!Me.HasAura(127356)" >
-			<CustomBehavior File="InteractWith" MobId="63785" GossipOptions="1" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="63785" InteractByGossipOptions="1" WaitForNpcs="False" />
 		</If>
 	</Else>
 	</If>
@@ -452,42 +470,42 @@
 
 <!-- Kil'ruk the Wind-Reaver -->
 	<While Condition="HasQuestAvailable(62538)" > 
-		<CustomBehavior File="InteractWith" MobId="62538" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="62538" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Xaril the Poisoned Mind -->
 	<While Condition="HasQuestAvailable(62151)" > 
-		<CustomBehavior File="InteractWith" MobId="62151" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="62151" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Hisek the Swarmkeeper -->
 	<While Condition="HasQuestAvailable(63785)" > 
-		<CustomBehavior File="InteractWith" MobId="63785" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="63785" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Korven the Prime -->
 	<While Condition="HasQuestAvailable(62180)" > 
-		<CustomBehavior File="InteractWith" MobId="62180" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="128.88" Y="3232.75" Z="215.65" />
+		<CustomBehavior File="InteractWith" MobId="62180" CollectionDistance="200" WaitTime="1000" X="128.88" Y="3232.75" Z="215.65" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Rik'kal the Dissector -->
 	<While Condition="HasQuestAvailable(63072)" > 
-		<CustomBehavior File="InteractWith" MobId="63072" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="63072" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Kaz'tik the Manipulator -->
 	<While Condition="HasQuestAvailable(63758)" > 
-		<CustomBehavior File="InteractWith" MobId="63758" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="63758" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
