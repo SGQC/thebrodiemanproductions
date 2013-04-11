@@ -36,11 +36,12 @@ using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
 
-namespace Styx.Bot.Quest_Behaviors
+namespace Styx.Bot.Quest_Behaviors.CastSpell
 {
-    public class CastSpellOn : CustomForcedBehavior
+	[CustomBehaviorFileName(@"CastSpell")]
+    public class CastSpell : CustomForcedBehavior
     {
-        public CastSpellOn(Dictionary<string, string> args)
+        public CastSpell(Dictionary<string, string> args)
             : base(args)
         {
             try
@@ -150,11 +151,11 @@ namespace Styx.Bot.Quest_Behaviors
         }
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: CastSpellOn.cs 251 2012-11-05 18:57:47Z natfoth $"); } }
+        public override string SubversionId { get { return ("$Id: CastSpell.cs 251 2012-11-05 18:57:47Z natfoth $"); } }
         public override string SubversionRevision { get { return ("$Revision: 251 $"); } }
 
 
-        ~CastSpellOn()
+        ~CastSpell()
         {
             Dispose(false);
         }
@@ -225,7 +226,7 @@ namespace Styx.Bot.Quest_Behaviors
 
                 new Decorator(ret => !IsDone && !_isBehaviorDone && Me.IsAlive && (Counter >= NumOfTimes || (Me.QuestLog.GetQuestById((uint)QuestId) != null && Me.QuestLog.GetQuestById((uint)QuestId).IsCompleted)),
                     new Sequence(
-                        new Action(ret => TreeRoot.StatusText = "Finished CastSpellOn!"),
+                        new Action(ret => TreeRoot.StatusText = "Finished CastSpell!"),
                         new Action(ret => _isBehaviorDone = true),
                         new Action(ret => RunStatus.Success))),
 

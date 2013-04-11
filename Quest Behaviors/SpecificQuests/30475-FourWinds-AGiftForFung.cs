@@ -13,13 +13,12 @@ using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
-
-
-namespace GiftForFung
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.AGiftForFung
 {
-    public class GiftForFung : CustomForcedBehavior
+	[CustomBehaviorFileName(@"SpecificQuests\30475-FourWinds-AGiftForFung")]
+    public class AGiftForFung : CustomForcedBehavior
     {
-        public GiftForFung(Dictionary<string, string> args)
+        public AGiftForFung(Dictionary<string, string> args)
             : base(args)
         {
             try

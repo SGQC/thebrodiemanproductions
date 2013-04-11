@@ -2,6 +2,11 @@ Patch Notesb
 
 4/10/13
 
+r177
+Quest Behaviors
+-- Removed MrFishIt - Included with HB release (v556+)
+-- Updated QBs to new syntax/format
+
 r176
 The Anglers
 -- Code Cleanup

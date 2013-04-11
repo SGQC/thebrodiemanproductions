@@ -32,17 +32,6 @@
 
 <!-- Quest Overrides -->
 
-<!-- Thundering Skies -->
-	<Quest Id="30310" Name="Thundering Skies"> 
-		<Objective Type="KillMob" MobId="59158" KillCount="3">
-			<Hotspots>
-				<Hotspot X="1463.528" Y="1356.916" Z="445.7318" />
-				<Hotspot X="1479.189" Y="1281.645" Z="426.7874" />
-				<Hotspot X="1368.303" Y="1279.692" Z="392.7634" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
 <!-- Crumbling Behemoth -->
 	<Quest Id="31762" Name="Crumbling Behemoth"> 
 		<Objective Type="KillMob" MobId="65824" KillCount="1">
@@ -319,11 +308,11 @@
 	</While>
 
 <!-- Thundering Skies -->
- 	<If Condition="(HasQuest(30310) &amp;&amp; !IsQuestCompleted(30310))">
+ 	<If Condition="HasQuest(30310) &amp;&amp; !IsQuestCompleted(30310)" >
 		<CustomBehavior File="Message" Text="Starting Thundering Skies" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30310" LootMobs="True" PullDistance="35" />
 		<CustomBehavior File="FlyTo" X="1482.013" Y="1303.926" Z="427.2217" />
-		<CustomBehavior File="ForcedDismount"/>
+		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30310)">
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<If Condition="(Me.Class == WoWClass.Rogue)">
@@ -335,7 +324,7 @@
 			<If Condition="(Me.Class == WoWClass.Warrior)">
 				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="355"/>
 			</If>
-			<If Condition="(Me.Class == WoWClass.DeathKnight )">
+			<If Condition="(Me.Class == WoWClass.DeathKnight)">
 				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="45477"/>
 			</If>
 			<If Condition="(Me.Class == WoWClass.Druid)">

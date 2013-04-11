@@ -13,8 +13,9 @@ using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
-namespace ThunderingSkies
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.ThunderingSkies
 {
+	[CustomBehaviorFileName(@"SpecificQuests\30310-VOEB-ThunderingSkies")]
     public class ThunderingSkies : CustomForcedBehavior
     {
         public ThunderingSkies(Dictionary<string, string> args)
