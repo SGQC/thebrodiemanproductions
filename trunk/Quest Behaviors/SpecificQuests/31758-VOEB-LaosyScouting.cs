@@ -13,13 +13,12 @@ using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
-
-
-namespace Blastranaar
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 {
-    public class Blastranaar : CustomForcedBehavior
+    [CustomBehaviorFileName(@"SpecificQuests\31758-VOEB-LaosyScouting")]
+    public class LaosyScouting : CustomForcedBehavior
     {
-        public Blastranaar(Dictionary<string, string> args)
+        public LaosyScouting(Dictionary<string, string> args)
             : base(args)
         {
             try

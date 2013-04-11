@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r174</Name>
+	<Name>The Anglers Dailies r176</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -58,51 +58,51 @@
 	</Quest>
 
 <!-- Fishing for a Bruising -->
-   	<Quest Id="30588" Name="Fishing for a Bruising">
-       		<Objective Type="KillMob" MobId="59714" KillCount="8">
-           	<Hotspots>
-            		<Hotspot X="-1396.098" Y="62.59824" Z="2.671331" />
-			<Hotspot X="-1355.565" Y="44.07656" Z="5.211459" />
-			<Hotspot X="-1395.164" Y="15.74911" Z="2.359046" />
-           	</Hotspots>
-       		</Objective>
-   	</Quest>
+	<Quest Id="30588" Name="Fishing for a Bruising">
+		<Objective Type="KillMob" MobId="59714" KillCount="8">
+			<Hotspots>
+				<Hotspot X="-1396.098" Y="62.59824" Z="2.671331" />
+				<Hotspot X="-1355.565" Y="44.07656" Z="5.211459" />
+				<Hotspot X="-1395.164" Y="15.74911" Z="2.359046" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Snapclaw -->
-   	<Quest Id="30700" Name="Snapclaw">
-       		<Objective Type="CollectItem" ItemId="80831" CollectCount="1">
-		<CollectFrom>
-			<Mob Name="Snapclaw" Id="60401" />
-		</CollectFrom>
-           	<Hotspots>
-            		<Hotspot X="-1307.36" Y="-514.03" Z="-69.62" />
-           	</Hotspots>
-       		</Objective>
+	<Quest Id="30700" Name="Snapclaw">
+		<Objective Type="CollectItem" ItemId="80831" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="Snapclaw" Id="60401" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-1307.36" Y="-514.03" Z="-69.62" />
+			</Hotspots>
+		</Objective>
    	</Quest>
 
 <!-- Bright Bait -->
-   	<Quest Id="30754" Name="Bright Bait">
-       		<Objective Type="CollectItem" ItemId="80831" CollectCount="1">
+	<Quest Id="30754" Name="Bright Bait">
+		<Objective Type="CollectItem" ItemId="80831" CollectCount="1">
 			<CollectFrom>
 				<GameObject Name="Suncrawler" Id="211474" />
 			</CollectFrom>
-           		<Hotspots>
-            			<Hotspot X="-1308.72" Y="-512.74" Z="-69.77" />
-           		</Hotspots>
-       		</Objective>
-   	</Quest>
+			<Hotspots>
+				<Hotspot X="-1308.72" Y="-512.74" Z="-69.77" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- Who Knew Fish Liked Eggs -->
-   	<Quest Id="30598" Name="Who Knew Fish Liked Eggs">
-       		<Objective Type="CollectItem" ItemId="80303" CollectCount="1">
+	<Quest Id="30598" Name="Who Knew Fish Liked Eggs">
+		<Objective Type="CollectItem" ItemId="80303" CollectCount="1">
 			<CollectFrom>
 				<GameObject Name="Pristine Crane Egg" Id="211160" />
 			</CollectFrom>
-           		<Hotspots>
-            			<Hotspot X="-1599.62" Y="-112.61" Z="46.40" />
-           		</Hotspots>
-       		</Objective>
-   	</Quest>
+			<Hotspots>
+				<Hotspot X="-1599.62" Y="-112.61" Z="46.40" />
+			</Hotspots>
+		</Objective>
+	</Quest>
 
 <!-- End of Quest Overrides --> 
 
@@ -226,7 +226,7 @@
 
 <!-- Jumping The Shark -->
 	<If Condition="HasQuest(30753) &amp;&amp; !IsQuestCompleted(30753)" >
-        	<CustomBehavior File="Message" Text="Starting Jumping The Shark" LogColor="Green" />
+		<CustomBehavior File="Message" Text="Starting Jumping The Shark" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30753" LootMobs="False" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(30753)" >
 			<CustomBehavior File="FlyTo" X="-1459.95" Y="-254.43" Z="0.61" />
@@ -240,7 +240,7 @@
 			</While>
 			<If Condition="!IsQuestCompleted(30753)" >
 				<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
-				<CustomBehavior File="InteractWith" MobId="60674" GossipOptions="1" NumOfTimes="1" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="60674" InteractByGossipOptions="1" WaitTime="1000" />
 			</If>
 		</While>
 	</If>
@@ -261,7 +261,7 @@
 		<CustomBehavior File="FlyTo" X="-1087.74" Y="1332.411" Z="16.6486" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30585)" >
-        		<CustomBehavior File="MrFishIt" CollectItemId="80262" CollectItemCount="1" X="-1100.109" Y="1346.707" Z="13.99739" />
+			<CustomBehavior File="MrFishIt" CollectItemId="80262" CollectItemCount="1" X="-1100.109" Y="1346.707" Z="13.99739" />
 		</While>
 	</If>
 
@@ -314,7 +314,7 @@
 		<CustomBehavior File="MyCTM" X="-1308.519" Y="-488.3546" Z="-71.68121" />
 		<CustomBehavior File="MyCTM" X="-1308.503" Y="-455.9226" Z="-81.81419" />
 		<CustomBehavior File="MyCTM" X="-1311.473" Y="-380.6592" Z="-92.616" />
-		<CustomBehavior File="MyCTM" X="-1306.801" Y="-380.5321" Z="0.1" />
+		<CustomBehavior File="AscendInWater" />
 	</If>
 
 <!-- Bright Bait -->
@@ -344,10 +344,6 @@
 		<CustomBehavior File="FlyTo" X="-1582.22" Y="135.23" Z="1.71" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Like Bombing Fish In A Barrel" QuestId="30678" Type="CollectItem" ItemId="80600" CollectCount="3" />
-	<!--<While Condition="!IsQuestCompleted(30678)" >
-			<CustomBehavior File="MyCTM" X="-1582.22" Y="135.23" Z="1.71" />
-			<CustomBehavior File="UseItemOn" Nav="CTM" ItemId="80599" MobState="Alive" MobId="60278" Range="15" NumOfTimes="1" WaitTime="2000" />
-		</While>-->
 	</If>
 
 <!-- Armored Carp -->
