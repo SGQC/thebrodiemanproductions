@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r174</Name>
+	<Name>The Golden Lotus r178</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -234,19 +234,19 @@
 <!-- Anji Autumnlight -->
 	<While Condition="HasQuestAvailable(58465)" >
 		<CustomBehavior File="InteractWith" MobId="58465" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 <!-- Kun Autumnlight -->
 	<While Condition="HasQuestAvailable(58471)" >
 		<CustomBehavior File="InteractWith" MobId="58471" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 <!-- Sun Tenderheart -->
 	<While Condition="HasQuestAvailable(58468)" >
 		<CustomBehavior File="InteractWith" MobId="58468" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
@@ -288,22 +288,22 @@
 		<While Condition="!IsObjectiveComplete(1, 31756)" >
 			<CustomBehavior File="FlyTo" X="1568.647" Y="1185.899" Z="444.4847" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" IgnoreCombat="True" ObjectType="GameObject" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 		<While Condition="!IsObjectiveComplete(2, 31756)" >
 			<CustomBehavior File="FlyTo" X="1625.123" Y="1269.5" Z="463.0072" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214899" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
+			<CustomBehavior MobId="214899" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 		<While Condition="!IsObjectiveComplete(4, 31756)" >
 			<CustomBehavior File="FlyTo" X="1635.482" Y="1546.689" Z="440.0556" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214901" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
+			<CustomBehavior MobId="214901" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 		<While Condition="!IsObjectiveComplete(3, 31756)" >
 			<CustomBehavior File="FlyTo" X="1481.446" Y="1388.026" Z="444.6272" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214900" IgnoreCombat="True" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
+			<CustomBehavior MobId="214900" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" />
 		</While>
 	</While>
 
@@ -543,22 +543,21 @@
 <!-- Leven Dawnblade -->
 	<While Condition="HasQuestAvailable(58408)" >
 		<CustomBehavior File="InteractWith" MobId="58408" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</While>
 
 <!-- Anji Autumnlight -->
 	<While Condition="HasQuestAvailable(58465)" >
 		<CustomBehavior File="InteractWith" MobId="58465" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Kun Autumnlight -->
 	<While Condition="HasQuestAvailable(58471)" >
 		<CustomBehavior File="InteractWith" MobId="58471" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
@@ -570,7 +569,7 @@
 <!-- He Softfoot -->
 	<While Condition="HasQuestAvailable(58470)" >
 		<CustomBehavior File="InteractWith" MobId="58470" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
