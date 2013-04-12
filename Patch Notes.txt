@@ -1,4 +1,19 @@
-Patch Notesb
+Patch Notes
+
+4/11/13
+
+r179
+The Tillers
+-- Removed obsolete overrides
+-- New faster quest pickups!
+-- New InteractWith changes
+-- Code Cleanup
+-- Will only turn in Tina's yellow quests if she's there (travel coming later)
+Shado Pan
+-- Updated check if you aren't revered with Golden Lotus, will now support all hearth actions
+-- New faster quest pickups! (Not sure about 1 of the 3 NPCs)
+-- New InteractWith changes
+-- Born Free - Removed mount usage until quest complete
 
 4/10/13
 
