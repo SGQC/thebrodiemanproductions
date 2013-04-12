@@ -2,6 +2,10 @@ Patch Notes
 
 4/11/13
 
+r180
+Daily Grind
+-- Added all Hearth supports
+
 r179
 The Tillers
 -- Removed obsolete overrides
