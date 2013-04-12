@@ -1628,9 +1628,6 @@
 	</ElseIf>
 	</If>
 
-
-<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] Cloud Serpent Dailies [Brodie]" />-->
-
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Tillers Dailies" />
 
 </QuestOrder>
