@@ -1,7 +1,7 @@
 <HBProfile>
-	<Name>The Tillers r174</Name>
-	<MinLevel>85</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<Name>The Tillers r179</Name>
+	<MinLevel>90</MinLevel>
+	<MaxLevel>100</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -49,15 +49,6 @@
 			<Hotspot X="343.9983" Y="1484.133" Z="442.1457" />
 			<Hotspot X="401.656" Y="1428.688" Z="430.7724" />
 			<Hotspot X="460.0145" Y="1407.949" Z="415.3195" />		
-		</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Water, Water Everywhere -->
-	<Quest Id="30317" Name="Water, Water Everywhere"> 
-		<Objective Type="KillMob" MobId="59574" KillCount="35">
-		<Hotspots>
-			<Hotspot X="344.4392" Y="1442.505" Z="423.3759" />
 		</Hotspots>
 		</Objective>
 	</Quest>
@@ -372,7 +363,7 @@
 <!-- Sungshin Ironpaw -->
 	<While Condition="HasQuestAvailable(64231)" >
 		<CustomBehavior File="InteractWith"  MobId="64231" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
@@ -414,7 +405,7 @@
 		<Else>
 			<While Condition="HasQuestAvailable(58709)" >
 				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 		</Else>
@@ -435,7 +426,7 @@
 		<Else>
 			<While Condition="HasQuestAvailable(58706)" >
 				<CustomBehavior File="InteractWith"  MobId="58706" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 		</Else>
@@ -450,7 +441,7 @@
 		<Else>
 			<While Condition="HasQuestAvailable(57298)" >
 				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 		</Else>
@@ -465,7 +456,7 @@
 		<Else>
 			<While Condition="HasQuestAvailable(58647)" >
 				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 		</Else>
@@ -480,7 +471,7 @@
 		<Else>
 			<While Condition="HasQuestAvailable(57402)" >
 				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 		</Else>
@@ -497,7 +488,7 @@
 	<While Condition="HasQuestAvailable(58710)" >
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
@@ -505,7 +496,7 @@
 	<While Condition="HasQuestAvailable(58705)" >
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith"  MobId="58705" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
@@ -517,7 +508,7 @@
 		<Else>
 			<While Condition="HasQuestAvailable(58708)" >
 				<CustomBehavior File="InteractWith"  MobId="58708" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 		</Else>
@@ -542,7 +533,7 @@
 		<While Condition="HasQuestAvailable(58646)" >
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith"  MobId="58646" WaitTime="1000" />
-			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 	</If>
@@ -671,7 +662,7 @@
 <!-- Ben of the Booming Voice -->
 	<While Condition="HasQuestAvailable(70398)" >
 		<CustomBehavior File="InteractWith"  MobId="70398" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
@@ -702,30 +693,30 @@
 	</If>
 
 <!-- Money Matters -->
- 	<If Condition="((HasQuest(30322)) &amp;&amp; (!IsQuestCompleted(30322)))" >
+ 	<If Condition="(HasQuest(30322) &amp;&amp; !IsQuestCompleted(30322))" >
 		<CustomBehavior File="Message" Text="Starting Money Matters" LogColor="Green"  />
-		<While Condition="(HasQuest(30322)) &amp;&amp; (!HasItem(80215))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80215))">
 			<CustomBehavior File="FlyTo" X="-203.3791" Y="496.2022" Z="187.179" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59582" NumOfTimes="1" CollectionDistance="200" GossipOptions="1,1" WaitTime="1500" />
+			<CustomBehavior File="InteractWith" MobId="59582" NumOfTimes="1" CollectionDistance="200" InteractByGossipOptions="1,1" WaitTime="1500" />
 		</While>
 		
-		<While Condition="(HasQuest(30322)) &amp;&amp; (!HasItem(80213))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80213))">
 			<CustomBehavior File="FlyTo" X="-140.0031" Y="505.1759" Z="209.4762" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59581" NumOfTimes="1" CollectionDistance="200" GossipOptions="1,1" WaitTime="1500" />
+			<CustomBehavior File="InteractWith" MobId="59581" NumOfTimes="1" CollectionDistance="200" InteractByGossipOptions="1,1" WaitTime="1500" />
 		</While>
 
-		<While Condition="(HasQuest(30322)) &amp;&amp; (!HasItem(80216))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80216))">
 			<CustomBehavior File="FlyTo" X="-270.4832" Y="497.3418" Z="168.56" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59585" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="200" WaitTime="1500" />
+			<CustomBehavior File="InteractWith" MobId="59585" NumOfTimes="1" InteractByGossipOptions="1,1" CollectionDistance="200" WaitTime="1500" />
 		</While>
 		
-		<While Condition="(HasQuest(30322)) &amp;&amp; (!HasItem(80214))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80214))">
 			<CustomBehavior File="FlyTo" X="-149.9961" Y="477.6948" Z="196.3098" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="59583" NumOfTimes="1" CollectionDistance="200" GossipOptions="1,1" WaitTime="1500" />
+			<CustomBehavior File="InteractWith" MobId="59583" NumOfTimes="1" CollectionDistance="200" InteractByGossipOptions="1,1" WaitTime="1500" />
 		</While>
 	</If>
 
@@ -734,7 +725,7 @@
 		<CustomBehavior File="Message" Text="Starting Water, Water Everywhere" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-221.92" Y="461.65" Z="185.44" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" Nav="CTM" GossipOptions="1,1" MobId="60231" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
 		<While Condition="(HasQuest(30317)) &amp;&amp; (!IsObjectiveComplete(1,30317))">
 			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
 		</While>
@@ -1342,24 +1333,26 @@
 		<PickUp QuestName="A Beautiful Brooch" QuestId="31329" GiverType="Item" GiverId="86436" />
 	</If>
 	
+	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58761 &amp;&amp; u.Distance &lt;= 250)" >
 	<!-- Nice Necklace -->
-	<If Condition="HasQuest(31325)">
-		<TurnIn QuestName="A Very Nice Necklace" QuestId="31325" TurnInName="Tina Mudclaw" TurnInId="58761" />
-	</If>
+		<If Condition="HasQuest(31325)">
+			<TurnIn QuestName="A Very Nice Necklace" QuestId="31325" TurnInName="Tina Mudclaw" TurnInId="58761" />
+		</If>
 				
 	<!-- Tasteful Tiara -->
-	<If Condition="HasQuest(31326)">
-		<TurnIn QuestName="Tina's Tasteful Tiara" QuestId="31326" TurnInName="Tina Mudclaw" TurnInId="58761" />
-	</If>	
+		<If Condition="HasQuest(31326)">
+			<TurnIn QuestName="Tina's Tasteful Tiara" QuestId="31326" TurnInName="Tina Mudclaw" TurnInId="58761" />
+		</If>	
 				
 	<!-- Exquisite Earring -->
-	<If Condition="HasQuest(31328)">
-		<TurnIn QuestName="An Exquisite Earring" QuestId="31328" TurnInName="Tina Mudclaw" TurnInId="58761" />
-	</If>
+		<If Condition="HasQuest(31328)">
+			<TurnIn QuestName="An Exquisite Earring" QuestId="31328" TurnInName="Tina Mudclaw" TurnInId="58761" />
+		</If>
 				
 	<!-- Beautiful Brooch -->
-	<If Condition="HasQuest(31329)">
-		<TurnIn QuestName="A Beautiful Brooch" QuestId="31329" TurnInName="Tina Mudclaw" TurnInId="58761" />
+		<If Condition="HasQuest(31329)">
+			<TurnIn QuestName="A Beautiful Brooch" QuestId="31329" TurnInName="Tina Mudclaw" TurnInId="58761" />
+		</If>
 	</If>
 
 <!-- The Truffle Shuffle -->
@@ -1522,7 +1515,7 @@
 	<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	<While Condition="HasQuestAvailable(64337)" >
 		<CustomBehavior File="InteractWith"  MobId="64337" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 </If>
@@ -1532,7 +1525,7 @@
 		<CustomBehavior File="Message" Text="Starting Lesson 1: Sliced Peaches" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31332" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(31332)">
-			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="74660" BuyItemCount="5" />
+			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74660" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
@@ -1542,7 +1535,7 @@
 		<CustomBehavior File="Message" Text="Starting Lesson 2: Instant Noodles" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31333" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(31333)">
-			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="74854" BuyItemCount="5" />
+			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74854" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
@@ -1562,7 +1555,7 @@
 		<CustomBehavior File="Message" Text="Starting Lesson 4: Dried Needle Mushrooms" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31335" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(31335)">
-			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="85583" BuyItemCount="5" />
+			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="85583" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
@@ -1572,7 +1565,7 @@
 		<CustomBehavior File="Message" Text="Starting Lesson 5: Pounded Rice Cake" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31336" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(31336)">
-			<CustomBehavior File="InteractWith" MobId="64231" GossipOptions="2" BuyItemId="74851" BuyItemCount="5" />
+			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74851" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
