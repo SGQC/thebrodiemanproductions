@@ -1,5 +1,17 @@
 Patch Notes
 
+4/12/13
+
+r181
+Golden Pagoda Phase 2
+-- Burning Away the Filth - Corrected erroneous ItemId
+The Tillers
+-- Code Cleanup
+Daily Grind
+-- Updated message at end in case your hearth failed.
+Shado Pan
+-- Missing /If corrected
+
 4/11/13
 
 r180
