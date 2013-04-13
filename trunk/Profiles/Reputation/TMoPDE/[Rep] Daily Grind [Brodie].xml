@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The MoP Dailies Experience r180</Name>
+	<Name>The MoP Dailies Experience r181</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -46,7 +46,7 @@
 	</ElseIf>
 	</If>
 	
-	<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Profile...but if you're seeing this something borked!" />
+	<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Profile...if you're seeing this something borked! (Check your QBs and that you have a Hearthstone!)" />
 
 </QuestOrder>
 </HBProfile>
