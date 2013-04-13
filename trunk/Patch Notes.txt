@@ -1,5 +1,13 @@
 Patch Notes
 
+4/13/13
+
+r182
+Dominance Offensive
+-- Bug Off! - Added Item use wait timer of 3 seconds
+The Tillers
+-- Temporary reversion to quest pickups until Friendship item code is done
+
 4/12/13
 
 r181
