@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r182</Name>
+	<Name>The Tillers r183</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -541,7 +541,7 @@
 <!-- Andi -->
 	<While Condition="HasQuestAvailable(64464)" >
 		<CustomBehavior File="InteractWith"  MobId="64464" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
@@ -616,9 +616,18 @@
 		<While Condition="HasQuestAvailable(58646)" >
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith"  MobId="58646" WaitTime="1000" X="-180.84" Y="628.36" Z="165.41" />
-			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
+		<CustomBehavior File="InteractWith" MobId="58567" MobId2="60113" MobId3="66112" MobId4="66113" MobId5="63154"
+											MobId6="63156" MobId7="63184" MobId8="63185" MobId9="63249" MobId10="63250"
+											MobId11="63228" MobId12="63229" MobId13="63164" MobId14="63165" MobId15="66128"
+											MobId16="66129" MobId17="63264" MobId18="63265" MobId19="66084" MobId20="66085"
+											MobId21="66043" MobId22="65989" MobId23="66016" MobId24="65973" MobId25="66006"
+											MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
+											MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
+											MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
+											MobId41="63260" MobId42="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
 	</If>
 
 <!-- Starting Quests -->
@@ -633,22 +642,13 @@
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Farm Dailies [Brodie]" /> 
 	</If>
 	
-	<If Condition="HasQuest(31945) &amp;&amp; !IsQuestCompleted(31945)" >
-		<If Condition="IsObjectiveComplete(1,31945)" >
-			<CustomBehavior File="Message" Text="Checking for plant." LogColor="Green" />
-			<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="63165" NumOfTimes="16" WaitForNpcs="False" />
-		</If>
-	</If>
-	
 	<If Condition="HasQuest(31945) &amp;&amp; IsQuestCompleted(31945)" >
 		<TurnIn QuestName="Learn and Grow VI: Gina's Vote" QuestId="31945" TurnInName="Gina Mudclaw" TurnInId="58706" X="-259.5399" Y="592.5469" Z="167.5478" />
 		<CustomBehavior File="FlyTo" X="-169.0728" Y="638.5255" Z="165.4094" />
 		<CustomBehavior File="WaitTimer" WaitTime="15000" />
 	</If>
 	
-	<If Condition="HasQuest(30517) || HasQuest(30518) || HasQuest(31947)" >
+	<If Condition="HasQuest(30517) || HasQuest(30518) || (HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)) || HasQuest(31479)" >
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Votes [Brodie]" /> 
 	</If>
 	

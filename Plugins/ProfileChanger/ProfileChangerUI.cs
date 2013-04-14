@@ -77,12 +77,14 @@ namespace ProfileChanger
             {
                 tb5.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1376));
                 tb8.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1387));
+				tb9.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1387));
             }
             // Check for Horde Dominance - Disable Shieldwall
             if (StyxWoW.Me.IsHorde)
             {
                 tb5.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1375));
                 tb8.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1388));
+				tb9.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1388));
             }
 
             // Let's check Faction reps... why not make things easier? We are checking above too for Ally / Horde only.
@@ -92,7 +94,6 @@ namespace ProfileChanger
             tb4.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1302));
             tb6.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1337));
             tb7.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1270));
-            tb9.Text = "Soon to come!";
             tb10.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1341));
             tb11.Text = "N/A";
             tb12.Text = "N/A";
@@ -151,8 +152,16 @@ namespace ProfileChanger
             ProfileChanger.Settings.Profile5 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Shieldwall [Brodie].xml");
             ProfileChanger.Settings.Profile6 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] The Klaxxi Dailies [Brodie].xml");
             ProfileChanger.Settings.Profile7 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Shado Pan Dailies [Brodie].xml");
-            ProfileChanger.Settings.Profile8 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder A [Brodie].xml");
-            ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder PvP.xml");
+            if (StyxWoW.Me.IsAlliance)
+            {
+                ProfileChanger.Settings.Profile8 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder A [Brodie].xml");
+				ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder PvP A [Brodie].xml");
+            }
+            if (StyxWoW.Me.IsHorde)
+            {
+                ProfileChanger.Settings.Profile8 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder H [Brodie].xml");
+				ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder PvP H [Brodie].xml");
+            }
             ProfileChanger.Settings.Profile10 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] August Celestials Dailies [Brodie].xml");
             ProfileChanger.Settings.Profile11 = Path.Combine(ProfileChanger.Settings.dirName, "");
             ProfileChanger.Settings.Profile12 = Path.Combine(ProfileChanger.Settings.dirName, "");
@@ -168,14 +177,7 @@ namespace ProfileChanger
             ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Dominance [Brodie].xml");
              */
             // Auto load correct Isle of Thunder
-            if (StyxWoW.Me.IsAlliance)
-            {
-                ProfileChanger.Settings.Profile10 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder A [Brodie].xml");
-            }
-            if (StyxWoW.Me.IsHorde)
-            {
-                ProfileChanger.Settings.Profile10 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder H [Brodie].xml");
-            }
+
             ProfileChanger.Settings.Profile11 = "";
             ProfileChanger.Settings.Profile12 = "";
 

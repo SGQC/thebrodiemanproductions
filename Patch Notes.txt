@@ -1,5 +1,28 @@
 Patch Notes
 
+4/14/13
+
+r183
+Tillers Votes
+-- Added Way of the Brew
+The Tillers
+-- Way of the Brew support added
+-- Will now check for all plants to pick when at farm.
+Isle of Thunder PvP (Alliance)
+-- Added Bolstering the Defenses
+-- Added Breaking Down the Defenses
+-- Added Overpowered
+-- Added Captive Audience
+-- Added Old Enemies
+-- Added Charged Moganite
+-- Added Made for War
+-- Added Mana Scavengers
+Isle of Thunder (Horde)
+-- Added, but no quest support currently.
+ProfileChanger
+-- Added support for Isle of Thunder PvP
+-- Plugin CANNOT move from PvE to PvP Isle of Thunder. Make sure you do NOT have PvE checked if you wish to do PvP
+
 4/13/13
 
 r182

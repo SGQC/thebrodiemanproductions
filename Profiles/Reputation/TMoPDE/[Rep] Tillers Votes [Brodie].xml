@@ -1,5 +1,5 @@
 ﻿<HBProfile>
-	<Name>Tillers Votes r142</Name>
+	<Name>Tillers Votes r183</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
 
@@ -35,6 +35,20 @@
 	</AvoidMobs>
 
 <QuestOrder>
+
+<!-- The Way of the Cook -->
+
+<!-- Way of the Brew -->
+	<If Condition="HasQuest(31479) &amp;&amp; !IsQuestCompleted(31479)">
+		<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
+		<CustomBehavior File="ForcedDismount" />
+		<While Condition="!HasItem(74845)">
+			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74845" BuyItemCount="1" />
+		</While>
+	</If>
+	<If Condition="HasQuest(31479) &amp;&amp; IsQuestCompleted(31479)">
+		<TurnIn QuestName="Way of the Brew" QuestId="31479" TurnInName="Bobo Ironpaw" TurnInId="58717" />
+	</If>
 
 <!-- Farmer Fung Quests -->
 

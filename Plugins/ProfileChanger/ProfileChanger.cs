@@ -527,11 +527,6 @@ namespace ProfileChanger
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active8 = false;
 
-					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
-					{
-						SpellManager.StopCasting();	
-					    ChangeProfile(Settings.Profile9);
-					}
 					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
