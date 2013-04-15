@@ -2,6 +2,10 @@ Patch Notes
 
 4/15/13
 
+r186
+ProfileChanger
+-- Activated Isle of Thunder PvP on the settings page (note, Horde is not yet supported)
+
 r185
 Conqueror's Terrace
 -- They All Fall Down/Centuries of Sentries - UseItemOn -> InteractWith, Changed Aura check syntax

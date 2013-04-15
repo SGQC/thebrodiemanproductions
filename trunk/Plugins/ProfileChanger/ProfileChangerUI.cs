@@ -63,7 +63,7 @@ namespace ProfileChanger
                 CB6.Enabled = true;
                 CB7.Enabled = true;
                 CB8.Enabled = true;
-                //CB9.Enabled = true;
+                CB9.Enabled = true;
                 CB10.Enabled = true;
                 //CB11.Enabled = true;
                 //CB12.Enabled = true;
