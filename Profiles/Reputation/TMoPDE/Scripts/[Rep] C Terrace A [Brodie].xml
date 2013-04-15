@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Alliance) r153</Name>
+	<Name>Conqueror's Terrace (Alliance) r185</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -161,10 +161,10 @@
 <!-- Centuries in Sentries -->
 	<If Condition="HasQuest(32555) &amp;&amp; !IsQuestCompleted(32555)" >
 		<CustomBehavior File="Message" Text="Starting Centuries in Sentries" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
+		<CustomBehavior File="UserSettings" QuestId="32555" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
 		<While Condition="!IsQuestCompleted(32555)" >
-			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 69335 &amp;&amp; !u.IsAlive &amp;&amp; u.Distance &lt;= 150))" >
-				<CustomBehavior File="UseItemOn" QuestId="32555" ItemId="93806" MobId="69335" MobState="Dead" HasAuraId="136972" WaitForNpcs="False" CollectionDistance="1000" >
+			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 69335 &amp;&amp; u.IsDead &amp;&amp; u.Distance &lt;= 150))" >
+				<CustomBehavior File="InteractWith" QuestId="32555" InteractByUsingItemId="93806" MobId="69335" MobState="Dead" AuraIdOnMob="136972" WaitForNpcs="False" CollectionDistance="1000" >
 					<HuntingGrounds>
 						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
 						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />

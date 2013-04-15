@@ -1,6 +1,22 @@
 Patch Notes
 
+4/15/13
+
+r185
+Conqueror's Terrace
+-- They All Fall Down/Centuries of Sentries - UseItemOn -> InteractWith, Changed Aura check syntax
+Isle of Thunder PvP (Horde)
+-- Added NPCs fo Quest pickup
+-- Added Bolstering the Defenses
+-- Added Breaking Down the Defenses
+-- STILL HAVE NOT UNLOCKED USE YET, COMING SOON
+
 4/14/13
+
+r184
+Isle of Thunder PvP (Horde)
+-- Added Bolstering the Defenses
+-- Added Breaking Down the Defenses
 
 r183
 Tillers Votes

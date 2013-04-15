@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder Pvp (Horde) r184</Name>
+	<Name>Isle of Thunder Pvp (Horde) r185</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -102,49 +102,46 @@
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
-	<If Condition="!HasQuest(32485) &amp;&amp; !HasQuest(32636) &amp;&amp; !HasQuest(32635) &amp;&amp; !HasQuest(32631) &amp;&amp; 
-					!HasQuest(32637) &amp;&amp; !HasQuest(32301) &amp;&amp; !HasQuest(32627) &amp;&amp; !HasQuest(32632) &amp;&amp;
-					!HasQuest(32633) &amp;&amp; !HasQuest(32634) &amp;&amp; !HasQuest(32639) &amp;&amp; !HasQuest(32638) &amp;&amp;
-					!HasQuest(32628)" >
-		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
+	<If Condition="!HasQuest(32288)" >
+		<CustomBehavior File="InteractWith" MobId="70567" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption2.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 
-<!-- Lady Jaina Proudmoore -->
-	<While Condition="HasQuestAvailable(67992)" >
-		<CustomBehavior File="InteractWith" MobId="67992" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+<!-- Girana the Blooded -->
+	<While Condition="HasQuestAvailable(67673)" >
+		<CustomBehavior File="InteractWith" MobId="67673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Vereesa Windrunner -->
-	<While Condition="HasQuestAvailable(67993)" >
-		<CustomBehavior File="InteractWith" MobId="67993" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+<!-- Magister Hathorel -->
+	<While Condition="HasQuestAvailable(67663)" >
+		<CustomBehavior File="InteractWith" MobId="67663" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Warmage Yurias -->
-	<While Condition="HasQuestAvailable(67994)" >
-		<CustomBehavior File="InteractWith" MobId="67994" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+<!-- Lor'themar Theron -->
+	<While Condition="HasQuestAvailable(67990)" >
+		<CustomBehavior File="InteractWith" MobId="67990" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Captain Elleane Wavecrest -->
-	<While Condition="HasQuestAvailable(67995)" >
-		<CustomBehavior File="InteractWith" MobId="67995" WaitTime="1000" WaitForNpcs="False" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+<!-- High Arcanist Savor -->
+	<While Condition="HasQuestAvailable(67662)" >
+		<CustomBehavior File="InteractWith" MobId="67662" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
-<!-- Bolstering the Defenses -->
- 	<If Condition="HasQuest(32485) &amp;&amp; !IsQuestCompleted(32485)">
-		<CustomBehavior File="Message" Text="Starting Bolstering the Defenses" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32485" LootMobs="True" PullDistance="10" />
-		<While Condition="!IsQuestCompleted(32485)" >
-			<CustomBehavior File="InteractWith" QuestId="32485" MobId="69186" Range="5" CollectionDistance="200" WaitForNpcs="False" WaitTime="1000" >
+<!-- Breaking Down the Defenses -->
+ 	<If Condition="HasQuest(32269) &amp;&amp; !IsQuestCompleted(32269)">
+		<CustomBehavior File="Message" Text="Starting Breaking Down the Defenses" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32269" LootMobs="True" PullDistance="10" />
+		<While Condition="!IsQuestCompleted(32269)" >
+			<CustomBehavior File="InteractWith" QuestId="32269" MobId="217169" ObjectType="GameObject" Range="5" CollectionDistance="200" WaitForNpcs="False" WaitTime="1000" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="6111.649" Y="5323.479" Z="23.71672" />
 					<Hotspot X="6154.031" Y="5284.495" Z="20.88754" />
@@ -159,12 +156,12 @@
 		</While>
 	</If>
 	
-<!-- Breaking Down the Defenses -->
- 	<If Condition="HasQuest(32634) &amp;&amp; !IsQuestCompleted(32634)">
-		<CustomBehavior File="Message" Text="Starting Breaking Down the Defenses" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="32634" LootMobs="True" PullDistance="10" />
-		<While Condition="!IsQuestCompleted(32634)" >
-			<CustomBehavior File="InteractWith" QuestId="32634" MobId="217758" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="False" WaitTime="1000" >
+<!-- Bolstering the Defenses -->
+ 	<If Condition="HasQuest(32288) &amp;&amp; !IsQuestCompleted(32288)">
+		<CustomBehavior File="Message" Text="Starting Bolstering the Defenses" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32288" LootMobs="True" PullDistance="10" />
+		<While Condition="!IsQuestCompleted(32288)" >
+			<CustomBehavior File="InteractWith" QuestId="32288" MobId="69292" CollectionDistance="200" WaitForNpcs="False" WaitTime="1000" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="6876.185" Y="5851.19" Z="6.803259" />
 					<Hotspot X="6930.86" Y="5879.693" Z="6.478997" />
