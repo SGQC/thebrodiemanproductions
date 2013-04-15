@@ -13,11 +13,6 @@ Isle of Thunder PvP (Horde)
 
 4/14/13
 
-r184
-Isle of Thunder PvP (Horde)
--- Added Bolstering the Defenses
--- Added Breaking Down the Defenses
-
 r183
 Tillers Votes
 -- Added Way of the Brew
