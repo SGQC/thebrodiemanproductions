@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r174</Name>
+	<Name>Whitepetal Lake r189</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -231,7 +231,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30284" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1061.807" Y="1491.629" Z="352.83" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" QuestId="30284" CollectUntil="QuestComplete" MobId="59404" HuntingGroundRadius="120" NonCompeteDistance="3" >
+		<CustomBehavior File="CollectThings" QuestId="30284" CollectUntil="QuestComplete" MobId="59404" MobState="Alive" HuntingGroundRadius="120" NonCompeteDistance="3" >
 			<Hotspot X="1084.92" Y="1496.22" Z="331.28" />
 			<Hotspot X="1109.97" Y="1476.79" Z="332.9" />
 			<Hotspot X="1157.42" Y="1476.45" Z="320.16" />
