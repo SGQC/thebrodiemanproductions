@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Horde) r185</Name>
+	<Name>Conqueror's Terrace (Horde) r186</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -123,7 +123,7 @@
 <!-- What's Inside Counts -->
 	<If Condition="HasQuest(32232) &amp;&amp; !IsQuestCompleted(32232)" >
 		<CustomBehavior File="Message" Text="Starting What's Inside Counts" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
+		<CustomBehavior File="UserSettings" QuestId="32232" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<CustomBehavior File="CollectThings" QuestId="32232" CollectUntil="QuestComplete" MobId="69567" MobId2="69568" MobId3="69569" MobId4="69570" MobId5="69336" HuntingGroundRadius="100" NonCompeteDistance="1" >
 			<Hotspot X="6655.33" Y="5163.00" Z="31.78" />
 		</CustomBehavior>
