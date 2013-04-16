@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Horde) r129</Name>
+	<Name>Court of Bones (Horde) r187</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -70,9 +70,9 @@
 	<If Condition="HasQuest(32728)" >
 		<CustomBehavior File="Message" Text="Starting Court of Bones Kicker" LogColor="Green" />
 		<If Condition="!IsQuestCompleted(32212)" >
-			<RunTo X="6694.93" Y="6285.77" Z="1.47" />
+			<CustomBehavior File="NoCombatMoveTo" X="6694.93" Y="6285.77" Z="1.47" />
 		<ElseIf Condition="IsQuestCompleted(32212)" >
-			<RunTo X="6735.43" Y="6060.58" Z="18.75" />
+			<CustomBehavior File="NoCombatMoveTo" X="6735.43" Y="6060.58" Z="18.75" />
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -212,9 +212,9 @@
 		<CustomBehavior File="Message" Text="Heading back to Court of Bones to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
 		<If Condition="!IsQuestCompleted(32212)" >
-			<RunTo X="6694.93" Y="6285.77" Z="1.47" />
+			<CustomBehavior File="NoCombatMoveTo" X="6694.93" Y="6285.77" Z="1.47" />
 		<ElseIf Condition="IsQuestCompleted(32212)" >
-			<RunTo X="6735.43" Y="6060.58" Z="18.75" />
+			<CustomBehavior File="NoCombatMoveTo" X="6735.43" Y="6060.58" Z="18.75" />
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />

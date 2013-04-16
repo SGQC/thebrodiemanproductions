@@ -120,8 +120,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.ThunderingSkies
 				new Sequence(  
 					new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) > 30,
 						new Sequence(
-							new Action(ret => Navigator.MoveTo(Serpent[0].Location)),
-							new Action(r => Serpent[0].Face())
+							new Action(ret => Navigator.MoveTo(Serpent[0].Location))
 						)
 					),
 					new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) <= 30,

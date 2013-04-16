@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r178</Name>
+	<Name>The Golden Lotus r187</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -95,6 +95,9 @@
 <!-- End of Quest Overrides --> 
 
 <QuestOrder IgnoreCheckpoints="True" >
+
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown,Pandaria Dailies v2" />
 
 <CustomBehavior File="Message" Text="Compiling Golden Lotus Quests..." LogColor="Green"  />
 
@@ -263,7 +266,7 @@
 		<CustomBehavior File="FlyTo" X="1419.408" Y="1197.767" Z="413.5989" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30312)" >
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="84242" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="6000" />
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="84242" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="1000" />
 		</While>
 	</If>
 
@@ -315,38 +318,50 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30310)">
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
-			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="121733"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="172"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="355"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.DeathKnight)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="45477"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="8921"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="3044"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="2136"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="62124"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="589"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="403"/>
-			</If>
-			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="115546"/>
+			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 59158 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500))" >
+				<If Condition="Me.Location.Distance(new WoWPoint(1545.261, 1453.72, 441.5125)) &gt; 100" >
+					<CustomBehavior File="FlyTo" X="1545.261" Y="1453.72" Z="441.5125" />
+					<CustomBehavior File="ForcedDismount" />
+				<ElseIf Condition="Me.Location.Distance(new WoWPoint(1532.627, 1237.79, 443.1108)) &gt; 100" >
+					<CustomBehavior File="FlyTo" X="1532.627" Y="1237.79" Z="443.1108" />
+					<CustomBehavior File="ForcedDismount" />
+				</ElseIf>
+				</If>
+			<Else>
+				<If Condition="(Me.Class == WoWClass.Rogue)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="121733"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Warlock)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="172"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Warrior)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="355"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.DeathKnight)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="45477"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Druid)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="8921"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Hunter)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="3044"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Mage)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="2136"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Paladin)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="62124"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Priest)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="589"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Shaman)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="403"/>
+				</If>
+				<If Condition="(Me.Class == WoWClass.Monk)">
+					<CustomBehavior File="SpecificQuests\30310-VOEB-ThunderingSkies" SpellId="115546"/>
+				</If>
+			</Else>
 			</If>
 		</While>
 	</If>

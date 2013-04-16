@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Alliance) r129</Name>
+	<Name>Court of Bones (Alliance) r187</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -67,7 +67,7 @@
 	<If Condition="HasQuest(32731)" >
 		<CustomBehavior File="Message" Text="Starting The Court of Bones Kicker" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32731" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
+		<CustomBehavior File="NoCombatMoveTo" X="6513.80" Y="5992.71" Z="13.91" />
 		<TurnIn QuestName="The Court of Bones" QuestId="32731" TurnInName="Narasi Snowdawn" TurnInId="67997" />
 	</If>
 	
@@ -205,7 +205,7 @@
 					HasQuest(32525) &amp;&amp; IsQuestCompleted(32525)" >
 		<CustomBehavior File="Message" Text="Heading back to Court of Bones to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<RunTo X="6513.80" Y="5992.71" Z="13.91" />
+		<CustomBehavior File="NoCombatMoveTo" X="6513.80" Y="5992.71" Z="13.91" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 	

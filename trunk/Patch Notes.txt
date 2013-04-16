@@ -2,6 +2,16 @@ Patch Notes
 
 4/15/13
 
+r187
+Golden Lotus
+-- Given a Second Chance - Removed wait timer, should operate MUCH faster!
+-- Forced Plugin activation added
+Quest Behaviors
+-- Thundering Skies - Fixed Navigation issues, should NO LONGER walk into walls!
+-- Thundering Skies - Added proximity checks and flight support. If no serpents, fly elsewhere and recheck
+Court of Bones
+-- No Combat movement added
+
 r186
 ProfileChanger
 -- Activated Isle of Thunder PvP on the settings page (note, Horde is not yet supported)
