@@ -585,12 +585,12 @@
 				(!HasQuest(32653) || !HasQuest(32657)) &amp;&amp; (!HasQuest(32658) || !HasQuest(32659)) &amp;&amp;
 				(!HasQuest(32649) || !HasQuest(32650)))" >
 		<!-- Golden Lotus -->
-		<If Condition="(Me.GetReputationLevelWith(1269) &lt; WoWUnitReaction.Exalted) &amp;&amp; IsAchievementCompleted(7315, 2)" >
+		<If Condition="(Me.GetReputationLevelWith(1269) &lt; WoWUnitReaction.Exalted)" >
 			<PickUp QuestName="Work Order: Golden Lotus I" QuestId="32647" GiverType="Object" GiverName="Work Orders" GiverId="218750" X="-178.20" Y="626.85" Z="168.18" />
-		<ElseIf Condition="(Me.GetReputationLevelWith(1375) &lt; WoWUnitReaction.Exalted) &amp;&amp; Me.IsHorde &amp;&amp; IsAchievementCompleted(7929, 1)" >
-			<PickUp QuestName="Work Order: Dominance Offensive I" QuestId="32647" GiverType="Object" GiverName="Work Orders" GiverId="218750" X="-178.20" Y="626.85" Z="168.18" />
+		<ElseIf Condition="(Me.GetReputationLevelWith(1375) &lt; WoWUnitReaction.Exalted) &amp;&amp; Me.IsHorde" >
+			<PickUp QuestName="Work Order: Dominance Offensive I" QuestId="32642" GiverType="Object" GiverName="Work Orders" GiverId="218750" X="-178.20" Y="626.85" Z="168.18" />
 		</ElseIf>
-		<ElseIf Condition="(Me.GetReputationLevelWith(1376) &lt; WoWUnitReaction.Exalted) &amp;&amp; Me.IsAlliance &amp;&amp; IsAchievementCompleted(7928, 1)" >
+		<ElseIf Condition="(Me.GetReputationLevelWith(1376) &lt; WoWUnitReaction.Exalted) &amp;&amp; Me.IsAlliance" >
 			<PickUp QuestName="Work Order: Operation Shieldwall I" QuestId="32645" GiverType="Object" GiverName="Work Orders" GiverId="218750" X="-178.20" Y="626.85" Z="168.18" />
 		</ElseIf>
 		</If>
