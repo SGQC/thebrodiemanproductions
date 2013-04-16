@@ -2,6 +2,14 @@ Patch Notes
 
 4/16/13
 
+r190
+Court of Bones
+-- Ashes of the Enemy - Should use item smarter, and on mummies that DON'T have teh burning!
+The Tillers
+-- Quest ID correction and achievement prereq removal
+Shado Pan
+-- Reversion of quest pickup code for Master Snowdrift
+
 r189
 Whitepetal Lake
 -- A Thousand Pointy Teeth - Should no longer try and "collect/kill" dead mobs.
