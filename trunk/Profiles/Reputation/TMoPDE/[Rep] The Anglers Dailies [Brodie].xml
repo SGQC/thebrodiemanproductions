@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r176</Name>
+	<Name>The Anglers Dailies r188</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -196,7 +196,7 @@
 <!-- Angler Shen -->
 	<While Condition="HasQuestAvailable(59586)" >
 		<CustomBehavior File="FlyTo" X="-1469.85" Y="-218.82" Z="5.43" />
-		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="ForcedDismount" MountType="Flying" />
 		<CustomBehavior File="InteractWith" MobId="59586" NumOfTimes="1" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />

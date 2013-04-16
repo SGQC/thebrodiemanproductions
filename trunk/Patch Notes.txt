@@ -2,6 +2,10 @@ Patch Notes
 
 4/15/13
 
+r188
+The Anglers
+-- Fixed flight force while getting quests
+
 r187
 Golden Lotus
 -- Given a Second Chance - Removed wait timer, should operate MUCH faster!
