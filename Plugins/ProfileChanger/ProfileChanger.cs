@@ -32,16 +32,14 @@ namespace ProfileChanger
     class ProfileChanger : HBPlugin
     {
         public override string Name { get { return "Profile Changer"; } }
-        public override string Author { get { return "Obliv"; } }
-        private readonly Version _version = new Version(1, 2);
+        public override string Author { get { return "Obliv & TheBrodieMan"; } }
+        private readonly Version _version = new Version(1, 2, 2);
         public override Version Version { get { return _version; } }
         public override string ButtonText { get { return "Settings"; } }
         public override bool WantButton { get { return true; } }
 
         public static ProfileChangerSettings Settings = new ProfileChangerSettings();
         public static LocalPlayer Me = StyxWoW.Me;
-
-        
 
         bool hasItBeenInitialized = false;
 
@@ -54,7 +52,6 @@ namespace ProfileChanger
         {
             ConfigForm.ShowDialog();
         }
-
 
         private Form MyForm;
         public Form ConfigForm
@@ -165,62 +162,62 @@ namespace ProfileChanger
             }
 
             // Skip profiles if they're not active:
-            if (Settings.Active1 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+            if (Settings.Active1 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 			{
 				    Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                     Settings.Active1 = false;
 
-                    if (Settings.Active2 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active2 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{					
 						SpellManager.StopCasting();	
 						ChangeProfile(Settings.Profile2);
 					}
-                    if (Settings.Active3 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active3 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 						ChangeProfile(Settings.Profile3);
 					}
-                    if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile4);
 					}
-                    if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();		
 					    ChangeProfile(Settings.Profile5);
 					}
-                    if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-                    if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-                    if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-                    if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-                    if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-                    if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-                    if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -231,57 +228,57 @@ namespace ProfileChanger
 					}
             }
 				
-			if (Settings.Active2 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active2 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active2 = false;
 
-                    if (Settings.Active3 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674))) 
+                    if (Settings.Active3 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674))) 
 					{
 						SpellManager.StopCasting();	
 						ChangeProfile(Settings.Profile3);
 					}
-					if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile4);
 					}
-                    if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();		
 					    ChangeProfile(Settings.Profile5);
 					}
-                    if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-                    if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-                    if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-                    if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-                    if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-                    if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-                    if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -292,52 +289,52 @@ namespace ProfileChanger
 					}
                 }
 				
-            if (Settings.Active3 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+            if (Settings.Active3 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active3 = false;
 
-					if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile4);
 					}
-                    if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();		
 					    ChangeProfile(Settings.Profile5);
 					}
-                    if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-                    if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-                    if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-                    if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-                    if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-                    if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-                    if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+                    if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -348,47 +345,47 @@ namespace ProfileChanger
 					}
                 }
 				
-            if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+            if (Settings.Active4 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active4 = false;
 
-					if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();		
 					    ChangeProfile(Settings.Profile5);
 					}
-					if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -399,42 +396,42 @@ namespace ProfileChanger
 					}
                 }
 				            
-			if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active5 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active5 = false;
 
-					if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile6);
 					}
-					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -445,37 +442,37 @@ namespace ProfileChanger
 					}
                 }
 
-			if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active6 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active6 = false;
 
-					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile7);
 					}
-					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -486,32 +483,32 @@ namespace ProfileChanger
 					}
                 }
 				
-			if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active7 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active7 = false;
 
-					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile8);
 					}
-					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile9);
 					}
-					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -522,22 +519,22 @@ namespace ProfileChanger
 					}
                 }
 				
-			if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active8 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active8 = false;
 
-					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -548,22 +545,22 @@ namespace ProfileChanger
 					}
                 }
 				
-			if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active9 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active9 = false;
 
-					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile10);
 					}
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -574,17 +571,17 @@ namespace ProfileChanger
 					}
                 }
 				
-			if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active10 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active10 = false;
 
-					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile11);
 					}
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -595,12 +592,12 @@ namespace ProfileChanger
 					}
                 }
 				
-			if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+			if (Settings.Active11 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 				{
 				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Checking to see if we should change profiles");
                 Settings.Active11 = false;
 
-					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+					if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
 					{
 						SpellManager.StopCasting();	
 					    ChangeProfile(Settings.Profile12);
@@ -611,7 +608,7 @@ namespace ProfileChanger
 					}
                 }
 
-            if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
+            if (Settings.Active12 && (StyxWoW.Me.IsCasting && (StyxWoW.Me.CastingSpellId == 556 || StyxWoW.Me.CastingSpellId == 8690 || StyxWoW.Me.CastingSpellId == 94719 || StyxWoW.Me.CastingSpellId == 136508 || StyxWoW.Me.CastingSpellId == 75136 || StyxWoW.Me.CastingSpellId == 82674)))
                 {
                     Logging.Write(Colors.LightSkyBlue, "End of the line. Thank you, come again!");
                 }

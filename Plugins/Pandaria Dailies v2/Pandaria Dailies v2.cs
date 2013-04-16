@@ -209,14 +209,6 @@ namespace AzeniusHelper2
                 return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 59231 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
             }
         }
-
-        public List<WoWUnit> ShaoTienMindbinder
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63221 && u.Distance < 5 && !u.IsDead).OrderBy(u => u.Distance).ToList();
-            }
-        }
 		
 		public WoWUnit ShaoTienSorcerer
         {
@@ -624,16 +616,6 @@ namespace AzeniusHelper2
             #region http://www.wowhead.com/quest=30233 - done
 			if (Cracklefang != null && Cracklefang.Distance2D <= 20 && Cracklefang.IsCasting /*&& Cracklefang.CastingSpellId == 126032*/)
 				BarryDurex.QuestHelper.AvoidEnemyCast(Cracklefang, 0, 20);
-            #endregion
-
-            #region http://www.wowhead.com/quest=30293
-            // In Enemy Hands
-            if (IsOnQuest(30293) && !QuestComplete(30293))
-            {
-                if (ShaoTienMindbinder != null && Me.CurrentTargetGuid != ShaoTienMindbinder[0].Guid)
-                    ShaoTienMindbinder[0].Target();
-            }
-
             #endregion
 
             #region http://www.wowhead.com/quest=30249 - todo
