@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r182</Name>
+	<Name>Dominance Offensive r193</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -727,7 +727,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32235" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1911.61" Y="2414.90" Z="57.35" />
 		<While Condition="!IsQuestCompleted(32235)" >
-			<CustomBehavior File="UseItemOn" Nav="CTM" Range="30" QuestId="32235" MobType="Npc" MobId="67359" ItemId="92019" NumOfTimes="1" WaitTime="1000" CollectionDistance="3000" />
+			<CustomBehavior File="InteractWith" Nav="CTM" Range="30" MinRange="20" QuestId="32235" MobId="67359" InteractByUsingItemId="92019" WaitTime="1000" CollectionDistance="3000" />
 		</While>
 	</If>
 

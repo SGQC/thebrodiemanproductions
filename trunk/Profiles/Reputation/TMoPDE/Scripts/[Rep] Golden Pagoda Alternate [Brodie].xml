@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Pagoda Alternate r181</Name>
+	<Name>Golden Pagoda Alternate r193</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -125,7 +125,7 @@
 		<CustomBehavior File="FlyTo" X="1234.62" Y="1459.12" Z="351.65" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30282)" >
-			<CustomBehavior File="InteractWith" QuestId="30282" InteractByUsingItemId="84781" ObjectType="GameObject" MobId="212874" Range="15" AuraIdMissingFromMob="123301" >
+			<CustomBehavior File="InteractWith" QuestId="30282" InteractByUsingItemId="84781" ObjectType="GameObject" MobId="212874" Range="20" MinRange="10" AuraIdMissingFromMob="123301" >
 				<HuntingGrounds WaypointVisitStrategy="InOrder">
 					<Hotspot X="1255.80" Y="1416.60" Z="353.23" />
 					<Hotspot X="1241.38" Y="1343.14" Z="360.50" />

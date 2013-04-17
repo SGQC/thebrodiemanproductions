@@ -1,5 +1,19 @@
 Patch Notes
 
+4/17/13
+
+r193
+Dominance Offensive
+-- Flash! Aaah! - Converted UseItemOn -> InteractWith v432, should allow for use in air while in flight form, and added minimum range modifiers (BETA)
+Quest Behaviors
+-- Addition of ChinaJade's QuestBehaviorCore addons
+-- InteractWith v432 (BETA) to add minrange modifiers and remove "forceddismount" from interactions
+Golden Pagoda Phase 2
+-- Burning Away the Filth - Addition of Minrange modifier (BETA)
+Ruins of Guo-Lai
+-- That's Not a Rock - UITL -> InteractWith v432
+-- Offering a Warm Welcome - Added MinRange modifier (BETA)
+
 4/16/13
 
 r192
