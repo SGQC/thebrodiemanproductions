@@ -2,6 +2,10 @@ Patch Notes
 
 4/16/13
 
+r191
+Beast Pens
+-- Dino Might - Removed enemy compy support (too unpredictable)
+
 r190
 Court of Bones
 -- Ashes of the Enemy - Should use item smarter, and on mummies that DON'T have teh burning!
