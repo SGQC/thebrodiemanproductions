@@ -2,6 +2,10 @@ Patch Notes
 
 4/17/13
 
+r194
+Thunder Forge (Horde)
+-- Corrected NPC ID for turnin of Forge Ahead!
+
 r193
 Dominance Offensive
 -- Flash! Aaah! - Converted UseItemOn -> InteractWith v432, should allow for use in air while in flight form, and added minimum range modifiers (BETA)

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Horde) r150</Name>
+	<Name>Thunder Forge (Horde) r194</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -199,18 +199,18 @@
 	</If>
 	
 	<If Condition="HasQuest(32722) &amp;&amp; IsQuestCompleted(32722)" >
-		<TurnIn QuestName="Forge Ahead!" QuestId="32722" TurnInName="Scout Captain Daelin" TurnInId="70552" />
+		<TurnIn QuestName="Forge Ahead!" QuestId="32722" TurnInName="Scout Captain Elsia" TurnInId="70551" />
 	</If>
 	
 	<If Condition="HasQuest(32292) &amp;&amp; IsQuestCompleted(32292)" >
-		<TurnIn QuestName="Forge Ahead!" QuestId="32292" TurnInName="Scout Captain Daelin" TurnInId="70552" />
+		<TurnIn QuestName="Forge Ahead!" QuestId="32292" TurnInName="Scout Captain Elsia" TurnInId="70551" />
 	</If>
 
 <!-- Double check for ender quests -->
 
-<!-- Scout Captain Daelin -->
+<!-- Scout Captain Elsia -->
 	<While Condition="HasQuestAvailable(70552)" >
-		<CustomBehavior File="InteractWith" MobId="70552" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70551" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
