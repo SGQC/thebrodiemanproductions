@@ -20,7 +20,7 @@ using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
 
-namespace Styx.Bot.Quest_Behaviors
+namespace Styx.Bot.Quest_Behaviors.FixedCannon
 {
     /// <summary>
     /// Shoots a Cannon
@@ -32,6 +32,7 @@ namespace Styx.Bot.Quest_Behaviors
     /// Buttons:A series of numbers that represent the buttons to press in order of importance, separated by comma, for example Buttons ="2,1" 
     /// ExitButton: (Optional)Button to press to exit the cannon. 1-12
     /// </summary>
+	[CustomBehaviorFileName(@"FixedCannon")]
     public class FixedCannon : CustomForcedBehavior
     {
         public FixedCannon(Dictionary<string, string> args)
