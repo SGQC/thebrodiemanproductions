@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r174</Name>
+	<Name>Isle of Thunder (Horde) r195</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -81,9 +81,9 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<If Condition="!IsQuestCompleted(32212)" >
-			<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 		<ElseIf Condition="IsQuestCompleted(32212)" >
-			<CustomBehavior File="InteractWith" MobId="218462" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218462" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -204,14 +204,14 @@
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="6690.58" Y="6481.38" Z="4.63" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>
 			<RunTo X="6693.16" Y="6290.14" Z="1.06" />
-			<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="6690.58" Y="6481.38" Z="4.63" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</Else>
 		</If>
@@ -219,11 +219,11 @@
 		<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(7198.78, 6285.94, 12.47)) &lt; 100)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>
 			<RunTo X="7249.33" Y="6276.71" Z="19.35" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</Else>
 		</If>

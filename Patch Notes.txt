@@ -1,5 +1,13 @@
 Patch Notes
 
+4/18/13
+
+r195
+Isle of Thunder
+-- Added 0 yd NonCompeteDistance checks to portals. Fix within QBCore coming soon
+Quest Behaviors
+-- Updated QBCore and InteractWith
+
 4/17/13
 
 r194
