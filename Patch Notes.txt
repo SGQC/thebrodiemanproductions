@@ -2,6 +2,23 @@ Patch Notes
 
 4/18/13
 
+r196
+The Tillers
+-- Reversion of achievement requirements for Work Orders
+Red Crane Temple
+-- Chasing Hope - Mounting tied directly with InteractWith, should always mount.
+-- Fat Long Fat: Rematch -- Should fly above, then to, then dismount now
+-- Code Cleanup
+-- Conversion of GossipOptions to new InteractWith standards
+Golden Lotus
+-- Cannonfire - correction of "Missing Mob Aura" codeword
+-- Free Spirits - Changed mounting priority (new code) to "Mount"
+-- Thundering Skies - Added 0 yd NonCompete distance checks to staves.
+Golden Pagoda Phase 2
+-- Burning Away the Filth - Minor changes to InteractWith
+Mistfall Village
+-- Added "False" call to using buckets on flames
+
 r195
 Isle of Thunder
 -- Added 0 yd NonCompeteDistance checks to portals. Fix within QBCore coming soon

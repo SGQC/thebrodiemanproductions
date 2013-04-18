@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r174</Name>
+	<Name>Setting Sun Garrison r196</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -120,7 +120,7 @@
 
 <!-- Leven Dawnblade -->
 	<While Condition="HasQuestAvailable(59340)" >
-		<CustomBehavior File="InteractWith" MobId="59340" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59340" NumOfTimes="1" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -131,7 +131,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30306" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="693.7659" Y="1984.032" Z="326.9627" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30306) &amp;&amp; !IsQuestCompleted(30306)" >
+		<While Condition="!IsQuestCompleted(30306)" >
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 			<RunTo X="694.0622" Y="1983.266" Z="325.4342" />
 		</While>
@@ -331,7 +331,7 @@
 
 <!-- Leven Dawnblade -->
 	<While Condition="HasQuestAvailable(59340)" >
-		<CustomBehavior File="InteractWith" MobId="59340" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59340" NumOfTimes="1" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r178</Name>
+	<Name>Mistfall Village r196</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -331,7 +331,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30192)" >
 			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" MobId="63797" Range="20" />
+				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" MobId="63797" Range="20" WaitForNpcs="False" />
 			</If>
 			<If Condition="!HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
 				<CustomBehavior File="InteractWith" QuestId="30192" ObjectType="GameObject" MobId="213369" WaitForNpcs="False" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" Range="4" />
@@ -347,7 +347,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30288)" >
 			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" MobId="63797" Range="20" />
+				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" MobId="63797" Range="20" WaitForNpcs="False" />
 			</If>
 			<If Condition="!HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
 				<CustomBehavior File="InteractWith" QuestId="30288" ObjectType="GameObject" MobId="213369" WaitForNpcs="False" NumOfTimes="1" WaitTime="1000" CollectionDistance="5000" Range="4" />
