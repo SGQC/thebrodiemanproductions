@@ -38,15 +38,21 @@ namespace Honorbuddy.QuestBehaviorCore
 
         
         // 25Feb2013-12:50UTC chinajade
-        public IEnumerable<WoWUnit> FindHostileNpcWithinAggroRangeOFDestination(WoWPoint destination, double extraRangePadding = 0.0)
+        public IEnumerable<WoWUnit> FindHostileNpcWithinAggroRangeOFDestination(
+            WoWPoint destination,
+            double extraRangePadding = 0.0,
+            Func<IEnumerable<int>> excludedUnitIdsDelegate = null)
         {
+            excludedUnitIdsDelegate = excludedUnitIdsDelegate ?? (() => new List<int>());
+
             return
                 from wowUnit in ObjectManager.GetObjectsOfType<WoWUnit>(true, false)
                 where
                     IsViableForFighting(wowUnit)
                     && wowUnit.IsHostile
                     && !wowUnit.IsPlayer
-                    && (wowUnit.Location.Distance(destination) <= (wowUnit.MyAggroRange + extraRangePadding))
+                    && !excludedUnitIdsDelegate().Contains((int)wowUnit.Entry)
+                    && (wowUnit.Location.SurfacePathDistance(destination) <= (wowUnit.MyAggroRange + extraRangePadding))
                 select wowUnit;
         }
         
@@ -142,32 +148,45 @@ namespace Honorbuddy.QuestBehaviorCore
         // 11Apr2013-04:41UTC chinajade
         public bool IsInCompetition(WoWObject wowObject)
         {
-            WoWUnit wowUnit = wowObject.ToUnit();
+            bool isSharedResource = false;
+            var wowGameObject = wowObject.ToGameObject();
+            var wowUnit = wowObject.ToUnit();
 
-            // NB: shared resources are never in competition...
-            bool isSharedResource_NonHostile =
-                (wowUnit != null)
-                && !wowUnit.IsHostile
-                && (wowUnit.IsAnyTrainer
-                    || wowUnit.IsAnyVendor
-                    || wowUnit.IsAuctioneer
-                    || wowUnit.IsBanker
-                    || wowUnit.IsFlightMaster
-                    || wowUnit.IsGuard
-                    || wowUnit.IsGuildBanker
-                    || wowUnit.IsInnkeeper
-                    || wowUnit.IsQuestGiver
-                    || wowUnit.IsStableMaster
-                   );
+            isSharedResource |= (wowGameObject != null) && _sharedGameObjectTypes.Contains(wowGameObject.SubType);
+            isSharedResource |= (wowUnit != null) && wowUnit.TappedByAllThreatLists;
+            isSharedResource |= (wowUnit != null) && !wowUnit.IsHostile
+                                && (wowUnit.IsAnyTrainer
+                                    || wowUnit.IsAnyVendor
+                                    || wowUnit.IsAuctioneer
+                                    || wowUnit.IsBanker
+                                    || wowUnit.IsFlightMaster
+                                    || wowUnit.IsGuard
+                                    || wowUnit.IsGuildBanker
+                                    || wowUnit.IsInnkeeper
+                                    || wowUnit.IsQuestGiver
+                                    || wowUnit.IsStableMaster
+                                   );
 
-            bool isSharedResource_DontCare =
-                (wowUnit != null)
-                && (wowUnit.TappedByAllThreatLists   
-                   );
+            ProvideBoolDelegate excludeGroupMembers = (potentialGroupMember =>
+            {
+                var asWoWPlayer = potentialGroupMember as WoWPlayer;
 
-            return !(isSharedResource_DontCare || isSharedResource_NonHostile)
-                    && FindPlayersNearby(wowObject.Location, NonCompeteDistance).Any();
+                return (asWoWPlayer != null) && !asWoWPlayer.IsInMyParty;
+            });
+
+            return !isSharedResource && FindPlayersNearby(wowObject.Location, NonCompeteDistance, excludeGroupMembers).Any();
         }
+        private readonly WoWGameObjectType[] _sharedGameObjectTypes =
+        {
+            WoWGameObjectType.Binder,           // sets hearthstone
+            WoWGameObjectType.Door,
+            WoWGameObjectType.GuildBank,
+            WoWGameObjectType.Mailbox,
+            WoWGameObjectType.MeetingStone,
+            WoWGameObjectType.QuestGiver,
+            WoWGameObjectType.SpellCaster,      // portals
+            WoWGameObjectType.Transport,
+        };
         
         
         //  23Mar2013-05:38UTC chinajade
