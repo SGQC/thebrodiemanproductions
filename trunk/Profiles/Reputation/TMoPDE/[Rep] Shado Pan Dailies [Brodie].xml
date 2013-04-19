@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r190</Name>
+	<Name>Shado Pan Dailies r197</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -378,27 +378,21 @@
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 1)" >
-			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<ElseIf Condition="!IsAchievementCompleted(7298, 4) &amp;&amp; IsQuestCompleted(31038)" >	
-			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="!IsAchievementCompleted(7298, 7) &amp;&amp; IsQuestCompleted(31104)" >
-			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 33) &amp;&amp; IsQuestCompleted(31104)" >
-			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 66) &amp;&amp; IsQuestCompleted(31038)" >
-			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<Else>
-			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</Else>
 		</If>
 	</If>
@@ -412,27 +406,21 @@
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 2)" >
-			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<ElseIf Condition="!IsAchievementCompleted(7298, 5) &amp;&amp; IsQuestCompleted(31220)" >
-			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="!IsAchievementCompleted(7298, 8) &amp;&amp; IsQuestCompleted(31221)" >
-			<CustomBehavior File="InteractWith" MobId="63616" X="1830.88" Y="4271.50" Z="149.08" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="63616" X="1830.88" Y="4271.50" Z="149.08" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 33) &amp;&amp; IsQuestCompleted(31221)" >
-			<CustomBehavior File="InteractWith" MobId="63616" X="1870.94" Y="4276.80" Z="149.50" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="63616" X="1870.94" Y="4276.80" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 66) &amp;&amp; IsQuestCompleted(31220)" >
-			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<Else>
-			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</Else>
 		</If>
 	</If>
@@ -458,27 +446,21 @@
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 3)" >
-			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<ElseIf Condition="!IsAchievementCompleted(7298, 6) &amp;&amp; IsQuestCompleted(31127)" >
-			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" Range="5" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" InteractByGossipOptions="1" NonCompeteDistance="0" Range="5" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="!IsAchievementCompleted(7298, 9) &amp;&amp; IsQuestCompleted(31128)" >
-			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 33) &amp;&amp; IsQuestCompleted(31128)" >
-			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 66) &amp;&amp; IsQuestCompleted(31127)" >
-			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" Range="5" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" InteractByGossipOptions="1" NonCompeteDistance="0" Range="5" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<Else>
-			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" WaitForNpcs="False" WaitTime="1000" />
-			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</Else>
 		</If>
 	</If>
@@ -947,7 +929,7 @@
 		<Objective QuestName="Spirit Dust" QuestId="31116" Type="CollectItem" ItemId="84727" CollectCount="32"/>
 		<While Condition="!IsQuestCompleted(31116)" >
 			<CustomBehavior File="UserSettings" QuestId="31116" LootMobs="True" PullDistance="10" />
-			<CustomBehavior File="InteractWith" IgnoreCombat="True" CollectionDistance="5000" ObjectType="GameObject" MobId="212779" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" CollectionDistance="5000" ObjectType="GameObject" MobId="212779" WaitForNpcs="False" />
 		</While>
 	</If>
 

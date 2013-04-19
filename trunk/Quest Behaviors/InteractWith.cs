@@ -44,7 +44,7 @@
 //          Id, set the ObjectType attribute appropriately.
 //          This attribute may be safely combined with AuraIdOnMobN, AuraIdMissingFromMobN,
 //          and MobIdN.
-//      MobState [optional; Default: DontCare]
+//      MobState [optional; Default: Alive]
 //          [Allowed values: Alive, AliveNotInCombat, BelowHp, Dead, DontCare]
 //          This represents the state the NPC must be in when searching for targets
 //          with which we can interact.
@@ -354,11 +354,12 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                 // NB: Core attributes are parsed by QuestBehaviorBase parent (e.g., QuestId, NonCompeteDistance, etc)
 
                 // Basic attributes...
-                MobIds = GetNumberedAttributesAsArray<int>("MobId", 1, ConstrainAs.MobId, new[] { "NpcId" });
+                MobIds = GetNumberedAttributesAsArray<int>("MobId", 0, ConstrainAs.MobId, new[] { "NpcId" });
+                FactionIds = GetNumberedAttributesAsArray<int>("FactionId", 0, ConstrainAs.MobId, null );
                 AuraIdsOnMob = GetNumberedAttributesAsArray<int>("AuraIdOnMob", 0, ConstrainAs.AuraId, null);
                 AuraIdsMissingFromMob = GetNumberedAttributesAsArray<int>("AuraIdMissingFromMob", 0, ConstrainAs.AuraId, null);
 
-                MobState = GetAttributeAsNullable<MobStateType>("MobState", false, null, new[] { "NpcState" }) ?? MobStateType.DontCare;
+                MobState = GetAttributeAsNullable<MobStateType>("MobState", false, null, new[] { "NpcState" }) ?? MobStateType.Alive;
                 NumOfTimes = GetAttributeAsNullable<int>("NumOfTimes", false, ConstrainAs.RepeatCount, null) ?? 1;
 
 
@@ -402,6 +403,12 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                 WaitTime = GetAttributeAsNullable<int>("WaitTime", false, ConstrainAs.Milliseconds, null) ?? 0;            
                 
                 // Semantic coherency / covariant dependency checks --
+                if (!MobIds.Any() && !FactionIds.Any())
+                {
+                    LogProfileError("You must specify one or more MobIdN, one or more FactionIdN, or both.");   
+                    IsAttributeProblem = true;
+                }
+
                 const double rangeEpsilon = 3.0;
                 if ((RangeMax - RangeMin) < rangeEpsilon)
                 {
@@ -447,6 +454,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         public int[] AuraIdsMissingFromMob { get; private set; }
         public int BuyItemCount { get; private set; }
         public double CollectionDistance { get; private set; }
+        public int[] FactionIds { get; private set; }
         public WoWPoint HuntingGroundCenter { get; private set; }
         public bool IgnoreCombat { get; private set; }
         public int InteractByBuyingItemId { get; private set; }
@@ -489,8 +497,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _waitTimerAfterInteracting = new WaitTimer(TimeSpan.Zero);
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 441 2013-04-18 04:20:36Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 441 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 446 2013-04-19 02:03:44Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 446 $"); } }
         #endregion
 
 
@@ -615,7 +623,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                     new Action(context => { Lua.DoString("SpellStopTargeting()"); })),
 
                 // If a mob is targeting us, deal with it immediately, so our interact actions won't be interrupted...
-                UtilityBehaviorPS_SpankMobTargetingUs(),
+                new Decorator(context => !IgnoreCombat,
+                    UtilityBehaviorPS_SpankMobTargetingUs()),
 
                 // If interact target no longer meets qualifications, try to find another...
                 new Decorator(context => !IsInteractNeeded(SelectedInteractTarget),
@@ -633,7 +642,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                     new PrioritySelector(
 
                         // Take out any nearby mobs that will aggro, if we get close to destination...
-                        new Decorator(context => !Me.IsFlying,
+                        new Decorator(context => !IgnoreCombat && !Me.IsFlying,
                             UtilityBehaviorPS_SpankMobWithinAggroRange(context => SelectedInteractTarget.Location,
                                                                        context => SelectedInteractTarget.InteractRange,
                                                                        () => MobIds /*excluded mobs*/)),
@@ -1007,29 +1016,37 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                     new PrioritySelector(
                         new Decorator(context => Me.Location.Distance(CurrentHuntingGroundWaypoint.Location) <= CurrentHuntingGroundWaypoint.Radius,
                             new PrioritySelector(
-                                // Show excluded units *before* we take action.  This aids in profile debugging (e.g., WaitForNpcs="false")...
+                                new Decorator(context => !WaitForNpcs,
+                                    new Action(context =>
+                                    {
+                                        string message = "No interactable mobs in area--terminating due to WaitForNpcs=\"false\"";
+                                        TreeRoot.StatusText = message;
+
+                                        // Show excluded units before terminating.  This aids in profile debugging if WaitForNpcs="false"...
+                                        string excludedUnitReasons = Debug_BuildExclusions();
+                                        if (!string.IsNullOrEmpty(excludedUnitReasons))
+                                        {
+                                            message += excludedUnitReasons;
+                                            LogDeveloperInfo("{0}", message);                                            
+                                        }
+                                        BehaviorDone();
+                                    })),
+                                new Decorator(context => HuntingGrounds.Waypoints.Count() > 1,
+                                    new Action(context =>  { CurrentHuntingGroundWaypoint = HuntingGrounds.FindNextWaypoint(CurrentHuntingGroundWaypoint.Location); })),
                                 new CompositeThrottle(TimeSpan.FromSeconds(30),
                                     new Action(context =>
                                     {
                                         string message = string.Format("Waiting for {0} to respawn.", 
-                                                                        string.Join(", ", MobIds.Select(m => GetMobNameFromId(m))));
+                                                                        string.Join(", ", MobIds.Select(m => GetMobNameFromId(m)).Distinct()));
                                         TreeRoot.StatusText = message;
 
-                                        string exclusions = Debug_ShowExclusions();
-                                        if (!string.IsNullOrEmpty(exclusions))
+                                        string excludedUnitReasons = Debug_BuildExclusions();
+                                        if (!string.IsNullOrEmpty((excludedUnitReasons)))
                                         {
-                                            message += Environment.NewLine;
-                                            message += "Excluded Units:";
-                                            message += Environment.NewLine;
-                                            message += exclusions;
+                                            message += excludedUnitReasons;
+                                            LogDeveloperInfo("{0}", message);
                                         }
-                                        LogInfo("{0}", message);
-                                    })),
-                                new Decorator(context => !WaitForNpcs,
-                                    new Action(context => { BehaviorDone();  })),
-                                new Decorator(context => HuntingGrounds.Waypoints.Count() > 1,
-                                    new Action(context =>  { CurrentHuntingGroundWaypoint = HuntingGrounds.FindNextWaypoint(CurrentHuntingGroundWaypoint.Location); }))
-
+                                    }))
                                 )),
 
                         UtilityBehaviorPS_MoveTo(
@@ -1053,7 +1070,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                 { return TimeSpan.Zero; }
 
             WoWUnit wowUnit = selectedTarget.ToUnit();
-            bool isShortBlacklist = (wowUnit != null) && (wowUnit.IsVendor || wowUnit.IsFlightMaster);
+            bool isShortBlacklist = (wowUnit != null) && IsSharedWorldResource(wowUnit);
             TimeSpan blacklistDuration = TimeSpan.FromSeconds(isShortBlacklist ? 30 : 180);
 
             BlacklistForInteracting(selectedTarget, blacklistDuration);
@@ -1087,10 +1104,21 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
             double collectionDistanceSqr = CollectionDistance * CollectionDistance;
             const double minionWeighting = 1000;
 
+            Func<WoWObject, bool>   isInterestingToUs =
+                ((wowObject) =>
+                {
+                    WoWUnit wowUnit = wowObject.ToUnit();
+
+                    return MobIds.Contains((int)wowObject.Entry)
+                            || ((wowUnit != null) && FactionIds.Contains((int)wowUnit.FactionId));
+                });
+
             WoWObject entity = 
-               (from wowObject in FindObjectsFromIds(MobIds)
+               (from wowObject in ObjectManager.GetObjectsOfType<WoWObject>(true, false)
                 where
-                    (wowObject.DistanceSqr < collectionDistanceSqr)
+                    IsViable(wowObject)
+                    && isInterestingToUs(wowObject)
+                    && (wowObject.DistanceSqr < collectionDistanceSqr)
                     && IsInteractNeeded(wowObject)
                     && ((MovementBy != MovementByType.NavigatorOnly) || Navigator.CanNavigateFully(Me.Location, wowObject.Location))
                 orderby
@@ -1215,7 +1243,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
 
         #region Debug
-        private string Debug_ShowExclusions()
+        private string Debug_BuildExclusions()
         {
             IEnumerable<WoWObject> interactCandidates =
                 from wowObject in ObjectManager.GetObjectsOfType<WoWObject>(true)
@@ -1226,16 +1254,19 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
             if (MobIds.Count() <= 1)
             {
-                var excludeReasons = new StringBuilder();
+                var excludedUnitReasons = new StringBuilder();
 
                 foreach (var wowObject in interactCandidates)
                 {
-                    excludeReasons.Append("    ");
-                    excludeReasons.Append(Debug_TellWhyExcluded(wowObject));
-                    excludeReasons.AppendLine();
+                    excludedUnitReasons.Append("    ");
+                    excludedUnitReasons.Append(Debug_TellWhyExcluded(wowObject));
+                    excludedUnitReasons.AppendLine();
                 }
 
-                return excludeReasons.ToString();
+                if (excludedUnitReasons.Length > 0)
+                    { excludedUnitReasons.Insert(0, string.Format("{0}Excluded Units:{0}", Environment.NewLine)); }
+
+                return excludedUnitReasons.ToString();
             }
 
             return string.Empty;

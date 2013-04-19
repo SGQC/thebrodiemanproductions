@@ -520,8 +520,7 @@
 		<CustomBehavior File="FlyTo" X="126" Y="3200.40" Z="214.76" />
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="144.6462" Y="3208.307" Z="214.7614" />
-		<CustomBehavior File="InteractWith" MobId="62151" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
+		<CustomBehavior File="InteractWith" MobId="62151" NumOfTimes="1" InteractByGossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="SpecificQuests\31216-DreadWastes-DarkSkies" />
 	</If>
 
