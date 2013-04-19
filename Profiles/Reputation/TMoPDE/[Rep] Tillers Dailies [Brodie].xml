@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r196</Name>
+	<Name>The Tillers r197</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -62,8 +62,8 @@
 <!-- Where it Counts -->
 	<Quest Id="30325" Name="Where it Counts">
 		<Objective Type="KillMob" MobId="59123" KillCount="1">
-          	 	<Hotspots>
-         	    		<Hotspot X="192.4045" Y="1512.467" Z="427.4137" />
+			<Hotspots>
+				<Hotspot X="192.4045" Y="1512.467" Z="427.4137" />
 			</Hotspots>
 		</Objective>
 	</Quest>
@@ -135,15 +135,6 @@
 			<Hotspots>
 				<Hotspot X="195.6467" Y="1516.928" Z="427.4137" />
 				<Hotspot X="331.3852" Y="1467.327" Z="442.3755" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- A Gift for Gina -->
-	<Quest Id="30479" Name="Gift for Gina"> 
-		<Objective Type="CollectItem" ItemId="80231" CollectCount="1">
-			<Hotspots>
-				<Hotspot X="-182.8989" Y="878.6262" Z="243.2868" />
 			</Hotspots>
 		</Objective>
 	</Quest>

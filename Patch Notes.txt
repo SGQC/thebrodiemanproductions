@@ -2,6 +2,17 @@ Patch Notes
 
 4/18/13
 
+r197
+The Tillers
+-- Removal of obsolete overrides
+The Klaxxi
+-- Issues with Dark Skies starter gossip fixed
+Shado Pan
+-- Updates to picking up companions, should gossip reliably, and not care who's nearby
+-- Spirit Dust - Removed IgnoreCombat call for safety's sake!
+Quest Behaviors
+-- InteractWith update to v446
+
 r196
 The Tillers
 -- Reversion of achievement requirements for Work Orders
