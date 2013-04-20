@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Alliance) r135</Name>
+	<Name>Za'Tual (Alliance) r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -110,21 +110,21 @@
 	
 <!-- Archmage Lan'dalock -->
 	<While Condition="HasQuestAvailable(70517)" >
-		<CustomBehavior File="InteractWith" MobId="70517" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70517" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Ako -->
 	<While Condition="HasQuestAvailable(69673)" >
-		<CustomBehavior File="InteractWith" MobId="69673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69673" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Dalvin Jaacor -->
 	<While Condition="HasQuestAvailable(69674)" >
-		<CustomBehavior File="InteractWith" MobId="69674" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69674" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -147,15 +147,15 @@
 		<While Condition="!IsQuestCompleted(32538)" >
 			<While Condition="!IsObjectiveComplete(1,32538)" >
 				<RunTo X="6047.05" Y="6245.00" Z="22.96" />
-				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218424" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218424" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 			<While Condition="!IsObjectiveComplete(3,32538)" >
 				<RunTo X="5981.98" Y="6054.16" Z="58.59" />
-				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218426" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218426" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 			<While Condition="!IsObjectiveComplete(2,32538)" >
 				<RunTo X="6348.41" Y="6015.33" Z="29.35" />
-				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218425" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218425" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 		</While>
 	</If>
@@ -203,7 +203,6 @@
 			<Hotspot X="6126.702" Y="6155.273" Z="25.10509" />
 			<Hotspot X="6115.352" Y="6006.785" Z="50.47056" />
 		</CustomBehavior>
-		<!--<Objective QuestName="Surgical Strike" QuestId="32542" Type="KillMob" MobId="69254" MobId2="69256" MobId3="69255" KillCount="3" />-->
 	</If>
 	
 <!-- Pterrible Ptorment -->
@@ -274,21 +273,21 @@
 
 <!-- Archmage Lan'dalock -->
 	<While Condition="HasQuestAvailable(70517)" >
-		<CustomBehavior File="InteractWith" MobId="70517" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70517" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Ako -->
 	<While Condition="HasQuestAvailable(69673)" >
-		<CustomBehavior File="InteractWith" MobId="69673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69673" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Dalvin Jaacor -->
 	<While Condition="HasQuestAvailable(69674)" >
-		<CustomBehavior File="InteractWith" MobId="69674" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69674" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

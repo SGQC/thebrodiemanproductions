@@ -1,5 +1,55 @@
 Patch Notes
 
+4/20/13
+
+r199
+Quest Behaviors
+-- Multiple additions and updates post .557 HB
+Golden Lotus Collection
+-- All Nav="CTM" calls replaced with MovementBy="ClickToMoveOnly" (depreciated)
+-- Hard As A Rock/No Stone Unturned - Updated Interact range, no more dancing
+The Tillers
+-- All Nav="CTM" calls replaced with MovementBy="ClickToMoveOnly" (depreciated)
+-- Water, Water Everwhere - Updated QB call to use new Vehicles folder
+-- Where It Counts - Added PreInteractMountStrategy to assure dismounting
+-- Where It Counts - Increased speed of interactions by uber percents. MUCH FASTAR!
+Farm Dailies
+-- Updated all UseItemOn -> InteractWith
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+Cloud Serpent
+-- Updated all InteractWith depreciated commands
+The Anglers
+-- Code Cleanup
+-- Updated all InteractWith depreciated commands
+-- Fixed ForcedMount call to force Flying instead of Ground
+-- Jumping the Shark - Updated QB call to use new Vehicles folder
+Operation: Shieldwall
+-- Updated all InteractWith depreciated commands
+-- It Is A Mystery - Added 2nd hotspot
+Dominance Offensive
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+-- It Is A Mystery - Added 2nd hotspot
+The Klaxxi
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+-- Free From Her Clutches - Added MinRange modifier to avoid running into the cage
+-- Nope Nope Nope - UseItemOn -> InteractWith
+-- Sap Tapping - Added MinRange modifiers to hanging sap objects
+Shado Pan
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+August Celestials Collection
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+-- Added more quest tags
+-- UseItemOn -> InteractWith
+-- UseItemTargetLocation -> InteractWith
+Isle of Thunder Collection
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+
 4/19/13
 
 r198

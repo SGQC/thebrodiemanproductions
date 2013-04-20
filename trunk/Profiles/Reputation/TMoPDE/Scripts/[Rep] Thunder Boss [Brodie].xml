@@ -196,7 +196,7 @@
 			</ElseIf>
 			<Else>
 				<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
-				<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="True" />
+				<CustomBehavior File="InteractWith" MobId="218838" WaitForNpcs="True" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			</Else>
 			</If>
@@ -240,7 +240,7 @@
 				</ElseIf>
 				<Else>
 					<RunTo X="6691.65" Y="6286.90" Z="1.52" />
-					<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="True" />
+					<CustomBehavior File="InteractWith" MobId="218840" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</Else>
 				</If>
@@ -274,7 +274,7 @@
 			</ElseIf>
 			<Else>
 				<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
-				<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="True" />
+				<CustomBehavior File="InteractWith" MobId="218838" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			</Else>
 			</If>
@@ -309,7 +309,7 @@
 			</ElseIf>
 			<Else>
 				<RunTo X="6691.65" Y="6286.90" Z="1.52" />
-				<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="True" />
+				<CustomBehavior File="InteractWith" MobId="218840" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			</Else>
 			</If>

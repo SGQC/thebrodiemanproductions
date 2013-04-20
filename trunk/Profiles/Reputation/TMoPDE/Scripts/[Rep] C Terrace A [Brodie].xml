@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Alliance) r185</Name>
+	<Name>Conqueror's Terrace (Alliance) r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -108,14 +108,14 @@
 	
 <!-- Scout Captain Daelin -->
 	<While Condition="HasQuestAvailable(67998)" >
-		<CustomBehavior File="InteractWith" MobId="67998" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67998" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Miura Brightweaver -->
 	<While Condition="HasQuestAvailable(67999)" >
-		<CustomBehavior File="InteractWith" MobId="67999" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67999" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -164,7 +164,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32555" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
 		<While Condition="!IsQuestCompleted(32555)" >
 			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 69335 &amp;&amp; u.IsDead &amp;&amp; u.Distance &lt;= 150))" >
-				<CustomBehavior File="InteractWith" QuestId="32555" InteractByUsingItemId="93806" MobId="69335" MobState="Dead" AuraIdOnMob="136972" WaitForNpcs="False" CollectionDistance="1000" >
+				<CustomBehavior File="InteractWith" QuestId="32555" InteractByUsingItemId="93806" MobId="69335" MobState="Dead" AuraIdOnMob="136972" CollectionDistance="1000" >
 					<HuntingGrounds>
 						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
 						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
@@ -173,7 +173,7 @@
 					</HuntingGrounds>
 				</CustomBehavior>
 			<Else>
-				<CustomBehavior File="InteractWith" QuestId="32555" MobId="69335" MobState="Alive" WaitForNpcs="False" WaitTime="100" CollectionDistance="1000" >
+				<CustomBehavior File="InteractWith" QuestId="32555" MobId="69335" MobState="Alive" WaitTime="100" CollectionDistance="1000" >
 					<HuntingGrounds>
 						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
 						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
@@ -234,14 +234,14 @@
 
 <!-- Scout Captain Daelin -->
 	<While Condition="HasQuestAvailable(67998)" >
-		<CustomBehavior File="InteractWith" MobId="67998" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67998" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Miura Brightweaver -->
 	<While Condition="HasQuestAvailable(67999)" >
-		<CustomBehavior File="InteractWith" MobId="67999" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67999" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

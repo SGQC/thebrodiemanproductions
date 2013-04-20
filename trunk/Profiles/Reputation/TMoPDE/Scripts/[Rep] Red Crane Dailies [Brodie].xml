@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Red Crane Dailies r196</Name>
+	<Name>Red Crane Dailies r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -95,7 +95,7 @@
 
 <!-- Thelonius -->
 	<While Condition="HasQuestAvailable(60506)" >
-		<CustomBehavior File="InteractWith" MobId="60506" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60506" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -116,7 +116,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30716" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2590.545" Y="1261.589" Z="18.10288" />
 		<While Condition="!IsQuestCompleted(30716)" >
-			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Mount" WaitForNpcs="False" MobId="60487" CollectionDistance="1000" />
+			<CustomBehavior File="InteractWith" QuestId="30716" PreInteractMountStrategy="Mount" WaitForNpcs="False" MobId="60487" CollectionDistance="1000" />
 		</While>
 	</If>
 
@@ -160,7 +160,7 @@
 
 <!-- Thelonius -->
 	<While Condition="HasQuestAvailable(60506)" >
-		<CustomBehavior File="InteractWith" MobId="60506" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60506" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -172,7 +172,7 @@
 		<CustomBehavior File="FlyTo" X="-2658.645" Y="1332.316" Z="35.65187" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30740)" >
-			<CustomBehavior File="InteractWith" MobId="60546" InteractByGossipOptions="1" X="-2686.64" Y="1320.181" Z="35.64653" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30740" MobId="60546" InteractByGossipOptions="1" X="-2686.64" Y="1320.181" Z="35.64653" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -183,7 +183,7 @@
 		<CustomBehavior File="FlyTo" X="-2612.034" Y="1458.487" Z="2.454301" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30730)" >
-			<CustomBehavior File="InteractWith" MobId="60536" InteractByGossipOptions="1" X="-2620.20" Y="1462.67" Z="0.73" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30730" MobId="60536" InteractByGossipOptions="1" X="-2620.20" Y="1462.67" Z="0.73" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -194,7 +194,7 @@
 		<CustomBehavior File="FlyTo" X="-2291.721" Y="1465.953" Z="29.61829" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30725)" >
-			<CustomBehavior File="InteractWith" MobId="60530" InteractByGossipOptions="1" X="-2317.105" Y="1450.66" Z="29.61624" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30725" MobId="60530" InteractByGossipOptions="1" X="-2317.105" Y="1450.66" Z="29.61624" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -205,7 +205,7 @@
 		<CustomBehavior File="FlyTo" X="-2472.699" Y="1242.58" Z="89.14" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30739)" >
-			<CustomBehavior File="InteractWith" MobId="60545" InteractByGossipOptions="1" X="-2472.699" Y="1242.58" Z="89.14" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30739" MobId="60545" InteractByGossipOptions="1" X="-2472.699" Y="1242.58" Z="89.14" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -216,7 +216,7 @@
 		<CustomBehavior File="FlyTo" X="-2449.671" Y="1318.952" Z="20.17832" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30727)" >
-			<CustomBehavior File="InteractWith" MobId="60533" InteractByGossipOptions="1" X="-2449.671" Y="1318.952" Z="20.17832" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30727" MobId="60533" InteractByGossipOptions="1" X="-2449.671" Y="1318.952" Z="20.17832" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -227,7 +227,7 @@
 		<CustomBehavior File="FlyTo" X="-2657.743" Y="1332.558" Z="35.62134" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30732)" >
-			<CustomBehavior File="InteractWith" MobId="60538" InteractByGossipOptions="1" X="-2685.745" Y="1321.32" Z="35.64643" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30732" MobId="60538" InteractByGossipOptions="1" X="-2685.745" Y="1321.32" Z="35.64643" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -238,7 +238,7 @@
 		<CustomBehavior File="FlyTo" X="-2319.32" Y="1448.80" Z="82.62" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30728)" >
-			<CustomBehavior File="InteractWith" MobId="60534" InteractByGossipOptions="1" X="-2319.32" Y="1448.80" Z="82.62" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30728" MobId="60534" InteractByGossipOptions="1" X="-2319.32" Y="1448.80" Z="82.62" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -248,7 +248,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30737" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="-2687.9" Y="1317.054" Z="108.67" />
 		<While Condition="!IsQuestCompleted(30737)" >
-			<CustomBehavior File="InteractWith" MobId="60543" InteractByGossipOptions="1" X="-2687.9" Y="1317.054" Z="88.67" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30737" MobId="60543" InteractByGossipOptions="1" X="-2687.9" Y="1317.054" Z="88.67" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -259,7 +259,7 @@
 		<CustomBehavior File="FlyTo" X="-2293.24" Y="1639.055" Z="1.90" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30734)" >
-			<CustomBehavior File="InteractWith" MobId="60540" InteractByGossipOptions="1" X="-2293.24" Y="1639.055" Z="1.90" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30734" MobId="60540" InteractByGossipOptions="1" X="-2293.24" Y="1639.055" Z="1.90" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -270,7 +270,7 @@
 		<CustomBehavior File="FlyTo" X="-2461.924" Y="1589.542" Z="0.7653754" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30729)" >
-			<CustomBehavior File="InteractWith" MobId="60535" InteractByGossipOptions="1" X="-2470.33" Y="1593.42" Z="0.32" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30729" MobId="60535" InteractByGossipOptions="1" X="-2470.33" Y="1593.42" Z="0.32" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -281,7 +281,7 @@
 		<CustomBehavior File="FlyTo" X="-2451.82" Y="1235.36" Z="36.13" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30731)" >
-			<CustomBehavior File="InteractWith" MobId="60537" InteractByGossipOptions="1" X="-2447.99" Y="1234.71" Z="36.13" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30731" MobId="60537" InteractByGossipOptions="1" X="-2447.99" Y="1234.71" Z="36.13" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -292,7 +292,7 @@
 		<CustomBehavior File="FlyTo" X="-2319.32" Y="1448.74" Z="29.62" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30735)" >
-			<CustomBehavior File="InteractWith" MobId="60541" InteractByGossipOptions="1" X="-2319.32" Y="1448.74" Z="29.62" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30735" MobId="60541" InteractByGossipOptions="1" X="-2319.32" Y="1448.74" Z="29.62" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -303,7 +303,7 @@
 		<CustomBehavior File="FlyTo" X="-2498.43" Y="1442.09" Z="14.64" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30726)" >
-			<CustomBehavior File="InteractWith" MobId="60532" InteractByGossipOptions="1" X="-2498.43" Y="1442.09" Z="14.64" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30726" MobId="60532" InteractByGossipOptions="1" X="-2498.43" Y="1442.09" Z="14.64" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -314,7 +314,7 @@
 		<CustomBehavior File="FlyTo" X="-2359.96" Y="1594.56" Z="1.83" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30738)" >
-			<CustomBehavior File="InteractWith" MobId="60544" InteractByGossipOptions="1" X="-2359.96" Y="1594.56" Z="1.83" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30738" MobId="60544" InteractByGossipOptions="1" X="-2359.96" Y="1594.56" Z="1.83" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -325,7 +325,7 @@
 		<CustomBehavior File="FlyTo" X="-2453.39" Y="1353.64" Z="20.32" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30733)" >
-			<CustomBehavior File="InteractWith" MobId="60539" InteractByGossipOptions="1" X="-2453.39" Y="1353.64" Z="20.32" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30733" MobId="60539" InteractByGossipOptions="1" X="-2453.39" Y="1353.64" Z="20.32" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -336,7 +336,7 @@
 		<CustomBehavior File="FlyTo" X="-2477.44" Y="1238.50" Z="36.13" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30736)" >
-			<CustomBehavior File="InteractWith" MobId="60542" InteractByGossipOptions="1" X="-2477.44" Y="1238.50" Z="36.13" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" QuestId="30736" MobId="60542" InteractByGossipOptions="1" X="-2477.44" Y="1238.50" Z="36.13" WaitForNpcs="False" />
 		</While>
 	</If>
 

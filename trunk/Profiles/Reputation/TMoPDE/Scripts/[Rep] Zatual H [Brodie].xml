@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Horde) r146</Name>
+	<Name>Za'Tual (Horde) r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -105,21 +105,21 @@
 	
 <!-- Halduron Brightwing -->
 	<While Condition="HasQuestAvailable(70520)" >
-		<CustomBehavior File="InteractWith" MobId="70520" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70520" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Kethiel Sunlance -->
 	<While Condition="HasQuestAvailable(67984)" >
-		<CustomBehavior File="InteractWith" MobId="67984" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67984" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Elina Zaralae -->
 	<While Condition="HasQuestAvailable(69418)" >
-		<CustomBehavior File="InteractWith" MobId="69418" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69418" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -142,18 +142,18 @@
 		<While Condition="!IsQuestCompleted(32215)" >
 			<While Condition="!IsObjectiveComplete(1,32215)" >
 				<RunTo X="6047.05" Y="6245.00" Z="22.96" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217201" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218424" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217201" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218424" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 			<While Condition="!IsObjectiveComplete(3,32215)" >
 				<RunTo X="5981.98" Y="6054.16" Z="58.59" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217203" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218426" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217203" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218426" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 			<While Condition="!IsObjectiveComplete(2,32215)" >
 				<RunTo X="6348.41" Y="6015.33" Z="29.35" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217202" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
-				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218425" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="217202" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="32215" MobId="218425" WaitForNpcs="False" WaitTime="1000" />
 			</While>
 		</While>
 	</If>
@@ -256,21 +256,21 @@
 
 <!-- Halduron Brightwing -->
 	<While Condition="HasQuestAvailable(70520)" >
-		<CustomBehavior File="InteractWith" MobId="70520" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70520" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Kethiel Sunlance -->
 	<While Condition="HasQuestAvailable(67984)" >
-		<CustomBehavior File="InteractWith" MobId="67984" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67984" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Elina Zaralae -->
 	<While Condition="HasQuestAvailable(69418)" >
-		<CustomBehavior File="InteractWith" MobId="69418" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69418" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

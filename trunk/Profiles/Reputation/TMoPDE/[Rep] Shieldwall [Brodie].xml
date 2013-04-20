@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r176</Name>
+	<Name>Operation Shieldwall r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -286,35 +286,35 @@
 
 <!-- Sky Admiral Rogers -->
 	<While Condition="HasQuestAvailable(67386)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67386" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67386" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Tinkmaster Overspark -->
 	<While Condition="HasQuestAvailable(67976)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67976" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67976" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Mishka -->
 	<While Condition="HasQuestAvailable(67444)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67444" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67444" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Seraphine of the Winter -->
 	<While Condition="HasQuestAvailable(68182)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68182" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="68182" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Sully The Pickle McLeary -->
 	<While Condition="HasQuestAvailable(68166)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68166" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="68166" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -371,6 +371,7 @@
 		<CustomBehavior File="Message" Text="Starting It Is A Mystery" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32119" LootMobs="True" PullDistance="1" />
 		<RunTo X="-638.0913" Y="-925.3087" Z="-64.07933" />
+		<RunTo X="-621.0759" Y="-939.0984" Z="-63.40317" />
 	</If>
 
 <!-- Shackles of the Past -->
@@ -606,7 +607,7 @@
 		<CustomBehavior File="FlyTo" X="-1096.33" Y="-692.21" Z="6.55" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32152)" >
-			<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="67671" Range="1" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" />
+			<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="67671" Range="3" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" />
 		</While>
 	</If>
 
@@ -660,7 +661,7 @@
 	</If>
 
 	<If Condition="HasQuest(32145) &amp;&amp; IsQuestCompleted(32145)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="67976" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67976" NumOfTimes="1" WaitTime="1000" />
 		<TurnIn QuestName="Don't Lose Your Head" QuestId="32145" TurnInName="Tinkmaster" TurnInId="67976" />
 	</If>
 
@@ -680,12 +681,12 @@
 	</If>
 
 	<If Condition="HasQuest(32154) &amp;&amp; IsQuestCompleted(32154)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68166" WaitTime="100" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="68166" WaitTime="100" />
 		<TurnIn QuestName="Burn Out" QuestId="32154" TurnInName="Sully" TurnInId="68166" />
 	</If>
 
 	<If Condition="HasQuest(32446) &amp;&amp; IsQuestCompleted(32446)" >
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="68166" WaitTime="100" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="68166" WaitTime="100" />
 		<TurnIn QuestName="Dis-Assembly Required" QuestId="32446" TurnInName="Sully" TurnInId="68166" />
 	</If>
 

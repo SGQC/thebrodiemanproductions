@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r198</Name>
+	<Name>The Tillers r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -712,7 +712,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
 		<While Condition="!IsObjectiveComplete(1,30317)">
-			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
+			<CustomBehavior File="Vehicles\NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
 		</While>
 	</If>
 
@@ -778,15 +778,15 @@
 		<While Condition="!IsQuestCompleted(30476)" >
 			<If Condition="!HasItem(80229)" >
 				<CustomBehavior File="FlyTo" X="348.64" Y="1067.99" Z="145.28" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="30476" MobId="211021" CollectionDistance="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" QuestId="30476" MobId="211021" CollectionDistance="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!HasItem(80229)" >
 				<CustomBehavior File="FlyTo" X="349.86" Y="963.92" Z="145.28" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="30476" MobId="211021" CollectionDistance="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" QuestId="30476" MobId="211021" CollectionDistance="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!HasItem(80229)" >
 				<CustomBehavior File="FlyTo" X="378.03" Y="868.71" Z="145.28" />
-				<CustomBehavior File="InteractWith" Nav="CTM" QuestId="30476" MobId="211021" CollectionDistance="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" QuestId="30476" MobId="211021" CollectionDistance="1000" WaitForNpcs="False" />
 			</If>
 		</While>
 		<If Condition="IsQuestCompleted(30476)" >
@@ -873,11 +873,11 @@
 		<Objective QuestName="Where it Counts" QuestId="30325" Type="KillMob" MobId="59123" KillCount="1" />
 		<While Condition="!IsObjectiveComplete(1,30325)" >
 			<CustomBehavior File="UserSettings" QuestId="30325" LootMobs="True" PullDistance="1" />
-			<CustomBehavior File="InteractWith" QuestId="30325" MobId="210955" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" QuestId="30325" MobId="210955" WaitTime="100" />
 		</While>
 		<While Condition="!IsObjectiveComplete(2,30325)" >
 			<CustomBehavior File="UserSettings" QuestId="30325" LootMobs="True" PullDistance="1" />
-			<CustomBehavior File="InteractWith" QuestId="30325" MobId="210890" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" QuestId="30325" MobId="210890" WaitTime="100" />
 		</While>
 	</If>
 
@@ -902,7 +902,7 @@
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(80127)" WaitTime="1000" />
 		</While>
 		<While Condition="!IsObjectiveComplete(2,30330)" >
-			<CustomBehavior File="InteractWith" MobId="210810" WaitTime="1100" CollectionDistance="1000" X="98.31226" Y="1476.329" Z="389.9664" />
+			<CustomBehavior File="InteractWith" QuestId="30330" WaitTime="2000" MobId="210810" PreInteractMountStrategy="Dismount" CollectionDistance="1000" X="98.31226" Y="1476.329" Z="389.9664" />
 		</While>
 	</If>
 
@@ -1123,15 +1123,15 @@
 		<While Condition="!IsQuestCompleted(30479)" >
 			<If Condition="!IsQuestCompleted(30479)" >
 				<CustomBehavior File="FlyTo" X="-182.8989" Y="878.6262" Z="243.2868" />
-				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False"/>
+				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30479)" >
 				<CustomBehavior File="FlyTo" X="-29.69154" Y="1044.316" Z="219.5321" />
-				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False"/>
+				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30479)" >
 				<CustomBehavior File="FlyTo" X="126.8075" Y="1218.519" Z="299.1005" />
-				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False"/>
+				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" />
 			</If>
 		</While>
 	</If>
@@ -1143,7 +1143,7 @@
 		<CustomBehavior File="FlyTo" X="348.98" Y="1021.83" Z="145.40" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30477)" >
-			<CustomBehavior File="InteractWith" QuestId="30477" MobId="59639" MobState="Alive" Nav="CTM" WaitTime="1000" CollectionDistance="3000" />
+			<CustomBehavior File="InteractWith" QuestId="30477" MobId="59639" MobState="Alive" MovementBy="ClickToMoveOnly" WaitTime="1000" CollectionDistance="3000" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
 	</If>
