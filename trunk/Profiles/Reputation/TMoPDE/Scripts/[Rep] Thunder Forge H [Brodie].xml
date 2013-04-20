@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Horde) r199</Name>
+	<Name>Thunder Forge (Horde) r200</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -107,6 +107,7 @@
 				<CustomBehavior File="InteractWith" QuestId="32208" MobId="69316" />
 			</If>
 			<If Condition="!IsObjectiveComplete(4,32208)" >
+				<RunTo X="7312.25" Y="5365.44" Z="47.85" />
 				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32208" StartNpcId="69326"
 					EventX="7312.25" EventY="5365.44" EventZ="47.85"
 					MoveOutOfGroundEffectAuraId1="137542"
@@ -150,6 +151,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" WaitTime="6000" />
 			</If>
 			<If Condition="!IsObjectiveComplete(4,32588)" >
+				<RunTo X="7312.25" Y="5365.44" Z="47.85" />
 				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32588" StartNpcId="69326"
 					EventX="7312.25" EventY="5365.44" EventZ="47.85"
 					MoveOutOfGroundEffectAuraId1="137542"

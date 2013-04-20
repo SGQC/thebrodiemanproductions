@@ -2,6 +2,22 @@ Patch Notes
 
 4/20/13
 
+r200
+Lost and Found
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+Lorewalkers
+-- Updated all InteractWith depreciated commands
+-- Removed all depreciated commands no longer needed
+Za'Tual
+-- Should now run to the kicker areas without stopping to fight
+Diremoor
+-- Should now run to the turnin areas without stopping to fight
+Isle of Thunder
+-- Should remove Competition restriction to the Assignment Map
+Thunder Forge
+-- Should move to Metal Lord before attempting to interact now
+
 r199
 Quest Behaviors
 -- Multiple additions and updates post .557 HB
