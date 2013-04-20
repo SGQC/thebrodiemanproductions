@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r195</Name>
+	<Name>Isle of Thunder (Horde) r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -66,7 +66,7 @@
 		<If Condition="HasQuest(32680)" >
 			<CustomBehavior File="FlyTo" X="1748.19" Y="4161.71" Z="159.51" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="70358" GossipOptions="1" WaitForNpcs="True" />
+			<CustomBehavior File="InteractWith" MobId="70358" InteractByGossipOptions="1" WaitForNpcs="True" />
 			<CustomBehavior File="WaitTimer" WaitTime="85000" />
 			<TurnIn QuestName="The Storm Gathers" QuestId="32680" TurnInName="Lor'themar" TurnInId="67990" />
 			<CustomBehavior File="WaitTimer" WaitTime="97000" />
@@ -81,9 +81,9 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<If Condition="!IsQuestCompleted(32212)" >
-			<CustomBehavior File="InteractWith" MobId="218946" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218946" WaitForNpcs="True" NonCompeteDistance="0" />
 		<ElseIf Condition="IsQuestCompleted(32212)" >
-			<CustomBehavior File="InteractWith" MobId="218462" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218462" WaitForNpcs="True" NonCompeteDistance="0" />
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -107,34 +107,34 @@
 	
 <!-- Girana the Blooded -->
 	<While Condition="HasQuestAvailable(67673)" >
-		<CustomBehavior File="InteractWith" MobId="67673" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67673" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Magister Hathorel -->
 	<While Condition="HasQuestAvailable(67663)" >
-		<CustomBehavior File="InteractWith" MobId="67663" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67663" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Lor'themar Theron -->
 	<While Condition="HasQuestAvailable(67990)" >
-		<CustomBehavior File="InteractWith" MobId="67990" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67990" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- High Arcanist Savor -->
 	<While Condition="HasQuestAvailable(67662)" >
-		<CustomBehavior File="InteractWith" MobId="67662" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67662" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 	<If Condition="Me.Location.Distance(new WoWPoint(6707.91, 6471.27, 4.61)) &lt; 100" >
-		<CustomBehavior File="InteractWith" MobId="218839" ObjectType="GameObject" WaitForNpcs="True" />
+		<CustomBehavior File="InteractWith" MobId="218839" WaitForNpcs="True" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -204,14 +204,14 @@
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="6690.58" Y="6481.38" Z="4.63" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218638" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>
 			<RunTo X="6693.16" Y="6290.14" Z="1.06" />
-			<CustomBehavior File="InteractWith" MobId="218840" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218840" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="6690.58" Y="6481.38" Z="4.63" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218638" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</Else>
 		</If>
@@ -219,11 +219,11 @@
 		<If Condition="HasItem(95568) &amp;&amp; !(Me.Location.Distance(new WoWPoint(7198.78, 6285.94, 12.47)) &lt; 100)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95568)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218638" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>
 			<RunTo X="7249.33" Y="6276.71" Z="19.35" />
-			<CustomBehavior File="InteractWith" MobId="218638" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218638" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</Else>
 		</If>

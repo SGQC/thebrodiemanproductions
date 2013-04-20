@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>White Tiger Dailies r140</Name>
+	<Name>White Tiger Dailies r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -69,7 +69,7 @@
 
 <!-- Xuen -->
 	<While Condition="HasQuestAvailable(60968)" >
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -92,7 +92,7 @@
 		<CustomBehavior File="FlyTo" X="3476.528" Y="424.8906" Z="585.92" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30879)" >
-			<CustomBehavior File="InteractWith" MobId="60996" GossipOptions="1" WaitForNpcs="False" X="3459.31" Y="400.91" Z="587.98" />
+			<CustomBehavior File="InteractWith" QuestId="30879" MobId="60996" InteractByGossipOptions="1" WaitForNpcs="False" X="3459.31" Y="400.91" Z="587.98" />
 		</While>
 	</If>
 
@@ -103,7 +103,7 @@
 		<CustomBehavior File="FlyTo" X="3476.528" Y="424.8906" Z="585.92" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30880)" >
-			<CustomBehavior File="InteractWith" MobId="60994" GossipOptions="1" WaitForNpcs="False" X="3459.31" Y="400.91" Z="587.98" />
+			<CustomBehavior File="InteractWith" QuestId="30880" MobId="60994" InteractByGossipOptions="1" WaitForNpcs="False" X="3459.31" Y="400.91" Z="587.98" />
 		</While>
 	</If>
 
@@ -115,7 +115,7 @@
 		<If Condition="HasQuest(31517) &amp;&amp; IsQuestCompleted(31517)" >
 			<TurnIn QuestName="Contending With Bullies" QuestId="31517" TurnInName="Xuen" TurnInID="60968" />
 		</If>
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</If>
@@ -126,7 +126,7 @@
 		<If Condition="HasQuest(31517) &amp;&amp; IsQuestCompleted(31517)" >
 			<TurnIn QuestName="Contending With Bullies" QuestId="31517" TurnInName="Xuen" TurnInID="60968" />
 		</If>
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</If>
@@ -140,7 +140,7 @@
 		<CustomBehavior File="FlyTo" X="3688.149" Y="366.2188" Z="596.2113" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30881)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" MobId="60980" GossipOptions="1" WaitForNpcs="False" X="3727.22" Y="354.19" Z="596.65" />
+			<CustomBehavior File="InteractWith" QuestId="30881" MovementBy="ClickToMoveOnly" MobId="60980" InteractByGossipOptions="1" WaitForNpcs="False" X="3727.22" Y="354.19" Z="596.65" />
 		</While>
 	</If>
 
@@ -151,7 +151,7 @@
 		<CustomBehavior File="FlyTo" X="3688.149" Y="366.2188" Z="596.2113" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30882)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" MobId="60978" GossipOptions="1" WaitForNpcs="False" X="3727.22" Y="354.19" Z="596.65" />
+			<CustomBehavior File="InteractWith" QuestId="30882" MovementBy="ClickToMoveOnly" MobId="60978" InteractByGossipOptions="1" WaitForNpcs="False" X="3727.22" Y="354.19" Z="596.65" />
 		</While>
 	</If>
 
@@ -161,7 +161,7 @@
 	<If Condition="HasQuest(30881) &amp;&amp; IsQuestCompleted(30881)" >
 		<CustomBehavior File="MyCTM" X="3746.34" Y="348.13" Z="597.29" />
 		<TurnIn QuestName="Round 2: Clever Ashyo and Ken Ken" QuestId="30881" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3691.72" Y="365.77" Z="596.2" />
@@ -171,7 +171,7 @@
 	<If Condition="HasQuest(30882) &amp;&amp; IsQuestCompleted(30882)" >
 		<CustomBehavior File="MyCTM" X="3746.34" Y="348.13" Z="597.29" />
 		<TurnIn QuestName="Round 2: Kang Bramblestaff" QuestId="30882" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3691.72" Y="365.77" Z="596.2" />
@@ -186,7 +186,7 @@
 		<CustomBehavior File="FlyTo" X="3664.081" Y="630.01" Z="636.52" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30883)" >
-			<CustomBehavior File="InteractWith" MobId="60997" GossipOptions="1" WaitForNpcs="False" X="3677.51" Y="664.5" Z="636.75" />
+			<CustomBehavior File="InteractWith" QuestId="30883" MobId="60997" InteractByGossipOptions="1" WaitForNpcs="False" X="3677.51" Y="664.5" Z="636.75" />
 		</While>
 	</If>
 
@@ -197,7 +197,7 @@
 		<CustomBehavior File="FlyTo" X="3664.081" Y="630.01" Z="636.52" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30885)" >
-			<CustomBehavior File="InteractWith" MobId="61013" GossipOptions="1" WaitForNpcs="False" X="3677.51" Y="664.5" Z="636.75" />
+			<CustomBehavior File="InteractWith" QuestId="30885" MobId="61013" InteractByGossipOptions="1" WaitForNpcs="False" X="3677.51" Y="664.5" Z="636.75" />
 		</While>
 	</If>
 
@@ -207,7 +207,7 @@
 	<If Condition="HasQuest(30883) &amp;&amp; IsQuestCompleted(30883)" >
 		<CustomBehavior File="MyCTM" X="3685.23" Y="684.36" Z="637.40" />
 		<TurnIn QuestName="Round 3: The Wrestler" QuestId="30883" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3664.016" Y="624.2096" Z="636.0477" />
@@ -217,7 +217,7 @@
 	<If Condition="HasQuest(30885) &amp;&amp; IsQuestCompleted(30885)" >
 		<CustomBehavior File="MyCTM" X="3685.23" Y="684.36" Z="637.40" />
 		<TurnIn QuestName="Round 3: Master Boom Boom" QuestId="30885" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3664.016" Y="624.2096" Z="636.0477" />
@@ -232,7 +232,7 @@
 		<CustomBehavior File="FlyTo" X="3626.759" Y="553.2241" Z="648.1033" />
 		<CustomBehavior File="MyCTM" X="3790.86" Y="534.43" Z="639.01" />
 		<While Condition="!IsQuestCompleted(30907)" >
-			<CustomBehavior File="InteractWith" MobId="61007" GossipOptions="1" Nav="CTM" WaitForNpcs="False" X="3795.428" Y="535.49" Z="639.01" />
+			<CustomBehavior File="InteractWith" QuestId="30907" MobId="61007" GossipOptions="1" MovementBy="ClickToMoveOnly" WaitForNpcs="False" X="3795.428" Y="535.49" Z="639.01" />
 		</While>
 	</If>
 
@@ -243,7 +243,7 @@
 		<CustomBehavior File="FlyTo" X="3626.759" Y="553.2241" Z="648.1033" />
 		<CustomBehavior File="MyCTM" X="3790.86" Y="534.43" Z="639.01" />
 		<While Condition="!IsQuestCompleted(30902)" >
-			<CustomBehavior File="InteractWith" MobId="61012" GossipOptions="1" Nav="CTM" WaitForNpcs="False" X="3795.428" Y="535.49" Z="639.01" />
+			<CustomBehavior File="InteractWith" QuestId="30902" MobId="61012" GossipOptions="1" MovementBy="ClickToMoveOnly" WaitForNpcs="False" X="3795.428" Y="535.49" Z="639.01" />
 		</While>
 	</If>
 
@@ -270,20 +270,8 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
-	
-<!--
-	<CustomBehavior File="ForcedDismount" />
-	<If Condition="HasItem(64488)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
-	</If>
-	<If Condition="HasItem(6948)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
-	</If>
--->
 
-<!-- <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Dailies [Brodie]" /> -->
-
-<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of August Celestials Dailies" />
+<CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of Dailies!" />
 
 </QuestOrder>
 </HBProfile>

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Niuzao Temple r140</Name>
+	<Name>Niuzao Temple r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -100,35 +100,35 @@
 
 <!-- Ogo the Elder -->
 	<While Condition="HasQuestAvailable(61580)" >
-		<CustomBehavior File="InteractWith" MobId="61580" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61580" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Ogo the Younger -->
 	<While Condition="HasQuestAvailable(61581)" >
-		<CustomBehavior File="InteractWith" MobId="61581" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61581" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Yak-Keeper Kyana -->
 	<While Condition="HasQuestAvailable(61585)" >
-		<CustomBehavior File="InteractWith" MobId="61585" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61585" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- High Adept Paosha -->
 	<While Condition="HasQuestAvailable(61583)" >
-		<CustomBehavior File="InteractWith" MobId="61583" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61583" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Sentinel Commander Qipan -->
 	<While Condition="HasQuestAvailable(61584)" >
-		<CustomBehavior File="InteractWith" MobId="61584" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61584" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -140,13 +140,13 @@
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30953)" >
-			<CustomBehavior File="UseItemOn" ItemId="82381" QuestId="30953" MobId="61570" CollectionDistance="150" X="2240.42" Y="4726.178" Z="146.8373" />
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="82381" QuestId="30953" MobId="61570" CollectionDistance="250" X="2240.42" Y="4726.178" Z="146.8373" />
 			<CustomBehavior File="WaitTimer" WaitTime="8000" />
 			<If Condition="HasQuest(30954) &amp;&amp; !IsQuestCompleted(30954)" >
 				<CustomBehavior File="CollectThings" QuestId="30954" CollectItemId="82353" ObjectId="211765" ObjectId2="211766" PostInteractDelay="1250" NonCompeteDistance="5" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" CollectItemCount="10" />
 			</If>
 			<If Condition="HasQuest(30955) &amp;&amp; !IsQuestCompleted(30955)" >
-				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" ObjectType="GameObject" NumOfTimes="3" WaitTime="100" WaitForNpcs="False" CollectionDistance="15" />
+				<CustomBehavior File="InteractWith" QuestId="30955" MobId="212132" MobId2="212133" NumOfTimes="3" WaitTime="100" WaitForNpcs="False" CollectionDistance="15" />
 			</If>
 			<RunTo X="2240.42" Y="4726.178" Z="146.8373" />
 		</While>
@@ -175,17 +175,17 @@
 			<If Condition="!IsQuestCompleted(30958)" >
 				<CustomBehavior File="FlyTo" X="2135.29" Y="4736.10" Z="155.08" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
 			</If>
 			<If Condition="!IsQuestCompleted(30958)" >
 				<CustomBehavior File="FlyTo" X="2229.70" Y="4605.89" Z="155.08" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
 			</If>
 			<If Condition="!IsQuestCompleted(30958)" >
 				<CustomBehavior File="FlyTo" X="2369.13" Y="4696.05" Z="155.09" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
+				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
 			</If>
 		</While>
 	</If>
@@ -231,10 +231,10 @@
 		<While Condition="!IsQuestCompleted(30959)" >
 			<CustomBehavior File="FlyTo" X="2155.876" Y="4574.692" Z="152.7922" />
 			<CustomBehavior File="ForcedDismount"/>	
-			<CustomBehavior File="UseItemTargetLocation" ItemId="82346" UseType="ToObject" ObjectId="61510" Range="30" NumOfTimes="1" />
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="82346" MobId="61510" Range="30" WaitForNpcs="False" />
 			<CustomBehavior File="FlyTo" X="2322.519" Y="4582.979" Z="157.6676" />
 			<CustomBehavior File="ForcedDismount"/>	
-			<CustomBehavior File="UseItemTargetLocation" ItemId="82346" UseType="ToObject" ObjectId="61510" Range="30" NumOfTimes="1" />
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="82346" MobId="61510" Range="30" WaitForNpcs="False" />
 		</While>
 	</If>
 

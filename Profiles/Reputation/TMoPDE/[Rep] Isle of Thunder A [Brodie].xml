@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r195</Name>
+	<Name>Isle of Thunder (Alliance) r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -66,7 +66,7 @@
 		<If Condition="HasQuest(32681)" >
 			<CustomBehavior File="FlyTo" X="1915.20" Y="4220.78" Z="132.44" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="70360" GossipOptions="1" WaitForNpcs="True" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="70360" InteractByGossipOptions="1" WaitForNpcs="True" WaitTime="1000" />
 			<CustomBehavior File="WaitTimer" WaitTime="75000" />
 			<TurnIn QuestName="A Storm Gathers" QuestId="32681" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
 			<CustomBehavior File="WaitTimer" WaitTime="60000" />
@@ -81,9 +81,9 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<If Condition="!IsQuestCompleted(32644)" >
-			<CustomBehavior File="InteractWith" MobId="218947" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218947" WaitForNpcs="True" NonCompeteDistance="0" />
 		<ElseIf Condition="IsQuestCompleted(32644)" >
-			<CustomBehavior File="InteractWith" MobId="218463" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218463" WaitForNpcs="True" NonCompeteDistance="0" />
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -109,34 +109,34 @@
 
 <!-- Lady Jaina Proudmoore -->
 	<While Condition="HasQuestAvailable(67992)" >
-		<CustomBehavior File="InteractWith" MobId="67992" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67992" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Vereesa Windrunner -->
 	<While Condition="HasQuestAvailable(67993)" >
-		<CustomBehavior File="InteractWith" MobId="67993" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67993" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Warmage Yurias -->
 	<While Condition="HasQuestAvailable(67994)" >
-		<CustomBehavior File="InteractWith" MobId="67994" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67994" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Captain Elleane Wavecrest -->
 	<While Condition="HasQuestAvailable(67995)" >
-		<CustomBehavior File="InteractWith" MobId="67995" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67995" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 	<If Condition="Me.Location.Distance(new WoWPoint(5675.27, 6216.83, 13.02)) &lt; 50" >
-		<CustomBehavior File="InteractWith" MobId="218837" ObjectType="GameObject" WaitForNpcs="True" />
+		<CustomBehavior File="InteractWith" MobId="218837" WaitForNpcs="True" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -211,16 +211,16 @@
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="5653.182" Y="6195.639" Z="18.43239" />
-			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218639" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>
 			<RunTo X="5840.453" Y="6349.841" Z="1.706437" />
-			<CustomBehavior File="InteractWith" MobId="218838" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218838" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="5662.35" Y="6212.02" Z="12.79" />
 			<CustomBehavior File="MyCTM" X="5659.771" Y="6209.47" Z="13.21746" />
 			<CustomBehavior File="MyCTM" X="5656.402" Y="6205.382" Z="17.36683" />
-			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218639" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</Else>
 		</If>
@@ -229,11 +229,11 @@
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(95567)" />
 			<CustomBehavior File="WaitTimer" WaitTime="5000" />
 			<RunTo X="6122.84" Y="4980.87" Z="36.89" />
-			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218639" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<Else>
 			<RunTo X="6122.84" Y="4980.87" Z="36.89" />
-			<CustomBehavior File="InteractWith" MobId="218639" ObjectType="GameObject" WaitForNpcs="True" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" MobId="218639" WaitForNpcs="True" NonCompeteDistance="0" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</Else>
 		</If>

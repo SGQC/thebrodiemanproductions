@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r188</Name>
+	<Name>The Anglers Dailies r199</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -147,10 +147,10 @@
 	<While Condition="HasQuestAvailable(60675)" >
 		<CustomBehavior File="FlyTo" X="-1396.24" Y="-202.15" Z="1.50" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="60675" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60675" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-		<CustomBehavior File="InteractWith" MobId="60675" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60675" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -159,7 +159,7 @@
 	<While Condition="HasQuestAvailable(60135)" >
 		<CustomBehavior File="FlyTo" X="-1438.39" Y="-221.81" Z="0.35" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="60135" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60135" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -168,11 +168,11 @@
 	<While Condition="HasQuestAvailable(60673)" >
 		<CustomBehavior File="FlyTo" X="-1425.53" Y="-255.90" Z="0.50" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="60673" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60673" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		<If Condition="HasQuestAvailable(60673)" >
-			<CustomBehavior File="InteractWith" MobId="60673" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="60673" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</If>
@@ -182,22 +182,22 @@
 	<While Condition="HasQuestAvailable(60674)" >
 		<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="60674" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60674" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 	<If Condition="(!HasQuest(30584) &amp;&amp; !HasQuest(30588) &amp;&amp; 
 			!HasQuest(30700) &amp;&amp; !HasQuest(30678) &amp;&amp; !HasQuest(30586))" >
-		<CustomBehavior File="ForcedMount" />
+		<CustomBehavior File="ForcedMount" MountType="Flying" />
 		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
 	</If>
 
 <!-- Angler Shen -->
 	<While Condition="HasQuestAvailable(59586)" >
 		<CustomBehavior File="FlyTo" X="-1469.85" Y="-218.82" Z="5.43" />
-		<CustomBehavior File="ForcedDismount" MountType="Flying" />
-		<CustomBehavior File="InteractWith" MobId="59586" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" MobId="59586" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -206,7 +206,7 @@
 	<While Condition="HasQuestAvailable(60136)" >
 		<CustomBehavior File="FlyTo" X="-1503.70" Y="-219.3447" Z="0.643862" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="60136" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60136" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -215,7 +215,7 @@
 	<While Condition="HasQuestAvailable(59584)" >
 		<CustomBehavior File="FlyTo" X="-1517.874" Y="-238.6824" Z="14.43668" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="59584" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59584" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -231,7 +231,7 @@
 		<While Condition="!IsQuestCompleted(30753)" >
 			<CustomBehavior File="FlyTo" X="-1459.95" Y="-254.43" Z="0.61" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="MountVehOnly" VehicleMountId="60408" X="-1456.75" Y="-259.65" Z="0.0" />
+			<CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="60408" X="-1456.75" Y="-259.65" Z="0.0" />
 			<Custombehavior File="WaitTimer" WaitTime="2000" />
 			<While Condition="Me.IsOnTransport" >
 				<CustomBehavior File="RunMacro" Macro="/click [overridebar][vehicleui][possessbar,@vehicle,exists]OverrideActionBarButton2" NumOfTimes="1" WaitTime="100" />

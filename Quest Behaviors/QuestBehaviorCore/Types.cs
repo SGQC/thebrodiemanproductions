@@ -16,7 +16,7 @@ using Styx.WoWInternals.WoWObjects;
 
 namespace Honorbuddy.QuestBehaviorCore
 {
-    public partial class QuestBehaviorBase
+    public abstract partial class QuestBehaviorBase
     {
         public enum MobStateType
         {
@@ -48,6 +48,7 @@ namespace Honorbuddy.QuestBehaviorCore
         public enum MovementByType
         {
             ClickToMoveOnly,
+            FlightorPreferred,
             NavigatorOnly,
             NavigatorPreferred,
             None

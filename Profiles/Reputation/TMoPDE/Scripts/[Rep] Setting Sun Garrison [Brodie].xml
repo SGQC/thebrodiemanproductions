@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r198</Name>
+	<Name>Setting Sun Garrison r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -222,7 +222,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30243)" >
 			<While Condition="!Me.IsOnTransport" >
-				<CustomBehavior File="InteractWith" Nav="CTM" MobId="64369" CollectionDistance="100" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="64369" CollectionDistance="100" WaitForNpcs="False" />
 			</While>
 			<CustomBehavior File="SpecificQuests\30243-VOEB-MantidUnderFire" />
 		</While>

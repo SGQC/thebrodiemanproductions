@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r174</Name>
+	<Name>Golden Lotus PreReqs r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -131,7 +131,7 @@
 		<CustomBehavior File="FlyTo" DestName="White Tiger Temple" X="3686.266" Y="547.2056" Z="639.691" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="MyCTM" X="3819.63" Y="539.2305" Z="639.007" />
-		<CustomBehavior File="InteractWith" Nav="CTM" MobId="64528" IgnoreCombat="True" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="64528" IgnoreCombat="True" />
 		<If Condition="HasQuest(31395)" >
 			<CustomBehavior File="GetOutOfGroundEffectAndAuras" StartNpcId="64528" QuestId="31395"
 				EventX="3783.071" EventY="535.3829" EventZ="639.0076"

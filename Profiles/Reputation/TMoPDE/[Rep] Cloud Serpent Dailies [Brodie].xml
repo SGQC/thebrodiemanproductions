@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r175</Name>
+	<Name>Cloud Serpent Dailies r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -453,7 +453,7 @@
 
 <!-- Ace Longpaw -->
 	<While Condition="HasQuestAvailable(58506)" >
-		<CustomBehavior File="InteractWith" MobId="58506" WaitTime="1000" X="1618.37" Y="-2599.55" Z="150.76" />
+		<CustomBehavior File="InteractWith" MobId="58506" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>

@@ -149,7 +149,7 @@
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(93761)" WaitTime="6000" />
 			</While>
 			<If Condition="!IsObjectiveComplete(4,32588)" >
-				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32588"
+				<CustomBehavior File="GetOutOfGroundEffectAndAuras" QuestId="32588" StartNpcId="69326"
 					EventX="7312.25" EventY="5365.44" EventZ="47.85"
 					MoveOutOfGroundEffectAuraId1="137542"
 					MoveAwayFromMobCastingSpellId1="137545"
@@ -210,14 +210,14 @@
 
 <!-- Scout Captain Daelin -->
 	<While Condition="HasQuestAvailable(70552)" >
-		<CustomBehavior File="InteractWith" MobId="70552" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70552" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Taoshi -->
 	<While Condition="HasQuestAvailable(69413)" >
-		<CustomBehavior File="InteractWith" MobId="69413" NumOfTimes="1" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69413" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

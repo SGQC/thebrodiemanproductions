@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r198</Name>
+	<Name>Whitepetal Lake r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -158,7 +158,7 @@
 		<CustomBehavior File="FlyTo" X="1134.59" Y="1451.09" Z="341.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30291)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" WaitForNpcs="False" MobId="62984" CollectionDistance="10000" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" WaitForNpcs="False" MobId="62984" CollectionDistance="10000" WaitTime="1000" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
 	</If>

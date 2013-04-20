@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Horde) r116</Name>
+	<Name>Diremoor (Horde) r199</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -76,7 +76,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32506" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6911.082" Y="5755.634" Z="5.792727" />
 		<While Condition="!IsQuestCompleted(32506)" >
-			<CustomBehavior File="InteractWith" MobId="69428" Range="3" CollectionDistance="10" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MobId="69428" Range="5" CollectionDistance="10" WaitForNpcs="False" />
 		</While>
 	</If>
 	
