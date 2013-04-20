@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Alliance) r199</Name>
+	<Name>Za'Tual (Alliance) r200</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -99,9 +99,9 @@
 	<If Condition="HasQuest(32733)" >
 		<CustomBehavior File="Message" Text="Starting Za'Tual Kicker" LogColor="Green" />
 		<If Condition="!IsQuestCompleted(32644)" >
-			<RunTo X="5853.921" Y="6349.672" Z="2.23" />
+			<CustomBehavior File="NoCombatMoveTo" X="5853.921" Y="6349.672" Z="2.23" />
 		<ElseIf Condition="IsQuestCompleted(32644)" >
-			<RunTo X="6320.61" Y="5909.59" Z="12.44" />
+			<CustomBehavior File="NoCombatMoveTo" X="6320.61" Y="5909.59" Z="12.44" />
 		</ElseIf>
 		</If>
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />

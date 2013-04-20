@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Diremoor (Alliance) r199</Name>
+	<Name>Diremoor (Alliance) r200</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -95,7 +95,7 @@
 					HasQuest(32575) &amp;&amp; IsQuestCompleted(32575)" >
 		<CustomBehavior File="Message" Text="Heading back to camp to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
-		<RunTo X="6132.62" Y="5060.85" Z="37.39" />
+		<CustomBehavior File="NoCombatMoveTo" X="6132.62" Y="5060.85" Z="37.39" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 	

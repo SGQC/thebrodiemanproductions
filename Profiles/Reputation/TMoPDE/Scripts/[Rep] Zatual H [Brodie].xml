@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Horde) r199</Name>
+	<Name>Za'Tual (Horde) r200</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -98,7 +98,7 @@
 <!-- Za'Tual (Kicker) -->
 	<If Condition="HasQuest(32729)" >
 		<CustomBehavior File="Message" Text="Starting Za'Tual Kicker" LogColor="Green" />
-		<RunTo X="6362.73" Y="6133.87" Z="20.99" />
+		<CustomBehavior File="NoCombatMoveTo" X="6362.73" Y="6133.87" Z="20.99" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<TurnIn QuestName="Za'Tual" QuestId="32729" TurnInName="Halduron Brightwing" TurnInId="70520" />
 	</If>
