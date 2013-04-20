@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r196</Name>
+	<Name>Setting Sun Garrison r198</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -34,15 +34,6 @@
 	</Blackspots>
 
 <!-- Quest Overrides -->
-
-<!-- The Battle Ring -->
-	<Quest Id="30306" Name="The Battle Ring"> 
-		<Objective Type="KillMob" MobId="58992" KillCount="20">
-			<Hotspots>
-				<Hotspot X="693.77" Y="1984.03" Z="326.97" />
-			</Hotspots>
-		</Objective>
-	</Quest>
 
 <!-- Upon The Ramparts -->
 	<Quest Id="30246" Name="Upon The Ramparts"> 

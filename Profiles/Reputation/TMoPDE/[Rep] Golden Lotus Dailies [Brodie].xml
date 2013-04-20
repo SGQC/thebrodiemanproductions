@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r196</Name>
+	<Name>The Golden Lotus r198</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -278,7 +278,7 @@
 		<While Condition="!IsQuestCompleted(31758)" >
 			<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" ObjectType="GameObject" MobId="214948" NonCompeteDistance="0" Range="5" CollectionDistance="10" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" Nav="CTM" QuestId="31758" MobId="214948" NonCompeteDistance="0" Range="5" CollectionDistance="10" WaitForNpcs="False" />
 		</While>
 	</If>
 
@@ -291,22 +291,22 @@
 		<While Condition="!IsObjectiveComplete(1, 31756)" >
 			<CustomBehavior File="FlyTo" X="1568.647" Y="1185.899" Z="444.4847" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" ObjectType="GameObject" WaitForNpcs="False" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" WaitForNpcs="False" NonCompeteDistance="0" />
 		</While>
 		<While Condition="!IsObjectiveComplete(2, 31756)" >
 			<CustomBehavior File="FlyTo" X="1625.123" Y="1269.5" Z="463.0072" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214899" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" NonCompeteDistance="0" />
+			<CustomBehavior MobId="214899" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
 		</While>
 		<While Condition="!IsObjectiveComplete(4, 31756)" >
 			<CustomBehavior File="FlyTo" X="1635.482" Y="1546.689" Z="440.0556" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214901" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" NonCompeteDistance="0" />
+			<CustomBehavior MobId="214901" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
 		</While>
 		<While Condition="!IsObjectiveComplete(3, 31756)" >
 			<CustomBehavior File="FlyTo" X="1481.446" Y="1388.026" Z="444.6272" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214900" File="InteractWith" QuestId="31756" ObjectType="GameObject" WaitForNpcs="False" NonCompeteDistance="0" />
+			<CustomBehavior MobId="214900" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
 		</While>
 	</While>
 

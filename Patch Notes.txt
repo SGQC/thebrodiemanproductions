@@ -1,5 +1,34 @@
 Patch Notes
 
+4/19/13
+
+r198
+Quest Behaviors
+-- InteractWith updated to v453
+Golden Lotus
+-- Removed ObjectType calls for InteractWith (depreciated)
+Whitepetal Lake
+-- Removed ObjectType calls for InteractWith (depreciated)
+Setting Sun Garrison
+-- Removed obsolete overrides
+Ruins of Guo-Lai
+-- Removed ObjectType calls for InteractWith (depreciated)
+-- Hard As a Rock/No Stone Unturned - Fitted with mob distance checks, to fly out when no more in area
+Mistfall Village
+-- Removed ObjectType calls for InteractWith (depreciated)
+-- My Town, It's On Fire - Added hotspot support for flames and buckets
+-- My Town, It's On Fire Again - Added hotspot support for flames and buckets
+-- Backed Into A Corner - Endless RunTo's to CollectThings
+Golden Pagoda Phase 2
+-- Removed ObjectType calls for InteractWith (depreciated)
+The Tillers
+-- Removed obsolete overrides
+-- Removed ObjectType calls for InteractWith (depreciated)
+-- Updated InteractWith with new tunables
+-- The Mile-High Grub - Removed unused Objective code
+-- Where It Counts - Added Quest tags
+-- A Gift For Sho - Added Quest tag
+
 4/18/13
 
 r197
