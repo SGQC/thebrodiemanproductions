@@ -1,6 +1,13 @@
 Patch Notes
 
-4/20/13
+4/21/13
+
+r203
+Shado Pan
+-- Master Snowdrift recieved a TerminateBehavior update, instead of TerminateProfile
+Mistfall Village
+-- Code Cleanup
+-- Mayor Shiyo recieved a TerminateBehavior update, instead of TerminateProfile
 
 r202
 Golden Lotus
@@ -18,6 +25,8 @@ Dominance Offensive
 -- Tear It Up! - CollectionDistance cut by 90%, Hotspots reworked.
 Shado Pan
 -- Master Snowdrift (hopefully) fixed...again
+
+4/20/13
 
 r200
 Lost and Found
