@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r198</Name>
+	<Name>Mistfall Village r203</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -280,14 +280,14 @@
 
 <!-- Che Wildwalker -->
 	<While Condition="HasQuestAvailable(59338)" >
-		<CustomBehavior File="InteractWith" MobId="59338" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59338" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Cook Tope -->
 	<While Condition="HasQuestAvailable(58818)" >
-		<CustomBehavior File="InteractWith" MobId="58818" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58818" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -299,7 +299,7 @@
 
 <!-- Mayor Shiyo -->
 	<While Condition="HasQuestAvailable(58819)" >
-		<CustomBehavior File="InteractWith" MobId="58819" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58819" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -311,14 +311,14 @@
 
 <!-- Sun Tenderheart -->
 	<While Condition="HasQuestAvailable(59337)" >
-		<CustomBehavior File="InteractWith" MobId="59337" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59337" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Rook Stonetoe -->
 	<While Condition="HasQuestAvailable(58911)" >
-		<CustomBehavior File="InteractWith" MobId="58911" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58911" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
