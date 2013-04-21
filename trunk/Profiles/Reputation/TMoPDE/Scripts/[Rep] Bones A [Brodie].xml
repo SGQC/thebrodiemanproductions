@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Alliance) r199</Name>
+	<Name>Court of Bones (Alliance) r204</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -73,21 +73,21 @@
 	
 <!-- Narasi Snowdawn -->
 	<While Condition="HasQuestAvailable(67997)" >
-		<CustomBehavior File="InteractWith" MobId="67997" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67997" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Danara Silverglass -->
 	<While Condition="HasQuestAvailable(69668)" >
-		<CustomBehavior File="InteractWith" MobId="69668" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69668" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Vylene Amaranth -->
 	<While Condition="HasQuestAvailable(69670)" >
-		<CustomBehavior File="InteractWith" MobId="69670" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69670" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -249,21 +249,21 @@
 
 <!-- Narasi Snowdawn -->
 	<While Condition="HasQuestAvailable(67997)" >
-		<CustomBehavior File="InteractWith" MobId="67997" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67997" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Danara Silverglass -->
 	<While Condition="HasQuestAvailable(69668)" >
-		<CustomBehavior File="InteractWith" MobId="69668" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69668" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Vylene Amaranth -->
 	<While Condition="HasQuestAvailable(69670)" >
-		<CustomBehavior File="InteractWith" MobId="69670" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69670" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
