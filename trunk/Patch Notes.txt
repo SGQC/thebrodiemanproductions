@@ -2,6 +2,13 @@ Patch Notes
 
 4/20/13
 
+r201
+Dominance Offensive
+-- Nav -> MovementBy for IW
+-- Tear It Up! - CollectionDistance cut by 90%, Hotspots reworked.
+Shado Pan
+-- Master Snowdrift (hopefully) fixed...again
+
 r200
 Lost and Found
 -- Updated all InteractWith depreciated commands
