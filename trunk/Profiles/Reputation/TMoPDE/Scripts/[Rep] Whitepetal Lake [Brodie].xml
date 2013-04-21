@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r199</Name>
+	<Name>Whitepetal Lake r202</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -107,6 +107,7 @@
 <!-- Whitepetal Lake -->
 	<If Condition="HasQuest(31131)">
 		<CustomBehavior File="FlyTo" X="1167.867" Y="1369.964" Z="351.2939" />
+		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="Whitepetal Lake" QuestId="31131" TurnInName="He Softfoot" TurnInId="59342" />
 	</If>
 

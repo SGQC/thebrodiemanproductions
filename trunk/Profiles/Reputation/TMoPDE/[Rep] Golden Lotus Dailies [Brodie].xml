@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r199</Name>
+	<Name>The Golden Lotus r202</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -390,7 +390,6 @@
  	<If Condition="HasQuest(30320) &amp;&amp; !IsQuestCompleted(30320)">
 		<CustomBehavior File="Message" Text="Starting Free Spirits" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30320" LootMobs="False" PullDistance="1" />
-		<CustomBehavior File="FlyTo" X="1471.91" Y="1363.68" Z="446.15" />
 		<CustomBehavior File="ForcedMount" QuestId="30320" MountType="Flying" />
 		<While Condition="!IsQuestCompleted(30320)">
 			<While Condition="(!Me.HasAura(&quot;Spirit Void&quot;) &amp;&amp; !IsQuestCompleted(30320))" >
@@ -403,6 +402,7 @@
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 			</While>
 			<CustomBehavior File="InteractWith" QuestId="30320" MobId="59231" NonCompeteDistance="0" PreInteractMountStrategy="Mount" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" WaitTime="300" KeepTargetSelected="False" />
+			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 		</While>
 	</If>
 

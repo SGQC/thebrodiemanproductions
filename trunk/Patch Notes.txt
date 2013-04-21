@@ -2,6 +2,16 @@ Patch Notes
 
 4/20/13
 
+r202
+Golden Lotus
+-- Free Spirits - Should cancel target more reliably
+-- Free Spirits - If bot gets stopped midway, should no longer fly up down up down
+Whitepetal Lake
+-- ForcedDismount call added to kicker turnin
+Operation: Shieldwall
+-- Supply Block - Removed Combat Ignoring
+-- Siege Damage - Removed Combat Ignoring
+
 r201
 Dominance Offensive
 -- Nav -> MovementBy for IW
