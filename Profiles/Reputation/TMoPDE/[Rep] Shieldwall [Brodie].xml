@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r199</Name>
+	<Name>Operation Shieldwall r202</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -584,7 +584,7 @@
 		<CustomBehavior File="FlyTo" X="-1010.54" Y="-638.13" Z="13.93" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32150)" >
-			<CustomBehavior File="InteractWith" MobId="67756" IgnoreCombat="True" WaitTime="100" WaitForNpcs="False" CollectionDistance="500" />
+			<CustomBehavior File="InteractWith" MobId="67756" WaitTime="100" WaitForNpcs="False" CollectionDistance="500" />
 		</While>
 	</If>
 
@@ -607,7 +607,7 @@
 		<CustomBehavior File="FlyTo" X="-1096.33" Y="-692.21" Z="6.55" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32152)" >
-			<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="67671" Range="3" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" />
+			<CustomBehavior File="InteractWith" MobId="67671" Range="5" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" />
 		</While>
 	</If>
 

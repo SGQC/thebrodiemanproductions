@@ -724,7 +724,7 @@
 		<While Condition="HasQuest(30318) &amp;&amp; !HasItem(80223)">
 			<CustomBehavior File="InteractWith" MobId="58918" CollectionDistance="250" />
 			<If Condition="Me.HasAura(114652)" >
-				<CustomBehavior File="InteractWith" MobId="210604" X="-225.0399" Y="1424.528" Z="223.0623" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="210604" Range="8" MinRange="3" X="-225.0399" Y="1424.528" Z="223.0623" WaitForNpcs="False" />
 				<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
 			</If>
 			<If Condition="Me.HasAura(114670)" >
