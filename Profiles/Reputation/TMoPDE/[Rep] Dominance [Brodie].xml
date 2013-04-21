@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Dominance Offensive r193</Name>
+	<Name>Dominance Offensive r201</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -727,7 +727,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32235" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-1911.61" Y="2414.90" Z="57.35" />
 		<While Condition="!IsQuestCompleted(32235)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" Range="30" MinRange="20" QuestId="32235" MobId="67359" InteractByUsingItemId="92019" WaitTime="1000" CollectionDistance="3000" />
+			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" Range="30" MinRange="20" QuestId="32235" MobId="67359" InteractByUsingItemId="92019" WaitTime="1000" CollectionDistance="3000" />
 		</While>
 	</If>
 
@@ -738,7 +738,13 @@
 		<CustomBehavior File="FlyTo" X="-2227.53" Y="2369.53" Z="3.52" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(32126)" >
-			<CustomBehavior File="InteractWith" QuestId="32126" MobId="67639" CollectionDistance="1000" WaitForNpcs="False" X="-2227.53" Y="2369.53" Z="3.52" />
+			<CustomBehavior File="InteractWith" QuestId="32126" MobId="67639" CollectionDistance="100" >
+				<HuntingGrounds>
+					<Hotspot X="-2208.587" Y="2411.288" Z="2.277247" />
+					<Hotspot X="-2228.915" Y="2367.839" Z="3.576885" />
+					<Hotspot X="-2247.511" Y="2318.407" Z="1.530192" />
+				</HuntingGrounds>
+			</CustomBehavior>
 		</While>
 	</If>
 
