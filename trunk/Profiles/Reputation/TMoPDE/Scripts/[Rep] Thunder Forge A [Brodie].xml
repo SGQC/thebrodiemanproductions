@@ -212,7 +212,7 @@
 
 <!-- Scout Captain Daelin -->
 	<While Condition="HasQuestAvailable(70552)" >
-		<CustomBehavior File="InteractWith" MobId="70552" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70552" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

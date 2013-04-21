@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Alliance) r200</Name>
+	<Name>Za'Tual (Alliance) r205</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -110,21 +110,21 @@
 	
 <!-- Archmage Lan'dalock -->
 	<While Condition="HasQuestAvailable(70517)" >
-		<CustomBehavior File="InteractWith" MobId="70517" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70517" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Ako -->
 	<While Condition="HasQuestAvailable(69673)" >
-		<CustomBehavior File="InteractWith" MobId="69673" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69673" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Dalvin Jaacor -->
 	<While Condition="HasQuestAvailable(69674)" >
-		<CustomBehavior File="InteractWith" MobId="69674" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69674" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -273,21 +273,21 @@
 
 <!-- Archmage Lan'dalock -->
 	<While Condition="HasQuestAvailable(70517)" >
-		<CustomBehavior File="InteractWith" MobId="70517" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70517" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Ako -->
 	<While Condition="HasQuestAvailable(69673)" >
-		<CustomBehavior File="InteractWith" MobId="69673" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69673" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Dalvin Jaacor -->
 	<While Condition="HasQuestAvailable(69674)" >
-		<CustomBehavior File="InteractWith" MobId="69674" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69674" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Horde) r200</Name>
+	<Name>Thunder Forge (Horde) r205</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -212,7 +212,7 @@
 
 <!-- Scout Captain Elsia -->
 	<While Condition="HasQuestAvailable(70552)" >
-		<CustomBehavior File="InteractWith" MobId="70551" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70551" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

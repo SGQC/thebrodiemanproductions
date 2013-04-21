@@ -2,6 +2,10 @@ Patch Notes
 
 4/21/13
 
+r205
+Isle of Thunder Collection
+-- Addition of Combat Ignoring to quest givers
+
 r204
 Court of Bones
 -- Reworked quest pickups to negate Competition distance
