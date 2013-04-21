@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Alliance) r121</Name>
+	<Name>Ihgaluk Crag (Alliance) r205</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -87,28 +87,28 @@
 	
 <!-- Archmage Modera -->
 	<While Condition="HasQuestAvailable(67996)" >
-		<CustomBehavior File="InteractWith" MobId="67996" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67996" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Lyalia -->
 	<While Condition="HasQuestAvailable(69675)" >
-		<CustomBehavior File="InteractWith" MobId="69675" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69675" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Sanitation Sorcerer Stephen Litmatch -->
 	<While Condition="HasQuestAvailable(69677)" >
-		<CustomBehavior File="InteractWith" MobId="69677" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69677" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Image of Archmage Vargoth -->
 	<While Condition="HasQuestAvailable(69678)" >
-		<CustomBehavior File="InteractWith" MobId="69678" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69678" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -426,21 +426,21 @@
 
 <!-- Archmage Modera -->
 	<While Condition="HasQuestAvailable(67996)" >
-		<CustomBehavior File="InteractWith" MobId="67996" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67996" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Lyalia -->
 	<While Condition="HasQuestAvailable(69675)" >
-		<CustomBehavior File="InteractWith" MobId="69675" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69675" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Sanitation Sorcerer Stephen Litmatch -->
 	<While Condition="HasQuestAvailable(69677)" >
-		<CustomBehavior File="InteractWith" MobId="69677" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69677" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Horde) r121</Name>
+	<Name>Ihgaluk Crag (Horde) r205</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -84,28 +84,28 @@
 	
 <!-- Archmage Aethas Sunreaver -->
 	<While Condition="HasQuestAvailable(67660)" >
-		<CustomBehavior File="InteractWith" MobId="67660" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67660" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Sunwalker Dezco -->
 	<While Condition="HasQuestAvailable(69425)" >
-		<CustomBehavior File="InteractWith" MobId="69425" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69425" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Amalia Penshire -->
 	<While Condition="HasQuestAvailable(69371)" >
-		<CustomBehavior File="InteractWith" MobId="69371" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69371" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Magistrix Saia -->
 	<While Condition="HasQuestAvailable(69433)" >
-		<CustomBehavior File="InteractWith" MobId="69433" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69433" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -410,21 +410,21 @@
 
 <!-- Archmage Aethas Sunreaver -->
 	<While Condition="HasQuestAvailable(67660)" >
-		<CustomBehavior File="InteractWith" MobId="67660" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67660" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Sunwalker Dezco -->
 	<While Condition="HasQuestAvailable(69425)" >
-		<CustomBehavior File="InteractWith" MobId="69425" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69425" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Amalia Penshire -->
 	<While Condition="HasQuestAvailable(69371)" >
-		<CustomBehavior File="InteractWith" MobId="69371" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69371" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
