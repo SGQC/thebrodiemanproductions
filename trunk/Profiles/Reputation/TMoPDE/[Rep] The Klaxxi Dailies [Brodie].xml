@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r208</Name>
+	<Name>The Klaxxi r209</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -530,7 +530,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="-47.40311" Y="3421.991" Z="105.6598" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="MountVehOnly" X="-59.69" Y="3421.45" Z="103.95" VehicleMountId="63765" />
+		<CustomBehavior File="Vehicles\MountVehOnly" X="-59.69" Y="3421.45" Z="103.95" VehicleMountId="63765" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="SpecificQuests\31808-DreadWastes-RampageAgainstTheMachine" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r199</Name>
+	<Name>The Tillers r209</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -712,7 +712,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
 		<While Condition="!IsObjectiveComplete(1,30317)">
-			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
+			<CustomBehavior File="Vehicles\NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
 		</While>
 	</If>
 
