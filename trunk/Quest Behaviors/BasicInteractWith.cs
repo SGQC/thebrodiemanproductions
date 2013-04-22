@@ -1,6 +1,6 @@
-// MOVED TO Vehicles/ sub-directory
+// DEPRECATED BEHAVIOR
 //
-// The original behavior has been moved to the Vehicles/ sub-directory.
+// The original behavior has been moved to the Deprecated/ sub-directory.
 // The behavior will continue to function normally from that location.
 //
 // This file has been left in its place to prevent problems for users that do 'upgrade installs'.
