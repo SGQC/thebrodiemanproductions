@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r208</Name>
+	<Name>Setting Sun Garrison r209</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -170,7 +170,7 @@
 		<CustomBehavior File="FlyTo" X="821.932" Y="2080.49" Z="316.099" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="MountVehOnly" VehicleMountId="65336" X="821.932" Y="2080.49" Z="316.099" />
+		<CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="65336" X="821.932" Y="2080.49" Z="316.099" />
 		<CustomBehavior File="SpecificQuests\30264-VOEB-EnemyattheGates" />
 		<CustomBehavior File="WaitTimer" WaitTime="8000" />
 	</If>
