@@ -2,6 +2,10 @@ Patch Notes
 
 4/21/13
 
+r208
+Profile Set
+-- Changes to QuestOrder loadup, removed invalid operators
+
 r207
 Quest Behaviors
 -- QB update to fix all...issues

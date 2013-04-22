@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers PreReqs r172</Name>
+	<Name>Tillers PreReqs r208</Name>
 	<MinLevel>85</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -37,7 +37,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Tiller PreReq Quests..." LogColor="Green"  />
 

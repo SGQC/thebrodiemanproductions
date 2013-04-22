@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Alliance) r200</Name>
+	<Name>Thunder Forge (Alliance) r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -77,7 +77,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder KillBetweenHotspots="False" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Thunder Forge Quests..." LogColor="CornflowerBlue"  />
 

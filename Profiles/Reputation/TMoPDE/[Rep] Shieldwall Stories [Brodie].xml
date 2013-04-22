@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall QuestLine r99</Name>
+	<Name>Operation Shieldwall QuestLine r208</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -35,7 +35,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <If Condition="Me.IsHorde" >
 	<CustomBehavior File="UserDialog" Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="This Profile is for Alliance only. Stopping bot (until I get Horde started)." />

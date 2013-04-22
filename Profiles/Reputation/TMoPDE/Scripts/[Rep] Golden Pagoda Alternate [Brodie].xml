@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Pagoda Alternate r198</Name>
+	<Name>Golden Pagoda Alternate r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -70,7 +70,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 	<If Condition="((!HasQuest(30282) &amp;&amp; IsQuestCompleted(30282)) ||
 			(!HasQuest(30281) &amp;&amp; IsQuestCompleted(30281)) ||

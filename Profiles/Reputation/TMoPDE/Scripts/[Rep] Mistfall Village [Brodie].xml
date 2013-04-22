@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r203</Name>
+	<Name>Mistfall Village r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -222,7 +222,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 	<If Condition="((!HasQuest(30194) &amp;&amp; IsQuestCompleted(30194)) ||
 			(!HasQuest(30191) &amp;&amp; IsQuestCompleted(30191)) ||

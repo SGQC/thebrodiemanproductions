@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r200</Name>
+	<Name>Isle of Thunder (Horde) r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -34,7 +34,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <If Condition="Me.IsAlliance" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder A [Brodie]" />

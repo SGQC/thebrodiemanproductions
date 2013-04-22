@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Beast Pens (Horde) r205</Name>
+	<Name>The Beast Pens (Horde) r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -49,7 +49,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder KillBetweenHotspots="False" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling The Beast Pens Quests..." LogColor="CornflowerBlue"  />
 

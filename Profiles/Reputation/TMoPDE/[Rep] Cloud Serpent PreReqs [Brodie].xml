@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent PreReqs r175</Name>
+	<Name>Cloud Serpent PreReqs r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -46,7 +46,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Cloud Serpent Quests..." LogColor="Green"  />
 

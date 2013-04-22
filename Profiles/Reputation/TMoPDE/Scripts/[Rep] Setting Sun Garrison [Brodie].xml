@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r199</Name>
+	<Name>Setting Sun Garrison r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -67,7 +67,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <!-- Setting Sun Garrison -->
 

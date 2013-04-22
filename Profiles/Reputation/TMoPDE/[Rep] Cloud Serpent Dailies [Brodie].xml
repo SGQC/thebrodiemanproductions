@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r199</Name>
+	<Name>Cloud Serpent Dailies r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -306,7 +306,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Cloud Serpent Quests..." LogColor="Green"  />
 
