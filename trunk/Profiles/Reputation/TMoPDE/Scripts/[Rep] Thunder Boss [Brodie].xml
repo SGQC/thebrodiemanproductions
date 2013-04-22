@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Bosses r149</Name>
+	<Name>Thunder Bosses r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -36,7 +36,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" KillBetweenHotspots="False" >
+<QuestOrder>
 
 <!-- Competing Magic -->
 	<If Condition="HasQuest(32576) &amp;&amp; !IsQuestCompleted(32576)" >

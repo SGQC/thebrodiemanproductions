@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Domination Point r138</Name>
+	<Name>Domination Point r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -42,7 +42,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 	<If Condition="!IsQuestCompleted(32249) &amp;&amp; !HasQuest(32249)" >
 		<CustomBehavior File="FlyTo" X="1613.74" Y="921.02" Z="471.15" />

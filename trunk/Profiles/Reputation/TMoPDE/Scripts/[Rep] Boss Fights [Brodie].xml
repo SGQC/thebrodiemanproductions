@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Boss Fights r174</Name>
+	<Name>Boss Fights r208</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -180,7 +180,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <!-- The Imperion Threat -->
 	<If Condition="HasQuest(30302) &amp;&amp; !IsQuestCompleted(30302)">

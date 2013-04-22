@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r199</Name>
+	<Name>Golden Lotus PreReqs r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -96,7 +96,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 	<If Condition="HasQuest(31393) || HasQuest(31392)" >
 		<CustomBehavior File="FlyTo" DestName="White Tiger Temple" X="3686.266" Y="547.2056" Z="639.691" />

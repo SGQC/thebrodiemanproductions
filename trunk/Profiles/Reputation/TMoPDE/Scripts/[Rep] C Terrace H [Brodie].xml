@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Horde) r205</Name>
+	<Name>Conqueror's Terrace (Horde) r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -84,7 +84,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder KillBetweenHotspots="False" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Conqueror's Terrace Quests..." LogColor="CornflowerBlue"  />
 

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Lion's Landing r99</Name>
+	<Name>Lion's Landing r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -42,7 +42,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 	<If Condition="!IsQuestCompleted(32246) &amp;&amp; !HasQuest(32246)" >
 		<CustomBehavior File="FlyTo" X="894.4543" Y="327.5988" Z="506.0955" />

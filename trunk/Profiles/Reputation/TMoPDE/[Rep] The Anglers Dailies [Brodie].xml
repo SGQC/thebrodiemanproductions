@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r206</Name>
+	<Name>The Anglers Dailies r208</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -106,7 +106,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Quests..." LogColor="Green"  />
 

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>August Celestials r99</Name>
+	<Name>August Celestials r208</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -34,7 +34,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling August Celestials Quests..." LogColor="Green"  />
 
@@ -67,7 +67,7 @@
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="WaitTimer" WaitTime="4000" />
 			<While Condition="HasQuestAvailable(64032)" >
-				<CustomBehavior File="InteractWith"  MobId="64032" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="64032" WaitTime="1000" />
 				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -79,7 +79,7 @@
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="WaitTimer" WaitTime="4000" />
 			<While Condition="HasQuestAvailable(64001)" >
-				<CustomBehavior File="InteractWith"  MobId="64001" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="64001" WaitTime="1000" />
 				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>

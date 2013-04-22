@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ihgaluk Crag (Alliance) r205</Name>
+	<Name>Ihgaluk Crag (Alliance) r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -56,7 +56,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder UseMount="True" KillBetweenHotspots="False" >
+<QuestOrder>
 
 <CustomBehavior File="Message" Text="Compiling Ihgaluk Crag Quests..." LogColor="CornflowerBlue"  />
 

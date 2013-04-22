@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder Pvp (Horde) r185</Name>
+	<Name>Isle of Thunder Pvp (Horde) r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -34,7 +34,9 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder LootMobs="True" KillBetweenHotspots="False" >
+<QuestOrder>
+
+<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" />
 
 <If Condition="Me.IsAlliance" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Isle of Thunder PvP A [Brodie]" />

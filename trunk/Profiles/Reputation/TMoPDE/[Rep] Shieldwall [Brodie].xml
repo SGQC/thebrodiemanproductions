@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r202</Name>
+	<Name>Operation Shieldwall r208</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -179,7 +179,7 @@
 
 <!-- End of Quest Overrides --> 
 
-<QuestOrder IgnoreCheckpoints="True" >
+<QuestOrder>
 
 <If Condition="Me.IsHorde" >
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Dominance [Brodie]" />
