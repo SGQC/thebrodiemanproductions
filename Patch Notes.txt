@@ -2,6 +2,10 @@ Patch Notes
 
 4/21/13
 
+r206
+Quest Behaviors
+-- QB Reversion due to difficulties in organization
+
 r205
 Isle of Thunder Collection
 -- Addition of Combat Ignoring to quest givers
