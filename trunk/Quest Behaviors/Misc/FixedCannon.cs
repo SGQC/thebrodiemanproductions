@@ -32,7 +32,7 @@ namespace Styx.Bot.Quest_Behaviors.FixedCannon
     /// Buttons:A series of numbers that represent the buttons to press in order of importance, separated by comma, for example Buttons ="2,1" 
     /// ExitButton: (Optional)Button to press to exit the cannon. 1-12
     /// </summary>
-	[CustomBehaviorFileName(@"FixedCannon")]
+	[CustomBehaviorFileName(@"Misc\FixedCannon")]
     public class FixedCannon : CustomForcedBehavior
     {
         public FixedCannon(Dictionary<string, string> args)
