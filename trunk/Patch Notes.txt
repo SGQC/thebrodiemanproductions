@@ -1,5 +1,13 @@
 Patch Notes
 
+4/23/13
+
+r213
+Ruins of Guo-Lai
+-- Hard As A Rock/No Stone Unturned - Corrected Infinite loop if statues were still nearby
+Mistfall Village
+-- Che Windwalker should no longer crash profile for unexpected quest frame
+
 4/22/13
 
 r212

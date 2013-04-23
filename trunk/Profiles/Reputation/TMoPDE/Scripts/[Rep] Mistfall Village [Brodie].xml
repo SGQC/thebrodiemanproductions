@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r208</Name>
+	<Name>Mistfall Village r213</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -280,7 +280,7 @@
 
 <!-- Che Wildwalker -->
 	<While Condition="HasQuestAvailable(59338)" >
-		<CustomBehavior File="InteractWith" MobId="59338" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59338" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
