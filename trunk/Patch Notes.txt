@@ -2,6 +2,11 @@ Patch Notes
 
 4/23/13
 
+r214
+Farming Dailies
+-- Complete file overhaul
+-- Fixed issues with Watering can/Bug sprayer not in inventory
+
 r213
 Ruins of Guo-Lai
 -- Hard As A Rock/No Stone Unturned - Corrected Infinite loop if statues were still nearby
