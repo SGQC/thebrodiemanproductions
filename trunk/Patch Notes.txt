@@ -2,6 +2,10 @@ Patch Notes
 
 4/22/13
 
+r212
+Quest Behaviors
+-- Added Debugging The Terrace - Copied from HB release, edited Namespace and minor spacing cleanup
+
 r211
 Quest Behaviors
 -- Modified several QBs missing folder tags in "name"
