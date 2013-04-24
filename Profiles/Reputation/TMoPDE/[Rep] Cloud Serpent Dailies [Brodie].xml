@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Cloud Serpent Dailies r208</Name>
+	<Name>Cloud Serpent Dailies r215</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -960,7 +960,7 @@
 			</While>
 			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 			<While Condition="!IsQuestCompleted(30148) &amp;&amp; HasItem(72985)" >
-				<CustomBehavior File="InteractWith" QuestId="30148" MobId="58416" InteractByUsingItemId="72985" AuraIdMissingFromMob="11196" NumOfTimes="1" CollectionDistance="1000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+				<CustomBehavior File="InteractWith" QuestId="30148" MobId="58416" InteractByUsingItemId="72985" AuraIdMissingFromMob="11196" CollectionDistance="1000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
 			</While>
 		</While>
 	</If>

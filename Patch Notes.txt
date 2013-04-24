@@ -1,5 +1,18 @@
 Patch Notes
 
+4/24/13
+
+r215
+Cloud Serpent
+-- Minor cleanup
+Golden Pagoda Phase 2
+-- Burning Away The Filth - Will now dismount before item use
+-- Golden Lotus Defenders "AvoidMob"'d, hoping to cause it to avoid attacking them
+Ruins of Guo-Lai
+-- Hard As A Rock/No Stone Unturned - Corrected Infinite loop if statues were still nearby
+Operation Shieldwall
+-- Domination Point Demolishers "AvoidMob"'d, hoping to cause it to avoid attacking them
+
 4/23/13
 
 r214
