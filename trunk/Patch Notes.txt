@@ -2,6 +2,13 @@ Patch Notes
 
 4/24/13
 
+r216
+Farm Dailies
+-- Shortened C# even more
+-- Will only do watering can/spray can if needed
+Ruins of Guo-Lai
+-- Shortened C# even more
+
 r215
 Cloud Serpent
 -- Minor cleanup

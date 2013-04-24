@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming/Work Order Daily r214</Name>
+	<Name>Farming/Work Order Daily r216</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -449,16 +449,7 @@
 			
 <!-- Tangled -->
 	<CustomBehavior File="Message" Text="Tangled crop..." LogColor="Green" />
-	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66132 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63188 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63232 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66116 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63151 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60270 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63253 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63269 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66088 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63168 &amp;&amp; u.Distance &lt;= 100)" >
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66132, 63188, 63232, 66116, 63151, 60270, 63253, 63269, 66088, 63168 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
 		<CustomBehavior File="InteractWith" MobId="66132" MobId2="63188" MobId3="63232" MobId4="66116" MobId5="63151"
 											MobId6="60270" MobId7="63253" MobId8="63269" MobId9="66088" MobId10="63168"
 											NumOfTimes="16" WaitForNpcs="False" WaitTime="1000" />
@@ -471,16 +462,7 @@
 	
 <!-- Wild -->
 	<CustomBehavior File="Message" Text="Wild weeds..." LogColor="Green" />
-	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66134 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63190 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63234 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66118 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63149 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60207 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63255 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63271 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66090 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63170 &amp;&amp; u.Distance &lt;= 100)" >
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66134, 63190, 63234, 66118, 63149, 63255, 63271, 63271, 66090, 63170 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
 		<CustomBehavior File="InteractWith" MobId="66134" MobId2="63190" MobId3="63234" MobId4="66118" MobId5="63149"
 											MobId6="60207" MobId7="63255" MobId8="63271" MobId9="66090" MobId10="63170"
 											WaitForNpcs="False" WaitTime="1000" />
@@ -491,16 +473,7 @@
 	
 <!-- Runty -->
 	<CustomBehavior File="Message" Text="Runty crop..." LogColor="Green" />
-	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66130 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63186 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63230 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66114 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63150 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60218 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63251 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63267 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66086 &amp;&amp; u.Distance &lt;= 100) ||
-						ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63166 &amp;&amp; u.Distance &lt;= 100)" >
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66130, 63186, 63230, 66114, 63150, 60218, 63251, 63267, 66086, 63166 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
 		<CustomBehavior File="InteractWith" MobId="66130" MobId2="63186" MobId3="63230" MobId4="66114" MobId5="63150"
 											MobId6="60218" MobId7="63251" MobId8="63267" MobId9="66086" MobId10="63166"
 											WaitForNpcs="False" WaitTime="1500" />
@@ -513,63 +486,29 @@
 	</If>
 
 <!-- Infested Plants -->
-	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66125 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63182 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63226 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66110 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63145 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60026 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63247 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63262 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66082 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63162 &amp;&amp; u.Distance &lt;= 100)" >
-		<!-- Use Pest Repeller 1 -->
-		<CustomBehavior File="InteractWith" MobId="215163" WaitForNpcs="False" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
-		<!-- Use Pest Repeller 2 -->
-		<CustomBehavior File="InteractWith" MobId="215162" WaitForNpcs="False" WaitTime="1000" X="-168.795" Y="643.637" Z="165.409" />
+	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66125, 63182, 63226, 66110, 63145, 60026, 63247, 63262, 66082, 63162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215163, 215162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+			<!-- Use Pest Repeller 1 -->
+			<CustomBehavior File="InteractWith" MobId="215163" WaitForNpcs="False" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
+			<!-- Use Pest Repeller 2 -->
+			<CustomBehavior File="InteractWith" MobId="215162" WaitForNpcs="False" WaitTime="1000" X="-168.795" Y="643.637" Z="165.409" />
+		<ElseIf Condition="!HasItem(80513)">
+			<CustomBehavior File="InteractWith" MobId="211331" WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+		</ElseIf>
+		</If>
 	</If>
 
 <!-- Parched Plants -->
-	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66127 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63183 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63227 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66111 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63144 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58565 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63263 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63248 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66083 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63163 &amp;&amp; u.Distance &lt;= 100)" >
-		<!-- Use Sprinkler 1 -->
-		<CustomBehavior File="InteractWith" MobId="215137" WaitForNpcs="False" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
-		<!-- Use Sprinkler 2 -->
-		<CustomBehavior File="InteractWith" MobId="215135" WaitForNpcs="False" WaitTime="1000" X="-168.587" Y="654.073" Z="165.266" />
-	</If>
-
-<!-- Tool Time -->
-	<If Condition="!HasItem(80513) &amp;&amp; (ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66125 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63182 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63226 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66110 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63145 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60026 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63247 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63262 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66082 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63162 &amp;&amp; u.Distance &lt;= 100))">
-		<CustomBehavior File="InteractWith" MobId="211331" WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
-	</If>
-	<If Condition="!HasItem(79104) &amp;&amp; (ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66127 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63183 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63227 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66111 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63144 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58565 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63263 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63248 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 66083 &amp;&amp; u.Distance &lt;= 100) ||
-					ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63163 &amp;&amp; u.Distance &lt;= 100))">
-		<CustomBehavior File="InteractWith" MobId="211330" WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66127, 63183, 63227, 66111, 63144, 58565, 63263, 63248, 66083, 63163 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215137, 215135 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)
+			<!-- Use Sprinkler 1 -->
+			<CustomBehavior File="InteractWith" MobId="215137" WaitForNpcs="False" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
+			<!-- Use Sprinkler 2 -->
+			<CustomBehavior File="InteractWith" MobId="215135" WaitForNpcs="False" WaitTime="1000" X="-168.587" Y="654.073" Z="165.266" />
+		<ElseIf Condition="!HasItem(79104)" >
+			<CustomBehavior File="InteractWith" MobId="211330" WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+		</ElseIf>
+		</If>
 	</If>
 	
 <!-- Parched -->
