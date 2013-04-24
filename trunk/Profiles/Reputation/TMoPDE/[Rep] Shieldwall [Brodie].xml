@@ -25,6 +25,7 @@
   
 	<AvoidMobs>
 		<Mob Name="Warlord Bloodhilt" Entry="67461" />
+		<Mob Name="Domination Point Demolisher" Entry="67671" />
 	</AvoidMobs>
    
 	<Blackspots>

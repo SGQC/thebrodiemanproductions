@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Ruins of Guo-Lai r213</Name>
+	<Name>Ruins of Guo-Lai r215</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -325,14 +325,16 @@
 				<CustomBehavior File="FlyTo" X="1268.16" Y="1837.10" Z="344.80" />
 				<CustomBehavior File="ForcedDismount"/>
 				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
-										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)" >
+					<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
+										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500))
+										&amp;&amp; !IsQuestCompleted(30304)" >
 						<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
 					</While>
 				</If>
 				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
-										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)" >
+					<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
+										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500))
+										&amp;&amp; !IsQuestCompleted(30299)" >
 						<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
 					</While>
 				</If>
@@ -342,14 +344,16 @@
 				<CustomBehavior File="FlyTo" X="1613.10" Y="1804.64" Z="427.99" />
 				<CustomBehavior File="ForcedDismount"/>
 				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
-										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)" >
+					<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
+										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500))
+										&amp;&amp; !IsQuestCompleted(30304)" >
 						<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
 					</While>
 				</If>
 				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
-										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)" >
+					<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63447 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500) ||
+										ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 63556 &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500))
+										&amp;&amp; !IsQuestCompleted(30299)" >
 						<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
 					</While>
 				</If>
