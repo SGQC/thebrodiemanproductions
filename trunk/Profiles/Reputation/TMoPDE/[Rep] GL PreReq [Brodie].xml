@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Golden Lotus PreReqs r217</Name>
+	<Name>Golden Lotus PreReqs r218</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -281,7 +281,7 @@
 		<If Condition="!IsObjectiveComplete(3,30649)" >
 			<CustomBehavior File="FlyTo" DestName="Front Door" X="1623.753" Y="923.2146" Z="471.1835" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MobId="62996" InteractByGossipOptions="2" NonCompeteDistance="0"X="1700.95" Y="893.58" Z="470.98" />
+			<CustomBehavior File="InteractWith" MobId="62996" InteractByGossipOptions="2" NonCompeteDistance="0" X="1700.95" Y="893.58" Z="470.98" />
 		</If>
 		<If Condition="!IsObjectiveComplete(1,30649)" >
 			<CustomBehavior File="FlyTo" DestName="Repair Vendor" X="1223.032" Y="602.6687" Z="394.04" />
