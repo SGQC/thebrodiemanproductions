@@ -1,5 +1,19 @@
 Patch Notes
 
+4/25/13
+
+r217
+ProfileChanger
+-- UI Update
+Farm Dailies
+-- Will now continue to (or stop) farming plants if any are/aren't around
+The Tillers
+-- Will now continue to (or stop) farming plants if any are/aren't around
+Golden Lotus PreReqs
+-- NonCompeteDistance set to 0 for npcs in cities
+Quest Behaviors
+-- PerformTradeskillOn update (Hacked is more like it)
+
 4/24/13
 
 r216
