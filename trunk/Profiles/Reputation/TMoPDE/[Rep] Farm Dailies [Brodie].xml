@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming/Work Order Daily r216</Name>
+	<Name>Farming/Work Order Daily r217</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -63,15 +63,22 @@
 					HasQuest(32649)) &amp;&amp; Me.Location.Distance(new WoWPoint(-179.0962, 633.9905, 165.4103)) &lt;= 50" >
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="Message" Text="Checking for harvestable plants." LogColor="Green" />
-		<CustomBehavior File="InteractWith" MobId="58567" MobId2="60113" MobId3="66112" MobId4="66113" MobId5="63154"
-											MobId6="63156" MobId7="63184" MobId8="63185" MobId9="63249" MobId10="63250"
-											MobId11="63228" MobId12="63229" MobId13="63164" MobId14="63165" MobId15="66128"
-											MobId16="66129" MobId17="63264" MobId18="63265" MobId19="66084" MobId20="66085"
-											MobId21="66043" MobId22="65989" MobId23="66016" MobId24="65973" MobId25="66006"
-											MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
-											MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
-											MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
-											MobId41="63260" MobId42="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+		<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] 
+						{ 58567, 60113, 66112, 66113, 63154, 63156, 63184, 63185, 63249, 63250,
+						63228, 63229, 63164, 63165, 66128, 66129, 63264, 63265, 66084, 66085,
+						66043, 65989, 66016, 65973, 66006, 60172, 65938, 65932, 65930, 65933,
+						65929, 65931, 63157, 66108, 63158, 63180, 63245, 63223, 63160, 66123,
+						63260, 66080 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+			<CustomBehavior File="InteractWith" MobId="58567" MobId2="60113" MobId3="66112" MobId4="66113" MobId5="63154"
+												MobId6="63156" MobId7="63184" MobId8="63185" MobId9="63249" MobId10="63250"
+												MobId11="63228" MobId12="63229" MobId13="63164" MobId14="63165" MobId15="66128"
+												MobId16="66129" MobId17="63264" MobId18="63265" MobId19="66084" MobId20="66085"
+												MobId21="66043" MobId22="65989" MobId23="66016" MobId24="65973" MobId25="66006"
+												MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
+												MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
+												MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
+												MobId41="63260" MobId42="66080" WaitForNpcs="False" WaitTime="10"/>
+		</While>
 <!-- Checking for Stubborn Weeds -->
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60153 &amp;&amp; u.Distance &lt;= 100)" >
@@ -531,9 +538,13 @@
 	<CustomBehavior File="DeleteItems" Ids="80513,79104"/>
 
 <!-- Check for Bursting Plants -->
-	<CustomBehavior File="InteractWith" MobId="63157" MobId2="66108" MobId3="63158" MobId4="63180" MobId5="63245"
-										MobId6="63223" MobId7="63160" MobId8="66123" MobId9="63260" MobId10="66080"
-										NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] 
+					{ 63157, 66108, 63158, 63180, 63245, 63223, 63160, 66123,
+					63260, 66080 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<CustomBehavior File="InteractWith" MobId="63157" MobId2="66108" MobId3="63158" MobId4="63180" MobId5="63245"
+											MobId6="63223" MobId7="63160" MobId8="66123" MobId9="63260" MobId10="66080"
+											WaitForNpcs="False" WaitTime="10"/>
+	</While>
 		
 <!-- Turn in Farming Quests -->
 
