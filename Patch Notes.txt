@@ -2,6 +2,17 @@ Patch Notes
 
 4/25/13
 
+r218
+Golden Pagoda Phase 2
+-- Burning Away The Filth - added noncompete clause
+Mistfall Village
+-- My Town, It's On Fire - added noncompete clause
+-- My Town, It's On Fire Again - added noncompete clause
+Golden Lotus PreReqs
+-- Corrected white space typo
+Farm Dailies
+-- Corrected missing ">" operator
+
 r217
 ProfileChanger
 -- UI Update
