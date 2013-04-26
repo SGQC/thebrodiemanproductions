@@ -2,6 +2,10 @@ Patch Notes
 
 4/26/13
 
+r222
+Quest Behaviors
+-- Missing path on all Vehicles QBs
+
 r221
 Quest Behaviors
 -- Updated QB folder to match Kick's SVN
