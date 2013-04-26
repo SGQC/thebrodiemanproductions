@@ -75,7 +75,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.ThunderingSkies
         {
             get
             {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdSerpent && !u.IsDead && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
+                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdSerpent && u.IsAlive && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
             }
         }
 
