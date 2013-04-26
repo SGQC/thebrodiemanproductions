@@ -39,7 +39,7 @@ using Action = Styx.TreeSharp.Action;
 
 namespace Honorbuddy.Quest_Behaviors.BasicVehicleBehaviour
 {
-    [CustomBehaviorFileName(@"Vehicles\BasicVehicleBehaviour")]
+    [CustomBehaviorFileName(@"BasicVehicleBehaviour")]
     public class BasicVehicleBehaviour : CustomForcedBehavior
     {
         public BasicVehicleBehaviour(Dictionary<string, string> args)
