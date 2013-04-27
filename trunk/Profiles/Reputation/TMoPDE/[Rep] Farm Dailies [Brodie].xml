@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming/Work Order Daily r218</Name>
+	<Name>Farming/Work Order Daily r225</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -419,6 +419,49 @@
 		</While>
 	</If>
 	
+<!-- Work Order: The Klaxxi I -->
+	<If Condition="HasQuest(32658) &amp;&amp; !IsQuestCompleted(32658)" >
+		<CustomBehavior File="Message" Text="Starting Work Order: The Klaxxi" LogColor="Green" />
+		<If Condition="!HasItem(80592) || (GetItemCount(80592) &lt; 8)" >
+			<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
+			<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
+			<CustomBehavior File="ForcedDismount" />
+			<If Condition="(GetItemCount(80592) &lt; 1)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="8" />
+			<ElseIf Condition="(GetItemCount(80592) &lt; 2)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="7" />
+			</ElseIf>
+			<ElseIf Condition="(GetItemCount(80592) &lt; 3)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="6" />
+			</ElseIf>
+			<ElseIf Condition="(GetItemCount(80592) &lt; 4)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="5" />
+			</ElseIf>
+			<ElseIf Condition="(GetItemCount(80592) &lt; 5)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="4" />
+			</ElseIf>
+			<ElseIf Condition="(GetItemCount(80592) &lt; 6)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="3" />
+			</ElseIf>
+			<ElseIf Condition="(GetItemCount(80592) &lt; 7)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="2" />
+			</ElseIf>
+			<ElseIf Condition="(GetItemCount(80592) &lt; 8)" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80592" BuyItemCount="1" />
+			</ElseIf>
+			</If>
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		</If>
+		<While Condition="HasItem(80592) &amp;&amp; !IsQuestCompleted(32658)" >
+			<CustomBehavior File="FlyTo" DestName="My Farm" X="-168.9621" Y="639.7676" Z="165.4103" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<CustomBehavior File="InteractWith" MobId="60172" WaitForNpcs="False"/>
+			<CustomBehavior File="InteractWith" MobId="58562" WaitForNpcs="False"/>
+			<CustomBehavior File="InteractWith" MobId="58563" InteractByUsingItemId="80592" WaitForNpcs="False" WaitTime="3000"/>
+		</While>
+	</If>
+	
 	<If Condition="HasQuest(32647) &amp;&amp; IsQuestCompleted(32647)" >
 			<CustomBehavior File="CompleteLogQuest" QuestId="32647" />
 	</If>
@@ -429,6 +472,10 @@
 	
 	<If Condition="HasQuest(32645) &amp;&amp; IsQuestCompleted(32645)" >
 			<CustomBehavior File="CompleteLogQuest" QuestId="32645" />
+	</If>
+	
+	<If Condition="HasQuest(32658) &amp;&amp; IsQuestCompleted(32658)" >
+			<CustomBehavior File="CompleteLogQuest" QuestId="32658" />
 	</If>
 
 <!-- Checking your crops for issues -->

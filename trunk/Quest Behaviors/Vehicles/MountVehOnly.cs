@@ -25,7 +25,7 @@ using Action = Styx.TreeSharp.Action;
 
 namespace Honorbuddy.Quest_Behaviors.MountVehOnly
 {
-    [CustomBehaviorFileName(@"MountVehOnly")]
+    [CustomBehaviorFileName(@"Vehicles\MountVehOnly")]
     public class MountVehOnly : CustomForcedBehavior
     {
         /// <summary>
