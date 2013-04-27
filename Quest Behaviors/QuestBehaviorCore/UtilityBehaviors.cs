@@ -17,6 +17,7 @@ using CommonBehaviors.Actions;
 using Styx;
 using Styx.CommonBot;
 using Styx.CommonBot.POI;
+using Styx.CommonBot.Profiles;
 using Styx.CommonBot.Routines;
 using Styx.Helpers;
 using Styx.Pathing;
@@ -359,6 +360,9 @@ namespace Honorbuddy.QuestBehaviorCore
 
             return
                 new PrioritySelector(
+                    // Move to next hunting ground waypoint...
+                    UtilityBehaviorPS_MoveTo(huntingGroundsProvider),
+
                     // Terminate of no targets available?
                     new Decorator(context => terminateBehaviorIfNoTargetsProvider(context),
                         new Action(context =>
@@ -375,9 +379,6 @@ namespace Honorbuddy.QuestBehaviorCore
                             }
                             BehaviorDone();
                         })),
-
-                    // Move to next hunting ground waypoint...
-                    UtilityBehaviorPS_MoveTo(huntingGroundsProvider),
 
                     // Only one hunting ground waypoint to move to?
                     new CompositeThrottle(context => huntingGroundsProvider(context).Waypoints.Count() <= 1,
@@ -465,8 +466,10 @@ namespace Honorbuddy.QuestBehaviorCore
         /// Targets and kills any mob targeting Self or Pet.
         /// </summary>
         /// <returns></returns>
-        public Composite UtilityBehaviorPS_SpankMobTargetingUs()
+        public Composite UtilityBehaviorPS_SpankMobTargetingUs(Func<IEnumerable<int>> excludedUnitIdsDelegate = null)
         {
+            excludedUnitIdsDelegate = excludedUnitIdsDelegate ?? (() => Enumerable.Empty<int>());
+
             Func<object, bool> isInterestingToUs =
                 (obj) =>
                 {
@@ -478,7 +481,11 @@ namespace Honorbuddy.QuestBehaviorCore
                             || wowUnit.IsTargetingAnyMinion
                             || wowUnit.IsTargetingMyPartyMember)
                         // exclude opposing faction: both players and their pets show up as "PlayerControlled"
-                        && !wowUnit.PlayerControlled;                                 
+                        && !wowUnit.PlayerControlled
+                        // Do not pull mobs on the AvoidMobs list
+                        && !ProfileManager.CurrentOuterProfile.AvoidMobs.Contains(wowUnit.Entry)
+                        // exclude any units that are candidates for interacting
+                        && !excludedUnitIdsDelegate().Contains((int)wowUnit.Entry);                                                     
                 };
                             
             return new PrioritySelector(
@@ -515,7 +522,7 @@ namespace Honorbuddy.QuestBehaviorCore
                                                                     Func<IEnumerable<int>> excludedUnitIdsDelegate = null)
         {
             extraRangePaddingDelegate = extraRangePaddingDelegate ?? (context => 0.0);
-            excludedUnitIdsDelegate = excludedUnitIdsDelegate ?? (() => new List<int>());
+            excludedUnitIdsDelegate = excludedUnitIdsDelegate ?? (() => Enumerable.Empty<int>());
 
             Func<object, bool> isInterestingToUs =
                 (obj) =>
@@ -530,6 +537,8 @@ namespace Honorbuddy.QuestBehaviorCore
                         && !wowUnit.PlayerControlled
                         // exclude any units that are candidates for interacting
                         && !excludedUnitIdsDelegate().Contains((int)wowUnit.Entry)
+                        // Do not pull mobs on the AvoidMobs list
+                        && !ProfileManager.CurrentOuterProfile.AvoidMobs.Contains(wowUnit.Entry)
                         && (wowUnit.Location.SurfacePathDistance(destinationDelegate(obj)) <= (wowUnit.MyAggroRange + extraRangePaddingDelegate(obj)));
                 };
         

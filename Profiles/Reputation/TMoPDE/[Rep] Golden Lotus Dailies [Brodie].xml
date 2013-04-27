@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r208</Name>
+	<Name>The Golden Lotus r224</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -25,6 +25,7 @@
 	</Vendors>
   
 	<AvoidMobs>
+		<Mob Name="Urgolax" Entry="50359" />
 	</AvoidMobs>
    
 	<Blackspots>

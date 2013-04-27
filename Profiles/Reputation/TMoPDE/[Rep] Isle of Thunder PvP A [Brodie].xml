@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder Pvp (Alliance) r208</Name>
+	<Name>Isle of Thunder Pvp (Alliance) r224</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -158,22 +158,22 @@
 	</If>
 	
 <!-- Tactical Mana Bombs -->
-<!--	<If Condition="HasQuest(32628) &amp;&amp; !IsQuestCompleted(32628)">
+		<If Condition="HasQuest(32628) &amp;&amp; !IsQuestCompleted(32628)">
 		<CustomBehavior File="Message" Text="Starting Tactical Mana Bombs" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32628" LootMobs="True" PullDistance="1" />
 		<While Condition="!IsObjectiveComplete(2,32628)" >
 			<RunTo X="7096.895" Y="6154.984" Z="-1.53" />
-			<CustomBehavior File="InteractWith" QuestId="32628" MobId="69604" Range="6" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32628" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69604" Range="6" WaitForNpcs="False" WaitTime="1000" />
 		</While>
 		<While Condition="!IsObjectiveComplete(1,32628)" >
 			<RunTo X="7279.555" Y="5946.754" Z="0.1" />
-			<CustomBehavior File="InteractWith" QuestId="32628" MobId="69560" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32628" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69560" WaitForNpcs="False" WaitTime="1000" />
 		</While>
 		<While Condition="!IsObjectiveComplete(3,32628)" >
 			<RunTo X="7019.625" Y="5939.215" Z="29.08454" />
-			<CustomBehavior File="InteractWith" QuestId="32628" MobId="69607" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32628" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69607" WaitForNpcs="False" WaitTime="1000" />
 		</While>
-	</If> -->
+	</If>
 	
 <!-- Overpowered -->
  	<If Condition="HasQuest(32637) &amp;&amp; !IsQuestCompleted(32637)">
