@@ -118,71 +118,123 @@
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			<CustomBehavior File="InteractWith" MobId="60172" NumOfTimes="1" WaitForNpcs="False"/>
 			<CustomBehavior File="InteractWith" MobId="58562" NumOfTimes="1" WaitForNpcs="False"/>
-			<CustomBehavior File="UseItemOn" MobId="58563" ItemId="79102" NumOfTimes="1" WaitForNpcs="False" WaitTime="3000"/>
-			<!-- Alluring -->
-			<CustomBehavior File="Message" Text="Alluring crop..." LogColor="Green" />
-			<CustomBehavior File="InteractWith" MobId="60070" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" />
-			<!-- Wiggling -->
-			<CustomBehavior File="Message" Text="Wiggling crop..." LogColor="Green" />
-			<CustomBehavior File="InteractWith" MobId="60029" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" />
-			<!-- Encroaching Weeds -->
-			<CustomBehavior File="Message" Text="Encroaching weeds..." LogColor="Green" />
-			<CustomBehavior File="InteractWith" MobId="60185" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" />
-			<If Condition="Me.IsOnTransport" >
-				<CustomBehavior File="RunMacro" Macro="/click OverrideActionBarButton1" NumOfTimes="20" WaitTime="250" />
-			</If>
-			<!-- Tangled -->
-			<CustomBehavior File="Message" Text="Tangled crop..." LogColor="Green" />
-			<CustomBehavior File="InteractWith" MobId="60270" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" />
-			<If Condition="Me.HasAura(116242)" >
-				<RunTo X="-186.6821" Y="642.2603" Z="165.4093" />
-				<RunTo X="-168.9621" Y="639.7676" Z="165.4103" />
-				<CustomBehavior File="ForcedDismount" />
-			</If>
-			<!-- Wild -->
-			<CustomBehavior File="Message" Text="Wild crop..." LogColor="Green" />
-			<CustomBehavior File="InteractWith" MobId="60207" NumOfTimes="1" WaitForNpcs="False" WaitTime="1000" />
-			<While Condition="Me.IsOnTransport" >
-				<CustomBehavior File="RunMacro" Macro="/click OverrideActionBarButton1" NumOfTimes="40" WaitTime="250" />
-			</While>
-			<!-- Runty -->
-			<CustomBehavior File="Message" Text="Runty crop..." LogColor="Green" />
-			<CustomBehavior File="InteractWith" MobId="60218" NumOfTimes="1" WaitForNpcs="False" WaitTime="1500" />
-			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
+			<CustomBehavior File="InteractWith" MobId="58563" InteractByUsingItemId="79102" WaitForNpcs="False" WaitTime="3000"/>
 		</While>
 		
-		<!-- If druid cancel shape shift form -->
-		<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
-			<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
-		</If>
-		
-		<!-- Use Pest Repeller 1 -->
-		<CustomBehavior File="InteractWith" MobId="215163" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
-			
-		<!-- Use Sprinkler 1 -->
-		<CustomBehavior File="InteractWith" MobId="215137" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
-		
-		<!-- Use Pest Repeller 2 -->
-		<CustomBehavior File="InteractWith" MobId="215162" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" X="-168.795" Y="643.637" Z="165.409" />
-			
-		<!-- Use Sprinkler 2 -->
-		<CustomBehavior File="InteractWith" MobId="215135" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" X="-168.587" Y="654.073" Z="165.266" />
+<!-- Checking your crops for issues -->
 
-		<!-- Tool Time -->
-		<If Condition="!HasItem(80513)">
-			<CustomBehavior File="InteractWith" MobId="211331" ObjectType="GameObject"  WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+<!-- Alluring -->
+	<CustomBehavior File="Message" Text="Alluring Crop..." LogColor="Green" />
+	<CustomBehavior File="InteractWith" MobId="66122" MobId2="63178" MobId3="63222" MobId4="66107" MobId5="63147" 
+										MobId6="60070" MobId7="63243" MobId8="63259" MobId9="66079" MobId10="63159"
+										NumOfTimes="16" WaitForNpcs="False" WaitTime="1000" />
+
+<!-- Wiggling -->
+	<CustomBehavior File="Message" Text="Wiggling Crop..." LogColor="Green" />
+	<CustomBehavior File="InteractWith" MobId="66133" MobId2="63189" MobId3="63233" MobId4="66117" MobId5="63146"
+										MobId6="60029" MobId7="63254" MobId8="63270" MobId9="66089" MobId10="63169"
+										NumOfTimes="16" WaitForNpcs="False" WaitTime="1000" />
+
+<!-- Encroaching Weeds -->
+	<CustomBehavior File="Message" Text="Encroaching Weeds..." LogColor="Green" />
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 60185 &amp;&amp; u.Distance &lt;= 100)" >
+		<CustomBehavior File="InteractWith" MobId="60185" WaitForNpcs="False" WaitTime="1000" />
+		<While Condition="Me.IsOnTransport" >
+			<CustomBehavior File="RunMacro" Macro="/click OverrideActionBarButton1" WaitTime="250" />
+		</While>
+	</While>
+			
+<!-- Tangled -->
+	<CustomBehavior File="Message" Text="Tangled crop..." LogColor="Green" />
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66132, 63188, 63232, 66116, 63151, 60270, 63253, 63269, 66088, 63168 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<CustomBehavior File="InteractWith" MobId="66132" MobId2="63188" MobId3="63232" MobId4="66116" MobId5="63151"
+											MobId6="60270" MobId7="63253" MobId8="63269" MobId9="66088" MobId10="63168"
+											NumOfTimes="16" WaitForNpcs="False" WaitTime="1000" />
+		<If Condition="Me.HasAura(116242)" >
+			<RunTo X="-194.55" Y="642.61" Z="165.41" />
+			<RunTo X="-168.9621" Y="639.7676" Z="165.4103" />
+			<CustomBehavior File="ForcedDismount" />
 		</If>
-		<If Condition="!HasItem(79104)">
-			<CustomBehavior File="InteractWith" MobId="211330" ObjectType="GameObject"  WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
-		</If>
-		<!-- Parched -->
-		<CustomBehavior File="Message" Text="Watering the plants..." LogColor="Green" />
-		<CustomBehavior File="UseItemOn" MobType="Npc" MobId="58565" ItemId="79104" NumOfTimes="16" WaitForNpcs="False" WaitTime="1500"/>
-		<!-- Infested -->
-		<CustomBehavior File="Message" Text="Spraying the plants..." LogColor="Green" />
-		<CustomBehavior File="UseItemOn" MobType="Npc" MobId="60026" ItemId="80513" NumOfTimes="16" WaitForNpcs="False" WaitTime="1500"/>	
-		<CustomBehavior File="DeleteItems" Ids="80513,79104"/><!-- Deleting farm tools -->
+	</While>
+	
+<!-- Wild -->
+	<CustomBehavior File="Message" Text="Wild weeds..." LogColor="Green" />
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66134, 63190, 63234, 66118, 63149, 63255, 63271, 63271, 66090, 63170 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<CustomBehavior File="InteractWith" MobId="66134" MobId2="63190" MobId3="63234" MobId4="66118" MobId5="63149"
+											MobId6="60207" MobId7="63255" MobId8="63271" MobId9="66090" MobId10="63170"
+											WaitForNpcs="False" WaitTime="1000" />
+		<While Condition="Me.IsOnTransport" >
+			<CustomBehavior File="RunMacro" Macro="/click OverrideActionBarButton1" WaitTime="250" />
+		</While>
+	</While>
+	
+<!-- Runty -->
+	<CustomBehavior File="Message" Text="Runty crop..." LogColor="Green" />
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66130, 63186, 63230, 66114, 63150, 60218, 63251, 63267, 66086, 63166 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<CustomBehavior File="InteractWith" MobId="66130" MobId2="63186" MobId3="63230" MobId4="66114" MobId5="63150"
+											MobId6="60218" MobId7="63251" MobId8="63267" MobId9="66086" MobId10="63166"
+											WaitForNpcs="False" WaitTime="1500" />
+		<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
+	</While>
+
+	<!-- If druid cancel shape shift form -->
+	<If Condition="Me.Class == WoWClass.Druid || Me.Class == WoWClass.Shaman" >
+		<CustomBehavior File="Misc\RunLua" Lua="CancelShapeshiftForm()" />
 	</If>
+
+<!-- Infested Plants -->
+	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66125, 63182, 63226, 66110, 63145, 60026, 63247, 63262, 66082, 63162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215163, 215162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+			<!-- Use Pest Repeller 1 -->
+			<CustomBehavior File="InteractWith" MobId="215163" WaitForNpcs="False" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
+			<!-- Use Pest Repeller 2 -->
+			<CustomBehavior File="InteractWith" MobId="215162" WaitForNpcs="False" WaitTime="1000" X="-168.795" Y="643.637" Z="165.409" />
+		<ElseIf Condition="!HasItem(80513)">
+			<CustomBehavior File="InteractWith" MobId="211331" WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+		</ElseIf>
+		</If>
+	</If>
+
+<!-- Parched Plants -->
+	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66127, 63183, 63227, 66111, 63144, 58565, 63263, 63248, 66083, 63163 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215137, 215135 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+			<!-- Use Sprinkler 1 -->
+			<CustomBehavior File="InteractWith" MobId="215137" WaitForNpcs="False" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
+			<!-- Use Sprinkler 2 -->
+			<CustomBehavior File="InteractWith" MobId="215135" WaitForNpcs="False" WaitTime="1000" X="-168.587" Y="654.073" Z="165.266" />
+		<ElseIf Condition="!HasItem(79104)" >
+			<CustomBehavior File="InteractWith" MobId="211330" WaitTime="5" X="-166.8677" Y="633.5659" Z="165.4094" />
+		</ElseIf>
+		</If>
+	</If>
+	
+<!-- Parched -->
+	<If Condition="HasItem(79104)" >
+		<CustomBehavior File="Message" Text="Watering crops..." LogColor="Green" />
+		<CustomBehavior File="InteractWith" MobId="66127" MobId2="63183" MobId3="63227" MobId4="66111" MobId5="63144"
+											MobId6="58565" MobId7="63248" MobId8="63263" MobId9="66083" MobId10="63163"
+											InteractByUsingItemId="79104" NumOfTimes="16" WaitForNpcs="False" />
+	</If>
+
+<!-- Infested -->
+	<If Condition="HasItem(80513)" >
+		<CustomBehavior File="Message" Text="Spraying crops..." LogColor="Green" />
+		<CustomBehavior File="InteractWith" MobId="66125" MobId2="63182" MobId3="63226" MobId4="66110" MobId5="63145"
+											MobId6="60026" MobId7="63247" MobId8="63262" MobId9="66082" MobId10="63162"
+											InteractByUsingItemId="80513" NumOfTimes="16" WaitForNpcs="False" />
+	</If>
+	
+<!-- Deleting farm tools -->	
+	<CustomBehavior File="DeleteItems" Ids="80513,79104"/>
+
+<!-- Check for Bursting Plants -->
+	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] 
+					{ 63157, 66108, 63158, 63180, 63245, 63223, 63160, 66123,
+					63260, 66080 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<CustomBehavior File="InteractWith" MobId="63157" MobId2="66108" MobId3="63158" MobId4="63180" MobId5="63245"
+											MobId6="63223" MobId7="63160" MobId8="66123" MobId9="63260" MobId10="66080"
+											WaitForNpcs="False" WaitTime="10"/>
+	</While>
 		
 	<If Condition="HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)">
 		<CustomBehavior File="FlyTo" X="-257.07" Y="601.18" Z="171.35" />
@@ -190,6 +242,14 @@
 		<TurnIn QuestName="Farmer Fung's Vote III: Crazy For Cabbage" QuestId="31947" TurnInName="Farmer Fung" TurnInId="57298" />
 		<CustomBehavior File="Message" Text="Back to farm to finish Farmer Fung's vote." LogColor="Green" />
 		<CustomBehavior File="FlyTo" DestName="My Farm" X="-169.7904" Y="647.9799" Z="165.4094" />
+	</If>
+	
+<!-- Nana's Vote I: Nana's Secret Recipe -->
+	<If Condition="HasQuest(30519)">
+		<CustomBehavior File="FlyTo" X="-146.9766" Y="520.9451" Z="212.4847" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Nana's Vote I: Nana's Secret Recipe" QuestId="30519" TurnInName="Nana Mudclaw" TurnInId="64597" />
+		<PickUp QuestName="Nana's Vote II: The Sacred Springs" QuestId="31948" GiverName="Nana Mudclaw" GiverId="64597" />
 	</If>
 		
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />
