@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r225</Name>
+	<Name>The Tillers r227</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -644,7 +644,7 @@
 	</If>
 	
 	<If Condition="HasQuest(30517) || HasQuest(30518) || (HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)) || HasQuest(31479) ||
-					HasQuest(30519)" >
+					HasQuest(30519) || HasQuest(31948) || (HasQuest(31949) &amp;&amp; IsQuestCompleted(31949))" >
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Votes [Brodie]" /> 
 	</If>
 	

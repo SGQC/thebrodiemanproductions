@@ -1,0 +1,5 @@
+Supported Pets
+- Ancona Chicken
+- Chicken
+- Szechuan Chicken
+- Westfall Chicken

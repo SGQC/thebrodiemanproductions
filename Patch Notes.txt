@@ -2,6 +2,16 @@ Patch Notes
 
 4/27/13
 
+r227
+The Tillers
+-- Expanded Nana's Vote support
+Farm dailies
+-- Updated Sprinkler/Bug Zapper to use if quest completed, instead of in proximity
+Tillers Votes
+-- Updated Sprinkler/Bug Zapper to use if quest completed, instead of in proximity
+-- Added Nana's Vote II
+-- Added Nana's Vote III
+
 r226
 Pokehbuddy
 -- Removed redundant settings files, only personally updated ones included

@@ -1,5 +1,5 @@
 ﻿<HBProfile>
-	<Name>Tillers Votes r183</Name>
+	<Name>Tillers Votes r227</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
 
@@ -97,17 +97,17 @@
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="58567" NumOfTimes="3" WaitForNpcs="False" />
 		</If>
-		<If Condition="!HasItem(79102) || (GetItemCount(79102) &lt; 3) &amp;&amp; !IsObjectiveComplete(1,31947)" >
+		<If Condition="(GetItemCount(79102) &lt; 3) &amp;&amp; !IsObjectiveComplete(1,31947)" >
 			<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
 			<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
 			<CustomBehavior File="ForcedDismount" />
 			<If Condition="GetItemCount(79102) == 0" >
-				<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="3" X="-268.316" Y="603.4114" Z="167.5478" />
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="79102" BuyItemCount="3" X="-268.316" Y="603.4114" Z="167.5478" />
 			<ElseIf Condition="GetItemCount(79102) == 1" >
-				<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="2" X="-268.316" Y="603.4114" Z="167.5478" />
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="79102" BuyItemCount="2" X="-268.316" Y="603.4114" Z="167.5478" />
 			</ElseIf>
 			<ElseIf Condition="GetItemCount(79102) == 2" >
-				<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="79102" BuyItemCount="1" X="-268.316" Y="603.4114" Z="167.5478" />
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="79102" BuyItemCount="1" X="-268.316" Y="603.4114" Z="167.5478" />
 			</ElseIf>
 			</If>
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -120,6 +120,88 @@
 			<CustomBehavior File="InteractWith" MobId="58562" NumOfTimes="1" WaitForNpcs="False"/>
 			<CustomBehavior File="InteractWith" MobId="58563" InteractByUsingItemId="79102" WaitForNpcs="False" WaitTime="3000"/>
 		</While>
+		
+	<If Condition="HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)">
+		<CustomBehavior File="FlyTo" X="-257.07" Y="601.18" Z="171.35" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Farmer Fung's Vote III: Crazy For Cabbage" QuestId="31947" TurnInName="Farmer Fung" TurnInId="57298" />
+		<CustomBehavior File="Message" Text="Back to farm to finish Farmer Fung's vote." LogColor="Green" />
+		<CustomBehavior File="FlyTo" DestName="My Farm" X="-169.7904" Y="647.9799" Z="165.4094" />
+	</If>
+	
+<!-- Nana's Vote I: Nana's Secret Recipe -->
+	<If Condition="HasQuest(30519)">
+		<CustomBehavior File="FlyTo" X="-146.9766" Y="520.9451" Z="212.4847" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Nana's Vote I: Nana's Secret Recipe" QuestId="30519" TurnInName="Nana Mudclaw" TurnInId="64597" />
+		<PickUp QuestName="Nana's Vote II: The Sacred Springs" QuestId="31948" GiverName="Nana Mudclaw" GiverId="64597" />
+	</If>
+
+<!-- Nana's Vote II: The Sacred Springs -->
+	<If Condition="HasQuest(31948) &amp;&amp; !IsQuestCompleted(31948)">
+		<If Condition="HasItem(89902)">
+			<CustomBehavior File="FlyTo" DestName="Nana's Vote II" X="522.4294" Y="449.0107" Z="246.2637" />
+			<While Condition="!HasItem(89903)">
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89902)" WaitTime="2000" />
+			</While>	
+		<Else>
+			<CustomBehavior File="Message" Text="Pitcher missing. Reacquiring quest." LogColor="Red"  />
+			<CustomBehavior File="AbandonQuest" QuestId="31948" />
+			<CustomBehavior File="FlyTo" X="-151.6855" Y="518.4195" Z="208.5714" />
+			<CustomBehavior File="ForcedDismount" />
+			<PickUp QuestName="Nana's Vote II: The Sacred Springs" QuestId="31948" GiverName="Nana Mudclaw" GiverId="64597" />
+			<CustomBehavior File="FlyTo" X="522.4294" Y="449.0107" Z="246.2637" />
+			<While Condition="!HasItem(89903)">
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89902)" WaitTime="2000" />
+			</While>	
+		</Else>
+		</If>
+	</If>
+
+	<If Condition="HasQuest(31948) &amp;&amp; IsQuestCompleted(31948)" >
+		<CustomBehavior File="FlyTo" DestName="Nana Mudclaw" X="-151.6855" Y="518.4195" Z="208.5714" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Nana's Vote II: The Sacred Springs" QuestId="31948" TurnInName="Nana Mudclaw" TurnInId="64597" />
+		<PickUp QuestName="Nana's Vote III: Witchberry Julep" QuestId="31949" GiverName="Nana Mudclaw" GiverId="64597" />
+	</If>
+	
+<!-- Nana's Vote III: Witchberry Julep -->
+	<If Condition="HasQuest(31949) &amp;&amp; !IsQuestCompleted(31949)" >
+		<If Condition="HasQuest(31949) &amp;&amp; !IsQuestCompleted(31949) &amp;&amp; IsObjectiveComplete(1, 31949)" >
+			<CustomBehavior File="Message" Text="Checking for 3 witchberries to harvest." LogColor="LawnGreen"  />
+			<CustomBehavior File="FlyTo" DestName="My Farm" X="-168.9621" Y="639.7676" Z="165.4103" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="InteractWith" MobId="66085" NumOfTimes="3" WaitForNpcs="False"/>
+		</If>
+		<If Condition="(GetItemCount(89326) &lt; 3) &amp;&amp; !IsObjectiveComplete(1, 31949)" >
+			<CustomBehavior File="Message" Text="Buying Seeds" LogColor="Green" />
+			<CustomBehavior File="FlyTo" X="-267.1079" Y="603.3618" Z="167.5482" />
+			<If Condition="GetItemCount(89326) == 0" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="89326" BuyItemCount="3" X="-268.316" Y="603.4114" Z="167.5478" />
+			<ElseIf Condition="GetItemCount(89326) == 1" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="89326" BuyItemCount="2" X="-268.316" Y="603.4114" Z="167.5478" />
+			</ElseIf>
+			<ElseIf Condition="GetItemCount(89326) == 2" >
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="89326" BuyItemCount="1" X="-268.316" Y="603.4114" Z="167.5478" />
+			</ElseIf>
+			</If>
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		</If>
+		<If Condition="!IsObjectiveComplete(1, 31949)" >
+			<CustomBehavior File="FlyTo" DestName="My Farm" X="-168.9621" Y="639.7676" Z="165.4103" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="Message" Text="Planting Seeds" LogColor="LawnGreen" />
+			<CustomBehavior File="InteractWith" MobId="60172" NumOfTimes="3" WaitForNpcs="False"/>
+			<CustomBehavior File="InteractWith" MobId="58562" NumOfTimes="3" WaitForNpcs="False"/>
+			<CustomBehavior File="InteractWith" MobId="58563" InteractByUsingItemId="89326" NumOfTimes="3" WaitForNpcs="False" WaitTime="3000"/>
+		</If>
+	</If>
+		
+	<If Condition="HasQuest(31949) &amp;&amp; IsQuestCompleted(31949)" >
+		<CustomBehavior File="FlyTo" DestName="Nana Mudclaw" X="-151.6855" Y="518.4195" Z="208.5714" />
+		<CustomBehavior File="ForcedDismount" />
+		<TurnIn QuestName="Nana's Vote III: Witchberry Julep" QuestId="31949" TurnInName="Nana Mudclaw" TurnInId="64597" />
+	</If>
 		
 <!-- Checking your crops for issues -->
 
@@ -184,7 +266,7 @@
 
 <!-- Infested Plants -->
 	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66125, 63182, 63226, 66110, 63145, 60026, 63247, 63262, 66082, 63162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
-		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215163, 215162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="IsQuestCompleted(31937)" >
 			<!-- Use Pest Repeller 1 -->
 			<CustomBehavior File="InteractWith" MobId="215163" WaitForNpcs="False" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
 			<!-- Use Pest Repeller 2 -->
@@ -197,7 +279,7 @@
 
 <!-- Parched Plants -->
 	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66127, 63183, 63227, 66111, 63144, 58565, 63263, 63248, 66083, 63163 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
-		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215137, 215135 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="IsQuestCompleted(31936)" >
 			<!-- Use Sprinkler 1 -->
 			<CustomBehavior File="InteractWith" MobId="215137" WaitForNpcs="False" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
 			<!-- Use Sprinkler 2 -->
@@ -235,22 +317,6 @@
 											MobId6="63223" MobId7="63160" MobId8="66123" MobId9="63260" MobId10="66080"
 											WaitForNpcs="False" WaitTime="10"/>
 	</While>
-		
-	<If Condition="HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)">
-		<CustomBehavior File="FlyTo" X="-257.07" Y="601.18" Z="171.35" />
-		<CustomBehavior File="ForcedDismount" />
-		<TurnIn QuestName="Farmer Fung's Vote III: Crazy For Cabbage" QuestId="31947" TurnInName="Farmer Fung" TurnInId="57298" />
-		<CustomBehavior File="Message" Text="Back to farm to finish Farmer Fung's vote." LogColor="Green" />
-		<CustomBehavior File="FlyTo" DestName="My Farm" X="-169.7904" Y="647.9799" Z="165.4094" />
-	</If>
-	
-<!-- Nana's Vote I: Nana's Secret Recipe -->
-	<If Condition="HasQuest(30519)">
-		<CustomBehavior File="FlyTo" X="-146.9766" Y="520.9451" Z="212.4847" />
-		<CustomBehavior File="ForcedDismount" />
-		<TurnIn QuestName="Nana's Vote I: Nana's Secret Recipe" QuestId="30519" TurnInName="Nana Mudclaw" TurnInId="64597" />
-		<PickUp QuestName="Nana's Vote II: The Sacred Springs" QuestId="31948" GiverName="Nana Mudclaw" GiverId="64597" />
-	</If>
 		
 	<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Dailies [Brodie]" />
 
