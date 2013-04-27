@@ -2,6 +2,10 @@ Patch Notes
 
 4/27/13
 
+r226
+Pokehbuddy
+-- Removed redundant settings files, only personally updated ones included
+
 r225
 The Tillers
 -- Work Order: The Klaxxi support added
