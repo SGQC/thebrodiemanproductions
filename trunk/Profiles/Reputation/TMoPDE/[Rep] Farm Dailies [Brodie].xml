@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming/Work Order Daily r225</Name>
+	<Name>Farming/Work Order Daily r227</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -541,7 +541,7 @@
 
 <!-- Infested Plants -->
 	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66125, 63182, 63226, 66110, 63145, 60026, 63247, 63262, 66082, 63162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
-		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215163, 215162 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="IsQuestCompleted(31937)" >
 			<!-- Use Pest Repeller 1 -->
 			<CustomBehavior File="InteractWith" MobId="215163" WaitForNpcs="False" WaitTime="1000" X="-154.149" Y="644.668" Z="165.409" />
 			<!-- Use Pest Repeller 2 -->
@@ -554,7 +554,7 @@
 
 <!-- Parched Plants -->
 	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66127, 63183, 63227, 66111, 63144, 58565, 63263, 63248, 66083, 63163 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
-		<If Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; new [] { 215137, 215135 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
+		<If Condition="IsQuestCompleted(31936)" >
 			<!-- Use Sprinkler 1 -->
 			<CustomBehavior File="InteractWith" MobId="215137" WaitForNpcs="False" WaitTime="1000" X="-154.328" Y="653.969" Z="165.169" />
 			<!-- Use Sprinkler 2 -->
