@@ -1,5 +1,24 @@
 Patch Notes
 
+4/27/13
+
+r224
+Quest Behaviors
+-- More updates from ChinaJade
+The Tillers
+-- Possible update to fix Jogu the Drunk quest pickups (if has more than 1)
+-- Added Buy a Fish a Drink?
+-- Preliminary Friendship items support
+-- Chasing the Chicken - Should no longer try to attack out of range enemies
+Tillers Friendship
+-- Added Item support of Tillers Friends
+Golden Lotus
+-- Urgolax added to the Avoid section
+Court of Bones
+-- Ashes of the Enemy - LoS issues addressed
+Isle of Thunder PvP (Alliance)
+-- Added Tactical Mana Bombs
+
 4/26/13
 
 r223

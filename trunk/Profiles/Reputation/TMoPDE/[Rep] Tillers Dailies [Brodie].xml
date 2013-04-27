@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r217</Name>
+	<Name>The Tillers r224</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -346,7 +346,7 @@
 	</If>
 	
 <!-- Sungshin Ironpaw -->
-	<While Condition="HasQuestAvailable(64231)" >
+	<While Condition="HasQuestAvailable(64231, &quot;Available&quot;)" >
 		<CustomBehavior File="InteractWith"  MobId="64231" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -388,7 +388,7 @@
 		<If Condition="IsQuestCompleted(31338) &amp;&amp; IsQuestCompleted(31339) &amp;&amp; IsQuestCompleted(31340)" >
 			<PickUp QuestName="Not in Chee Chee's Backyard" QuestId="30324" GiverName="Chee Chee" GiverId="58709" />
 		<Else>
-			<While Condition="HasQuestAvailable(58709)" >
+			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
 				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -409,7 +409,7 @@
 		<If Condition="IsQuestCompleted(31945)" >
 			<PickUp QuestName="Money Matters" QuestId="30322" GiverName="Gina Mudclaw" GiverId="58706" />
 		<Else>
-			<While Condition="HasQuestAvailable(58706)" >
+			<While Condition="HasQuestAvailable(58706, &quot;Available&quot;)" >
 				<CustomBehavior File="InteractWith"  MobId="58706" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -424,7 +424,7 @@
 		<If Condition="IsQuestCompleted(30518) &amp;&amp; IsQuestCompleted(31947)" >
 			<PickUp QuestName="Water, Water Everywhere" QuestId="30317" GiverName="Farmer Fung" GiverId="57298" />
 		<Else>
-			<While Condition="HasQuestAvailable(57298)" >
+			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
 				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -439,7 +439,7 @@
 		<If Condition="IsQuestCompleted(31534) &amp;&amp; IsQuestCompleted(31537) &amp;&amp; IsQuestCompleted(31538)" >
 			<PickUp QuestName="You Have to Burn The Ropes" QuestId="30327" GiverName="Ella" GiverId="58647" />
 		<Else>
-			<While Condition="HasQuestAvailable(58647)" >
+			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
 				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -454,7 +454,7 @@
 		<If Condition="IsQuestCompleted(30522)" >
 			<PickUp QuestName="Pest Problems" QuestId="30319" GiverName="Haohan" GiverId="57402" />
 		<Else>
-			<While Condition="HasQuestAvailable(57402)" >
+			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
 				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -470,17 +470,17 @@
 	</If>
 
 <!-- Jogu the Drunk -->
-	<While Condition="HasQuestAvailable(58710)" >
+	<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Fish Fellreed -->
-	<While Condition="HasQuestAvailable(58705)" >
+	<While Condition="HasQuestAvailable(58705, &quot;Available&quot;)" >
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith"  MobId="58705" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58705" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -491,8 +491,8 @@
 		<If Condition="IsQuestCompleted(31531) &amp;&amp; IsQuestCompleted(31529) &amp;&amp; IsQuestCompleted(31532)" >
 			<PickUp QuestName="Where It Counts" QuestId="30325" GiverName="Sho" GiverId="58708" />
 		<Else>
-			<While Condition="HasQuestAvailable(58708)" >
-				<CustomBehavior File="InteractWith"  MobId="58708" WaitTime="1000" />
+			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -729,7 +729,7 @@
 		<CustomBehavior File="FlyTo" DestName="Chicken Chasing! Spot #2" X="-230.5073" Y="1385.025" Z="222.1091" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="HasQuest(30318) &amp;&amp; !HasItem(80223)">
-			<CustomBehavior File="InteractWith" MobId="58918" CollectionDistance="250" />
+			<CustomBehavior File="InteractWith" MobId="58918" CollectionDistance="250" ProactiveCombatStrategy="NoClear" />
 			<If Condition="Me.HasAura(114652)" >
 				<CustomBehavior File="InteractWith" MobId="210604" Range="8" MinRange="3" X="-225.0399" Y="1424.528" Z="223.0623" WaitForNpcs="False" />
 				<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
@@ -1071,6 +1071,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="A Gift for Ella" QuestId="30474" Type="CollectItem" ItemId="79871" CollectCount="1" />
 	</If>
+	
 <!-- A Gift for Fung -->
 	<If Condition="HasQuest(30475) &amp;&amp; !IsQuestCompleted(30475)" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Fung" LogColor="Green" />
@@ -1115,6 +1116,7 @@
 		<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
 		<CustomBehavior File="InteractWith" MobId="58712" InteractByGossipOptions="1" QuestId="30475" />
 	</If>
+	
 <!-- A Gift for Fish -->
 	<If Condition="HasQuest(30473) &amp;&amp; !IsQuestCompleted(30473)" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Fish" LogColor="Green"  />
@@ -1145,7 +1147,7 @@
 
 <!-- A Gift for Haohan -->
 	<If Condition="HasQuest(30477) &amp;&amp; !IsQuestCompleted(30477)" >
-		<CustomBehavior File="Message" Text="Starting A Gift for Haohan" LogColor="Green"  />
+		<CustomBehavior File="Message" Text="Starting A Gift for Haohan" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30477" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="348.98" Y="1021.83" Z="145.40" />
 		<CustomBehavior File="ForcedDismount" />
@@ -1153,6 +1155,14 @@
 			<CustomBehavior File="InteractWith" QuestId="30477" MobId="59639" MobState="Alive" MovementBy="ClickToMoveOnly" WaitTime="1000" CollectionDistance="3000" />
 		</While>
 		<CustomBehavior File="AscendInWater" />
+	</If>
+	
+<!-- Buy a Fish a Drink? -->
+	<If Condition="HasQuest(31320) &amp;&amp; !IsQuestCompleted(31320)" >
+		<CustomBehavior File="Message" Text="Starting Buy a Fish a Drink" LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="-216.7406" Y="503.1344" Z="190.8141" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" QuestId="31320" MobId="64319" InteractByBuyingItemId="81407" BuyItemCount="1" />
 	</If>
 
 <!-- Quest Turn ins -->
@@ -1190,6 +1200,10 @@
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Halfhill." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
 		<CustomBehavior File="ForcedDismount" />
+	</If>
+	
+	<If Condition="HasItem(79264) || HasItem(79267) || HasItem(79226) || HasItem(79265) || HasItem(79268)" >
+		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Tillers Friends [Brodie]" />
 	</If>
 
 <!-- The Mile-High Grub -->
@@ -1270,6 +1284,11 @@
 <!-- Weed War II -->
 	<If Condition="(HasQuest(30321) &amp;&amp; IsQuestCompleted(30321))" >
 		<TurnIn QuestName="Weed War II" QuestId="30321" TurnInName="Jogu the Drunk" TurnInId="58710" />
+	</If>
+	
+<!-- Buy a Fish a Drink? -->
+	<If Condition="(HasQuest(31320) &amp;&amp; IsQuestCompleted(31320))" >
+		<TurnIn QuestName="Buy a Fish a Drink?" QuestId="31320" TurnInName="Jogu the Drunk" TurnInId="58710" />
 	</If>
 
 <!-- A Gift for Old Hillpaw -->
