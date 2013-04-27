@@ -2,6 +2,10 @@ Patch Notes
 
 4/26/13
 
+r223
+Court of Bones
+-- Ashes of the Enemy - Added range checks and NonCompeteDistance
+
 r222
 Quest Behaviors
 -- Missing path on all Vehicles QBs
