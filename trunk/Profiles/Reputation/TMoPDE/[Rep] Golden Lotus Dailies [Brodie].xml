@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Golden Lotus r224</Name>
+	<Name>The Golden Lotus r228</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -267,7 +267,7 @@
 		<CustomBehavior File="FlyTo" X="1419.408" Y="1197.767" Z="413.5989" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30312)" >
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="84242" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" InteractByUsingItemId="84242" PreInteractMountStrategy="Dismount" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="1000" />
 		</While>
 	</If>
 
