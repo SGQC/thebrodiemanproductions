@@ -2,6 +2,10 @@ Patch Notes
 
 4/28/13
 
+r230
+Pokehbuddy
+-- Added Frog class pets
+
 r229
 Shado Pan
 -- Added Blackspot for rooftop bomb
