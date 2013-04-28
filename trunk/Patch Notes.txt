@@ -2,6 +2,12 @@ Patch Notes
 
 4/28/13
 
+r232
+Pokehbuddy
+-- Added Clockwork Gnome logic
+-- Added Kirin Tor Familiar logic
+-- Added Lucky Quilen Cub logic
+
 r231
 Pokehbuddy
 -- Added Snake class pets
