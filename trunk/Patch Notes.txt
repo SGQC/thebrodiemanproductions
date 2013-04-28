@@ -1,5 +1,23 @@
 Patch Notes
 
+4/28/13
+
+r229
+Shado Pan
+-- Added Blackspot for rooftop bomb
+-- Corrected quest pickup issues with Ban Bearheart
+-- Should now turn in quests to Fei Li and Yalia in the field (BETA)
+Ruins of Guo-Lai
+-- Corrected missing C# info
+Isle of Thunder (Overall)
+-- Should interact with the Assignment map better
+Isle of Thunder PvP (Alliance)
+-- Added Deconstruction
+-- Breaking Down the Defenses - Should no longer try to kill targets, just interact.
+-- Will no longer consider Wards as mobs with agro
+-- Captive Audience - Increased speed of post-interact behaviors
+-- Should properly complete final quest on gossip
+
 4/27/13
 
 r228

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder Pvp (Alliance) r224</Name>
+	<Name>Isle of Thunder Pvp (Alliance) r229</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -85,7 +85,7 @@
 					!HasQuest(32637) &amp;&amp; !HasQuest(32301) &amp;&amp; !HasQuest(32627) &amp;&amp; !HasQuest(32632) &amp;&amp;
 					!HasQuest(32633) &amp;&amp; !HasQuest(32634) &amp;&amp; !HasQuest(32639) &amp;&amp; !HasQuest(32638) &amp;&amp;
 					!HasQuest(32628)" >
-		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="70561" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption2.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
@@ -143,7 +143,7 @@
 		<CustomBehavior File="Message" Text="Starting Breaking Down the Defenses" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32634" LootMobs="True" PullDistance="10" />
 		<While Condition="!IsQuestCompleted(32634)" >
-			<CustomBehavior File="InteractWith" QuestId="32634" MobId="217758" ObjectType="GameObject" CollectionDistance="200" WaitForNpcs="False" WaitTime="1000" >
+<!--			<CustomBehavior File="InteractWith" QuestId="32634" MobId="217758" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="200" WaitTime="1000" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="6876.185" Y="5851.19" Z="6.803259" />
 					<Hotspot X="6930.86" Y="5879.693" Z="6.478997" />
@@ -153,8 +153,17 @@
 					<Hotspot X="6863.453" Y="6136.291" Z="6.377936" />
 					<Hotspot X="6913.935" Y="6135.145" Z="9.25563" />
 				</HuntingGrounds>
-			</CustomBehavior>
+			</CustomBehavior> -->
 		</While>
+		<CustomBehavior File="CollectThings" QuestId="32634" CollectUntil="QuestComplete" MobId="217758" HuntingGroundRadius="120" PostInteractDelay="1000" >
+			<Hotspot X="6876.185" Y="5851.19" Z="6.803259" />
+			<Hotspot X="6930.86" Y="5879.693" Z="6.478997" />
+			<Hotspot X="6896.358" Y="5954.501" Z="16.43653" />
+			<Hotspot X="6876.919" Y="6015.44" Z="11.68221" />
+			<Hotspot X="6818.232" Y="6062.28" Z="11.58464" />
+			<Hotspot X="6863.453" Y="6136.291" Z="6.377936" />
+			<Hotspot X="6913.935" Y="6135.145" Z="9.25563" />
+		</CustomBehavior>
 	</If>
 	
 <!-- Tactical Mana Bombs -->
@@ -163,15 +172,15 @@
 		<CustomBehavior File="UserSettings" QuestId="32628" LootMobs="True" PullDistance="1" />
 		<While Condition="!IsObjectiveComplete(2,32628)" >
 			<RunTo X="7096.895" Y="6154.984" Z="-1.53" />
-			<CustomBehavior File="InteractWith" QuestId="32628" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69604" Range="6" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32628" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69604" Range="6" WaitForNpcs="False" WaitTime="1000" />
 		</While>
 		<While Condition="!IsObjectiveComplete(1,32628)" >
 			<RunTo X="7279.555" Y="5946.754" Z="0.1" />
-			<CustomBehavior File="InteractWith" QuestId="32628" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69560" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32628" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69560" WaitForNpcs="False" WaitTime="1000" />
 		</While>
 		<While Condition="!IsObjectiveComplete(3,32628)" >
 			<RunTo X="7019.625" Y="5939.215" Z="29.08454" />
-			<CustomBehavior File="InteractWith" QuestId="32628" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69607" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32628" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69607" WaitForNpcs="False" WaitTime="1000" />
 		</While>
 	</If>
 	
@@ -180,7 +189,7 @@
 		<CustomBehavior File="Message" Text="Starting Overpowered" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32637" LootMobs="True" PullDistance="10" />
 		<While Condition="!IsQuestCompleted(32637)" >
-			<CustomBehavior File="InteractWith" QuestId="32637" MobId="216299" ObjectType="GameObject" InteractByUsingItemId="95360" WaitForNpcs="False" WaitTime="1000" >
+			<CustomBehavior File="InteractWith" QuestId="32637" MobId="216299" IgnoreLoSToTarget="True" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" MinRange="2" InteractByUsingItemId="95360" WaitForNpcs="False" WaitTime="1000" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="6927.023" Y="6134.432" Z="11.4087" />
 					<Hotspot X="6981.752" Y="5886.899" Z="6.490939" />
@@ -201,7 +210,7 @@
 		<CustomBehavior File="Message" Text="Starting Captive Audience" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32636" LootMobs="True" PullDistance="5" />
 		<While Condition="!IsQuestCompleted(32636)" >
-			<CustomBehavior File="InteractWith" QuestId="32636" MobId="216987" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" >
+			<CustomBehavior File="InteractWith" QuestId="32636" MobId="216987" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="7176.07" Y="6041.728" Z="0.2944413" />
 					<Hotspot X="7112.723" Y="6090.642" Z="11.28364" />
@@ -232,12 +241,19 @@
 		<Objective QuestName="Old Enemies" QuestId="32301" Type="KillMob" MobId="70268" KillCount="10" />
 	</If>
 	
+<!-- Deconstruction -->
+ 	<If Condition="HasQuest(32639) &amp;&amp; !IsQuestCompleted(32639)">
+		<CustomBehavior File="Message" Text="Starting Old Enemies" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="32639" LootMobs="True" PullDistance="20" />
+		<Objective QuestName="Deconstruction" QuestId="32639" Type="KillMob" MobId="67930" KillCount="3" />
+	</If>
+	
 <!-- Charged Moganite -->
  	<If Condition="HasQuest(32627) &amp;&amp; !IsQuestCompleted(32627)">
 		<CustomBehavior File="Message" Text="Starting Charged Moganite" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32627" UseMount="True" LootMobs="True" PullDistance="10" />
 		<While Condition="!Me.HasAura(137257)" >
-			<CustomBehavior File="InteractWith" QuestId="32627" MobId="218192" IgnoreCombat="True" ObjectType="GameObject" WaitForNpcs="False" WaitTime="1000" >
+			<CustomBehavior File="InteractWith" QuestId="32627" MobId="218192" IgnoreCombat="True" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False" WaitTime="1000" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="6753.617" Y="5773.006" Z="8.33128" />
 					<Hotspot X="6726.25" Y="5964.364" Z="8.430456" />
@@ -321,12 +337,8 @@
 	<While Condition="HasQuestAvailable(67992)" >
 		<CustomBehavior File="InteractWith" MobId="67992" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton"/>
 	</While>
-	
-	<If Condition="HasQuest(32631)" >
-		<TurnIn QuestName="High Recognition" QuestId="32631" TurnInName="Lady Jaina Proudmoore" TurnInId="67992" />
-	</If>
 
 <!-- All Done, hearth out and leave the island -->
 	<If Condition="!IsQuestCompleted(32644)" >
