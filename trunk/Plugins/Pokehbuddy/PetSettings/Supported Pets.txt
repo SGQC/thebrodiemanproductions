@@ -1,5 +1,20 @@
 Supported Pets
 - Ancona Chicken
+- Biletoad
 - Chicken
+- Frog
+- Garden Frog
+- Horny Toad
+- Huge Toad
+- Jubling
+- Jungle Darter
+- Leopard Tree Frog
+- Lifelike Toad
+- Mac Frog
+- Mojo
+- Small Frog
 - Szechuan Chicken
+- Tree Frog
 - Westfall Chicken
+- Wood Frog
+- Yellow-Bellied Bullfrog
