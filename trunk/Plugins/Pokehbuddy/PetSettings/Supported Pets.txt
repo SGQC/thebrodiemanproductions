@@ -1,20 +1,42 @@
 Supported Pets
+- Adder
+- Albino Snake
 - Ancona Chicken
+- Ash Viper
 - Biletoad
+- Black Kingsnake
+- Brown Snake
 - Chicken
+- Cobra Hatchling
+- Coral Adder
+- Coral Snake
+- Crimson Snake
+- Emerald Boa
 - Frog
 - Garden Frog
+- Grove Viper
 - Horny Toad
 - Huge Toad
 - Jubling
 - Jungle Darter
+- King Snake
 - Leopard Tree Frog
 - Lifelike Toad
 - Mac Frog
+- Moccasin
 - Mojo
+- Rat Snake
+- Rattlesnake
+- Rock Viper
+- Sidewinder
 - Small Frog
+- Snake
 - Szechuan Chicken
+- Temple Snake
+- Toad
 - Tree Frog
+- Tree Python
+- Water Snake
 - Westfall Chicken
 - Wood Frog
 - Yellow-Bellied Bullfrog
