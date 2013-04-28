@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r208</Name>
+	<Name>Shado Pan Dailies r229</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -29,8 +29,9 @@
 	</AvoidMobs>
    
 	<Blackspots>
-		<Blackspot X="1337.77" Y="2655.481" Z="429.9347" Radius="500" Height="200" />
-		<Blackspot X="2896.737" Y="3431.529" Z="377.3549" Radius="4.5" /> 
+		<!--<Blackspot X="1337.77" Y="2655.481" Z="429.9347" Radius="500" Height="200" />-->
+		<Blackspot X="2896.737" Y="3431.529" Z="377.3549" Radius="4.5" />
+		<Blackspot X="2960.7" Y="3420.746" Z="394.5116" Radius="10.57025" />
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -372,8 +373,20 @@
 <!-- Ban Bearheart -->
 	<If Condition="HasQuestAvailable(62304)" >
 		<While Condition="HasQuestAvailable(62304)" >
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
-			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton4" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton5" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
 		</While>
 
@@ -944,6 +957,83 @@
 
 <!-- Quest Turn ins -->
 
+	<If Condition="HasAura(122766)" > <!-- Yalia -->
+		<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
+			<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31041) &amp;&amp; IsQuestCompleted(31041)" >
+			<TurnIn QuestName="Egg Rescue" QuestId="31041" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31046) &amp;&amp; IsQuestCompleted(31046)" >
+			<TurnIn QuestName="Little Hatchlings" QuestId="31046" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31039" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)" >
+			<TurnIn QuestName="Onyx Hearts" QuestId="31042" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)" >
+			<TurnIn QuestName="Dark Arts" QuestId="31043" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)" >
+			<TurnIn QuestName="Born Free" QuestId="31047" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31105" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31048) &amp;&amp; IsQuestCompleted(31048)" >
+			<TurnIn QuestName="Grave Consequences" QuestId="31048" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31045) &amp;&amp; IsQuestCompleted(31045)" >
+			<TurnIn QuestName="Illusions of the Past" QuestId="31045" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31044) &amp;&amp; IsQuestCompleted(31044)" >
+			<TurnIn QuestName="Bronze Claws" QuestId="31044" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+		<If Condition="HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
+		</If>
+	<ElseIf Condition="HasAura(122298)" > <!-- Fei Li -->
+		<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
+			<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31041) &amp;&amp; IsQuestCompleted(31041)" >
+			<TurnIn QuestName="Egg Rescue" QuestId="31041" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31046) &amp;&amp; IsQuestCompleted(31046)" >
+			<TurnIn QuestName="Little Hatchlings" QuestId="31046" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31039" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)" >
+			<TurnIn QuestName="Onyx Hearts" QuestId="31042" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)" >
+			<TurnIn QuestName="Dark Arts" QuestId="31043" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)" >
+			<TurnIn QuestName="Born Free" QuestId="31047" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31105" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31048) &amp;&amp; IsQuestCompleted(31048)" >
+			<TurnIn QuestName="Grave Consequences" QuestId="31048" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31045) &amp;&amp; IsQuestCompleted(31045)" >
+			<TurnIn QuestName="Illusions of the Past" QuestId="31045" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31044) &amp;&amp; IsQuestCompleted(31044)" >
+			<TurnIn QuestName="Bronze Claws" QuestId="31044" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+		<If Condition="HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Fei Li" TurnInId="62354" />
+		</If>
+	</ElseIf>
+	</If>
+
 	<If Condition="((HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)) ||
 			(HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)) ||
 			(HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)) ||
@@ -976,95 +1066,95 @@
 		<CustomBehavior File="ForcedDismount" />
 	</If>
 
-  	<If Condition="HasQuest(31127) &amp;&amp; IsQuestCompleted(31127)" >
+	<If Condition="HasQuest(31127) &amp;&amp; IsQuestCompleted(31127)" >
 		<TurnIn QuestName="The Challenger's Ring: Chao the Voice" QuestId="31127" TurnInName="Master Snowdrift" TurnInId="63009" />
 	</If>
 
-  	<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
+	<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
 		<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31041) &amp;&amp; IsQuestCompleted(31041)" >
+	<If Condition="HasQuest(31041) &amp;&amp; IsQuestCompleted(31041)" >
 		<TurnIn QuestName="Egg Rescue" QuestId="31041" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31046) &amp;&amp; IsQuestCompleted(31046)" >
+	<If Condition="HasQuest(31046) &amp;&amp; IsQuestCompleted(31046)" >
 		<TurnIn QuestName="Little Hatchlings" QuestId="31046" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)" >
+	<If Condition="HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)" >
 		<TurnIn QuestName="The Mogu Menace" QuestId="31039" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)" >
+	<If Condition="HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)" >
 		<TurnIn QuestName="Onyx Hearts" QuestId="31042" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)" >
+	<If Condition="HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)" >
 		<TurnIn QuestName="Dark Arts" QuestId="31043" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)" >
+	<If Condition="HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)" >
 		<TurnIn QuestName="Born Free" QuestId="31047" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)" >
+	<If Condition="HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)" >
 		<TurnIn QuestName="The Mogu Menace" QuestId="31105" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31048) &amp;&amp; IsQuestCompleted(31048)" >
+	<If Condition="HasQuest(31048) &amp;&amp; IsQuestCompleted(31048)" >
 		<TurnIn QuestName="Grave Consequences" QuestId="31048" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31045) &amp;&amp; IsQuestCompleted(31045)" >
+	<If Condition="HasQuest(31045) &amp;&amp; IsQuestCompleted(31045)" >
 		<TurnIn QuestName="Illusions of the Past" QuestId="31045" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31044) &amp;&amp; IsQuestCompleted(31044)" >
+	<If Condition="HasQuest(31044) &amp;&amp; IsQuestCompleted(31044)" >
 		<TurnIn QuestName="Bronze Claws" QuestId="31044" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)" >
+	<If Condition="HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)" >
 		<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Ban Bearheart" TurnInId="62304" />
 	</If>
 
-  	<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
+	<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
 		<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Master Snowdrift" TurnInId="63009" />
 	</If>
 
-  	<If Condition="HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)" >
+	<If Condition="HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)" >
 		<TurnIn QuestName="Assault Deadtalker's Plateau" QuestId="31114" TurnInName="Master Snowdrift" TurnInId="63009" />
 	</If>
 
-  	<If Condition="HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)" >
+	<If Condition="HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)" >
 		<TurnIn QuestName="The Deadtalker's Cipher" QuestId="31118" TurnInName="Master Snowdrift" TurnInId="63009" />
 	</If>
 
-  	<If Condition="HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)" >
+	<If Condition="HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)" >
 		<TurnIn QuestName="The Enemy of My Enemy...Is Still My Enemy" QuestId="31119" TurnInName="Master Snowdrift" TurnInId="63009" />
 	</If>
 
-  	<If Condition="HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)" >
+	<If Condition="HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)" >
 		<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Master Snowdrift" TurnInId="63009" />
 	</If>
 
-  	<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
+	<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
 		<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Ling of the Six Pools" TurnInId="63614" />
 	</If>
 
-  	<If Condition="HasQuest(31198) &amp;&amp; IsQuestCompleted(31198)" >
+	<If Condition="HasQuest(31198) &amp;&amp; IsQuestCompleted(31198)" >
 		<TurnIn QuestName="A Morale Victory" QuestId="31198" TurnInName="Ling of the Six Pools" TurnInId="63614" />
 	</If>
 
-  	<If Condition="HasQuest(31197) &amp;&amp; IsQuestCompleted(31197)" >
+	<If Condition="HasQuest(31197) &amp;&amp; IsQuestCompleted(31197)" >
 		<TurnIn QuestName="The Bigger They Come..." QuestId="31197" TurnInName="Ling of the Six Pools" TurnInId="63614" />
 	</If>
 
-  	<If Condition="HasQuest(31196) &amp;&amp; IsQuestCompleted(31196)" >
+	<If Condition="HasQuest(31196) &amp;&amp; IsQuestCompleted(31196)" >
 		<TurnIn QuestName="Sra'vess Wetwork" QuestId="31196" TurnInName="Ling of the Six Pools" TurnInId="63614" />
 	</If>
 
-  	<If Condition="HasQuest(31200) &amp;&amp; IsQuestCompleted(31200)" >
+	<If Condition="HasQuest(31200) &amp;&amp; IsQuestCompleted(31200)" >
 		<TurnIn QuestName="Fumigation" QuestId="31200" TurnInName="Ling of the Six Pools" TurnInId="63614" />
 	</If>
 
@@ -1073,27 +1163,6 @@
 	</If>
 
 <!-- Phase 2 -->
-
-<!-- Ban Bearheart -->
-	<While Condition="HasQuestAvailable(62304)" >
-		<CustomBehavior File="InteractWith" MobId="62304" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-
-<!-- Ling of the Six Pools -->
-	<While Condition="HasQuestAvailable(63614)" >
-		<CustomBehavior File="InteractWith" MobId="63614" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
-
-<!-- Master Snowdrift -->
-	<While Condition="HasQuestAvailable(63009)" >
-		<CustomBehavior File="InteractWith" MobId="63009" NumOfTimes="1" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-	</While>
 
 <!-- In Sprite of Everything -->
  	<If Condition="HasQuest(31049) &amp;&amp; !IsQuestCompleted(31049)">
