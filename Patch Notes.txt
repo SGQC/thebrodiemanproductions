@@ -2,6 +2,10 @@ Patch Notes
 
 4/27/13
 
+r228
+Golden Lotus
+-- Given a Second Chance - Dismount before use
+
 r227
 The Tillers
 -- Expanded Nana's Vote support
