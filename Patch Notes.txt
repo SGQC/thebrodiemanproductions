@@ -2,6 +2,10 @@ Patch Notes
 
 4/28/13
 
+r231
+Pokehbuddy
+-- Added Snake class pets
+
 r230
 Pokehbuddy
 -- Added Frog class pets
