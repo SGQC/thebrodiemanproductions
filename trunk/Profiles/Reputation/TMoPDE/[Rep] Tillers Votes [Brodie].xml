@@ -1,5 +1,5 @@
 ﻿<HBProfile>
-	<Name>Tillers Votes r227</Name>
+	<Name>Tillers Votes r233</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
 
@@ -115,11 +115,12 @@
 		<While Condition="!IsObjectiveComplete(1,31947)" >
 			<CustomBehavior File="FlyTo" DestName="My Farm" X="-168.9621" Y="639.7676" Z="165.4103" />
 			<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			<CustomBehavior File="InteractWith" MobId="60172" NumOfTimes="1" WaitForNpcs="False"/>
 			<CustomBehavior File="InteractWith" MobId="58562" NumOfTimes="1" WaitForNpcs="False"/>
 			<CustomBehavior File="InteractWith" MobId="58563" InteractByUsingItemId="79102" WaitForNpcs="False" WaitTime="3000"/>
 		</While>
+	</If>
 		
 	<If Condition="HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)">
 		<CustomBehavior File="FlyTo" X="-257.07" Y="601.18" Z="171.35" />
@@ -168,7 +169,7 @@
 <!-- Nana's Vote III: Witchberry Julep -->
 	<If Condition="HasQuest(31949) &amp;&amp; !IsQuestCompleted(31949)" >
 		<If Condition="HasQuest(31949) &amp;&amp; !IsQuestCompleted(31949) &amp;&amp; IsObjectiveComplete(1, 31949)" >
-			<CustomBehavior File="Message" Text="Checking for 3 witchberries to harvest." LogColor="LawnGreen"  />
+			<CustomBehavior File="Message" Text="Checking for witchberries" LogColor="Green"  />
 			<CustomBehavior File="FlyTo" DestName="My Farm" X="-168.9621" Y="639.7676" Z="165.4103" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="66085" NumOfTimes="3" WaitForNpcs="False"/>
@@ -190,7 +191,7 @@
 		<If Condition="!IsObjectiveComplete(1, 31949)" >
 			<CustomBehavior File="FlyTo" DestName="My Farm" X="-168.9621" Y="639.7676" Z="165.4103" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="Message" Text="Planting Seeds" LogColor="LawnGreen" />
+			<CustomBehavior File="Message" Text="Planting Seeds" LogColor="Green" />
 			<CustomBehavior File="InteractWith" MobId="60172" NumOfTimes="3" WaitForNpcs="False"/>
 			<CustomBehavior File="InteractWith" MobId="58562" NumOfTimes="3" WaitForNpcs="False"/>
 			<CustomBehavior File="InteractWith" MobId="58563" InteractByUsingItemId="89326" NumOfTimes="3" WaitForNpcs="False" WaitTime="3000"/>

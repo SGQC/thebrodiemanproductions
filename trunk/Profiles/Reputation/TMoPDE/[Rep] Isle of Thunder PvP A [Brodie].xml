@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder Pvp (Alliance) r229</Name>
+	<Name>Isle of Thunder Pvp (Alliance) r233</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -142,27 +142,16 @@
  	<If Condition="HasQuest(32634) &amp;&amp; !IsQuestCompleted(32634)">
 		<CustomBehavior File="Message" Text="Starting Breaking Down the Defenses" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32634" LootMobs="True" PullDistance="10" />
-		<While Condition="!IsQuestCompleted(32634)" >
-<!--			<CustomBehavior File="InteractWith" QuestId="32634" MobId="217758" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="200" WaitTime="1000" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="6876.185" Y="5851.19" Z="6.803259" />
-					<Hotspot X="6930.86" Y="5879.693" Z="6.478997" />
-					<Hotspot X="6896.358" Y="5954.501" Z="16.43653" />
-					<Hotspot X="6876.919" Y="6015.44" Z="11.68221" />
-					<Hotspot X="6818.232" Y="6062.28" Z="11.58464" />
-					<Hotspot X="6863.453" Y="6136.291" Z="6.377936" />
-					<Hotspot X="6913.935" Y="6135.145" Z="9.25563" />
-				</HuntingGrounds>
-			</CustomBehavior> -->
-		</While>
-		<CustomBehavior File="CollectThings" QuestId="32634" CollectUntil="QuestComplete" MobId="217758" HuntingGroundRadius="120" PostInteractDelay="1000" >
-			<Hotspot X="6876.185" Y="5851.19" Z="6.803259" />
-			<Hotspot X="6930.86" Y="5879.693" Z="6.478997" />
-			<Hotspot X="6896.358" Y="5954.501" Z="16.43653" />
-			<Hotspot X="6876.919" Y="6015.44" Z="11.68221" />
-			<Hotspot X="6818.232" Y="6062.28" Z="11.58464" />
-			<Hotspot X="6863.453" Y="6136.291" Z="6.377936" />
-			<Hotspot X="6913.935" Y="6135.145" Z="9.25563" />
+		<CustomBehavior File="InteractWith" QuestId="32634" MobId="217758" NumOfTimes="100" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="200" WaitTime="1000" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="6876.185" Y="5851.19" Z="6.803259" />
+				<Hotspot X="6930.86" Y="5879.693" Z="6.478997" />
+				<Hotspot X="6896.358" Y="5954.501" Z="16.43653" />
+				<Hotspot X="6876.919" Y="6015.44" Z="11.68221" />
+				<Hotspot X="6818.232" Y="6062.28" Z="11.58464" />
+				<Hotspot X="6863.453" Y="6136.291" Z="6.377936" />
+				<Hotspot X="6913.935" Y="6135.145" Z="9.25563" />
+			</HuntingGrounds>
 		</CustomBehavior>
 	</If>
 	

@@ -1,5 +1,13 @@
 Patch Notes
 
+4/29/13
+
+r233
+Tillers Votes
+-- Corrected bad If statement, causing loop
+Isle of Thunder PvP (Alliance)
+-- Breaking Down the Defenses - Should no longer get stuck on poles, but still can't tell on from off on them.
+
 4/28/13
 
 r232
