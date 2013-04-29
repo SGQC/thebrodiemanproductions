@@ -58,8 +58,8 @@
 //          This attribute qualifies a target that fullfills the MobIdN or FactionIdN selection.
 //          The target must *not* possess an aura that matches one of the defined 
 //          AuraIdMissingFromMobN, in order to be considered a target for interaction.
-//      MobState [optional; Default: Alive]
-//          [Allowed values: Alive, AliveNotInCombat, BelowHp, Dead, DontCare]
+//      MobState [optional; Default: DontCare]
+//          [Allowed values for NPC targets: Alive, AliveNotInCombat, BelowHp, Dead, DontCare]
 //          This attribute qualifies the state the MobIdN or FactionIdN must be in,
 //          when selecting targets for interaction.
 //          (NB: You probably don't want to select "BelowHp"--it is here for backward
@@ -568,8 +568,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private readonly WaitTimer _waitTimerAfterInteracting = new WaitTimer(TimeSpan.Zero);
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 465 2013-04-27 11:31:47Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 465 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 470 2013-04-29 11:27:22Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 470 $"); } }
         #endregion
 
 
@@ -720,7 +720,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
 
                 #region Deal with mob we've selected for interaction...
-                new Decorator(context => SelectedInteractTarget != null,
+                new Decorator(context => IsViable(SelectedInteractTarget),
                     new PrioritySelector(
 
                         // Take out any nearby mobs that will aggro, if we get close to destination...
@@ -732,11 +732,11 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                                                                        context => SelectedInteractTarget.InteractRange,
                                                                        () => MobIds /*excluded mobs*/)),
 
-                        SubBehavior_HandleLootFrame(),
-                        SubBehavior_HandleGossipFrame(),
-                        SubBehavior_HandleMerchantFrame(),
-                        SubBehavior_HandleQuestFrame(),
-                        SubBehavior_HandleFramesComplete(),
+                        SubBehaviorPS_HandleLootFrame(),
+                        SubBehaviorPS_HandleGossipFrame(),
+                        SubBehaviorPS_HandleMerchantFrame(),
+                        SubBehaviorPS_HandleQuestFrame(),
+                        SubBehaviorPS_HandleFramesComplete(),
 
 
                         #region Interact with, or use item on, selected target...
@@ -756,7 +756,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                                 return RunStatus.Failure;   // fall through
                             })),                                       
 
-                        SubBehavior_DoMoveToTarget(),
+                        SubBehaviorPS_DoMoveToTarget(),
 
                         // NB: We do the move before waiting for the cooldown.  The hope is that for most items, the
                         // cooldown will have elapsed by the time we get within range of the next target.
@@ -840,10 +840,19 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
 
         #region Sub-Behaviors
-        private Composite SubBehavior_DoMoveToTarget()
+        private Composite SubBehaviorPS_DoMoveToTarget()
         {
             return
                 new PrioritySelector(
+                    new Decorator(context => IsDistanceGainNeeded(SelectedInteractTarget),
+                        UtilityBehaviorPS_MoveTo(
+                            context => GetPointToGainDistance(SelectedInteractTarget, RangeMin),
+                            context => string.Format("gain distance from {0} (id:{1}, dist:{2:F1}/{3:F1})",
+                                GetName(SelectedInteractTarget),
+                                SelectedInteractTarget.Entry,
+                                SelectedInteractTarget.Distance,
+                                RangeMin))),
+
                     new Decorator(context => IsDistanceCloseNeeded(SelectedInteractTarget),
                         new PrioritySelector(
                             new Decorator(context => MovementBy == MovementByType.NavigatorOnly
@@ -868,57 +877,56 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                             UtilityBehaviorPS_MoveTo(
                                 context => SelectedInteractTarget.Location,
                                 context => string.Format("interact with {0} (id: {1}, dist: {2:F1}{3})",
-                                    GetName(SelectedInteractTarget),
-                                    SelectedInteractTarget.Entry,
-                                    SelectedInteractTarget.Distance,
-                                    IsInLineOfSight(SelectedInteractTarget) ? "" : ", noLoS")))
-                        ),
-
-                    new Decorator(context => IsDistanceGainNeeded(SelectedInteractTarget),
-                        UtilityBehaviorPS_MoveTo(
-                            context => GetPointToGainDistance(SelectedInteractTarget, RangeMin),
-                            context => string.Format("gain distance from {0} (id:{1}, dist:{2:F1}/{3:F1})",
-                                GetName(SelectedInteractTarget),
-                                SelectedInteractTarget.Entry,
-                                SelectedInteractTarget.Distance,
-                                RangeMin))),
-
-                    // Pre-interact (dis)mount strategy...
-                    UtilityBehaviorPS_ExecuteMountStrategy(context => PreInteractMountStrategy),
-                                    
-                    // Prep to interact...
-                    new Decorator(context => Me.IsMoving,
-                        new Sequence(
-                            new Action(context => { WoWMovement.MoveStop(); }),
-                            new WaitContinue(Delay_LagDuration, context => !Me.IsMoving, new ActionAlwaysSucceed())
+                                                        GetName(SelectedInteractTarget),
+                                                        SelectedInteractTarget.Entry,
+                                                        SelectedInteractTarget.Distance,
+                                                        IsInLineOfSight(SelectedInteractTarget) ? "" : ", noLoS"))
                         )),
-                    new Decorator(context => !Me.IsSafelyFacing(SelectedInteractTarget),
-                        new Action  (context => { Me.SetFacing(SelectedInteractTarget.Location); }))              
+
+                    // Prep to interact...
+                    UtilityBehaviorPS_MoveStop(),
+                    UtilityBehaviorPS_ExecuteMountStrategy(context => PreInteractMountStrategy),
+                    UtilityBehaviorPS_FaceMob(context => SelectedInteractTarget)          
             );
         }
 
 
-        private Composite SubBehavior_HandleFramesComplete()
+        private Composite SubBehaviorPS_HandleFramesComplete()
         {
-            return
+            return new PrioritySelector(
                 new Decorator(context => GossipFrame.Instance.IsVisible
                                         || MerchantFrame.Instance.IsVisible
                                         || QuestFrame.Instance.IsVisible
                                         || TaxiFrame.Instance.IsVisible
                                         || TrainerFrame.Instance.IsVisible,
-                    new Sequence(
-                        new Action(context =>
+                    new Action(context =>
+                    {
+                        TreeRoot.StatusText = string.Format("Interaction with {0} complete.", GetName(SelectedInteractTarget));
+                        CloseOpenFrames();
+                        _waitTimerAfterInteracting.Reset();
+                        ++Counter;
+
+                        // Some mobs go non-viable immediately after interacting with them...
+                        if (IsViable(SelectedInteractTarget))
                         {
-                            LogDeveloperInfo("Interaction with {0} complete.", GetName(SelectedInteractTarget));
-                        }),
-                        new Action(context => { CloseOpenFrames();  }),
-                        new Decorator(context => IsClearTargetNeeded(SelectedInteractTarget),
-                            new Action(context => { Me.ClearTarget(); }))
-                    ));
+                            BlacklistInteractTarget(SelectedInteractTarget);
+                            if (IsClearTargetNeeded(SelectedInteractTarget))
+                                { Me.ClearTarget(); }
+                        }
+
+                        SelectedInteractTarget = null;
+                    })),
+
+                // Some mobs go non-viable immediately after interacting with them...
+                // For instance, interacting with mobs that give you automatic taxi rides.
+                // We must guard against trying to interact with them further.
+                new Decorator(context => !IsViable(SelectedInteractTarget),
+                    new Action(context => { SelectedInteractTarget = null; }))
+                );
         }
 
 
-        private Composite SubBehavior_HandleGossipFrame()
+        private Composite SubBehaviorPS_HandleGossipFrame()
         {
             return
                 new PrioritySelector(
@@ -1041,7 +1049,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         }
 
 
-        private Composite SubBehavior_HandleLootFrame()
+        private Composite SubBehaviorPS_HandleLootFrame()
         {
             return
                 // Nothing really special for us to do here.  HBcore will take care of 'normal' looting.
@@ -1062,7 +1070,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         }
 
 
-        private Composite SubBehavior_HandleMerchantFrame()
+        private Composite SubBehaviorPS_HandleMerchantFrame()
         {
             return
                 new Decorator(context => MerchantFrame.Instance.IsVisible,
@@ -1119,7 +1127,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         }
 
 
-        private Composite SubBehavior_HandleQuestFrame()
+        private Composite SubBehaviorPS_HandleQuestFrame()
         {
             return
                 // Side-effect of interacting with some NPCs for quests...
@@ -1246,8 +1254,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         /// </summary>
         private string GetName(WoWObject target)
         {
-            return IsViable(target)
-                       ? target.Name
+            return IsViable(target) ? target.Name
                        : (target == SelectedInteractTarget) ? "selected target"
                        : (target.ToUnit() != null) ? "unit"
                        : "object";
@@ -1271,22 +1278,24 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         }
 
 
-        private bool IsDistanceCloseNeeded(WoWObject target)
+        private bool IsDistanceCloseNeeded(WoWObject wowObject)
         {
-            double targetDistance = target.Distance;
+            double targetDistance = MovementObserver.Location.Distance(wowObject.Location);
 
             bool canInteract =
                 (ItemToUse != null)
-                ? (targetDistance <= RangeMax) && (IgnoreLoSToTarget || IsInLineOfSight(target))    // Items need LoS to use
+                ? (targetDistance <= RangeMax) && (IgnoreLoSToTarget || IsInLineOfSight(wowObject))    // Items need LoS to use
                 : (targetDistance <= RangeMax);     // Interactions just require being within range
 
             return !canInteract;
         }
 
 
-        private bool IsDistanceGainNeeded(WoWObject target)
+        private bool IsDistanceGainNeeded(WoWObject wowObject)
         {
-            return target.Distance < RangeMin;
+            double targetDistance = MovementObserver.Location.Distance(wowObject.Location);
+
+            return targetDistance < RangeMin;
         }
 
 
@@ -1315,7 +1324,10 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
             // We're done, if not a WoWUnit...
             if (wowUnit == null)
-                { return isViableForInteracting; }
+            {
+                return
+                    isViableForInteracting;
+            }
                 
             // Additional qualifiers for WoWUnits...        
             return
@@ -1323,11 +1335,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                 && (!NotMoving || !wowUnit.IsMoving)
                 && ((AuraIdsOnMob.Length <= 0) || wowUnit.GetAllAuras().Any(a => AuraIdsOnMob.Contains(a.SpellId)))
                 && ((AuraIdsMissingFromMob.Length <= 0) || !wowUnit.GetAllAuras().Any(a => AuraIdsMissingFromMob.Contains(a.SpellId)))
-                && ((MobState == MobStateType.DontCare)
-                    || ((MobState == MobStateType.Dead) && wowUnit.IsDead)
-                    || ((MobState == MobStateType.AliveNotInCombat) && wowUnit.IsAlive && !wowUnit.Combat)
-                    || ((MobState == MobStateType.Alive) && wowUnit.IsAlive)
-                    || ((MobState == MobStateType.BelowHp) && wowUnit.IsAlive && (wowUnit.HealthPercent < MobHpPercentLeft)));
+                && IsMob_StateTypeMatch(wowObject, MobState, MobHpPercentLeft);
         }
 
         
@@ -1421,11 +1429,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                         ));
                 }
 
-                if (!((MobState == MobStateType.DontCare)
-                        || ((MobState == MobStateType.Dead) && wowUnit.IsDead)
-                        || ((MobState == MobStateType.Alive) && wowUnit.IsAlive)
-                        || ((MobState == MobStateType.AliveNotInCombat) && !wowUnit.Combat && wowUnit.IsAlive)
-                        || ((MobState == MobStateType.BelowHp) && wowUnit.IsAlive && (wowUnit.HealthPercent < MobHpPercentLeft))))
+                if (!IsMob_StateTypeMatch(wowUnit, MobState, MobHpPercentLeft))
                 {
                     reasons.Add(MobState == MobStateType.BelowHp
                         ? string.Format("!{0}({1}%)", MobState, MobHpPercentLeft)
