@@ -1,5 +1,11 @@
 Patch Notes
 
+4/30/13
+
+r236
+The Klaxxi
+-- InteractWith no longer controls profile closing on Interactions with quest givers
+
 4/29/13
 
 r235
