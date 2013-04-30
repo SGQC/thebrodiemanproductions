@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers Friendship r224</Name>
+	<Name>Tillers Friendship r237</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -202,6 +202,22 @@
 			<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
 			<CustomBehavior File="Misc\RunLua" Lua="GetQuestReward(1)" />
+		<ElseIf Condition="!IsQuestCompleted(31352)" > <!-- Sho -->
+			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58708 &amp;&amp; u.Distance &lt;= 150))" >
+				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
+				<CustomBehavior File="ForcedDismount" />
+			</If>
+			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
+			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="Misc\RunLua" Lua="GetQuestReward(1)" />
+			<If Condition="IsQuestCompleted(31346) &amp;&amp; !(Me.Location.Distance(new WoWPoint(-259.55, 599.15, 167.55)) &lt; 150)" >
+				<CustomBehavior File="FlyTo" X="-259.55" Y="599.15" Z="167.55" />
+				<CustomBehavior File="ForcedDismount" />
+			</If>
+		</ElseIf>
 		<ElseIf Condition="!IsQuestCompleted(31351)" > <!-- Old Hillpaw -->
 			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58707 &amp;&amp; u.Distance &lt;= 150))" >
 				<CustomBehavior File="FlyTo" X="-285.9792" Y="1460.626" Z="231.4944" />
@@ -296,22 +312,6 @@
 				<CustomBehavior File="ForcedDismount" />
 			</If>
 			<CustomBehavior File="InteractWith" MobId="58709" NumOfTimes="1" WaitForNpcs="False" />
-			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
-			<CustomBehavior File="WaitTimer" WaitTime="2000" />
-			<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" />
-			<CustomBehavior File="WaitTimer" WaitTime="2000" />
-			<CustomBehavior File="Misc\RunLua" Lua="GetQuestReward(1)" />
-			<If Condition="IsQuestCompleted(31346) &amp;&amp; !(Me.Location.Distance(new WoWPoint(-259.55, 599.15, 167.55)) &lt; 150)" >
-				<CustomBehavior File="FlyTo" X="-259.55" Y="599.15" Z="167.55" />
-				<CustomBehavior File="ForcedDismount" />
-			</If>
-		</ElseIf>
-		<ElseIf Condition="!IsQuestCompleted(31352)" > <!-- Sho -->
-			<If Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58708 &amp;&amp; u.Distance &lt;= 150))" >
-				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
-				<CustomBehavior File="ForcedDismount" />
-			</If>
-			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
 			<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" />

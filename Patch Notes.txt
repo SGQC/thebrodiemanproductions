@@ -2,6 +2,14 @@ Patch Notes
 
 4/30/13
 
+r237
+Tillers Friends
+-- Lovely Apple will prioritize to Sho before the rest of the group, after Jogu.
+Mistfall Village
+-- Freeing Mind and Body - Converted Objective -> CollectThings
+-- My Town, It's on Fire - LoS check disabled for Water Buckets
+-- My Town, It's on Fire Again - LoS check disabled for Water Buckets
+
 r236
 The Klaxxi
 -- InteractWith no longer controls profile closing on Interactions with quest givers
