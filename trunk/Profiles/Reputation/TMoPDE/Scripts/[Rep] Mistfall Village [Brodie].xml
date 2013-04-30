@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r218</Name>
+	<Name>Mistfall Village r237</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -331,7 +331,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30192)" >
 			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" WaitForNpcs="False" >
+				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" WaitForNpcs="False" >
 					<HuntingGrounds>
 						<Hotspot X="748.8545" Y="1566.354" Z="373.2431" />
 						<Hotspot X="718.7964" Y="1589.198" Z="376.3994" />
@@ -364,7 +364,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30288)" >
 			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" >
+				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" >
 					<HuntingGrounds>
 						<Hotspot X="748.8545" Y="1566.354" Z="373.2431" />
 						<Hotspot X="718.7964" Y="1589.198" Z="376.3994" />
@@ -395,13 +395,21 @@
 		<CustomBehavior File="UserSettings" QuestId="30289" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
 		<CustomBehavior File="ForcedDismount" />
-<!--		<While Condition="(Me.Class == WoWClass.Priest) &amp;&amp; !IsQuestCompleted(30289)" >
+		<CustomBehavior File="CollectThings" QuestId="30289" CollectUntil="QuestComplete" MobId="64201" MobState="Alive" HuntingGroundRadius="120" NonCompeteDistance="1" >
+			<Hotspot X="728.04" Y="1618.37" Z="377.86" />
+			<Hotspot X="730.07" Y="1583.43" Z="375.32" />
+			<Hotspot X="776.72" Y="1574.25" Z="371.45" />
+			<Hotspot X="772.47" Y="1627.70" Z="370.36" />
+			<Hotspot X="732.57" Y="1661.98" Z="377.58" />
+			<Hotspot X="691.56" Y="1637.56" Z="377.75" />
+		</CustomBehavior>
+<!--	<While Condition="(Me.Class == WoWClass.Priest) &amp;&amp; !IsQuestCompleted(30289)" >
 			<CustomBehavior File="InteractWith" MobId="GOLDEN LOTUS GUARD" MobState="Alive" Range="25"
 			<If Condition="Me.CurrentTarget.HasAura(AURA)" >
 				<CustomBehavior File="CastSpellOn" SpellId="527 or 528" MobId="GOLDEN LOTUS GUARD" /> 
 			</If>
-		</While> -->
-		<Objective QuestName="Freeing Mind and Body" QuestId="30289" Type="KillMob" MobId="64201" KillCount="6" />
+		</While>
+		<Objective QuestName="Freeing Mind and Body" QuestId="30289" Type="KillMob" MobId="64201" KillCount="6" /> -->
 	</If>
 
 <!-- Backed Into a Corner -->
