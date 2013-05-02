@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
 		public override string Name { get { return "Pandaria Dailies v2"; } }
 		public override string Author { get { return "Buddy Community"; } }
-		public override Version Version { get { return new Version(2, 2, 1); } }
+		public override Version Version { get { return new Version(2, 2, 2); } }
 		public override bool WantButton { get { return true; } }
 		public override string ButtonText { get { return "Credits"; } }
 
@@ -70,7 +70,6 @@ namespace AzeniusHelper2
             dlog("start [Pandaria Dailies] v{0} - ({1})", Version, Lua.GetReturnVal<string>("return GetLocale()",0));
             Logging.Write(System.Windows.Media.Colors.LawnGreen, "This Plugin [{0}] is originally made by Megser.", Name);
             Logging.Write(System.Windows.Media.Colors.LawnGreen, "(Modified by Vego, TheBrodieMan and BarryDurex)");
-
 
             // 1 to 3 is the Guild Reputation  http://www.wowwiki.com/API_GetFactionInfo            
             dlog("---------------------");
@@ -445,7 +444,7 @@ namespace AzeniusHelper2
 
 			#region Jungle Shredder
 			//http://www.wowhead.com/quest=32446
-			if (IsOnQuest(32446))
+			if (IsOnQuest(32446) && !JungleShredder.HasAura(135422))
 			{
 				if (Me.Combat && JungleShredder != null && JungleShredder.Distance2D <= 10)
 					UseIfNotOnCooldown(93180); //Re-Configured Remote
@@ -454,7 +453,7 @@ namespace AzeniusHelper2
 			
 			#region Mecha-Pounder
 			//http://www.wowhead.com/quest=32238
-			if (IsOnQuest(32238))
+			if (IsOnQuest(32238) && !MechaPounder.HasAura(133955))
 			{
 				if (Me.Combat && MechaPounder != null && MechaPounder.Distance2D <= 10)
 					UseIfNotOnCooldown(91902); //Universal remote
@@ -466,7 +465,7 @@ namespace AzeniusHelper2
 			if (ShredmasterP != null)
 			{
 				if (Me.Combat && ShredmasterP.Distance2D <= 10 && ShredmasterP.IsCasting && ShredmasterP.CastingSpellId == 135865)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(ShredmasterP, 80, 10);
+					BarryDurex.QuestHelper.AvoidEnemyCast(ShredmasterP, 80, 10);
 			}
 			#endregion
 			#endregion
@@ -497,7 +496,7 @@ namespace AzeniusHelper2
 			#region http://www.wowhead.com/quest=31717
             if (Me.HasAura("Solar Beam"))
             {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getSolarBeamList, "Solar Beam", 15);
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getSolarBeamList, "Solar Beam", 15);
             }
 
             #endregion
@@ -508,7 +507,7 @@ namespace AzeniusHelper2
             #region Lightning Pool
             if (Me.HasAura("Lightning Pool"))
             {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getLightningPoolList, "Lightning Pool", 15); //TODO test it..
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getLightningPoolList, "Lightning Pool", 15); //TODO test it..
             }
             #endregion
 			
@@ -522,7 +521,7 @@ namespace AzeniusHelper2
 
             if (Me.HasAura("Venom Splash") && BarryDurex.QuestHelper.getVenomSplashList != null && BarryDurex.QuestHelper.getVenomSplashList[0].Distance < (BarryDurex.QuestHelper.getVenomSplashList[0].Radius * 1.6f))
             {
-                BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVenomSplashList, "Venom Splash", 15);
+				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVenomSplashList, "Venom Splash", 15);
             }
 
             #region http://www.wowhead.com/quest=30320 - done
@@ -922,17 +921,17 @@ namespace BarryDurex
 
                     p.Z = getGroundZ(p);
 
-                    if (p.Z != float.MinValue && StyxWoW.Me.Location.Distance2D(p) > 1 &&
-                        (badObjects.FirstOrDefault(_obj => _obj.Location.Distance2D(p) <= minDist) == null) &&
-                        //(ObjectManager.GetObjectsOfType<WoWUnit>().FirstOrDefault(u => u.Location.Distance2D(p) < 20 && u.IsAlive && !u.Combat) == null) &&
-                        Navigator.GeneratePath(StyxWoW.Me.Location, p).Length != 0)
-                    {
-                        if (getHighestSurroundingSlope(p) < 1.2f)
-                        {
-                            navlog("Navigation: Moving to {0}. Distance: {1}", p, Location.Distance(p));
-                            return p;
-                        }
-                    }
+					if (p.Z != float.MinValue && StyxWoW.Me.Location.Distance2D(p) > 1 &&
+						(badObjects.FirstOrDefault(_obj => _obj.Location.Distance2D(p) <= minDist) == null) &&
+						//(ObjectManager.GetObjectsOfType<WoWUnit>().FirstOrDefault(u => u.Location.Distance2D(p) < 20 && u.IsAlive && !u.Combat) == null) &&
+						Navigator.GeneratePath(StyxWoW.Me.Location, p).Length != 0)
+					{
+						if (getHighestSurroundingSlope(p) < 1.2f)
+						{
+							navlog("Navigation: Moving to {0}. Distance: {1}", p, Location.Distance(p));
+							return p;
+						}
+					}
 
                     if (i == (traceStep - 1))
                     {
