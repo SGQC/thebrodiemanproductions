@@ -1,5 +1,15 @@
 Patch Notes
 
+5/1/13
+
+r238
+Pandaria Dailies v2
+-- v2.2.2
+-- Should no longer attempt to use Universal Remote on mobs that have the aura for it already (not a full fix but partial)
+-- Code Cleanup
+Quest Behaviors
+-- Fixes to typos in Vehicles QBs that are recurring
+
 4/30/13
 
 r237
