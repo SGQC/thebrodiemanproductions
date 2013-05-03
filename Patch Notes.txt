@@ -1,5 +1,26 @@
 Patch Notes
 
+5/3/13
+
+r240
+Quest Behaviors
+-- Core settings update
+-- Fixes to Vehicle QBs
+Set-wide change
+-- All Vehicle QBs reflect name changes
+Shado Pan
+-- Snow Blossom added to "in the field" turn ins
+-- Tenwu of the Red Smoke added to "in the field" turn ins
+-- Taoshi added to "in the field" turn ins
+-- Hawkmaster Nurong added to "in the field" turn ins
+-- Chao the Voice added to "in the field" turn ins
+-- Protector Yi added to "in the field" turn ins
+-- Lao-Chin the Iron Belly added to "in the field" turn ins
+The Tillers
+-- Removed ForcedDismount from Jogu quest presence check
+Tillers Friends
+-- Will now check NPCs for quests to grab before each use of an item
+
 5/2/13
 
 r239

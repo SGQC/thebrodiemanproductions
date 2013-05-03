@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Tillers Friendship r237</Name>
+	<Name>Tillers Friendship r240</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -44,6 +44,11 @@
 				<CustomBehavior File="FlyTo" X="198.835" Y="931.0523" Z="174.6813" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57402" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -70,8 +75,12 @@
 				<CustomBehavior File="ForcedDismount" />
 			</If>
 		</ElseIf>
-		<!-- Haohan and Tina -->
 		<ElseIf Condition="!IsQuestCompleted(31350)" > <!-- Jogu The Drunk -->
+			<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -100,6 +109,11 @@
 				<CustomBehavior File="FlyTo" X="-430.2818" Y="1432.726" Z="173.5338" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58647" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -116,6 +130,11 @@
 				<CustomBehavior File="FlyTo" X="213.0149" Y="778.0533" Z="162.2789" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57298" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -156,6 +175,11 @@
 				<CustomBehavior File="FlyTo" X="-128.6772" Y="1314.725" Z="215.1565" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58709" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -172,6 +196,11 @@
 				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -196,6 +225,11 @@
 <!-- Lovely Apple -->
 	<While Condition="HasItem(79267)" >
 		<If Condition="!IsQuestCompleted(31350)" > <!-- Jogu The Drunk -->
+			<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -207,6 +241,11 @@
 				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -239,6 +278,11 @@
 				<CustomBehavior File="FlyTo" X="-430.2818" Y="1432.726" Z="173.5338" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58647" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -255,6 +299,11 @@
 				<CustomBehavior File="FlyTo" X="213.0149" Y="778.0533" Z="162.2789" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57298" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -295,6 +344,11 @@
 				<CustomBehavior File="FlyTo" X="198.835" Y="931.0523" Z="174.6813" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57402" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -311,6 +365,11 @@
 				<CustomBehavior File="FlyTo" X="-128.6772" Y="1314.725" Z="215.1565" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58709" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -355,6 +414,11 @@
 				<CustomBehavior File="FlyTo" X="-430.2818" Y="1432.726" Z="173.5338" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58647" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -382,6 +446,11 @@
 			</If>
 		</ElseIf>
 		<ElseIf Condition="!IsQuestCompleted(31350)" > <!-- Jogu The Drunk -->
+			<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -410,6 +479,11 @@
 				<CustomBehavior File="FlyTo" X="213.0149" Y="778.0533" Z="162.2789" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57298" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -434,6 +508,11 @@
 				<CustomBehavior File="FlyTo" X="198.835" Y="931.0523" Z="174.6813" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57402" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -450,6 +529,11 @@
 				<CustomBehavior File="FlyTo" X="-128.6772" Y="1314.725" Z="215.1565" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58709" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -466,6 +550,11 @@
 				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -524,6 +613,11 @@
 				<CustomBehavior File="FlyTo" X="-128.6772" Y="1314.725" Z="215.1565" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58709" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -540,6 +634,11 @@
 				<CustomBehavior File="FlyTo" X="-430.2818" Y="1432.726" Z="173.5338" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58647" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -568,6 +667,11 @@
 			</If>
 		</ElseIf>
 		<ElseIf Condition="!IsQuestCompleted(31350)" > <!-- Jogu The Drunk -->
+			<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -580,6 +684,11 @@
 				<CustomBehavior File="FlyTo" X="213.0149" Y="778.0533" Z="162.2789" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57298" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -604,6 +713,11 @@
 				<CustomBehavior File="FlyTo" X="198.835" Y="931.0523" Z="174.6813" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57402" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -620,6 +734,11 @@
 				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -663,6 +782,11 @@
 				<CustomBehavior File="FlyTo" X="213.0149" Y="778.0533" Z="162.2789" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57298" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -702,6 +826,11 @@
 				<CustomBehavior File="FlyTo" X="-128.6772" Y="1314.725" Z="215.1565" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58709" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -718,6 +847,11 @@
 				<CustomBehavior File="FlyTo" X="-430.2818" Y="1432.726" Z="173.5338" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58647" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -746,6 +880,11 @@
 			</If>
 		</ElseIf>
 		<ElseIf Condition="!IsQuestCompleted(31350)" > <!-- Jogu The Drunk -->
+			<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58710" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -758,6 +897,11 @@
 				<CustomBehavior File="FlyTo" X="198.835" Y="931.0523" Z="174.6813" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="57402" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -774,6 +918,11 @@
 				<CustomBehavior File="FlyTo" X="298.3233" Y="1517.59" Z="454.2077" />
 				<CustomBehavior File="ForcedDismount" />
 			</If>
+			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
+				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
+				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			</While>
 			<CustomBehavior File="InteractWith" MobId="58708" NumOfTimes="1" WaitForNpcs="False" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="WaitTimer" WaitTime="2000" />

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Shado Pan Dailies r229</Name>
+	<Name>Shado Pan Dailies r240</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -1032,8 +1032,157 @@
 			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Fei Li" TurnInId="62354" />
 		</If>
 	</ElseIf>
+	<ElseIf Condition="HasAura(122765)" > <!-- Snow Blossom -->
+		<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
+			<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31041) &amp;&amp; IsQuestCompleted(31041)" >
+			<TurnIn QuestName="Egg Rescue" QuestId="31041" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31046) &amp;&amp; IsQuestCompleted(31046)" >
+			<TurnIn QuestName="Little Hatchlings" QuestId="31046" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31039" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31042) &amp;&amp; IsQuestCompleted(31042)" >
+			<TurnIn QuestName="Onyx Hearts" QuestId="31042" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31043) &amp;&amp; IsQuestCompleted(31043)" >
+			<TurnIn QuestName="Dark Arts" QuestId="31043" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31047) &amp;&amp; IsQuestCompleted(31047)" >
+			<TurnIn QuestName="Born Free" QuestId="31047" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31105" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31048) &amp;&amp; IsQuestCompleted(31048)" >
+			<TurnIn QuestName="Grave Consequences" QuestId="31048" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31045) &amp;&amp; IsQuestCompleted(31045)" >
+			<TurnIn QuestName="Illusions of the Past" QuestId="31045" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31044) &amp;&amp; IsQuestCompleted(31044)" >
+			<TurnIn QuestName="Bronze Claws" QuestId="31044" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+		<If Condition="HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)" >
+			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Snow Blossom" TurnInId="62380" />
+		</If>
+	</ElseIf>
+	<ElseIf Condition="HasAura(124165)" > <!-- Tenwu -->
+		<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
+			<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
+		</If>
+		<If Condition="HasQuest(31198) &amp;&amp; IsQuestCompleted(31198)" >
+			<TurnIn QuestName="A Morale Victory" QuestId="31198" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
+		</If>
+		<If Condition="HasQuest(31197) &amp;&amp; IsQuestCompleted(31197)" >
+			<TurnIn QuestName="The Bigger They Come..." QuestId="31197" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
+		</If>
+		<If Condition="HasQuest(31196) &amp;&amp; IsQuestCompleted(31196)" >
+			<TurnIn QuestName="Sra'vess Wetwork" QuestId="31196" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
+		</If>
+		<If Condition="HasQuest(31200) &amp;&amp; IsQuestCompleted(31200)" >
+			<TurnIn QuestName="Fumigation" QuestId="31200" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
+		</If>
+		<If Condition="HasQuest(31201) &amp;&amp; IsQuestCompleted(31201)" >
+			<TurnIn QuestName="Friends, Not Food" QuestId="31201" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
+		</If>
+	</ElseIf>
+	<ElseIf Condition="HasAura(124166)" > <!-- Taoshi -->
+		<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
+			<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Taoshi" TurnInId="63617" />
+		</If>
+		<If Condition="HasQuest(31198) &amp;&amp; IsQuestCompleted(31198)" >
+			<TurnIn QuestName="A Morale Victory" QuestId="31198" TurnInName="Taoshi" TurnInId="63617" />
+		</If>
+		<If Condition="HasQuest(31197) &amp;&amp; IsQuestCompleted(31197)" >
+			<TurnIn QuestName="The Bigger They Come..." QuestId="31197" TurnInName="Taoshi" TurnInId="63617" />
+		</If>
+		<If Condition="HasQuest(31196) &amp;&amp; IsQuestCompleted(31196)" >
+			<TurnIn QuestName="Sra'vess Wetwork" QuestId="31196" TurnInName="Taoshi" TurnInId="63617" />
+		</If>
+		<If Condition="HasQuest(31200) &amp;&amp; IsQuestCompleted(31200)" >
+			<TurnIn QuestName="Fumigation" QuestId="31200" TurnInName="Taoshi" TurnInId="63617" />
+		</If>
+		<If Condition="HasQuest(31201) &amp;&amp; IsQuestCompleted(31201)" >
+			<TurnIn QuestName="Friends, Not Food" QuestId="31201" TurnInName="Taoshi" TurnInId="63617" />
+		</If>
+	</ElseIf>
+	<ElseIf Condition="HasAura(124167)" > <!-- Nurong -->
+		<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
+			<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
+		</If>
+		<If Condition="HasQuest(31198) &amp;&amp; IsQuestCompleted(31198)" >
+			<TurnIn QuestName="A Morale Victory" QuestId="31198" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
+		</If>
+		<If Condition="HasQuest(31197) &amp;&amp; IsQuestCompleted(31197)" >
+			<TurnIn QuestName="The Bigger They Come..." QuestId="31197" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
+		</If>
+		<If Condition="HasQuest(31196) &amp;&amp; IsQuestCompleted(31196)" >
+			<TurnIn QuestName="Sra'vess Wetwork" QuestId="31196" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
+		</If>
+		<If Condition="HasQuest(31200) &amp;&amp; IsQuestCompleted(31200)" >
+			<TurnIn QuestName="Fumigation" QuestId="31200" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
+		</If>
+		<If Condition="HasQuest(31201) &amp;&amp; IsQuestCompleted(31201)" >
+			<TurnIn QuestName="Friends, Not Food" QuestId="31201" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
+		</If>
+	</ElseIf>
+	<ElseIf Condition="HasAura(122830)" > <!-- Chao the Voice -->
+		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
+			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Chao the Voice" TurnInId="62550" />
+		</If>
+		<If Condition="HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)" >
+			<TurnIn QuestName="Assault Deadtalker's Plateau" QuestId="31114" TurnInName="Chao the Voice" TurnInId="62550" />
+		</If>
+		<If Condition="HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)" >
+			<TurnIn QuestName="The Deadtalker's Cipher" QuestId="31118" TurnInName="Chao the Voice" TurnInId="62550" />
+		</If>
+		<If Condition="HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)" >
+			<TurnIn QuestName="The Enemy of My Enemy...Is Still My Enemy" QuestId="31119" TurnInName="Chao the Voice" TurnInId="62550" />
+		</If>
+		<If Condition="HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)" >
+			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Chao the Voice" TurnInId="62550" />
+		</If>
+	</ElseIf>
+	<ElseIf Condition="HasAura(122793)" > <!-- Protector Yi -->
+		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
+			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Protector Yi" TurnInId="62546" />
+		</If>
+		<If Condition="HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)" >
+			<TurnIn QuestName="Assault Deadtalker's Plateau" QuestId="31114" TurnInName="Protector Yi" TurnInId="62546" />
+		</If>
+		<If Condition="HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)" >
+			<TurnIn QuestName="The Deadtalker's Cipher" QuestId="31118" TurnInName="Protector Yi" TurnInId="62546" />
+		</If>
+		<If Condition="HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)" >
+			<TurnIn QuestName="The Enemy of My Enemy...Is Still My Enemy" QuestId="31119" TurnInName="Protector Yi" TurnInId="62546" />
+		</If>
+		<If Condition="HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)" >
+			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Protector Yi" TurnInId="62546" />
+		</If>
+	</ElseIf>
+	<ElseIf Condition="HasAura(123047)" > <!-- Lao-Chin the Iron Belly -->
+		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
+			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Lao-Chin the Iron Belly" TurnInId="62978" />
+		</If>
+		<If Condition="HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)" >
+			<TurnIn QuestName="Assault Deadtalker's Plateau" QuestId="31114" TurnInName="Lao-Chin the Iron Belly" TurnInId="62978" />
+		</If>
+		<If Condition="HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)" >
+			<TurnIn QuestName="The Deadtalker's Cipher" QuestId="31118" TurnInName="Lao-Chin the Iron Belly" TurnInId="62978" />
+		</If>
+		<If Condition="HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)" >
+			<TurnIn QuestName="The Enemy of My Enemy...Is Still My Enemy" QuestId="31119" TurnInName="Lao-Chin the Iron Belly" TurnInId="62978" />
+		</If>
+		<If Condition="HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)" >
+			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Lao-Chin the Iron Belly" TurnInId="62978" />
+		</If>
+	</ElseIf>
 	</If>
-
+	
 	<If Condition="((HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)) ||
 			(HasQuest(31105) &amp;&amp; IsQuestCompleted(31105)) ||
 			(HasQuest(31039) &amp;&amp; IsQuestCompleted(31039)) ||

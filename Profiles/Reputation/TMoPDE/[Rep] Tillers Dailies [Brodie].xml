@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r227</Name>
+	<Name>The Tillers r240</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -471,8 +471,7 @@
 
 <!-- Jogu the Drunk -->
 	<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
-		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -723,7 +722,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
 		<While Condition="!IsObjectiveComplete(1,30317)">
-			<CustomBehavior File="Vehicles\NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
+			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
 		</While>
 	</If>
 
