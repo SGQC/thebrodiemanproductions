@@ -2,6 +2,10 @@ Patch Notes
 
 5/5/13
 
+r242
+Mistfall Village
+-- Return to Rest - Will no longer ignore combat, but will ignore all mobs unless attacked.
+
 r241
 Setting Sun Garrison
 -- Fixed rare instance Mantid Under Fire would not auto turn in.
