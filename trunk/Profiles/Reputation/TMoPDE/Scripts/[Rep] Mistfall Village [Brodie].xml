@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Mistfall Village r237</Name>
+	<Name>Mistfall Village r242</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -574,7 +574,7 @@
 		<CustomBehavior File="FlyTo" X="793.1332" Y="1165.867" Z="483.4868" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30238)" >
-			<CustomBehavior File="InteractWith" QuestId="30238" MobId="210419" IgnoreCombat="True" Range="5" />
+			<CustomBehavior File="InteractWith" QuestId="30238" MobId="210419" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" />
 		</While>
 	</If>
 
