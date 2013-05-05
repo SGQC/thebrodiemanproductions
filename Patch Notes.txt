@@ -1,5 +1,16 @@
 Patch Notes
 
+5/5/13
+
+r241
+Setting Sun Garrison
+-- Fixed rare instance Mantid Under Fire would not auto turn in.
+The Tillers
+-- Pest Problems - Fixed LoS Stick on NPC
+-- Pest Problems - Should ignore dead marmots, use live ones faster
+Quest Behaviors
+-- Updates from ChinaJade
+
 5/3/13
 
 r240

@@ -756,10 +756,10 @@
 		<CustomBehavior File="FlyTo" X="-94.36108" Y="1126.441" Z="171.5581" />
 		<CustomBehavior File="UserSettings" QuestId="30319" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30319) &amp;&amp; !IsQuestCompleted(30319)">
-			<CustomBehavior File="InteractWith" MobId="59532" InteractByGossipOptions="1" WaitTime="2000" X="-92.06" Y="1126.441" Z="171.5581" />
+		<While Condition="!IsQuestCompleted(30319)">
+			<CustomBehavior File="InteractWith" QuestId="30319" MobId="59532" InteractByGossipOptions="1" IgnoreLoSToTarget="True" WaitTime="2000" X="-92.06" Y="1126.441" Z="171.5581" />
 			<While Condition="(Me.HasAura(114573) || Me.HasAura(114517))" >
-				<CustomBehavior File="InteractWith" MobId="59530" WaitTime="100" IgnoreCombat="True" WaitForNpcs="False" X="-85.90" Y="1118.68" Z="171.39" />
+				<CustomBehavior File="InteractWith" MobId="59530" WaitTime="100" IgnoreCombat="True" MobState="Alive" WaitForNpcs="False" X="-85.90" Y="1118.68" Z="171.39" />
 			</While>	
 		</While>
 	</If>
