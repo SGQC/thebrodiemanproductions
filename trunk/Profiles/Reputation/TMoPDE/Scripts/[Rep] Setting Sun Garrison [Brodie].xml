@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r240</Name>
+	<Name>Setting Sun Garrison r241</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -229,6 +229,10 @@
 		<CustomBehavior File="EjectVeh" />
 		<CustomBehavior File="CompleteLogQuest" QuestId="30243" />
 	</If>
+	
+	<If Condition="(HasQuest(30243) &amp;&amp; IsQuestCompleted(30243))" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="30243" />
+	</If>
 
 <!-- Along the Serpent's Spine -->
 	<If Condition="(HasQuest(30244) &amp;&amp; !IsQuestCompleted(30244))" >
@@ -265,6 +269,7 @@
 			HasQuest(30266) &amp;&amp; IsQuestCompleted(30266) ||
 			HasQuest(30242) &amp;&amp; IsQuestCompleted(30242) ||
 			HasQuest(30245) &amp;&amp; IsQuestCompleted(30245) ||
+			HasQuest(30243) &amp;&amp; IsQuestCompleted(30243) ||
 			HasQuest(30264) &amp;&amp; IsQuestCompleted(30264) ||
 			HasQuest(30444) &amp;&amp; IsQuestCompleted(30444)" >
 		<CustomBehavior File="Message" Text="Completed Quests, moving to turn in." LogColor="Green" />
@@ -289,6 +294,10 @@
 
   	<If Condition="(HasQuest(30245) &amp;&amp; IsQuestCompleted(30245))" >
 		<TurnIn QuestName="Lost Scouts" QuestId="30245" TurnInName="Kun Autumnlight" TurnInId="58920" />
+	</If>
+	
+	<If Condition="(HasQuest(30243) &amp;&amp; IsQuestCompleted(30243))" >
+		<TurnIn QuestName="Mantid Under Fire" QuestId="30243" TurnInName="Kun Autumnlight" TurnInId="58920" />
 	</If>
 
   	<If Condition="(HasQuest(30242) &amp;&amp; IsQuestCompleted(30242))" >
