@@ -1,0 +1,99 @@
+<HBProfile>
+
+<Name>Loch Modan</Name>
+<MinLevel>8</MinLevel>
+<MaxLevel>25</MaxLevel>
+
+<MinDurability>0.2</MinDurability>
+<MinFreeBagSlots>2</MinFreeBagSlots>
+
+<MailGrey>False</MailGrey>
+<MailWhite>True</MailWhite>
+<MailGreen>True</MailGreen>
+<MailBlue>True</MailBlue>
+<MailPurple>True</MailPurple>
+
+<SellGrey>True</SellGrey>
+<SellWhite>True</SellWhite>
+<SellGreen>True</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+
+<TargetElites>False</TargetElites>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Blackspots>
+	<Blackspot X="-5293.915" Y="-2982.125" Z="340.8407" Radius="0.3904075" />
+</Blackspots>
+
+<Mailboxes>
+	<Mailbox X="-5603.506" Y="-512.8807" Z="401.635" />
+</Mailboxes>
+
+<Vendors>
+	<Vendor Name="Thrawn Boltar" Entry="1690" Type="Repair" X="-5568.99" Y="-429.114" Z="397.3261" />
+	<Vendor Name="Kreg Bilmn" Entry="1691" Type="Food" X="-5597.66" Y="-521.852" Z="399.6561" />
+	<Vendor Name="Kazan Mogosh" Entry="1237" Type="Food" X="-5671.19" Y="-1577.15" Z="383.2049" />
+</Vendors>
+
+<!-- Quest Overrides -->
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+<If Condition="Me.IsHorde">
+	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Level Check [Brodie]" />
+</If>	
+	  
+<!-- Loch Modan Quests -->
+
+	<CustomBehavior File="Message" Text="Compiling Loch Modan Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<CustomBehavior File="Message" Text="Compiling South Gate Outpost Quests" LogColor="CornflowerBlue" />
+	
+<!-- The Lost Pilot -->
+	<PickUp QuestName="The Lost Pilot" QuestId="26854" GiverName="Pilot Hammerfoot" GiverId="1960" />
+	<TurnIn QuestName="The Lost Pilot" TurnInType="Object" QuestId="26854" TurnInName="A Dwarven Corpse" TurnInId="2059" X="-5578.628" Y="-2154.957" Z="401.6443" />
+	
+<!-- A Pilot's Revenge -->
+	<PickUp QuestName="A Pilot's Revenge" QuestId="26855" GiverType="Object" GiverName="A Dwarven Corpse" GiverId="2059" X="-5578.628" Y="-2154.957" Z="401.6443" />
+	<Objective QuestName="A Pilot's Revenge" QuestId="26855" Type="CollectItem" ItemId="3183" CollectCount="1" />
+	<TurnIn QuestName="A Pilot's Revenge" QuestId="26855" TurnInName="Pilot Hammerfoot" TurnInId="1960" />
+	
+<!-- South Gate Status Report -->
+	<PickUp QuestName="South Gate Status Report" QuestId="13635" GiverName="Pilot Hammerfoot" GiverId="1960" />
+	<TurnIn QuestName="South Gate Status Report" QuestId="13635" TurnInName="Captain Rugelfuss" TurnInId="1092" />
+	
+<!-- In Defense of the King's Lands/The Trogg Threat -->
+	<PickUp QuestName="In Defense of the King's Lands" QuestId="26146" GiverName="Captain Rugelfuss" GiverId="1092" />
+	<PickUp QuestName="The Trogg Threat" QuestId="26145" GiverName="Mountaineer Cobbleflint" GiverId="1089" />
+	<Objective QuestName="The Trogg Threat" QuestId="26145" Type="CollectItem" ItemId="2536" CollectCount="8" />
+	<Objective QuestName="In Defense of the King's Lands" QuestId="26146" Type="KillMob" MobId="1161" KillCount="8" />
+	<TurnIn QuestName="The Trogg Threat" QuestId="26145" TurnInName="Mountaineer Cobbleflint" TurnInId="1089" />
+	<TurnIn QuestName="In Defense of the King's Lands" QuestId="26146" TurnInName="Captain Rugelfuss" TurnInId="1092" />
+	
+<!-- A Decisive Strike/Bigger and Uglier -->
+	<PickUp QuestName="A Decisive Strike" QuestId="26148" GiverName="Captain Rugelfuss" GiverId="1092" />
+	<PickUp QuestName="Bigger and Uglier" QuestId="26147" GiverName="Mountaineer Wallbang" GiverId="1090" />
+	<Objective QuestName="A Decisive Strike" QuestId="26148" Type="KillMob" MobId="42230" KillCount="1" />
+	<Objective QuestName="Bigger and Uglier" QuestId="26147" Type="KillMob" MobId="1197" KillCount="8" />
+	<Objective QuestName="Bigger and Uglier" QuestId="26147" Type="KillMob" MobId="1164" KillCount="8" />
+	<TurnIn QuestName="Bigger and Uglier" QuestId="26147" TurnInName="Mountaineer Wallbang" TurnInId="1090" />
+	<TurnIn QuestName="A Decisive Strike" QuestId="26148" TurnInName="Captain Rugelfuss" TurnInId="1092" />
+	
+<!-- Onward to Thelsamar -->
+	<PickUp QuestName="Onward to Thelsamar" QuestId="26176" GiverName="Captain Rugelfuss" GiverId="1092" />
+	<If Condition="HasQuest(26176)" >
+		<TurnIn QuestName="Onward to Thelsamar" QuestId="26176" TurnInName="Mountaineer Kadrell" TurnInId="1340" />
+		<!-- <CustomBehavior File="SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" /> -->
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Loch Modan Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Level Check [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>
