@@ -1,5 +1,22 @@
 Patch Notes
 
+5/6/13
+
+r243
+Quest Behaviors
+-- Another update from ChinaJade
+Mistfall Village
+-- My Town, It's On Fire - Forced dismount before water bucket pickup
+-- My Town, It's On Fire Again - Forced dismount before water bucket pickup
+-- Freeing Body and Mind - BETA InteractWith to touch Subjugator, but ignore all combat beforehand. May cause issues/deaths. Testing.
+Farm Dailies
+-- Tangled Weeds - Should no longer attempt to click all 16 in one pass
+-- Tangled Weeds - Should pull all the way (reworked just in case)
+-- Runty Weeds - Extended post-interaction time by 1.5 seconds (3 seconds total)
+The Anglers
+-- All InteractWith commands to handle quest pickups now control dismounting, removed ForcedDismount from this area of code
+-- Converted Fiznix's quest pickup from Lua to Macro
+
 5/5/13
 
 r242

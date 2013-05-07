@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Farming/Work Order Daily r227</Name>
+	<Name>Farming/Work Order Daily r243</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -506,10 +506,10 @@
 	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66132, 63188, 63232, 66116, 63151, 60270, 63253, 63269, 66088, 63168 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
 		<CustomBehavior File="InteractWith" MobId="66132" MobId2="63188" MobId3="63232" MobId4="66116" MobId5="63151"
 											MobId6="60270" MobId7="63253" MobId8="63269" MobId9="66088" MobId10="63168"
-											NumOfTimes="16" WaitForNpcs="False" WaitTime="1000" />
+											WaitForNpcs="False" WaitTime="1000" />
 		<If Condition="Me.HasAura(116242)" >
-			<RunTo X="-194.55" Y="642.61" Z="165.41" />
-			<RunTo X="-168.9621" Y="639.7676" Z="165.4103" />
+			<RunTo X="-187.87" Y="630.97" Z="165.41" />
+			<RunTo X="-164.82" Y="643.40" Z="165.41" />
 			<CustomBehavior File="ForcedDismount" />
 		</If>
 	</While>
@@ -530,7 +530,7 @@
 	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66130, 63186, 63230, 66114, 63150, 60218, 63251, 63267, 66086, 63166 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
 		<CustomBehavior File="InteractWith" MobId="66130" MobId2="63186" MobId3="63230" MobId4="66114" MobId5="63150"
 											MobId6="60218" MobId7="63251" MobId8="63267" MobId9="66086" MobId10="63166"
-											WaitForNpcs="False" WaitTime="1500" />
+											WaitForNpcs="False" WaitTime="3000" />
 		<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 	</While>
 
