@@ -2,6 +2,13 @@ Patch Notes
 
 5/6/13
 
+r244
+The Leveling Grind
+-- Added Dwarven Starter
+-- Added Gnomes Starter
+-- Added Dun Morogh
+-- Added Loch Modan
+
 r243
 Quest Behaviors
 -- Another update from ChinaJade

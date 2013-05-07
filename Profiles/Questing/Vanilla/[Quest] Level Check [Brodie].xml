@@ -1,0 +1,22 @@
+<HBProfile>
+
+<Name>Level Checker</Name>
+
+<QuestOrder>
+
+	<If Condition="Me.IsAlliance" >
+		<If Condition="Me.Race == WoWRace.Dwarf || Me.Race == WoWRace.Gnome">
+			<If Condition="Me.LevelFraction &gt;= 10" >
+				<CustomBehavior File="LoadProfile" ProfileName="[Quest] Loch Modan [Brodie]" />
+			</If>
+			<If Condition="Me.LevelFraction &gt;= 8" >
+				<CustomBehavior File="LoadProfile" ProfileName="[Quest] Dun Morogh 2 [Brodie]" />
+			</If>
+			<If Condition="Me.LevelFraction &gt;= 5" >
+				<CustomBehavior File="LoadProfile" ProfileName="[Quest] Dun Morogh [Brodie]" />
+			</If>
+		</If>
+	</If>
+
+</QuestOrder>
+</HBProfile>
