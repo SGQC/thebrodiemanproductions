@@ -95,7 +95,7 @@
 //          have changed.
 //
 // Interaction by Quest frames:
-//      InteractByQuestFrameDisposition [optional; Default: TerminateBehavior]
+//      InteractByQuestFrameDisposition [optional; Default: TerminateProfile]
 //          [Allowed values: Accept/Complete/Continue/Ignore/TerminateBehavior/TerminateProfile]
 //          This attribute determines the behavior's response should the NPC
 //          with which we've interacted offer us a quest frame.
@@ -426,7 +426,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                     ?? GetAttributeAsNullable<bool>("Loot", false, null, null) /* Legacy name--don't use*/
                     ?? false;
                 InteractByQuestFrameAction = GetAttributeAsNullable<QuestFrameDisposition>("InteractByQuestFrameDisposition", false, null, null)
-                    ?? QuestFrameDisposition.TerminateBehavior;
+                    ?? QuestFrameDisposition.TerminateProfile;
                 InteractByUsingItemId = GetAttributeAsNullable<int>("InteractByUsingItemId", false, ConstrainAs.ItemId, null) ?? 0;
 
 
@@ -585,8 +585,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _timerToReachDestination = null;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 493 2013-05-08 00:23:49Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 493 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 495 2013-05-08 12:13:22Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 495 $"); } }
         #endregion
 
 
@@ -1267,6 +1267,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                             {
                                 LogDeveloperInfo("Behavior Done--due to {0} providing a quest frame, and InteractByQuestFrameDisposition=TerminateBehavior",
                                     GetName(SelectedInteractTarget));
+                                CloseOpenFrames(true);
                                 BehaviorDone();
                             })),
                         new DecoratorContinue(context => InteractByQuestFrameAction == QuestFrameDisposition.TerminateProfile && !IsMultipleFramesVisible(),
@@ -1276,6 +1277,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                                     + "  Please provide an appropriate InteractByQuestFrameDisposition attribute to instruct"
                                     + " the behavior how to handle this situation.",
                                     GetName(SelectedInteractTarget));
+                                CloseOpenFrames(true);
                                 BehaviorDone();
                             })),
 

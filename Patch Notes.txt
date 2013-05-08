@@ -2,6 +2,10 @@ Patch Notes
 
 5/8/13
 
+r248
+Quest Behaviors
+-- Multiple updates from ChinaJade
+
 r247
 Golden Lotus
 -- Changes to quest pickups to negate frame errors
