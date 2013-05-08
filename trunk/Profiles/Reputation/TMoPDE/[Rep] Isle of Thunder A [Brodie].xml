@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Alliance) r229</Name>
+	<Name>Isle of Thunder (Alliance) ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -109,28 +109,28 @@
 
 <!-- Lady Jaina Proudmoore -->
 	<While Condition="HasQuestAvailable(67992)" >
-		<CustomBehavior File="InteractWith" MobId="67992" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67992" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Vereesa Windrunner -->
 	<While Condition="HasQuestAvailable(67993)" >
-		<CustomBehavior File="InteractWith" MobId="67993" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67993" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Warmage Yurias -->
 	<While Condition="HasQuestAvailable(67994)" >
-		<CustomBehavior File="InteractWith" MobId="67994" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67994" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Captain Elleane Wavecrest -->
 	<While Condition="HasQuestAvailable(67995)" >
-		<CustomBehavior File="InteractWith" MobId="67995" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67995" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

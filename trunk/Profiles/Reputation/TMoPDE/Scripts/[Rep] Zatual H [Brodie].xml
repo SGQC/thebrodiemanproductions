@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Za'Tual (Horde) r208</Name>
+	<Name>Za'Tual (Horde) ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -105,21 +105,21 @@
 	
 <!-- Halduron Brightwing -->
 	<While Condition="HasQuestAvailable(70520)" >
-		<CustomBehavior File="InteractWith" MobId="70520" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70520" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Kethiel Sunlance -->
 	<While Condition="HasQuestAvailable(67984)" >
-		<CustomBehavior File="InteractWith" MobId="67984" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67984" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Elina Zaralae -->
 	<While Condition="HasQuestAvailable(69418)" >
-		<CustomBehavior File="InteractWith" MobId="69418" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69418" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -256,21 +256,21 @@
 
 <!-- Halduron Brightwing -->
 	<While Condition="HasQuestAvailable(70520)" >
-		<CustomBehavior File="InteractWith" MobId="70520" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70520" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Kethiel Sunlance -->
 	<While Condition="HasQuestAvailable(67984)" >
-		<CustomBehavior File="InteractWith" MobId="67984" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67984" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Elina Zaralae -->
 	<While Condition="HasQuestAvailable(69418)" >
-		<CustomBehavior File="InteractWith" MobId="69418" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69418" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

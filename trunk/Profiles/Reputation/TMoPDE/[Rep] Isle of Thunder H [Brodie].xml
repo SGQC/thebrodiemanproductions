@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Isle of Thunder (Horde) r229</Name>
+	<Name>Isle of Thunder (Horde) ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -107,28 +107,28 @@
 	
 <!-- Girana the Blooded -->
 	<While Condition="HasQuestAvailable(67673)" >
-		<CustomBehavior File="InteractWith" MobId="67673" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67673" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Magister Hathorel -->
 	<While Condition="HasQuestAvailable(67663)" >
-		<CustomBehavior File="InteractWith" MobId="67663" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67663" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Lor'themar Theron -->
 	<While Condition="HasQuestAvailable(67990)" >
-		<CustomBehavior File="InteractWith" MobId="67990" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67990" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- High Arcanist Savor -->
 	<While Condition="HasQuestAvailable(67662)" >
-		<CustomBehavior File="InteractWith" MobId="67662" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67662" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -257,8 +257,6 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
 	</ElseIf>
 	</If>
-
-<!--<CustomBehavior File="LoadProfile" ProfileName="[Rep] August Celestials Dailies [Brodie]" />-->
 
 </QuestOrder>
 </HBProfile>

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Klaxxi r240</Name>
+	<Name>The Klaxxi ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -470,42 +470,42 @@
 
 <!-- Kil'ruk the Wind-Reaver -->
 	<While Condition="HasQuestAvailable(62538)" > 
-		<CustomBehavior File="InteractWith" MobId="62538" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="62538" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Xaril the Poisoned Mind -->
 	<While Condition="HasQuestAvailable(62151)" > 
-		<CustomBehavior File="InteractWith" MobId="62151" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="62151" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Hisek the Swarmkeeper -->
 	<While Condition="HasQuestAvailable(63785)" > 
-		<CustomBehavior File="InteractWith" MobId="63785" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="63785" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Korven the Prime -->
 	<While Condition="HasQuestAvailable(62180)" > 
-		<CustomBehavior File="InteractWith" MobId="62180" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="62180" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Rik'kal the Dissector -->
 	<While Condition="HasQuestAvailable(63072)" > 
-		<CustomBehavior File="InteractWith" MobId="63072" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="63072" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Kaz'tik the Manipulator -->
 	<While Condition="HasQuestAvailable(63758)" > 
-		<CustomBehavior File="InteractWith" MobId="63758" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="63758" CollectionDistance="200" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>

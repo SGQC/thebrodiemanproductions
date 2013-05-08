@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Conqueror's Terrace (Horde) r208</Name>
+	<Name>Conqueror's Terrace (Horde) ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -108,14 +108,14 @@
 	
 <!-- Scout Captain Elisa -->
 	<While Condition="HasQuestAvailable(67985)" >
-		<CustomBehavior File="InteractWith" MobId="67985" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67985" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Magister Edien Sunhollow -->
 	<While Condition="HasQuestAvailable(67986)" >
-		<CustomBehavior File="InteractWith" MobId="67986" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67986" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -227,14 +227,14 @@
 
 <!-- Scout Captain Elsia -->
 	<While Condition="HasQuestAvailable(67985)" >
-		<CustomBehavior File="InteractWith" MobId="67985" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67985" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Magister Edien Sunhollow -->
 	<While Condition="HasQuestAvailable(67986)" >
-		<CustomBehavior File="InteractWith" MobId="67986" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67986" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

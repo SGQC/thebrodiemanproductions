@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Thunder Forge (Alliance) r208</Name>
+	<Name>Thunder Forge (Alliance) ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -212,14 +212,14 @@
 
 <!-- Scout Captain Daelin -->
 	<While Condition="HasQuestAvailable(70552)" >
-		<CustomBehavior File="InteractWith" MobId="70552" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="70552" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Taoshi -->
 	<While Condition="HasQuestAvailable(69413)" >
-		<CustomBehavior File="InteractWith" MobId="69413" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="69413" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

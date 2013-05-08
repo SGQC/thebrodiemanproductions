@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Niuzao Temple r208</Name>
+	<Name>Niuzao Temple ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -100,35 +100,35 @@
 
 <!-- Ogo the Elder -->
 	<While Condition="HasQuestAvailable(61580)" >
-		<CustomBehavior File="InteractWith" MobId="61580" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61580" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Ogo the Younger -->
 	<While Condition="HasQuestAvailable(61581)" >
-		<CustomBehavior File="InteractWith" MobId="61581" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61581" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Yak-Keeper Kyana -->
 	<While Condition="HasQuestAvailable(61585)" >
-		<CustomBehavior File="InteractWith" MobId="61585" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61585" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- High Adept Paosha -->
 	<While Condition="HasQuestAvailable(61583)" >
-		<CustomBehavior File="InteractWith" MobId="61583" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61583" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Sentinel Commander Qipan -->
 	<While Condition="HasQuestAvailable(61584)" >
-		<CustomBehavior File="InteractWith" MobId="61584" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="61584" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

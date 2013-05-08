@@ -230,8 +230,8 @@ namespace Honorbuddy.Quest_Behaviors.Vehicles.VehicleMover
         public int[] VehicleIds { get; private set; }
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: VehicleMover.cs 463 2013-04-26 07:45:48Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 463 $"); } }
+        public override string SubversionId { get { return ("$Id$"); } }
+        public override string SubversionRevision { get { return ("$Revision$"); } }
 
 
         protected override void EvaluateUsage_DeprecatedAttributes(XElement xElement)

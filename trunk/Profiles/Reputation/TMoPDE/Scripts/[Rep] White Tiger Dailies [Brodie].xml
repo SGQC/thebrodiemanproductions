@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>White Tiger Dailies r208</Name>
+	<Name>White Tiger Dailies ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -69,7 +69,7 @@
 
 <!-- Xuen -->
 	<While Condition="HasQuestAvailable(60968)" >
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -115,7 +115,7 @@
 		<If Condition="HasQuest(31517) &amp;&amp; IsQuestCompleted(31517)" >
 			<TurnIn QuestName="Contending With Bullies" QuestId="31517" TurnInName="Xuen" TurnInID="60968" />
 		</If>
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</If>
@@ -126,7 +126,7 @@
 		<If Condition="HasQuest(31517) &amp;&amp; IsQuestCompleted(31517)" >
 			<TurnIn QuestName="Contending With Bullies" QuestId="31517" TurnInName="Xuen" TurnInID="60968" />
 		</If>
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</If>
@@ -161,7 +161,7 @@
 	<If Condition="HasQuest(30881) &amp;&amp; IsQuestCompleted(30881)" >
 		<CustomBehavior File="MyCTM" X="3746.34" Y="348.13" Z="597.29" />
 		<TurnIn QuestName="Round 2: Clever Ashyo and Ken Ken" QuestId="30881" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3691.72" Y="365.77" Z="596.2" />
@@ -171,7 +171,7 @@
 	<If Condition="HasQuest(30882) &amp;&amp; IsQuestCompleted(30882)" >
 		<CustomBehavior File="MyCTM" X="3746.34" Y="348.13" Z="597.29" />
 		<TurnIn QuestName="Round 2: Kang Bramblestaff" QuestId="30882" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3691.72" Y="365.77" Z="596.2" />
@@ -207,7 +207,7 @@
 	<If Condition="HasQuest(30883) &amp;&amp; IsQuestCompleted(30883)" >
 		<CustomBehavior File="MyCTM" X="3685.23" Y="684.36" Z="637.40" />
 		<TurnIn QuestName="Round 3: The Wrestler" QuestId="30883" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3664.016" Y="624.2096" Z="636.0477" />
@@ -217,7 +217,7 @@
 	<If Condition="HasQuest(30885) &amp;&amp; IsQuestCompleted(30885)" >
 		<CustomBehavior File="MyCTM" X="3685.23" Y="684.36" Z="637.40" />
 		<TurnIn QuestName="Round 3: Master Boom Boom" QuestId="30885" TurnInName="Xuen" TurnInID="60968" />
-		<CustomBehavior File="InteractWith" MobId="60968" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60968" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="3664.016" Y="624.2096" Z="636.0477" />
@@ -251,7 +251,6 @@
 
 <!-- The P.U.G. -->
 	<If Condition="HasQuest(30907) &amp;&amp; IsQuestCompleted(30907)" >
-
 		<CustomBehavior File="MyCTM" X="3759.126" Y="556.2924" Z="639.6914" />
 		<TurnIn QuestName="Round 4: The P.U.G." QuestId="30907" TurnInName="Xuen" TurnInID="60968" />
 		<CustomBehavior File="MyCTM" X="3768.861" Y="536.6614" Z="639.0078" />
@@ -260,7 +259,6 @@
 
 <!-- Master Windfur -->
 	<If Condition="HasQuest(30902) &amp;&amp; IsQuestCompleted(30902)" >
-
 		<CustomBehavior File="MyCTM" X="3759.126" Y="556.2924" Z="639.6914" />
 		<TurnIn QuestName="Round 4: Master Windfur" QuestId="30902" TurnInName="Xuen" TurnInID="60968" />
 		<CustomBehavior File="MyCTM" X="3768.861" Y="536.6614" Z="639.0078" />

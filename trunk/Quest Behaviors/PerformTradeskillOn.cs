@@ -77,8 +77,8 @@ namespace Honorbuddy.Quest_Behaviors.PerformTradeskillOn
         private bool _isDisposed;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: PerformTradeskillOn.cs 369 2013-03-18 09:05:58Z thebrodieman $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 369 hack $"); } }
+        public override string SubversionId { get { return ("$Id$"); } }
+        public override string SubversionRevision { get { return ("$Revision$"); } }
 
 
         ~PerformTradeskillOn()

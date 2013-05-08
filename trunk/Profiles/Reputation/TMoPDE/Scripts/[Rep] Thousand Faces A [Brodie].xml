@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Man With A Thousand Faces r99</Name>
+	<Name>The Man With A Thousand Faces ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -44,7 +44,7 @@
 
 		<!-- Admiral Taylor -->
 		<While Condition="HasQuestAvailable(67940)" >
-			<CustomBehavior File="InteractWith" Nav="CTM" MobId="67940" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67940" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 		</While>
