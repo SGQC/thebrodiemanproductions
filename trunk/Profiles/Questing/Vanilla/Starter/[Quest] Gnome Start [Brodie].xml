@@ -65,7 +65,6 @@
 	<Vendor Name="Frast Dokner" Entry="1698" Type="Repair" X="-5714.372" Y="-1589.517" Z="383.2044" />
 	<Vendor Name="Monann Coldforge" Entry="43384" Type="Food" X="-5522.49" Y="-1930.35" Z="398.9589" />
 	<Vendor Name="Jade Ramalot" Entry="46996" Type="Repair" X="-4594.17" Y="-1714.2" Z="503.476" />
-	
 	<Vendor Name="Grif Wildheart" Entry="1231" Type="Train" TrainClass="Hunter" X="-5618.542" Y="-454.0711" Z="407.6592" />
 	<Vendor Name="Halbin Frosthammer" Entry="43464" Type="Train" TrainClass="Shaman"  X="-5581.44" Y="-536.977" Z="403.5413" />
 	<Vendor Name="Azar Stronghammer" Entry="1232" Type="Train" TrainClass="Paladin" X="-5586.76" Y="-542.163" Z="403.5417" />
@@ -75,15 +74,6 @@
 	<Vendor Name="Hogral Bakkan" Entry="1234" Type="Train" TrainClass="Rogue" X="-5604.44" Y="-540.3233" Z="399.0975" />
 	<Vendor Name="Gimrizz Shadowcog" Entry="5612"  Type="Train" TrainClass="Warlock" X="-5640.001" Y="-528.8012" Z="404.2961" />
 
-	<!--Ironforge-->
-	<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
-	<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
-	<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
-	<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
-	<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
-	<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
-	<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
-	<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
 </Vendors>
 
 <!-- Quest Overrides -->
