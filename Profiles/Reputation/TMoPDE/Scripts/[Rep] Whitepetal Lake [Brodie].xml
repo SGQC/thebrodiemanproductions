@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Whitepetal Lake r208</Name>
+	<Name>Whitepetal Lake ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -113,21 +113,21 @@
 
 <!-- He Softfoot -->
 	<While Condition="HasQuestAvailable(59342)" >
-		<CustomBehavior File="InteractWith" MobId="59342" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59342" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Ren Firetongue -->
 	<While Condition="HasQuestAvailable(59343)" >
-		<CustomBehavior File="InteractWith" MobId="59343" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59343" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Merchant Tantan -->
 	<While Condition="HasQuestAvailable(59341)" >
-		<CustomBehavior File="InteractWith" MobId="59341" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59341" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -321,7 +321,7 @@
 
 <!-- Ren Firetongue -->
 	<While Condition="HasQuestAvailable(59343)" >
-		<CustomBehavior File="InteractWith" MobId="59343" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59343" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

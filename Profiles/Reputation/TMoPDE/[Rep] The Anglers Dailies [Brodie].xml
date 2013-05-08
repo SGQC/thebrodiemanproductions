@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Anglers Dailies r243</Name>
+	<Name>The Anglers Dailies ($Rev$)</Name>
 	<MinLevel>89</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -146,10 +146,10 @@
 <!-- Fo Fook -->
 	<While Condition="HasQuestAvailable(60675)" >
 		<CustomBehavior File="FlyTo" X="-1396.24" Y="-202.15" Z="1.50" />
-		<CustomBehavior File="InteractWith" MobId="60675" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60675" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
-		<CustomBehavior File="InteractWith" MobId="60675" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60675" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -157,7 +157,7 @@
 <!-- Trawler Yotimo -->
 	<While Condition="HasQuestAvailable(60135)" >
 		<CustomBehavior File="FlyTo" X="-1438.39" Y="-221.81" Z="0.35" />
-		<CustomBehavior File="InteractWith" MobId="60135" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60135" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -165,11 +165,11 @@
 <!-- Elder Fisherman Rassan -->
 	<While Condition="HasQuestAvailable(60673)" >
 		<CustomBehavior File="FlyTo" X="-1425.53" Y="-255.90" Z="0.50" />
-		<CustomBehavior File="InteractWith" MobId="60673" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60673" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		<If Condition="HasQuestAvailable(60673)" >
-			<CustomBehavior File="InteractWith" MobId="60673" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="60673" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</If>
@@ -178,7 +178,7 @@
 <!-- John Big Hook Marsock -->
 	<While Condition="HasQuestAvailable(60674)" >
 		<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
-		<CustomBehavior File="InteractWith" MobId="60674" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60674" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -192,7 +192,7 @@
 <!-- Angler Shen -->
 	<While Condition="HasQuestAvailable(59586)" >
 		<CustomBehavior File="FlyTo" X="-1469.85" Y="-218.82" Z="5.43" />
-		<CustomBehavior File="InteractWith" MobId="59586" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59586" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -200,11 +200,11 @@
 <!-- Fiznix -->
 	<While Condition="HasQuestAvailable(60136)" >
 		<CustomBehavior File="FlyTo" X="-1503.70" Y="-219.3447" Z="0.643862" />
-		<CustomBehavior File="InteractWith" MobId="60136" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60136" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 		<If Condition="HasQuestAvailable(60136)" >
-			<CustomBehavior File="InteractWith" MobId="60136" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="60136" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</If>
@@ -213,7 +213,7 @@
 <!-- Fisherman Haito -->
 	<While Condition="HasQuestAvailable(59584)" >
 		<CustomBehavior File="FlyTo" X="-1517.874" Y="-238.6824" Z="14.43668" />
-		<CustomBehavior File="InteractWith" MobId="59584" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59584" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

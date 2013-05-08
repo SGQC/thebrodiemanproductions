@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Operation Shieldwall r215</Name>
+	<Name>Operation Shieldwall ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -214,27 +214,27 @@
 
 <!-- Admiral Taylor -->
 	<While Condition="HasQuestAvailable(67940)" >
-		<CustomBehavior File="InteractWith" MobId="67940" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67940" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Amber Kearnen -->
 	<While Condition="HasQuestAvailable(68908)" >
-		<CustomBehavior File="InteractWith" MobId="68908" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="68908" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Mishka -->
 	<While Condition="HasQuestAvailable(67630)" >
-		<CustomBehavior File="InteractWith" MobId="67630" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67630" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Marshal Troteman -->
 	<While Condition="HasQuestAvailable(67631)" >
-		<CustomBehavior File="InteractWith" MobId="67631" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67631" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -287,35 +287,35 @@
 
 <!-- Sky Admiral Rogers -->
 	<While Condition="HasQuestAvailable(67386)" >
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67386" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" InteractByQuestFrameDisposition="Ignore" MobId="67386" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Tinkmaster Overspark -->
 	<While Condition="HasQuestAvailable(67976)" >
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67976" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" InteractByQuestFrameDisposition="Ignore" MobId="67976" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Mishka -->
 	<While Condition="HasQuestAvailable(67444)" >
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="67444" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" InteractByQuestFrameDisposition="Ignore" MobId="67444" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Seraphine of the Winter -->
 	<While Condition="HasQuestAvailable(68182)" >
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="68182" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" InteractByQuestFrameDisposition="Ignore" MobId="68182" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Sully The Pickle McLeary -->
 	<While Condition="HasQuestAvailable(68166)" >
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="68166" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" InteractByQuestFrameDisposition="Ignore" MobId="68166" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -330,7 +330,7 @@
 
 <!-- Hilga Hornswaggle -->
 	<While Condition="HasQuestAvailable(68275)" >
-		<CustomBehavior File="InteractWith" MobId="68275" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="68275" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

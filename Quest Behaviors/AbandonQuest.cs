@@ -90,8 +90,8 @@ namespace Honorbuddy.Quest_Behaviors.AbandonQuest
         private readonly WaitTimer _waitTimerAfterAbandon = new WaitTimer(TimeSpan.Zero);
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: AbandonQuest.cs 487 2013-05-06 12:06:40Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 487 $"); } }
+        public override string SubversionId { get { return ("$Id$"); } }
+        public override string SubversionRevision { get { return ("$Revision$"); } }
 
 
         ~AbandonQuest()

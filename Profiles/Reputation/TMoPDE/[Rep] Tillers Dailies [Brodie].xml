@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>The Tillers r240</Name>
+	<Name>The Tillers ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -347,7 +347,7 @@
 	
 <!-- Sungshin Ironpaw -->
 	<While Condition="HasQuestAvailable(64231, &quot;Available&quot;)" >
-		<CustomBehavior File="InteractWith"  MobId="64231" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="64231" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -389,7 +389,7 @@
 			<PickUp QuestName="Not in Chee Chee's Backyard" QuestId="30324" GiverName="Chee Chee" GiverId="58709" />
 		<Else>
 			<While Condition="HasQuestAvailable(58709, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith"  MobId="58709" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="58709" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -410,7 +410,7 @@
 			<PickUp QuestName="Money Matters" QuestId="30322" GiverName="Gina Mudclaw" GiverId="58706" />
 		<Else>
 			<While Condition="HasQuestAvailable(58706, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith"  MobId="58706" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="58706" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -425,7 +425,7 @@
 			<PickUp QuestName="Water, Water Everywhere" QuestId="30317" GiverName="Farmer Fung" GiverId="57298" />
 		<Else>
 			<While Condition="HasQuestAvailable(57298, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith"  MobId="57298" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="57298" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -440,7 +440,7 @@
 			<PickUp QuestName="You Have to Burn The Ropes" QuestId="30327" GiverName="Ella" GiverId="58647" />
 		<Else>
 			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith"  MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="58647" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -455,7 +455,7 @@
 			<PickUp QuestName="Pest Problems" QuestId="30319" GiverName="Haohan" GiverId="57402" />
 		<Else>
 			<While Condition="HasQuestAvailable(57402, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith"  MobId="57402" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="57402" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -471,15 +471,14 @@
 
 <!-- Jogu the Drunk -->
 	<While Condition="HasQuestAvailable(58710, &quot;Available&quot;)" >
-		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" PreInteractMountStrategy="Dismount" />
+		<CustomBehavior File="InteractWith" MobId="58710" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Fish Fellreed -->
 	<While Condition="HasQuestAvailable(58705, &quot;Available&quot;)" >
-		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="58705" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58705" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -491,7 +490,7 @@
 			<PickUp QuestName="Where It Counts" QuestId="30325" GiverName="Sho" GiverId="58708" />
 		<Else>
 			<While Condition="HasQuestAvailable(58708, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith" MobId="58708" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="58708" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -515,8 +514,7 @@
 			<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 		</If>
 		<While Condition="HasQuestAvailable(58646)" >
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith"  MobId="58646" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="58646" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -524,7 +522,7 @@
 
 <!-- Andi -->
 	<While Condition="HasQuestAvailable(64464)" >
-		<CustomBehavior File="InteractWith"  MobId="64464" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="64464" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -608,8 +606,7 @@
 			<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 		</If>
 		<While Condition="HasQuestAvailable(58646)" >
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith"  MobId="58646" WaitTime="1000" X="-180.84" Y="628.36" Z="165.41" />
+			<CustomBehavior File="InteractWith" MobId="58646" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" X="-180.84" Y="628.36" Z="165.41" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -656,7 +653,7 @@
 	
 <!-- Ben of the Booming Voice -->
 	<While Condition="HasQuestAvailable(70398)" >
-		<CustomBehavior File="InteractWith"  MobId="70398" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="70398" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>

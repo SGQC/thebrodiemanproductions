@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Jade Serpent Temple r208</Name>
+	<Name>Jade Serpent Temple ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -110,14 +110,14 @@
 
 <!-- Elder Sage Tai-Feng -->
 	<While Condition="HasQuestAvailable(57324)" >
-		<CustomBehavior File="InteractWith" MobId="57324" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="57324" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Elder Sage Storm-Sing -->
 	<While Condition="HasQuestAvailable(57319)" >
-		<CustomBehavior File="InteractWith" MobId="57319" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="57319" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -204,7 +204,7 @@
 
 <!-- Elder Sage Tai-Feng -->
 	<While Condition="HasQuestAvailable(57324)" >
-		<CustomBehavior File="InteractWith" MobId="57324" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="57324" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

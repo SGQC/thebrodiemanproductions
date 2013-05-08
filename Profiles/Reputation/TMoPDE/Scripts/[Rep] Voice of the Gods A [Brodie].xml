@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Voice of the Gods r99</Name>
+	<Name>Voice of the Gods ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -43,7 +43,7 @@
 
 		<!-- Admiral Taylor -->
 		<While Condition="HasQuestAvailable(67940)" >
-			<CustomBehavior File="InteractWith" MobId="67940" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67940" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 		</While>
@@ -87,7 +87,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32397" LootMobs="False" PullDistance="1" />
 		<CustomBehavior File="InteractWith" QuestId="32397" MobId="68413" WaitTime="1000" />
 		<RunTo X="2105.27" Y="1182.89" Z="476.57" />
-		<CustomBehavior File="InteractWith" QuestId="32397" MobId="216664" ObjectType="GameObject" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" QuestId="32397" MobId="216664" WaitTime="1000" />
 		<RunTo X="2101.414" Y="1130.307" Z="483.9937" />
 	</If>
 

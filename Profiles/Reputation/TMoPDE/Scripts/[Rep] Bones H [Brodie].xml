@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Court of Bones (Horde) r224</Name>
+	<Name>Court of Bones (Horde) ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -81,28 +81,28 @@
 
 <!-- Grand Magister Rommath -->
 	<While Condition="HasQuestAvailable(67989)" >
-		<CustomBehavior File="InteractWith" MobId="67989" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="67989" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Harlan Whitedawn -->
 	<While Condition="HasQuestAvailable(69447)" >
-		<CustomBehavior File="InteractWith" MobId="69447" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="69447" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Ryshelle Brightlock -->
 	<While Condition="HasQuestAvailable(69389)" >
-		<CustomBehavior File="InteractWith" MobId="69389" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="69389" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Captain Aerthas Firehawk -->
 	<While Condition="HasQuestAvailable(67983)" >
-		<CustomBehavior File="InteractWith" MobId="67983" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="67983" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -267,28 +267,28 @@
 
 <!-- Grand Magister Rommath -->
 	<While Condition="HasQuestAvailable(67989)" >
-		<CustomBehavior File="InteractWith" MobId="67989" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="67989" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Harlan Whitedawn -->
 	<While Condition="HasQuestAvailable(69447)" >
-		<CustomBehavior File="InteractWith" MobId="69447" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="69447" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Ryshelle Brightlock -->
 	<While Condition="HasQuestAvailable(69389)" >
-		<CustomBehavior File="InteractWith" MobId="69389" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="69389" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 	
 <!-- Captain Aerthas Firehawk -->
 	<While Condition="HasQuestAvailable(67983)" >
-		<CustomBehavior File="InteractWith" MobId="67983" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
+		<CustomBehavior File="InteractWith" MobId="67983" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" NonCompeteDistance="0" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

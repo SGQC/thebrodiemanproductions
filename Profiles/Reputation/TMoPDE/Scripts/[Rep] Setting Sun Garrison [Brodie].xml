@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Setting Sun Garrison r241</Name>
+	<Name>Setting Sun Garrison ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -97,21 +97,21 @@
 
 <!-- Anji Autumnlight -->
 	<While Condition="HasQuestAvailable(58919)" >
-		<CustomBehavior File="InteractWith" MobId="58919" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58919" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Kun Autumnlight -->
 	<While Condition="HasQuestAvailable(58920)" >
-		<CustomBehavior File="InteractWith" MobId="58920" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58920" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Leven Dawnblade -->
 	<While Condition="HasQuestAvailable(59340)" >
-		<CustomBehavior File="InteractWith" MobId="59340" NumOfTimes="1" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="59340" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -317,21 +317,21 @@
 
 <!-- Anji Autumnlight -->
 	<While Condition="HasQuestAvailable(58919)" >
-		<CustomBehavior File="InteractWith" MobId="58919" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58919" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Kun Autumnlight -->
 	<While Condition="HasQuestAvailable(58920)" >
-		<CustomBehavior File="InteractWith" MobId="58920" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58920" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
 
 <!-- Leven Dawnblade -->
 	<While Condition="HasQuestAvailable(59340)" >
-		<CustomBehavior File="InteractWith" MobId="59340" NumOfTimes="1" WaitTime="1000" InteractByQuestFrameDisposition="TerminateBehavior" />
+		<CustomBehavior File="InteractWith" MobId="59340" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>Red Crane Dailies r208</Name>
+	<Name>Red Crane Dailies ($Rev$)</Name>
 	<MinLevel>90</MinLevel>
 	<MaxLevel>100</MaxLevel>
   
@@ -95,7 +95,7 @@
 
 <!-- Thelonius -->
 	<While Condition="HasQuestAvailable(60506)" >
-		<CustomBehavior File="InteractWith" MobId="60506" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60506" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
@@ -160,7 +160,7 @@
 
 <!-- Thelonius -->
 	<While Condition="HasQuestAvailable(60506)" >
-		<CustomBehavior File="InteractWith" MobId="60506" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60506" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
 	</While>
