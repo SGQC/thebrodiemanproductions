@@ -1,5 +1,11 @@
 Patch Notes
 
+5/8/13
+
+r247
+Golden Lotus
+-- Changes to quest pickups to negate frame errors
+
 5/7/13
 
 r246
