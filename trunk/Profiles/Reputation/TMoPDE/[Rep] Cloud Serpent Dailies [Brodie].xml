@@ -364,6 +364,7 @@
 			&amp;&amp; !HasQuest(30146) &amp;&amp; !HasQuest(30149)" >
 		<CustomBehavior File="Message" Text="Starting Cloud Serpent Dailies, moving to The Arboretum." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1588.42" Y="-2602.253" Z="150.1638" />
+		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 

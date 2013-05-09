@@ -2,6 +2,10 @@ Patch Notes
 
 5/9/13
 
+r255
+Cloud Serpent
+-- Added ForcedDismount to landing in quest giver area
+
 r254
 The Tillers
 -- Pest Problems - Should interact with Wika Wika regardless of other players around
