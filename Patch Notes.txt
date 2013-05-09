@@ -2,6 +2,12 @@ Patch Notes
 
 5/8/13
 
+r250
+The Leveling Grind
+-- Added Teldrassil (Partial)
+Quest Behaviors
+-- Core update
+
 r249
 SVN Wide Update
 -- Revision autoupdates numbers
