@@ -2,6 +2,10 @@ Patch Notes
 
 5/9/13
 
+r253
+Shado Pan
+-- Added "ignore quest frame" to all companions
+
 r252
 Isle of Thunder
 -- Added "ignore quest frame" to Assignment Map
