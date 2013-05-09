@@ -105,7 +105,7 @@
 	</If>
 	
 	<If Condition="!HasQuest(32288) || !HasQuest(32269)" >
-		<CustomBehavior File="InteractWith" MobId="70567" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="70567" InteractByQuestFrameDisposition="Ignore" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption2.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
