@@ -2,6 +2,11 @@ Patch Notes
 
 5/9/13
 
+r254
+The Tillers
+-- Pest Problems - Should interact with Wika Wika regardless of other players around
+-- Pest Problems - Should squish Marmots from a distance now
+
 r253
 Shado Pan
 -- Added "ignore quest frame" to all companions
