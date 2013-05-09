@@ -1,5 +1,15 @@
 Patch Notes
 
+5/9/13
+
+r252
+Isle of Thunder
+-- Added "ignore quest frame" to Assignment Map
+
+r251
+Quest Behaviors
+-- Correction to auto-update of Rev and Id on QBs.
+
 5/8/13
 
 r250
