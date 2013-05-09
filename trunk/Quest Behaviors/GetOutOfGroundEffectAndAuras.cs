@@ -362,8 +362,8 @@ namespace Honorbuddy.Quest_Behaviors.GetOutOfGroundEffectAndAuras
         private MovementByType MovementBy { get; set; }
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return "$Id$"; } }
-        public override string SubversionRevision { get { return "$Rev$"; } }
+        public override string SubversionId { get { return "$Id: GetOutOfGroundEffectAndAuras.cs 474 2013-04-29 17:01:06Z chinajade $"; } }
+        public override string SubversionRevision { get { return "$Rev: 474 $"; } }
         #endregion
 
 

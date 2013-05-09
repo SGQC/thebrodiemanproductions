@@ -93,8 +93,8 @@ namespace Honorbuddy.Quest_Behaviors.ForcedDismount
         #region Private and Convenience variables
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id$"); } }
-        public override string SubversionRevision { get { return ("$Rev$"); } }
+        public override string SubversionId { get { return ("$Id: ForcedDismount.cs 470 2013-04-29 11:27:22Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Rev: 470 $"); } }
         #endregion
 
 

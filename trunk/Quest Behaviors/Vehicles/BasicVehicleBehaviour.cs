@@ -102,8 +102,8 @@ namespace Honorbuddy.Quest_Behaviors.BasicVehicleBehaviour
         public WoWPoint MountedPoint { get; private set; }
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id$"); } }
-        public override string SubversionRevision { get { return ("$Revision$"); } }
+        public override string SubversionId { get { return ("$Id: BasicVehicleBehaviour.cs 451 2013-04-19 05:27:54Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 451 $"); } }
 
 
         ~BasicVehicleBehaviour()

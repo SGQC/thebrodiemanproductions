@@ -585,8 +585,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _timerToReachDestination = null;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id$"); } }
-        public override string SubversionRevision { get { return ("$Revision$"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 495 2013-05-08 12:13:22Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 495 $"); } }
         #endregion
 
 
