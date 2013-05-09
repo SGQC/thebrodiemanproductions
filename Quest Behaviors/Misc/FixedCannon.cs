@@ -90,8 +90,8 @@ namespace Styx.Bot.Quest_Behaviors.FixedCannon
         // Private properties
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id$"); } }
-        public override string SubversionRevision { get { return ("$Revision$"); } }
+        public override string SubversionId { get { return ("$Id: FixedCannon.cs 249 2013-05-08 22:53:30Z brodiebruce08@gmail.com $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 249 $"); } }
 
 
         ~FixedCannon()

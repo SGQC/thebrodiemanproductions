@@ -167,8 +167,8 @@ namespace Honorbuddy.Quest_Behaviors.VehicleBehavior
 
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id$"); } }
-        public override string SubversionRevision { get { return ("$Revision$"); } }
+        public override string SubversionId { get { return ("$Id: VehicleBehavior.cs 450 2013-04-19 05:18:46Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 450 $"); } }
 
 
         ~VehicleBehavior()
