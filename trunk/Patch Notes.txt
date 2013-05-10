@@ -1,5 +1,13 @@
 Patch Notes
 
+5/10/13
+
+r257
+Shado Pan
+-- White space issues addressed
+The Klaxxi
+-- Ambersmith Zikk should now ignore questframe issue, wait timer added
+
 5/9/13
 
 r256
