@@ -1042,10 +1042,11 @@
 
 <!-- Seeds of Fear -->
 	<While Condition="GetItemCount(87903) &gt; 5" >
-		<CustomBehavior File="InteractWith" MobId="64599" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="64599" InteractByQuestFrameDisposition="Ignore" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="CompleteQuest()" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Mistblade Destruction -->
