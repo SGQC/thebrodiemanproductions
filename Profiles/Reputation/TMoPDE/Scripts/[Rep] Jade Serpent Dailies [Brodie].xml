@@ -112,14 +112,14 @@
 	<While Condition="HasQuestAvailable(57324)" >
 		<CustomBehavior File="InteractWith" MobId="57324" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Elder Sage Storm-Sing -->
 	<While Condition="HasQuestAvailable(57319)" >
 		<CustomBehavior File="InteractWith" MobId="57319" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Arrows of Fortune -->
@@ -206,7 +206,7 @@
 	<While Condition="HasQuestAvailable(57324)" >
 		<CustomBehavior File="InteractWith" MobId="57324" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Flames of the Void -->

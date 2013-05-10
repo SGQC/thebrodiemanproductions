@@ -370,119 +370,120 @@
 
 <!-- Instructor Windblade -->
 	<While Condition="HasQuestAvailable(58420)" >
-		<CustomBehavior File="InteractWith" MobId="58420" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1618.37" Y="-2599.55" Z="150.76" />
+		<CustomBehavior File="InteractWith" MobId="58420" WaitTime="1000" X="1618.37" Y="-2599.55" Z="150.76" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Exalted Blue) -->
 	<While Condition="HasQuestAvailable(65724)" >
-		<CustomBehavior File="InteractWith" MobId="65724" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65724" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Exalted Green) -->
 	<While Condition="HasQuestAvailable(65723)" >
-		<CustomBehavior File="InteractWith" MobId="65723" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65723" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Exalted Yellow) -->
 	<While Condition="HasQuestAvailable(65679)" >
-		<CustomBehavior File="InteractWith" MobId="65679" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65679" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Big Blue) -->
 	<While Condition="HasQuestAvailable(65672)" >
-		<CustomBehavior File="InteractWith" MobId="65672" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65672" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Big Green) -->
 	<While Condition="HasQuestAvailable(65673)" >
-		<CustomBehavior File="InteractWith" MobId="65673" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65673" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Big Yellow) -->
 	<While Condition="HasQuestAvailable(65674)" >
-		<CustomBehavior File="InteractWith" MobId="65674" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65674" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Young Blue) -->
 	<While Condition="HasQuestAvailable(65669)" >
-		<CustomBehavior File="InteractWith" MobId="65669" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65669" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Young Green) -->
 	<While Condition="HasQuestAvailable(65670)" >
-		<CustomBehavior File="InteractWith" MobId="65670" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65670" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Your Hatchling (Young Yellow) -->
 	<While Condition="HasQuestAvailable(65671)" >
-		<CustomBehavior File="InteractWith" MobId="65671" Range="5" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="65671" Range="5" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Instructor Skythorn -->
 	<While Condition="HasQuestAvailable(58228)" >
-		<CustomBehavior File="InteractWith" MobId="58228" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1552.85" Y="-2567.15" Z="151.51" />
+		<CustomBehavior File="InteractWith" MobId="58228" WaitTime="1000" X="1552.85" Y="-2567.15" Z="151.51" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Ningna Darkwheel -->
 	<While Condition="HasQuestAvailable(58509)" >
-		<CustomBehavior File="InteractWith" MobId="58509" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1555.56" Y="-2616.34" Z="148.96" />
+		<CustomBehavior File="InteractWith" MobId="58509" WaitTime="1000" X="1555.56" Y="-2616.34" Z="148.96" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Ace Longpaw -->
 	<While Condition="HasQuestAvailable(58506)" >
-		<CustomBehavior File="InteractWith" MobId="58506" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58506" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Qua-Ro Whitebrow -->
 	<While Condition="HasQuestAvailable(58511)" >
-		<CustomBehavior File="InteractWith" MobId="58511" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
+		<CustomBehavior File="InteractWith" MobId="58511" WaitTime="1000" X="1541.98" Y="-2565.39" Z="154.10" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Suchi the Sweet -->
 	<While Condition="HasQuestAvailable(58510)" >
-		<CustomBehavior File="InteractWith" MobId="58510" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1552.85" Y="-2567.15" Z="151.51" />
+		<CustomBehavior File="InteractWith" MobId="58510" WaitTime="1000" X="1552.85" Y="-2567.15" Z="151.51" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Big Bao -->
 	<While Condition="HasQuestAvailable(58508)" >
-		<CustomBehavior File="InteractWith" MobId="58508" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" X="1603.27" Y="-2562.27" Z="153.02" />
+		<CustomBehavior File="InteractWith" MobId="58508" WaitTime="1000" X="1603.27" Y="-2562.27" Z="153.02" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Elder Anli -->
 	<While Condition="HasQuestAvailable(58564)" >
-		<CustomBehavior File="InteractWith" MobId="58564" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" X="1565.40" Y="-2579.63" Z="151.96" />
+		<CustomBehavior File="InteractWith" MobId="58564" PreInteractMountStrategy="Dismount" WaitTime="1000" X="1565.40" Y="-2579.63" Z="151.96" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>

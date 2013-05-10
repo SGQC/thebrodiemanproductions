@@ -97,7 +97,7 @@
 	<While Condition="HasQuestAvailable(60506)" >
 		<CustomBehavior File="InteractWith" MobId="60506" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Yan Quillpaw -->
@@ -162,7 +162,7 @@
 	<While Condition="HasQuestAvailable(60506)" >
 		<CustomBehavior File="InteractWith" MobId="60506" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Champion of Chi-Ji -->

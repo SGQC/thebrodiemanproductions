@@ -110,14 +110,14 @@
 	<While Condition="HasQuestAvailable(67998)" >
 		<CustomBehavior File="InteractWith" MobId="67998" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Miura Brightweaver -->
 	<While Condition="HasQuestAvailable(67999)" >
 		<CustomBehavior File="InteractWith" MobId="67999" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Even Giants Fall -->
@@ -236,14 +236,14 @@
 	<While Condition="HasQuestAvailable(67998)" >
 		<CustomBehavior File="InteractWith" MobId="67998" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Miura Brightweaver -->
 	<While Condition="HasQuestAvailable(67999)" >
 		<CustomBehavior File="InteractWith" MobId="67999" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 	<If Condition="HasItem(94566)" >

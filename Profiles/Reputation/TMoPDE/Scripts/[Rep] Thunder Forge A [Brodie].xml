@@ -123,13 +123,13 @@
 		</While>
 		<CustomBehavior File="CompleteLogQuest" QuestId="32586" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</If>
 	
 	<If Condition="HasQuest(32586) &amp;&amp; IsQuestCompleted(32586)" >
 		<CustomBehavior File="CompleteLogQuest" QuestId="32586" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</If>
 	
 <!-- On Her Magic-ey Secret Service -->
@@ -167,13 +167,13 @@
 		</While>
 		<CustomBehavior File="CompleteLogQuest" QuestId="32588" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</If>
 	
 	<If Condition="HasQuest(32588) &amp;&amp; IsQuestCompleted(32588)" >
 		<CustomBehavior File="CompleteLogQuest" QuestId="32588" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</If>
 	
 <!-- Forge Ahead! -->
@@ -214,14 +214,14 @@
 	<While Condition="HasQuestAvailable(70552)" >
 		<CustomBehavior File="InteractWith" MobId="70552" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Taoshi -->
 	<While Condition="HasQuestAvailable(69413)" >
 		<CustomBehavior File="InteractWith" MobId="69413" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 	<If Condition="HasItem(94566)" >

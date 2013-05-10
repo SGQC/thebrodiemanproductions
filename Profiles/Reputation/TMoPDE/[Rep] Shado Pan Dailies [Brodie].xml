@@ -373,21 +373,21 @@
 <!-- Ban Bearheart -->
 	<If Condition="HasQuestAvailable(62304)" >
 		<While Condition="HasQuestAvailable(62304)" >
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton4" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton5" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 1)" >
@@ -413,9 +413,9 @@
 <!-- Ling of the Six Pools -->
 	<If Condition="HasQuestAvailable(63614)" >
 		<While Condition="HasQuestAvailable(63614)" >
-			<CustomBehavior File="InteractWith" MobId="63614" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63614" WaitTime="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 2)" >
@@ -441,21 +441,21 @@
 <!-- Master Snowdrift -->
 	<If Condition="HasQuestAvailable(63009)" >
 		<While Condition="HasQuestAvailable(63009)" >
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton3" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton4" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton5" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 3)" >

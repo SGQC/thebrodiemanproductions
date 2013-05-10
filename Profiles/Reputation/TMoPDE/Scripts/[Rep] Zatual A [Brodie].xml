@@ -112,21 +112,21 @@
 	<While Condition="HasQuestAvailable(70517)" >
 		<CustomBehavior File="InteractWith" MobId="70517" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Ako -->
 	<While Condition="HasQuestAvailable(69673)" >
 		<CustomBehavior File="InteractWith" MobId="69673" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Dalvin Jaacor -->
 	<While Condition="HasQuestAvailable(69674)" >
 		<CustomBehavior File="InteractWith" MobId="69674" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Preventing a Future Threat -->
@@ -275,21 +275,21 @@
 	<While Condition="HasQuestAvailable(70517)" >
 		<CustomBehavior File="InteractWith" MobId="70517" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Ako -->
 	<While Condition="HasQuestAvailable(69673)" >
 		<CustomBehavior File="InteractWith" MobId="69673" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Dalvin Jaacor -->
 	<While Condition="HasQuestAvailable(69674)" >
 		<CustomBehavior File="InteractWith" MobId="69674" InteractByQuestFrameDisposition="Ignore" IgnoreCombat="True" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Do we have an ender? -->

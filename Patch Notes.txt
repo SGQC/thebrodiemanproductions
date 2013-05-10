@@ -2,6 +2,12 @@ Patch Notes
 
 5/9/13
 
+r256
+SVN Wide Update
+-- Updates to Lua AcceptQuest(), delay post to allow for questframes to close, and not be recalled
+Quest Behaviors
+-- Update to RunLua, delay is now post Lua and not pre
+
 r255
 Cloud Serpent
 -- Added ForcedDismount to landing in quest giver area

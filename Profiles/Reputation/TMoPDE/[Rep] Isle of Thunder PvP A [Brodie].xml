@@ -85,37 +85,37 @@
 					!HasQuest(32637) &amp;&amp; !HasQuest(32301) &amp;&amp; !HasQuest(32627) &amp;&amp; !HasQuest(32632) &amp;&amp;
 					!HasQuest(32633) &amp;&amp; !HasQuest(32634) &amp;&amp; !HasQuest(32639) &amp;&amp; !HasQuest(32638) &amp;&amp;
 					!HasQuest(32628)" >
-		<CustomBehavior File="InteractWith" MobId="70561" InteractByQuestFrameDisposition="Ignore" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="70561" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption2.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 
 <!-- Lady Jaina Proudmoore -->
 	<While Condition="HasQuestAvailable(67992)" >
-		<CustomBehavior File="InteractWith" MobId="67992" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67992" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Vereesa Windrunner -->
 	<While Condition="HasQuestAvailable(67993)" >
-		<CustomBehavior File="InteractWith" MobId="67993" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67993" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Warmage Yurias -->
 	<While Condition="HasQuestAvailable(67994)" >
-		<CustomBehavior File="InteractWith" MobId="67994" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67994" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Captain Elleane Wavecrest -->
 	<While Condition="HasQuestAvailable(67995)" >
-		<CustomBehavior File="InteractWith" MobId="67995" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67995" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Bolstering the Defenses -->
@@ -324,7 +324,7 @@
 
 <!-- Lady Jaina Proudmoore -->
 	<While Condition="HasQuestAvailable(67992)" >
-		<CustomBehavior File="InteractWith" MobId="67992" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67992" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton"/>
 	</While>
