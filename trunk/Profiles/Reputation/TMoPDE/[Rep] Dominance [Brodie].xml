@@ -266,23 +266,23 @@
 
 <!-- Blood Guard Gro'tash -->
 	<While Condition="HasQuestAvailable(67880)" >
-		<CustomBehavior File="InteractWith" MobId="67880" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67880" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Brolic -->
 	<While Condition="HasQuestAvailable(67767)" >
-		<CustomBehavior File="InteractWith" MobId="67767" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67767" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Shokia -->
 	<While Condition="HasQuestAvailable(67618)" >
-		<CustomBehavior File="InteractWith" MobId="67618" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67618" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 	<If Condition="!HasQuest(32450) &amp;&amp; !HasQuest(32134) &amp;&amp; !HasQuest(32130) &amp;&amp;
@@ -302,30 +302,30 @@
 
 <!-- Bounty Board -->
 	<While Condition="HasQuestAvailable(216322)" >
-		<CustomBehavior File="InteractWith" MobId="216322" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="216322" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Rivett Clutchpop -->
 	<While Condition="HasQuestAvailable(67608)" >
-		<CustomBehavior File="InteractWith" MobId="67608" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67608" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Boss-Lady Trixel -->
 	<While Condition="HasQuestAvailable(67535)" >
-		<CustomBehavior File="InteractWith" MobId="67535" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67535" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Duke -->
 	<While Condition="HasQuestAvailable(67562)" >
-		<CustomBehavior File="InteractWith" MobId="67562" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67562" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- KICKERS -->
@@ -388,16 +388,16 @@
 
 <!-- Shademaster Kiryn -->
 	<While Condition="HasQuestAvailable(67628)" >
-		<CustomBehavior File="InteractWith" MobId="67628" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67628" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Zazzix Sparkrocket -->
 	<While Condition="HasQuestAvailable(67402)" >
-		<CustomBehavior File="InteractWith" MobId="67402" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67402" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Hero Killer -->
@@ -489,9 +489,9 @@
 
 		<!-- Daxil Oregrind -->
 		<While Condition="HasQuestAvailable(67537)" >
-			<CustomBehavior File="InteractWith" MobId="67537" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67537" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<!-- Bixy Buzzsaw -->
@@ -512,16 +512,16 @@
 
 		<!-- Grizzle Gearslip -->
 		<While Condition="HasQuestAvailable(67542)" >
-			<CustomBehavior File="InteractWith" MobId="67542" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67542" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<!-- Bixy Buzzsaw -->
 		<While Condition="HasQuestAvailable(67553)" >
-			<CustomBehavior File="InteractWith" MobId="67553" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67553" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 	</If>
 	
@@ -537,16 +537,16 @@
 
 		<!-- Zino Quickchop -->
 		<While Condition="HasQuestAvailable(67534)" >
-			<CustomBehavior File="InteractWith" MobId="67534" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67534" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<!-- Bixy Buzzsaw -->
 		<While Condition="HasQuestAvailable(67533)" >
-			<CustomBehavior File="InteractWith" MobId="67533" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="67533" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 	</If>
 	
@@ -810,16 +810,16 @@
 
 <!-- Blood Guard Gro'tash -->
 	<While Condition="HasQuestAvailable(67880)" >
-		<CustomBehavior File="InteractWith" MobId="67880" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67880" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Brolic -->
 	<While Condition="HasQuestAvailable(67767)" >
-		<CustomBehavior File="InteractWith" MobId="67767" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="67767" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Another One Bites The Dust -->
@@ -933,9 +933,9 @@
 
 <!-- Kaelis Sunsoar -->
 	<While Condition="HasQuestAvailable(68274)" >
-		<CustomBehavior File="InteractWith" MobId="68274" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="68274" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton5" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Ogudei's Lieutenants -->

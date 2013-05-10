@@ -282,14 +282,14 @@
 	<While Condition="HasQuestAvailable(59338)" >
 		<CustomBehavior File="InteractWith" MobId="59338" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Cook Tope -->
 	<While Condition="HasQuestAvailable(58818)" >
 		<CustomBehavior File="InteractWith" MobId="58818" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Merchant Benny -->
@@ -301,7 +301,7 @@
 	<While Condition="HasQuestAvailable(58819)" >
 		<CustomBehavior File="InteractWith" MobId="58819" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Mayor Shiyo -->
@@ -313,14 +313,14 @@
 	<While Condition="HasQuestAvailable(59337)" >
 		<CustomBehavior File="InteractWith" MobId="59337" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Rook Stonetoe -->
 	<While Condition="HasQuestAvailable(58911)" >
 		<CustomBehavior File="InteractWith" MobId="58911" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- My Town, It's on Fire -->
@@ -700,21 +700,21 @@
 	<While Condition="HasQuestAvailable(59338)" >
 		<CustomBehavior File="InteractWith" MobId="59338" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Sun Tenderheart -->
 	<While Condition="HasQuestAvailable(59337)" >
 		<CustomBehavior File="InteractWith" MobId="59337" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Rook Stonetoe -->
 	<While Condition="HasQuestAvailable(58911)" >
 		<CustomBehavior File="InteractWith" MobId="58911" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Golden Lotus Dailies [Brodie]" />

@@ -100,37 +100,37 @@
 					!HasQuest(32565) &amp;&amp; !HasQuest(32294) &amp;&amp; !HasQuest(32523) &amp;&amp; !HasQuest(32207) &amp;&amp;
 					!HasQuest(32298) &amp;&amp; !HasQuest(32297) &amp;&amp; !HasQuest(32282) &amp;&amp; !HasQuest(32283) &amp;&amp;
 					!HasQuest(32588) &amp;&amp; !HasQuest(32208) &amp;&amp; !HasQuest(32292) &amp;&amp; !HasQuest(32722))" >
-		<CustomBehavior File="InteractWith" MobId="70567" InteractByQuestFrameDisposition="Ignore" WaitForNpcs="False" WaitTime="1000" IgnoreLoSToTarget="True" NonCompeteDistance="0" Range="6" MinRange="3" />
+		<CustomBehavior File="InteractWith" MobId="70567" WaitForNpcs="False" WaitTime="1000" IgnoreLoSToTarget="True" NonCompeteDistance="0" Range="6" MinRange="3" />
 		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption1.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
 	
 <!-- Girana the Blooded -->
 	<While Condition="HasQuestAvailable(67673)" >
-		<CustomBehavior File="InteractWith" MobId="67673" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67673" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Magister Hathorel -->
 	<While Condition="HasQuestAvailable(67663)" >
-		<CustomBehavior File="InteractWith" MobId="67663" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67663" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- Lor'themar Theron -->
 	<While Condition="HasQuestAvailable(67990)" >
-		<CustomBehavior File="InteractWith" MobId="67990" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67990" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 <!-- High Arcanist Savor -->
 	<While Condition="HasQuestAvailable(67662)" >
-		<CustomBehavior File="InteractWith" MobId="67662" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" MobId="67662" WaitTime="1000" WaitForNpcs="False" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="100" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
 	<If Condition="Me.Location.Distance(new WoWPoint(6707.91, 6471.27, 4.61)) &lt; 100" >
