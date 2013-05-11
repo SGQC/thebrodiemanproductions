@@ -237,9 +237,9 @@
 	</If>
 <!-- Anji Autumnlight -->
 	<While Condition="HasQuestAvailable(58465)" >
-		<CustomBehavior File="InteractWith" MobId="58465" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58465" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="2000" />
 	</While>
 <!-- Kun Autumnlight -->
 	<While Condition="HasQuestAvailable(58471)" >
@@ -287,12 +287,30 @@
 	<If Condition="HasQuest(31756) &amp;&amp; !IsQuestCompleted(31756)">
 		<CustomBehavior File="Message" Text="Starting High Chance of Rain" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31756" LootMobs="True" PullDistance="1" />
+		<While Condition="!IsQuestCompleted(31756)" >
+			<If Condition="!IsObjectiveComplete(1, 31756)" >
+				<Custombehavior File="ForcedMount" MountType="Flying" />
+				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1573.069" Y="1190.201" Z="446.5927" />
+			</If>
+			<If Condition="!IsObjectiveComplete(2, 31756)" >
+				<Custombehavior File="ForcedMount" MountType="Flying" />
+				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214899" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1626.984" Y="1269.686" Z="464.5547" />
+			</If>
+			<If Condition="!IsObjectiveComplete(4, 31756)" >
+				<Custombehavior File="ForcedMount" MountType="Flying" />
+				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214901" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1639.898" Y="1548.516" Z="441.6349" />
+			</If>
+			<If Condition="!IsObjectiveComplete(3, 31756)" >
+				<Custombehavior File="ForcedMount" MountType="Flying" />
+				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214900" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1477.417" Y="1388.53" Z="446.2014" />
+			</If>
+		</While>
 	</If>
- 	<While Condition="HasQuest(31756) &amp;&amp; !IsQuestCompleted(31756)">
+<!--	<While Condition="HasQuest(31756) &amp;&amp; !IsQuestCompleted(31756)">
 		<While Condition="!IsObjectiveComplete(1, 31756)" >
 			<CustomBehavior File="FlyTo" X="1568.647" Y="1185.899" Z="444.4847" />
 			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" WaitForNpcs="False" NonCompeteDistance="0" />
+			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" NonCompeteDistance="0" X="1573.069" Y="1190.201" Z="446.5927" />
 		</While>
 		<While Condition="!IsObjectiveComplete(2, 31756)" >
 			<CustomBehavior File="FlyTo" X="1625.123" Y="1269.5" Z="463.0072" />
@@ -309,7 +327,7 @@
 			<CustomBehavior File="ForcedDismount"/>
 			<CustomBehavior MobId="214900" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
 		</While>
-	</While>
+	</While>-->
 
 <!-- Thundering Skies -->
  	<If Condition="HasQuest(30310) &amp;&amp; !IsQuestCompleted(30310)" >
@@ -397,12 +415,12 @@
 				<CustomBehavior File="FlyTo" X="1566.5" Y="1441.0" Z="441.72" />
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 				<If Condition="(!Me.HasAura(&quot;Spirit Void&quot;) &amp;&amp; !IsQuestCompleted(30320))" >
-					<CustomBehavior File="InteractWith" MobId="59219" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" />
+					<CustomBehavior File="InteractWith" MobId="59219" ProactiveCombatStrategy="NoClear" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" />
 				</If>
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 			</While>
-			<CustomBehavior File="InteractWith" QuestId="30320" MobId="59231" NonCompeteDistance="0" PreInteractMountStrategy="Mount" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" WaitTime="300" KeepTargetSelected="False" />
+			<CustomBehavior File="InteractWith" QuestId="30320" MobId="59231" NonCompeteDistance="0" PreInteractMountStrategy="Mount" IgnoreCombat="True" CollectionDistance="5000" WaitForNpcs="False" IgnoreLoSToTarget="True" WaitTime="300" KeepTargetSelected="False" />
 			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
 		</While>
 	</If>
@@ -414,7 +432,7 @@
 		<CustomBehavior File="FlyTo" X="1540.48" Y="1176.70" Z="443.03" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31754)" >
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="89123" QuestId="31754" MobId="65762" AuraIdMissingFromMob="129380" Range="5" WaitTime="5000" >
+			<CustomBehavior File="InteractWith" QuestId="31754" InteractByUsingItemId="89123" MobId="65762" AuraIdMissingFromMob="129380" Range="5" WaitTime="5000" >
 				<HuntingGrounds>
 					<Hotspot X="1540.479" Y="1176.702" Z="443.0296" />
 					<Hotspot X="1529.951" Y="1181.776" Z="442.5779" />

@@ -933,7 +933,7 @@
 
 <!-- Kaelis Sunsoar -->
 	<While Condition="HasQuestAvailable(68274)" >
-		<CustomBehavior File="InteractWith" MobId="68274" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="68274" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton5" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>

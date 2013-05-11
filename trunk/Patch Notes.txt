@@ -2,6 +2,18 @@ Patch Notes
 
 5/10/13
 
+r258
+Golden Lotus
+-- Anji Autumnlight "QuestFrameDisposition" set to Ignore
+-- Reworked High Change of Rain for more IW control, less individual CB calls
+-- Free Spirits - Ignoring LoS on Captives, and mobs around Spirit Voids
+Whitepetal Lake
+-- Stick in the Mud - Reworked for more IW control, less individual CB calls
+Dominance Offensive
+-- Kaelis Sunsoar "QuestFrameDisposition" set to Ignore
+Mistfall Village
+-- Removed obsolete overrides
+
 r257
 Shado Pan
 -- White space issues addressed
