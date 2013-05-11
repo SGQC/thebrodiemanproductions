@@ -2,6 +2,11 @@ Patch Notes
 
 5/11/13
 
+r261
+The Leveling Grind
+-- Added Loch Modan Part 1 (Complete)
+-- Added Loch Modan Part 2 (Partial)
+
 r260
 Court of Bones
 -- Ashes of the Enemy - Will only attack mobs that attack you now

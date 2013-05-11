@@ -3,11 +3,15 @@
 	
 <QuestOrder>
 
+	<ClearVendor />
 	<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 	<CustomBehavior File="EnablePlugin" Names="ItemForAuraQuestHelper,Anti Drown,AutoEquip2,Talented2" />
 
 	<If Condition="Me.IsAlliance" >
 		<If Condition="Me.Race == WoWRace.Dwarf || Me.Race == WoWRace.Gnome">
+			<If Condition="Me.LevelFraction &gt;= 17" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Loch Modan 2 [Brodie]" />
+			</If>
 			<If Condition="Me.LevelFraction &gt;= 10" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Loch Modan [Brodie]" />
 			</If>

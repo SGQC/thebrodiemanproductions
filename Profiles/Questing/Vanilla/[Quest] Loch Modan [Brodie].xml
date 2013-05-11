@@ -33,9 +33,8 @@
 </Mailboxes>
 
 <Vendors>
-	<Vendor Name="Thrawn Boltar" Entry="1690" Type="Repair" X="-5568.99" Y="-429.114" Z="397.3261" />
-	<Vendor Name="Kreg Bilmn" Entry="1691" Type="Food" X="-5597.66" Y="-521.852" Z="399.6561" />
-	<Vendor Name="Kazan Mogosh" Entry="1237" Type="Food" X="-5671.19" Y="-1577.15" Z="383.2049" />
+	<Vendor Name="Greishan Ironstove" Entry="3291" Type="Food" X="-5784.56" Y="-2631.85" Z="322.69" />
+	<Vendor Name="Morhan Coppertongue" Entry="167" Type="Repair" X="-5343.68" Y="-2932.13" Z="324.36" />
 </Vendors>
 
 <!-- Quest Overrides -->
@@ -75,9 +74,13 @@
 
 <QuestOrder>
 
-<If Condition="Me.IsHorde">
-	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
-</If>	
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(26854) &amp;&amp; !IsQuestCompleted(26854)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
 	  
 <!-- Loch Modan Quests -->
 
@@ -120,10 +123,170 @@
 	<PickUp QuestName="Onward to Thelsamar" QuestId="26176" GiverName="Captain Rugelfuss" GiverId="1092" />
 	<If Condition="HasQuest(26176)" >
 		<TurnIn QuestName="Onward to Thelsamar" QuestId="26176" TurnInName="Mountaineer Kadrell" TurnInId="1340" />
-		<!-- <CustomBehavior File="SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" /> -->
+		<PickUp QuestName="Out of Gnoll-where" QuestId="26842" GiverName="Mountaineer Kadrell" GiverId="1340" />
+		<PickUp QuestName="Stormpike's Orders" QuestId="13636" GiverName="Mountaineer Kadrell" GiverId="1340" />
+		<CustomBehavior File="SetHearthstone" MobId="6734" X="-5377.91" Y="-2973.91" Z="323.17" />
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Thelsamar Quests" LogColor="CornflowerBlue" />
+	
+<!-- Out of Gnoll-where/Thelsamar Blood Sausages/WANTED/Looking for Lurkers -->
+	<PickUp QuestName="Out of Gnoll-where" QuestId="26842" GiverName="Mountaineer Kadrell" GiverId="1340" />
+	<PickUp QuestName="Stormpike's Orders" QuestId="13636" GiverName="Mountaineer Kadrell" GiverId="1340" />
+	<PickUp QuestName="Thelsamar Blood Sausages" QuestId="26860" GiverName="Vidra Hearthstove" GiverId="1963" />
+	<PickUp QuestName="Wanted: The Dark Iron Spy" QuestId="13648" GiverName="Wanted!" GiverId="256" GiverType="Object" X="-5343.25" Y="-3022.681" Z="324.188" />
+	<PickUp QuestName="Looking for Lurkers" QuestId="25118" GiverName="Dakk Blunderblast" GiverId="1777" />
+	<Objective QuestName="Wanted: The Dark Iron Spy" QuestId="13648" Type="KillMob" MobId="33456" KillCount="1" />
+	<PickUp QuestName="Explorers' League Document 1 of 6" QuestId="13656" GiverName="Stolen Explorers' League Document" GiverId="194387" GiverType="Object" X="-5611.63" Y="-3007.43" Z="386.131" />
+	<Objective QuestName="Out of Gnoll-where" QuestId="26842" Type="CollectItem" ItemId="60402" CollectCount="12" />
+	<TurnIn QuestName="Out of Gnoll-where" QuestId="26842" TurnInName="Mountaineer Kadrell" TurnInId="1340" />
+	<TurnIn QuestName="Wanted: The Dark Iron Spy" QuestId="13648" TurnInName="Magistrate Bluntnose" TurnInId="1139" />
+	<TurnIn QuestName="Explorers League Document 1 of 6" QuestId="13656" TurnInName="Torren Squarejaw" TurnInId="1153" />
+	<Objective QuestName="Thelsamar Blood Sausages" QuestId="26860" Type="CollectItem" ItemId="60497" CollectCount="8" />
+	<Objective QuestName="Looking for Lurkers" QuestId="25118" Type="KillMob" MobId="1195" KillCount="8" />
+	<TurnIn QuestName="Thelsamar Blood Sausages" QuestId="26860" TurnInName="Vidra Hearthstove" TurnInId="1963" />
+	<TurnIn QuestName="Looking for Lurkers" QuestId="25118" TurnInName="Dakk Blunderblast" TurnInId="1777" />
+	
+	<CustomBehavior File="Message" Text="Compiling Algaz Station Quests" LogColor="CornflowerBlue" />
+	
+<!-- Stormpike Orders/A Tiny Clever Commander -->
+	<TurnIn QuestName="Stormpike's Orders" QuestId="13636" TurnInName="Mountaineer Stormpike" TurnInId="1343" />
+	<PickUp QuestName="A Tiny Clever Commander" QuestId="26843" GiverName="Mountaineer Stormpike" GiverId="1343" />
+	<Objective QuestName="A Tiny Clever Commander" QuestId="26843" Type="KillMob" MobId="44197" KillCount="1" />
+	<TurnIn QuestName="A Tiny Clever Commander" QuestId="26843" TurnInName="Mountaineer Stormpike" TurnInId="1343" />
+	
+<!-- Kobold and Kobolder -->
+	<PickUp QuestName="Kobold and Kobolder" QuestId="26844" GiverName="Mountaineer Stormpike" GiverId="1343" />
+	<Objective QuestName="Kobold and Kobolder" QuestId="26844" Type="KillMob" MobId="1177" KillCount="5" />
+	<Objective QuestName="Kobold and Kobolder" QuestId="26844" Type="KillMob" MobId="1176" KillCount="5" />
+	<TurnIn QuestName="Kobold and Kobolder" QuestId="26844" TurnInName="Mountaineer Stormpike" TurnInId="1343" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Who's In Charge Here/Filthy Paws/A Nasty Exploit -->
+	<PickUp QuestName="Who's In Charge Here" QuestId="26845" GiverName="Mountaineer Stormpike" GiverId="1343" />
+	<PickUp QuestName="Filthy Paws" QuestId="26863" GiverName="Mountaineer Stormpike" GiverId="1343" />
+	<PickUp QuestName="A Nasty Exploit" QuestId="26846" GiverName="Scout Dorli" GiverId="44200" />
+	<Objective QuestName="Filthy Paws" QuestId="26863" Type="CollectItem" ItemId="2640" CollectCount="6" />
+	<Objective QuestName="Who's In Charge Here" QuestId="26845" Type="CollectItem" ItemId="60404" CollectCount="1" />
+	<Objective QuestName="A Nasty Exploit" QuestId="26846" Type="KillMob" MobId="1174" KillCount="5" />
+	<TurnIn QuestName="A Nasty Exploit" QuestId="26846" TurnInName="Scout Dorli" TurnInId="44200" />
+	<TurnIn QuestName="Who's In Charge Here" QuestId="26845" TurnInName="Mountaineer Stormpike" TurnInId="1343" />
+	<TurnIn QuestName="Filthy Paws" QuestId="26863" TurnInName="Mountaineer Stormpike" TurnInId="1343" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- The Bearer of Gnoll-edge -->
+	<PickUp QuestName="The Bearer of Gnoll-edge" QuestId="26864" GiverName="Mountaineer Stormpike" GiverId="1343" />
+	<TurnIn QuestName="The Bearer of Gnoll-edge" QuestId="26864" TurnInName="Mountaineer Kadrell" TurnInId="1340" />
+	
+	<CustomBehavior File="Message" Text="Compiling Thelsamar Round 2 Quests" LogColor="CornflowerBlue" />
+	
+<!-- Suddenly, Murlocs! -->
+	<PickUp QuestName="Suddenly, Murlocs!" QuestId="26927" GiverName="Mountaineer Kadrell" GiverId="1340" />
+	<If Condition="HasQuest(26927)" >
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
+	<TurnIn QuestName="Suddenly, Murlocs!" QuestId="26927" TurnInName="Cannary Caskshot" TurnInId="44345" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Smells Like a Plan/A Load of Croc/Buzz Off -->
+	<PickUp QuestName="Smells Like a Plan" QuestId="26928" GiverName="Cannary Caskshot" GiverId="44345" />
+	<PickUp QuestName="A Load of Croc" QuestId="26929" GiverName="Cannary Caskshot" GiverId="44345" />
+	<PickUp QuestName="Buzz Off" QuestId="26932" GiverName="Mountaineer Kadrell" GiverId="1340" />
+	<PickUp QuestName="Explorers' League Document 2 of 6" QuestId="13655" GiverName="Stolen Explorers' League Document" GiverId="194378" GiverType="Object" X="-5204.326" Y="-3135.079" Z="296.4469" />
+	<Objective QuestName="Smells Like a Plan" QuestId="26928" Type="CollectItem" ItemId="60511" CollectCount="7" />
+	<Objective QuestName="A Load of Croc" QuestId="26929" Type="CollectItem" ItemId="57131" CollectCount="6" />
+	<Objective QuestName="Buzz Off" QuestId="26932" Type="KillMob" MobId="44184" KillCount="8" />
+	<TurnIn QuestName="Explorers League Document 2 of 6" QuestId="13655" TurnInName="Torren Squarejaw" TurnInId="1153" />
+	<TurnIn QuestName="Buzz Off" QuestId="26932" TurnInName="Mountaineer Kadrell" TurnInId="1340" />
+	<TurnIn QuestName="Smells Like a Plan" QuestId="26928" TurnInName="Cannary Caskshot" TurnInId="44345" />
+	<TurnIn QuestName="A Load of Croc" QuestId="26929" TurnInName="Cannary Caskshot" TurnInId="44345" />
+	<PickUp QuestName="Axis of Awful" QuestId="26868" GiverName="Cannary Caskshot" GiverId="44345" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Axis of Awful -->
+	<CustomBehavior File="UserSettings" QuestId="26868" PullDistance="1" />
+	<If Condition="HasItem(60681)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60681)" />
+	</If>
+	<If Condition="HasQuest(26868) &amp;&amp; !IsQuestCompleted(26868)" >
+		<RunTo X="-5505.143" Y="-3361.046" Z="269.4267" />
+		<If Condition="!Me.HasAura(82788)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60502)" />
+		</If>
+		<CustomBehavior File="InteractWith" QuestId="26868" MobId="44262" ProactiveCombatStrategy="NoClear" MobState="Alive" NumOfTimes="100" InteractByUsingItemId="60503" Range="15" MinRange="10" />
+	</If>
+	<TurnIn QuestName="Axis of Awful" QuestId="26868" TurnInName="Cannary Caskshot" TurnInId="44345" />
+	<CustomBehavior File="UserSettings" PullDistance="25" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Excavation Quests" LogColor="CornflowerBlue" />
+	
+<!-- Resupplying the Excavation -->
+	<PickUp QuestName="Resupplying the Excavation" QuestId="13639" GiverName="Jern Hornhelm" GiverId="1105" />
+	<If Condition="HasQuest(13639)" >
+		<CustomBehavior File="NoCombatMoveTo" X="-5699.061" Y="-3549.348" Z="305.4911" />
+	</If>
+	<TurnIn QuestName="Resupplying the Excavation" QuestId="13639" TurnInName="Huldar" TurnInId="2057" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Protecting the Shipment -->
+	<PickUp QuestName="Protecting the Shipment" QuestId="309" GiverName="Huldar" GiverId="2057" />
+	<CustomBehavior File="Escort" QuestId="309" MobId="2057" X="-5701.27" Y="-3548.38" Z="305.37" />
+	<TurnIn QuestName="Protecting the Shipment" QuestId="309" TurnInName="Prospector Ironband" TurnInId="1344" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Keep Your Hands Off the Goods!/Gathering Idols -->
+	<PickUp QuestName="Keep Your Hands Off the Goods!" QuestId="13650" GiverName="Prospector Ironband" GiverId="1344" />
+	<PickUp QuestName="Gathering Idols" QuestId="26961" GiverName="Magmar Fellhew" GiverId="1345" />
+	<While Condition="HasQuest(13650) &amp;&amp; !IsQuestCompleted(13650)" >
+		<If Condition="!IsObjectiveComplete(2, 13650)" >
+			<RunTo X="-5586.109" Y="-3923.838" Z="325.7122" />
+		</If>
+		<If Condition="!IsObjectiveComplete(3, 13650)" >
+			<RunTo X="-5691.637" Y="-4002.225" Z="326.758" />
+		</If>
+		<If Condition="!IsObjectiveComplete(1, 13650)" >
+			<RunTo X="-5731.33" Y="-3942.675" Z="322.0742" />
+		</If>
+	</While>
+	<Objective QuestName="Gathering Idols" QuestId="26961" Type="CollectItem" ItemId="2636" CollectCount="8" />
+	<TurnIn QuestName="Gathering Idols" QuestId="26961" TurnInName="Magmar Fellhew" TurnInId="1345" />
+	<TurnIn QuestName="Keep Your Hands Off the Goods!" QuestId="13650" TurnInName="Prospector Ironband" TurnInId="1344" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Joining The Hunt -->
 
+	<PickUp QuestName="Joining the Hunt" QuestId="13647" GiverName="Magmar Fellhew" GiverId="1345" />
+	
+	<If Condition="Me.LevelFraction &gt;= 17" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<CustomBehavior File="Message" Text="Loch Modan Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		
