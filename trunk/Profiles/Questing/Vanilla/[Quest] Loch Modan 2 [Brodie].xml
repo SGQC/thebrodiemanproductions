@@ -1,0 +1,75 @@
+<HBProfile>
+
+<Name>Loch Modan Part 2 Quests ($Rev: 259 $)</Name>
+<MinLevel>15</MinLevel>
+<MaxLevel>25</MaxLevel>
+
+<MinDurability>0.2</MinDurability>
+<MinFreeBagSlots>2</MinFreeBagSlots>
+
+<MailGrey>False</MailGrey>
+<MailWhite>True</MailWhite>
+<MailGreen>True</MailGreen>
+<MailBlue>True</MailBlue>
+<MailPurple>True</MailPurple>
+
+<SellGrey>True</SellGrey>
+<SellWhite>True</SellWhite>
+<SellGreen>True</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+
+<TargetElites>False</TargetElites>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Blackspots>
+	<Blackspot X="-5293.915" Y="-2982.125" Z="340.8407" Radius="0.3904075" />
+</Blackspots>
+
+<Mailboxes>
+	<Mailbox X="-5603.506" Y="-512.8807" Z="401.635" />
+</Mailboxes>
+
+<Vendors>
+	<Vendor Name="Cliff Hadin" Entry="1687" Type="Repair" X="-5645.48" Y="-4283.76" Z="407.81" />
+</Vendors>
+
+<!-- Quest Overrides -->
+
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(13647) &amp;&amp; !IsQuestCompleted(13647)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+	  
+<!-- Loch Modan Quests -->
+
+	<CustomBehavior File="Message" Text="Compiling Loch Modan Part 2 Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<CustomBehavior File="Message" Text="Compiling Farstrider Lodge Quests" LogColor="CornflowerBlue" />
+	
+	<If Condition="HasQuest(13647)" >
+		<TurnIn QuestName="Joining the Hunt" QuestId="13647" TurnInName="Marek Ironheart" TurnInId="1154" />
+		<CustomBehavior File="SetHearthstone" MobId="1156" X="-5676.20" Y="-4253.09" Z="407.01" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
+	
+	<PickUp QuestName="Hornet Hunting" QuestId="27028" GiverName="Marek Ironheart" GiverId="1154" />
+	<PickUp QuestName="Foxtails By The Handful" QuestId="27030" GiverName="Marek Ironheart" GiverId="1154" />
+	<PickUp QuestName="Thistle While You Work" QuestId="27025" GiverName="Safety Warden Pipsy" GiverId="44859" />
+	<PickUp QuestName="Wing Nut" QuestId="27031" GiverName="Bingles Blastenheimer" GiverId="6577" />
+	
+	<CustomBehavior File="Message" Text="Loch Modan Part 2 Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>
