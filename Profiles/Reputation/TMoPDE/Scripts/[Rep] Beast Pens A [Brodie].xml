@@ -66,7 +66,7 @@
 	<If Condition="HasQuest(32567)" >
 		<CustomBehavior File="Message" Text="Starting The Beast Pens Kicker" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32567" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<RunTo X="6849.81" Y="5510.09" Z="29.85" />
+		<CustomBehavior File="NoCombatMoveTo" X="6849.81" Y="5510.09" Z="29.85" />
 		<TurnIn QuestName="The Beast Pens" QuestId="32567" TurnInName="Scout Captain Daelin" TurnInId="67998" />
 	</If>
 	
@@ -148,7 +148,7 @@
 					HasQuest(32550) &amp;&amp; IsQuestCompleted(32550)" >
 		<CustomBehavior File="Message" Text="Heading back to Beast Pens to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<RunTo X="6849.81" Y="5510.09" Z="29.85" />
+		<CustomBehavior File="NoCombatMoveTo" X="6849.81" Y="5510.09" Z="29.85" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 	
