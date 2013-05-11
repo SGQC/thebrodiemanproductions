@@ -151,7 +151,7 @@
 		<CustomBehavior File="UserSettings" QuestId="32218" LootMobs="True" KillBetweenHotspots="True" PullDistance="5" /> 
 		<RunTo X="6512.10" Y="6070.66" Z="39.41" />
 		<While Condition="!IsQuestCompleted(32218)" >
-			<CustomBehavior File="InteractWith" QuestId="32218" MobId="69331" MobId2="69337" IgnoreLoSToTarget="True" NonCompeteDistance="0" MinRange="3" Range="10" InteractByUsingItemId="93751" AuraIdMissingFromMob="136711" CollectionDistance="1000" />
+			<CustomBehavior File="InteractWith" QuestId="32218" MobId="69331" MobId2="69337" IgnoreLoSToTarget="True" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" MinRange="3" Range="10" InteractByUsingItemId="93751" AuraIdMissingFromMob="136711" CollectionDistance="1000" />
 		</While>
 	</If>
 	

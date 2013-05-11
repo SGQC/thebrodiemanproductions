@@ -2,6 +2,12 @@ Patch Notes
 
 5/11/13
 
+r260
+Court of Bones
+-- Ashes of the Enemy - Will only attack mobs that attack you now
+Beast Pens
+-- Should approach kicker turnin ignoring combat until then
+
 r259
 The Leveling Grind
 -- Dun Morogh - Ultrasafe Personnel Launcher - converted to InteractWith, unknown results
