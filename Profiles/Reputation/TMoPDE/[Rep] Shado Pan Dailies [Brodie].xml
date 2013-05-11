@@ -373,19 +373,19 @@
 <!-- Ban Bearheart -->
 	<If Condition="HasQuestAvailable(62304)" >
 		<While Condition="HasQuestAvailable(62304)" >
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton4" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="62304" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62304" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton5" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -413,7 +413,7 @@
 <!-- Ling of the Six Pools -->
 	<If Condition="HasQuestAvailable(63614)" >
 		<While Condition="HasQuestAvailable(63614)" >
-			<CustomBehavior File="InteractWith" MobId="63614" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63614" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -441,19 +441,19 @@
 <!-- Master Snowdrift -->
 	<If Condition="HasQuestAvailable(63009)" >
 		<While Condition="HasQuestAvailable(63009)" >
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton1" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton3" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton4" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="63009" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63009" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton5" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -601,23 +601,22 @@
 <!-- Friends, Not Food -->
 	<If Condition="HasQuest(31201) &amp;&amp; !IsQuestCompleted(31201)" >
 		<CustomBehavior File="Message" Text="Starting Friends, Not Food" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="31201" LootMobs="True" PullDistance="1" />
-		<CustomBehavior File="FlyTo" X="2491.74" Y="5949.21" Z="91.05" />
+		<CustomBehavior File="UserSettings" QuestId="31201" LootMobs="False" PullDistance="1" />
 		<While Condition="!IsQuestCompleted(31201)" >
-			<If Condition="!IsObjectiveComplete(1,30201)" >
+			<If Condition="!IsObjectiveComplete(1, 30201)" >
 				<CustomBehavior File="FlyTo" X="2510.26" Y="6041.46" Z="55.22" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64461" IgnoreCombat="True" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64461" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
 			</If>
-			<If Condition="!IsObjectiveComplete(2,30201)" >
+			<If Condition="!IsObjectiveComplete(2, 30201)" >
 				<CustomBehavior File="FlyTo" X="2381.62" Y="6078.68" Z="54.32" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64460" IgnoreCombat="True" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64460" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
 			</If>
-			<If Condition="!IsObjectiveComplete(3,30201)" >
+			<If Condition="!IsObjectiveComplete(3, 30201)" >
 				<CustomBehavior File="FlyTo" X="2336.98" Y="6065.93" Z="54.23" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64459" IgnoreCombat="True" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64459" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
 			</If>
 		</While>
 		<CustomBehavior File="FlyTo" X="2491.74" Y="5949.21" Z="91.05" />

@@ -76,7 +76,7 @@
 <QuestOrder>
 
 <If Condition="Me.IsHorde">
-	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Level Check [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 </If>	
 	  
 <!-- Loch Modan Quests -->
@@ -125,7 +125,7 @@
 	</If>
 
 	<CustomBehavior File="Message" Text="Loch Modan Complete" LogColor="Orange" />
-	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Level Check [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		
 </QuestOrder>
 </HBProfile>

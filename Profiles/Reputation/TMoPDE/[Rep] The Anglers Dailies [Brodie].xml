@@ -200,11 +200,11 @@
 <!-- Fiznix -->
 	<While Condition="HasQuestAvailable(60136)" >
 		<CustomBehavior File="FlyTo" X="-1503.70" Y="-219.3447" Z="0.643862" />
-		<CustomBehavior File="InteractWith" MobId="60136" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60136" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		<If Condition="HasQuestAvailable(60136)" >
-			<CustomBehavior File="InteractWith" MobId="60136" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="60136" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click QuestTitleButton2" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</If>

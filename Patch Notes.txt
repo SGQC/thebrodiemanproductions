@@ -1,5 +1,22 @@
 Patch Notes
 
+5/11/13
+
+r259
+The Leveling Grind
+-- Dun Morogh - Ultrasafe Personnel Launcher - converted to InteractWith, unknown results
+-- Project-Wide -> Removed Level Check, use only Level Grind at base level
+-- Teldrassil - Expanded to support up to level 15
+Farm Grinding Profiles
+-- All updated to new Farming format used on dailies
+Cloud Serpent
+-- Added quest tags to Trainer's Challenges, to avoid blacklisting mobs
+Shado Pan
+-- All quest givers' "QuestFrameDisposition" set to Ignore
+-- Friends, Not Food - Adjusted flight pathing and combat strategy
+The Anglers
+-- Fiznix's "QuestFrameDisposition" set to Ignore
+
 5/10/13
 
 r258
