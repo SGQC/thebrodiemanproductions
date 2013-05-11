@@ -28,6 +28,9 @@
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Gnome Start [Brodie]" />
 		</If>
 		<If Condition="Me.Race == WoWRace.NightElf">
+			<If Condition="Me.LevelFraction &gt;= 10" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />
+			</If>
 			<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(28731)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Teldrassil [Brodie]" />
 			</If>

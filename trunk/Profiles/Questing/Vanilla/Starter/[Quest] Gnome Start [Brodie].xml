@@ -261,7 +261,7 @@
 <!-- End of New Tinkertown Quests -->
 
 	<CustomBehavior File="Message" Text="Gnome Starter Section Complete" LogColor="Orange" />
-	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Level Check [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Dun Morogh [Brodie]" />
 		
 </QuestOrder>
 </HBProfile>

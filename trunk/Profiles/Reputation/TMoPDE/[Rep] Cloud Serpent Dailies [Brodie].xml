@@ -573,7 +573,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31717)" >
-			<CustomBehavior File="InteractWith" MobId="58506" InteractByGossipOptions="1" X="1613.85" Y="-2593.837" Z="151.2305" />
+			<CustomBehavior File="InteractWith" QuestId="31717" MobId="58506" InteractByGossipOptions="1" X="1613.85" Y="-2593.837" Z="151.2305" />
 		</While>
 	</If>
 
@@ -585,7 +585,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31718)" >
-			<CustomBehavior File="InteractWith" MobId="58508" InteractByGossipOptions="1" X="1603.27" Y="-2562.27" Z="153.02" />
+			<CustomBehavior File="InteractWith" QuestId="31718" MobId="58508" InteractByGossipOptions="1" X="1603.27" Y="-2562.27" Z="153.02" />
 		</While>
 	</If>
 
@@ -597,7 +597,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31719)" >
-			<CustomBehavior File="InteractWith" MobId="58509" InteractByGossipOptions="1" X="1555.56" Y="-2616.34" Z="148.96" />
+			<CustomBehavior File="InteractWith" QuestId="31719" MobId="58509" InteractByGossipOptions="1" X="1555.56" Y="-2616.34" Z="148.96" />
 		</While>
 	</If>
 
@@ -609,7 +609,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt frequently (and heal/soak well) you'll be all set. Otherwise do this manually. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31720)" >
-			<CustomBehavior File="InteractWith" MobId="58510" InteractByGossipOptions="1" X="1571.74" Y="-2631.30" Z="149.41" />
+			<CustomBehavior File="InteractWith" QuestId="31720" MobId="58510" InteractByGossipOptions="1" X="1571.74" Y="-2631.30" Z="149.41" />
 		</While>
 	</If>
 
@@ -621,7 +621,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="UserDialog" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="If your CC is smart, and can interrupt you'll be all set. This boss is not too tough, but the stacking debuff can hurt. Press OK to let bot fight, or do it yourself, now." />
 		<While Condition="!IsQuestCompleted(31721)" >
-			<CustomBehavior File="InteractWith" MobId="58511" InteractByGossipOptions="1" X="1629.15" Y="-2548.51" Z="153.28" />
+			<CustomBehavior File="InteractWith" QuestId="31721" MobId="58511" InteractByGossipOptions="1" X="1629.15" Y="-2548.51" Z="153.28" />
 		</While>
 	</If>
 

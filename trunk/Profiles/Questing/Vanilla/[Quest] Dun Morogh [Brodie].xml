@@ -68,9 +68,9 @@
 
 <QuestOrder>
 
-<If Condition="Me.IsHorde">
-	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Level Check [Brodie]" />
-</If>	
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>	
 	  
 <!-- Dun Morogh Quests -->
 
@@ -146,7 +146,7 @@
 	
 <!-- The Ultrasafe Personnel Launcher -->
 	<PickUp QuestName="The Ultrasafe Personnel Launcher" QuestId="25839" GiverName="Delber Cranktoggle" GiverId="41363" />
-	<CustomBehavior File="MountVehOnly" QuestId="25839" VehicleMountId="41398" X="-5462.186" Y="-641.0383" Z="394.4818" />
+	<CustomBehavior File="InteractWith" QuestId="25839" VehicleMountId="41398" WaitTime="3000" X="-5462.186" Y="-641.0383" Z="394.4818" />
 	<TurnIn QuestName="The Ultrasafe Personnel Launcher" QuestId="25839" TurnInName="Slamp Wobblecog" TurnInId="41298" />
 	
 <!-- Eliminate the Resistance/Strike From Above/The View From Down Here -->

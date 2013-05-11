@@ -87,7 +87,7 @@
 <QuestOrder>
 
 <If Condition="Me.IsHorde">
-	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Level Check [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 </If>	
 	  
 <!-- Dun Morogh Quests -->
@@ -148,7 +148,7 @@
 	</While>-->
 	
 	<CustomBehavior File="Message" Text="Dun Morogh (Part 2) Section Complete" LogColor="Orange" />
-	<CustomBehavior File="LoadProfile" ProfileName="[Quest] Loch Modan [Brodie]" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		
 </QuestOrder>
 </HBProfile>

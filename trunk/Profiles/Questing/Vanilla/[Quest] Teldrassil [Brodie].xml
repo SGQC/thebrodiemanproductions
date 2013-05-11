@@ -2,7 +2,7 @@
 
 <Name>Teldrassil Quests ($Rev$)</Name>
 <MinLevel>1</MinLevel>
-<MaxLevel>10</MaxLevel>
+<MaxLevel>15</MaxLevel>
 
 <MinDurability>0.2</MinDurability>
 <MinFreeBagSlots>2</MinFreeBagSlots>
@@ -146,9 +146,32 @@
 	</Objective>
 </Quest>
 
+<Quest Id="923" Name="Mossy Tumors" >
+	<Objective Type="CollectItem" ItemId="5170" CollectCount="5" >
+		<CollectFrom>
+			<Mob Name="Timberling Mire Beast" Id="2029" />
+			<Mob Name="Timberling Trampler" Id="2027" />
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="10415.11" Y="1691.234" Z="1295.368" />
+			<Hotspot X="10378.37" Y="1646.852" Z="1291.506" />
+			<Hotspot X="10372.02" Y="1582.395" Z="1293.408" />
+			<Hotspot X="10437.56" Y="1596.023" Z="1283.96" />
+			<Hotspot X="10496.16" Y="1625.409" Z="1288.059" />
+			<Hotspot X="10557.75" Y="1638.809" Z="1284.789" />
+			<Hotspot X="10624.78" Y="1625.698" Z="1284.314" />
+			<Hotspot X="10717.63" Y="1612.665" Z="1274.819" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>	
   
 <!-- Teldrassil Quests -->
 	<CustomBehavior File="Message" Text="Compiling Teldrassil Quests" LogColor="Green" />
@@ -240,12 +263,41 @@
 		<CustomBehavior File="WaitTimer" WaitTime="15000" />
 	</If>
 	
-<!-- Timberling Seeds/Timberling Sprouts -->
+	<If Condition="Me.LevelFraction &gt;= 10" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Lake Al'Ameth Quests" LogColor="CornflowerBlue" />
+	
+<!-- Timberling Seeds/Timberling Sprouts/The Glowing Fruit -->
 	<PickUp QuestName="Timberling Seeds" QuestId="918" GiverName="Denalan" GiverId="2080" />
 	<PickUp QuestName="Timberling Sprouts" QuestId="919" GiverName="Denalan" GiverId="2080" />
+	<Objective QuestName="Timberling Sprouts" QuestId="919" Type="CollectItem" ItemId="5169" CollectCount="10" />
+	<Objective QuestName="Timberling Seeds" QuestId="918" Type="CollectItem" ItemId="5168" CollectCount="6" />
+	<PickUp QuestName="The Glowing Fruit" QuestId="930" GiverName="Strange Fruited Plant" GiverId="6751" GiverType="Object" X="9379.082" Y="848.8281" Z="1260.937" />
+	<TurnIn QuestName="Timberling Seeds" QuestId="918" TurnInName="Denalan" TurnInId="2080" />
+	<TurnIn QuestName="Timberling Sprouts" QuestId="919" TurnInName="Denalan" TurnInId="2080" />
+	<TurnIn QuestName="The Glowing Fruit" QuestId="930" TurnInName="Denalan" TurnInId="2080" />
 	
-	<CustomBehavior File="Message" Text="Dolanaar Quests Complete" LogColor="Orange" />
-	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Darkshore [Brodie]" />
+	<If Condition="Me.LevelFraction &gt;= 10" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Rellian Greenspyre -->
+	<PickUp QuestName="Rellian Greenspyre" QuestId="922" GiverName="Denalan" GiverId="2080" />
+	<TurnIn QuestName="Rellian Greenspyre" QuestId="922" TurnInName="Rellian Greenspyre" TurnInId="3517" />
+	
+	<If Condition="Me.LevelFraction &gt;= 10" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+<!-- Mossy Tumors -->
+	<PickUp QuestName="Mossy Tumors" QuestId="923" GiverName="Rellian Greenspyre" GiverId="3517" />
+	<Objective QuestName="Mossy Tumors" QuestId="923" Type="CollectItem" ItemId="5170" CollectCount="5" />
+	<TurnIn QuestName="Mossy Tumors" QuestId="923" TurnInName="Rellian Greenspyre" TurnInId="3517" />
+	
+	<CustomBehavior File="Message" Text="Teldrassil Quests Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 
 </QuestOrder>
 </HBProfile>
