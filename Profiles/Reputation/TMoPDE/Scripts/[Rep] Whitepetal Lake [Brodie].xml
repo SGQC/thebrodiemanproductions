@@ -136,11 +136,18 @@
 	<If Condition="(HasQuest(30340) &amp;&amp; !IsQuestCompleted(30340))" >
 		<CustomBehavior File="Message" Text="Starting Stick in the Mud" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30340" LootMobs="True" PullDistance="1" />
-		<CustomBehavior File="FlyTo" X="1140.179" Y="1444.658" Z="342.9452" />
-		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30340)" >
-			<CustomBehavior File="InteractWith" MobId="212744" WaitTime="100" CollectionDistance="10000" X="1140.179" Y="1444.658" Z="342.9452" />
-		</While>
+		<CustomBehavior File="ForcedMount" MountType="Flying" />
+		<CustomBehavior File="InteractWith" QuestId="30340" MobId="212744" NumOfTimes="100" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" WaitTime="100" >
+			<HuntingGrounds>
+				<Hotspot X="1131.375" Y="1385.955" Z="343.8848" />
+				<Hotspot X="1077.54" Y="1389.175" Z="347.7675" />
+				<Hotspot X="1067.626" Y="1427.05" Z="345.4818" />
+				<Hotspot X="1074.394" Y="1466.23" Z="347.7806" />
+				<Hotspot X="1130.365" Y="1508.427" Z="347.7013" />
+				<Hotspot X="1164.581" Y="1502.871" Z="349.571" />
+				<Hotspot X="1206.465" Y="1484.605" Z="346.3406" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- Getting your Hands Dirty -->
