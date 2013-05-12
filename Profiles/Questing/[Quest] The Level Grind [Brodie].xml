@@ -25,6 +25,9 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Dun Morogh [Brodie]" />
 			</If>
 		</If>
+		<If Condition="Me.Race == WoWRace.Human">
+			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
+		</If>
 		<If Condition="Me.Race == WoWRace.Dwarf">
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Dwarf Start [Brodie]" />
 		</If>

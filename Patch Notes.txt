@@ -2,6 +2,10 @@ Patch Notes
 
 5/11/13
 
+r262
+The Leveling Grind
+-- Added Human Starter
+
 r261
 The Leveling Grind
 -- Added Loch Modan Part 1 (Complete)
