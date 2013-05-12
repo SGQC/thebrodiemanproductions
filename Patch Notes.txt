@@ -2,6 +2,13 @@ Patch Notes
 
 5/12/13
 
+r265
+Farming Dailies and Grinding Profiles
+-- All area checks updated to assure all plants are covered
+-- Updated order and logic
+-- Should only use/get shovel if needed
+-- Will no longer jump around between dirt piles, but pathing still has holes (due to earlier mesh phases)
+
 r264
 Ruins of Guo-Lai
 -- Offering a Warm Welcome - Should now Dismount, ignore nearby players, and only attack who is attacking us
