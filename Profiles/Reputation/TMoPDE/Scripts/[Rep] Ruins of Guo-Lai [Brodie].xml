@@ -379,12 +379,10 @@
 		<CustomBehavior File="Message" Text="Starting Offering A Warm Welcome" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30301" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1265.85" Y="1901.82" Z="349.66" />
-		<CustomBehavior File="ForcedDismount"/>
 		<While Condition="!IsQuestCompleted(30301)" >
 			<CustomBehavior File="FlyTo" X="1249.55" Y="1892.47" Z="348.37" />
 			<While Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; u.Entry == 210680 &amp;&amp; u.Distance &lt;= 500)" >
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" Range="20" MinRange="10" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
+				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" Range="20" MinRange="10" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
 					<HuntingGrounds>
 						<Hotspot X="1249.55" Y="1892.47" Z="348.37" />
 						<Hotspot X="1228.00" Y="1852.45" Z="347.59" />
@@ -397,7 +395,7 @@
 			<CustomBehavior File="FlyTo" X="1442.69" Y="1802.02" Z="301.77" />
 			<While Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; u.Entry == 210680 &amp;&amp; u.Distance &lt;= 500)" >
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" Range="20" MinRange="10" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
+				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" Range="20" MinRange="10" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
 					<HuntingGrounds>
 						<Hotspot X="1442.69" Y="1802.02" Z="301.77" />
 						<Hotspot X="1489.75" Y="1833.92" Z="308.17" />

@@ -1,5 +1,17 @@
 Patch Notes
 
+5/12/13
+
+r264
+Ruins of Guo-Lai
+-- Offering a Warm Welcome - Should now Dismount, ignore nearby players, and only attack who is attacking us
+The Tillers
+-- Farmer Yoon QuestFrameDisposition now ignored
+-- Andi QuestFrameDisposition now ignored
+-- Ella QuestFrameDisposition now ignored
+Farm Dailies
+-- Added a dismount strategy to Runty Plants
+
 5/11/13
 
 r262

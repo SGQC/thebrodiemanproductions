@@ -529,7 +529,7 @@
 	<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 66130, 63186, 63230, 66114, 63150, 60218, 63251, 63267, 66086, 63166 }.Contains((int)u.Entry) &amp;&amp; u.Distance &lt;= 100)" >
 		<CustomBehavior File="InteractWith" MobId="66130" MobId2="63186" MobId3="63230" MobId4="66114" MobId5="63150"
 											MobId6="60218" MobId7="63251" MobId8="63267" MobId9="66086" MobId10="63166"
-											WaitForNpcs="False" WaitTime="3000" />
+											PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="3000" />
 		<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1500" />
 	</While>
 
