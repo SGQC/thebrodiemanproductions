@@ -440,7 +440,7 @@
 			<PickUp QuestName="You Have to Burn The Ropes" QuestId="30327" GiverName="Ella" GiverId="58647" />
 		<Else>
 			<While Condition="HasQuestAvailable(58647, &quot;Available&quot;)" >
-				<CustomBehavior File="InteractWith" MobId="58647" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" InteractByQuestFrameDisposition="Ignore" MobId="58647" WaitTime="1000" />
 				<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
@@ -514,7 +514,7 @@
 			<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 		</If>
 		<While Condition="HasQuestAvailable(58646)" >
-			<CustomBehavior File="InteractWith" MobId="58646" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="58646" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -522,7 +522,7 @@
 
 <!-- Andi -->
 	<While Condition="HasQuestAvailable(64464)" >
-		<CustomBehavior File="InteractWith" MobId="64464" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" InteractByQuestFrameDisposition="Ignore" MobId="64464" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -606,7 +606,7 @@
 			<CustomBehavior File="UserDialog" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" Text="WARNING: Previously completed quests detected! \n\n Either you have done some of you quests already, and have restarted the bot...\n OR your cache folder is NOT clean, and must be deleted, and bot restarted." />
 		</If>
 		<While Condition="HasQuestAvailable(58646)" >
-			<CustomBehavior File="InteractWith" MobId="58646" PreInteractMountStrategy="Dismount" WaitTime="1000" X="-180.84" Y="628.36" Z="165.41" />
+			<CustomBehavior File="InteractWith" MobId="58646" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" X="-180.84" Y="628.36" Z="165.41" />
 			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
@@ -717,7 +717,7 @@
 		<CustomBehavior File="Message" Text="Starting Water, Water Everywhere" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-221.92" Y="461.65" Z="185.44" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
 		<While Condition="!IsObjectiveComplete(1,30317)">
 			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
 		</While>
