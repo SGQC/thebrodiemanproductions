@@ -512,7 +512,6 @@
 		<If Condition="Me.HasAura(116242)" >
 			<RunTo X="-187.87" Y="630.97" Z="165.41" />
 			<RunTo X="-164.82" Y="643.40" Z="165.41" />
-			<CustomBehavior File="ForcedDismount" />
 		</If>
 	</While>
 	
