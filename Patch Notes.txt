@@ -1,5 +1,14 @@
 Patch Notes
 
+5/13/13
+
+r268
+August Celestials
+-- QuestFrameDisposition set to ignore for both kicker npcs
+-- Added WaitTime to Lua calls
+QuestBehaviors
+-- More updates from CJ
+
 5/12/13
 
 r267
