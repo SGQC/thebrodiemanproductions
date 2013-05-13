@@ -2,6 +2,13 @@ Patch Notes
 
 5/12/13
 
+r266
+The Tillers
+-- Chasing the Chicken - Will now force dismount/shapeshift cancel before picking up chickens
+The Leveling Grind
+-- Loch Modan Complete
+-- Mounting training support added (level 20 only)
+
 r265
 Farming Dailies and Grinding Profiles
 -- All area checks updated to assure all plants are covered
