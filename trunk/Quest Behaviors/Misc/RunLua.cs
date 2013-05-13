@@ -77,8 +77,8 @@ namespace Honorbuddy.Quest_Behaviors.RunLua
         private readonly WaitTimer _waitTimer = new WaitTimer(TimeSpan.Zero);
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: RunLua.cs 369 2013-03-18 09:05:58Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 369 $"); } }
+        public override string SubversionId { get { return ("$Id: RunLua.cs 500 2013-05-10 02:08:18Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 500 $"); } }
 
 
         ~RunLua()

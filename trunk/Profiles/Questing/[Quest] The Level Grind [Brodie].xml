@@ -41,6 +41,9 @@
 		<If Condition="Me.Race == WoWRace.Gnome">
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Gnome Start [Brodie]" />
 		</If>
+		<If Condition="Me.Race == WoWRace.Worgen">
+			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
+		</If>
 		<If Condition="Me.Race == WoWRace.NightElf">
 			<If Condition="Me.LevelFraction &gt;= 10" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />

@@ -68,7 +68,7 @@
 			<CustomBehavior File="WaitTimer" WaitTime="4000" />
 			<While Condition="HasQuestAvailable(64032)" >
 				<CustomBehavior File="InteractWith" MobId="64032" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" WaitTime="1000" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 			<RunTo X="963.9176" Y="350.7879" Z="450.1089" />
@@ -79,8 +79,8 @@
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="WaitTimer" WaitTime="4000" />
 			<While Condition="HasQuestAvailable(64001)" >
-				<CustomBehavior File="InteractWith" MobId="64001" WaitTime="1000" />
-				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+				<CustomBehavior File="InteractWith" InteractByQuestFrameDisposition="Ignore" MobId="64001" WaitTime="1000" />
+				<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" WaitTime="1000" />
 				<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 			</While>
 			<RunTo X="1511.082" Y="911.3512" Z="423.8227" />
