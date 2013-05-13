@@ -2,6 +2,10 @@ Patch Notes
 
 5/12/13
 
+r267
+Golden Lotus
+-- Wait timer added to quest givers for clicking the quest gossip button
+
 r266
 The Tillers
 -- Chasing the Chicken - Will now force dismount/shapeshift cancel before picking up chickens
