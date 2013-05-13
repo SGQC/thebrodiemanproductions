@@ -238,19 +238,19 @@
 <!-- Anji Autumnlight -->
 	<While Condition="HasQuestAvailable(58465)" >
 		<CustomBehavior File="InteractWith" MobId="58465" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="2000" />
 	</While>
 <!-- Kun Autumnlight -->
 	<While Condition="HasQuestAvailable(58471)" >
 		<CustomBehavior File="InteractWith" MobId="58471" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 <!-- Sun Tenderheart -->
 	<While Condition="HasQuestAvailable(58468)" >
 		<CustomBehavior File="InteractWith" MobId="58468" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
