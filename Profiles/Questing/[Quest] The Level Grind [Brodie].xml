@@ -31,18 +31,12 @@
 			<If Condition="Me.Race == WoWRace.Gnome &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(26373)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Dun Morogh [Brodie]" />
 			</If>
-		</If>
-		<If Condition="Me.Race == WoWRace.Human">
-			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
-		</If>
-		<If Condition="Me.Race == WoWRace.Dwarf">
-			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Dwarf Start [Brodie]" />
-		</If>
-		<If Condition="Me.Race == WoWRace.Gnome">
-			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Gnome Start [Brodie]" />
-		</If>
-		<If Condition="Me.Race == WoWRace.Worgen">
-			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
+			<If Condition="Me.Race == WoWRace.Dwarf">
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Dwarf Start [Brodie]" />
+			</If>
+			<If Condition="Me.Race == WoWRace.Gnome">
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Gnome Start [Brodie]" />
+			</If>
 		</If>
 		<If Condition="Me.Race == WoWRace.NightElf">
 			<If Condition="Me.LevelFraction &gt;= 10" >
@@ -52,6 +46,12 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Teldrassil [Brodie]" />
 			</If>
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Night Elf Start [Brodie]" />
+		</If>
+		<If Condition="Me.Race == WoWRace.Human">
+			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
+		</If>
+		<If Condition="Me.Race == WoWRace.Worgen">
+			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
 		</If>
 	</If>
 	

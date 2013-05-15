@@ -1,5 +1,13 @@
 Patch Notes
 
+5/14/13
+
+r269
+The Klaxxi
+-- Xaril - QuestFrameDisposition ignored
+Shado Pan
+-- QuestFrameDisposition ignored on companions - UNKNOWN RESULTS
+
 5/13/13
 
 r268
