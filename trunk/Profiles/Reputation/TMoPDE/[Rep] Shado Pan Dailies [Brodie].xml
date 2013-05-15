@@ -391,21 +391,21 @@
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 1)" >
-			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<ElseIf Condition="!IsAchievementCompleted(7298, 4) &amp;&amp; IsQuestCompleted(31038)" >	
-			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="!IsAchievementCompleted(7298, 7) &amp;&amp; IsQuestCompleted(31104)" >
-			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 33) &amp;&amp; IsQuestCompleted(31104)" >
-			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62303" X="1877.03" Y="4273.26" Z="149.52" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 66) &amp;&amp; IsQuestCompleted(31038)" >
-			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62380" X="1873.87" Y="4268.60" Z="149.50" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<Else>
-			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62354" X="1870.94" Y="4276.80" Z="149.50" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</Else>
 		</If>
 	</If>
@@ -414,26 +414,26 @@
 	<If Condition="HasQuestAvailable(63614)" >
 		<While Condition="HasQuestAvailable(63614)" >
 			<CustomBehavior File="InteractWith" MobId="63614" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
-			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 2)" >
-			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<ElseIf Condition="!IsAchievementCompleted(7298, 5) &amp;&amp; IsQuestCompleted(31220)" >
-			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="!IsAchievementCompleted(7298, 8) &amp;&amp; IsQuestCompleted(31221)" >
-			<CustomBehavior File="InteractWith" MobId="63616" X="1830.88" Y="4271.50" Z="149.08" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63616" X="1830.88" Y="4271.50" Z="149.08" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 33) &amp;&amp; IsQuestCompleted(31221)" >
-			<CustomBehavior File="InteractWith" MobId="63616" X="1870.94" Y="4276.80" Z="149.50" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63616" X="1870.94" Y="4276.80" Z="149.50" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 66) &amp;&amp; IsQuestCompleted(31220)" >
-			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63618" X="1842.04" Y="4264.08" Z="148.88" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<Else>
-			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="63617" X="1838.78" Y="4281.86" Z="149.32" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</Else>
 		</If>
 	</If>
@@ -459,21 +459,21 @@
 		</While>
 
 		<If Condition="!IsAchievementCompleted(7298, 3)" >
-			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		<ElseIf Condition="!IsAchievementCompleted(7298, 6) &amp;&amp; IsQuestCompleted(31127)" >
-			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" InteractByGossipOptions="1" NonCompeteDistance="0" Range="5" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" Range="5" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="!IsAchievementCompleted(7298, 9) &amp;&amp; IsQuestCompleted(31128)" >
-			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 33) &amp;&amp; IsQuestCompleted(31128)" >
-			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62978" X="1803.88" Y="4247.88" Z="148.80" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<ElseIf Condition="(Random(100) &lt; 66) &amp;&amp; IsQuestCompleted(31127)" >
-			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" InteractByGossipOptions="1" NonCompeteDistance="0" Range="5" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62550" X="1859.20" Y="4224.45" Z="150.09" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" Range="5" WaitForNpcs="False" WaitTime="1000" />
 		</ElseIf>
 		<Else>
-			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" MobId="62546" X="1845.39" Y="4239.98" Z="148.76" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" NonCompeteDistance="0" WaitForNpcs="False" WaitTime="1000" />
 		</Else>
 		</If>
 	</If>

@@ -478,8 +478,8 @@
 
 <!-- Xaril the Poisoned Mind -->
 	<While Condition="HasQuestAvailable(62151)" > 
-		<CustomBehavior File="InteractWith" MobId="62151" CollectionDistance="200" WaitTime="1000" />
-		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
+		<CustomBehavior File="InteractWith" InteractByQuestFrameDisposition="Ignore" MobId="62151" CollectionDistance="200" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>

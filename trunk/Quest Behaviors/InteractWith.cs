@@ -585,8 +585,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _timerToReachDestination = null;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 505 2013-05-13 02:21:15Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 505 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 510 2013-05-15 06:06:07Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 510 $"); } }
         #endregion
 
 
@@ -636,6 +636,13 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                 CharacterSettings.Instance.PullDistance = 0;
 
                 _waitTimerAfterInteracting.WaitTime = TimeSpan.FromMilliseconds(WaitTime);
+
+                // NB: With the post-.557 HB releases, Honorbuddy will keep the NPC dialog boxes up
+                // after a <PickUp> directive.  This looks more human like, and is a good thing.
+                // Unfortunately, a <PickUp> immediate followed by an <InteractWith> will cause InteractWith
+                // to see an unexpected quest dialog frame.  To prevent problems, we close all dialogs
+                // when InteractWith is started, here.
+                CloseOpenFrames(true);
             }
         }
 
@@ -647,6 +654,18 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         {
             return new Decorator(context => !IsDone,
                 new PrioritySelector(
+                    // Force recalculation of time to reach destination after combat completes...
+                    new Decorator(context => Me.Combat,
+                        new Action(context =>
+                        {
+                            _timerToReachDestination = null;
+                            CloseOpenFrames(true);
+                            return RunStatus.Failure;   // fall through
+                        })),
+
+                    new Decorator(context => !Me.Combat,
+                        UtilityBehaviorPS_HealAndRest()),
+
                     // If a mob is targeting us, deal with it immediately, so our interact actions won't be interrupted...
                     new Decorator(context => !IgnoreCombat
                                             && !Me.IsFlying
@@ -656,9 +675,6 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                                                                         .Where(o => o.ToUnit() != null)
                                                                         .Select(o => o.ToUnit()))),
 
-                    new Decorator(context => !Me.Combat,
-                        UtilityBehaviorPS_HealAndRest()),
-                            
                     // Delay, if necessary...
                     // NB: We must do this prior to checking for 'behavior done'.  Otherwise, profiles
                     // that don't have an associated quest, and put the behavior in a <While> loop will not behave
@@ -869,14 +885,6 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         protected override Composite CreateBehavior_CombatOnly()
         {
             return new PrioritySelector(
-                new Action(context =>
-                {
-                    CloseOpenFrames(true);
-                    // Force recalculation of time to reach destination after combat completes...
-                    _timerToReachDestination = null;
-                    return RunStatus.Failure;   // fall through
-                }),
-                    
                 // If current target is not attackable, blacklist it...
                 new Decorator(context => (Me.CurrentTarget != null) && !Me.CurrentTarget.Attackable,
                     new Action(context =>

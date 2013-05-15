@@ -395,7 +395,7 @@
 	<PickUp QuestName="Blackrock Invasion" QuestId="26389" GiverName="Marshal McBride" GiverId="197" />
 	<PickUp QuestName="Extinguishing Hope" QuestId="26391" GiverName="Milly Osworth" GiverId="9296" />
 	<CustomBehavior File="UserSettings" QuestId="26391" PullDistance="10" />
-	<CustomBehavior File="InteractWith" QuestId="26391" MobId="42940" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByUsingItemId="58362" NumOfTimes="100" WaitTime="3000" Range="10" CollectionDistance="100" X="-9063.322" Y="-277.0595" Z="73.64384" />
+	<CustomBehavior File="InteractWith" QuestId="26391" MobId="42940" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByUsingItemId="58362" NumOfTimes="100" WaitTime="2000" Range="10" CollectionDistance="500" X="-9063.322" Y="-277.0595" Z="73.64384" />
 	<CustomBehavior File="UserSettings" PullDistance="25" />
 	<Objective QuestName="Blackrock Invasion" QuestId="26389" Type="CollectItem" ItemId="58361" CollectCount="8" />		
 	<TurnIn QuestName="Extinguishing Hope" QuestId="26391" TurnInName="Milly Osworth" TurnInId="9296" />
