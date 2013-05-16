@@ -117,7 +117,7 @@
 	</While>
 
 <!-- The Battle Ring -->
-	<If Condition="(HasQuest(30306) &amp;&amp; !IsQuestCompleted(30306))" >
+	<If Condition="HasQuest(30306) &amp;&amp; !IsQuestCompleted(30306)" >
 		<CustomBehavior File="Message" Text="Starting The Battle Ring" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30306" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="693.7659" Y="1984.032" Z="326.9627" />
@@ -129,7 +129,7 @@
 	</If>
 
 <!-- Survival Ring: Blades -->
-	<If Condition="(HasQuest(30242) &amp;&amp; !IsQuestCompleted(30242))" >
+	<If Condition="HasQuest(30242) &amp;&amp; !IsQuestCompleted(30242)" >
 		<CustomBehavior File="Message" Text="Starting Survival Ring: Blades (Safety Not Guaranteed)" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30242" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="788.5397" Y="2040.471" Z="316.0875" />
@@ -141,7 +141,7 @@
 	</If>
 
 <!-- Survival Ring: Flames -->
-	<If Condition="(HasQuest(30240) &amp;&amp; !IsQuestCompleted(30240))" >
+	<If Condition="HasQuest(30240) &amp;&amp; !IsQuestCompleted(30240)" >
 		<CustomBehavior File="Message" Text="Starting Survival Ring: Flames (Safety Not Guaranteed)" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30240" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="812.2769" Y="1974.102" Z="316.0742" />
@@ -164,7 +164,7 @@
 	</If>
 
 <!-- Enemy at the Gates -->
-	<If Condition="(HasQuest(30264) &amp;&amp; !IsQuestCompleted(30264))" >
+	<If Condition="HasQuest(30264) &amp;&amp; !IsQuestCompleted(30264)" >
 		<CustomBehavior File="Message" Text="Starting Enemy at the Gates" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30264" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="821.932" Y="2080.49" Z="316.099" />
@@ -176,25 +176,25 @@
 	</If>
 
 <!-- Lost Scouts -->
-	<If Condition="(HasQuest(30245) &amp;&amp; !IsQuestCompleted(30245))" >
+	<If Condition="HasQuest(30245) &amp;&amp; !IsQuestCompleted(30245)" >
 		<CustomBehavior File="Message" Text="Starting Lost Scouts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30245" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1242.38" Y="2177.708" Z="334.9722" />
 		<While Condition="!IsQuestCompleted(30245)" >
-			<CustomBehavior File="FlyTo" X="1208.51" Y="2189.03" Z="341.99" />
-			<CustomBehavior File="InteractWith" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
-			<CustomBehavior File="FlyTo" X="1302.94" Y="2157.54" Z="371.28" />
-			<CustomBehavior File="InteractWith" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
-			<CustomBehavior File="FlyTo" X="1391.773" Y="2084.134" Z="377.346" />
-			<CustomBehavior File="InteractWith" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
-			<CustomBehavior File="FlyTo" X="1156.07" Y="2048.46" Z="334.28" />
-			<CustomBehavior File="InteractWith" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
+			<CustomBehavior File="FlyTo" QuestId="30245" X="1208.51" Y="2189.03" Z="341.99" />
+			<CustomBehavior File="InteractWith" QuestId="30245" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
+			<CustomBehavior File="FlyTo" QuestId="30245" X="1302.94" Y="2157.54" Z="371.28" />
+			<CustomBehavior File="InteractWith" QuestId="30245" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
+			<CustomBehavior File="FlyTo" QuestId="30245" X="1391.773" Y="2084.134" Z="377.346" />
+			<CustomBehavior File="InteractWith" QuestId="30245" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
+			<CustomBehavior File="FlyTo" QuestId="30245" X="1156.07" Y="2048.46" Z="334.28" />
+			<CustomBehavior File="InteractWith" QuestId="30245" MobId="58930" MobId2="58947" CollectionDistance="5000" WaitForNpcs="False" />
 		</While>
 		<CustomBehavior File="CompleteLogQuest" QuestId="30245" />
 	</If>
 
 <!-- No Reprieve -->
-	<If Condition="(HasQuest(30444) &amp;&amp; !IsQuestCompleted(30444))" >
+	<If Condition="HasQuest(30444) &amp;&amp; !IsQuestCompleted(30444)" >
 		<CustomBehavior File="Message" Text="Starting No Reprieve" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30444" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1210.793" Y="2173.061" Z="330.8089" />
@@ -203,7 +203,7 @@
 	</If>
 
 <!-- Upon The Ramparts -->
-	<If Condition="(HasQuest(30246) &amp;&amp; !IsQuestCompleted(30246))" >
+	<If Condition="HasQuest(30246) &amp;&amp; !IsQuestCompleted(30246)" >
 		<CustomBehavior File="Message" Text="Starting Upon The Ramparts" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30246" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="784.1627" Y="2302.708" Z="381.2356" />
@@ -215,7 +215,7 @@
 	</If>
 
 <!-- Mantid Under Fire -->
-	<If Condition="(HasQuest(30243) &amp;&amp; !IsQuestCompleted(30243))" >
+	<If Condition="HasQuest(30243) &amp;&amp; !IsQuestCompleted(30243)" >
 		<CustomBehavior File="Message" Text="Starting Mantid Under Fire" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30243" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1025.549" Y="2407.683" Z="390.7802" />
@@ -235,27 +235,26 @@
 	</If>
 
 <!-- Along the Serpent's Spine -->
-	<If Condition="(HasQuest(30244) &amp;&amp; !IsQuestCompleted(30244))" >
+	<If Condition="HasQuest(30244) &amp;&amp; !IsQuestCompleted(30244)" >
 		<CustomBehavior File="Message" Text="Starting Along the Serpent's Spine" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30244" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="784.1627" Y="2302.708" Z="381.2356" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Along the Serpent's Spine" QuestId="30244" Type="KillMob" MobId="63974" KillCount="10" />
 	</If>
-	<If Condition="(HasQuest(30244) &amp;&amp; IsQuestCompleted(30244))" >
+	<If Condition="HasQuest(30244) &amp;&amp; IsQuestCompleted(30244)" >
 		<CustomBehavior File="CompleteLogQuest" QuestId="30244" />
 	</If>
 
 <!-- Bloodied Skies -->
-	<If Condition="(HasQuest(30266) &amp;&amp; !IsQuestCompleted(30266))" >
+	<If Condition="HasQuest(30266) &amp;&amp; !IsQuestCompleted(30266)" >
 		<CustomBehavior File="Message" Text="Starting Bloodied Skies" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30266" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="721.186" Y="2340.127" Z="430.8784" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30266)" >
-			<CustomBehavior File="Misc\FixedCannon" QuestId="30266" MinAngle="0.2" MaxAngle="1" VehicleId="64336" Buttons="1" ExitButton="12" />
-			<CustomBehavior File="Misc\RunLua" Lua="VehicleExit()" />
-			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<CustomBehavior File="Vehicles\CannonControl" QuestId="30266" MinAngle="0.2" MaxAngle="1" VehicleId="64336" Buttons="1" ExitButton="12" />
+			<CustomBehavior File="Misc\RunLua" Lua="VehicleExit()" WaitTime="5000" />
 		</While>
 		<CustomBehavior File="FlyTo" X="682.0827" Y="2394.73" Z="447.0219" />
 		<CustomBehavior File="FlyTo" X="741.7631" Y="2342.811" Z="539.0228" />

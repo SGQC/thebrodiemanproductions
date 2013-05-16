@@ -267,14 +267,14 @@
 
 <!-- Che Wildwalker -->
 	<While Condition="HasQuestAvailable(59338)" >
-		<CustomBehavior File="InteractWith" MobId="59338" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+		<CustomBehavior File="InteractWith" MobId="59338" WaitTime="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Cook Tope -->
 	<While Condition="HasQuestAvailable(58818)" >
-		<CustomBehavior File="InteractWith" MobId="58818" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58818" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -286,7 +286,7 @@
 
 <!-- Mayor Shiyo -->
 	<While Condition="HasQuestAvailable(58819)" >
-		<CustomBehavior File="InteractWith" MobId="58819" WaitTime="1000" InteractByQuestFrameDisposition="Ignore" />
+		<CustomBehavior File="InteractWith" MobId="58819" WaitTime="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -298,14 +298,14 @@
 
 <!-- Sun Tenderheart -->
 	<While Condition="HasQuestAvailable(59337)" >
-		<CustomBehavior File="InteractWith" MobId="59337" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="59337" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
 <!-- Rook Stonetoe -->
 	<While Condition="HasQuestAvailable(58911)" >
-		<CustomBehavior File="InteractWith" MobId="58911" InteractByQuestFrameDisposition="Ignore" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58911" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -318,7 +318,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30192)" >
 			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" IgnoreLoSToTarget="True" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" >
+				<CustomBehavior File="InteractWith" QuestId="30192" InteractByUsingItemId="85782" IgnoreLoSToTarget="True" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" >
 					<HuntingGrounds>
 						<Hotspot X="748.8545" Y="1566.354" Z="373.2431" />
 						<Hotspot X="718.7964" Y="1589.198" Z="376.3994" />
@@ -329,7 +329,7 @@
 				</CustomBehavior>
 			</If>
 			<If Condition="!HasItem(85782) &amp;&amp; !IsQuestCompleted(30192)" >
-				<CustomBehavior File="InteractWith" QuestId="30192" NonCompeteDistance="0" MobId="213369" PreInteractMountStrategy="Dismount" WaitTime="1000" CollectionDistance="5000" Range="4" >
+				<CustomBehavior File="InteractWith" QuestId="30192" NonCompeteDistance="0" MobId="213369" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitTime="1000" CollectionDistance="5000" Range="4" >
 					<HuntingGrounds>
 						<Hotspot X="748.8545" Y="1566.354" Z="373.2431" />
 						<Hotspot X="718.7964" Y="1589.198" Z="376.3994" />
@@ -351,7 +351,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30288)" >
 			<If Condition="HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" IgnoreLoSToTarget="True" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" >
+				<CustomBehavior File="InteractWith" QuestId="30288" InteractByUsingItemId="85782" IgnoreLoSToTarget="True" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" MobId="63797" MinRange="5" Range="20" >
 					<HuntingGrounds>
 						<Hotspot X="748.8545" Y="1566.354" Z="373.2431" />
 						<Hotspot X="718.7964" Y="1589.198" Z="376.3994" />
@@ -362,7 +362,7 @@
 				</CustomBehavior>
 			</If>
 			<If Condition="!HasItem(85782) &amp;&amp; !IsQuestCompleted(30288)" >
-				<CustomBehavior File="InteractWith" QuestId="30288" MobId="213369" NonCompeteDistance="0" WaitTime="1000" PreInteractMountStrategy="Dismount" CollectionDistance="5000" Range="4" >
+				<CustomBehavior File="InteractWith" QuestId="30288" MobId="213369" NonCompeteDistance="0" WaitTime="1000" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="5000" Range="4" >
 					<HuntingGrounds>
 						<Hotspot X="748.8545" Y="1566.354" Z="373.2431" />
 						<Hotspot X="718.7964" Y="1589.198" Z="376.3994" />
