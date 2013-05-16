@@ -1,5 +1,16 @@
 Patch Notes
 
+5/15/13
+
+r271
+Golden Pagoda Phase 2
+-- Burning Away the Filth - ignore LoS on banners
+Mistfall Village
+-- Quest NPCs tagged to ignore combat unless necessary
+Setting Sun Garrison
+-- Lost Scouts - Should stop flying around once done
+-- Bloodied Skies - Converted to CannonControl QB
+
 5/14/13
 
 r269

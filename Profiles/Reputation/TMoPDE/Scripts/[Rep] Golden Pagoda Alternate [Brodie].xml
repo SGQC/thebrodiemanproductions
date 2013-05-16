@@ -110,7 +110,7 @@
 
 <!-- He Softfoot -->
 	<While Condition="HasQuestAvailable(58470)" >
-		<CustomBehavior File="InteractWith" MobId="58470" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="58470" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -120,13 +120,12 @@
 	</If>
 
 <!-- Burning Away the Filth -->
-	<If Condition="(HasQuest(30282) &amp;&amp; !IsQuestCompleted(30282))" >
+	<If Condition="HasQuest(30282) &amp;&amp; !IsQuestCompleted(30282)" >
 		<CustomBehavior File="Message" Text="Starting Burning Away the Filth" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30282" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1234.62" Y="1459.12" Z="351.65" />
-		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30282)" >
-			<CustomBehavior File="InteractWith" QuestId="30282" InteractByUsingItemId="84781" MobId="212874" Range="20" MinRange="10" AuraIdMissingFromMob="123301" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" InteractByQuestFrameDisposition="TerminateBehavior" >
+			<CustomBehavior File="InteractWith" QuestId="30282" InteractByUsingItemId="84781" MobId="212874" Range="20" MinRange="10" AuraIdMissingFromMob="123301" IgnoreLoSToTarget="True" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" >
 				<HuntingGrounds WaypointVisitStrategy="InOrder">
 					<Hotspot X="1255.80" Y="1416.60" Z="353.23" />
 					<Hotspot X="1241.38" Y="1343.14" Z="360.50" />
@@ -138,7 +137,7 @@
 	</If>
 
 <!-- A Smashing Impression -->
-	<If Condition="(HasQuest(30283) &amp;&amp; !IsQuestCompleted(30283))" >
+	<If Condition="HasQuest(30283) &amp;&amp; !IsQuestCompleted(30283)" >
 		<CustomBehavior File="Message" Text="Starting A Smashing Impression" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30283" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1228.32" Y="1353.79" Z="363.78" />
@@ -149,7 +148,7 @@
 	</If>
 
 <!-- In Enemy Hands -->
-	<If Condition="(HasQuest(30293) &amp;&amp; !IsQuestCompleted(30293))" >
+	<If Condition="HasQuest(30293) &amp;&amp; !IsQuestCompleted(30293)" >
 		<CustomBehavior File="Message" Text="Starting In Enemy Hands" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30293" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
@@ -158,7 +157,7 @@
 	</If>
 
 <!-- The Silent Approach -->
-	<If Condition="(HasQuest(30281) &amp;&amp; !IsQuestCompleted(30281))" >
+	<If Condition="HasQuest(30281) &amp;&amp; !IsQuestCompleted(30281)" >
 		<CustomBehavior File="Message" Text="Starting The Silent Approach" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30281" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />
@@ -167,7 +166,7 @@
 	</If>
 
 <!-- Rude Awakenings -->
-	<If Condition="(HasQuest(30292) &amp;&amp; !IsQuestCompleted(30292))" >
+	<If Condition="HasQuest(30292) &amp;&amp; !IsQuestCompleted(30292)" >
 		<CustomBehavior File="Message" Text="Starting Rude Awakenings" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30292" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1255.798" Y="1416.6" Z="353.2284" />

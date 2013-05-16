@@ -51,6 +51,9 @@
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
 		</If>
 		<If Condition="Me.Race == WoWRace.Worgen">
+			<If Condition="Me.LevelFraction &gt;= 10 &amp;&amp; IsQuestCompleted(28517)" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />
+			</If>
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
 		</If>
 	</If>
