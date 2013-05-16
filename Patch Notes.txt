@@ -2,6 +2,10 @@ Patch Notes
 
 5/16/13
 
+r274
+Quest Behaviors
+-- Updates from CJ
+
 r273
 Conqueror's Terrace
 -- Pickup and Turnin movement to quest hub is now "NoCombatMoveTo"
