@@ -1,5 +1,14 @@
 Patch Notes
 
+5/16/13
+
+r273
+Conqueror's Terrace
+-- Pickup and Turnin movement to quest hub is now "NoCombatMoveTo"
+-- Will now interact with the living to make dead for Resonating Siphon quest
+Mistfall Village
+-- Town on Fire Quests - Ignore LoS on Water Buckets, New water bucket ObjectIds added, new water bucket ItemIds added
+
 5/15/13
 
 r272
