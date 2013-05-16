@@ -2,6 +2,10 @@ Patch Notes
 
 5/15/13
 
+r272
+The Leveling Grind
+-- Worgen Starter - Added Stealth drop to quest using stealth item
+
 r271
 The Klaxxi
 -- Quiet Now - If killed boss before reaching summoning stone, will no longer try and keep using the stone

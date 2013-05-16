@@ -693,10 +693,12 @@
 		<CustomBehavior File="NoCombatMoveTo" X="-2112.302" Y="1022.551" Z="58.13521" />
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(50218)" WaitTime="1000" />
 		<CustomBehavior File="NoCombatMoveTo" X="-1896.995" Y="950.402" Z="77.13059" />
+		<CustomBehavior File="Misc\RunLua" Lua="CancelUnitBuff(&quot;player&quot;, &quot;Stealth&quot ;" />
 		<Objective QuestName="Betrayal at Tempest's Reach" QuestId="24592" Type="KillMob" MobId="37733" KillCount="1" />
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(50218)" WaitTime="1000" />
 		<CustomBehavior File="NoCombatMoveTo" X="-1957.036" Y="856.4854" Z="64.31448" />
 		<CustomBehavior File="NoCombatMoveTo" X="-2092.469" Y="768.3928" Z="94.47879" />
+		<CustomBehavior File="Misc\RunLua" Lua="CancelUnitBuff(&quot;player&quot;, &quot;Stealth&quot ;" />
 		<Objective QuestName="Betrayal at Tempest's Reach" QuestId="24592" Type="KillMob" MobId="37735" KillCount="1" />
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(50218)" WaitTime="1000" />
 		<CustomBehavior File="NoCombatMoveTo" X="-1945.14" Y="862.108" Z="65.77158" />
