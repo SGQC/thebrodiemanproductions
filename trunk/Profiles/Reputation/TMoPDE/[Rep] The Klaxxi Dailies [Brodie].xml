@@ -473,7 +473,6 @@
 		<CustomBehavior File="InteractWith" MobId="62538" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Xaril the Poisoned Mind -->
@@ -481,7 +480,6 @@
 		<CustomBehavior File="InteractWith" InteractByQuestFrameDisposition="Ignore" MobId="62151" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Hisek the Swarmkeeper -->
@@ -489,7 +487,6 @@
 		<CustomBehavior File="InteractWith" MobId="63785" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Korven the Prime -->
@@ -497,7 +494,6 @@
 		<CustomBehavior File="InteractWith" MobId="62180" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Rik'kal the Dissector -->
@@ -505,7 +501,6 @@
 		<CustomBehavior File="InteractWith" MobId="63072" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Kaz'tik the Manipulator -->
@@ -513,7 +508,6 @@
 		<CustomBehavior File="InteractWith" MobId="63758" CollectionDistance="200" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
-		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</While>
 
 <!-- Starting Quests -->
@@ -525,7 +519,6 @@
 		<CustomBehavior File="Message" Text="Starting Dark Skies" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="126" Y="3200.40" Z="214.76" />
 		<CustomBehavior File="ForcedDismount" />
-		<RunTo X="144.6462" Y="3208.307" Z="214.7614" />
 		<CustomBehavior File="InteractWith" MobId="62151" InteractByGossipOptions="1" WaitTime="1000" />
 		<CustomBehavior File="SpecificQuests\31216-DreadWastes-DarkSkies" />
 	</If>
@@ -534,12 +527,14 @@
  	<If Condition="HasQuest(31808) &amp;&amp; !IsQuestCompleted(31808)">
 		<CustomBehavior File="Message" Text="Starting Rampage Against the Machine" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31808" LootMobs="True" PullDistance="25" />
-		<CustomBehavior File="FlyTo" X="-47.40311" Y="3421.991" Z="105.6598" />
-		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="MountVehOnly" X="-59.69" Y="3421.45" Z="103.95" VehicleMountId="63765" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="SpecificQuests\31808-DreadWastes-RampageAgainstTheMachine" />
-		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<While Condition="!IsQuestCompleted(31808)" >
+			<CustomBehavior File="FlyTo" X="-47.40311" Y="3421.991" Z="105.6598" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="MountVehOnly" X="-59.69" Y="3421.45" Z="103.95" VehicleMountId="63765" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<CustomBehavior File="SpecificQuests\31808-DreadWastes-RampageAgainstTheMachine" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</While>
 	</If>
 
 <!-- Debugging The Terrace -->
