@@ -2,6 +2,10 @@ Patch Notes
 
 5/16/13
 
+r275
+Quest Behaviors
+-- Rampage Against the Machine - attempted fix to dying, and not remounting. NEEDS FEEDBACK ON WORKING, I DON'T HAVE QUEST TODAY!
+
 r274
 Quest Behaviors
 -- Updates from CJ
