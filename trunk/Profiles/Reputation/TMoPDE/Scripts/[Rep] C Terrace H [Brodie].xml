@@ -102,7 +102,7 @@
 	<If Condition="HasQuest(32524)" >
 		<CustomBehavior File="Message" Text="Starting Conqueror's Terrace Kicker" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32524" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<RunTo X="6711.15" Y="5095.72" Z="31.21" />
+		<CustomBehavior File="NoCombatMoveTo" X="6711.15" Y="5095.72" Z="31.21" />
 		<TurnIn QuestName="The Beating of Troll Drums" QuestId="32524" TurnInName="Scout Captain Elisa" TurnInId="67985" />
 	</If>
 	
@@ -155,28 +155,14 @@
 	<If Condition="HasQuest(32493) &amp;&amp; !IsQuestCompleted(32493)" >
 		<CustomBehavior File="Message" Text="Starting They All Fall Down" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32493" LootMobs="True" KillBetweenHotspots="False" PullDistance="15" />
-		<While Condition="!IsQuestCompleted(32493)" >
-			<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 69335 &amp;&amp; u.IsDead &amp;&amp; u.Distance &lt;= 150))" >
-				<CustomBehavior File="InteractWith" QuestId="32493" InteractByUsingItemId="93806" MobId="69335" MobState="Dead" AuraIdOnMob="136972" CollectionDistance="1000" >
-					<HuntingGrounds>
-						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
-						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
-						<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
-						<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
-					</HuntingGrounds>
-				</CustomBehavior>
-			<Else>
-				<CustomBehavior File="InteractWith" QuestId="32493" MobId="69335" MobState="Alive" WaitTime="100" CollectionDistance="1000" >
-					<HuntingGrounds>
-						<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
-						<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
-						<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
-						<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
-					</HuntingGrounds>
-				</CustomBehavior>
-			</Else>
-			</If>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="32493" InteractByUsingItemId="93806" MobId="69335" MobState="Dead" AuraIdOnMob="136972" CollectionDistance="1000" NumOfTimes="100" >
+			<HuntingGrounds>
+				<Hotspot X="6699.982" Y="5122.509" Z="29.53163" />
+				<Hotspot X="6706.123" Y="5212.516" Z="30.02921" />
+				<Hotspot X="6731.59" Y="5296.625" Z="29.76926" />
+				<Hotspot X="6802.548" Y="5369.425" Z="30.98167" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 	
 <!-- This Just Won't Do -->
@@ -195,7 +181,7 @@
 					HasQuest(32232) &amp;&amp; IsQuestCompleted(32232)" >
 		<CustomBehavior File="Message" Text="Heading back to Conqueror's Terrace to Turn-In" LogColor="Green" />
 		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="False" PullDistance="1" />
-		<RunTo X="6711.15" Y="5095.72" Z="31.21" />
+		<CustomBehavior File="NoCombatMoveTo" X="6711.15" Y="5095.72" Z="31.21" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</If>
 	
