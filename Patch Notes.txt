@@ -3,6 +3,14 @@ Patch Notes
 5/15/13
 
 r271
+The Klaxxi
+-- Quiet Now - If killed boss before reaching summoning stone, will no longer try and keep using the stone
+Shado Pan
+-- Corrections to quest pickups on Ban Bearheart
+The Leveling Grind
+--Added Worgen Starter
+
+r270
 Golden Pagoda Phase 2
 -- Burning Away the Filth - ignore LoS on banners
 Mistfall Village
