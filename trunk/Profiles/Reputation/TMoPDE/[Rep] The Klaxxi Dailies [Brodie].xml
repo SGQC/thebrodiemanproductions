@@ -711,7 +711,7 @@
 		<CustomBehavior File="FlyTo" X="-1661.374" Y="4837.988" Z="59.85" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31510)">
-			<CustomBehavior File="InteractWith" MobId="214455" WaitTime="1000" />
+			<CustomBehavior File="InteractWith" QuestId="31510" MobId="214455" WaitTime="1000" WaitForNpcs="False" />
 		</While>
 	</If>
 
