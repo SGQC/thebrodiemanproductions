@@ -1,5 +1,11 @@
 Patch Notes
 
+5/17/13
+
+r279
+Setting Sun Garrison
+-- Survival Ring - Disable CC removed, caused HB to fail
+
 5/16/13
 
 r278
