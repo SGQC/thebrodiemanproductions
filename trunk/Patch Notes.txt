@@ -2,6 +2,10 @@ Patch Notes
 
 5/17/13
 
+r280
+The Klaxxi
+-- Free From Her Clutches - PreInteractMountStrategy of Dismount
+
 r279
 Setting Sun Garrison
 -- Survival Ring - Disable CC removed, caused HB to fail
