@@ -134,9 +134,11 @@
 		<CustomBehavior File="UserSettings" QuestId="30242" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="788.5397" Y="2040.471" Z="316.0875" />
 		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="ToggleCombat" CombatEnabled="False" />
 		<While Condition="!IsQuestCompleted(30242)" >
 			<RunTo X="802.4619" Y="2000.587" Z="318.2415" />
 		</While>
+		<CustomBehavior File="ToggleCombat" CombatEnabled="True" />
 		<RunTo X="788.5397" Y="2040.471" Z="316.0875" />
 	</If>
 
@@ -146,6 +148,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30240" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="812.2769" Y="1974.102" Z="316.0742" />
 		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="ToggleCombat" CombatEnabled="False" />
 		<While Condition="!IsQuestCompleted(30240)" >
 			<RunTo X="799.5345" Y="1981.939" Z="316.1925" />
 			<RunTo X="787.3194" Y="1986.719" Z="316.4765" />
@@ -160,6 +163,7 @@
 			<RunTo X="818.5838" Y="1991.025" Z="317.737" />
 			<RunTo X="809.9043" Y="1984.746" Z="316.7801" />
 		</While>
+		<CustomBehavior File="ToggleCombat" CombatEnabled="True" />
 		<RunTo X="812.2769" Y="1974.102" Z="316.0742" />
 	</If>
 

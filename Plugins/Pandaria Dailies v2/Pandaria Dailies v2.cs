@@ -52,106 +52,106 @@ namespace AzeniusHelper2
 		public static void dlog(System.Windows.Media.Color color, string message, params object[] args)
 		{ Logging.WriteDiagnostic(color, "[Pandaria Dailies]: " + message, args); }
 
-        public override void Initialize()
-        {
-            //BotEvents.OnBotStart += onBotStart;
-        }
+		public override void Initialize()
+		{
+			//BotEvents.OnBotStart += onBotStart;
+		}
 
-        #endregion
+		#endregion
 
-        private static LocalPlayer Me { get { return StyxWoW.Me; } }
-        private static Stopwatch GlobalTimer = new Stopwatch();
-        private bool firstPulse = true;
+		private static LocalPlayer Me { get { return StyxWoW.Me; } }
+		private static Stopwatch GlobalTimer = new Stopwatch();
+		private bool firstPulse = true;
 
-        #region on Bot start
+		#region on Bot start
 
-        private void onBotStart(EventArgs args)
-        {
-            dlog("start [Pandaria Dailies] v{0} - ({1})", Version, Lua.GetReturnVal<string>("return GetLocale()",0));
-            Logging.Write(System.Windows.Media.Colors.LawnGreen, "This Plugin [{0}] is originally made by Megser.", Name);
-            Logging.Write(System.Windows.Media.Colors.LawnGreen, "(Modified by Vego, TheBrodieMan and BarryDurex)");
+		private void onBotStart(EventArgs args)
+		{
+			dlog("start [Pandaria Dailies] v{0} - ({1})", Version, Lua.GetReturnVal<string>("return GetLocale()",0));
+			Logging.Write(System.Windows.Media.Colors.LawnGreen, "This Plugin [{0}] is originally made by Megser.", Name);
+			Logging.Write(System.Windows.Media.Colors.LawnGreen, "(Modified by Vego, TheBrodieMan and BarryDurex)");
 
-            // 1 to 3 is the Guild Reputation  http://www.wowwiki.com/API_GetFactionInfo            
-            dlog("---------------------");
-            for (int i = 4; i <= Lua.GetReturnVal<int>("return GetNumFactions();", 0); i++) 
-            {
-                // name, description, standingId, bottomValue, topValue, earnedValue, atWarWith, canToggleAtWar, isHeader, isCollapsed, hasRep, isWatched, isChild
-                List<string> factionsInfo = Lua.GetReturnValues("return GetFactionInfo(" + i + ");");
-                if (factionsInfo[0].Contains("Cataclysm"))
-                    break;
-                
-                dlog("[{0}] - {1} - ({2}/{3})", factionsInfo[0], FactionStanding(factionsInfo[2]), factionsInfo[5], factionsInfo[4]);
-            }
-            dlog("---------------------");
-        }
+			// 1 to 3 is the Guild Reputation  http://www.wowwiki.com/API_GetFactionInfo			
+			dlog("---------------------");
+			for (int i = 4; i <= Lua.GetReturnVal<int>("return GetNumFactions();", 0); i++) 
+			{
+				// name, description, standingId, bottomValue, topValue, earnedValue, atWarWith, canToggleAtWar, isHeader, isCollapsed, hasRep, isWatched, isChild
+				List<string> factionsInfo = Lua.GetReturnValues("return GetFactionInfo(" + i + ");");
+				if (factionsInfo[0].Contains("Cataclysm"))
+					break;
+				
+				dlog("[{0}] - {1} - ({2}/{3})", factionsInfo[0], FactionStanding(factionsInfo[2]), factionsInfo[5], factionsInfo[4]);
+			}
+			dlog("---------------------");
+		}
 
-        /// <summary>
-        /// http://www.wowwiki.com/API_TYPE_StandingId
-        /// </summary>
-        private string FactionStanding(string id)
-        {
-            string ret = string.Empty;
-            switch (id)
-            {
-                case ("1"):
-                    ret = "Hated";
-                    break;
-                case ("2"):
-                    ret = "Hostile";
-                    break;
-                case ("3"):
-                    ret = "Unfriendly";
-                    break;
-                case ("4"):
-                    ret = "Neutral";
-                    break;
-                case ("5"):
-                    ret = "Friendly";
-                    break;
-                case ("6"):
-                    ret = "Honored";
-                    break;
-                case ("7"):
-                    ret = "Revered";
-                    break;
-                case ("8"):
-                    ret = "Exalted";
-                    break;
-                default:
-                    ret = "Unknown";
-                    break;
-            }
-            return ret;
-        }
+		/// <summary>
+		/// http://www.wowwiki.com/API_TYPE_StandingId
+		/// </summary>
+		private string FactionStanding(string id)
+		{
+			string ret = string.Empty;
+			switch (id)
+			{
+				case ("1"):
+					ret = "Hated";
+					break;
+				case ("2"):
+					ret = "Hostile";
+					break;
+				case ("3"):
+					ret = "Unfriendly";
+					break;
+				case ("4"):
+					ret = "Neutral";
+					break;
+				case ("5"):
+					ret = "Friendly";
+					break;
+				case ("6"):
+					ret = "Honored";
+					break;
+				case ("7"):
+					ret = "Revered";
+					break;
+				case ("8"):
+					ret = "Exalted";
+					break;
+				default:
+					ret = "Unknown";
+					break;
+			}
+			return ret;
+		}
 
-        #endregion
-        
-        #region List of WoWUnits and WoWGameObjects needed
+		#endregion
+		
+		#region List of WoWUnits and WoWGameObjects needed
 
-        private Dictionary<ulong, WoWPoint> _captivePandarenSpirit = new Dictionary<ulong, WoWPoint>();
-        public WoWUnit CaptivePandarenSpirit
-        {
-            get
-            {
-                List<WoWUnit> _pandaren = ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => !Blacklist.Contains(u, BlacklistFlags.All) && u.IsValid && u.Entry == 59231).ToList();
+		private Dictionary<ulong, WoWPoint> _captivePandarenSpirit = new Dictionary<ulong, WoWPoint>();
+		public WoWUnit CaptivePandarenSpirit
+		{
+			get
+			{
+				List<WoWUnit> _pandaren = ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => !Blacklist.Contains(u, BlacklistFlags.All) && u.IsValid && u.Entry == 59231).ToList();
 
-                if (_pandaren == null)
-                    return null;
+				if (_pandaren == null)
+					return null;
 
-                foreach (WoWUnit P in _pandaren)
-                {
-                    if (_captivePandarenSpirit.Keys.Contains(P.Guid) && P.Location.Z != _captivePandarenSpirit[P.Guid].Z)
-                    {
-                        Blacklist.Add(P, BlacklistFlags.All, TimeSpan.FromMinutes(1));
-                        continue;
-                    }
+				foreach (WoWUnit P in _pandaren)
+				{
+					if (_captivePandarenSpirit.Keys.Contains(P.Guid) && P.Location.Z != _captivePandarenSpirit[P.Guid].Z)
+					{
+						Blacklist.Add(P, BlacklistFlags.All, TimeSpan.FromMinutes(1));
+						continue;
+					}
 
-                    else if (!_captivePandarenSpirit.Keys.Contains(P.Guid))
-                        _captivePandarenSpirit.Add(P.Guid, P.Location);
-                }
-                return _pandaren.Where(u => !Blacklist.Contains(u, BlacklistFlags.All)).OrderBy(u => u.Distance).FirstOrDefault();
-            }
-        }
+					else if (!_captivePandarenSpirit.Keys.Contains(P.Guid))
+						_captivePandarenSpirit.Add(P.Guid, P.Location);
+				}
+				return _pandaren.Where(u => !Blacklist.Contains(u, BlacklistFlags.All)).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
 		public WoWUnit JungleShredder
 		{
@@ -177,13 +177,13 @@ namespace AzeniusHelper2
 			}
 		}
 
-        public WoWUnit DreadKunchong
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 64717 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
-            }
-        }
+		public WoWUnit DreadKunchong
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 64717 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 		
 		public WoWUnit Amberhusk
 		{
@@ -201,109 +201,109 @@ namespace AzeniusHelper2
 			}
 		}
 
-        public List<WoWUnit> PandarenSpirit
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 59231 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
-            }
-        }
+		public List<WoWUnit> PandarenSpirit
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 59231 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
+			}
+		}
 		
 		public WoWUnit ShaoTienSorcerer
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 65133 && u.Distance < 5 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
-            }
-        }
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 65133 && u.Distance < 5 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
-        public List<WoWUnit> BrazierFire
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63787 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
-            }
-        }
+		public List<WoWUnit> BrazierFire
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63787 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
+			}
+		}
 
-        public WoWUnit Tormentor
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 59238 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
-            }
-        }
+		public WoWUnit Tormentor
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 59238 && !u.IsDead).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit Behemoth
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 65824 && u.IsAlive).FirstOrDefault();
-            }
-        }
+		public WoWUnit Behemoth
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 65824 && u.IsAlive).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit Krichon
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63978 && u.Distance < 30).OrderBy(u => u.Distance).FirstOrDefault();
-            }
-        }
+		public WoWUnit Krichon
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63978 && u.Distance < 30).OrderBy(u => u.Distance).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit Cracklefang
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 58768 && u.IsAlive).FirstOrDefault();
-            }
-        }
+		public WoWUnit Cracklefang
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.IsValid && u.Entry == 58768 && u.IsAlive).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit Sydow
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63240 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		public WoWUnit Sydow
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63240 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit Vicejaw
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 58769 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		public WoWUnit Vicejaw
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 58769 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 		
 		public WoWUnit GuardianAttack
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69894 && u.IsAlive && u.Distance < 10).FirstOrDefault();
-            }
-        }
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69894 && u.IsAlive && u.Distance < 10).FirstOrDefault();
+			}
+		}
 		
 		public WoWUnit GuardianFall
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69240 && u.IsAlive && u.Distance < 10).FirstOrDefault();
-            }
-        }
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69240 && u.IsAlive && u.Distance < 10).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit StatueAttack
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63447 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		public WoWUnit StatueAttack
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63447 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 
-        public WoWUnit StatueFall
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63556 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		public WoWUnit StatueFall
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63556 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 		
 		public WoWUnit PrimalDirehornA
 		{
@@ -354,91 +354,91 @@ namespace AzeniusHelper2
 		}
 		
 		public WoWUnit ZColossus
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69405 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69405 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 		
 		public WoWUnit MDevilsaur
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69406 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-            }
-        }
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69406 && u.IsAlive && u.Distance < 30).FirstOrDefault();
+			}
+		}
 
-        public List<WoWUnit> MantidNiuzao
-        {
-            get
-            {
-                return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 61502 || u.Entry == 61508 || u.Entry == 61509 && u.Distance < 50 && !u.IsDead).OrderBy(u => u.Distance).ToList();
-            }
-        }
+		public List<WoWUnit> MantidNiuzao
+		{
+			get
+			{
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 61502 || u.Entry == 61508 || u.Entry == 61509 && u.Distance < 50 && !u.IsDead).OrderBy(u => u.Distance).ToList();
+			}
+		}
 
-        #endregion
+		#endregion
 
-        #region Some Quest Helper Functions
+		#region Some Quest Helper Functions
 
-        public bool IsOnQuest(uint questId)
-        {
-            return Me.QuestLog.GetQuestById(questId) != null && !Me.QuestLog.GetQuestById(questId).IsCompleted;
-        }
+		public bool IsOnQuest(uint questId)
+		{
+			return Me.QuestLog.GetQuestById(questId) != null && !Me.QuestLog.GetQuestById(questId).IsCompleted;
+		}
 
-        public bool QuestComplete(uint questId)
-        {
-            return Me.QuestLog.GetQuestById(questId).IsCompleted;
-        }
+		public bool QuestComplete(uint questId)
+		{
+			return Me.QuestLog.GetQuestById(questId).IsCompleted;
+		}
 
-        public bool QuestFailed(uint questId)
-        {
-            return Me.QuestLog.GetQuestById(questId).IsFailed;
-        }
+		public bool QuestFailed(uint questId)
+		{
+			return Me.QuestLog.GetQuestById(questId).IsFailed;
+		}
 
-        public bool ItemOnCooldown(uint ItemId)
-        {
-            return Lua.GetReturnVal<bool>("GetItemCooldown(" + ItemId + ")", 0);
-        }
+		public bool ItemOnCooldown(uint ItemId)
+		{
+			return Lua.GetReturnVal<bool>("GetItemCooldown(" + ItemId + ")", 0);
+		}
 
-        public void UseQuestItem(uint ItemId)
-        {
-            Lua.DoString("UseItemByName(" + ItemId + ")");
-        }
+		public void UseQuestItem(uint ItemId)
+		{
+			Lua.DoString("UseItemByName(" + ItemId + ")");
+		}
 
-        public void UseIfNotOnCooldown(uint ItemId)
-        {
-            if (!ItemOnCooldown(ItemId))
-            {
-                UseQuestItem(ItemId);
-            }
-        }
+		public void UseIfNotOnCooldown(uint ItemId)
+		{
+			if (!ItemOnCooldown(ItemId))
+			{
+				UseQuestItem(ItemId);
+			}
+		}
 
-        public bool QuestObjectiveComplete(uint questId, int objectiveNum)
-        {
-            return (Lua.GetReturnVal<int>("a,b,c=GetQuestLogLeaderBoard(" + objectiveNum + ",GetQuestLogIndexByID(" + questId + "));if c==1 then return 1 else return 0 end", 0) == 1);
-        }
+		public bool QuestObjectiveComplete(uint questId, int objectiveNum)
+		{
+			return (Lua.GetReturnVal<int>("a,b,c=GetQuestLogLeaderBoard(" + objectiveNum + ",GetQuestLogIndexByID(" + questId + "));if c==1 then return 1 else return 0 end", 0) == 1);
+		}
 
-        public bool TargetingNpc(uint npcId)
-        {
-            return Me.CurrentTarget.Entry == npcId;
-        }
+		public bool TargetingNpc(uint npcId)
+		{
+			return Me.CurrentTarget.Entry == npcId;
+		}
 
-        public bool HasQuest(uint questId)
-        {
-            return Me.QuestLog.GetQuestById(questId) != null;
-        }
+		public bool HasQuest(uint questId)
+		{
+			return Me.QuestLog.GetQuestById(questId) != null;
+		}
 
-        #endregion
+		#endregion
 
-        public override void Pulse()
-        {
-            if (firstPulse)
-            { onBotStart(null); firstPulse = false; }
+		public override void Pulse()
+		{
+			if (firstPulse)
+			{ onBotStart(null); firstPulse = false; }
 
-            if (Me.IsDead || Me.IsGhost)
-                return;
-            ObjectManager.Update();
+			if (Me.IsDead || Me.IsGhost)
+				return;
+			ObjectManager.Update();
 
 			#region [Operation Shieldwall/Dominance Offensive]
 
@@ -483,7 +483,7 @@ namespace AzeniusHelper2
 //				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVileSpitList, "Vile Spit", 15);
 //			}
 
-            #endregion
+			#endregion
 			
 			#region http://www.wowhead.com/quest=32158
 			if (Me.HasAura("Ignite Fuel"))
@@ -494,144 +494,144 @@ namespace AzeniusHelper2
 			#endregion
 			
 			#region http://www.wowhead.com/quest=31717
-            if (Me.HasAura("Solar Beam"))
-            {
+			if (Me.HasAura("Solar Beam"))
+			{
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getSolarBeamList, "Solar Beam", 15);
-            }
+			}
 
-            #endregion
+			#endregion
 			#endregion
 
-            #region [Golden Lotus]
+			#region [Golden Lotus]
 
-            #region Lightning Pool
-            if (Me.HasAura("Lightning Pool"))
-            {
+			#region Lightning Pool
+			if (Me.HasAura("Lightning Pool"))
+			{
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getLightningPoolList, "Lightning Pool", 15); //TODO test it..
-            }
-            #endregion
+			}
+			#endregion
 			
-            #region http://www.wowhead.com/quest=30251
+			#region http://www.wowhead.com/quest=30251
 			if (Me.HasAura("Caustic Pitch"))
 			{
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getCausticPitchList, "Caustic Pitch", 15);
 			}
 
-            #endregion
+			#endregion
 
-            if (Me.HasAura("Venom Splash") && BarryDurex.QuestHelper.getVenomSplashList != null && BarryDurex.QuestHelper.getVenomSplashList[0].Distance < (BarryDurex.QuestHelper.getVenomSplashList[0].Radius * 1.6f))
-            {
+			if (Me.HasAura("Venom Splash") && BarryDurex.QuestHelper.getVenomSplashList != null && BarryDurex.QuestHelper.getVenomSplashList[0].Distance < (BarryDurex.QuestHelper.getVenomSplashList[0].Radius * 1.6f))
+			{
 				BarryDurex.QuestHelper.AvoidEnemyAOE(Me.Location, BarryDurex.QuestHelper.getVenomSplashList, "Venom Splash", 15);
-            }
+			}
 
-            #region http://www.wowhead.com/quest=30320 - done
-            if (Me.HasAura("Spirit Void"))
-            {
-                if (!IsOnQuest(30320))
-                {
-                    Me.Auras["Spirit Void"].TryCancelAura();
-                    Thread.Sleep(200);
-                }
-                else
-                {
-                    if (!Me.Combat && !Me.Mounted)
-                        Flightor.MountHelper.MountUp();
+			#region http://www.wowhead.com/quest=30320 - done
+			if (Me.HasAura("Spirit Void"))
+			{
+				if (!IsOnQuest(30320))
+				{
+					Me.Auras["Spirit Void"].TryCancelAura();
+					Thread.Sleep(200);
+				}
+				else
+				{
+					if (!Me.Combat && !Me.Mounted)
+						Flightor.MountHelper.MountUp();
 
-                    if (Me.Mounted && (Me.Combat || (Tormentor != null && Tormentor.Location.Distance(Me.Location) < 10)))
-                    { WoWMovement.Move(WoWMovement.MovementDirection.JumpAscend); Thread.Sleep(836); WoWMovement.MoveStop(); }
+					if (Me.Mounted && (Me.Combat || (Tormentor != null && Tormentor.Location.Distance(Me.Location) < 10)))
+					{ WoWMovement.Move(WoWMovement.MovementDirection.JumpAscend); Thread.Sleep(836); WoWMovement.MoveStop(); }
 
-                    if (CaptivePandarenSpirit != null && CaptivePandarenSpirit.Distance >= CaptivePandarenSpirit.InteractRange && Me.Mounted)
-                    {
-                        while (CaptivePandarenSpirit.Distance >= CaptivePandarenSpirit.InteractRange)
-                        {
-                            if (Me.Combat)
-                            { WoWMovement.Move(WoWMovement.MovementDirection.JumpAscend); Thread.Sleep(836); WoWMovement.MoveStop(); continue; }
+					if (CaptivePandarenSpirit != null && CaptivePandarenSpirit.Distance >= CaptivePandarenSpirit.InteractRange && Me.Mounted)
+					{
+						while (CaptivePandarenSpirit.Distance >= CaptivePandarenSpirit.InteractRange)
+						{
+							if (Me.Combat)
+							{ WoWMovement.Move(WoWMovement.MovementDirection.JumpAscend); Thread.Sleep(836); WoWMovement.MoveStop(); continue; }
 
-                            Flightor.MoveTo(CaptivePandarenSpirit.Location);
-                            Thread.Sleep(80);
-                        }
-                        WoWMovement.MoveStop();
-                    }
-                }
-            }
-            #endregion
+							Flightor.MoveTo(CaptivePandarenSpirit.Location);
+							Thread.Sleep(80);
+						}
+						WoWMovement.MoveStop();
+					}
+				}
+			}
+			#endregion
 
-            #region http://www.wowhead.com/quest=31762 - done
-            // we need this behavior if we are (again) in combat with Behemoth
+			#region http://www.wowhead.com/quest=31762 - done
+			// we need this behavior if we are (again) in combat with Behemoth
 			if (Behemoth != null && StyxWoW.Me.Combat && Behemoth.Distance2D <= 15 && Behemoth.IsCasting && Behemoth.CastingSpellId == 131043)
 				BarryDurex.QuestHelper.AvoidEnemyCast(Behemoth, 80, 15);
 
-            #endregion
-
-            #region Vicejaw
-            if (IsOnQuest(30234)) //TODO QuestBehavior (BarryDurex)
-            {
-                if (Vicejaw != null && Vicejaw.IsCasting && !Me.IsBehind(Vicejaw))
-                {
-                    //Lua.DoString("StrafeLeftStart()");
-                    WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(2));
-                    Thread.Sleep(2000);
-                    WoWMovement.MoveStop();
-                }
-            }
-            #endregion
-
-            #region http://www.wowhead.com/quest=30192 - todo
-            if (IsOnQuest(30192) && !QuestComplete(30192))
-            {
-                if (BrazierFire != null)
-                    BrazierFire[0].Interact();
-            }
-            #endregion
-
-            #region http://www.wowhead.com/quest=30304 - todo
-            if (IsOnQuest(30304) && !QuestComplete(30304))
-            {
-                if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
-                    StatueAttack.Interact();
-                if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
-                    StatueFall.Interact();
-            }
-            #endregion
-
-            #region http://www.wowhead.com/quest=30299 - todo
-            if (IsOnQuest(30299) && !QuestComplete(30299))
-            {
-                if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
-                    StatueAttack.Interact();
-                if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
-                    StatueFall.Interact();
-            }
-            #endregion
-
-            #region http://www.wowhead.com/quest=30482 - toDo
-            if (IsOnQuest(30482) && !QuestComplete(30482))
-            {
-                if (Sydow != null && Sydow.CastingSpellId == 126347)
-					BarryDurex.QuestHelper.AvoidEnemyCast(Sydow, 80, 15);
-            }
 			#endregion
 
-            #region http://www.wowhead.com/quest=30233 - done
+			#region Vicejaw
+			if (IsOnQuest(30234)) //TODO QuestBehavior (BarryDurex)
+			{
+				if (Vicejaw != null && Vicejaw.IsCasting && !Me.IsBehind(Vicejaw))
+				{
+					//Lua.DoString("StrafeLeftStart()");
+					WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(2));
+					Thread.Sleep(2000);
+					WoWMovement.MoveStop();
+				}
+			}
+			#endregion
+
+			#region http://www.wowhead.com/quest=30192 - todo
+			if (IsOnQuest(30192) && !QuestComplete(30192))
+			{
+				if (BrazierFire != null)
+					BrazierFire[0].Interact();
+			}
+			#endregion
+
+			#region http://www.wowhead.com/quest=30304 - todo
+			if (IsOnQuest(30304) && !QuestComplete(30304))
+			{
+				if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
+					StatueAttack.Interact();
+				if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
+					StatueFall.Interact();
+			}
+			#endregion
+
+			#region http://www.wowhead.com/quest=30299 - todo
+			if (IsOnQuest(30299) && !QuestComplete(30299))
+			{
+				if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
+					StatueAttack.Interact();
+				if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
+					StatueFall.Interact();
+			}
+			#endregion
+
+			#region http://www.wowhead.com/quest=30482 - toDo
+			if (IsOnQuest(30482) && !QuestComplete(30482))
+			{
+				if (Sydow != null && Sydow.CastingSpellId == 126347)
+					BarryDurex.QuestHelper.AvoidEnemyCast(Sydow, 80, 15);
+			}
+			#endregion
+
+			#region http://www.wowhead.com/quest=30233 - done
 			if (Cracklefang != null && Cracklefang.Distance2D <= 20 && Cracklefang.IsCasting /*&& Cracklefang.CastingSpellId == 126032*/)
 				BarryDurex.QuestHelper.AvoidEnemyCast(Cracklefang, 0, 20);
-            #endregion
+			#endregion
 
-            #region http://www.wowhead.com/quest=30249 - todo
-            if (IsOnQuest(30249))
-            {
-                if (Krichon != null && Krichon.IsCasting && !Me.IsBehind(Krichon))
+			#region http://www.wowhead.com/quest=30249 - todo
+			if (IsOnQuest(30249))
+			{
+				if (Krichon != null && Krichon.IsCasting && !Me.IsBehind(Krichon))
 					BarryDurex.QuestHelper.AvoidEnemyCast(Krichon, 80, 15);
-            }
-            #endregion
+			}
+			#endregion
 			
 			if (ShaoTienSorcerer != null)
-            {
-                if (Me.Combat && ShaoTienSorcerer.Distance2D <= 10 && ShaoTienSorcerer.IsCasting && ShaoTienSorcerer.CastingSpellId == 127552)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(ShaoTienSorcerer, 80, 15);
-            }
+			{
+				if (Me.Combat && ShaoTienSorcerer.Distance2D <= 10 && ShaoTienSorcerer.IsCasting && ShaoTienSorcerer.CastingSpellId == 127552)
+					BarryDurex.QuestHelper.AvoidEnemyCast(ShaoTienSorcerer, 80, 15);
+			}
 			
-            #endregion
+			#endregion
 
 			#region [The August Celestials]
 			// (Die Himmlischen Erhabenen)
@@ -639,8 +639,8 @@ namespace AzeniusHelper2
 			// http://www.wowhead.com/quest=30956 http://www.wowhead.com/quest=30957 http://www.wowhead.com/quest=30958 http://www.wowhead.com/quest=30959
 			if (IsOnQuest(30952) || IsOnQuest(30953) || IsOnQuest(30954) || IsOnQuest(30955) || IsOnQuest(30956) || IsOnQuest(30957) || IsOnQuest(30958) || IsOnQuest(30959))
 			{
-                if (Me.Combat && Me.IsMoving)
-                {
+				if (Me.Combat && Me.IsMoving)
+				{
 					ObjectManager.Update();
 					Thread.Sleep(200);
 					if (MantidNiuzao != null)
@@ -661,11 +661,11 @@ namespace AzeniusHelper2
 				if (Me.Combat && DreadKunchong != null && DreadKunchong.Distance2D <= 10)
 					UseIfNotOnCooldown(87394); //Sonic Disruption Fork
 			}
-            if (DreadKunchong != null)
-            {
-                if (Me.Combat && DreadKunchong.Distance2D <= 15 && DreadKunchong.IsCasting && DreadKunchong.CastingSpellId == 128022)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(DreadKunchong, 80, 15);
-            }
+			if (DreadKunchong != null)
+			{
+				if (Me.Combat && DreadKunchong.Distance2D <= 15 && DreadKunchong.IsCasting && DreadKunchong.CastingSpellId == 128022)
+					BarryDurex.QuestHelper.AvoidEnemyCast(DreadKunchong, 80, 15);
+			}
 			
 			// http://www.wowhead.com/quest=31268
 			if (IsOnQuest(31268))
@@ -683,18 +683,18 @@ namespace AzeniusHelper2
 					SpellManager.ClickRemoteLocation(Amberhusk.Location);
 				}
 			}
-            #endregion
+			#endregion
 
 			#region Isle of Thunder
-            #region http://www.wowhead.com/quest=32533
-            if (IsOnQuest(32533) && !QuestComplete(32533))
-            {
+			#region http://www.wowhead.com/quest=32533
+			if (IsOnQuest(32533) && !QuestComplete(32533))
+			{
 				if (!StyxWoW.Me.Combat && GuardianAttack != null && GuardianAttack.Distance2D <= 5)
 					GuardianAttack.Interact();
 				if (!StyxWoW.Me.Combat && GuardianFall != null && GuardianFall.Distance2D <= 5)
 					GuardianFall.Interact();
-            }
-            #endregion
+			}
+			#endregion
 			
 			if (ZColossus != null)
 			{
@@ -718,152 +718,152 @@ namespace AzeniusHelper2
 			
 			#region Isle of Giants
 			if (PrimalDirehornA != null)
-            {
-                if (Me.Combat && PrimalDirehornA.Distance2D <= 15 && PrimalDirehornA.IsCasting && PrimalDirehornA.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornA, 90, 15);
-            }
+			{
+				if (Me.Combat && PrimalDirehornA.Distance2D <= 15 && PrimalDirehornA.IsCasting && PrimalDirehornA.CastingSpellId == 138772)
+					BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornA, 90, 15);
+			}
 			
 			if (PrimalDirehornB != null)
-            {
-                if (Me.Combat && PrimalDirehornB.Distance2D <= 15 && PrimalDirehornB.IsCasting && PrimalDirehornB.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornB, 90, 15);
-            }
+			{
+				if (Me.Combat && PrimalDirehornB.Distance2D <= 15 && PrimalDirehornB.IsCasting && PrimalDirehornB.CastingSpellId == 138772)
+					BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornB, 90, 15);
+			}
 			
 			if (PrimalDirehornC != null)
-            {
-                if (Me.Combat && PrimalDirehornC.Distance2D <= 15 && PrimalDirehornC.IsCasting && PrimalDirehornC.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornC, 90, 15);
-            }
+			{
+				if (Me.Combat && PrimalDirehornC.Distance2D <= 15 && PrimalDirehornC.IsCasting && PrimalDirehornC.CastingSpellId == 138772)
+					BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornC, 90, 15);
+			}
 			
 			if (PrimalDirehornD != null)
-            {
-                if (Me.Combat && PrimalDirehornD.Distance2D <= 15 && PrimalDirehornD.IsCasting && PrimalDirehornD.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornD, 90, 15);
-            }
+			{
+				if (Me.Combat && PrimalDirehornD.Distance2D <= 15 && PrimalDirehornD.IsCasting && PrimalDirehornD.CastingSpellId == 138772)
+					BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornD, 90, 15);
+			}
 			
 			if (PrimalDirehornE != null)
-            {
-                if (Me.Combat && PrimalDirehornE.Distance2D <= 15 && PrimalDirehornE.IsCasting && PrimalDirehornE.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornE, 90, 15);
-            }
+			{
+				if (Me.Combat && PrimalDirehornE.Distance2D <= 15 && PrimalDirehornE.IsCasting && PrimalDirehornE.CastingSpellId == 138772)
+					BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornE, 90, 15);
+			}
 			
 			if (PrimalDirehornF != null)
-            {
-                if (Me.Combat && PrimalDirehornF.Distance2D <= 15 && PrimalDirehornF.IsCasting && PrimalDirehornF.CastingSpellId == 138772)
-                    BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornF, 90, 15);
-            }
+			{
+				if (Me.Combat && PrimalDirehornF.Distance2D <= 15 && PrimalDirehornF.IsCasting && PrimalDirehornF.CastingSpellId == 138772)
+					BarryDurex.QuestHelper.AvoidEnemyCast(PrimalDirehornF, 90, 15);
+			}
 			
 			#endregion
-        }
-    }
+		}
+	}
 }
 
 namespace BarryDurex
 {
-    static class QuestHelper
-    {
-        public static void slog(string message, params object[] args)
-        { Styx.Common.Logging.Write(LogLevel.Quiet, System.Windows.Media.Colors.Salmon, "[QuestHelper]: " + message, args); }
-        public static void dlog(string message, params object[] args)
-        { Styx.Common.Logging.WriteDiagnostic(System.Windows.Media.Colors.Salmon, "[QuestHelper]: " + message, args); }
-        public static void navlog(string message, params object[] args)
-        { Styx.Common.Logging.WriteDiagnostic(System.Windows.Media.Colors.LawnGreen, "[QuestHelper]: " + message, args); }
+	static class QuestHelper
+	{
+		public static void slog(string message, params object[] args)
+		{ Styx.Common.Logging.Write(LogLevel.Quiet, System.Windows.Media.Colors.Salmon, "[QuestHelper]: " + message, args); }
+		public static void dlog(string message, params object[] args)
+		{ Styx.Common.Logging.WriteDiagnostic(System.Windows.Media.Colors.Salmon, "[QuestHelper]: " + message, args); }
+		public static void navlog(string message, params object[] args)
+		{ Styx.Common.Logging.WriteDiagnostic(System.Windows.Media.Colors.LawnGreen, "[QuestHelper]: " + message, args); }
 
-        //private static int MinDistToPools = 7;
-        //private static int MaxDistToMove = 40;
-        //private static int TraceStep = 50;
+		//private static int MinDistToPools = 7;
+		//private static int MaxDistToMove = 40;
+		//private static int TraceStep = 50;
 
-        #region Lightning Pool Behaviors - not yet tested!
+		#region Lightning Pool Behaviors - not yet tested!
 
-        public static void AvoidEnemyAOE(WoWPoint location, List<WoWDynamicObject> Objects, string Aura, int TraceStep)
-        {
-            if (Objects == null)
-            { dlog("no Lightning Pools found .."); return; }
-            dlog("found {0} {1}! start RayCast ..", Objects.Count, Aura);
+		public static void AvoidEnemyAOE(WoWPoint location, List<WoWDynamicObject> Objects, string Aura, int TraceStep)
+		{
+			if (Objects == null)
+			{ dlog("no Lightning Pools found .."); return; }
+			dlog("found {0} {1}! start RayCast ..", Objects.Count, Aura);
 
-            int MinDistToPools = (int)(Objects[0].Radius * 1.6f);
-            int MaxDistToMove = MinDistToPools * 2;
+			int MinDistToPools = (int)(Objects[0].Radius * 1.6f);
+			int MaxDistToMove = MinDistToPools * 2;
 
-            // get save location
-            WoWPoint newP = getSaveLocation(location, Objects, MinDistToPools, MaxDistToMove, TraceStep);
+			// get save location
+			WoWPoint newP = getSaveLocation(location, Objects, MinDistToPools, MaxDistToMove, TraceStep);
 
-            if (newP == WoWPoint.Empty)
-            {
-                // no save location found, move 2sec Strafe Left
-                WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(2));
-                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(2));
-            }
-            else
-            {
-                // move to save location
-                while (StyxWoW.Me.HasAura(Aura) && StyxWoW.Me.Location.Distance(newP) > 0.2f)
-                {
-                    Navigator.MoveTo(newP);
-                    Thread.Sleep(80);
-                }
-            }
+			if (newP == WoWPoint.Empty)
+			{
+				// no save location found, move 2sec Strafe Left
+				WoWMovement.Move(WoWMovement.MovementDirection.StrafeLeft, TimeSpan.FromSeconds(2));
+				System.Threading.Thread.Sleep(TimeSpan.FromSeconds(2));
+			}
+			else
+			{
+				// move to save location
+				while (StyxWoW.Me.HasAura(Aura) && StyxWoW.Me.Location.Distance(newP) > 0.2f)
+				{
+					Navigator.MoveTo(newP);
+					Thread.Sleep(80);
+				}
+			}
 
-            WoWMovement.MoveStop();
-            if (StyxWoW.Me.CurrentTargetGuid != 0)
-                StyxWoW.Me.CurrentTarget.Face();
+			WoWMovement.MoveStop();
+			if (StyxWoW.Me.CurrentTargetGuid != 0)
+				StyxWoW.Me.CurrentTarget.Face();
 
-            //Styx.CommonBot.Blacklist.Add(
-            //Styx.CommonBot.Profiles.Blackspot vv = new Styx.CommonBot.Profiles.Blackspot(
-        }
+			//Styx.CommonBot.Blacklist.Add(
+			//Styx.CommonBot.Profiles.Blackspot vv = new Styx.CommonBot.Profiles.Blackspot(
+		}
 
-        private static bool wlog(WoWDynamicObject obj)
-        { dlog("add pool - dis2D: {0}", obj.Distance2D); return true; }
-        public static List<WoWDynamicObject> getLightningPoolList
-        {
-            get
-            {
-                ObjectManager.Update();
-                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-                        orderby lp.Distance2D ascending
-                        where lp.Entry == 129657
-                        where wlog(lp)
-                        select lp).ToList();
-            }
-        }
+		private static bool wlog(WoWDynamicObject obj)
+		{ dlog("add pool - dis2D: {0}", obj.Distance2D); return true; }
+		public static List<WoWDynamicObject> getLightningPoolList
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 129657
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
 
-        public static List<WoWDynamicObject> getCausticPitchList
-        {
-            get
-            {
-                ObjectManager.Update();
-                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-                        orderby lp.Distance2D ascending
-                        where lp.Entry == 126336
-                        where wlog(lp)
-                        select lp).ToList();
-            }
-        }
+		public static List<WoWDynamicObject> getCausticPitchList
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 126336
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
 		
-        public static List<WoWDynamicObject> getIgniteFuelList
-        {
-            get
-            {
-                ObjectManager.Update();
-                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-                        orderby lp.Distance2D ascending
-                        where lp.Entry == 135862
-                        where wlog(lp)
-                        select lp).ToList();
-            }
-        }
+		public static List<WoWDynamicObject> getIgniteFuelList
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 135862
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
 		
 //		public static List<WoWDynamicObject> getVileSpitList
-//        {
-//            get
-//            {
-//                ObjectManager.Update();
-//               return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-//                        orderby lp.Distance2D ascending
-//                        where lp.Entry == 70571
-//                        where wlog(lp)
-//                        select lp).ToList();
-//            }
-//        }
+//		{
+//			get
+//			{
+//				ObjectManager.Update();
+//			   return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+//						orderby lp.Distance2D ascending
+//						where lp.Entry == 70571
+//						where wlog(lp)
+//						select lp).ToList();
+//			}
+//		}
 		
 		public static List<WoWDynamicObject> getHotFootList
 		{
@@ -878,48 +878,48 @@ namespace BarryDurex
 			}
 		}
 
-        public static List<WoWDynamicObject> getVenomSplashList
-        {
-            get
-            {
-                ObjectManager.Update();
-                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-                        orderby lp.Distance2D ascending
-                        where lp.Entry == 79607
-                        where wlog(lp)
-                        select lp).ToList();
-            }
-        }
+		public static List<WoWDynamicObject> getVenomSplashList
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 79607
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
 		
 		public static List<WoWDynamicObject> getSolarBeamList
-        {
-            get
-            {
-                ObjectManager.Update();
-                return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
-                        orderby lp.Distance2D ascending
-                        where lp.Entry == 129888
-                        where wlog(lp)
-                        select lp).ToList();
-            }
-        }
+		{
+			get
+			{
+				ObjectManager.Update();
+				return (from lp in ObjectManager.GetObjectsOfType<WoWDynamicObject>()
+						orderby lp.Distance2D ascending
+						where lp.Entry == 129888
+						where wlog(lp)
+						select lp).ToList();
+			}
+		}
 
-        #region RayCast
+		#region RayCast
 
-        private static WoWPoint getSaveLocation(WoWPoint Location, List<WoWDynamicObject> badObjects, int minDist, int maxDist, int traceStep)
-        {
-            navlog("Navigation: Looking for save Location around {0}.", Location);
+		private static WoWPoint getSaveLocation(WoWPoint Location, List<WoWDynamicObject> badObjects, int minDist, int maxDist, int traceStep)
+		{
+			navlog("Navigation: Looking for save Location around {0}.", Location);
 
-            try
-            {
-                //float _PIx2 = 3.14159f * 2f;
-                float _PIx2 = ((float)new Random().Next(1, 80) * (1.248349f + (float)new Random().NextDouble()));
+			try
+			{
+				//float _PIx2 = 3.14159f * 2f;
+				float _PIx2 = ((float)new Random().Next(1, 80) * (1.248349f + (float)new Random().NextDouble()));
 
-                for (int i = 0, x = minDist; i < traceStep && x < maxDist; i++)
-                {
-                    WoWPoint p = Location.RayCast((i * _PIx2) / traceStep, x);
+				for (int i = 0, x = minDist; i < traceStep && x < maxDist; i++)
+				{
+					WoWPoint p = Location.RayCast((i * _PIx2) / traceStep, x);
 
-                    p.Z = getGroundZ(p);
+					p.Z = getGroundZ(p);
 
 					if (p.Z != float.MinValue && StyxWoW.Me.Location.Distance2D(p) > 1 &&
 						(badObjects.FirstOrDefault(_obj => _obj.Location.Distance2D(p) <= minDist) == null) &&
@@ -933,129 +933,129 @@ namespace BarryDurex
 						}
 					}
 
-                    if (i == (traceStep - 1))
-                    {
-                        i = 0;
-                        x++;
-                    }
-                }
-            }
-            catch (Exception ex)
-            { Logging.WriteException(ex); }
+					if (i == (traceStep - 1))
+					{
+						i = 0;
+						x++;
+					}
+				}
+			}
+			catch (Exception ex)
+			{ Logging.WriteException(ex); }
 
 
-            dlog(" - No valid points returned by RayCast ...");
-            return WoWPoint.Empty;
+			dlog(" - No valid points returned by RayCast ...");
+			return WoWPoint.Empty;
 
-        }
+		}
 
-        /// <summary>
-        /// Credits to exemplar.
-        /// </summary>
-        /// <returns>Z-Coordinates for PoolPoints so we don't jump into the water.</returns>
-        private static float getGroundZ(WoWPoint p)
-        {
-            WoWPoint ground = WoWPoint.Empty;
+		/// <summary>
+		/// Credits to exemplar.
+		/// </summary>
+		/// <returns>Z-Coordinates for PoolPoints so we don't jump into the water.</returns>
+		private static float getGroundZ(WoWPoint p)
+		{
+			WoWPoint ground = WoWPoint.Empty;
 
-            GameWorld.TraceLine(new WoWPoint(p.X, p.Y, (p.Z + 100)), new WoWPoint(p.X, p.Y, (p.Z - 5)), GameWorld.CGWorldFrameHitFlags.HitTestGroundAndStructures/* | GameWorld.CGWorldFrameHitFlags.HitTestBoundingModels | GameWorld.CGWorldFrameHitFlags.HitTestWMO*/, out ground);
+			GameWorld.TraceLine(new WoWPoint(p.X, p.Y, (p.Z + 100)), new WoWPoint(p.X, p.Y, (p.Z - 5)), GameWorld.CGWorldFrameHitFlags.HitTestGroundAndStructures/* | GameWorld.CGWorldFrameHitFlags.HitTestBoundingModels | GameWorld.CGWorldFrameHitFlags.HitTestWMO*/, out ground);
 
-            if (ground != WoWPoint.Empty)
-            {
-                navlog(" - Ground Z: {0}.", ground.Z);
-                return ground.Z;
-            }
-            dlog(" - Ground Z returned float.MinValue.");
-            return float.MinValue;
-        }
+			if (ground != WoWPoint.Empty)
+			{
+				navlog(" - Ground Z: {0}.", ground.Z);
+				return ground.Z;
+			}
+			dlog(" - Ground Z returned float.MinValue.");
+			return float.MinValue;
+		}
 
-        /// <summary>
-        /// Credits to funkescott.
-        /// </summary>
-        /// <returns>Highest slope of surrounding terrain, returns 100 if the slope can't be determined</returns>
-        private static float getHighestSurroundingSlope(WoWPoint p)
-        {
-            navlog("Navigation: Sloapcheck on Point: {0}", p);
-            float _PIx2 = 3.14159f * 2f;
-            float highestSlope = -100;
-            float slope = 0;
-            int traceStep = 15;
-            float range = 0.5f;
-            WoWPoint p2;
-            for (int i = 0; i < traceStep; i++)
-            {
-                p2 = p.RayCast((i * _PIx2) / traceStep, range);
-                p2.Z = getGroundZ(p2);
-                slope = Math.Abs(getSlope(p, p2));
-                if (slope > highestSlope)
-                {
-                    highestSlope = (float)slope;
-                }
-            }
-            navlog(" - Highslope {0}", highestSlope);
-            return Math.Abs(highestSlope);
-        }
+		/// <summary>
+		/// Credits to funkescott.
+		/// </summary>
+		/// <returns>Highest slope of surrounding terrain, returns 100 if the slope can't be determined</returns>
+		private static float getHighestSurroundingSlope(WoWPoint p)
+		{
+			navlog("Navigation: Sloapcheck on Point: {0}", p);
+			float _PIx2 = 3.14159f * 2f;
+			float highestSlope = -100;
+			float slope = 0;
+			int traceStep = 15;
+			float range = 0.5f;
+			WoWPoint p2;
+			for (int i = 0; i < traceStep; i++)
+			{
+				p2 = p.RayCast((i * _PIx2) / traceStep, range);
+				p2.Z = getGroundZ(p2);
+				slope = Math.Abs(getSlope(p, p2));
+				if (slope > highestSlope)
+				{
+					highestSlope = (float)slope;
+				}
+			}
+			navlog(" - Highslope {0}", highestSlope);
+			return Math.Abs(highestSlope);
+		}
 
-        /// <summary>
-        /// Credits to funkescott.
-        /// </summary>
-        /// <param name="p1">from WoWPoint</param>
-        /// <param name="p2">to WoWPoint</param>
-        /// <returns>Return slope from WoWPoint to WoWPoint.</returns>
-        private static float getSlope(WoWPoint p1, WoWPoint p2)
-        {
-            float rise = p2.Z - p1.Z;
-            float run = (float)Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
+		/// <summary>
+		/// Credits to funkescott.
+		/// </summary>
+		/// <param name="p1">from WoWPoint</param>
+		/// <param name="p2">to WoWPoint</param>
+		/// <returns>Return slope from WoWPoint to WoWPoint.</returns>
+		private static float getSlope(WoWPoint p1, WoWPoint p2)
+		{
+			float rise = p2.Z - p1.Z;
+			float run = (float)Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
 
-            return rise / run;
-        }
-        #endregion
+			return rise / run;
+		}
+		#endregion
 
-        #endregion
+		#endregion
 
-        #region Behemoth / Cracklefang -Behavior
-        /// <summary>
-        /// this behavior will move the bot StrafeRight/StrafeLeft only if enemy is casting and we needed to move!
-        /// Credits to BarryDurex.
-        /// </summary>
-        /// <param name="EnemyAttackRadius">EnemyAttackRadius or 0 for move Behind</param>
-        public static void AvoidEnemyCast(WoWUnit Unit, float EnemyAttackRadius, float SaveDistance)
-        {
-            if (!StyxWoW.Me.IsFacing(Unit))
-            { Unit.Face(); Thread.Sleep(300); }
+		#region Behemoth / Cracklefang -Behavior
+		/// <summary>
+		/// this behavior will move the bot StrafeRight/StrafeLeft only if enemy is casting and we needed to move!
+		/// Credits to BarryDurex.
+		/// </summary>
+		/// <param name="EnemyAttackRadius">EnemyAttackRadius or 0 for move Behind</param>
+		public static void AvoidEnemyCast(WoWUnit Unit, float EnemyAttackRadius, float SaveDistance)
+		{
+			if (!StyxWoW.Me.IsFacing(Unit))
+			{ Unit.Face(); Thread.Sleep(300); }
 
-            float BehemothRotation = getPositive(Unit.RotationDegrees);
-            float invertEnemyRotation = getInvert(BehemothRotation);
+			float BehemothRotation = getPositive(Unit.RotationDegrees);
+			float invertEnemyRotation = getInvert(BehemothRotation);
 
-            WoWMovement.MovementDirection move = WoWMovement.MovementDirection.None;
+			WoWMovement.MovementDirection move = WoWMovement.MovementDirection.None;
 
-            if (getPositive(StyxWoW.Me.RotationDegrees) > invertEnemyRotation)
-            { move = WoWMovement.MovementDirection.StrafeRight; }
-            else
-            { move = WoWMovement.MovementDirection.StrafeLeft; }
+			if (getPositive(StyxWoW.Me.RotationDegrees) > invertEnemyRotation)
+			{ move = WoWMovement.MovementDirection.StrafeRight; }
+			else
+			{ move = WoWMovement.MovementDirection.StrafeLeft; }
 
-            while (Unit.Distance2D <= SaveDistance && Unit.IsCasting && ((EnemyAttackRadius == 0 && !StyxWoW.Me.IsSafelyBehind(Unit)) ||
-                (EnemyAttackRadius != 0 && Unit.IsSafelyFacing(StyxWoW.Me, EnemyAttackRadius)) || Unit.Distance2D <= 2 ))
-            {
-                WoWMovement.Move(move);
-                Unit.Face();           
-            }
-            WoWMovement.MoveStop();
-        }
+			while (Unit.Distance2D <= SaveDistance && Unit.IsCasting && ((EnemyAttackRadius == 0 && !StyxWoW.Me.IsSafelyBehind(Unit)) ||
+				(EnemyAttackRadius != 0 && Unit.IsSafelyFacing(StyxWoW.Me, EnemyAttackRadius)) || Unit.Distance2D <= 2 ))
+			{
+				WoWMovement.Move(move);
+				Unit.Face();		   
+			}
+			WoWMovement.MoveStop();
+		}
 
-        private static float getInvert(float f)
-        {
-            if (f < 180)
-                return (f + 180);
-            //else if (f >= 180)
-            return (f - 180);
-        }
+		private static float getInvert(float f)
+		{
+			if (f < 180)
+				return (f + 180);
+			//else if (f >= 180)
+			return (f - 180);
+		}
 
-        private static float getPositive(float f)
-        {
-            if (f < 0)
-                return (f + 360);
-            return f;
-        }
-        #endregion
-    }
+		private static float getPositive(float f)
+		{
+			if (f < 0)
+				return (f + 360);
+			return f;
+		}
+		#endregion
+	}
 }

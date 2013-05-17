@@ -279,7 +279,7 @@
 		<While Condition="!IsQuestCompleted(31758)" >
 			<CustomBehavior File="SpecificQuests\31758-VOEB-LaosyScouting" />
 			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" QuestId="31758" MobId="214948" NonCompeteDistance="0" Range="5" CollectionDistance="10" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" QuestId="31758" MobId="214948" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" Range="5" CollectionDistance="10" WaitForNpcs="False" />
 		</While>
 	</If>
 
