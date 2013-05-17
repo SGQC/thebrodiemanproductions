@@ -2,6 +2,10 @@ Patch Notes
 
 5/17/13
 
+r282
+Quest Behaviors
+-- Updates from CJ and mastahg
+
 r281
 Mistfall Village
 -- Town on Fire Quests - Should now differentiate between water buckets in inventory
