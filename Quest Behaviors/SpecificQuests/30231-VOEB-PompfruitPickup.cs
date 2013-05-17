@@ -114,7 +114,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.PompfruitPickup
 		{
 			return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(
 				DoneYet,
-				new DecoratorContinue(ret => !IsObjectiveComplete(1, (uint)QuestId), 
+				new Decorator(ret => !IsObjectiveComplete(1, (uint)QuestId), 
 					new Sequence(
 						new DecoratorContinue(ret => Fruit[0].Location.Distance(Me.Location) > 3,
 							new Sequence(
