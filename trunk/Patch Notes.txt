@@ -1,6 +1,18 @@
 Patch Notes
 
-5/16/13
+5/16/13 
+
+r276
+Setting Sun Garrison
+-- Survival Ring: Blades - Disabled CC for quest
+-- Survival Ring: Flames - Disabled CC for quest
+Golden Lotus
+-- Laosy Scouting - Should no longer attempt to clear area if out of combat
+Quest Behaviors
+-- Rampage Against the Machine - attempted fix to dying, and not remounting. NEEDS FEEDBACK ON WORKING, I DON'T HAVE QUEST TODAY!
+-- Massive code cleanup for size purposes only
+Plugins
+-- Massive code cleanup for size purposes only
 
 r275
 Quest Behaviors
