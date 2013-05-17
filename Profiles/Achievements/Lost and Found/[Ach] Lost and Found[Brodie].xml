@@ -54,7 +54,7 @@
 	<If Condition="!IsQuestCompleted(31397)">
 		<CustomBehavior File="FlyTo" X="3316.01" Y="-1296.73" Z="202.62" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213363" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213363" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -63,19 +63,19 @@
 		<If Condition="!IsQuestCompleted(31403)">
 			<CustomBehavior File="FlyTo" X="3112.61" Y="-1549.65" Z="228.08" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213742" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213742" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31403)">
 			<CustomBehavior File="FlyTo" X="3004.97" Y="-1423.80" Z="262.66" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213742" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213742" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31403)">
 			<CustomBehavior File="FlyTo" X="2837.26" Y="-1468.56" Z="291.07" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213742" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213742" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -85,7 +85,7 @@
 		<If Condition="!IsQuestCompleted(31399)">
 			<CustomBehavior File="FlyTo" X="2295.99" Y="-1765.99" Z="234.47" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213364" CollectionDistance="1000" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213364" CollectionDistance="1000" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -94,7 +94,7 @@
 	<If Condition="!IsQuestCompleted(31307)">
 		<CustomBehavior File="FlyTo" X="1483.69" Y="-1282.93" Z="246.25" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="64272" CollectionDistance="200" WaitForNpcs="False" GossipOptions="1" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="64272" CollectionDistance="200" WaitForNpcs="False" GossipOptions="1" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -103,37 +103,37 @@
 		<If Condition="!IsQuestCompleted(31402)">
 			<CustomBehavior File="FlyTo" X="644.80" Y="-1677.94" Z="47.23" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31402)">
 			<CustomBehavior File="FlyTo" X="655.81" Y="-1726.32" Z="45.72" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31402)">
 			<CustomBehavior File="FlyTo" X="614.75" Y="-1787.49" Z="44.56" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31402)">
 			<CustomBehavior File="FlyTo" X="510.25" Y="-1828.33" Z="49.15" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31402)">
 			<CustomBehavior File="FlyTo" X="395.15" Y="-1788.52" Z="49.75" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31402)">
 			<CustomBehavior File="FlyTo" X="338.66" Y="-1771.11" Z="45.87" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213741" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -144,7 +144,7 @@
 	<If Condition="!IsQuestCompleted(31284)">
 		<CustomBehavior File="FlyTo" X="452.09" Y="841.98" Z="145.50" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="64004" CollectionDistance="200" WaitForNpcs="False" InteractByGossipOptions="1" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="64004" CollectionDistance="200" WaitForNpcs="False" InteractByGossipOptions="1" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -152,7 +152,7 @@
 	<If Condition="!IsQuestCompleted(31292)">
 		<CustomBehavior File="FlyTo" X="76.77" Y="886.74" Z="174.93" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="64191" CollectionDistance="200" WaitForNpcs="False" InteractByGossipOptions="1" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="64191" CollectionDistance="200" WaitForNpcs="False" InteractByGossipOptions="1" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -162,7 +162,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="87.39" Y="997.56" Z="135.14" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213649" CollectionDistance="500" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213649" CollectionDistance="500" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -171,31 +171,31 @@
 		<If Condition="!IsQuestCompleted(31407)">
 			<CustomBehavior File="FlyTo" X="-8.89" Y="1940.84" Z="143.18" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31407)">
 			<CustomBehavior File="FlyTo" X="113.70" Y="1925.74" Z="148.11" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31407)">
 			<CustomBehavior File="FlyTo" X="167.40" Y="1993.30" Z="152.07" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31407)">
 			<CustomBehavior File="FlyTo" X="214.86" Y="2085.25" Z="162.46" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31407)">
 			<CustomBehavior File="FlyTo" X="331.09" Y="2065.47" Z="178.59" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213749" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -206,7 +206,7 @@
 	<If Condition="!IsQuestCompleted(31409)">
 		<CustomBehavior File="FlyTo" X="-1648.84" Y="571.90" Z="1.58" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213653" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213653" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -214,7 +214,7 @@
 	<If Condition="!IsQuestCompleted(31411)">
 		<CustomBehavior File="FlyTo" X="-2891.46" Y="502.24" Z="85.00" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="InteractWith" MobId="214439" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="214439" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -222,7 +222,7 @@
 	<If Condition="!IsQuestCompleted(31410)">
 		<CustomBehavior File="FlyTo" X="-3000.81" Y="949.64" Z="13.31" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="InteractWith" MobId="213651" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213651" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -232,7 +232,7 @@
 	<If Condition="!IsQuestCompleted(31429)">
 		<CustomBehavior File="FlyTo" X="126.17" Y="2296.30" Z="202.68" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="InteractWith" MobId="213962" CollectionDistance="500" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213962" CollectionDistance="500" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -240,7 +240,7 @@
 	<If Condition="!IsQuestCompleted(31433)">
 		<CustomBehavior File="FlyTo" X="-78.765" Y="4601.393" Z="81.11" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213967" CollectionDistance="500" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213967" CollectionDistance="500" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -248,7 +248,7 @@
 	<If Condition="!IsQuestCompleted(31434)">
 		<CustomBehavior File="FlyTo" X="-1355.98" Y="3105.03" Z="0.1" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213968" CollectionDistance="500" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213968" CollectionDistance="500" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="AscendInWater" />
 	</If>
@@ -257,7 +257,7 @@
 	<If Condition="!IsQuestCompleted(31437)">
 		<CustomBehavior File="FlyTo" X="-594.93" Y="3236.25" Z="146.99" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		<CustomBehavior File="InteractWith" MovementBy="ClickToMoveOnly" MobId="213971" CollectionDistance="500" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="ClickToMoveOnly" MobId="213971" CollectionDistance="500" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -266,25 +266,25 @@
 		<If Condition="!IsQuestCompleted(31432)">
 			<CustomBehavior File="FlyTo" X="-935.97" Y="3836.065" Z="12.56" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31432)">
 			<CustomBehavior File="FlyTo" X="-786.71" Y="3862.54" Z="18.55" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31432)">
 			<CustomBehavior File="FlyTo" X="-803.78" Y="4002.68" Z="11.32" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31432)">
 			<CustomBehavior File="FlyTo" X="-943.437" Y="3934.32" Z="8.31" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="65552" CollectionDistance="1000" WaitForNpcs="False" InteractByGossipOptions="1" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -293,7 +293,7 @@
 	<If Condition="!IsQuestCompleted(31435)">
 		<CustomBehavior File="FlyTo" X="-1824.11" Y="4521.07" Z="47.48" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213969" CollectionDistance="500" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213969" CollectionDistance="500" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -306,7 +306,7 @@
 		<CustomBehavior File="MyCTM" X="-414.95" Y="4766.26" Z="-31.38" />
 		<CustomBehavior File="MyCTM" X="-389.32" Y="4746.65" Z="-30.02" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213970" CollectionDistance="100" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213970" CollectionDistance="100" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="MyCTM" X="-389.32" Y="4746.65" Z="-30.02" />
 		<CustomBehavior File="MyCTM" X="-414.95" Y="4766.26" Z="-31.38" />
@@ -319,7 +319,7 @@
 	<If Condition="!IsQuestCompleted(31438)">
 		<CustomBehavior File="FlyTo" X="-78.765" Y="4601.393" Z="81.11" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213972" CollectionDistance="50" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213972" CollectionDistance="50" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -327,7 +327,7 @@
 	<If Condition="!IsQuestCompleted(31431)">
 		<CustomBehavior File="FlyTo" X="-349.28" Y="4373.64" Z="230.54" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213966" CollectionDistance="50" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213966" CollectionDistance="50" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -335,7 +335,7 @@
 	<If Condition="!IsQuestCompleted(31430)">
 		<CustomBehavior File="FlyTo" X="354.73" Y="3526.75" Z="231.13" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213964" CollectionDistance="50" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213964" CollectionDistance="50" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -346,13 +346,13 @@
 		<If Condition="!IsQuestCompleted(31425)">
 			<CustomBehavior File="FlyTo" X="2844.91" Y="3272.24" Z="433.80" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213960" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213960" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31425)">
 			<CustomBehavior File="FlyTo" X="2722.45" Y="3242.38" Z="429.13" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213960" CollectionDistance="50" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213960" CollectionDistance="50" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -364,7 +364,7 @@
 		<CustomBehavior File="FlyTo" X="2364.12" Y="2492.21" Z="683.89" />
 		<RunTo X="2411.62" Y="2627.94" Z="667.32" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="64227" CollectionDistance="200" WaitForNpcs="False" InteractByGossipOptions="1" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="64227" CollectionDistance="200" WaitForNpcs="False" InteractByGossipOptions="1" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
@@ -372,7 +372,7 @@
 	<If Condition="!IsQuestCompleted(31417)">
 		<CustomBehavior File="FlyTo" X="3434.76" Y="2036.34" Z="1215.07" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213765" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213765" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -382,7 +382,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="2568.64" Y="1606.34" Z="621.18" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213768" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213768" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
@@ -391,13 +391,13 @@
 		<If Condition="!IsQuestCompleted(31421)">
 			<CustomBehavior File="FlyTo" X="2999.16" Y="377.06" Z="500.04" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213842" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213842" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 		<If Condition="!IsQuestCompleted(31421)">
 			<CustomBehavior File="FlyTo" X="2949.81" Y="454.33" Z="510.34" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			<CustomBehavior File="InteractWith" MobId="213842" CollectionDistance="200" WaitForNpcs="False" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213842" CollectionDistance="200" WaitForNpcs="False" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</If>
 	</If>
@@ -408,7 +408,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<RunTo X="2514.13" Y="134.82" Z="473.50" />
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
-		<CustomBehavior File="InteractWith" MobId="213751" CollectionDistance="200" WaitForNpcs="False" />
+		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobId="213751" CollectionDistance="200" WaitForNpcs="False" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 </While>

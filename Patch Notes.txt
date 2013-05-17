@@ -1,6 +1,14 @@
 Patch Notes
 
-5/16/13 
+5/16/13
+
+r277
+Lost and Found
+-- Added CombatStrategy to insure we don't attempt to loot items while in combat!
+-- Added MountStrategy to insure we don't attempt to loot items while mounted!
+Lorewalkers
+-- Added CombatStrategy to insure we don't attempt to use items while in combat!
+-- Added MountStrategy to insure we don't attempt to use items while mounted!
 
 r276
 Setting Sun Garrison
