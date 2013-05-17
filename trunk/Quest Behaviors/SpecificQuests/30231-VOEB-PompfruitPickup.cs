@@ -1,43 +1,46 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
+
 using CommonBehaviors.Actions;
 using Styx;
 using Styx.Common;
 using Styx.CommonBot;
 using Styx.CommonBot.Profiles;
+using Styx.CommonBot.Routines;
+using Styx.Helpers;
 using Styx.Pathing;
+using Styx.Plugins;
 using Styx.TreeSharp;
 using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
+
 using Action = Styx.TreeSharp.Action;
 
-namespace Honorbuddy.Quest_Behaviors.SpecificQuests.AGiftForFung
+
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.PompfruitPickup
 {
-	[CustomBehaviorFileName(@"SpecificQuests\30475-FourWinds-AGiftForFung")]
-	public class AGiftForFung : CustomForcedBehavior
+	[CustomBehaviorFileName(@"SpecificQuests\30231-VOEB-PompfruitPickup")]
+	public class Pomfruit : CustomForcedBehavior
 	{
-		public AGiftForFung(Dictionary<string, string> args)
+		public Pomfruit(Dictionary<string, string> args)
 			: base(args)
 		{
 			try
 			{
-				QuestId = 30475;//GetAttributeAsQuestId("QuestId", true, null) ?? 0;
-				SpellIds = GetNumberedAttributesAsArray<int>("SpellId", 1, ConstrainAs.SpellId, null);
-				//SpellId = GetAttributeAsNullable<int>("SpellId", false, ConstrainAs.SpellId, null) ?? 0;
-				SpellId = SpellIds.FirstOrDefault(id => SpellManager.HasSpell(id));
+				QuestId = 30231;//GetAttributeAsQuestId("QuestId", true, null) ?? 0;
 			}
 			catch
 			{
-				Logging.Write("Problem parsing a QuestId in behavior: A Gift For Fung");
+				Logging.Write("Problem parsing a QuestId in behavior: Pompfruits Pickup");
 			}
 		}
 		public int QuestId { get; set; }
 		private bool _isBehaviorDone;
-		public int MobIdHawk = 59641;
-		public int[] SpellIds { get; private set; }
-		public int SpellId { get; private set; }
+		public int MobIdPomfruit = 58767;
+		public int PomharvestFireworkId = 79344;
 		private Composite _root;
 		public WoWPoint Location2 = new WoWPoint(1574.712, 1428.84, 484.7786);
 		public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
@@ -50,6 +53,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.AGiftForFung
 				return _isBehaviorDone;
 			}
 		}
+		
 		private LocalPlayer Me
 		{
 			get { return (StyxWoW.Me); }
@@ -65,23 +69,15 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.AGiftForFung
 			}
 		}
 
-		public WoWSpell CurrentBehaviorSpell
+		public List<WoWUnit> Fruit
 		{
 			get
 			{
-				return WoWSpell.FromId(SpellId);
+				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdPomfruit && !u.IsDead && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
 			}
 		}
 
-		public List<WoWUnit> Hawk
-		{
-			get
-			{
-				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdHawk && !u.IsDead && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
-			}
-		}
-
-
+		public WoWItem PomharvestFirework { get { return (StyxWoW.Me.CarriedItems.FirstOrDefault(i => i.Entry == PomharvestFireworkId)); } }
 	
 		public bool IsQuestComplete()
 		{
@@ -111,39 +107,25 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.AGiftForFung
 						_isBehaviorDone = true;
 						return RunStatus.Success;
 					}));
-
 			}
 		}
 
-
-		public Composite HawkFlyTo
-		{
-			get
-			{
-				return
-					new Decorator(ret => !IsObjectiveComplete(1, (uint)QuestId), new Action(c =>
-					{
-			if (Hawk[0].Location.Distance(Me.Location) < 30)
-			{
-				TreeRoot.StatusText = "Pulling Monstrous Plainshawk";
-				Hawk[0].Target();
-					Hawk[0].Face();
-							Thread.Sleep(1000);
-							SpellManager.Cast(SpellId);
-							Thread.Sleep(1000);
-			}
-							TreeRoot.StatusText = "Finished Pulling!";
-							_isBehaviorDone = true;
-							return RunStatus.Success;
-					}));
-
-			}
-		}
-		
 		protected override Composite CreateBehavior()
 		{
-			return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(DoneYet, HawkFlyTo, new ActionAlwaysSucceed())));
+			return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(
+				DoneYet,
+				new DecoratorContinue(ret => !IsObjectiveComplete(1, (uint)QuestId), 
+					new Sequence(
+						new DecoratorContinue(ret => Fruit[0].Location.Distance(Me.Location) > 3,
+							new Sequence(
+								new DecoratorContinue(ret => PomharvestFirework.Cooldown == 0,
+									new Action(ret => PomharvestFirework.UseContainerItem())),
+								new Action(ret => Flightor.MoveTo(Fruit[0].Location)))),
+						new DecoratorContinue(ret => Fruit[0].Location.Distance(Me.Location) <= 3,
+							new Sequence(
+								new Action(r => WoWMovement.MoveStop()),
+								new Action(r => Fruit[0].Interact()))))),
+				new ActionAlwaysSucceed())));
 		}
 	}
 }
-

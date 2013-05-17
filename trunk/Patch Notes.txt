@@ -2,6 +2,11 @@ Patch Notes
 
 5/16/13
 
+r278
+Quest Behaviors
+-- Pomfruit Pickup - Now combats and pickups 10x more efficiently!
+-- Deleted all v563 exclusive QBs
+
 r277
 Lost and Found
 -- Added CombatStrategy to insure we don't attempt to loot items while in combat!

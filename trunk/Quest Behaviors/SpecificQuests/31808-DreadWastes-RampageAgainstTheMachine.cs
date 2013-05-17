@@ -193,7 +193,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.RampageAgainstTheMachine
 		{
 			return _root ?? (_root = new Decorator(ret => !_isBehaviorDone,
 				new PrioritySelector(
-					new Decorator(context => !InVehicle
+					new Decorator(context => !InVehicle,
 						new Action(context => { _isBehaviorDone = true; })),
 					DoneYet,
 					MantidKill,

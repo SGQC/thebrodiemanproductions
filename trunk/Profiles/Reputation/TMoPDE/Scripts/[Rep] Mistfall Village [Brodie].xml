@@ -503,6 +503,7 @@
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30231)" >
 			<CustomBehavior File="SpecificQuests\30231-VOEB-PompfruitPickup" />
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
 		</While>
 	</If>
 
