@@ -1,5 +1,12 @@
 Patch Notes
 
+5/18/13
+
+r283
+Quest Behaviors
+-- Missing CastSpell.cs readded
+-- Updates from ChinaJade
+
 5/17/13
 
 r282
