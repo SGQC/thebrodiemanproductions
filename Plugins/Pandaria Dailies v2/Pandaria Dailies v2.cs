@@ -37,7 +37,7 @@ namespace AzeniusHelper2
 
 		public override string Name { get { return "Pandaria Dailies v2"; } }
 		public override string Author { get { return "Buddy Community"; } }
-		public override Version Version { get { return new Version(2, 2, 2); } }
+		public override Version Version { get { return new Version(2, 2, 3); } }
 		public override bool WantButton { get { return true; } }
 		public override string ButtonText { get { return "Credits"; } }
 
@@ -217,14 +217,6 @@ namespace AzeniusHelper2
 			}
 		}
 
-		public List<WoWUnit> BrazierFire
-		{
-			get
-			{
-				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63787 && u.Distance < 5).OrderBy(u => u.Distance).ToList();
-			}
-		}
-
 		public WoWUnit Tormentor
 		{
 			get
@@ -286,22 +278,6 @@ namespace AzeniusHelper2
 			get
 			{
 				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 69240 && u.IsAlive && u.Distance < 10).FirstOrDefault();
-			}
-		}
-
-		public WoWUnit StatueAttack
-		{
-			get
-			{
-				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63447 && u.IsAlive && u.Distance < 30).FirstOrDefault();
-			}
-		}
-
-		public WoWUnit StatueFall
-		{
-			get
-			{
-				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == 63556 && u.IsAlive && u.Distance < 30).FirstOrDefault();
 			}
 		}
 		
@@ -573,34 +549,6 @@ namespace AzeniusHelper2
 					Thread.Sleep(2000);
 					WoWMovement.MoveStop();
 				}
-			}
-			#endregion
-
-			#region http://www.wowhead.com/quest=30192 - todo
-			if (IsOnQuest(30192) && !QuestComplete(30192))
-			{
-				if (BrazierFire != null)
-					BrazierFire[0].Interact();
-			}
-			#endregion
-
-			#region http://www.wowhead.com/quest=30304 - todo
-			if (IsOnQuest(30304) && !QuestComplete(30304))
-			{
-				if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
-					StatueAttack.Interact();
-				if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
-					StatueFall.Interact();
-			}
-			#endregion
-
-			#region http://www.wowhead.com/quest=30299 - todo
-			if (IsOnQuest(30299) && !QuestComplete(30299))
-			{
-				if (!StyxWoW.Me.Combat && StatueAttack != null && StatueAttack.Distance2D <= 5)
-					StatueAttack.Interact();
-				if (!StyxWoW.Me.Combat && StatueFall != null && StatueFall.Distance2D <= 5)
-					StatueFall.Interact();
 			}
 			#endregion
 

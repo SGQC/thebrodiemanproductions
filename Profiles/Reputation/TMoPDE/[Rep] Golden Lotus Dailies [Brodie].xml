@@ -306,28 +306,6 @@
 			</If>
 		</While>
 	</If>
-<!--	<While Condition="HasQuest(31756) &amp;&amp; !IsQuestCompleted(31756)">
-		<While Condition="!IsObjectiveComplete(1, 31756)" >
-			<CustomBehavior File="FlyTo" X="1568.647" Y="1185.899" Z="444.4847" />
-			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" NonCompeteDistance="0" X="1573.069" Y="1190.201" Z="446.5927" />
-		</While>
-		<While Condition="!IsObjectiveComplete(2, 31756)" >
-			<CustomBehavior File="FlyTo" X="1625.123" Y="1269.5" Z="463.0072" />
-			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214899" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
-		</While>
-		<While Condition="!IsObjectiveComplete(4, 31756)" >
-			<CustomBehavior File="FlyTo" X="1635.482" Y="1546.689" Z="440.0556" />
-			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214901" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
-		</While>
-		<While Condition="!IsObjectiveComplete(3, 31756)" >
-			<CustomBehavior File="FlyTo" X="1481.446" Y="1388.026" Z="444.6272" />
-			<CustomBehavior File="ForcedDismount"/>
-			<CustomBehavior MobId="214900" File="InteractWith" QuestId="31756" WaitForNpcs="False" NonCompeteDistance="0" />
-		</While>
-	</While>-->
 
 <!-- Thundering Skies -->
  	<If Condition="HasQuest(30310) &amp;&amp; !IsQuestCompleted(30310)" >
@@ -430,20 +408,17 @@
 		<CustomBehavior File="Message" Text="Starting Cannonfire" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31754" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1540.48" Y="1176.70" Z="443.03" />
-		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(31754)" >
-			<CustomBehavior File="InteractWith" QuestId="31754" InteractByUsingItemId="89123" MobId="65762" AuraIdMissingFromMob="129380" Range="5" WaitTime="5000" >
-				<HuntingGrounds>
-					<Hotspot X="1540.479" Y="1176.702" Z="443.0296" />
-					<Hotspot X="1529.951" Y="1181.776" Z="442.5779" />
-					<Hotspot X="1496.884" Y="1227.667" Z="437.5228" />
-					<Hotspot X="1517.748" Y="1269.749" Z="442.7838" />
-					<Hotspot X="1513.869" Y="1289.58" Z="443.8857" />
-					<Hotspot X="1575.533" Y="1208.958" Z="459.0775" />
-					<Hotspot X="1585.056" Y="1199.58" Z="459.0019" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="31754" InteractByUsingItemId="89123" MobId="65762" NumOfTimes="100" AuraIdMissingFromMob="129380" Range="5" WaitTime="5000" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+			<HuntingGrounds>
+				<Hotspot X="1540.479" Y="1176.702" Z="443.0296" />
+				<Hotspot X="1529.951" Y="1181.776" Z="442.5779" />
+				<Hotspot X="1496.884" Y="1227.667" Z="437.5228" />
+				<Hotspot X="1517.748" Y="1269.749" Z="442.7838" />
+				<Hotspot X="1513.869" Y="1289.58" Z="443.8857" />
+				<Hotspot X="1575.533" Y="1208.958" Z="459.0775" />
+				<Hotspot X="1585.056" Y="1199.58" Z="459.0019" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- Acts of Cruelty -->

@@ -348,7 +348,14 @@
 <!-- Sungshin Ironpaw -->
 	<While Condition="HasQuestAvailable(64231, &quot;Available&quot;)" >
 		<CustomBehavior File="InteractWith" MobId="64231" WaitTime="1000" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+	</While>
+	
+<!-- Merchant Greenfield -->
+	<While Condition="HasQuestAvailable(58718, &quot;Available&quot;)" >
+		<CustomBehavior File="InteractWith" MobId="58718" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 
@@ -380,6 +387,23 @@
 	<If Condition="HasQuestAvailable(58716)" >
 		<CustomBehavior File="ForcedDismount" />
 		<PickUp QuestName="The Truffle Shuffle" QuestId="30330" GiverName="Jian Ironpaw" GiverId="58716" />
+	</If>
+	
+<!-- A Shabby New Face -->
+	<If Condition="HasQuest(32189)" >
+		<TurnIn QuestName="A Shabby New Face" QuestId="32189" TurnInName="Barnaby Fletcher" TurnInId="67565" />
+	</If>
+	
+<!-- Barnaby Fletcher -->
+	<While Condition="HasQuestAvailable(67565, &quot;Available&quot;)" >
+		<CustomBehavior File="InteractWith" MobId="67565" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(GetNumGossipAvailableQuests())" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+	</While>
+	
+<!-- One Magical, Flying Kingdom's Trash -->
+	<If Condition="HasQuest(32198)" >
+		<TurnIn QuestName="One Magical, Flying Kingdom's Trash" QuestId="32198" TurnInName="Barnaby Fletcher" TurnInId="67565" />
 	</If>
 
 <!-- Chee Chee -->
