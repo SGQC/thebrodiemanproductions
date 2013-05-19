@@ -1,5 +1,13 @@
 Patch Notes
 
+5/19/13
+
+r286
+The Leveling Grind
+-- Updated Darkshore (30/90 supported)
+Quest Behaviors
+-- Updates from CJ
+
 5/18/13
 
 r285
