@@ -255,14 +255,14 @@
 			<If Condition="!IsQuestCompleted(30205)">
 				<CustomBehavior File="FlyTo" X="1426.948" Y="1688.124" Z="344.2366" />
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" MobId="210385" NumOfTimes="4" CollectionDistance="4000" WaitForNpcs="False" />
-				<CustomBehavior File="InteractWith" MobId="63273" CollectionDistance="4000" WaitForNpcs="False"/>
+				<CustomBehavior File="InteractWith" MobId="210385" NumOfTimes="4" CollectionDistance="4000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" />
+				<CustomBehavior File="InteractWith" MobId="63273" CollectionDistance="4000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" />
 			</If>
 			<If Condition="!IsQuestCompleted(30205)">
 				<CustomBehavior Z="427.9871" Y="1800.436" X="1609.842" File="FlyTo"/>
 				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" MobId="210385" NumOfTimes="4" CollectionDistance="4000" WaitForNpcs="False"/>
-				<CustomBehavior File="InteractWith" MobId="63273" CollectionDistance="4000" WaitForNpcs="False"/>
+				<CustomBehavior File="InteractWith" MobId="210385" NumOfTimes="4" CollectionDistance="4000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" />
+				<CustomBehavior File="InteractWith" MobId="63273" CollectionDistance="4000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" />
 			</If>
 		</While>
 	</If>
@@ -299,60 +299,30 @@
 			<CustomBehavior File="Message" Text="Starting No Stone Unturned" LogColor="Green"  />
 			<CustomBehavior File="UserSettings" QuestId="30299" LootMobs="True" PullDistance="15" />
 		</If>
-		<While Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
-				(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
-					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-				<CustomBehavior File="FlyTo" X="1397.36" Y="1677.44" Z="344.24" />
-				<CustomBehavior File="ForcedDismount"/>
-				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 63447, 63556 }.Contains((int)u.Entry) &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)
-										&amp;&amp; !IsQuestCompleted(30304)" >
-						<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
-					</While>
-				</If>
-				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 63447, 63556 }.Contains((int)u.Entry) &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)
-										&amp;&amp; !IsQuestCompleted(30299)" >
-						<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
-					</While>
-				</If>
-			</If>
-			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
-					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-				<CustomBehavior File="FlyTo" X="1268.16" Y="1837.10" Z="344.80" />
-				<CustomBehavior File="ForcedDismount"/>
-				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 63447, 63556 }.Contains((int)u.Entry) &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)
-										&amp;&amp; !IsQuestCompleted(30304)" >
-						<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
-					</While>
-				</If>
-				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 63447, 63556 }.Contains((int)u.Entry) &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)
-										&amp;&amp; !IsQuestCompleted(30299)" >
-						<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
-					</While>
-				</If>
-			</If>
-			<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304)) ||
-					(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-				<CustomBehavior File="FlyTo" X="1613.10" Y="1804.64" Z="427.99" />
-				<CustomBehavior File="ForcedDismount"/>
-				<If Condition="(HasQuest(30304) &amp;&amp; !IsQuestCompleted(30304))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 63447, 63556 }.Contains((int)u.Entry) &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)
-										&amp;&amp; !IsQuestCompleted(30304)" >
-						<CustomBehavior File="InteractWith" QuestId="30304" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
-					</While>
-				</If>
-				<If Condition="(HasQuest(30299) &amp;&amp; !IsQuestCompleted(30299))" >
-					<While Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; new [] { 63447, 63556 }.Contains((int)u.Entry) &amp;&amp; u.IsAlive &amp;&amp; u.Distance &lt;= 500)
-										&amp;&amp; !IsQuestCompleted(30299)" >
-						<CustomBehavior File="InteractWith" QuestId="30299" MobId="63447" MobId2="63556" Range="3" CollectionDistance="4000" WaitForNpcs="False" NonCompeteDistance="0" WaitTime="1000" />
-					</While>
-				</If>
-			</If>
-		</While>
+		<CustomBehavior File="FlyTo" X="1379.822" Y="1674.455" Z="340.6519" />
+		<CustomBehavior File="ForcedDismount" />
+		<If Condition="HasQuest(30304)" >
+			<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="30304" MobId="63447" MobId2="63556" Range="6" NumOfTimes="100" CollectionDistance="4000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitTime="1000" >
+				<HuntingGrounds>
+					<Hotspot X="1379.822" Y="1674.455" Z="340.6519" />
+					<Hotspot X="1429.203" Y="1683.016" Z="344.2378" />
+					<Hotspot X="1318.451" Y="1792.735" Z="344.4246" />
+					<Hotspot X="1293.902" Y="1840.664" Z="345.2794" />
+					<Hotspot X="1223.535" Y="1821.209" Z="345.2751" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
+		<If Condition="HasQuest(30299)" >
+			<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="30299" MobId="63447" MobId2="63556" Range="6" NumOfTimes="100" CollectionDistance="4000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitTime="1000" >
+				<HuntingGrounds>
+					<Hotspot X="1379.822" Y="1674.455" Z="340.6519" />
+					<Hotspot X="1429.203" Y="1683.016" Z="344.2378" />
+					<Hotspot X="1318.451" Y="1792.735" Z="344.4246" />
+					<Hotspot X="1293.902" Y="1840.664" Z="345.2794" />
+					<Hotspot X="1223.535" Y="1821.209" Z="345.2751" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
 	</If>
 
 <!-- The Key to Success -->
@@ -379,31 +349,18 @@
 		<CustomBehavior File="Message" Text="Starting Offering A Warm Welcome" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30301" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1265.85" Y="1901.82" Z="349.66" />
-		<While Condition="!IsQuestCompleted(30301)" >
-			<CustomBehavior File="FlyTo" X="1249.55" Y="1892.47" Z="348.37" />
-			<While Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; u.Entry == 210680 &amp;&amp; u.Distance &lt;= 500)" >
-				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" Range="20" MinRange="10" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
-					<HuntingGrounds>
-						<Hotspot X="1249.55" Y="1892.47" Z="348.37" />
-						<Hotspot X="1228.00" Y="1852.45" Z="347.59" />
-						<Hotspot X="1224.96" Y="1812.68" Z="345.29" />
-						<Hotspot X="1249.10" Y="1809.14" Z="344.78" />
-						<Hotspot X="1287.15" Y="1817.82" Z="344.78" />
-					</HuntingGrounds>
-				</CustomBehavior>
-			</While>
-			<CustomBehavior File="FlyTo" X="1442.69" Y="1802.02" Z="301.77" />
-			<While Condition="ObjectManager.GetObjectsOfType&lt;WoWObject&gt;().Any(u =&gt; u.Entry == 210680 &amp;&amp; u.Distance &lt;= 500)" >
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" Range="20" MinRange="10" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
-					<HuntingGrounds>
-						<Hotspot X="1442.69" Y="1802.02" Z="301.77" />
-						<Hotspot X="1489.75" Y="1833.92" Z="308.17" />
-						<Hotspot X="1441.47" Y="1821.36" Z="301.91" />
-					</HuntingGrounds>
-				</CustomBehavior>
-			</While>
-		</While>
+		<CustomBehavior File="InteractWith" InteractByUsingItemId="85581" MobId="210680" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" Range="20" MinRange="10" NumOfTimes="100" WaitTime="2000" AuraIdMissingFromMob="124174" CollectionDistance="500" >
+			<HuntingGrounds>
+				<Hotspot X="1249.55" Y="1892.47" Z="348.37" />
+				<Hotspot X="1228.00" Y="1852.45" Z="347.59" />
+				<Hotspot X="1224.96" Y="1812.68" Z="345.29" />
+				<Hotspot X="1249.10" Y="1809.14" Z="344.78" />
+				<Hotspot X="1287.15" Y="1817.82" Z="344.78" />
+				<Hotspot X="1442.69" Y="1802.02" Z="301.77" />
+				<Hotspot X="1489.75" Y="1833.92" Z="308.17" />
+				<Hotspot X="1441.47" Y="1821.36" Z="301.91" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- Painting the Ruins Red -->

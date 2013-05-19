@@ -2,6 +2,25 @@ Patch Notes
 
 5/18/13
 
+r284
+Pandaria Dailies v2 (2.2.3)
+-- Removed Fire support for Town on Fire quests
+-- Removed support for Hard as a Rock/No Stone Unturned
+Mistfall Village
+-- Altered target of water buckets from "bunny" to "actual fire" -- EXPERIMENTAL
+-- Return to Rest - Dismount strategy added
+-- Blooming Blossoms - Converted CollectThings to InteractWith, to add flight support
+Golden Lotus
+-- Cannonfire - Removed While loop, ProactiveCombatStrategy to Clear Aggro only
+Ruins of Guo Lai
+-- Hard as a Rock/No Stone Unturned - Plugin support removed, IW updated to auto check areas and then move on. (CURRENTLY NO FLIGHT SUPPORT!)
+-- Offering a Warm Welcome - Updated IW to be one grab
+The Tillers
+-- Added Merchant Greenfield quest pickup support
+-- Added Barnaby Fletcher quest pickup support
+-- Added A Shabby New Face
+-- Added One Magical, Flying Kingdom's Trash
+
 r283
 Quest Behaviors
 -- Missing CastSpell.cs readded
