@@ -1,0 +1,160 @@
+<HBProfile>
+
+<Name>Darkshore Quest ($Rev$)</Name>
+
+<MinLevel>10</MinLevel>
+<MaxLevel>25</MaxLevel>
+<MinDurability>0.2</MinDurability>
+<MinFreeBagSlots>2</MinFreeBagSlots>
+
+<SellGrey>True</SellGrey>
+<SellWhite>True</SellWhite>
+<SellGreen>False</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+
+<MailGrey>False</MailGrey>
+<MailWhite>False</MailWhite>
+<MailGreen>True</MailGreen>
+<MailBlue>True</MailBlue>
+<MailPurple>True</MailPurple>
+
+<TargetElites>False</TargetElites>
+  
+<AvoidMobs>
+	<Mob Name="Vile Terror" Entry="33864" />
+</AvoidMobs>
+
+<Blackspots>
+	<Blackspot X="6630.19" Y="-187.4851" Z="0.3904713" Radius="2.35758" />
+	<Blackspot X="7372.378" Y="-337.8942" Z="-1.231811" Radius="1.436166" />
+</Blackspots>
+
+<Mailboxes>
+	<Mailbox X="7392.969" Y="-262.9229" Z="5.207484" />
+</Mailboxes>
+
+<Vendors>
+	<Vendor Name="Rembar Bellanne" Entry="43419" Type="Food" X="7372.79" Y="-804.068" Z="8.099142" />
+	<Vendor Name="Harlon Thornguard" Entry="4187" Type="Repair" X="7394.35" Y="-264.641" Z="5.079112" />
+	<Vendor Name="Rembar Bellanne" Entry="43419" Type="Repair" X="7372.79" Y="-804.068" Z="8.099142" />
+</Vendors>
+
+<!-- Quest Overrides -->
+
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(13518) &amp;&amp; !IsQuestCompleted(13518)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+	
+	<If Condition="Me.ZoneId == 6450 || (Me.ZoneId == 141 &amp;&amp; (Me.Z &gt; 1000))">
+		<RunTo X="9948.389" Y="2614.481" Z="1316.236" />
+	</If>
+
+	<If Condition="Me.ZoneId == 1657">
+		<RunTo X="9948.389" Y="2614.481" Z="1316.236" />
+		<CustomBehavior File="MyCTM" X="9947.438" Y="2621.536" Z="1317.558" />
+		<CustomBehavior File="WaitTimer" WaitTime="8000" />
+	</If>
+	
+	<If Condition="Me.ZoneId == 141 &amp;&amp; (Me.Z &lt; 100)" >
+		<RunTo X="8380.85" Y="982.09" Z="30.65" />
+		<CustomBehavior File="UserSettings" UseFlightPaths="True" />
+	</If>
+	
+<!-- The Last Wave of Survivors/Threat From the Water -->
+	<If Condition="!HasQuest(13518) &amp;&amp; !IsQuestCompleted(13518)" >
+		<PickUp QuestName="The Last Wave of Survivors" QuestId="13518" GiverName="Dentaria Silverglade" GiverId="32973" />
+		<CustomBehavior File="SetHearthstone" MobId="43420" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
+	<PickUp QuestName="Threat from the Water" QuestId="13522" GiverName="Ranger Glynda Nal'Shea" GiverId="32971" />
+	<If Condition="!IsObjectiveComplete(4,13518)" >
+		<CustomBehavior File="InteractWith" QuestId="13518" MobId="33094" X="7439.48" Y="106.23" Z="0.28" />
+	</If>
+	<If Condition="!IsObjectiveComplete(2,13518)" >
+		<CustomBehavior File="InteractWith" QuestId="13518" MobId="32911" X="7455.90" Y="164.99" Z="2.73" />
+	</If>
+	<If Condition="!IsObjectiveComplete(1,13518)" >
+		<CustomBehavior File="InteractWith" QuestId="13518" MobId="33093" X="7365.81" Y="134.71" Z="11.68" />
+	</If>
+	<If Condition="!IsObjectiveComplete(3,13518)" >
+		<CustomBehavior File="InteractWith" QuestId="13518" MobId="33095" X="7295.92" Y="242.54" Z="1.76" />
+	</If>
+	<Objective QuestName="Threat from the Water" QuestId="13522" Type="KillMob" MobId="32928" KillCount="8" />
+	<TurnIn QuestName="Threat from the Water" QuestId="13522" TurnInName="Ranger Glynda Nal'Shea" TurnInId="32971" />
+	<TurnIn QuestName="The Last Wave of Survivors" QuestId="13518" TurnInName="Dentaria Silverglade" TurnInId="32973" />
+	
+<!-- The Boon of the Seas/Buzzbox 413 -->
+	<PickUp QuestName="The Boon of the Seas" QuestId="13520" GiverName="Serendia Oakwhisper" GiverId="32972" />
+	<PickUp QuestName="Buzzbox 413" QuestId="13521" GiverName="Wizbang Cranktoggle" GiverId="32977" />
+	<CustomBehavior File="CollectThings" QuestId="13521" MobState="Alive" CollectUntil="QuestComplete" MobId="32935" HuntingGroundRadius="200" NonCompeteDistance="5" >
+		<Hotspot X="7490.445" Y="-411.6582" Z="-14.1819" />
+		<Hotspot X="7510.28" Y="-344.3577" Z="-17.79234" />
+		<Hotspot X="7483.629" Y="-269.6534" Z="-2.886598" />
+	</CustomBehavior>
+	<CustomBehavior File="CollectThings" QuestId="13520" CollectUntil="QuestComplete" ObjectId="194107" HuntingGroundRadius="200" NonCompeteDistance="5" PostInteractDelay="300" >
+		<Hotspot X="7490.445" Y="-411.6582" Z="-14.1819" />
+		<Hotspot X="7510.28" Y="-344.3577" Z="-17.79234" />
+		<Hotspot X="7483.629" Y="-269.6534" Z="-2.886598" />
+	</CustomBehavior>
+	<TurnIn QuestName="The Boon of the Seas" QuestId="13520" TurnInName="Serendia Oakwhisper" TurnInId="32972" />
+	<TurnIn QuestName="Buzzbox 413" QuestId="13521" TurnInName="Buzzbox 413" TurnInId="194105" TurnInType="Object" X="7376.342" Y="-425.0824" Z="2.099702" />
+	
+<!-- No Accounting for Taste -->
+	<PickUp QuestName="No Accounting for Taste" QuestId="13527" GiverName="Buzzbox 413" GiverId="194105" GiverType="Object" X="7376.342" Y="-425.0824" Z="2.099702" />
+	<CustomBehavior File="InteractWith" QuestId="13527" MobId="32975" X="7318.281" Y="-545.9667" Z="3.088199" />
+	<TurnIn QuestName="No Accounting for Taste" QuestId="13527" TurnInName="Wizbang Cranktoggle" TurnInId="32977" />
+	
+<!-- Buzzbox 723 -->
+	<PickUp QuestName="Buzzbox 723" QuestId="13528" GiverName="Wizbang Cranktoggle" GiverId="32977" />
+	<Objective QuestName="Buzzbox 723" QuestId="13528" Type="CollectItem" ItemId="44913" CollectCount="6" />
+	<TurnIn QuestName="Buzzbox 723" QuestId="13528" TurnInName="Buzzbox 723" TurnInId="194122" TurnInType="Object" X="6962.548" Y="-485.2443" Z="24.64986" />
+	
+<!-- A Cure in the Dark/The Corruption's Source/A Troubling Prescription/Bearer of Good Fortune -->
+	<PickUp QuestName="A Cure in the Dark" QuestId="13554" GiverName="Buzzbox 723" GiverId="194122" GiverType="Object" X="6962.548" Y="-485.2443" Z="24.64986" />
+	<PickUp QuestName="The Corruption's Source" QuestId="13529" GiverName="Tharnariun Treetender" GiverId="32978" />
+	<PickUp QuestName="A Troubling Prescription" QuestId="13831" GiverName="Disgusting Workbench" GiverId="194714" GiverType="Object" X="6768.186" Y="-695.801" Z="69.95356" />
+	<Objective QuestName="A Cure in the Dark" QuestId="13554" Type="CollectItem" ItemId="44966" CollectCount="6" />
+	<Objective QuestName="The Corruption's Source" QuestId="13529" Type="KillMob" MobId="33020" KillCount="1" />
+	<Objective QuestName="The Corruption's Source" QuestId="13529" Type="KillMob" MobId="33021" KillCount="8" />
+	<While Condition="!HasItem(44927) &amp;&amp; (!HasQuest(13557) &amp;&amp; !IsQuestCompleted(13557))" >
+		<CustomBehavior File="CollectThings" CollectItemId="44927" CollectItemCount="1" MobId="33022" HuntingGroundRadius="200" MobState="Alive" >
+			<Hotspot X="6746.883" Y="-664.3602" Z="67.05317" />
+			<Hotspot X="6816.373" Y="-686.3694" Z="64.87888" />
+		</CustomBehavior>
+	</While>
+	<If Condition="HasItem(44927) &amp;&amp; (!HasQuest(13557) &amp;&amp; !IsQuestCompleted(13557))" >
+		<PickUp QuestName="Bearer of Good Fortune" QuestId="13557" GiverType="Item" GiverId="44927" />
+	</If>
+	<CustomBehavior File="CollectThings" QuestId="13557" CollectUntil="QuestComplete" ObjectId="194124" ObjectId2="194133" HuntingGroundRadius="200" >
+		<Hotspot X="6746.883" Y="-664.3602" Z="67.05317" />
+		<Hotspot X="6816.373" Y="-686.3694" Z="64.87888" />
+	</CustomBehavior>
+	<TurnIn QuestName="The Corruption's Source" QuestId="13529" TurnInName="Tharnariun Treetender" TurnInId="32978" />
+	<TurnIn QuestName="A Troubling Prescription" QuestId="13831" TurnInName="Tharnariun Treetender" TurnInId="32978" />
+	<TurnIn QuestName="Bearer of Good Fortune" QuestId="13557" TurnInName="Tharnariun Treetender" TurnInId="32978" />
+	<TurnIn QuestName="A Cure in the Dark" QuestId="13554" TurnInName="Wizbang Cranktoggle" TurnInId="32977" />
+	
+<!-- The Final Flame of Bashal'Aran/A Lost Companion/A Love Eternal/Solace for the Highborne -->
+	<PickUp QuestName="The Final Flame of Bashal'Aran" QuestId="13562" GiverName="Ranger Glynda Nal'Shea" GiverId="32971" />
+	<PickUp QuestName="A Lost Companion" QuestId="13564" GiverName="Volcor" GiverId="32960" />
+	<PickUp QuestName="A Love Eternal" QuestId="13563" GiverName="Cerellean Whiteclaw" GiverId="32959" />
+	<If Condition="HasQuest(13562) &amp;&amp; (Me.Location.Distance(new WoWPoint(7244.91, -282.41, 21.17)) &lt; 500)" >
+		<RunTo X="7246.385" Y="-281.746" Z="21.01714" />
+		<CustomBehavior File="InteractWith" MobId="33359" InteractByGossipOptions="1" NonCompeteDistance="0" />
+	</If>
+	<PickUp QuestName="Solace for the Highborne" QuestId="13561" GiverName="Arya Autumnlight" GiverId="33177" />
+
+	<CustomBehavior File="Message" Text="Darkshore Quests Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	
+</QuestOrder>
+</HBProfile>
