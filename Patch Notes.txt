@@ -2,6 +2,12 @@ Patch Notes
 
 5/18/13
 
+r285
+Shado Pan
+-- The Enemy of my enemy - Changes to Mount/Combat Strategy
+The Leveling Grind
+-- Added Darkshore (Partial)
+
 r284
 Pandaria Dailies v2 (2.2.3)
 -- Removed Fire support for Town on Fire quests

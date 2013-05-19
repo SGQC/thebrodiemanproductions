@@ -880,9 +880,8 @@
 		<CustomBehavior File="UserSettings" QuestId="31119" LootMobs="True" PullDistance="1" />
 		<While Condition="!IsQuestCompleted(31119)" >
 			<CustomBehavior File="FlyTo" X="2911.838" Y="3474.233" Z="377.3546" />
-			<CustomBehavior File="ForcedDismount"/>
 			<While Condition="(GetItemCount(84762) &lt; 10)" >
-				<CustomBehavior File="InteractWith" MobId="212877" IgnoreMobsInBlackspots="True" Range="5" WaitTime="100" CollectionDistance="2000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="212877" IgnoreMobsInBlackspots="True" Range="5" WaitTime="100" CollectionDistance="2000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" />
 			</While>
 			<CustomBehavior File="FlyTo" X="2704.885" Y="3608.939" Z="315.2162" />
 			<While Condition="(GetItemCount(84762) &gt; 1) &amp;&amp; !IsQuestCompleted(31119)" >

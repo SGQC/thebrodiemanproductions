@@ -212,8 +212,9 @@
 
 <!-- Fisherman Haito -->
 	<While Condition="HasQuestAvailable(59584)" >
-		<CustomBehavior File="FlyTo" X="-1517.874" Y="-238.6824" Z="14.43668" />
-		<CustomBehavior File="InteractWith" MobId="59584" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="FlyTo" X="-1502.469" Y="-246.5418" Z="4.93469" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" MobId="59584" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -327,9 +328,10 @@
 <!-- Jagged Abalone -->
  	<If Condition="HasQuest(30586) &amp;&amp; !IsQuestCompleted(30586)">
 		<CustomBehavior File="Message" Text="Starting Jagged Abalone" LogColor="Green"  />
-		<CustomBehavior File="UserSettings" QuestId="30586" UseMount="False" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="UserSettings" QuestId="30586" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="-1353.003" Y="-342.6745" Z="-3.762463" />
 		<CustomBehavior File="ForcedDismount"/>
+		<CustomBehavior File="UserSettings" QuestId="30586" UseMount="False" />
 		<CustomBehavior File="CollectThings" QuestId="30586" CollectUntil="QuestComplete" ObjectId="211118" HuntingGroundRadius="120" NonCompeteDistance="5" />
 		<CustomBehavior File="AscendInWater" />
 		<CustomBehavior File="UserSettings" UseMount="True" />
