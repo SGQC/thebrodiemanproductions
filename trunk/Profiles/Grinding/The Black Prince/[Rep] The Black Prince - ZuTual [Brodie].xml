@@ -1,8 +1,12 @@
 <HBProfile>
-	<Name>The Black Prince - Isle of Thunder</Name>
+	<Name>The Black Prince - Isle of Thunder ($Rev$)</Name>
 	
 	<Blackspots>
     </Blackspots>
+	
+	<AvoidMobs>
+		<Mob Name="Fierce Anklebiter" Entry="69244" />
+	</AvoidMobs>
 	
 	<Vendors>
 	</Vendors>
