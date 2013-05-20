@@ -2,6 +2,13 @@ Patch Notes
 
 5/19/13
 
+r287
+The Leveling Grind
+-- Updated Darkshore (38/90 supported)
+Quest Behaviors
+-- Updates from CJ
+-- Added The Ancient's Ire QB (hack)
+
 r286
 The Leveling Grind
 -- Updated Darkshore (30/90 supported)
