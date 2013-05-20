@@ -28,6 +28,7 @@
 <Blackspots>
 	<Blackspot X="6630.19" Y="-187.4851" Z="0.3904713" Radius="2.35758" />
 	<Blackspot X="7372.378" Y="-337.8942" Z="-1.231811" Radius="1.436166" />
+	<Blackspot X="7352.60" Y="-1109.83" Z="57.10" Radius="5" />
 </Blackspots>
 
 <Mailboxes>
@@ -315,10 +316,75 @@
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 	</If>
 	
-<!-- Strategic Strikes -->
+<!-- Strategic Strikes/On The Brink/The Looting of Althalaxx -->
 	<PickUp QuestName="Strategic Strikes" QuestId="13512" GiverName="Lt. Morra Starbreeze" GiverId="32963" />
 	<PickUp QuestName="On The Brink" QuestId="13513" GiverName="Balthule Shadowstrike" GiverId="32966" />
 	<PickUp QuestName="The Looting of Althalaxx" QuestId="13844" GiverName="Mathas Wildwood" GiverId="34041" />
+	<If Condition="HasQuest(13512) &amp;&amp; !IsObjectiveComplete(2,13512)" >
+		<RunTo X="7345.322" Y="-923.1655" Z="29.70484" />
+		<CustomBehavior File="SpecificQuests\Kalimdor\Darkshore\13512-StrategicStrikes" KillSheya="True" />
+	</If>
+	<If Condition="HasQuest(13512) &amp;&amp; !IsObjectiveComplete(1,13512)" >
+		<RunTo X="7122.167" Y="-652.5104" Z="52.36291" />
+		<CustomBehavior File="SpecificQuests\Kalimdor\Darkshore\13512-StrategicStrikes" KillSheya="False" KillLorenth="True" />
+	</If>
+	<Objective QuestName="On The Brink" QuestId="13513" Type="CollectItem" ItemId="44942" CollectCount="6" />
+	<Objective QuestName="The Looting of Althalaxx" QuestId="13844" Type="KillMob" MobId="34033" KillCount="1" />
+	<Objective QuestName="The Looting of Althalaxx" QuestId="13844" Type="CollectItem" ItemId="45944" CollectCount="1" />
+	<TurnIn QuestName="Strategic Strikes" QuestId="13512" TurnInName="Lt. Morra Starbreeze" TurnInId="32963" />
+	<TurnIn QuestName="On The Brink" QuestId="13513" TurnInName="Balthule Shadowstrike" TurnInId="32966" />
+	<TurnIn QuestName="The Looting of Althalaxx" QuestId="13844" TurnInName="Mathas Wildwood" TurnInId="34041" />
+	
+	<CustomBehavior File="Message" Text="Compiling Shatterspear Vale Quests" LogColor="CornflowerBlue" />
+	
+<!-- The Front Line -->
+	<PickUp QuestName="The Front Line" QuestId="13590" GiverName="Lt. Morra Starbreeze" GiverId="32963" />
+	<If Condition="HasQuest(13590) &amp;&amp; !HasQuest(13514)" >
+		<CustomBehavior File="NoCombatMoveTo" X="7395.954" Y="-1445.602" Z="153.2246" />
+	</If>
+	<PickUp QuestName="The Ancients' Ire" QuestId="13514" GiverName="Kerlonian Evershade" GiverId="33176" />
+	<While Condition="HasQuest(13514) &amp;&amp; !IsQuestCompleted(13514)" >
+		<If Condition="!Me.IsOnTransport" >
+			<CustomBehavior File="Vehicles\MountVehOnly" QuestId="13514" VehicleMountId="43742" X="7380.45" Y="-1470.57" Z="150.80" />
+		</If>
+		<CustomBehavior File="SpecificQuests\Kalimdor\Darkshore\13514-TheAncientsIre" />
+	</While>
+	<If Condition="HasQuest(13514) &amp;&amp; IsQuestCompleted(13514)" >
+		<CustomBehavior File="EjectVeh" />
+		<CustomBehavior File="NoCombatMoveTo" X="7395.954" Y="-1445.602" Z="154.84" />
+	</If>
+	<TurnIn QuestName="The Ancients' Ire" QuestId="13514" TurnInName="Kerlonian Evershade" TurnInId="33176" />
+	<TurnIn QuestName="The Front Line" QuestId="13590" TurnInName="Huntress Sandrya Moonfall" TurnInId="33178" />
+
+<!-- Ending The Threat -->
+	<PickUp QuestName="Ending The Threat" QuestId="13515" GiverName="Huntress Sandrya Moonfall" GiverId="33178" />
+	<CustomBehavior File="InteractWith" QuestId="13515" MobId="33178" InteractByGossipOptions="1" InteractByQuestFrameDisposition="Ignore" WaitTime="5000" />
+	<Objective QuestName="Ending The Threat" QuestId="13515" Type="KillMob" MobId="32862" KillCount="1" />
+	<TurnIn QuestName="Ending The Threat" QuestId="13515" TurnInName="Huntress Sandrya Moonfall" TurnInId="33178" />
+	
+	<If Condition="HasItem(46318) &amp;&amp; (!HasQuest(13591) &amp;&amp; !IsQuestCompleted(13591))" >
+		<PickUp QuestName="Disturbing Connections" QuestId="13591" GiverType="Item" GiverId="46318" />
+	</If>
+	<If Condition="HasQuest(13591)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="3000" />
+	</If>
+	<TurnIn QuestName="Disturbing Connections" QuestId="13591" TurnInName="Ranger Glynda Nal'Shea" TurnInId="32971" />
+	
+	<If Condition="!IsQuestCompleted(13570)" >
+		<CustomBehavior File="InteractWith" MobId="32959" />
+		<If Condition="Me.Class == WoWClass.Hunter" >
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(3)" />
+			<CustomBehavior File="RunMacro" Macro="/script CompleteQuest()" />
+		<ElseIf Condition="Me.Class == WoWClass.Priest || Me.Class == WoWClass.Mage || Me.Class == WoWClass.Warlock" >
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(2)" />
+			<CustomBehavior File="RunMacro" Macro="/script CompleteQuest()" />
+		</ElseIf>
+		<Else>
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(1)" />
+			<CustomBehavior File="RunMacro" Macro="/script CompleteQuest()" />
+		</Else>
+		</If>
+	</If>
 	
 	<CustomBehavior File="Message" Text="Darkshore Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
