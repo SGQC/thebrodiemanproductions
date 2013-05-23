@@ -38,12 +38,6 @@
 
 <CustomBehavior File="Message" Text="Compiling August Celestials Quests..." LogColor="Green"  />
 
-	<If Condition="Me.GetReputationLevelWith(1269) &lt; WoWUnitReaction.Revered" >
-		<CustomBehavior File="Message" Text="You are not Revered with Golden Lotus. Stopping in 5 seconds." LogColor="Green"  />
-		<CustomBehavior File="UserDialog" ExpiryTime="5" ExpiryAction="InputEnabled_Continue" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Your current reputation level with Golden Lotus is too low! \n\n This profile requires at least Revered with Golden Lotus to operate.\n Skipping profile and continuing grind." />
-		<CustomBehavior File="UserSettings" StopBot="True" />
-	</If>
-
 <!-- Checking if you have a quest. If you do, start, if not, fly to Factional City Daily Giver -->
 	<If Condition="!HasQuest(31382) &amp;&amp; !HasQuest(31383) &amp;&amp; !HasQuest(31380) &amp;&amp;
 			!HasQuest(31381) &amp;&amp; !HasQuest(30879) &amp;&amp; !HasQuest(30881) &amp;&amp;
