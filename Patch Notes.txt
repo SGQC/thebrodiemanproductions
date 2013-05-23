@@ -1,5 +1,15 @@
 Patch Notes
 
+5/22/13
+
+r289
+Shado Pan
+-- Removed faction check (changed with 5.3)
+August Celestials
+-- Removed faction check (changed with 5.3)
+Quest Behaviors
+-- Updated to match latest revision
+
 5/20/13
 
 r288
