@@ -616,7 +616,6 @@
 
 <!-- Scarlet Armies Approach... - http://www.wowhead.com/quest=12757 -->
 	<PickUp QuestName="Scarlet Armies Approach..." QuestId="12757" GiverName="Orbaz Bloodbane" GiverId="28914" />
-	<CustomBehavior File="NoCombatMoveTo" X="2398.262" Y="-5740.875" Z="153.9224" />
 	<TurnIn QuestName="Scarlet Armies Approach..." QuestId="12757" TurnInName="Highlord Darion Mograine" TurnInId="28444" />
 	<CustomBehavior File="EquipItem" ItemId="38663" />
 
