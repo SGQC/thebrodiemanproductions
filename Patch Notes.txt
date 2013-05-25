@@ -2,6 +2,10 @@ Patch Notes
 
 5/25/13
 
+r291
+The Leveling Grind
+-- DK Starting area - Removed troublesome NoCombatMoveTo
+
 r290
 The Leveling Grind
 -- Added Draenei Starter (1-5~ only)
