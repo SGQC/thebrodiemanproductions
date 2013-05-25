@@ -902,14 +902,9 @@
 		<CustomBehavior File="FlyTo" X="192.4045" Y="1512.467" Z="427.4137" />
 		<CustomBehavior File="ForcedDismount" />
 		<Objective QuestName="Where it Counts" QuestId="30325" Type="KillMob" MobId="59123" KillCount="1" />
-		<While Condition="!IsObjectiveComplete(1,30325)" >
-			<CustomBehavior File="UserSettings" QuestId="30325" LootMobs="True" PullDistance="1" />
-			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" QuestId="30325" MobId="210955" WaitTime="100" />
-		</While>
-		<While Condition="!IsObjectiveComplete(2,30325)" >
-			<CustomBehavior File="UserSettings" QuestId="30325" LootMobs="True" PullDistance="1" />
-			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" QuestId="30325" MobId="210890" WaitTime="100" />
-		</While>
+		<CustomBehavior File="UserSettings" QuestId="30325" LootMobs="True" PullDistance="1" />
+		<CustomBehavior File="InteractWith" QuestId="30325" QuestObjectiveIndex="1" PreInteractMountStrategy="Dismount" MobId="210955" NumOfTimes="100" />
+		<CustomBehavior File="InteractWith" QuestId="30325" QuestObjectiveIndex="2" PreInteractMountStrategy="Dismount" MobId="210890" WaitTime="100" />
 	</If>
 
 <!-- A Gift for Sho -->
@@ -932,9 +927,7 @@
 		<While Condition="!IsObjectiveComplete(1,30330)" >
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(80127)" WaitTime="1000" />
 		</While>
-		<While Condition="!IsObjectiveComplete(2,30330)" >
-			<CustomBehavior File="InteractWith" QuestId="30330" WaitTime="2000" MobId="210810" PreInteractMountStrategy="Dismount" CollectionDistance="1000" X="98.31226" Y="1476.329" Z="389.9664" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30330" QuestObjectiveIndex="2" NumOfTimes="100" WaitTime="2000" MobId="210810" PreInteractMountStrategy="Dismount" CollectionDistance="1000" X="98.31226" Y="1476.329" Z="389.9664" />
 	</If>
 
 <!-- Fatty Goatsteak -->

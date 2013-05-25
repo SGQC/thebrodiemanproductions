@@ -4,11 +4,32 @@
 <QuestOrder>
 
 	<ClearVendor />
-	<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+	<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" WaitTime="1000" />
 	<CustomBehavior File="EnablePlugin" Names="ItemForAuraQuestHelper,Anti Drown,AutoEquip2,Talented2" />
 	
 	<If Condition="(Me.LevelFraction &gt;= 20) &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 4" >
 		<CustomBehavior File="LoadProfile" ProfileName="[Quest] Mounts [Brodie]" />
+	</If>
+	
+	<If Condition="Me.Class == WoWClass.DeathKnight &amp;&amp; (!IsQuestCompleted(13189) || !IsQuestCompleted(13188))" >
+		<CustomBehavior File="LoadProfile" ProfileName="Northrend\[Quest] DK Start [Brodie]" />
+	</If>
+	
+	<If Condition="Me.IsHorde" >
+		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll">
+			<If Condition="Me.Race == WoWRace.Orc &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25133)" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
+			</If>
+			<If Condition="Me.Race == WoWRace.Troll &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25073)" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
+			</If>
+			<If Condition="Me.Race == WoWRace.Orc" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Orc Start [Brodie]" />
+			</If>
+			<If Condition="Me.Race == WoWRace.Troll" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Troll Start [Brodie]" />
+			</If>
+		</If>
 	</If>
 
 	<If Condition="Me.IsAlliance" >
@@ -31,10 +52,10 @@
 			<If Condition="Me.Race == WoWRace.Gnome &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(26373)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Dun Morogh [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Dwarf">
+			<If Condition="Me.Race == WoWRace.Dwarf" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Dwarf Start [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Gnome">
+			<If Condition="Me.Race == WoWRace.Gnome" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Gnome Start [Brodie]" />
 			</If>
 		</If>
@@ -47,10 +68,16 @@
 			</If>
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Night Elf Start [Brodie]" />
 		</If>
-		<If Condition="Me.Race == WoWRace.Human">
+		<If Condition="Me.Race == WoWRace.Human" >
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
 		</If>
-		<If Condition="Me.Race == WoWRace.Worgen">
+		<If Condition="Me.Race == WoWRace.Draenei" >
+			<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; (!HasQuest(9313) &amp;&amp; IsQuestCompleted(9313)) &amp;&amp; (!HasQuest(9314) &amp;&amp; IsQuestCompleted(9314))" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Azuremyst Isle [Brodie]" />
+			</If>
+			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Draenei Start [Brodie]" />
+		</If>
+		<If Condition="Me.Race == WoWRace.Worgen" >
 			<If Condition="Me.LevelFraction &gt;= 10 &amp;&amp; IsQuestCompleted(28517)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />
 			</If>

@@ -288,22 +288,14 @@
 		<CustomBehavior File="Message" Text="Starting High Chance of Rain" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31756" LootMobs="True" PullDistance="1" />
 		<While Condition="!IsQuestCompleted(31756)" >
-			<If Condition="!IsObjectiveComplete(1, 31756)" >
-				<Custombehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214895" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1573.069" Y="1190.201" Z="446.5927" />
-			</If>
-			<If Condition="!IsObjectiveComplete(2, 31756)" >
-				<Custombehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214899" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1626.984" Y="1269.686" Z="464.5547" />
-			</If>
-			<If Condition="!IsObjectiveComplete(4, 31756)" >
-				<Custombehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214901" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1639.898" Y="1548.516" Z="441.6349" />
-			</If>
-			<If Condition="!IsObjectiveComplete(3, 31756)" >
-				<Custombehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="InteractWith" QuestId="31756" MobId="214900" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1477.417" Y="1388.53" Z="446.2014" />
-			</If>
+			<Custombehavior File="ForcedMount" MountType="Flying" />
+			<CustomBehavior File="InteractWith" QuestId="31756" QuestObjectiveIndex="1" MobId="214895" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1573.069" Y="1190.201" Z="446.5927" />
+			<Custombehavior File="ForcedMount" MountType="Flying" />
+			<CustomBehavior File="InteractWith" QuestId="31756" QuestObjectiveIndex="2" MobId="214899" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1626.984" Y="1269.686" Z="464.5547" />
+			<Custombehavior File="ForcedMount" MountType="Flying" />
+			<CustomBehavior File="InteractWith" QuestId="31756" QuestObjectiveIndex="4" MobId="214901" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1639.898" Y="1548.516" Z="441.6349" />
+			<Custombehavior File="ForcedMount" MountType="Flying" />
+			<CustomBehavior File="InteractWith" QuestId="31756" QuestObjectiveIndex="3" MobId="214900" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" X="1477.417" Y="1388.53" Z="446.2014" />
 		</While>
 	</If>
 
