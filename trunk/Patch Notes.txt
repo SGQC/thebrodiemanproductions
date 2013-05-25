@@ -1,5 +1,33 @@
 Patch Notes
 
+5/25/13
+
+r290
+The Leveling Grind
+-- Added Draenei Starter (1-5~ only)
+-- Added Orc Starter (1-5~ only)
+-- Added Troll Starter (1-5~ only)
+-- Added Death Knight Starter (55-58~)
+-- Updated Level Grind to support Draenei Starter (1-5~ only)
+-- Updated Level Grind to support Azuremyst Isle
+-- Updated Level Grind to support Orc Starter (1-5~ only)
+-- Updated Level Grind to support Troll Starter (1-5~ only) (not yet implemented)
+-- Updated Level Grind to support Death Knight Starter (55-58~)
+-- Mount check will now buy mount based on if you don't have any ground mounts (at Lv20)
+-- Darkshore Multiple Quests - Removed If/While, replaced with QuestObjectiveIndex for InteractWith
+Golden Lotus
+-- High Chance of Rain - Removed If, replaced with QuestObjectiveIndex for InteractWith
+Isle of Thunder PvP
+-- Tactical Mana Bombs - Removed If, replaced with QuestObjectiveIndex for InteractWith
+Shado Pan
+-- Challenger Ring Quests - Removed If, replaced with QuestObjectiveIndex for InteractWith
+The Tillers
+-- Multiple Quests - Removed If, replaced with QuestObjectiveIndex for InteractWith
+Cloud Serpent
+-- CastSpell converted to CastSpellOn for testing
+Battlefield: Barrens
+-- Initial Release - needs mesh testing
+
 5/22/13
 
 r289

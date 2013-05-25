@@ -447,14 +447,11 @@
 		<CustomBehavior File="Message" Text="Starting The Challenger's Ring: Lao-Chin the Iron Belly" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31128" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1842.04" Y="4264.08" Z="148.88" />
-		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsObjectiveComplete(1,31128)" >
-			<CustomBehavior File="InteractWith" MobId="62978" InteractByGossipOptions="1" X="1803.88" Y="4247.88" Z="148.80" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="31128" QuestObjectiveIndex="1" NumOfTimes="100" MobId="62978" InteractByGossipOptions="1" PreInteractDismountStrategy="Dismount" X="1803.88" Y="4247.88" Z="148.80" />
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31128)" >
-			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="63135" InteractByGossipOptions="1" X="1959.65" Y="4175.24" Z="138.47" />
+			<CustomBehavior File="InteractWith" QuestId="31128" WaitForNpcs="False" MobId="63135" InteractByGossipOptions="1" X="1959.65" Y="4175.24" Z="138.47" />
 		</While>
 		<CustomBehavior File="FlyTo" X="1831.925" Y="4258.577" Z="149.2426" />
 		<CustomBehavior File="ForcedDismount" />

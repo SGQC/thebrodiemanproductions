@@ -1,45 +1,45 @@
 <HBProfile>
 
-<Name>Darkshore Quest ($Rev$)</Name>
+	<Name>Darkshore Quest ($Rev$)</Name>
 
-<MinLevel>10</MinLevel>
-<MaxLevel>25</MaxLevel>
-<MinDurability>0.2</MinDurability>
-<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MinLevel>10</MinLevel>
+	<MaxLevel>25</MaxLevel>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
 
-<SellGrey>True</SellGrey>
-<SellWhite>True</SellWhite>
-<SellGreen>False</SellGreen>
-<SellBlue>False</SellBlue>
-<SellPurple>False</SellPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
 
-<MailGrey>False</MailGrey>
-<MailWhite>False</MailWhite>
-<MailGreen>True</MailGreen>
-<MailBlue>True</MailBlue>
-<MailPurple>True</MailPurple>
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
 
-<TargetElites>False</TargetElites>
+	<TargetElites>False</TargetElites>
   
-<AvoidMobs>
-	<Mob Name="Vile Terror" Entry="33864" />
-</AvoidMobs>
+	<AvoidMobs>
+		<Mob Name="Vile Terror" Entry="33864" />
+	</AvoidMobs>
 
-<Blackspots>
-	<Blackspot X="6630.19" Y="-187.4851" Z="0.3904713" Radius="2.35758" />
-	<Blackspot X="7372.378" Y="-337.8942" Z="-1.231811" Radius="1.436166" />
-	<Blackspot X="7352.60" Y="-1109.83" Z="57.10" Radius="5" />
-</Blackspots>
+	<Blackspots>
+		<Blackspot X="6630.19" Y="-187.4851" Z="0.3904713" Radius="2.35758" />
+		<Blackspot X="7372.378" Y="-337.8942" Z="-1.231811" Radius="1.436166" />
+		<Blackspot X="7352.60" Y="-1109.83" Z="57.10" Radius="5" />
+	</Blackspots>
 
-<Mailboxes>
-	<Mailbox X="7392.969" Y="-262.9229" Z="5.207484" />
-</Mailboxes>
+	<Mailboxes>
+		<Mailbox X="7392.969" Y="-262.9229" Z="5.207484" />
+	</Mailboxes>
 
-<Vendors>
-	<Vendor Name="Rembar Bellanne" Entry="43419" Type="Food" X="7372.79" Y="-804.068" Z="8.099142" />
-	<Vendor Name="Harlon Thornguard" Entry="4187" Type="Repair" X="7394.35" Y="-264.641" Z="5.079112" />
-	<Vendor Name="Rembar Bellanne" Entry="43419" Type="Repair" X="7372.79" Y="-804.068" Z="8.099142" />
-</Vendors>
+	<Vendors>
+		<Vendor Name="Rembar Bellanne" Entry="43419" Type="Food" X="7372.79" Y="-804.068" Z="8.099142" />
+		<Vendor Name="Harlon Thornguard" Entry="4187" Type="Repair" X="7394.35" Y="-264.641" Z="5.079112" />
+		<Vendor Name="Rembar Bellanne" Entry="43419" Type="Repair" X="7372.79" Y="-804.068" Z="8.099142" />
+	</Vendors>
 
 <!-- Quest Overrides -->
 
@@ -93,18 +93,10 @@
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 	</If>
 	<PickUp QuestName="Threat from the Water" QuestId="13522" GiverName="Ranger Glynda Nal'Shea" GiverId="32971" />
-	<If Condition="!IsObjectiveComplete(4,13518)" >
-		<CustomBehavior File="InteractWith" QuestId="13518" MobId="33094" X="7439.48" Y="106.23" Z="0.28" />
-	</If>
-	<If Condition="!IsObjectiveComplete(2,13518)" >
-		<CustomBehavior File="InteractWith" QuestId="13518" MobId="32911" X="7455.90" Y="164.99" Z="2.73" />
-	</If>
-	<If Condition="!IsObjectiveComplete(1,13518)" >
-		<CustomBehavior File="InteractWith" QuestId="13518" MobId="33093" X="7365.81" Y="134.71" Z="11.68" />
-	</If>
-	<If Condition="!IsObjectiveComplete(3,13518)" >
-		<CustomBehavior File="InteractWith" QuestId="13518" MobId="33095" X="7295.92" Y="242.54" Z="1.76" />
-	</If>
+	<CustomBehavior File="InteractWith" QuestObjectiveIndex="4" QuestId="13518" NumOfTimes="10" MobId="33094" X="7439.48" Y="106.23" Z="0.28" />
+	<CustomBehavior File="InteractWith" QuestObjectiveIndex="2" QuestId="13518" NumOfTimes="10" MobId="32911" X="7455.90" Y="164.99" Z="2.73" />
+	<CustomBehavior File="InteractWith" QuestObjectiveIndex="1" QuestId="13518" NumOfTimes="10" MobId="33093" X="7365.81" Y="134.71" Z="11.68" />
+	<CustomBehavior File="InteractWith" QuestObjectiveIndex="3" QuestId="13518" NumOfTimes="10" MobId="33095" X="7295.92" Y="242.54" Z="1.76" />
 	<Objective QuestName="Threat from the Water" QuestId="13522" Type="KillMob" MobId="32928" KillCount="8" />
 	<TurnIn QuestName="Threat from the Water" QuestId="13522" TurnInName="Ranger Glynda Nal'Shea" TurnInId="32971" />
 	<TurnIn QuestName="The Last Wave of Survivors" QuestId="13518" TurnInName="Dentaria Silverglade" TurnInId="32973" />
@@ -189,30 +181,24 @@
 	<CustomBehavior File="InteractWith" QuestId="13565" MobId="33206" InteractByUsingItemId="45911" NumOfTimes="100" MobState="Dead" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="2000" X="6484.345" Y="-120.1033" Z="1.546069" />
 	<Objective QuestName="Twice Removed" QuestId="13565" Type="KillMob" MobId="33207" KillCount="1" />
 	<If Condition="HasQuest(13566) &amp;&amp; !IsQuestCompleted(13566)" >
-		<While Condition="!IsObjectiveComplete(3,13566)" >
-			<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="13566" MobId="33978" MobState="Alive" Loot="True" CollectionDistance="1000" >
-				<HuntingGrounds>
-					<Hotspot X="6618.021" Y="89.30764" Z="1.211313" />
-					<Hotspot X="6604.552" Y="53.43229" Z="0.8724993" />
-					<Hotspot X="6549.4" Y="28.16332" Z="1.701459" />
-					<Hotspot X="6560.855" Y="-21.37775" Z="1.428758" />
-					<Hotspot X="6567.492" Y="-49.62509" Z="1.239592" />
-					<Hotspot X="6579.448" Y="-82.57281" Z="1.087196" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
-		<While Condition="!IsObjectiveComplete(1, 13566)">
-			<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="13566" MobId="33127" Loot="True" MobState="Alive" NotMoving="True" CollectionDistance="1000" >
-				<HuntingGrounds>
-					<Hotspot X="6503.74" Y="327.0654" Z="10.50174" />
-					<Hotspot X="6536.051" Y="323.7469" Z="8.266435" />
-					<Hotspot X="6623.982" Y="314.6047" Z="14.86099" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
-		<While Condition="!IsObjectiveComplete(2, 13566)">
-			<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="13566" MobId="33313" Loot="True" MobState="Alive" CollectionDistance="1000" X="6462.158" Y="131.7756" Z="9.53888" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestObjectiveIndex="3" MovementBy="NavigatorPreferred" QuestId="13566" NumOfTimes="100" MobId="33978" MobState="Alive" Loot="True" CollectionDistance="1000" >
+			<HuntingGrounds>
+				<Hotspot X="6618.021" Y="89.30764" Z="1.211313" />
+				<Hotspot X="6604.552" Y="53.43229" Z="0.8724993" />
+				<Hotspot X="6549.4" Y="28.16332" Z="1.701459" />
+				<Hotspot X="6560.855" Y="-21.37775" Z="1.428758" />
+				<Hotspot X="6567.492" Y="-49.62509" Z="1.239592" />
+				<Hotspot X="6579.448" Y="-82.57281" Z="1.087196" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		<CustomBehavior File="InteractWith" QuestObjectiveIndex="1" MovementBy="NavigatorPreferred" QuestId="13566" NumOfTimes="100" MobId="33127" Loot="True" MobState="Alive" NotMoving="True" CollectionDistance="1000" >
+			<HuntingGrounds>
+				<Hotspot X="6503.74" Y="327.0654" Z="10.50174" />
+				<Hotspot X="6536.051" Y="323.7469" Z="8.266435" />
+				<Hotspot X="6623.982" Y="314.6047" Z="14.86099" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		<CustomBehavior File="InteractWith" QuestObjectiveIndex="2" MovementBy="NavigatorPreferred" QuestId="13566" NumOfTimes="100" MobId="33313" Loot="True" MobState="Alive" CollectionDistance="1000" X="6462.158" Y="131.7756" Z="9.53888" />
 	</If>
 	<TurnIn QuestName="Unsavory Remedies" QuestId="13598" TurnInName="Keeper Karithus" TurnInId="33048" />
 	<TurnIn QuestName="Ritual Materials" QuestId="13566" TurnInName="Keeper Karithus" TurnInId="33048" />
@@ -374,14 +360,14 @@
 		<CustomBehavior File="InteractWith" MobId="32959" />
 		<If Condition="Me.Class == WoWClass.Hunter" >
 			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(3)" />
-			<CustomBehavior File="RunMacro" Macro="/script CompleteQuest()" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 		<ElseIf Condition="Me.Class == WoWClass.Priest || Me.Class == WoWClass.Mage || Me.Class == WoWClass.Warlock" >
 			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(2)" />
-			<CustomBehavior File="RunMacro" Macro="/script CompleteQuest()" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 		</ElseIf>
 		<Else>
 			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(1)" />
-			<CustomBehavior File="RunMacro" Macro="/script CompleteQuest()" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 		</Else>
 		</If>
 	</If>

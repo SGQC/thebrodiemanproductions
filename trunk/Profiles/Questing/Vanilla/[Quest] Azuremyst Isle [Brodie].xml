@@ -1,0 +1,86 @@
+<HBProfile>
+
+	<Name>Azuremyst Isle ($Rev$)</Name>
+	<MinLevel>5</MinLevel>
+	<MaxLevel>15</MaxLevel>
+
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<TargetElites>False</TargetElites>
+
+	<AvoidMobs>
+	</AvoidMobs>
+
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+		<Mailbox X="-4147.995" Y="-12490.41" Z="44.31753" />
+	</Mailboxes>
+
+	<Vendors>
+		<!-- Azure Watch Vendors -->
+		<Vendor Name="Caregiver Chellan" Entry="16553" Type="Food" X="-4127.806" Y="-12467.68" Z="44.08744" />
+		<Vendor Name="Otonambusi" Entry="18810" Type="Food" X="-4209.451" Y="-12456.21" Z="45.54395" />
+		<Vendor Name="Nabek" Entry="17930" Type="Repair" X="-4235.529" Y="-12518.16" Z="46.20815" />
+		<Vendor Name="Diktynna" Entry="17101" Type="Sell" X="-4266.344" Y="-12985.36" Z="2.272953" />
+		<!-- Kessel's Crossing Vendors -->
+		<Vendor Name="Little Azimi" Entry="21145" Type="Food" X="-2655.952" Y="-12132.31" Z="16.91483" />
+		<!-- Odesyus' Landing Vendors -->
+		<Vendor Name="Blacksmith Calypso" Entry="17245" Type="Repair" X="-4726.288" Y="-12387" Z="11.09189" />
+		<Vendor Name="Logan Daniel" Entry="17489" Type="Food" X="-4720.671" Y="-12381.52" Z="10.99136" />
+		<!-- Blood Watch Vendors -->
+		<Vendor Name="Caregiver Topher Loaal" Entry="17553" Type="Food" X="-2059.199" Y="-11897.04" Z="45.65863" />
+		<Vendor Name="Beega" Entry="17667" Type="Repair" X="-1990.958" Y="-11814.47" Z="54.50079" />
+	</Vendors>
+
+<!-- Quest Overrides -->
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Azuremyst Isle Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<CustomBehavior File="Message" Text="Compiling Azure Watch Quests" LogColor="CornflowerBlue" />
+	
+	<If Condition="!HasQuest(9603) &amp;&amp; !IsQuestCompleted(9603)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+	
+<!-- Beds, Bandages, and Beyond/Medicinal Purpose/The Great Moongraze Hunt -->
+	<If Condition="!HasQuest(9603) &amp;&amp; !IsQuestCompleted(9603)" >
+		<PickUp QuestName="Beds, Bandages, and Beyond" QuestId="9603" GiverName="Caregiver Chellan" GiverId="16553" />
+		<CustomBehavior File="SetHearthstone" MobId="16553" X="-4127.80" Y="-12467.71" Z="44.09" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
+	<PickUp QuestName="Medicinal Purpose" QuestId="9463" GiverName="Anchorite Fateema" GiverId="17214" />
+	<PickUp QuestName="The Great Moongraze Hunt" QuestId="9454" GiverName="Aceton" GiverId="17110" />
+	<TurnIn QuestName="Beds, Bandages, and Beyond" QuestId="9603" TurnInName="Zaldaan" TurnInId="43991" />
+	<Objective QuestName="Medicinal Purpose" QuestId="9463" Type="CollectItem" ItemId="23685" CollectCount="8" />
+	<Objective QuestName="The Great Moongraze Hunt" QuestId="9454" Type="CollectItem" ItemId="23676" CollectCount="6" />
+	<TurnIn QuestName="Medicinal Purpose" QuestId="9463" TurnInName="Anchorite Fateema" TurnInId="17214" />
+	<TurnIn QuestName="The Great Moongraze Hunt" QuestId="9454" TurnInName="Aceton" TurnInId="17110" />
+	
+	<CustomBehavior File="Message" Text="Azuremyst Isle Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>
