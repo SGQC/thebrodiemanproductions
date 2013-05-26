@@ -2,6 +2,10 @@ Patch Notes
 
 5/26/13
 
+r293
+The Leveling Grind
+-- Azuremyst Isle Update (30/64 complete)
+
 r292
 The Leveling Grind
 -- DK Starting area - WaitTimer reduction after learning Death Gate
