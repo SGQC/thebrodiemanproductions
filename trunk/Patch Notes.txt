@@ -1,5 +1,12 @@
 Patch Notes
 
+5/26/13
+
+r292
+The Leveling Grind
+-- DK Starting area - WaitTimer reduction after learning Death Gate
+-- DK Starting area - Removed "go to outlands" code - Plans to wait til 60.
+
 5/25/13
 
 r291
