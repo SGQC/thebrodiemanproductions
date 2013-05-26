@@ -48,6 +48,42 @@
 	</Vendors>
 
 <!-- Quest Overrides -->
+
+<Quest Name="The Great Moongraze Hunt" Id="10324" >
+	<Objective Type="CollectItem" ItemId="23677" CollectCount="6" >
+		<CollectFrom>
+			<Mob Name="Moongraze Buck" Id="17201" />
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-3960.199" Y="-12481.24" Z="23.90249" />
+			<Hotspot X="-3867.713" Y="-12526.81" Z="30.90292" />
+			<Hotspot X="-3790.804" Y="-12555.41" Z="4.21815" />
+			<Hotspot X="-3747.935" Y="-12629.58" Z="2.098173" />
+			<Hotspot X="-3663.553" Y="-12624.51" Z="9.7646" />
+			<Hotspot X="-3640.558" Y="-12533.86" Z="14.48265" />
+			<Hotspot X="-3696.2" Y="-12428.05" Z="-0.1226244" />
+			<Hotspot X="-3755.246" Y="-12358.4" Z="1.30382" />
+			<Hotspot X="-3783.795" Y="-12270.26" Z="4.948995" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Name="Nightstalker Clean Up, Isle 2..." Id="9456" >
+	<Objective Type="KillMob" MobId="17202" KillCount="8" >
+		<Hotspots>
+			<Hotspot X="-3960.199" Y="-12481.24" Z="23.90249" />
+			<Hotspot X="-3867.713" Y="-12526.81" Z="30.90292" />
+			<Hotspot X="-3790.804" Y="-12555.41" Z="4.21815" />
+			<Hotspot X="-3747.935" Y="-12629.58" Z="2.098173" />
+			<Hotspot X="-3663.553" Y="-12624.51" Z="9.7646" />
+			<Hotspot X="-3640.558" Y="-12533.86" Z="14.48265" />
+			<Hotspot X="-3696.2" Y="-12428.05" Z="-0.1226244" />
+			<Hotspot X="-3755.246" Y="-12358.4" Z="1.30382" />
+			<Hotspot X="-3783.795" Y="-12270.26" Z="4.948995" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -78,6 +114,44 @@
 	<Objective QuestName="The Great Moongraze Hunt" QuestId="9454" Type="CollectItem" ItemId="23676" CollectCount="6" />
 	<TurnIn QuestName="Medicinal Purpose" QuestId="9463" TurnInName="Anchorite Fateema" TurnInId="17214" />
 	<TurnIn QuestName="The Great Moongraze Hunt" QuestId="9454" TurnInName="Aceton" TurnInId="17110" />
+	
+<!-- The Great Moongraze Hunt/An Alternate Alternative/Strange Findings -->
+	<PickUp QuestName="The Great Moongraze Hunt" QuestId="10324" GiverName="Aceton" GiverId="17110" />
+	<PickUp QuestName="An Alternate Alternative" QuestId="9473" GiverName="Daedal" GiverId="17215" />
+	<Objective QuestName="The Great Moongraze Hunt" QuestId="10324" Type="CollectItem" ItemId="23677" CollectCount="6" />
+	<Objective QuestName="An Alternate Alternative" QuestId="9473" Type="CollectItem" ItemId="23692" CollectCount="6" />
+	<If Condition="!HasItem(23678) &amp;&amp; (!HasQuest(9455) &amp;&amp; !IsQuestCompleted(9455))" >
+		<CustomBehavior File="CollectThings" MobId="17202" CollectItemId="23678" MobState="Alive" HuntingGroundRadius="200" >
+			<Hotspot X="-3960.199" Y="-12481.24" Z="23.90249" />
+			<Hotspot X="-3867.713" Y="-12526.81" Z="30.90292" />
+			<Hotspot X="-3790.804" Y="-12555.41" Z="4.21815" />
+			<Hotspot X="-3747.935" Y="-12629.58" Z="2.098173" />
+			<Hotspot X="-3663.553" Y="-12624.51" Z="9.7646" />
+			<Hotspot X="-3640.558" Y="-12533.86" Z="14.48265" />
+			<Hotspot X="-3696.2" Y="-12428.05" Z="-0.1226244" />
+			<Hotspot X="-3755.246" Y="-12358.4" Z="1.30382" />
+			<Hotspot X="-3783.795" Y="-12270.26" Z="4.948995" />
+		</CustomBehavior>
+	</If>
+	<If Condition="HasItem(23678) &amp;&amp; (!HasQuest(9455) &amp;&amp; !IsQuestCompleted(9455))" >
+		<PickUp QuestName="Strange Findings" QuestId="9455" GiverType="Item" GiverId="23678" />
+	</If>
+	<TurnIn QuestName="The Great Moongraze Hunt" QuestId="10324" TurnInName="Aceton" TurnInId="17110" />
+	<TurnIn QuestName="An Alternate Alternative" QuestId="9473" TurnInName="Daedal" TurnInId="17215" />
+	<TurnIn QuestName="Strange Findings" QuestId="9455" TurnInName="Exarch Menelaous" TurnInId="17116" />
+	
+<!-- Nightstalker Clean Up, Isle 2.../The Prophecy of Velen -->
+	<PickUp QuestName="Nightstalker Clean Up, Isle 2..." QuestId="9456" GiverName="Exarch Menelaous" GiverId="17116" />
+	<PickUp QuestName="The Prophecy of Velen" QuestId="9505" GiverName="Daedal" GiverId="17215" />
+	<Objective QuestName="Nightstalker Clean Up, Isle 2..." QuestId="9456" Type="KillMob" MobId="17202" KillCount="8" />
+	<TurnIn QuestName="Nightstalker Clean Up, Isle 2..." QuestId="9456" TurnInName="Exarch Menelaous" TurnInId="17116" />
+	<TurnIn QuestName="The Prophecy of Velen" QuestId="9505" TurnInName="Admiral Odesyus" TurnInId="17240" />
+	
+	<CustomBehavior File="Message" Text="Compiling Odesyus' Landing Quests" LogColor="CornflowerBlue" />
+	
+<!-- A Small Start -->
+	<PickUp QuestName="A Small Start" QuestId="9506" GiverName="Admiral Odesyus" GiverId="17240" />
+	<PickUp QuestName="Cookie's Jumbo Gumbo" QuestId="9512" GiverName="Cookie McWeaksauce" GiverId="17246" />
 	
 	<CustomBehavior File="Message" Text="Azuremyst Isle Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
