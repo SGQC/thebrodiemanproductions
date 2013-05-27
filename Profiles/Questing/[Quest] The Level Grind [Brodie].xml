@@ -72,6 +72,9 @@
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
 		</If>
 		<If Condition="Me.Race == WoWRace.Draenei" >
+			<If Condition="Me.LevelFraction &gt;= 10" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Bloodmyst Isle [Brodie]" />
+			</If>
 			<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; (!HasQuest(9313) &amp;&amp; IsQuestCompleted(9313)) &amp;&amp; (!HasQuest(9314) &amp;&amp; IsQuestCompleted(9314))" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Azuremyst Isle [Brodie]" />
 			</If>

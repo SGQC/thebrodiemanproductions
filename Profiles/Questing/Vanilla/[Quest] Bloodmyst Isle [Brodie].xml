@@ -1,0 +1,78 @@
+<HBProfile>
+
+	<Name>Bloodmyst Isle ($Rev$)</Name>
+	<MinLevel>10</MinLevel>
+	<MaxLevel>25</MaxLevel>
+
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<TargetElites>False</TargetElites>
+
+	<AvoidMobs>
+	</AvoidMobs>
+
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+
+	<Vendors>
+		<!-- Azure Watch Vendors -->
+		<Vendor Name="Caregiver Chellan" Entry="16553" Type="Food" X="-4127.806" Y="-12467.68" Z="44.08744" />
+		<Vendor Name="Otonambusi" Entry="18810" Type="Food" X="-4209.451" Y="-12456.21" Z="45.54395" />
+		<Vendor Name="Nabek" Entry="17930" Type="Repair" X="-4235.529" Y="-12518.16" Z="46.20815" />
+		<Vendor Name="Diktynna" Entry="17101" Type="Sell" X="-4266.344" Y="-12985.36" Z="2.272953" />
+		<!-- Kessel's Crossing Vendors -->
+		<Vendor Name="Little Azimi" Entry="21145" Type="Food" X="-2655.952" Y="-12132.31" Z="16.91483" />
+		<!-- Blood Watch Vendors -->
+		<Vendor Name="Caregiver Topher Loaal" Entry="17553" Type="Food" X="-2059.199" Y="-11897.04" Z="45.65863" />
+		<Vendor Name="Beega" Entry="17667" Type="Repair" X="-1990.958" Y="-11814.47" Z="54.50079" />
+	</Vendors>
+
+<!-- Quest Overrides -->
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Bloodmyst Isle Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<If Condition="!HasQuest(9623) &amp;&amp; !IsQuestCompleted(9623)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Kicker Quests" LogColor="CornflowerBlue" />
+	
+<!-- Coming of Age -->
+	<PickUp QuestName="Coming of Age" QuestId="9623" GiverName="Exarch Menelaous" GiverId="17116" />
+	<TurnIn QuestName="Coming of Age" QuestId="9623" TurnInName="Torallius the Pack Handler" TurnInId="17584" />
+	
+<!-- Elekks are Serious Business -->
+	<PickUp QuestName="Elekks are Serious Business" QuestId="9625" GiverName="Torallius the Pack Handler" GiverId="17584" />
+	<TurnIn QuestName="Elekks are Serious Business" QuestId="9625" TurnInName="Vorkhan the Elekk Herder" TurnInId="17586" />
+	
+	<CustomBehavior File="Message" Text="Compiling Kessel's Crossing Quests" LogColor="CornflowerBlue" />
+
+	<CustomBehavior File="Message" Text="Bloodmyst Isle Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>
