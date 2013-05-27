@@ -2,9 +2,18 @@ Patch Notes
 
 5/26/13
 
+r294
+The Leveling Grind
+-- Azuremyst Isle complete
+-- Added Bloodmyst Isle (1/68 complete)
+-- The Level Grind updated to support Bloodmyst Isle
+Quest Behaviors
+-- Added Azuremyst Isle QBs
+
+
 r293
 The Leveling Grind
--- Azuremyst Isle Update (30/64 complete)
+-- Azuremyst Isle Update (30/64 complete, counting starter)
 
 r292
 The Leveling Grind
