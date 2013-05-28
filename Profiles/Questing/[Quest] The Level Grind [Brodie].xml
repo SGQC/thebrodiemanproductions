@@ -16,7 +16,7 @@
 	</If>
 	
 	<If Condition="Me.IsHorde" >
-		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp IsQuestCompleted(31014)" >
+		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; IsQuestCompleted(31014)" >
 			<If Condition="Me.LevelFraction &gt;= 10" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
 			</If>
