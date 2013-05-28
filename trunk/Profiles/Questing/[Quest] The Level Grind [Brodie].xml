@@ -38,7 +38,7 @@
 	</If>
 
 	<If Condition="Me.IsAlliance" >
-		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp IsQuestCompleted(30989)" >
+		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; IsQuestCompleted(30989)" >
 			<If Condition="Me.LevelFraction &gt;= 10" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Westfall [Brodie]" />
 			</If>
@@ -98,7 +98,7 @@
 		</If>
 	</If>
 	
-	<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp (!IsQuestCompleted(31014) &amp;&amp; !IsQuestCompleted(30989))" >
+	<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; (!IsQuestCompleted(31014) &amp;&amp; !IsQuestCompleted(30989))" >
 		<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Panda Start [Brodie]" />
 	</If>
 	
