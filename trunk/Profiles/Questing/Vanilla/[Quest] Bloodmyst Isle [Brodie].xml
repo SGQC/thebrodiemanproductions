@@ -25,9 +25,13 @@
 	</AvoidMobs>
 
 	<Blackspots>
+		<Blackspot X="-3404.97" Y="-12333.91" Z="15.11601" Radius="4.970026" />
+		<Blackspot X="-3451.653" Y="-12410.89" Z="16.14512" Radius="4.680147" />
+		<Blackspot X="-4684.104" Y="-12402.54" Z="12.10968" Radius="2.91243" />
 	</Blackspots>
 
 	<Mailboxes>
+		<Mailbox X="-2046.007" Y="-11876.22" Z="46.57349" />
 	</Mailboxes>
 
 	<Vendors>
@@ -44,6 +48,32 @@
 	</Vendors>
 
 <!-- Quest Overrides -->
+
+<Quest Id="9624" Name="A Favorite Treat" >
+	<Objective Type="CollectItem" ItemId="23927" CollectCount="10" >
+		<CollectFrom>
+			<GameObject Name="Sand Pear" Id="181854" />
+		</CollectFrom>
+		<Hotspot>
+			<Hotspot X="-2678.879" Y="-12088.67" Z="15.28882" />
+			<Hotspot X="-2710.673" Y="-12013.38" Z="12.38915" />
+			<Hotspot X="-2636.637" Y="-11990.19" Z="18.37545" />
+			<Hotspot X="-2591.244" Y="-12080.38" Z="29.77973" />
+		</Hotspot>
+	</Objective>
+</Quest>
+
+<Quest Id="9634" Name="Alien Predators" >
+	<Objective Type="KillMob" MobId="17525" KillCount="10" >
+		<Hotspot>
+			<Hotspot X="-2678.879" Y="-12088.67" Z="15.28882" />
+			<Hotspot X="-2710.673" Y="-12013.38" Z="12.38915" />
+			<Hotspot X="-2636.637" Y="-11990.19" Z="18.37545" />
+			<Hotspot X="-2591.244" Y="-12080.38" Z="29.77973" />
+		</Hotspot>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -67,9 +97,51 @@
 	
 <!-- Elekks are Serious Business -->
 	<PickUp QuestName="Elekks are Serious Business" QuestId="9625" GiverName="Torallius the Pack Handler" GiverId="17584" />
-	<TurnIn QuestName="Elekks are Serious Business" QuestId="9625" TurnInName="Vorkhan the Elekk Herder" TurnInId="17586" />
+	<If Condition="HasQuest(9625)" >
+		<TurnIn QuestName="Elekks are Serious Business" QuestId="9625" TurnInName="Vorkhan the Elekk Herder" TurnInId="17586" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Kessel's Crossing Quests" LogColor="CornflowerBlue" />
+	
+<!-- The Kessel Run -->
+	<PickUp QuestName="The Kessel Run" QuestId="9663" GiverName="Kessel" GiverId="17649" />
+	<CustomBehavior File="UserSettings" QuestId="9663" UseFlightPaths="False" PullDistance="0" />
+	<CustomBehavior File="InteractWith" QuestId="9663" QuestObjectiveIndex="1" MobId="17440" ProactiveCombatStrategy="NoClear" X="-3357.455" Y="-12397.28" Z="25.19392" />
+	<CustomBehavior File="InteractWith" QuestId="9663" QuestObjectiveIndex="2" MobId="17116" ProactiveCombatStrategy="NoClear" X="-4167.066" Y="-12422.21" Z="42.36566" />
+	<CustomBehavior File="InteractWith" QuestId="9663" QuestObjectiveIndex="3" MobId="17240" ProactiveCombatStrategy="NoClear" X="-4700.432" Y="-12413.37" Z="11.61146" />
+	<If Condition="HasQuest(9663)" >
+		<CustomBehavior File="NoCombatMoveTo" X="-2664.555" Y="-12135.26" Z="16.8898" />
+		<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	</If>
+	<TurnIn QuestName="The Kessel Run" QuestId="9663" TurnInName="Kessel" TurnInId="17649" />
+	
+<!-- A Favorite Treat/Alien Predators/Saving Princess Stillpine/Declaration of Power -->
+	<PickUp QuestName="Declaration of Power" QuestId="9666" GiverName="Kessel" GiverId="17649" />
+	<PickUp QuestName="Alien Predators" QuestId="9634" GiverName="Vorkhan the Elekk Herder" GiverId="17586" />
+	<PickUp QuestName="A Favorite Treat" QuestId="9624" GiverName="Aonar" GiverId="17599" />
+	<Objective QuestName="A Favorite Treat" QuestId="9624" Type="CollectItem" ItemId="23927" CollectCount="10" />
+	<Objective QuestName="Alien Predators" QuestId="9634" Type="KillMob" MobId="17525" KillCount="10" />
+	<TurnIn QuestName="Alien Predators" QuestId="9634" TurnInName="Vorkhan the Elekk Herder" TurnInId="17586" />
+	<TurnIn QuestName="A Favorite Treat" QuestId="9624" TurnInName="Aonar" TurnInId="17599" />
+	<CustomBehavior File="InteractWith" QuestId="9666" QuestObjectiveIndex="2" MobId="17701" InteractByUsingItemId="24084" MobState="Dead" 
+		X="-2230.15" Y="-12321.19" Z="57.30" />
+	<If Condition="IsQuestCompleted(9544)" >
+		<PickUp QuestName="Saving Princess Stillpine" QuestId="9667" GiverName="Princess Stillpine" GiverId="17682" />
+		<CustomBehavior File="CollectThings" QuestId="9667" CollectItemId="24099" CollectItemCount="1" MobState="Alive"
+			MobId="17702" MobId2="17321" MobId3="17320"
+			HuntingGroundRadius="100" X="-2426.52" Y="-12169.85" Z="32.64" />
+		<CustomBehavior File="InteractWith" QuestId="9667" MobId="181928" X="-2519.77" Y="-12301.85" Z="14.15" />
+	</If>
+	<TurnIn QuestName="Declaration of Power" QuestId="9666" TurnInName="Kessel" TurnInId="17649" />
+	
+<!-- Report to Exarch Admetius -->
+	<PickUp QuestName="Report to Exarch Admetius" QuestId="9668" GiverName="Kessel" GiverId="17649" />
+	<If Condition="HasQuest(9668)" >
+		<CustomBehavior File="SetHearthstone" MobId="17553" X="-2059.20" Y="-11897.04" Z="45.66" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<TurnIn QuestName="Report to Exarch Admetius" QuestId="9668" TurnInName="Exarch Admetius" TurnInId="17658" />
+	</If>
 
 	<CustomBehavior File="Message" Text="Bloodmyst Isle Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
