@@ -2,6 +2,10 @@ Patch Notes
 
 5/27/13
 
+r296
+The Leveling Grind
+-- Missing ; on Pandaren addition
+
 r295
 The Leveling Grind
 -- Added Pandaren Starter
