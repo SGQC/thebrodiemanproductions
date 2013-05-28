@@ -16,6 +16,11 @@
 	</If>
 	
 	<If Condition="Me.IsHorde" >
+		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp IsQuestCompleted(31014)" >
+			<If Condition="Me.LevelFraction &gt;= 10" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
+			</If>
+		</If>
 		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll">
 			<If Condition="Me.Race == WoWRace.Orc &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25133)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
@@ -33,6 +38,11 @@
 	</If>
 
 	<If Condition="Me.IsAlliance" >
+		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp IsQuestCompleted(30989)" >
+			<If Condition="Me.LevelFraction &gt;= 10" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Westfall [Brodie]" />
+			</If>
+		</If>
 		<If Condition="Me.Race == WoWRace.Dwarf || Me.Race == WoWRace.Gnome">
 			<If Condition="Me.LevelFraction &gt;= 20" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Wetlands [Brodie]" />
@@ -86,6 +96,10 @@
 			</If>
 			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
 		</If>
+	</If>
+	
+	<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp (!IsQuestCompleted(31014) &amp;&amp; !IsQuestCompleted(30989))" >
+		<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Panda Start [Brodie]" />
 	</If>
 	
 </QuestOrder>

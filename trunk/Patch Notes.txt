@@ -1,5 +1,12 @@
 Patch Notes
 
+5/27/13
+
+r295
+The Leveling Grind
+-- Added Pandaren Starter
+-- The Level Grind updated for Neutral, Alliance, Horde Pandas
+
 5/26/13
 
 r294

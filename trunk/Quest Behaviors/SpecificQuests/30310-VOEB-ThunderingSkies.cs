@@ -116,7 +116,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.ThunderingSkies
 			return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(
 			DoneYet,
 
-			new DecoratorContinue(ret => !IsObjectiveComplete(1, (uint)QuestId),
+			new Decorator(ret => !IsObjectiveComplete(1, (uint)QuestId),
 				new Sequence(  
 					new DecoratorContinue(ret => Serpent[0].Location.Distance(Me.Location) > 30,
 						new Sequence(
