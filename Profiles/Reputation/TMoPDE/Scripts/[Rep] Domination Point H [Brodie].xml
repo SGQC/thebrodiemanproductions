@@ -46,6 +46,7 @@
 
 	<If Condition="!IsQuestCompleted(32249) &amp;&amp; !HasQuest(32249)" >
 		<CustomBehavior File="FlyTo" X="1613.74" Y="921.02" Z="471.15" />
+		<PickUp QuestName="Meet the Scout" QuestId="32249" GiverName="Sunwalker Dezco" GiverId="64566" X="1563.299" Y="936.2483" Z="473.6003" />
 	</If>
 
 	<If Condition="HasQuest(32249)" >
@@ -58,7 +59,7 @@
 
 	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" />
 
-	<If Condition="!IsQuestCompleted(32250) &amp;&amp; !HasQuest(32250)" >
+	<If Condition="!IsQuestCompleted(32250) &amp;&amp; !HasQuest(32250) &amp;&amp; !HasQuest(32249) &amp;&amp; IsQuestCompleted(32249) " >
 		<CustomBehavior File="FlyTo" X="-2124.40" Y="2543.98" Z="3.81" />
 		<PickUp QuestName="The Might of the Warchief" QuestId="32250" GiverName="Garrosh Hellscream" GiverId="67867" />
 	</If>

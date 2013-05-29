@@ -2,6 +2,10 @@ Patch Notes
 
 5/29/13
 
+r300
+Dominance Offensive
+-- Added initial quest giver, post 5.3
+
 r299
 Quest Behaviors
 -- Core Update
