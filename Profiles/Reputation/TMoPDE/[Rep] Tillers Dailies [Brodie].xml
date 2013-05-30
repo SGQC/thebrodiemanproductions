@@ -800,6 +800,16 @@
 		</While>
 		<CustomBehavior File="UserSettings" UseMount="True" />
 	</If>
+	
+<!-- Lost Sheepie -->
+	<If Condition="HasQuest(31338) &amp;&amp; !IsQuestCompleted(31338)">
+		<CustomBehavior File="Message" Text="Starting Lost Sheepie" LogColor="Green"  />
+		<CustomBehavior File="UserSettings" QuestId="31338" LootMobs="True" PullDistance="5" />
+		<CustomBehavior File="FlyTo" X="86.18186" Y="1307.803" Z="218.9255" />
+		<CustomBehavior File="InteractWith" QuestId="31338" MobId="64385" NumOfTimes="100"
+			PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
+			X="86.18186" Y="1307.803" Z="218.9255" />
+	</If>
 
 <!-- A Gift for Old Hillpaw -->
  	<If Condition="HasQuest(30476) &amp;&amp; !IsQuestCompleted(30476)">
@@ -1181,6 +1191,14 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="31320" MobId="64319" InteractByBuyingItemId="81407" BuyItemCount="1" />
 	</If>
+	
+<!-- Buy a Fish a Round? -->
+	<If Condition="HasQuest(31321) &amp;&amp; !IsQuestCompleted(31321)" >
+		<CustomBehavior File="Message" Text="Starting Buy a Fish a Round" LogColor="Green" />
+		<CustomBehavior File="FlyTo" X="-216.7406" Y="503.1344" Z="190.8141" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" QuestId="31320" MobId="64319" InteractByBuyingItemId="81415" BuyItemCount="5" />
+	</If>
 
 <!-- Quest Turn ins -->
 
@@ -1213,6 +1231,8 @@
 			(HasQuest(30473) &amp;&amp; IsQuestCompleted(30473)) ||
 			(HasQuest(30479) &amp;&amp; IsQuestCompleted(30479)) ||
 			(HasQuest(30478) &amp;&amp; IsQuestCompleted(30478)) ||
+			(HasQuest(31321) &amp;&amp; IsQuestCompleted(31321)) ||
+			(HasQuest(31338) &amp;&amp; IsQuestCompleted(31338)) ||
 			(HasQuest(30321) &amp;&amp; IsQuestCompleted(30321)))" > 
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Halfhill." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
@@ -1239,8 +1259,13 @@
 	</If>
 
 <!-- Not in Chee Chee's Backyard -->
-  	<If Condition="(HasQuest(30324) &amp;&amp; IsObjectiveComplete(1,30324))" >
+  	<If Condition="(HasQuest(30324) &amp;&amp; IsQuestCompleted(30324))" >
 		<TurnIn QuestName="Not in Chee Chee's Backyard" QuestId="30324" TurnInName="Chee Chee" TurnInId="58709" />
+	</If>
+	
+<!-- Lost Sheepie -->
+  	<If Condition="(HasQuest(31338) &amp;&amp; IsQuestCompleted(31338))" >
+		<TurnIn QuestName="Lost Sheepie" QuestId="31338" TurnInName="Chee Chee" TurnInId="58709" />
 	</If>
 
 <!-- A Gift for Ella -->
@@ -1306,6 +1331,11 @@
 <!-- Buy a Fish a Drink? -->
 	<If Condition="(HasQuest(31320) &amp;&amp; IsQuestCompleted(31320))" >
 		<TurnIn QuestName="Buy a Fish a Drink?" QuestId="31320" TurnInName="Jogu the Drunk" TurnInId="58710" />
+	</If>
+	
+<!-- Buy a Fish a Round? -->
+	<If Condition="(HasQuest(31321) &amp;&amp; IsQuestCompleted(31321))" >
+		<TurnIn QuestName="Buy a Fish a Round?" QuestId="31321" TurnInName="Jogu the Drunk" TurnInId="58710" />
 	</If>
 
 <!-- A Gift for Old Hillpaw -->

@@ -961,7 +961,9 @@
 			</While>
 			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 			<While Condition="!IsQuestCompleted(30148) &amp;&amp; HasItem(72985)" >
-				<CustomBehavior File="InteractWith" QuestId="30148" MobId="58416" InteractByUsingItemId="72985" AuraIdMissingFromMob="11196" CollectionDistance="1000" MobHpPercentLeft="25" X="2189.36" Y="-3036.21" Z="18.85" />
+				<CustomBehavior File="InteractWith" QuestId="30148" MobId="58416" InteractByUsingItemId="72985"
+					AuraIdMissingFromMob="11196" CollectionDistance="1000" MobHpPercentLeft="25" 
+					ProactiveCombatStrategy="ClearMobsTargetingUs" X="2189.36" Y="-3036.21" Z="18.85" />
 			</While>
 		</While>
 	</If>
@@ -1086,6 +1088,8 @@
 		(HasQuest(30149) &amp;&amp; IsQuestCompleted(30149)) ||
 		(HasQuest(30146) &amp;&amp; IsQuestCompleted(30146)) ||
 		(HasQuest(31709) &amp;&amp; IsQuestCompleted(31709)) ||
+		(HasQuest(30144) &amp;&amp; IsQuestCompleted(30144)) ||
+		(HasQuest(30143) &amp;&amp; IsQuestCompleted(30143)) ||
 		(HasQuest(30158) &amp;&amp; IsQuestCompleted(30158))" >
 		<CustomBehavior File="Message" Text="Quests Completed. Returning to Arboretum." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Arboretum" X="1560.782" Y="-2556.237" Z="151.2554" />
@@ -1211,7 +1215,44 @@
 <!-- The Seed of Doubt -->
 	<If Condition="(HasQuest(31711) &amp;&amp; IsQuestCompleted(31711))" >
 		<TurnIn QuestName="The Seed of Doubt" QuestId="31711" TurnInName="Elder Anli" TurnInId="58564" />
+	</If>	
+<!-- They Grow Like Weeds -->	
+	<If Condition="!HasQuest(30143) &amp;&amp; !IsQuestCompleted(30143) &amp;&amp; (Me.GetReputationLevelWith(1271) &gt; WoWUnitReaction.Revered)" >
+		<CustomBehavior File="FlyTo" DestName="Instructor Windblade" X="1620.606" Y="-2641.016" Z="149.9121" />
+		<PickUp QuestName="They Grow Like Weeds" QuestId="30143" GiverName="Elder Anli" GiverId="58564" />
+	</If>		
+	
+	<If Condition="HasQuest(30143) &amp;&amp; !IsQuestCompleted(30143)" >	
+		<CustomBehavior File="InteractWith" QuestId="30143" MobId="58420" InteractByGossipOptions="1" X="1620.606" Y="-2641.016" Z="149.9121" />
+		<CustomBehavior File="WaitTimer" WaitTime="60000" />
 	</If>
+		
+	<If Condition="HasQuest(30143) &amp;&amp; IsQuestCompleted(30143)" >
+		<CustomBehavior File="FlyTo" DestName="Instructor Windblade" X="1620.606" Y="-2641.016" Z="149.9121" />
+		<TurnIn QuestName="They Grow Like Weeds" QuestId="30143" TurnInName="Instructor Windblade" TurnInId="58420" />
+	</If>
+	
+<!-- Flight Training: Ring Round-Up -->
+	<If Condition="!HasQuest(30144) &amp;&amp; !IsQuestCompleted(30144) &amp;&amp; !HasQuest(30143) &amp;&amp; IsQuestCompleted(30143)" >
+		<CustomBehavior File="FlyTo" DestName="Instructor Windblade" X="1620.606" Y="-2641.016" Z="149.9121" />
+		<PickUp QuestName="Flight Training: Ring Round-Up" QuestId="30144" GiverName="Instructor Windblade" GiverId="58420" X="1620.606" Y="-2641.016" Z="149.9121" />
+	</If>
+	<While Condition="HasQuest(30144) &amp;&amp; !IsQuestCompleted(30144)" >
+		<If Condition="!Me.HasAura(105080)" >
+			<CustomBehavior File="InteractWith" QuestId="30144" MobId="58420" InteractByGossipOptions="1" X="1620.606" Y="-2641.016" Z="149.9121" />
+			<CustomBehavior File="WaitTimer" WaitTime="10000" />
+			<CustomBehavior File="InteractWith" QuestId="30144" MobId="58428" X="1627.559" Y="-2638.84" Z="149.9324" />
+		</If>
+		<If Condition="Me.HasAura(105080)" >
+			<CustomBehavior File="InteractWith" QuestId="30144" MobId1="58425" MobId2="58426" X="1739.285" Y="-2778.723" Z="164.9681" />
+		</If>
+	</While>
+	
+	<If Condition="HasQuest(30144) &amp;&amp; IsQuestCompleted(30144)" >
+		<CustomBehavior File="FlyTo" DestName="Instructor Windblade" X="1620.606" Y="-2641.016" Z="149.9121" />
+		<TurnIn QuestName="Flight Training: Ring Round-Up" QuestId="30144" TurnInName="Instructor Windblade" TurnInId="58420" X="1620.606" Y="-2641.016" Z="149.9121" />
+	</If>
+
 <!-- Tiny Treats -->
 	<If Condition="HasQuest(31710) &amp;&amp; IsQuestCompleted(31710)" >
 		<!--[Exalted Grown-Up][Blue] Azure Hatchling Turnin -->

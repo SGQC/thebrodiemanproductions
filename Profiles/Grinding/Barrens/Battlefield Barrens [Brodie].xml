@@ -26,6 +26,9 @@
 	</AvoidMobs>
 
 	<Blackspots>
+		<Blackspot X="540.7553" Y="-3102.529" Z="91.66666" Radius="2" />
+		<Blackspot X="538.91" Y="-3099.22" Z="91.66666" Radius="2" />
+		<Blackspot X="1089.939" Y="-1587.265" Z="255.882" Radius="2" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -50,7 +53,7 @@
 		<CustomBehavior File="FlyTo" X="470.02" Y="-3157.72" Z="94.76" />
 		<While Condition="GetItemCount(97544) &lt; 150" >
 			<CustomBehavior File="InteractWith" MobId="220359" MobId2="71000" MobId3="71002" MobId4="71006"
-				MobId5="219865"
+				MobId5="219865" MobId6="71141" IgnoreMobsInBlackspots="True"
 				PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" 
 				CollectionDistance="500" MobState="Alive" >
 				<HuntingGrounds>
@@ -71,7 +74,7 @@
 		<CustomBehavior File="FlyTo" X="981.5618" Y="-1619.32" Z="244.1615" />
 		<While Condition="GetItemCount(97530) &lt; 150" >
 			<CustomBehavior File="InteractWith" MobId="220361" MobId2="70997" MobId3="70999" MobId4="70998"
-				MobId5="71001" MobId6="219863"
+				MobId5="71001" MobId6="219863" MobId7="71141" IgnoreMobsInBlackspots="True"
 				PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" 
 				CollectionDistance="500" MobState="Alive" >
 				<HuntingGrounds>
@@ -93,7 +96,7 @@
 		<CustomBehavior File="FlyTo" X="-132.9509" Y="-2249.592" Z="91.6678" />
 		<While Condition="GetItemCount(97545) &lt; 150" >
 			<CustomBehavior File="InteractWith" MobId="219866" MobId2="71012" MobId3="71010" MobId4="71011"
-				MobId5="71116" MobId6="71130" MobId7="220198" MobId8="220353"
+				MobId5="71116" MobId6="71130" MobId7="220198" MobId8="220353" MobId9="71141"
 				PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
 				CollectionDistance="500" MobState="Alive" >
 				<HuntingGrounds>
@@ -113,7 +116,7 @@
 	<If Condition="GetItemCount(97543) &lt; 150" >
 		<CustomBehavior File="FlyTo" X="-690.1099" Y="-3041.21" Z="96.58797" />
 		<While Condition="GetItemCount(97543) &lt; 150" >
-			<CustomBehavior File="InteractWith" MobId="219864" MobId2="71007" MobId3="71009" MobId4="71188" MobId5="71187"
+			<CustomBehavior File="InteractWith" MobId="219864" MobId2="71007" MobId3="71009" MobId4="71188" MobId5="71187" MobId6="71141"
 				PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
 				CollectionDistance="500" MobState="Alive" >
 				<HuntingGrounds>
