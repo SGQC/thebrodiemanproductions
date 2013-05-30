@@ -156,51 +156,45 @@
 	</If>
 	
 <!-- Tactical Mana Bombs -->
-		<If Condition="HasQuest(32628) &amp;&amp; !IsQuestCompleted(32628)">
+	<If Condition="HasQuest(32628) &amp;&amp; !IsQuestCompleted(32628)">
 		<CustomBehavior File="Message" Text="Starting Tactical Mana Bombs" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32628" LootMobs="True" PullDistance="1" />
-		<RunTo X="7096.895" Y="6154.984" Z="-1.53" />
-		<CustomBehavior File="InteractWith" QuestId="32628" QuestObjectiveIndex="2" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69604" Range="6" WaitForNpcs="False" WaitTime="1000" />
-		<RunTo X="7279.555" Y="5946.754" Z="0.1" />
-		<CustomBehavior File="InteractWith" QuestId="32628" QuestObjectiveIndex="1" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69560" WaitForNpcs="False" WaitTime="1000" />
-		<RunTo X="7019.625" Y="5939.215" Z="29.08454" />
-		<CustomBehavior File="InteractWith" QuestId="32628" QuestObjectiveIndex="3" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69607" WaitForNpcs="False" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" QuestId="32628" QuestObjectiveIndex="2" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69604" Range="4" WaitTime="1000" X="7096.895" Y="6154.984" Z="-1.53" />
+		<CustomBehavior File="InteractWith" QuestId="32628" QuestObjectiveIndex="1" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69560" Range="4" WaitTime="1000" X="7279.555" Y="5946.754" Z="0.1" />
+		<CustomBehavior File="InteractWith" QuestId="32628" QuestObjectiveIndex="3" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreLoSToTarget="True" NonCompeteDistance="0" MobId="69607" Range="4" WaitTime="1000" X="7019.625" Y="5939.215" Z="29.08454" />
 	</If>
 	
 <!-- Overpowered -->
  	<If Condition="HasQuest(32637) &amp;&amp; !IsQuestCompleted(32637)">
 		<CustomBehavior File="Message" Text="Starting Overpowered" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32637" LootMobs="True" PullDistance="10" />
-		<While Condition="!IsQuestCompleted(32637)" >
-			<CustomBehavior File="InteractWith" QuestId="32637" MobId="216299" IgnoreLoSToTarget="True" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" MinRange="2" InteractByUsingItemId="95360" WaitForNpcs="False" WaitTime="1000" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="6927.023" Y="6134.432" Z="11.4087" />
-					<Hotspot X="6981.752" Y="5886.899" Z="6.490939" />
-					<Hotspot X="6940.528" Y="6032.241" Z="8.208748" />
-					<Hotspot X="7000.933" Y="6055.289" Z="11.70343" />
-					<Hotspot X="6954.479" Y="6094.404" Z="9.416412" />
-					<Hotspot X="7091.516" Y="5987.183" Z="16.60754" />
-					<Hotspot X="7011.99" Y="5932.771" Z="30.88919" />
-					<Hotspot X="7167.263" Y="6104.792" Z="0.8632388" />
-					<Hotspot X="7179.708" Y="6059.872" Z="0.3469887" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="32637" MobId="216299" IgnoreLoSToTarget="True" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+			Range="5" MinRange="2" InteractByUsingItemId="95360" NumOfTimes="1000" WaitTime="1000" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="6927.023" Y="6134.432" Z="11.4087" />
+				<Hotspot X="6981.752" Y="5886.899" Z="6.490939" />
+				<Hotspot X="6940.528" Y="6032.241" Z="8.208748" />
+				<Hotspot X="7000.933" Y="6055.289" Z="11.70343" />
+				<Hotspot X="6954.479" Y="6094.404" Z="9.416412" />
+				<Hotspot X="7091.516" Y="5987.183" Z="16.60754" />
+				<Hotspot X="7011.99" Y="5932.771" Z="30.88919" />
+				<Hotspot X="7167.263" Y="6104.792" Z="0.8632388" />
+				<Hotspot X="7179.708" Y="6059.872" Z="0.3469887" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 	
 <!-- Captive Audience -->
  	<If Condition="HasQuest(32636) &amp;&amp; !IsQuestCompleted(32636)">
 		<CustomBehavior File="Message" Text="Starting Captive Audience" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="32636" LootMobs="True" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(32636)" >
-			<CustomBehavior File="InteractWith" QuestId="32636" MobId="216987" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="7176.07" Y="6041.728" Z="0.2944413" />
-					<Hotspot X="7112.723" Y="6090.642" Z="11.28364" />
-					<Hotspot X="6992.316" Y="6052.326" Z="11.70347" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="32636" MobId="216987" ProactiveCombatStrategy="ClearMobsTargetingUs" NumOfTimes="1000" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="7176.07" Y="6041.728" Z="0.2944413" />
+				<Hotspot X="7112.723" Y="6090.642" Z="11.28364" />
+				<Hotspot X="6992.316" Y="6052.326" Z="11.70347" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 	
 <!-- Made For War -->

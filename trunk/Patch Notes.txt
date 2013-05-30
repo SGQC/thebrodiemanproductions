@@ -1,5 +1,25 @@
 Patch Notes
 
+5/30/13
+
+r301
+The Black Prince
+-- Repair/Vendor support added
+Battlefield: Barrens
+-- IW - CollectThings, faster smarter
+The Tillers
+-- Added Buy a Fish a Round?
+-- Added Lost Sheepie
+Cloud Serpent
+-- Just a Flesh Wound - Added CombatStrategy=ClearMobsTargetingUs
+-- Added They Grow Like Weeds
+-- Added Flight Training: Ring Round-Up
+Isle of Thunder PvP (Alliance)
+-- Fixed While loop issues
+-- Removed unnecessary RunTo commands
+Quest Behaviors
+-- Missing QBs for dailies readded
+
 5/29/13
 
 r300
