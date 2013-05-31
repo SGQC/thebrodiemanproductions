@@ -1,5 +1,11 @@
 Patch Notes
 
+5/31/13
+
+r303
+Quest Behaviors
+-- Updates to Multiple QBs from CJ
+
 5/30/13
 
 r302
