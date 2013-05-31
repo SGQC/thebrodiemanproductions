@@ -135,6 +135,8 @@
 	</If>
 	<TurnIn QuestName="Declaration of Power" QuestId="9666" TurnInName="Kessel" TurnInId="17649" />
 	
+	<CustomBehavior File="Message" Text="Compiling Blood Watch Quests" LogColor="CornflowerBlue" />
+	
 <!-- Report to Exarch Admetius -->
 	<PickUp QuestName="Report to Exarch Admetius" QuestId="9668" GiverName="Kessel" GiverId="17649" />
 	<If Condition="HasQuest(9668)" >
@@ -142,7 +144,22 @@
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="Report to Exarch Admetius" QuestId="9668" TurnInName="Exarch Admetius" TurnInId="17658" />
 	</If>
-
+	<PickUp QuestName="What Argus Means To Me" QuestId="9693" GiverName="Exarch Admetius" GiverId="17658" />
+	<PickUp QuestName="Learning from the Crystals" QuestId="9581" GiverName="Harbringer Mikolaas" GiverId="17423" />
+	<PickUp QuestName="Catch and Release" QuestId="9629" GiverName="Morae" GiverId="17434" />
+	<PickUp QuestName="Know Thine Enemy" QuestId="9567" GiverName="Vindicator Aalesia" GiverId="17433" />
+	<PickUp QuestName="Wanted: Deathclaw" QuestId="9646" GiverType="Object" GiverName="Wanted Poster" GiverId="181889" X="-2044.297" Y="-11877.69" Z="46.58652" />
+	<PickUp QuestName="Mac'Aree Mushroom Menagerie" QuestId="9648" GiverName="Jessera of Mac'Aree" GiverId="17663" />
+	<PickUp QuestName="Explorers' League. Is That Something For Gnomes?" QuestId="10063" GiverName="Prospector Nachlan" GiverId="18804" />
+	
+	<If Condition="HasQuest(9667) &amp;&amp; IsQuestCompleted(9667)" >
+		<TurnIn QuestName="Saving Princess Stillpine" QuestId="9667" TurnInName="Stillpine Ambassador Frasaboo" TurnInId="18803" />
+	</If>
+	
+	<TurnIn QuestName="What Argus Means To Me" QuestId="9693" TurnInName="Vindicator Boros" TurnInId="17684" />
+	<PickUp QuestName="Irradiated Crystal Shards" QuestId="9641" GiverName="Vindicator Boros" GiverId="17684" />
+	<PickUp QuestName="Blood Watch" QuestId="9694" GiverName="Vindicator Boros" GiverId="17684" />
+	
 	<CustomBehavior File="Message" Text="Bloodmyst Isle Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		
