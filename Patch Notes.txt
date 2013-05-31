@@ -2,6 +2,10 @@ Patch Notes
 
 5/30/13
 
+r302
+Quest Behaviors
+-- Updates to IW and LoadProfile from CJ
+
 r301
 The Black Prince
 -- Repair/Vendor support added
