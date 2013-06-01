@@ -2,6 +2,15 @@ Patch Notes
 
 6/1/13
 
+r306
+The Leveling Grind
+-- Updated Level Grind to include Elwynn Forest
+-- Updated Level Grind to include Westfall
+-- Added Elwynn Forest, complete
+-- Added Westfall, partial
+Battlefield: Barrens
+-- Updated Blackspots on all profiles
+
 r305
 The Leveling Grind
 -- Updated Level Grind Logic
