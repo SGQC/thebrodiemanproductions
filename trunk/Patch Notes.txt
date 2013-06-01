@@ -2,9 +2,16 @@ Patch Notes
 
 6/1/13
 
+r305
+The Leveling Grind
+-- Updated Level Grind Logic
+-- Fixed Human exclusion bug
+Battlefield: Barrens
+-- Added individual grinds, up to 500
+
 r304
 Battlefield: Barrens
--- IW - CollectThings, faster smarter
+-- IW -> CollectThings, faster smarter
 The Leveling Grind
 -- Completed Bloodmyst Isle
 -- Updated Level Grind to support Ashenvale (future release)

@@ -412,8 +412,7 @@
 	<If Condition="HasQuest(54)" >
 		<TurnIn QuestName="Report to Goldshire" QuestId="54" TurnInName="Marshal Dughan" TurnInId="240" X="-9465.521" Y="74.00694" Z="56.59536" />
 	</If>
-	<TurnIn QuestName="Rest and Relaxation" QuestId="2158" TurnInName="Innkeeper Farley" TurnInId="295" X="-9462.663" Y="16.19151" Z="56.96266" />
-		
+	<TurnIn QuestName="Rest and Relaxation" QuestId="2158" TurnInName="Innkeeper Farley" TurnInId="295" X="-9462.663" Y="16.19151" Z="56.96266" />	
 
 	<SetGrindArea> 
 			<GrindArea> 

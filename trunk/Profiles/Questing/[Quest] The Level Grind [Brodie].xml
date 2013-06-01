@@ -38,11 +38,6 @@
 	</If>
 
 	<If Condition="Me.IsAlliance" >
-		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; IsQuestCompleted(30989)" >
-			<If Condition="Me.LevelFraction &gt;= 10" >
-				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Westfall [Brodie]" />
-			</If>
-		</If>
 		<If Condition="Me.Race == WoWRace.Dwarf || Me.Race == WoWRace.Gnome">
 			<If Condition="Me.LevelFraction &gt;= 20" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Wetlands [Brodie]" />
@@ -69,7 +64,7 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Gnome Start [Brodie]" />
 			</If>
 		</If>
-		<If Condition="Me.Race == WoWRace.NightElf || Me.Race == WoWRace.Draenei" >
+		<If Condition="Me.Race == WoWRace.NightElf || Me.Race == WoWRace.Draenei || Me.Race == WoWRace.Worgen" >
 			<If Condition="Me.LevelFraction &gt;= 20" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Ashenvale [Brodie]" />
 			</If>
@@ -82,8 +77,11 @@
 				</If>
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Night Elf Start [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Human" >
-				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
+			<If Condition="Me.Race == WoWRace.Worgen" >
+				<If Condition="Me.LevelFraction &gt;= 10 &amp;&amp; IsQuestCompleted(28517)" >
+					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />
+				</If>
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Draenei" >
 				<If Condition="Me.LevelFraction &gt;= 10" >
@@ -95,11 +93,18 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Draenei Start [Brodie]" />
 			</If>
 		</If>
-		<If Condition="Me.Race == WoWRace.Worgen" >
-			<If Condition="Me.LevelFraction &gt;= 10 &amp;&amp; IsQuestCompleted(28517)" >
-				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />
+		<If Condition="Me.Race == WoWRace.Human || Me.Race == WoWRace.Pandaren" >
+			<If Condition="Me.Race == WoWRace.Human" >
+				<If Condition="Me.LevelFraction &gt;= 5 " >
+					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Elwynn Forest [Brodie]" />
+				</If>
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Human Start [Brodie]" />
 			</If>
-			<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Worgen Start [Brodie]" />
+			<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; IsQuestCompleted(30989)" >
+				<If Condition="Me.LevelFraction &gt;= 10" >
+					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Westfall [Brodie]" />
+				</If>
+			</If>
 		</If>
 	</If>
 	
