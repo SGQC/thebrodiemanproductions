@@ -1,5 +1,14 @@
 Patch Notes
 
+6/1/13
+
+r304
+Battlefield: Barrens
+-- IW - CollectThings, faster smarter
+The Leveling Grind
+-- Completed Bloodmyst Isle
+-- Updated Level Grind to support Ashenvale (future release)
+
 5/31/13
 
 r303
