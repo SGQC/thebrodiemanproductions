@@ -1,5 +1,16 @@
 Patch Notes
 
+6/2/13
+
+r308
+The Tillers
+-- Lost Sheepie - Will only try to turn in if Chee Chee in town now
+-- Buy a Fish a Round? - Corrected wrong QuestId
+-- Buy a Fish a Round? - Condensed code
+The Leveling Grind
+-- Updated Westfall, complete
+-- Added Redridge Mountains, partial
+
 6/1/13
 
 r307

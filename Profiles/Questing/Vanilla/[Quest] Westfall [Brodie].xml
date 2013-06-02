@@ -1,7 +1,7 @@
 <HBProfile>
 	<Name>Westfall Quests ($Rev$)</Name>
 	<MinLevel>5</MinLevel>
-	<MaxLevel>40</MaxLevel>
+	<MaxLevel>20</MaxLevel>
   
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>2</MinFreeBagSlots>
@@ -37,6 +37,7 @@
 	<Blackspots>
 		<Blackspot X="-10097.17" Y="1088.543" Z="36.54481" Radius="2.508273" />
 		<Blackspot X="-11051.68" Y="1544.945" Z="43.28028" Radius="8.848822" />
+		<Blackspot X="-8788.063" Y="583.6953" Z="97.8705" Radius="2" />
 	</Blackspots>
 
 <!-- Quest Overrides -->
@@ -333,7 +334,7 @@
 	
 	<CustomBehavior File="Message" Text="Compiling Sentinel Hill Quests" LogColor="CornflowerBlue" />
 	
-<!-- Feeding the Hungry and the Hopeless/The Legend of Captain Grayson/The Westfall Brigade/In Defense of Westfall -->
+<!-- Feeding the Hungry and the Hopeless/The Westfall Brigade/In Defense of Westfall -->
 	<PickUp QuestName="Feeding the Hungry and the Hopeless" QuestId="26271" GiverName="Hope Saldean" GiverId="42575" />
 	<PickUp QuestName="The Legend of Captain Grayson" QuestId="26371" GiverName="Scout Galiaan" GiverId="878" />
 	<PickUp QuestName="The Westfall Brigade" QuestId="26287" GiverName="Captain Danuvin" GiverId="821" />
@@ -397,7 +398,83 @@
 	<PickUp QuestName="To Moonbrook!" QuestId="26292" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />
 	<TurnIn QuestName="To Moonbrook!" QuestId="26292" TurnInName="Captain Alpert" TurnInId="42425" />
 	
+	<CustomBehavior File="Message" Text="Compiling Moonbrook Quests" LogColor="CornflowerBlue" />
+
+<!-- Propaganda/Evidence Collection -->
 	<PickUp QuestName="Propaganda" QuestId="26295" GiverName="Captain Alpert" GiverId="42425" />
+	<If Condition="!HasItem(58117) &amp;&amp; !HasQuest(26296) &amp;&amp; !IsQuestCompleted(26296)" >
+		<CustomBehavior File="CollectThings" CollectItemId="58117" CollectItemCount="1" MobId="42677" HuntingGroundRadius="200" MobState="Alive" >
+			<Hotspot X="-11016.95" Y="1510.236" Z="43.16245" />
+			<Hotspot X="-11030.49" Y="1484.943" Z="43.28526" />
+		</CustomBehavior>
+	</If>
+	<If Condition="HasItem(58117) &amp;&amp; !HasQuest(26296) &amp;&amp; !IsQuestCompleted(26296)" >
+		<PickUp QuestName="Evidence Collection" QuestId="26296" GiverType="Item" GiverId="58117" />
+	</If>
+	<CustomBehavior File="InteractWith" QuestId="26295" QuestObjectiveIndex="4" MobId="204017" X="-11016.95" Y="1510.236" Z="43.16245" />
+	<CustomBehavior File="InteractWith" QuestId="26295" QuestObjectiveIndex="2" MobId="204015" X="-11030.49" Y="1484.943" Z="43.28526" />
+	<CustomBehavior File="InteractWith" QuestId="26295" QuestObjectiveIndex="3" MobId="204016" X="-10956.55" Y="1495.737" Z="50.60764" />
+	<CustomBehavior File="InteractWith" QuestId="26295" QuestObjectiveIndex="1" MobId="204014" X="-10951.24" Y="1562.485" Z="46.97809" />
+	<Objective QuestName="Evidence Collection" QuestId="26296" Type="CollectItem" ItemId="58118" CollectCount="6" />
+	<TurnIn QuestName="Evidence Collection" QuestId="26296" TurnInName="Captain Alpert" TurnInId="42425" />
+	<TurnIn QuestName="Propaganda" QuestId="26295" TurnInName="Captain Alpert" TurnInId="42425" />
+
+<!-- The Dawning of a New Day -->
+	<PickUp QuestName="The Dawning of a New Day" QuestId="26297" GiverName="Captain Alpert" GiverId="42425" />
+	<If Condition="HasQuest(26297) &amp;&amp; !IsQuestCompleted(26297)" >
+		<RunTo X="-11017.32" Y="1490.857" Z="43.20362" />
+		<CustomBehavior File="WaitTimer" QuestId="26297" WaitTime="60000" />
+		<While Condition="!IsQuestCompleted(26297)" >
+			<CustomBehavior File="WaitTimer" QuestId="26297" WaitTime="2000" />
+		</While>
+	</If>
+	<TurnIn QuestName="The Dawning of a New Day" QuestId="26297" TurnInName="Captain Alpert" TurnInId="42425" />
+
+<!-- Secrets Revealed/A Vision of the Past -->
+	<PickUp QuestName="Secrets Revealed" QuestId="26319" GiverName="Captain Alpert" GiverId="42425" />
+	<TurnIn QuestName="Secrets Revealed" QuestId="26319" TurnInName="Thoralius the Wise" TurnInId="42651" />
+	<PickUp QuestName="A Vision of the Past" QuestId="26320" GiverName="Thoralius the Wise" GiverId="42651" />
+	<If Condition="HasQuest(26320) &amp;&amp; !IsQuestCompleted(26320)" >
+		<RunTo X="-11208.71" Y="1673.787" Z="24.62994" />
+		<CustomBehavior File="Misc\InInstance" X="-11207.94" Y="1681.658" Z="24.0505" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(58147)" WaitTime="3000" />
+		<CustomBehavior File="WaitTimer" WaitTime="170000" />
+		<CustomBehavior File="Misc\InInstance" X="-14.81424" Y="-390.6493" Z="63.7428" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Captain Grayson Quests" LogColor="CornflowerBlue" />
+	
+	<TurnIn QuestName="The Legend of Captain Grayson" QuestId="26371" TurnInName="Captain Grayson" TurnInId="392" />
+	<PickUp QuestName="Keeper of the Flame" QuestId="26347" GiverName="Captain Grayson" GiverId="392" />
+	<PickUp QuestName="The Coast Isn't Clear" QuestId="26348" GiverName="Captain Grayson" GiverId="392" />
+	<PickUp QuestName="The Coastal Menace" QuestId="26349" GiverName="Captain Grayson" GiverId="392" />
+	<Objective QuestName="Keeper of the Flame" QuestId="26347" Type="CollectItem" ItemId="58204" CollectCount="5" />
+	<Objective QuestName="The Coastal Menace" QuestId="26349" Type="CollectItem" ItemId="3636" CollectCount="1" />
+	<Objective QuestName="The Coast Isn't Clear" QuestId="26348" Type="KillMob" MobId="127" KillCount="7" />
+	<Objective QuestName="The Coast Isn't Clear" QuestId="26348" Type="KillMob" MobId="517" KillCount="7" />
+	<TurnIn QuestName="Keeper of the Flame" QuestId="26347" TurnInName="Captain Grayson" TurnInId="392" />
+	<TurnIn QuestName="The Coast Isn't Clear" QuestId="26348" TurnInName="Captain Grayson" TurnInId="392" />
+	<TurnIn QuestName="The Coastal Menace" QuestId="26349" TurnInName="Captain Grayson" TurnInId="392" />
+	
+	<CustomBehavior File="Message" Text="Compiling Sentinel Hill Attack Quests" LogColor="CornflowerBlue" />
+	
+	<If Condition="HasQuest(26320) &amp;&amp; IsQuestCompleted(26320)" >
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<TurnIn QuestName="A Vision of the Past" QuestId="26320" TurnInName="Marshal Gryan Stoutmantle" TurnInId="234" />
+	</If>
+	
+	<PickUp QuestName="Rise of the Brotherhood" QuestId="26322" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />
+	<If Condition="HasQuest(26322) &amp;&amp; !IsQuestCompleted(26322)" >
+		<CustomBehavior File="WaitTimer" WaitTime="110000" />
+	</If>
+	<TurnIn QuestName="Rise of the Brotherhood" QuestId="26322" TurnInName="King Varian Wrynn" TurnInId="29611" />
+	
+	<PickUp QuestName="Return to Sentinel Hill" QuestId="26370" GiverName="King Varian Wrynn" GiverId="29611" />
+	<TurnIn QuestName="Return to Sentinel Hill" QuestId="26370" TurnInName="Marshal Gryan Stoutmantle" TurnInId="234" />
+	
+	<PickUp QuestName="Threat to the Kingdom" QuestId="26761" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />
 	
 	<CustomBehavior File="Message" Text="Westfall Section Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />

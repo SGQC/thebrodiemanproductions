@@ -1,0 +1,83 @@
+<HBProfile>
+
+	<Name>Redridge Mountains ($Rev$)</Name>
+	<MinLevel>14</MinLevel>
+	<MaxLevel>25</MaxLevel>
+
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<TargetElites>False</TargetElites>
+
+	<AvoidMobs>
+	</AvoidMobs>
+
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+
+	<Vendors>
+	</Vendors>
+
+<!-- Quest Overrides -->
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Redridge Mountains Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<If Condition="!HasQuest(26761) &amp;&amp; !IsQuestCompleted(26761)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Three Corners Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="Wanted: Redridge Gnolls" QuestId="26504" GiverType="Object" GiverName="Wanted!" 
+		GiverId="204344" X="-9621.39" Y="-1891.03" Z="58.9165" />
+	<PickUp QuestName="Franks and Beans" QuestId="26506" GiverName="Darcy Parker" GiverId="379" />
+	<If Condition="HasQuest(26365)" >
+		<TurnIn QuestName="Hero's Call: Redridge Mountains!" QuestId="26365" TurnInName="Watch Captain Parker" TurnInId="464" />
+	<ElseIf Condition="HasQuest(28563)" >
+		<TurnIn QuestName="Hero's Call: Redridge Mountains!" QuestId="28563" TurnInName="Watch Captain Parker" TurnInId="464" />
+	</ElseIf>
+	</If>
+	<PickUp QuestName="Still Assessing The Threat" QuestId="26503" GiverName="Watch Captain Parker" GiverId="464" />
+	
+<!-- Still Assessing The Threat/Wanted: Redridge Gnolls/Franks and Beans -->
+	<CustomBehavior File="InteractWith" QuestId="26503" QuestObjectiveIndex="1" MobId="204345" X="-9458.695" Y="-1894.371" Z="82.60084" />
+	<CustomBehavior File="InteractWith" QuestId="26503" QuestObjectiveIndex="3" MobId="204347" X="-9580.044" Y="-2257.215" Z="85.66991" />
+	<CustomBehavior File="InteractWith" QuestId="26503" QuestObjectiveIndex="2" MobId="204346" X="-9810.192" Y="-2200.657" Z="58.98882" />
+	<Objective QuestName="Wanted: Redridge Gnolls" QuestId="26504" Type="KillMob" MobId="423" KillCount="15" />
+	<Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58893" CollectCount="4" />
+	<Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58892" CollectCount="4" />
+	<Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58891" CollectCount="4" />
+	<TurnIn QuestName="Franks and Beans" QuestId="26506" TurnInName="Darcy Parker" TurnInId="379" />
+	<TurnIn QuestName="Wanted: Redridge Gnolls" QuestId="26504" TurnInName="Watch Captain Parker" TurnInId="464" />
+	<TurnIn QuestName="Still Assessing The Threat" QuestId="26503" TurnInName="Watch Captain Parker" TurnInId="464" />
+	
+	<TurnIn QuestName="Threat to the Kingdom" QuestId="26761" TurnInName="Magistrate Solomon" TurnInId="334" />
+
+	<CustomBehavior File="Message" Text="Redridge Mountains Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>

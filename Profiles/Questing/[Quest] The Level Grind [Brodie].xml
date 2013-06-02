@@ -94,6 +94,9 @@
 			</If>
 		</If>
 		<If Condition="Me.Race == WoWRace.Human || Me.Race == WoWRace.Pandaren" >
+			<If Condition="Me.LevelFraction &gt;= 15 " >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Redridge Mountains [Brodie]" />
+			</If>
 			<If Condition="Me.LevelFraction &gt;= 10 " >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Westfall [Brodie]" />
 			</If>
