@@ -390,6 +390,10 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(23876)" />
 	</If>
 	
+	<If Condition="HasQuest(9641) &amp;&amp; IsQuestCompleted(9641)" >
+		<TurnIn QuestName="Irradiated Crystal Shards" QuestId="9641" TurnInName="Vindicator Boros" TurnInId="17684" />
+	</If>
+	
 	<TurnIn QuestName="Galaen's Journal - The Fate of Vindicator Saruan" QuestId="9706" TurnInName="Vindicator Kuros" TurnInId="17843" />
 	<PickUp QuestName="Matis the Cruel" QuestId="9711" GiverName="Vindicator Kuros" GiverId="17843" />
 	<TurnIn QuestName="Intercepting the Message" QuestId="9779" TurnInName="Vindicator Boros" TurnInId="17684" />
@@ -415,6 +419,18 @@
 		</If>
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
@@ -444,6 +460,18 @@
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
 		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
+		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 
@@ -460,6 +488,18 @@
 		</If>
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
@@ -524,6 +564,18 @@
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
 		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
+		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 	
@@ -553,6 +605,18 @@
 		</If>
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
@@ -585,6 +649,18 @@
 		</If>
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
@@ -640,6 +716,18 @@
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
 		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
+		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 	
@@ -671,6 +759,18 @@
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
 		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
+		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 	
@@ -687,6 +787,18 @@
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
 		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
+		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 		
@@ -702,6 +814,18 @@
 		</If>
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
@@ -730,6 +854,18 @@
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
 		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
+		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 
@@ -752,6 +888,18 @@
 		</If>
 		<If Condition="HasQuest(9632)" >
 			<TurnIn QuestName="Newfound Allies" QuestId="9632" TurnInName="Huntress Kella Nightbow" TurnInId="17614" />
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23984"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23985"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23986"/>
+		</If>
+		<If Condition="HasItem(23984)" >
+			<CustomBehavior File="DeleteItems" Ids="23989"/>
 		</If>
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
