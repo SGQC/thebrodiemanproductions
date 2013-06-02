@@ -841,53 +841,43 @@
 		<CustomBehavior File="Message" Text="Starting You Have to Burn the Ropes" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30327" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="40.36983" Y="1480.113" Z="357.612" />
-		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(30327)" >
-			<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+			<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="-40.17399" Y="1439.186" Z="316.8765" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="-7.054522" Y="1468.977" Z="365.7731" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >			
 				<CustomBehavior File="FlyTo" X="-45.5295" Y="1487.24" Z="365.1429" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="37.77297" Y="1481.998" Z="358.0376" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="119.0154" Y="1438.674" Z="358.1469" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="147.5691" Y="1454.504" Z="410.7695" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="187.5415" Y="1408.249" Z="371.0334" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="195.6982" Y="1407.607" Z="369.3455" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsQuestCompleted(30327)" >
 				<CustomBehavior File="FlyTo" X="252.6152" Y="1369.607" Z="343.0423" />
-				<CustomBehavior File="ForcedDismount"/>
-				<CustomBehavior File="CollectThings" QuestId="30327" CollectItemId="210760" CollectItemCount="6" ObjectId="210760" HuntingGroundRadius="15" CollectUntil="NoTargetsInArea" NonCompeteDistance="1" MobState="Alive"/>
+				<CustomBehavior File="InteractWith" QuestId="30327" MobId="210760" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="15" NonCompeteDistance="1" MobState="Alive" WaitForNpcs="False" />
 			</If>
 		</While>
 	</If>
@@ -1184,20 +1174,14 @@
 		<CustomBehavior File="AscendInWater" />
 	</If>
 	
-<!-- Buy a Fish a Drink? -->
-	<If Condition="HasQuest(31320) &amp;&amp; !IsQuestCompleted(31320)" >
-		<CustomBehavior File="Message" Text="Starting Buy a Fish a Drink" LogColor="Green" />
+<!-- Buy a Fish a Drink?/Round? -->
+	<If Condition="HasQuest(31320) &amp;&amp; !IsQuestCompleted(31320) ||
+					HasQuest(31321) &amp;&amp; !IsQuestCompleted(31321)" >
+		<CustomBehavior File="Message" Text="Starting Buy a Fish a...Something!" LogColor="Green" />
 		<CustomBehavior File="FlyTo" X="-216.7406" Y="503.1344" Z="190.8141" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="31320" MobId="64319" InteractByBuyingItemId="81407" BuyItemCount="1" />
-	</If>
-	
-<!-- Buy a Fish a Round? -->
-	<If Condition="HasQuest(31321) &amp;&amp; !IsQuestCompleted(31321)" >
-		<CustomBehavior File="Message" Text="Starting Buy a Fish a Round" LogColor="Green" />
-		<CustomBehavior File="FlyTo" X="-216.7406" Y="503.1344" Z="190.8141" />
-		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" QuestId="31320" MobId="64319" InteractByBuyingItemId="81415" BuyItemCount="5" />
+		<CustomBehavior File="InteractWith" QuestId="31321" MobId="64319" InteractByBuyingItemId="81415" BuyItemCount="5" />
 	</If>
 
 <!-- Quest Turn ins -->
@@ -1264,7 +1248,8 @@
 	</If>
 	
 <!-- Lost Sheepie -->
-  	<If Condition="(HasQuest(31338) &amp;&amp; IsQuestCompleted(31338))" >
+  	<If Condition="(HasQuest(31338) &amp;&amp; IsQuestCompleted(31338)) &amp;&amp;
+		(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58709 &amp;&amp; u.Distance &lt;= 150))" >
 		<TurnIn QuestName="Lost Sheepie" QuestId="31338" TurnInName="Chee Chee" TurnInId="58709" />
 	</If>
 
