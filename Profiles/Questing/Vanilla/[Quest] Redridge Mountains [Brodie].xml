@@ -22,15 +22,23 @@
 	<TargetElites>False</TargetElites>
 
 	<AvoidMobs>
+		<Mob Name="Ol' Gummers" Entry="43041" />
 	</AvoidMobs>
 
 	<Blackspots>
 	</Blackspots>
 
 	<Mailboxes>
+		<Mailbox X="-9248.413" Y="-2144.225" Z="63.93343" />
 	</Mailboxes>
 
 	<Vendors>
+		<!-- Lakeshire -->
+		<Vendor Name="Kimberly Hiett" Entry="789" Type="Repair" X="-9234.488" Y="-2158.749" Z="64.35907" />
+		<Vendor Name="Dorin Songblade" Entry="956" Type="Repair" X="-9247.676" Y="-2240.278" Z="63.93393" />
+		<Vendor Name="Karen Taylor" Entry="790" Type="Food" X="-9260.765" Y="-2219.875" Z="63.93512" />
+		<Vendor Name="Amy Davenport" Entry="777" Type="Food" X="-9260.208" Y="-2203.088" Z="63.93351" />
+		<Vendor Name="Lindsay Ashlock" Entry="791" Type="Food" X="-9260.255" Y="-2195.371" Z="63.93361" />
 	</Vendors>
 
 <!-- Quest Overrides -->
@@ -68,13 +76,164 @@
 	<CustomBehavior File="InteractWith" QuestId="26503" QuestObjectiveIndex="2" MobId="204346" X="-9810.192" Y="-2200.657" Z="58.98882" />
 	<Objective QuestName="Wanted: Redridge Gnolls" QuestId="26504" Type="KillMob" MobId="423" KillCount="15" />
 	<Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58893" CollectCount="4" />
-	<Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58892" CollectCount="4" />
+	<While Condition="HasQuest(26506) &amp;&amp; !IsObjectiveComplete(2,26506)" >
+		<If Condition="(Me.Class == WoWClass.Rogue)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="121733"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Warlock)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="172"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Warrior)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="355"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.DeathKnight )">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="49576"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Druid)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="8921"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Hunter)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="3044"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Mage)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="2136"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Paladin)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="62124"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Priest)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="589"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Shaman)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="403"/>
+		</If>
+		<If Condition="(Me.Class == WoWClass.Monk)">
+			<CustomBehavior File="26506-FranksAndBeans" SpellId="115546"/>
+		</If>
+	</While>
 	<Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58891" CollectCount="4" />
 	<TurnIn QuestName="Franks and Beans" QuestId="26506" TurnInName="Darcy Parker" TurnInId="379" />
 	<TurnIn QuestName="Wanted: Redridge Gnolls" QuestId="26504" TurnInName="Watch Captain Parker" TurnInId="464" />
 	<TurnIn QuestName="Still Assessing The Threat" QuestId="26503" TurnInName="Watch Captain Parker" TurnInId="464" />
+
+<!-- Parker's Report -->
+	<PickUp QuestName="Parker's Report" QuestId="26505" GiverName="Watch Captain Parker" GiverId="464" />
+	<If Condition="HasQuest(26505)" >
+		<CustomBehavior File="SetHearthstone" MobId="6727" X="-9223.98" Y="-2157.12" Z="63.73" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<TurnIn QuestName="Parker's Report" QuestId="26505" TurnInName="Magistrate Solomon" TurnInId="344" />
+	</If>
+	<If Condition="HasQuest(26761)" >
+		<TurnIn QuestName="Threat to the Kingdom" QuestId="26761" TurnInName="Magistrate Solomon" TurnInId="344" />
+	</If>
 	
-	<TurnIn QuestName="Threat to the Kingdom" QuestId="26761" TurnInName="Magistrate Solomon" TurnInId="334" />
+	<CustomBehavior File="Message" Text="Compiling Lakeshire Quests" LogColor="CornflowerBlue" />
+
+<!-- We Must Prepare!/Lake Everstill Clean Up/Nida's Necklace -->
+	<PickUp QuestName="We Must Prepare!" QuestId="26510" GiverName="Magistrate Solomon" GiverId="344" />
+	<PickUp QuestName="Lake Everstill Clean Up" QuestId="26511" GiverName="Bailiff Conacher" GiverId="900" />
+	<If Condition="!HasQuest(26508) &amp;&amp; !IsQuestCompleted(26508)" >
+		<PickUp QuestName="Nida's Necklace" QuestId="26508" GiverName="Shawn" GiverId="8965" />
+		<CustomBehavior File="MyCTM" X="-9359.235" Y="-2205.784" Z="54.52996" />
+	</If>
+	<If Condition="HasQuest(26508) &amp;&amp; !IsQuestCompleted(26508)" >
+		<RunTo X="-9359.235" Y="-2205.784" Z="54.52996" />
+		<CustomBehavior File="InteractWith" QuestId="26508" MobId="154357" NumOfTimes="100" CollectionDistance="1000" 
+			MovementBy="ClickToMoveOnly" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+			<HuntingGrounds>
+				<Hotspot X="-9357.604" Y="-2184.775" Z="44.65174" />
+				<Hotspot X="-9331.274" Y="-2103.467" Z="47.25359" />
+				<Hotspot X="-9385.071" Y="-2300.076" Z="46.00409" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		<CustomBehavior File="AscendInWater" />
+	</If>
+	<TurnIn QuestName="Nida's Necklace" QuestId="26508" TurnInName="Nida" TurnInId="8962" />
+	<Objective QuestName="We Must Prepare!" QuestId="26510" Type="CollectItem" ItemId="58894" CollectCount="1" />
+	<CustomBehavior File="CollectThings" QuestId="26511" MobId="422" MobId2="578" MobState="Alive" CollectUntil="QuestComplete" NonCompeteDistance="1" HuntingGroundRadius="200" >
+		<Hotspot X="-9327.436" Y="-2480.815" Z="43.58473" />
+	</CustomBehavior>
+	<TurnIn QuestName="Lake Everstill Clean Up" QuestId="26511" TurnInName="Bailiff Conacher" TurnInId="900" />
+	<TurnIn QuestName="We Must Prepare!" QuestId="26510" TurnInName="Magistrate Solomon" TurnInId="344" />
+	
+	<PickUp QuestName="Tuning the Gnomecorder" QuestId="26512" GiverName="Magistrate Solomon" GiverId="344" />
+	
+<!-- An Unwelcome Guest -->
+	<PickUp QuestName="An Unwelcome Guest" QuestId="26509" GiverName="Martie Jainrose" GiverId="342" />
+	<Objective QuestName="An Unwelcome Guest" QuestId="26509" Type="CollectItem" ItemId="3631" CollectCount="1" />
+	<TurnIn QuestName="An Unwelcome Guest" QuestId="26509" TurnInName="Martie Jainrose" TurnInId="342" />
+	
+	<PickUp QuestName="Like a Fart in the Wind" QuestId="26513" GiverName="Marshal Marris" GiverId="382" />
+	
+<!-- Tuning the Gnomecorder -->
+	<If Condition="HasQuest(26512) &amp;&amp; !IsQuestCompleted(26512)" >
+		<RunTo X="-9193.668" Y="-2312.105" Z="88.96943" />
+	</If>
+	<If Condition="HasQuest(26512) &amp;&amp; IsQuestCompleted(26512)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="26512" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+	</If>
+	
+<!-- Like a Fart in the Wind/Canyon Romp -->
+	<Objective QuestName="Like a Fart in the Wind" QuestId="26513" Type="CollectItem" ItemId="58896" CollectCount="8" />
+	<Objective QuestName="Canyon Romp" QuestId="26514" Type="CollectItem" ItemId="58897" CollectCount="10" />
+	<If Condition="HasQuest(26514) &amp;&amp; IsQuestCompleted(26514)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="26514" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+	</If>
+	<If Condition="!HasItem(58898) &amp;&amp; !HasQuest(26519) &amp;&amp; !IsQuestCompleted(26519)" >
+		<CustomBehavior File="CollectThings" MobId="446" MobId2="445" MobId3="430" MobId4="580" MobState="Alive"
+			HuntingGroundRadius="200" CollectItemId="58898" CollectItemCount="1" >
+			<Hotspot X="-9159.27" Y="-2271.288" Z="112.7101" />
+			<Hotspot X="-9119.627" Y="-2175.753" Z="123.2768" />
+			<Hotspot X="-9068.456" Y="-2115.62" Z="132.5681" />
+		</CustomBehavior>
+	</If>
+	<If Condition="HasItem(58898) &amp;&amp; !HasQuest(26519) &amp;&amp; !IsQuestCompleted(26519)" >
+		<PickUp QuestName="He Who Controls the Ettins" QuestId="26519" GiverType="Item" GiverId="58898" />
+	</If>
+	
+<!-- They've Wised Up.../He Who Controls the Ettins -->
+	<Objective QuestName="They've Wised Up..." QuestId="26544" Type="CollectItem" ItemId="58936" CollectCount="1" />
+	<If Condition="HasQuest(26544) &amp;&amp; IsQuestCompleted(26544)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="26544" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+	</If>
+	<Objective QuestName="He Who Controls the Ettins" QuestId="26519" Type="KillMob" MobId="711" KillCount="1" />
+	<TurnIn QuestName="He Who Controls the Ettins" QuestId="26519" TurnInType="Object" TurnInName="Ettin Control Orb"
+		TurnInId="204351" X="-8833.42" Y="-1937.47" Z="132.928" />
+	<PickUp QuestName="Saving Foreman Oslow" QuestId="26520" GiverType="Object" GiverName="Ettin Control Orb"
+		GiverId="204351" X="-8833.42" Y="-1937.47" Z="132.928" />
+		
+	<Objective QuestName="Yowler Must Die!" QuestId="26545" Type="KillMob" MobId="518" KillCount="1" />
+	<Objective QuestName="Yowler Must Die!" QuestId="26545" Type="CollectItem" ItemId="58937" CollectCount="1" />
+	
+	<While Condition="!IsQuestCompleted(26520)" >
+		<If Condition="!Me.HasAura(82558)" >
+			<CustomBehavior File="InteractWith" QuestId="26520" MobId="43094" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+				InteractByUsingItemId="58895" Range="15" MinRange="8" >
+				<HuntingGrounds>
+					<Hotspot X="-8916.771" Y="-2195.897" Z="134.3517" />
+					<Hotspot X="-8916.262" Y="-2280.4" Z="132.4553" />
+					<Hotspot X="-8968.658" Y="-2333.053" Z="132.448" />
+					<Hotspot X="-9020.081" Y="-2405.212" Z="130.1967" />
+					<Hotspot X="-9074.338" Y="-2412.68" Z="126.0645" />
+					<Hotspot X="-9119.061" Y="-2363.143" Z="119.8181" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
+		<If Condition="Me.HasAura(82558)" >
+			<CustomBehavior File="InteractWith" QuestId="26520" MobId="43196" InteractByUsingItemId="58895" 
+				CollectionDistance="20" X="-9270.972" Y="-2291.009" Z="68.68311" WaitTime="10000" />
+		</If>
+	</While>
+	<TurnIn QuestName="Like a Fart in the Wind" QuestId="26513" TurnInName="Marshal Marris" TurnInId="382" />
+	<TurnIn QuestName="Yowler Must Die!" QuestId="26545" TurnInName="Magistrate Solomon" TurnInId="344" />
+	<TurnIn QuestName="Saving Foreman Oslow" QuestId="26520" TurnInName="Magistrate Solomon" TurnInId="344" />
+	
+	<CustomBehavior File="Message" Text="Compiling Keeshan Storyline Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="John J. Keeshan" QuestId="26567" GiverName="Colonel Troteman" GiverId="43221" />
 
 	<CustomBehavior File="Message" Text="Redridge Mountains Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />

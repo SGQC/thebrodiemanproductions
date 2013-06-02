@@ -2,6 +2,15 @@ Patch Notes
 
 6/2/13
 
+r309
+The Leveling Grind
+-- Bloodmyst Isle - Will Delete quest items from mobs that will no longer be valid
+-- Redridge Mountains - Updated quests
+Quest Behaviors
+-- Reorg of SpecificQuests
+Cloud Serpent
+-- reverted CastSpellOn to CastSpell
+
 r308
 The Tillers
 -- Lost Sheepie - Will only try to turn in if Chee Chee in town now
