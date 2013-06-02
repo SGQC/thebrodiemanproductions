@@ -664,7 +664,8 @@
 	</If>
 	
 	<If Condition="HasQuest(30517) || HasQuest(30518) || (HasQuest(31947) &amp;&amp; IsQuestCompleted(31947)) || HasQuest(31479) ||
-					HasQuest(30519) || HasQuest(31948) || (HasQuest(31949) &amp;&amp; IsQuestCompleted(31949))" >
+					HasQuest(30519) || HasQuest(31948) || (HasQuest(31949) &amp;&amp; IsQuestCompleted(31949)) || HasQuest(30258) ||
+					HasQuest(30259) || (HasQuest(31946) &amp;&amp; IsQuestCompleted(31946)) || HasQuest(30260) || HasQuest(30516)" >
 		<CustomBehavior File="LoadProfile" ProfileName="[Rep] Tillers Votes [Brodie]" /> 
 	</If>
 	

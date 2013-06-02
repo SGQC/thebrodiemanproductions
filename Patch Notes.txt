@@ -2,6 +2,11 @@ Patch Notes
 
 6/2/13
 
+r310
+The Tillers Votes
+-- Mung Mung's Votes Added
+-- Expanding Farm I Added
+
 r309
 The Leveling Grind
 -- Bloodmyst Isle - Will Delete quest items from mobs that will no longer be valid
