@@ -2,6 +2,10 @@ Patch Notes
 
 6/1/13
 
+r307
+The Leveling Grind
+-- More quests added to Westfall
+
 r306
 The Leveling Grind
 -- Updated Level Grind to include Elwynn Forest
