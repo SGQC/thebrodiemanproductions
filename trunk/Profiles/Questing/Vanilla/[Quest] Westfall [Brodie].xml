@@ -28,6 +28,7 @@
 		<Vendor Name="Mike Miller" Entry="1670" Type="Food" X="-10660.01" Y="1003.115" Z="32.87047" />
 		<Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87414" />
 		<Vendor Name="Quartermaster Lewis" Entry="491" Type="Repair" X="-10500.6" Y="1021.591" Z="60.52729" />
+		<Vendor Name="Private Jackson" Entry="43948" Type="Repair" X="-10912.7" Y="1540.76" Z="54.70648" />
 	</Vendors>
   
 	<AvoidMobs>
@@ -273,6 +274,15 @@
 	</While>
 	<TurnIn QuestName="Lou's Parting Thoughts" QuestId="26232" TurnInName="Lieutenant Horatio Laine" TurnInId="42558" />
 	
+	<CustomBehavior File="Message" Text="Compiling Captain Sanders Treasure Quests (For a little diversion)" LogColor="CornflowerBlue" />
+	<TurnIn QuestName="Captain Sanders' Hidden Treasure" QuestId="26353" TurnInType="Object" TurnInName="Captain's Footlocker" TurnInId="35" X="-10514.25" Y="2109.988" Z="2.688241" />
+	<PickUp QuestName="Captain Sanders' Hidden Treasure" QuestId="26354" GiverType="Object" GiverName="Captain's Footlocker" GiverId="35" X="-10514.25" Y="2109.988" Z="2.688241" />
+	<TurnIn QuestName="Captain Sanders' Hidden Treasure" QuestId="26354" TurnInType="Object" TurnInName="Broken Barrel" TurnInId="36" X="-10515.17" Y="1598.615" Z="27.6535" />
+	<PickUp QuestName="Captain Sanders' Hidden Treasure" QuestId="26355" GiverType="Object" GiverName="Broken Barrel" GiverId="36" X="-10515.17" Y="1598.615" Z="27.6535" />
+	<TurnIn QuestName="Captain Sanders' Hidden Treasure" QuestId="26355" TurnInType="Object" TurnInName="Old Jug" TurnInId="34" X="-9797.295" Y="1594.66" Z="39.69501" />
+	<PickUp QuestName="Captain Sanders' Hidden Treasure" QuestId="26356" GiverType="Object" GiverName="Old Jug" GiverId="34" X="-9797.295" Y="1594.66" Z="39.69501" />
+	<TurnIn QuestName="Captain Sanders' Hidden Treasure" QuestId="26356" TurnInType="Object" TurnInName="Locked Chest" TurnInId="33" />
+	
 	<CustomBehavior File="Message" Text="Compiling Saldean/Molsen Farm Quests" LogColor="CornflowerBlue" />
 	
 <!-- Shakedown at the Saldean's -->
@@ -357,6 +367,37 @@
 <!-- Jango Spothide/Find Agent Kearnen -->
 	<PickUp QuestName="Find Agent Kearnen" QuestId="26289" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />
 	<PickUp QuestName="Jango Spothide" QuestId="26288" GiverName="Captain Danuvin" GiverId="821" />
+	<Objective QuestName="Jango Spothide" QuestId="26288" Type="KillMob" MobId="453" KillCount="5" />
+	<Objective QuestName="Jango Spothide" QuestId="26288" Type="KillMob" MobId="98" KillCount="5" />
+	<Objective QuestName="Jango Spothide" QuestId="26288" Type="KillMob" MobId="42653" KillCount="1" />
+
+<!-- Secrets of the Tower -->
+	<TurnIn QuestName="Find Agent Kearnen" QuestId="26289" TurnInName="Agent Kearnen" TurnInId="7024" />
+	<PickUp QuestName="Secrets of the Tower" QuestId="26290" GiverName="Agent Kearnen" GiverId="7024" />
+	<If Condition="HasQuest(26290) &amp;&amp; !IsQuestCompleted(26290)" >
+		<CustomBehavior File="UserSettings" PullDistance="1" />
+		<RunTo X="-11138.87" Y="551.4525" Z="35.95927" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(58112)" />
+		<RunTo X="-11132.32" Y="552.3943" Z="70.39657" />
+		<While Condition="!IsQuestCompleted(26290)" >
+			<CustomBehavior File="WaitTimer" QuestId="26290" WaitTime="1000" />
+		</While>
+		<RunTo X="-11138.87" Y="551.4525" Z="35.95927" />
+		<CustomBehavior File="NoCombatMoveTo" X="-11046.83" Y="626.5081" Z="34.32347" />
+		<CustomBehavior File="UserSettings" PullDistance="25" />
+	</If>
+	<TurnIn QuestName="Secrets of the Tower" QuestId="26290" TurnInName="Agent Kearnen" TurnInId="7024" />
+	<PickUp QuestName="Big Trouble in Moonbrook" QuestId="26291" GiverName="Agent Kearnen" GiverId="7024" />
+	
+	<If Condition="HasQuest(26288) &amp;&amp; IsQuestCompleted(26288)" >
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<TurnIn QuestName="Jango Spothide" QuestId="26288" TurnInName="Captain Danuvin" TurnInId="821" />
+	</If>
+	<TurnIn QuestName="Big Trouble in Moonbrook" QuestId="26291" TurnInName="Marshal Gryan Stoutmantle" TurnInId="234" />
+	<PickUp QuestName="To Moonbrook!" QuestId="26292" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />
+	<TurnIn QuestName="To Moonbrook!" QuestId="26292" TurnInName="Captain Alpert" TurnInId="42425" />
+	
+	<PickUp QuestName="Propaganda" QuestId="26295" GiverName="Captain Alpert" GiverId="42425" />
 	
 	<CustomBehavior File="Message" Text="Westfall Section Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
