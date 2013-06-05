@@ -262,6 +262,10 @@
 	<PickUp QuestName="This Ain't My War" QuestId="26568" GiverName="John J. Keeshan" GiverId="43184" />
 	<TurnIn QuestName="This Ain't My War" QuestId="26568" TurnInName="Colonel Troteman" TurnInId="43221" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20 " >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<PickUp QuestName="Weapons of War" QuestId="26571" GiverName="Colonel Troteman" GiverId="43221" />
 	<PickUp QuestName="In Search of Bravo Company" QuestId="26586" GiverName="Colonel Troteman" GiverId="43221" />
 	<PickUp QuestName="Surveying Equipment" QuestId="26569" GiverName="Foreman Oslow" GiverId="43194" />
@@ -340,7 +344,9 @@
 	<PickUp QuestName="They Drew First Blood" QuestId="26607" GiverName="Colonel Troteman" GiverId="43221" />
 	<TurnIn QuestName="They Drew First Blood" QuestId="26607" TurnInName="John J. Keeshan" TurnInId="43184" />
 	
-<!-- Hit 20 here -->
+	<If Condition="Me.LevelFraction &gt;= 20 " >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 	<PickUp QuestName="It's Never Over" QuestId="26616" GiverName="John J. Keeshan" GiverId="43184" />
 	<If Condition="HasQuest(26616) &amp;&amp; !IsQuestCompleted(26616)" >
@@ -374,7 +380,7 @@
 	<TurnIn QuestName="Hunting the Hunters" QuestId="26638" TurnInName="Danforth" TurnInId="43462" />
 	<TurnIn QuestName="Unspeakable Atrocities" QuestId="26640" TurnInName="John J. Keeshan" TurnInId="43458" />
 	
-	<PickUp QuestName="Prisoners of War" QuestId="26646" GiverName="John J. Keeshan" GiverId="43458" />
+	<!-- <PickUp QuestName="Prisoners of War" QuestId="26646" GiverName="John J. Keeshan" GiverId="43458" /> Save for later -->
 	
 	<CustomBehavior File="Message" Text="Redridge Mountains Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
