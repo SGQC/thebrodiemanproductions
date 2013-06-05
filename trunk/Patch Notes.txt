@@ -1,5 +1,17 @@
 Patch Notes
 
+6/4/13
+
+r312
+The Leveling Grind
+-- Redridge Mountains update - Level 20 checks, removed 1 quest for Loremaster future update
+-- Level Grind - updated to include Duskwood
+-- Level Grind - updated to include Undead Starter
+-- Undead Starter Added
+-- Darkshore updated, 48 quests
+Quest Behaviors
+-- Various updates from CJ
+
 6/3/13
 
 r311

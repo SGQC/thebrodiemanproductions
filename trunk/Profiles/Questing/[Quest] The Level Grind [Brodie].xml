@@ -35,6 +35,11 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Troll Start [Brodie]" />
 			</If>
 		</If>
+		<If Condition="Me.Race == WoWRace.Undead || Me.Race == WoWRace.BloodElf" >
+			<If Condition="Me.Race == WoWRace.Undead" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Undead Start [Brodie]" />
+			</If>
+		</If>
 	</If>
 
 	<If Condition="Me.IsAlliance" >
@@ -94,6 +99,9 @@
 			</If>
 		</If>
 		<If Condition="Me.Race == WoWRace.Human || Me.Race == WoWRace.Pandaren" >
+			<If Condition="Me.LevelFraction &gt;= 20 " >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Duskwood [Brodie]" />
+			</If>
 			<If Condition="Me.LevelFraction &gt;= 15 " >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Redridge Mountains [Brodie]" />
 			</If>

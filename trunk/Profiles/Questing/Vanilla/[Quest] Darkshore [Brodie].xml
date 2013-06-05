@@ -23,6 +23,7 @@
   
 	<AvoidMobs>
 		<Mob Name="Vile Terror" Entry="33864" />
+		<Mob Name="Aetherion" Entry="33041" />
 	</AvoidMobs>
 
 	<Blackspots>
@@ -36,9 +37,14 @@
 	</Mailboxes>
 
 	<Vendors>
+		<!-- Darkshore -->
 		<Vendor Name="Rembar Bellanne" Entry="43419" Type="Food" X="7372.79" Y="-804.068" Z="8.099142" />
 		<Vendor Name="Harlon Thornguard" Entry="4187" Type="Repair" X="7394.35" Y="-264.641" Z="5.079112" />
 		<Vendor Name="Rembar Bellanne" Entry="43419" Type="Repair" X="7372.79" Y="-804.068" Z="8.099142" />
+		
+		<!-- Auberdine Refugee Camp -->
+		<Vendor Name="Ullanna" Entry="4194" Type="Food" X="6284.94" Y="264.16" Z="18.22316" />
+		<Vendor Name="Elisa Steelhand" Entry="33231" Type="Repair" X="6270.868" Y="263.5678" Z="18.21701" />
 	</Vendors>
 
 <!-- Quest Overrides -->
@@ -50,6 +56,17 @@
 		</CollectFrom>
 		<Hotspots>
 			<Hotspot X="6633.344" Y="-119.0439" Z="34.97572" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Name="Call Down the Thunder" Id="13558" >
+	<Objective Type="CollectItem" ItemId="44929" CollectCount="1" >
+		<CollectFrom>
+			<Mob Name="Weakened Aetherion" Id="33042" />
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="6454.721" Y="653.2641" Z="21.70151" />
 		</Hotspots>
 	</Objective>
 </Quest>
@@ -371,6 +388,96 @@
 		</Else>
 		</If>
 	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Mist's Edge Quests" LogColor="CornflowerBlue" />
+
+<!-- The Twilight's Hammer/Twilight Plans -->
+	<PickUp QuestName="The Twilight's Hammer" QuestId="13519" GiverName="Sentinel Lendra" GiverId="32912" />
+	<PickUp QuestName="Twilight Plans" QuestId="13596" GiverName="Sentinel Lendra" GiverId="32912" />
+	<Objective QuestName="Twilight Plans" QuestId="13596" Type="CollectItem" ItemId="44968" CollectCount="6" />
+	<Objective QuestName="The Twilight's Hammer" QuestId="13519" Type="KillMob" MobId="32899" KillCount="1" />
+	<Objective QuestName="The Twilight's Hammer" QuestId="13519" Type="KillMob" MobId="32888" KillCount="10" />
+	<PickUp QuestName="Power Over the Tides" QuestId="13523" GiverName="Moon Priestess Tharill" GiverId="32932" />
+	<CustomBehavior File="InteractWith" QuestId="13523" MobId="32890" InteractByUsingItemId="44975" MobState="Dead" NumOfTimes="100" 
+		NonCompeteDistance="1" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="500" Range="20" MinRange="7" >
+		<HuntingGrounds>
+			<Hotspot X="6933.246" Y="144.752" Z="3.665087" />
+			<Hotspot X="7005.205" Y="135.0523" Z="9.665775" />
+			<Hotspot X="7041.917" Y="189.5441" Z="0.2249664" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<TurnIn QuestName="Power Over the Tides" QuestId="13523" TurnInName="Moon Priestess Tharill" TurnInId="32932" />
+	<TurnIn QuestName="The Twilight's Hammer" QuestId="13519" TurnInName="Sentinel Lendra" TurnInId="32912" />
+	<TurnIn QuestName="Twilight Plans" QuestId="13596" TurnInName="Sentinel Lendra" TurnInId="32912" />
+	
+	<If Condition="!HasQuest(13601) &amp;&amp; !IsQuestCompeted(13601)" >
+		<PickUp QuestName="In Aid of the Refugees" QuestId="13601" GiverName="Sentinel Lendra" GiverId="32912" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
+	<TurnIn QuestName="In Aid of the Refugees" QuestId="13601" TurnInName="Priestess Alinya" TurnInId="33107" />
+	
+	<CustomBehavior File="Message" Text="Compiling Auberdine Refugee Camp Quests" LogColor="CornflowerBlue" />
+	
+<!-- Three Hammers to Break/Coaxing the Spirits -->
+	<PickUp QuestName="Three Hammers to Break" QuestId="13543" GiverName="Corvine Moonrise" GiverId="32987" />
+	<PickUp QuestName="Malfurion's Return" QuestId="13573" GiverName="Corvine Moonrise" GiverId="32987" />
+	<PickUp QuestName="Against the Wind" QuestId="13542" GiverName="Sentinel Selarin" GiverId="3694" />
+	<PickUp QuestName="Coaxing the Spirits" QuestId="13547" GiverName="Yalda" GiverId="6887" />
+	<Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32988" KillCount="1" />
+	<CustomBehavior File="InteractWith" QuestId="13547" QuestObjectiveIndex="2" NumOfTimes="10" MobId="33033" InteractByGossipOptions="1"
+		NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" X="6436.236" Y="375.3557" Z="3.979487" />
+	<Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32989" KillCount="1" />
+	<Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32990" KillCount="1" />
+
+	<CustomBehavior File="InteractWith" QuestId="13547" QuestObjectiveIndex="1" NumOfTimes="10" MobId="33001" InteractByGossipOptions="1"
+		NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" X="6524.696" Y="469.1445" Z="7.188893" />
+	<CustomBehavior File="InteractWith" QuestId="13547" QuestObjectiveIndex="3" NumOfTimes="10" MobId="33035" InteractByGossipOptions="1"
+		NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" X="6415.244" Y="524.4853" Z="23.27206" />
+	<CustomBehavior File="InteractWith" QuestId="13547" QuestObjectiveIndex="4" NumOfTimes="10" MobId="33037" InteractByGossipOptions="1"
+		NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" X="6329.693" Y="553.7067" Z="12.69338" />
+	<TurnIn QuestName="Coaxing the Spirits" QuestId="13547" TurnInName="Yalda" TurnInId="6887" />
+	<PickUp QuestName="Call Down the Thunder" QuestId="13558" GiverName="Yalda" GiverId="6887" />
+
+<!-- Against the Wind -->
+	<While Condition="HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)" >
+		<CustomBehavior File="CollectThings" QuestId="13542" MobId="32985" CollectItemId="44868" CollectItemCount="8" NonCompeteDistance="1"
+			HuntingGroundRadius="200" >
+			<Hotspot X="6343.333" Y="422.1218" Z="12.30734" />
+			<Hotspot X="6356.488" Y="502.062" Z="14.10477" />
+			<Hotspot X="6432.915" Y="484.8564" Z="24.15659" />
+		</CustomBehavior>
+		<If Condition="HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542) &amp;&amp; HasItem(44868)" >
+			<RunTo X="6408.583" Y="466.687" Z="17.07074" />
+			<While Condition="HasItem(44868) &amp;&amp; !IsQuestCompleted(13542)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(44868)" WaitTime="1000" />
+			</While>
+		</If>
+	</While>
+	
+<!-- Call Down the Thunder -->
+	<CustomBehavior File="InteractWith" QuestId="13558" MobId="194145" NonCompeteDistance="0" WaitTime="45000" 
+		ProactiveCombatStrategy="ClearMobsTargetingUs" X="6455.277" Y="653.5797" Z="21.84925" />
+	<Objective QuestName="Call Down the Thunder" QuestId="13558" Type="CollectItem" ItemId="44929" CollectCount="1" />
+
+<!-- The Last Refugee -->
+	<If Condition="!HasQuest(13605) &amp;&amp; !IsQuestCompleted(13605)" >
+		<CustomBehavior File="Message" Text="Picking up The Last Refugee quest. May take a minute, as NPC may be in motion." LogColor="CornflowerBlue" />
+	</If>
+	<PickUp QuestName="The Last Refugee" QuestId="13605" GiverName="Archaeologist Hollee" GiverId="33232" />
+	<CustomBehavior File="EscortGroup" QuestId="13605" EscortNpcId="33232" EscortCountMax="1" />
+	
+	<TurnIn QuestName="The Last Refugee" QuestId="13605" TurnInName="Elisa Steelhand" TurnInId="33231" />
+	<TurnIn QuestName="Three Hammers to Break" QuestId="13543" TurnInName="Corvine Moonrise" TurnInId="32987" />
+	<TurnIn QuestName="Call Down the Thunder" QuestId="13558" TurnInName="Corvine Moonrise" TurnInId="32987" />
+	<TurnIn QuestName="Against the Wind" QuestId="13542" TurnInName="Sentinel Selarin" TurnInId="3694" />
+	
+	<TurnIn QuestName="Malfurion's Return" QuestId="13573" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
+	<CustomBehavior File="Message" Text="Compiling Malfurion Stormrage Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="The Land is in Their Blood" QuestId="13575" GiverName="Malfurion Stormrage" GiverId="33091" />
+	<PickUp QuestName="The Last Wildkin" QuestId="13577" GiverName="Malfurion Stormrage" GiverId="33091" />
+	<PickUp QuestName="Protector of Ameth'Aran" QuestId="13579" GiverName="Malfurion Stormrage" GiverId="33091" />
 	
 	<CustomBehavior File="Message" Text="Darkshore Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
