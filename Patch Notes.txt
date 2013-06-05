@@ -2,6 +2,10 @@ Patch Notes
 
 6/4/13
 
+r313
+Quest Behaviors
+-- Various updates from CJ
+
 r312
 The Leveling Grind
 -- Redridge Mountains update - Level 20 checks, removed 1 quest for Loremaster future update
