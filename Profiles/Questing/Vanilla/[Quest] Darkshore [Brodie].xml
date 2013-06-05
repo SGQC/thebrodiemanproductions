@@ -479,6 +479,69 @@
 	<PickUp QuestName="The Last Wildkin" QuestId="13577" GiverName="Malfurion Stormrage" GiverId="33091" />
 	<PickUp QuestName="Protector of Ameth'Aran" QuestId="13579" GiverName="Malfurion Stormrage" GiverId="33091" />
 	
+	<TurnIn QuestName="The Last Wildkin" QuestId="13577" TurnInName="Aroom" TurnInId="33119" />
+
+<!-- Aroom's Farewell -->
+	<PickUp QuestName="Aroom's Farewell" QuestId="13578" GiverName="Aroom" GiverId="33119" />
+	<Objective QuestName="Aroom's Farewell" QuestId="13578" Type="CollectItem" ItemId="44960" CollectCount="8" />
+	<TurnIn QuestName="Aroom's Farewell" QuestId="13578" TurnInName="Aroom" TurnInId="33119" />
+
+<!-- Elune's Fire -->
+	<PickUp QuestName="Elune's Fire" QuestId="13582" GiverName="Aroom" GiverId="33119" />
+	<Objective QuestName="Elune's Fire" QuestId="13582" Type="CollectItem" ItemId="46692" CollectCount="1" />
+	<TurnIn QuestName="Elune's Fire" QuestId="13582" TurnInName="Aroom" TurnInId="33119" />
+	
+	<PickUp QuestName="The Wildkin's Oath" QuestId="13583" GiverName="Aroom" GiverId="33119" />
+	<TurnIn QuestName="The Wildkin's Oath" QuestId="13583" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
+	<TurnIn QuestName="Protector of Ameth'Aran" QuestId="13579" TurnInName="Selenn" TurnInId="33112" />
+
+<!-- Calming the Earth -->
+	<PickUp QuestName="Calming the Earth" QuestId="13584" GiverName="Selenn" GiverId="33112" />
+	<Objective QuestName="Calming the Earth" QuestId="13584" Type="KillMob" MobId="33083" KillCount="8" />
+	<TurnIn QuestName="Calming the Earth" QuestId="13584" TurnInName="Selenn" TurnInId="33112" />
+	
+	<PickUp QuestName="Sworn to Protect" QuestId="13585" GiverName="Selenn" GiverId="33112" />
+	<TurnIn QuestName="Sworn to Protect" QuestId="13585" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
+	<TurnIn QuestName="The Land Is in Their Blood" QuestId="13575" TurnInName="Elder Brownpaw" TurnInId="33117" />
+
+<!-- Mutual Aid -->
+	<PickUp QuestName="Mutual Aid" QuestId="13576" GiverName="Elder Brownpaw" GiverId="33117" />
+	<CustomBehavior File="InteractWith" QuestId="13576" MobId="32999" InteractByUsingItemId="44959" MobState="Dead" NumOfTimes="100" >
+		<HuntingGrounds>
+			<Hotspot X="5667.675" Y="395.2835" Z="5.344266" />
+			<Hotspot X="5611.163" Y="427.3829" Z="3.761294" />
+			<Hotspot X="5527.169" Y="415.5703" Z="2.626416" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<TurnIn QuestName="Mutual Aid" QuestId="13576" TurnInName="Elder Brownpaw" TurnInId="33117" />
+
+<!-- Soothing the Elements -->
+	<PickUp QuestName="Soothing the Elements" QuestId="13580" GiverName="Elder Brownpaw" GiverId="33117" />
+	<If Condition="HasQuest(13580) &amp;&amp; !IsQuestCompleted(13580)" >
+		<RunTo X="5526.241" Y="448.7385" Z="34.91965" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46546)" WaitTime="3000" />
+		<CustomBehavior File="EscortGroup" QuestId="13580" EscortNpcId="34367" EscortCountMax="1" EscortMaxFightDistance="5" EscortMaxFollowDistance="3" />
+	</If>
+	<TurnIn QuestName="Soothing the Elements" QuestId="13580" TurnInName="Elder Brownpaw" TurnInId="33117" />
+	
+	<PickUp QuestName="The Blackwood Pledge" QuestId="13581" GiverName="Elder Brownpaw" GiverId="33117" />
+	<TurnIn QuestName="The Blackwood Pledge" QuestId="13581" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
+	<PickUp QuestName="The Emerald Dream" QuestId="13586" GiverName="Malfurion Stormrage" GiverId="33091" />
+	<If Condition="HasQuest(13586) &amp;&amp; !Me.HasAura(65409)" >
+		<CustomBehavior File="InteractWith" MobId="195071" ProactiveCombatStrategy="ClearMobsTargetingUs" X="5765.291" Y="-154.3826" Z="13.77099" />
+	</If>
+	<TurnIn QuestName="The Emerald Dream" QuestId="13586" TurnInName="Thessera" TurnInId="33166" />
+	
+	<PickUp QuestName="The Waking Nightmare" QuestId="13587" GiverName="Thessera" GiverId="33166" />
+	<Objective QuestName="The Waking Nightmare" QuestId="13587" Type="CollectItem" ItemId="46695" CollectCount="1" />
+	<TurnIn QuestName="The Waking Nightmare" QuestId="13587" TurnInName="Thessera" TurnInId="33166" />
+	
+	<PickUp QuestName="Leaving The Dream" QuestId="13940" GiverName="Thessera" GiverId="33166" />
+	<TurnIn QuestName="Leaving The Dream" QuestId="13940" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
 	<CustomBehavior File="Message" Text="Darkshore Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	
