@@ -45,6 +45,9 @@
 		<!-- Auberdine Refugee Camp -->
 		<Vendor Name="Ullanna" Entry="4194" Type="Food" X="6284.94" Y="264.16" Z="18.22316" />
 		<Vendor Name="Elisa Steelhand" Entry="33231" Type="Repair" X="6270.868" Y="263.5678" Z="18.21701" />
+		
+		<!-- Grove of the Ancients -->
+		<Vendor Name="Syleath Fairglade" Entry="43425" Type="Repair" X="5005.8" Y="86.941" Z="52.83877" />
 	</Vendors>
 
 <!-- Quest Overrides -->
@@ -541,6 +544,24 @@
 	
 	<PickUp QuestName="Leaving The Dream" QuestId="13940" GiverName="Thessera" GiverId="33166" />
 	<TurnIn QuestName="Leaving The Dream" QuestId="13940" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
+	<PickUp QuestName="The Eye of All Storms" QuestId="13588" GiverName="Malfurion Stormrage" GiverId="33091" />
+	<If Condition="HasQuest(13588) &amp;&amp; !IsQuestCompleted(13588)" >
+		<If Condition="!Me.IsOnTransport" >
+			<CustomBehavior File="InteractWith" MobId="34401" X="5900.882" Y="190.987" Z="62.61746" />
+		</If>
+		<CustomBehavior File="13588-EyeofAllStorms" />
+		<While Condition="Me.IsOnTransport" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		</While>
+	</If>
+	<TurnIn QuestName="The Eye of All Storms" QuestId="13588" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	
+	<PickUp QuestName="Mounting the Offensive" QuestId="13902" GiverName="Malfurion Stormrage" GiverId="33091" />
+	<If Condition="HasQuest(13902)" >
+		<TurnIn QuestName="Mounting the Offensive" QuestId="13902" TurnInName="Balren of the Claw" TurnInId="34402" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+	</If>
 	
 	<CustomBehavior File="Message" Text="Darkshore Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
