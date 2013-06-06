@@ -1,5 +1,13 @@
 Patch Notes
 
+6/6/12
+
+r314
+The Leveling Grind
+-- Darkshore updated (64 quests)
+Quest Behaviors
+-- New Darkshore Behaviors
+
 6/5/13
 
 r314
