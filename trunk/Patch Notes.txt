@@ -1,5 +1,15 @@
 Patch Notes
 
+6/7/13
+
+r315
+August Celestials
+-- Chasing Hope - Converted to use hotspots and mounting support
+Golden Pagoda Phase 2
+-- Burning Away the Filth - Removed While loop
+Quest Behaviors
+-- Updates from CJ
+
 6/6/12
 
 r314
