@@ -115,9 +115,18 @@
 		<CustomBehavior File="Message" Text="Starting Chasing Hope" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30716" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="-2590.545" Y="1261.589" Z="18.10288" />
-		<While Condition="!IsQuestCompleted(30716)" >
-			<CustomBehavior File="InteractWith" QuestId="30716" PreInteractMountStrategy="Mount" WaitForNpcs="False" MobId="60487" CollectionDistance="1000" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30716" MobId="60487" PreInteractMountStrategy="Mount" CollectionDistance="1000" 
+			NumOfTimes="1000" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+			<HuntingGrounds>
+				<Hotspot X="-2577.867" Y="1273.161" Z="19.63133" />
+				<Hotspot X="-2522.238" Y="1360.792" Z="24.68696" />
+				<Hotspot X="-2426.871" Y="1474.672" Z="14.25396" />
+				<Hotspot X="-2254.85" Y="1488.964" Z="15.28901" />
+				<Hotspot X="-2305.868" Y="1335.956" Z="28.74695" />
+				<Hotspot X="-2437.296" Y="1330.144" Z="22.37825" />
+				<Hotspot X="-2561.071" Y="1285.567" Z="21.84223" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- Gifts of the Great Crane -->
