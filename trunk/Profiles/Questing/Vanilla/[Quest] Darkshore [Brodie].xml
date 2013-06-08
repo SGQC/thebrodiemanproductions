@@ -1,5 +1,4 @@
 <HBProfile>
-
 	<Name>Darkshore Quest ($Rev$)</Name>
 
 	<MinLevel>10</MinLevel>
@@ -24,12 +23,16 @@
 	<AvoidMobs>
 		<Mob Name="Vile Terror" Entry="33864" />
 		<Mob Name="Aetherion" Entry="33041" />
+		<Mob Name="Faceless One" Entry="34413" />
 	</AvoidMobs>
 
 	<Blackspots>
 		<Blackspot X="6630.19" Y="-187.4851" Z="0.3904713" Radius="2.35758" />
 		<Blackspot X="7372.378" Y="-337.8942" Z="-1.231811" Radius="1.436166" />
 		<Blackspot X="7352.60" Y="-1109.83" Z="57.10" Radius="5" />
+		<Blackspot X="5002.517" Y="102.2977" Z="53.20249" Radius="1.685889" />
+		<Blackspot X="4652.052" Y="561.0186" Z="24.68328" Radius="3.966799" />
+		<Blackspot X="4629.637" Y="375.9908" Z="18.12226" Radius="6.017162" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -70,6 +73,14 @@
 		</CollectFrom>
 		<Hotspots>
 			<Hotspot X="6454.721" Y="653.2641" Z="21.70151" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Name="The Devourer of Darkshore" Id="13891" >
+	<Objective Type="KillMob" MobId="34331" KillCount="1" >
+		<Hotspots>
+			<Hotspot X="4814.261" Y="103.5591" Z="46.78885" />
 		</Hotspots>
 	</Objective>
 </Quest>
@@ -260,6 +271,10 @@
 	</If>
 	<TurnIn QuestName="An Ocean Not So Deep" QuestId="13560" TurnInName="Gorbold Steelhand" TurnInId="32979" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<CustomBehavior File="Message" Text="Compiling Ruins of Mathystra Quests" LogColor="CornflowerBlue" />
 	
 	<TurnIn QuestName="The Shatterspear Invaders" QuestId="13589" TurnInName="Lt. Morra Starbreeze" TurnInId="32963" />
@@ -281,6 +296,10 @@
 	<TurnIn QuestName="Reason To Worry" QuestId="13506" TurnInName="Lt. Morra Starbreeze" TurnInId="32963" />
 	<TurnIn QuestName="Shatterspear Laborers" QuestId="13504" TurnInName="Sentinel Tysha Moonblade" TurnInId="32965" />
 	<TurnIn QuestName="Remnants of the Highborne" QuestId="13505" TurnInName="Balthule Shadowstrike" TurnInId="32966" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 <!-- Denying Manpower/Swift Response/WarSupplies/One Bitter Wish -->
 	<PickUp QuestName="Denying Manpower" QuestId="13507" GiverName="Sentinel Tysha Moonblade" GiverId="32965" />
@@ -322,6 +341,10 @@
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 	</If>
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 <!-- Strategic Strikes/On The Brink/The Looting of Althalaxx -->
 	<PickUp QuestName="Strategic Strikes" QuestId="13512" GiverName="Lt. Morra Starbreeze" GiverId="32963" />
 	<PickUp QuestName="On The Brink" QuestId="13513" GiverName="Balthule Shadowstrike" GiverId="32966" />
@@ -340,6 +363,10 @@
 	<TurnIn QuestName="Strategic Strikes" QuestId="13512" TurnInName="Lt. Morra Starbreeze" TurnInId="32963" />
 	<TurnIn QuestName="On The Brink" QuestId="13513" TurnInName="Balthule Shadowstrike" TurnInId="32966" />
 	<TurnIn QuestName="The Looting of Althalaxx" QuestId="13844" TurnInName="Mathas Wildwood" TurnInId="34041" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Shatterspear Vale Quests" LogColor="CornflowerBlue" />
 	
@@ -368,6 +395,10 @@
 	<Objective QuestName="Ending The Threat" QuestId="13515" Type="KillMob" MobId="32862" KillCount="1" />
 	<TurnIn QuestName="Ending The Threat" QuestId="13515" TurnInName="Huntress Sandrya Moonfall" TurnInId="33178" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<If Condition="HasItem(46318) &amp;&amp; (!HasQuest(13591) &amp;&amp; !IsQuestCompleted(13591))" >
 		<PickUp QuestName="Disturbing Connections" QuestId="13591" GiverType="Item" GiverId="46318" />
 	</If>
@@ -392,6 +423,10 @@
 		</If>
 	</If>
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<CustomBehavior File="Message" Text="Compiling Mist's Edge Quests" LogColor="CornflowerBlue" />
 
 <!-- The Twilight's Hammer/Twilight Plans -->
@@ -413,11 +448,19 @@
 	<TurnIn QuestName="The Twilight's Hammer" QuestId="13519" TurnInName="Sentinel Lendra" TurnInId="32912" />
 	<TurnIn QuestName="Twilight Plans" QuestId="13596" TurnInName="Sentinel Lendra" TurnInId="32912" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<If Condition="!HasQuest(13601) &amp;&amp; !IsQuestCompeted(13601)" >
 		<PickUp QuestName="In Aid of the Refugees" QuestId="13601" GiverName="Sentinel Lendra" GiverId="32912" />
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 	</If>
 	<TurnIn QuestName="In Aid of the Refugees" QuestId="13601" TurnInName="Priestess Alinya" TurnInId="33107" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Auberdine Refugee Camp Quests" LogColor="CornflowerBlue" />
 	
@@ -474,9 +517,13 @@
 	<TurnIn QuestName="Call Down the Thunder" QuestId="13558" TurnInName="Corvine Moonrise" TurnInId="32987" />
 	<TurnIn QuestName="Against the Wind" QuestId="13542" TurnInName="Sentinel Selarin" TurnInId="3694" />
 	
-	<TurnIn QuestName="Malfurion's Return" QuestId="13573" TurnInName="Malfurion Stormrage" TurnInId="33091" />
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Malfurion Stormrage Quests" LogColor="CornflowerBlue" />
+	
+	<TurnIn QuestName="Malfurion's Return" QuestId="13573" TurnInName="Malfurion Stormrage" TurnInId="33091" />
 	
 	<PickUp QuestName="The Land is in Their Blood" QuestId="13575" GiverName="Malfurion Stormrage" GiverId="33091" />
 	<PickUp QuestName="The Last Wildkin" QuestId="13577" GiverName="Malfurion Stormrage" GiverId="33091" />
@@ -498,6 +545,10 @@
 	<TurnIn QuestName="The Wildkin's Oath" QuestId="13583" TurnInName="Malfurion Stormrage" TurnInId="33091" />
 	
 	<TurnIn QuestName="Protector of Ameth'Aran" QuestId="13579" TurnInName="Selenn" TurnInId="33112" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 
 <!-- Calming the Earth -->
 	<PickUp QuestName="Calming the Earth" QuestId="13584" GiverName="Selenn" GiverId="33112" />
@@ -519,6 +570,10 @@
 		</HuntingGrounds>
 	</CustomBehavior>
 	<TurnIn QuestName="Mutual Aid" QuestId="13576" TurnInName="Elder Brownpaw" TurnInId="33117" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 
 <!-- Soothing the Elements -->
 	<PickUp QuestName="Soothing the Elements" QuestId="13580" GiverName="Elder Brownpaw" GiverId="33117" />
@@ -545,6 +600,11 @@
 	<PickUp QuestName="Leaving The Dream" QuestId="13940" GiverName="Thessera" GiverId="33166" />
 	<TurnIn QuestName="Leaving The Dream" QuestId="13940" TurnInName="Malfurion Stormrage" TurnInId="33091" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- The Eye of All Storms -->
 	<PickUp QuestName="The Eye of All Storms" QuestId="13588" GiverName="Malfurion Stormrage" GiverId="33091" />
 	<If Condition="HasQuest(13588) &amp;&amp; !IsQuestCompleted(13588)" >
 		<If Condition="!Me.IsOnTransport" >
@@ -555,6 +615,7 @@
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
 		</While>
 	</If>
+	
 	<TurnIn QuestName="The Eye of All Storms" QuestId="13588" TurnInName="Malfurion Stormrage" TurnInId="33091" />
 	
 	<PickUp QuestName="Mounting the Offensive" QuestId="13902" GiverName="Malfurion Stormrage" GiverId="33091" />
@@ -562,6 +623,354 @@
 		<TurnIn QuestName="Mounting the Offensive" QuestId="13902" TurnInName="Balren of the Claw" TurnInId="34402" />
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 	</If>
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Grove of the Ancients Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="Consumed" QuestId="13881" GiverName="Kathrena Winterwisp" GiverId="34301" />
+	<PickUp QuestName="What's Happening to the Blackwood Furbolg?" QuestId="13525" GiverName="Foriel Broadleaf" GiverId="33250" />
+	<PickUp QuestName="Leave No Tracks" QuestId="13892" GiverName="Barlen of the Claw" GiverId="34402" />
+
+<!-- Consumed -->
+	<Objective QuestName="Consumed" QuestId="13881" Type="KillMob" MobId="34302" KillCount="6" />
+	<If Condition="HasQuest(13881) &amp;&amp; !IsObjectiveComplete(2, 13881)" >
+		<RunTo X="4806.347" Y="102.7527" Z="41.55762" />
+	</If>
+	<TurnIn QuestName="Consumed" QuestId="13881" TurnInName="Kathrena Winterwisp" TurnInId="34301" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- The Seeds of Life -->
+	<PickUp QuestName="The Seeds of Life" QuestId="13882" GiverName="Kathrena Winterwisp" GiverId="34301" />
+	<CustomBehavior File="InteractWith" QuestId="13882" QuestObjectiveIndex="1" MobId="33072" InteractByGossipOptions="1"
+		X="4994.493" Y="83.08939" Z="52.74683" />
+	<While Condition="HasQuest(13882) &amp;&amp; !IsObjectiveComplete(3, 13882)" >
+		<If Condition="!IsObjectiveComplete(3, 13882)" >
+			<RunTo X="4815.529" Y="303.6431" Z="44.46046" />
+			<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 34306 &amp;&amp; u.Distance &lt;= 20)" >
+			<CustomBehavior File="InteractWith" QuestId="13882" QuestObjectiveIndex="3" MobId="34306" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+				Range="5.8" CollectionDistance="4" />
+			</If>
+		</If>
+		<If Condition="!IsObjectiveComplete(3, 13882)" >
+			<RunTo X="4864.342" Y="333.5175" Z="35.20513" />
+			<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 34306 &amp;&amp; u.Distance &lt;= 20)" >
+			<CustomBehavior File="InteractWith" QuestId="13882" QuestObjectiveIndex="3" MobId="34306" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+				Range="5.8" CollectionDistance="4" />
+			</If>
+		</If>
+	</While>
+	<CustomBehavior File="InteractWith" QuestId="13882" QuestObjectiveIndex="2" MobId="195021" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="200" >
+		<HuntingGrounds>
+			<Hotspot X="4749.652" Y="617.3932" Z="0.2123956" />
+			<Hotspot X="4808.897" Y="555.4171" Z="0.1386139" />
+			<Hotspot X="4880.267" Y="572.2847" Z="2.938054" />
+			<Hotspot X="4953.552" Y="566.5378" Z="0.2170407" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<TurnIn QuestName="The Seeds of Life" QuestId="13882" TurnInName="Kathrena Winterwisp" TurnInId="34301" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- An Ounce of Prevention -->
+	<PickUp QuestName="An Ounce of Prevention" QuestId="13925" GiverName="Kathrena Winterwisp" GiverId="34301" />
+	<CustomBehavior File="InteractWith" QuestId="13925" MobId="2165" MobId2="34318" InteractByUsingItemId="46363" 
+		CollectionDistance="500" MobState="Alive" >
+		<HuntingGrounds>
+			<Hotspot X="4944.12" Y="377.2256" Z="26.64225" />
+			<Hotspot X="4980.869" Y="211.8967" Z="38.89149" />
+			<Hotspot X="5144.118" Y="215.6196" Z="33.43438" />
+			<Hotspot X="5055.976" Y="368.8969" Z="31.93844" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<TurnIn QuestName="An Ounce of Prevention" QuestId="13925" TurnInName="Kathrena Winterwisp" TurnInId="34301" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- In Defense of Darkshore -->
+	<PickUp QuestName="In Defense of Darkshore" QuestId="13885" GiverName="Kathrena Winterwisp" GiverId="34301" />
+	<While Condition="HasQuest(13885) &amp;&amp; !IsQuestCompleted(13885)" >
+		<If Condition="!Me.IsOnTransport" >
+			<CustomBehavior File="InteractWith" QuestId="13885" MobId="34392" InteractByGossipOptions="1" 
+				NonCompeteDistance="0" WaitTime="6000" X="4976.846" Y="143.5329" Z="51.2189" />
+		</If>
+		<CustomBehavior File="13885-DefenseOfDarkshore" />
+		<While Condition="HasQuest(13885) &amp;&amp; IsQuestCompleted(13885) &amp;&amp; Me.IsOnTransport" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		</While>
+	</While>
+	<TurnIn QuestName="In Defense of Darkshore" QuestId="13885" TurnInName="Kathrena Winterwisp" TurnInId="34301" />
+
+<!-- The Devourer of Darkshore -->
+	<PickUp QuestName="The Devourer of Darkshore" QuestId="13891" GiverName="Kathrena Winterwisp" GiverId="34301" />
+	<If Condition="HasQuest(13891) &amp;&amp; !IsQuestCompleted(13891)" >
+		<RunTo X="4827.251" Y="97.18374" Z="49.14325" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46370)" />
+		<Objective QuestName="The Devourer of Darkshore" QuestId="13891" Type="KillMob" MobId="34331" KillCount="1" />
+	</If>
+	<TurnIn QuestName="The Devourer of Darkshore" QuestId="13891" TurnInName="Kathrena Winterwisp" TurnInId="34301" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<TurnIn QuestName="What's Happening to the Blackwood Furbolg?" QuestId="13525" TurnInName="Elder Brolg" TurnInId="32967" />
+
+<!-- The Bear's Paw -->
+	<PickUp QuestName="The Bear's Paw" QuestId="13526" GiverName="Elder Brolg" GiverId="32967" />
+	<Objective QuestName="The Bear's Paw" QuestId="13526" Type="CollectItem" ItemId="44850" CollectCount="8" />
+	<TurnIn QuestName="The Bear's Paw" QuestId="13526" TurnInName="Elder Brolg" TurnInId="32967" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- The Bear's Blessing -->
+	<PickUp QuestName="The Bear's Blessing" QuestId="13544" GiverName="Elder Brolg" GiverId="32967" />
+	<If Condition="!HasItem(44886)" >
+		<CustomBehavior File="CollectThings" QuestId="13544" MobId="32997" CollectItemId="44886" CollectItemCount="1" 
+			HuntingGroundRadius="200" NonCompeteDistance="1" >
+			<Hotspot X="4824.984" Y="67.99879" Z="53.06134" />
+			<Hotspot X="4845.313" Y="137.359" Z="51.23596" />
+		</CustomBehavior>
+	</If>
+	<If Condition="HasItem(44886) &amp;&amp; !IsQuestCompleted(13544)" >
+		<RunTo X="4914.678" Y="89.8423" Z="53.88358" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(44888)" />
+	</If>
+	<TurnIn QuestName="The Bear's Blessing" QuestId="13544" TurnInName="Elder Brolg" TurnInId="32967" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- Cleansing the Afflicted/Jadefire Braziers -->
+	<PickUp QuestName="Cleansing the Afflicted" QuestId="13545" GiverName="Elder Brolg" GiverId="32967" />
+	<PickUp QuestName="Jadefire Braziers" QuestId="13572" GiverName="Gren Tornfur" GiverId="32968" />
+	<CustomBehavior File="InteractWith" QuestId="13572" MobId="194150" CollectionDistance="500" NonCompeteDistance="0" NumOfTimes="1000" >
+		<HuntingGrounds>
+			<Hotspot X="4637.255" Y="156.8403" Z="58.4544" />
+			<Hotspot X="4575.136" Y="133.0646" Z="58.84632" />
+			<Hotspot X="4593.315" Y="92.7533" Z="67.93819" />
+			<Hotspot X="4535.596" Y="87.06554" Z="65.9072" />
+			<Hotspot X="4487.177" Y="67.60831" Z="71.93296" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<CustomBehavior File="InteractWith" QuestId="13545" MobId="33044" MobId2="33043" InteractByUsingItemId="44889"
+		CollectionDistance="500" NonCompeteDistance="0" MobState="Alive" Range="20" MinRange="15" NumOfTimes="1000"	>
+		<HuntingGrounds>
+			<Hotspot X="4637.255" Y="156.8403" Z="58.4544" />
+			<Hotspot X="4575.136" Y="133.0646" Z="58.84632" />
+			<Hotspot X="4593.315" Y="92.7533" Z="67.93819" />
+			<Hotspot X="4535.596" Y="87.06554" Z="65.9072" />
+			<Hotspot X="4487.177" Y="67.60831" Z="71.93296" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<TurnIn QuestName="Cleansing the Afflicted" QuestId="13545" TurnInName="Elder Brolg" TurnInId="32967" />
+	<TurnIn QuestName="Jadefire Braziers" QuestId="13572" TurnInName="Gren Tornfur" TurnInId="32968" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- The Defiler -->
+	<PickUp QuestName="The Defiler" QuestId="13546" GiverName="Elder Brolg" GiverId="32967" />
+	<Objective QuestName="The Defiler" QuestId="13546" Type="KillMob" MobId="32996" KillCollect="1" />
+	<TurnIn QuestName="The Defiler" QuestId="13546" TurnInName="Elder Brolg" TurnInId="32967" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- Leave No Tracks -->
+	<While Condition="HasQuest(13892) &amp;&amp; !IsQuestCompleted(13892)" >
+		<CustomBehavior File="UserSettings" UseMount="False" PullDistance="0" />
+		<If Condition="!Me.HasAura(65426)" >
+			<RunTo X="4630.168" Y="334.3206" Z="18.99417" />
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46696)" />
+		</If>
+		<RunTo X="4581.678" Y="387.8666" Z="19.05211" />
+		<While Condition="!IsQuestCompleted(13892)" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		</While>
+	</While>
+	
+	<If Condition="HasQuest(13892) &amp;&amp; IsQuestCompleted(13892)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="13892" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+	</If>
+
+<!-- Stepping Up Surveillance -->
+	<While Condition="HasQuest(13948) &amp;&amp; !IsQuestCompleted(13948)" >
+		<CustomBehavior File="UserSettings" UseMount="False" PullDistance="0" />
+		<If Condition="!Me.HasAura(65426)" >
+			<RunTo X="4514.453" Y="332.7841" Z="59.00104" />
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46696)" WaitTime="1000" />
+		</If>
+		<RunTo X="4514.453" Y="332.7841" Z="59.00104" />
+		<If Condition="!Me.HasAura(65426)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46696)" WaitTime="1000" />
+		</If>
+		<RunTo X="4565.333" Y="435" Z="73.83829" />
+		<While Condition="!IsQuestCompleted(13948)" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		</While>
+		<CustomBehavior File="UserSettings" UseMount="True" PullDistance="25" />
+	</While>
+	<If Condition="HasQuest(13948) &amp;&amp; IsQuestCompleted(13948)" >
+		<CustomBehavior File="NoCombatMoveTo" X="4986.774" Y="90.19209" Z="52.8685" />
+	</If>
+	<TurnIn QuestName="Stepping Up Surveillance" QuestId="13948" TurnInName="Barlen of the Claw" TurnInId="34402" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Remtravel's Excavation Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="Unearthed Knowledge" QuestId="13896" GiverName="Larien" GiverId="34404" />
+	<TurnIn QuestName="Unearthed Knowledge" QuestId="13896" TurnInName="Archaeologist Groff" TurnInId="34340" />
+	
+	<PickUp QuestName="Sweeping Clean the Ruins" QuestId="13907" GiverName="Archaeologist Groff" GiverId="34340" />
+	<PickUp QuestName="Soggoth and Kronn" QuestId="13893" GiverName="Archaeologist Groff" GiverId="34340" />
+	<PickUp QuestName="Swamped Secrets" QuestId="13912" GiverName="Jr. Archaeologist Ferd" GiverId="34342" />
+	<PickUp QuestName="The Absent-Minded Prospector" QuestId="13911" GiverName="Prospector Remtravel" GiverId="34343" />
+	
+<!-- The Absent-Minded Prospector -->
+	<CustomBehavior File="EscortGroup" QuestId="13911" EscortNpcId="34343" CombatMaxEngagementRangeDistance="15" 
+		EscortMaxFollowDistance="10" EscortCountMax="1" />
+	<TurnIn QuestName="The Absent-Minded Prospector" QuestId="13911" TurnInName="Jr. Archaeologist Ferd" TurnInId="34342" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- Swamped Secrets/Sweeping Clean the Ruins -->
+	<Objective QuestName="Swamped Secrets" QuestId="13912" Type="CollectItem" ItemId="46386" CollectCount="1" />
+	<Objective QuestName="Sweeping Clean the Ruins" QuestId="13907" Type="KillMob" MobId="34344" KillCount="10" />
+	<TurnIn QuestName="Sweeping Clean the Ruins" QuestId="13907" TurnInName="Archaeologist Groff" TurnInId="34340" />
+	<TurnIn QuestName="Swamped Secrets" QuestId="13912" TurnInName="Jr. Archaeologist Ferd" TurnInId="34342" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- The Titan's Terminal/Got Some Flotsam? -->
+	<PickUp QuestName="The Titan's Terminal" QuestId="13918" GiverName="Jr. Archaeologist Ferd" GiverId="34342" />
+	<PickUp QuestName="Got Some Flotsam?" QuestId="13909" GiverName="Archaeologist Groff" GiverId="34340" />
+	<Objective QuestName="Got Some Flotsam?" QuestId="13909" Type="CollectItem" ItemId="46384" CollectCount="5" />
+	<While Condition="HasQuest(13918) &amp;&amp; !IsQuestCompleted(13918)" >
+		<If Condition="!IsQuestCompleted(13918)" >
+			<RunTo X="4714.408" Y="656.4237" Z="2.603395" />
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46388)" WaitTime="12000" />
+			<CustomBehavior File="CollectThings" QuestId="13918" MobId="195055" CollectItemId="46702" CollectItemCount="5"
+				CollectUntil="NoTargetsInArea" HuntingGroundRadius="40" NonCompeteDistance="1" />
+			<If Condition="GetItemCount(46702) &gt;= 5" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46702)" WaitTime="1000" />
+			</If>
+		</If>
+		<If Condition="!IsQuestCompleted(13918)" >
+			<RunTo X="4649.059" Y="698.8197" Z="4.512846" />
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46388)" WaitTime="12000" />
+			<CustomBehavior File="CollectThings" QuestId="13918" MobId="195055" CollectItemId="46702" CollectItemCount="5"
+				CollectUntil="NoTargetsInArea" HuntingGroundRadius="40" NonCompeteDistance="1" />
+			<If Condition="GetItemCount(46702) &gt;= 5" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46702)" WaitTime="1000" />
+			</If>
+		</If>
+		<If Condition="!IsQuestCompleted(13918)" >
+			<RunTo X="4607.306" Y="688.6744" Z="12.82716" />
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46388)" WaitTime="12000" />
+			<CustomBehavior File="CollectThings" QuestId="13918" MobId="195055" CollectItemId="46702" CollectItemCount="5"
+				CollectUntil="NoTargetsInArea" HuntingGroundRadius="40" NonCompeteDistance="1" />
+			<If Condition="GetItemCount(46702) &gt;= 5" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46702)" WaitTime="1000" />
+			</If>
+		</If>
+	</While>
+	<TurnIn QuestName="Got Some Flotsam?" QuestId="13909" TurnInName="Archaeologist Groff" TurnInId="34340" />
+	<TurnIn QuestName="The Titan's Terminal" QuestId="13918" TurnInName="Jr. Archaeologist Ferd" TurnInId="34342" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- A New Home -->
+	<PickUp QuestName="A New Home" QuestId="13910" GiverName="Archaeologist Groff" GiverId="34340" />
+	<If Condition="HasQuest(13910) &amp;&amp; !IsQuestCompleted(13910)" >
+		<RunTo X="4690.229" Y="691.5045" Z="1.446722" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46385)" />
+	</If>
+	<TurnIn QuestName="A New Home" QuestId="13910" TurnInName="Archaeologist Groff" TurnInId="34340" />
+	
+	<TurnIn QuestName="Soggoth and Kronn" QuestId="13893" TurnInName="Larien" TurnInId="34404" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Nazj'vel Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="The Slumbering Ancients" QuestId="13895" GiverName="Onu" GiverId="33072" />
+	<TurnIn QuestName="The Slumbering Ancients" QuestId="13895" TurnInName="Aros" TurnInId="34446" />
+	
+	<PickUp QuestName="Naga In Our Midst" QuestId="13953" GiverName="Darkscale Assassin" GiverId="34498" />
+	<TurnIn QuestName="Naga In Our Midst" QuestId="13953" TurnInName="Balren of the Claw" TurnInId="34402" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+
+<!-- The Tides Turn Against Us/The Darkscale Warlord -->
+	<PickUp QuestName="The Darkscale Warlord" QuestId="13899" GiverName="Balren of the Claw" GiverId="34402" />
+	<PickUp QuestName="The Tides Turn Against Us" QuestId="13898" GiverName="Felros" GiverId="34403" />
+	<If Condition="HasQuest(13899)" >
+		<CustomBehavior File="InteractWith" MobId="34423" MobState="Dead" X="4543.063" Y="930.6397" Z="-37.41565" />
+		<TurnIn QuestName="The Darkscale Warlord" QuestId="13899" TurnInName="Warlord Wrathspine" TurnInId="34423" />
+		<PickUp QuestName="The Offering to Azshara" QuestId="13900" GiverName="Warlord Wrathspine" GiverId="34423" />
+	</If>
+	
+	<If Condition="!HasQuest(13900) &amp;&amp; !IsQuestCompleted(13900)" >
+		<CustomBehavior File="InteractWith" MobId="34423" MobState="Dead" X="4543.063" Y="930.6397" Z="-37.41565" />
+		<PickUp QuestName="The Offering to Azshara" QuestId="13900" GiverName="Warlord Wrathspine" GiverId="34423" />
+	</If>
+
+<!-- The Offering to Azshara -->
+	<CustomBehavior File="CollectThings" QuestId="13900" MobId="34415" MobState="Alive" CollectUntil="QuestComplete" NonCompeteDistance="1" X="4597.776" Y="891.5303" Z="40.06009" />
+	<If Condition="HasQuest(13900)&amp;&amp; IsQuestCompleted(13900)" >
+		<CustomBehavior File="WaitTimer" WaitTime="50000" />
+		<CustomBehavior File="InteractWith" MobId="34422" />
+		<If Condition="Me.Class == WoWClass.Hunter || Me.Class == WoWClass.Rogue || Me.Class == WoWClass.Monk || Me.Class == WoWClass.Druid" >
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(4)" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+		<ElseIf Condition="Me.Class == WoWClass.Priest || Me.Class == WoWClass.Mage || Me.Class == WoWClass.Warlock" >
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(1)" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+		</ElseIf>
+		<ElseIf Condition="Me.Class == WoWClass.Warrior || Me.Class == WoWClass.Paladin" >
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(3)" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+		</ElseIf>
+		<Else>
+			<CustomBehavior File="RunMacro" Macro="/script GetQuestReward(4)" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+		</Else>
+		</If>
+	</If>
+	
+	<Objective QuestName="The Tides Turn Against Us" QuestId="13898" Type="KillMob" MobId="33079" KillCount="8" />
+	<TurnIn QuestName="The Tides Turn Against Us" QuestId="13898" TurnInName="Felros" TurnInId="34403" />
 	
 	<CustomBehavior File="Message" Text="Darkshore Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
