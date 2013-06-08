@@ -2,6 +2,12 @@ Patch Notes
 
 6/8/13
 
+r318
+Ihgaluk Crag
+-- Deconstructed - QuestObjectiveIndex added to remove If/While
+-- Deconstructed - NonCompeteDistance of 0 added to ignore other PCs
+-- Deconstructed - CombatStrategy tweaked to ignore combat (should be in Saurok form)
+
 r317
 The Level Grind
 -- Darkshore Completed -- 90 quests

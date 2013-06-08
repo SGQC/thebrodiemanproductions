@@ -247,39 +247,27 @@
 	<If Condition="HasQuest(32255) &amp;&amp; !IsQuestCompleted(32255)" >
 		<CustomBehavior File="Message" Text="Starting Deconstructed" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32255" UseMount="False" LootMobs="True" KillBetweenHotspots="False" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(32255)" >
-			<If Condition="!IsObjectiveComplete(4,32255)" >
-				<RunTo X="6166.83" Y="5728.69" Z="5.85" />
-				<If Condition="Me.HasAura(136461)" >
-					<CustomBehavior File="Misc\RunLua" Lua="local n=GetSpellInfo(136461); CancelUnitBuff(&quot;player&quot;,n)" />
-				</If>
-				<CustomBehavior File="InteractWith" MobId="69289" QuestId="32255" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(1,32255)" >
-				<RunTo X="5893.066" Y="5827.657" Z="21.64524" />
-				<CustomBehavior File="InteractWith" MobId="69287" QuestId="32255" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<If Condition="!IsObjectiveComplete(2,32255)" >
-				<RunTo X="5635.40" Y="5441.19" Z="2.31" />
-				<CustomBehavior File="InteractWith" MobId="69288" QuestId="32255" WaitForNpcs="False" WaitTime="1000" />
-			</If>
-			<While Condition="!IsObjectiveComplete(3,32255)" >
-				<CustomBehavior File="InteractWith" MobId="69290" QuestId="32255" CollectionDistance="1000" WaitTime="1000" >
-					<HuntingGrounds>
-						<Hotspot X="5839.262" Y="5590.107" Z="40.07038" />
-						<Hotspot X="5705.648" Y="5629.287" Z="14.65259" />
-						<Hotspot X="5626.132" Y="5522.049" Z="3.948158" />
-						<Hotspot X="5695.5" Y="5429.003" Z="3.434925" />
-						<Hotspot X="5845.18" Y="5325.857" Z="5.576776" />
-						<Hotspot X="5913.124" Y="5398.176" Z="33.1066" />
-						<Hotspot X="6011.305" Y="5437.688" Z="39.40099" />
-						<Hotspot X="6106.173" Y="5532.547" Z="68.11538" />
-						<Hotspot X="5973.005" Y="5588.532" Z="41.45647" />
-						<Hotspot X="5914.528" Y="5639.815" Z="44.99718" />
-					</HuntingGrounds>
-				</CustomBehavior>
-			</While>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="32255" QuestObjectiveIndex="4" MobId="69289" NumOfTimes="1000" WaitTime="1000" 
+			ProactiveCombatStrategy="NoClear" NonCompeteDistance="0" X="6166.83" Y="5728.69" Z="5.85" />
+		<CustomBehavior File="InteractWith" QuestId="32255" QuestObjectiveIndex="1" MobId="69287" NumOfTimes="1000" WaitTime="1000" 
+			ProactiveCombatStrategy="NoClear" NonCompeteDistance="0" X="5893.066" Y="5827.657" Z="21.64524" />
+		<CustomBehavior File="InteractWith" QuestId="32255" QuestObjectiveIndex="2" MobId="69288" WaitTime="1000" NumOfTimes="1000"
+			ProactiveCombatStrategy="NoClear" NonCompeteDistance="0" X="5635.40" Y="5441.19" Z="2.31" />
+		<CustomBehavior File="InteractWith" QuestId="32255" QuestObjectiveIndex="3" MobId="69290" CollectionDistance="1000" NumOfTimes="1000" 
+			ProactiveCombatStrategy="NoClear" NonCompeteDistance="0" WaitTime="1000" >
+			<HuntingGrounds>
+				<Hotspot X="5839.262" Y="5590.107" Z="40.07038" />
+				<Hotspot X="5705.648" Y="5629.287" Z="14.65259" />
+				<Hotspot X="5626.132" Y="5522.049" Z="3.948158" />
+				<Hotspot X="5695.5" Y="5429.003" Z="3.434925" />
+				<Hotspot X="5845.18" Y="5325.857" Z="5.576776" />
+				<Hotspot X="5913.124" Y="5398.176" Z="33.1066" />
+				<Hotspot X="6011.305" Y="5437.688" Z="39.40099" />
+				<Hotspot X="6106.173" Y="5532.547" Z="68.11538" />
+				<Hotspot X="5973.005" Y="5588.532" Z="41.45647" />
+				<Hotspot X="5914.528" Y="5639.815" Z="44.99718" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 	
 <!-- Left To Rot -->
