@@ -1,0 +1,67 @@
+<HBProfile>
+
+	<Name>($Rev$)</Name>
+	<MinLevel>4</MinLevel>
+	<MaxLevel>15</MaxLevel>
+
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<TargetElites>False</TargetElites>
+
+	<AvoidMobs>
+	</AvoidMobs>
+
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+		<Mailbox X="9500.135" Y="-6842.25" Z="16.40702" />
+	</Mailboxes>
+
+	<Vendors>
+		<!-- Falconwing Square -->
+		<Vendor Name="Sleyin" Entry="18926" Type="Repair" X="9482.344" Y="-6805.512" Z="16.4937" />
+		<Vendor Name="Kyrenna" Entry="18929" Type="Food" X="9552.017" Y="-6825.112" Z="16.49393" />
+	</Vendors>
+
+<!-- Quest Overrides -->
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsAlliance">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(8463) &amp;&amp; !IsQuestCompleted(8463)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Eversong Woods Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<CustomBehavior File="Message" Text="Compiling Falconwing Square Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="Unstable Mana Crystals" QuestId="8463" GiverName="Aeldon Sunbrand" GiverId="15403" />
+	<PickUp QuestName="Wanted: Thaelis the Hungerer" QuestId="8468" GiverType="Object" GiverName="Wanted: Thaelis the Hungerer" 
+		GiverId="180918" X="9521.192" Y="-6860.127" Z="18.72193" />
+	<PickUp QuestName="Major Malfunction" QuestId="8472" GiverName="Magister Jaronis" GiverId="15418" />
+
+	<CustomBehavior File="Message" Text="Eversong Woods Quests Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>

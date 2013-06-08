@@ -2,6 +2,13 @@ Patch Notes
 
 6/8/13
 
+r319
+The Level Grind
+-- Blood Elf Starter Added
+-- Eversong Woods Added - Partial
+-- The Level Grind updated to support Blood Elf Starter
+-- The Level Grind updated to support Eversong Woods
+
 r318
 Ihgaluk Crag
 -- Deconstructed - QuestObjectiveIndex added to remove If/While
