@@ -2,6 +2,14 @@ Patch Notes
 
 6/9/13
 
+r323
+The Level Grind
+-- Added Ashenvale - Partial
+-- Bloodmyst Isle - Corrected Item Ids for "Leaving Isle" item deletions
+-- Eversong Woods Filled (most likely complete)
+Quest Behaviors
+-- Added TaxiRide for forced flights
+
 r322
 Profile Swapper
 -- Name change to separate from Profile Changer

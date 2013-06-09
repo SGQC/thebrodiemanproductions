@@ -39,6 +39,9 @@
 		<!-- Fairbreeze Village -->
 		<Vendor Name="Halis Dawnstrider" Entry="16444" Type="Food" X="8731.693" Y="-6656.498" Z="70.58613" />
 		<Vendor Name="Sathiel" Entry="16261" Type="Repair" X="8692.212" Y="-6639.568" Z="72.74725" />
+		<!-- Farstrider Retreat -->
+		<Vendor Name="Paelarin" Entry="16263" Type="Repair" X="8983.74" Y="-7443.48" Z="87.07597" />
+		<Vendor Name="Zalene Firstlight" Entry="16443" Type="Food" X="8990.876" Y="-7462.583" Z="86.68652" />
 	</Vendors>
 
 <!-- Quest Overrides -->
@@ -64,6 +67,22 @@
 		</CollectFrom>
 		<Hotspots>
 			<Hotspot X="9288.754" Y="-6656.354" Z="31.83179" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest QuestName="Lost Armaments" QuestId="8480" >
+	<Objective Type="CollectItem" ItemId="22413" CollectCount="8" >
+		<CollectFrom>
+			<GameObject Name="Weapon Container" Id="181107" />
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="8727.127" Y="-6020.813" Z="7.572158" />
+			<Hotspot X="8713.812" Y="-6072.044" Z="13.22209" />
+			<Hotspot X="8691.811" Y="-6102.394" Z="17.0581" />
+			<Hotspot X="8749.129" Y="-6101.317" Z="20.04753" />
+			<Hotspot X="8723.976" Y="-6153.951" Z="14.02361" />
+			<Hotspot X="8757.019" Y="-6197.975" Z="11.64304" />
 		</Hotspots>
 	</Objective>
 </Quest>
@@ -174,8 +193,45 @@
 	<TurnIn QuestName="Defending Fairbreeze Village" QuestId="9252" TurnInName="Ranger Sareyn" TurnInId="15942" />
 
 	<PickUp QuestName="Runewarden Deryan" QuestId="9253" GiverName="Ranger Sareyn" GiverId="15942" />
-	
+
+<!-- Pelt Collection -->
 	<Objective QuestName="Pelt Collection" QuestId="8491" Type="CollectItem" ItemId="20772" CollectCount="6" />
+	<TurnIn QuestName="Pelt Collection" QuestId="8491" TurnInName="Velan Brightoak" TurnInId="15417" />
+	
+	<TurnIn QuestName="Saltheril's Haven" QuestId="9395" TurnInName="Lord Saltheril" TurnInId="16144" />
+	
+	<PickUp QuestName="Grimscale Pirates!" QuestId="8886" GiverName="Captain Kelisendra" GiverId="15921" />
+	<PickUp QuestName="Lost Armaments" QuestId="8480" GiverName="Velendris Whitemorn" GiverId="15404" />
+	
+	<Objective QuestName="Lost Armaments" QuestId="8480" Type="CollectItem" ItemId="22413" CollectCount="8" />
+	<Objective QuestName="Situation at Sunsail Anchorage" QuestId="8892" Type="KillMob" MobId="15645" KillCount="5" />
+	<Objective QuestName="Situation at Sunsail Anchorage" QuestId="8892" Type="KillMob" MobId="16162" KillCount="5" />
+	
+	<Objective QuestName="Grimscale Pirates!" QuestId="8886" Type="CollectItem" ItemId="21771" CollectCount="6" />
+	<If Condition="HasItem(21776)" >
+		<PickUp QuestName="Captain Kelisendra's Lost Rutters" QuestId="8887" GiverType="Item" GiverId="21776" />
+	</If>
+	<TurnIn QuestName="Grimscale Pirates!" QuestId="8886" TurnInName="Captain Kelisendra" TurnInId="15921" />
+	<If Condition="HasQuest(8887)" >
+		<TurnIn QuestName="Captain Kelisendra's Lost Rutters" QuestId="8887" TurnInName="Captain Kelisendra" TurnInId="15921" />
+	</If>
+	<TurnIn QuestName="Lost Armaments" QuestId="8480" TurnInName="Velendris Whitemorn" TurnInId="15404" />
+	
+	<PickUp QuestName="Wretched Ringleader" QuestId="9076" GiverName="Velendris Whitemorn" GiverId="15404" />
+	<CustomBehavior File="CollectThings" QuestId="9076" MobId="16294" MobState="Alive" CollectItemId="22487" CollectItemCount="1" X="8757.638" Y="-6101.254" Z="73.08946" />
+	<TurnIn QuestName="Wretched Ringleader" QuestId="9076" TurnInName="Velendris Whitemorn" TurnInId="15404" />
+	
+	<TurnIn QuestName="Situation at Sunsail Anchorage" QuestId="8892" TurnInName="Ranger Degolien" TurnInId="15939" />
+	
+	<PickUp QuestName="Farstrider Retreat" QuestId="9359" GiverName="Ranger Degolien" GiverId="15939" />
+	
+	<TurnIn QuestName="The Wayward Apprentice" QuestId="9254" TurnInName="Apprentice Mirveda" TurnInId="15402" />
+	
+	<PickUp QuestName="Corrupted Soil" QuestId="8487" GiverName="Apprentice Mirveda" GiverId="15402" />
+	<Objective QuestName="Corrupted Soil" QuestId="8487" Type="CollectItem" ItemId="20771" CollectCount="8" />
+	<TurnIn QuestName="Corrupted Soil" QuestId="8487" TurnInName="Apprentice Mirveda" TurnInId="15402" />
+	
+	<TurnIn QuestName="Farstrider Retreat" QuestId="9359" TurnInName="Lieutenant Dawnrunner" TurnInId="15399" />
 	
 	<CustomBehavior File="Message" Text="Eversong Woods Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
