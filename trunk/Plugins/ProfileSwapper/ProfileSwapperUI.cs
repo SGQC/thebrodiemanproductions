@@ -25,35 +25,32 @@ using Styx.WoWInternals.WoWObjects;
 using Styx.Plugins;
 using Styx.Pathing;
 
-namespace ProfileChanger
+namespace ProfileSwapper
 {
-	public partial class ProfileChangerUI : Form
+	public partial class ProfileSwapperUI : Form
 	{
-	   
-				
-		public ProfileChangerUI()
-
+		public ProfileSwapperUI()
 		{
 			InitializeComponent();
-			CB1.Checked = ProfileChanger.Settings.Active1;
-			CB2.Checked = ProfileChanger.Settings.Active2;
-			CB3.Checked = ProfileChanger.Settings.Active3;
-			CB4.Checked = ProfileChanger.Settings.Active4;
-			CB5.Checked = ProfileChanger.Settings.Active5;
-			CB6.Checked = ProfileChanger.Settings.Active6;
-			CB7.Checked = ProfileChanger.Settings.Active7;
-			CB8.Checked = ProfileChanger.Settings.Active8;
-			CB9.Checked = ProfileChanger.Settings.Active9;
-			CB10.Checked = ProfileChanger.Settings.Active10;
-			CB11.Checked = ProfileChanger.Settings.Active11;
-			CB12.Checked = ProfileChanger.Settings.Active12;
+			CB1.Checked = ProfileSwapper.Settings.Active1;
+			CB2.Checked = ProfileSwapper.Settings.Active2;
+			CB3.Checked = ProfileSwapper.Settings.Active3;
+			CB4.Checked = ProfileSwapper.Settings.Active4;
+			CB5.Checked = ProfileSwapper.Settings.Active5;
+			CB6.Checked = ProfileSwapper.Settings.Active6;
+			CB7.Checked = ProfileSwapper.Settings.Active7;
+			CB8.Checked = ProfileSwapper.Settings.Active8;
+			CB9.Checked = ProfileSwapper.Settings.Active9;
+			CB10.Checked = ProfileSwapper.Settings.Active10;
+			CB11.Checked = ProfileSwapper.Settings.Active11;
+			CB12.Checked = ProfileSwapper.Settings.Active12;
 
-			if (ProfileChanger.Settings.DGProfile == "C:\\dailygrind.xml")
+			if (ProfileSwapper.Settings.DGProfile == "C:\\[Rep] Daily Grind [Brodie].xml")
 			{
-				Logging.Write(Colors.Red, "Profile Changer: You must select select your DailyGrind [Brodie].xml file. Commonly located in BrodieMan\\Profiles\\Reputation\\TMoPDE");
+				Logging.Write(Colors.Red, "Profile Swapper: You must select select your [Rep] Daily Grind [Brodie].xml file. Commonly located in BrodieMan\\Profiles\\Reputation\\TMoPDE");
 			}
 
-			if (ProfileChanger.Settings.DGProfile != "C:\\dailygrind.xml")
+			if (ProfileSwapper.Settings.DGProfile != "C:\\[Rep] Daily Grind [Brodie].xml")
 			{
 				CB1.Enabled = true;
 				CB2.Enabled = true;
@@ -69,8 +66,7 @@ namespace ProfileChanger
 				//CB12.Enabled = true;
 			}
 
-			DG.Text = ProfileChanger.Settings.DGProfile;
-
+			DG.Text = ProfileSwapper.Settings.DGProfile;
 
 			// Check for Alliance Shieldwall - Disable Dominance
 			if (StyxWoW.Me.IsAlliance)
@@ -97,22 +93,12 @@ namespace ProfileChanger
 			tb10.Text = Convert.ToString(StyxWoW.Me.GetReputationLevelWith(1341));
 			tb11.Text = "N/A";
 			tb12.Text = "N/A";
-
-			// Rep checks can be handled by Profiles. Just a test to see if it would work. Might be useful in some cases.
-			// Check for Rep for ShadoPan
-			//if (StyxWoW.Me.GetReputationLevelWith(1269) < WoWUnitReaction.Revered)
-			//{
-			//	CB7.Enabled = false;
-			//	CB7.Checked = false;
-			//}
-
 		}
-
 
 		private void BSave_Click(object sender, EventArgs e)
 		{
 			//----------------- Save Configfile and set Settings ---------------- 
-			string Folder = "Plugins\\ProfileChanger\\config\\";
+			string Folder = "Settings\\";
 
 			XmlDocument xml;
 			XmlElement root;
@@ -123,91 +109,77 @@ namespace ProfileChanger
 			string sPath = Process.GetCurrentProcess().MainModule.FileName;
 			sPath = Path.GetDirectoryName(sPath);
 
+			ProfileSwapper.Settings.Active1 = CB1.Checked;
+			ProfileSwapper.Settings.Active2 = CB2.Checked;
+			ProfileSwapper.Settings.Active3 = CB3.Checked;
+			ProfileSwapper.Settings.Active4 = CB4.Checked;
+			ProfileSwapper.Settings.Active5 = CB5.Checked;
+			ProfileSwapper.Settings.Active6 = CB6.Checked;
+			ProfileSwapper.Settings.Active7 = CB7.Checked;
+			ProfileSwapper.Settings.Active8 = CB8.Checked;
+			ProfileSwapper.Settings.Active9 = CB9.Checked;
+			ProfileSwapper.Settings.Active10 = CB10.Checked;
+			ProfileSwapper.Settings.Active11 = CB11.Checked;
+			ProfileSwapper.Settings.Active12 = CB12.Checked;
 
-			ProfileChanger.Settings.Active1 = CB1.Checked;
-			ProfileChanger.Settings.Active2 = CB2.Checked;
-			ProfileChanger.Settings.Active3 = CB3.Checked;
-			ProfileChanger.Settings.Active4 = CB4.Checked;
-			ProfileChanger.Settings.Active5 = CB5.Checked;
-			ProfileChanger.Settings.Active6 = CB6.Checked;
-			ProfileChanger.Settings.Active7 = CB7.Checked;
-			ProfileChanger.Settings.Active8 = CB8.Checked;
-			ProfileChanger.Settings.Active9 = CB9.Checked;
-			ProfileChanger.Settings.Active10 = CB10.Checked;
-			ProfileChanger.Settings.Active11 = CB11.Checked;
-			ProfileChanger.Settings.Active12 = CB12.Checked;
+			ProfileSwapper.Settings.DGProfile = DG.Text;
 
-			ProfileChanger.Settings.DGProfile = DG.Text;
-
-			ProfileChanger.Settings.dirName = Path.GetDirectoryName(ProfileChanger.Settings.DGProfile);
+			ProfileSwapper.Settings.dirName = Path.GetDirectoryName(ProfileSwapper.Settings.DGProfile);
 
 			//Golden lotus, tillers, cloud serpent, anglers, landfall (DomOff or Shieldwall, one will choose other so you can load either), 
 			//Klaxxi, Shadopan, isle of thunder (same as landfall load either) isle of thunder pvp (placeholder) August Celestials. I'm making the pvp this will make it super easy to swap.
 
-			
-			ProfileChanger.Settings.Profile1 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Golden Lotus Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile2 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Tillers Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile3 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Cloud Serpent Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile4 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] The Anglers Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile5 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Shieldwall [Brodie].xml");
-			ProfileChanger.Settings.Profile6 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] The Klaxxi Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile7 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Shado Pan Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile1 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Golden Lotus Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile2 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Tillers Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile3 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Cloud Serpent Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile4 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] The Anglers Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile5 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Shieldwall [Brodie].xml");
+			ProfileSwapper.Settings.Profile6 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] The Klaxxi Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile7 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Shado Pan Dailies [Brodie].xml");
 			if (StyxWoW.Me.IsAlliance)
 			{
-				ProfileChanger.Settings.Profile8 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder A [Brodie].xml");
-				ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder PvP A [Brodie].xml");
+				ProfileSwapper.Settings.Profile8 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Isle of Thunder A [Brodie].xml");
+				ProfileSwapper.Settings.Profile9 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Isle of Thunder PvP A [Brodie].xml");
 			}
 			if (StyxWoW.Me.IsHorde)
 			{
-				ProfileChanger.Settings.Profile8 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder H [Brodie].xml");
-				ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Isle of Thunder PvP H [Brodie].xml");
+				ProfileSwapper.Settings.Profile8 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Isle of Thunder H [Brodie].xml");
+				ProfileSwapper.Settings.Profile9 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] Isle of Thunder PvP H [Brodie].xml");
 			}
-			ProfileChanger.Settings.Profile10 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] August Celestials Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile11 = Path.Combine(ProfileChanger.Settings.dirName, "");
-			ProfileChanger.Settings.Profile12 = Path.Combine(ProfileChanger.Settings.dirName, "");
-			/*
-			ProfileChanger.Settings.Profile1 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Golden Lotus Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile2 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Tillers Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile3 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Cloud Serpent Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile4 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] The Anglers Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile5 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] The Klaxxi Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile6 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Shado Pan Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile7 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] August Celestials Dailies [Brodie].xml");
-			ProfileChanger.Settings.Profile8 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Shieldwall [Brodie].xml");
-			ProfileChanger.Settings.Profile9 = Path.Combine(ProfileChanger.Settings.dirName, "[Rep] Dominance [Brodie].xml");
-			 */
-			// Auto load correct Isle of Thunder
+			ProfileSwapper.Settings.Profile10 = Path.Combine(ProfileSwapper.Settings.dirName, "[Rep] August Celestials Dailies [Brodie].xml");
+			ProfileSwapper.Settings.Profile11 = Path.Combine(ProfileSwapper.Settings.dirName, "");
+			ProfileSwapper.Settings.Profile12 = Path.Combine(ProfileSwapper.Settings.dirName, "");
 
-			ProfileChanger.Settings.Profile11 = "";
-			ProfileChanger.Settings.Profile12 = "";
+			ProfileSwapper.Settings.Profile11 = "";
+			ProfileSwapper.Settings.Profile12 = "";
 
 			// ---------- Save XML-Config-File ---------------------------- 
 			sPath = Path.Combine(sPath, Folder);
 
 			if (!Directory.Exists(sPath))
 			{
-				Logging.Write(Colors.LightSkyBlue, "Profile Changer: Creating config directory");
+				Logging.Write(Colors.LightSkyBlue, "Profile Swapper: Creating config directory");
 				Directory.CreateDirectory(sPath);
 			}
 
-			sPath = Path.Combine(sPath, "ProfileChanger.config");
+			sPath = Path.Combine(sPath, StyxWoW.Me.RealmName, StyxWoW.Me.Name, "ProfileSwapper.config");
 
-			Logging.Write(Colors.LightSkyBlue, "Profile Changer: Saving config file: {0}", sPath);
-			Logging.Write(Colors.LightSkyBlue, "Profile Changer: Settings Saved");
+			Logging.Write(Colors.LightSkyBlue, "Profile Swapper: Saving config file: {0}", sPath);
+			Logging.Write(Colors.LightSkyBlue, "Profile Swapper: Settings Saved");
 			xml = new XmlDocument();
 			XmlDeclaration dc = xml.CreateXmlDeclaration("1.0", "utf-8", null);
 			xml.AppendChild(dc);
 
 			xmlComment = xml.CreateComment(
 				"=======================================================================\n" +
-				".CONFIG  -  This is the Config File For ProfileChanger\n\n" +
-				"XML file containing settings to customize in the ProfileChanger Plugin\n" +
+				".CONFIG  -  This is the Config File For ProfileSwapper\n\n" +
+				"XML file containing settings to customize in the ProfileSwapper Plugin\n" +
 				"It is STRONGLY recommended you use the Configuration UI to change this\n" +
-				"file instead of direct changein it here.\n" +
+				"file instead of direct changing it here.\n" +
 				"========================================================================");
 
 			//let's add the root element
-			root = xml.CreateElement("ProfileChanger");
+			root = xml.CreateElement("ProfileSwapper");
 			root.AppendChild(xmlComment);
 
 			//let's add another element (child of the root)
@@ -218,7 +190,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile1");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile1.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile1.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -230,7 +202,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile2");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile2.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile2.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -242,7 +214,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile3");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile3.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile3.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -254,7 +226,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile4");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile4.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile4.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -266,7 +238,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile5");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile5.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile5.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -278,7 +250,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile6");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile6.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile6.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -290,7 +262,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile7");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile7.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile7.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -302,7 +274,7 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile8");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile8.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile8.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
@@ -314,10 +286,9 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile9");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile9.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile9.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
-
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Active10");
@@ -327,10 +298,9 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile10");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile10.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile10.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
-
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Active11");
@@ -340,10 +310,9 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile11");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile11.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile11.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
-
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Active12");
@@ -353,23 +322,21 @@ namespace ProfileChanger
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile12");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile12.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile12.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("Profile12");
-			text = xml.CreateTextNode(ProfileChanger.Settings.Profile12.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.Profile12.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
 
 			//let's add another element (child of the root)
 			element = xml.CreateElement("DGProfile");
-			text = xml.CreateTextNode(ProfileChanger.Settings.DGProfile.ToString());
+			text = xml.CreateTextNode(ProfileSwapper.Settings.DGProfile.ToString());
 			element.AppendChild(text);
 			root.AppendChild(element);
-
-
 
 			xml.AppendChild(root);
 
@@ -384,7 +351,6 @@ namespace ProfileChanger
 			{
 				Logging.Write(Colors.Red, np.Message);
 			}
-
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -421,7 +387,7 @@ namespace ProfileChanger
 			}
 		}
 
-		private void ProfileChangerUI_Load(object sender, EventArgs e)
+		private void ProfileSwapperUI_Load(object sender, EventArgs e)
 		{
 
 		}
@@ -430,11 +396,5 @@ namespace ProfileChanger
 		{
 
 		}
-
-
-
-
-
-
 	}
 }
