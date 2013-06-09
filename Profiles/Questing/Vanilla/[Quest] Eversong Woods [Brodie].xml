@@ -38,6 +38,19 @@
 	</Vendors>
 
 <!-- Quest Overrides -->
+<Quest Id="8472" Name="Major Malfunction" >
+	<Objective Type="CollectItem" ItemId="21808" CollectCount="6" >
+		<CollectFrom>
+			<Mob Name="Arcane Patroller" Id="15638" />
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="9774.053" Y="-6727.989" Z="0.06079133" />
+			<Hotspot X="9757.738" Y="-6814.75" Z="15.1751" />
+			<Hotspot X="9816.181" Y="-6806.507" Z="14.89831" />
+			<Hotspot X="9887.765" Y="-6770.129" Z="12.01179" />
+		</Hotspots>
+	</Objective>
+</Quest>
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -51,14 +64,63 @@
 	</If>
 
 	<CustomBehavior File="Message" Text="Compiling Eversong Woods Quests" LogColor="Green" />
-	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="20" />
 	
 	<CustomBehavior File="Message" Text="Compiling Falconwing Square Quests" LogColor="CornflowerBlue" />
-	
+
+<!-- Unstable Mana Crystals/Wanted: Thaelis the Hungerer/Major Malfunction -->
 	<PickUp QuestName="Unstable Mana Crystals" QuestId="8463" GiverName="Aeldon Sunbrand" GiverId="15403" />
 	<PickUp QuestName="Wanted: Thaelis the Hungerer" QuestId="8468" GiverType="Object" GiverName="Wanted: Thaelis the Hungerer" 
 		GiverId="180918" X="9521.192" Y="-6860.127" Z="18.72193" />
 	<PickUp QuestName="Major Malfunction" QuestId="8472" GiverName="Magister Jaronis" GiverId="15418" />
+	<Objective QuestName="Unstable Mana Crystals" QuestId="8463" Type="CollectItem" ItemId="20743" CollectCount="6" />
+	<Objective QuestName="Wanted: Thaelis the Hungerer" QuestId="8468" Type="CollectItem" ItemId="21781" CollectCount="1" />
+	<Objective QuestName="Major Malfunction" QuestId="8472" Type="CollectItem" ItemId="21808" CollectCount="6" />
+	<TurnIn QuestName="Major Malfunction" QuestId="8472" TurnInName="Magister Jaronis" TurnInId="15418" />
+	<TurnIn QuestName="Wanted: Thaelis the Hungerer" QuestId="8468" TurnInName="Sergeant Kan'ren" TurnInId="16924" />
+	<TurnIn QuestName="Unstable Mana Crystals" QuestId="8463" TurnInName="Aeldon Sunbrand" TurnInId="15403" />
+	
+	<PickUp QuestName="Darnassian Intrusions" QuestId="9352" GiverName="Aeldon Sunbrand" GiverId="15403" />
+	<PickUp QuestName="Delivery to the North Sanctum" QuestId="8895" GiverName="Magister Jaronis" GiverId="15418" />
+	<TurnIn QuestName="Delivery to the North Sanctum" QuestId="8895" TurnInName="Ley-Keeper Caidanis" TurnInId="15405" />
+	
+	<PickUp QuestName="Malfunction at the West Sanctum" QuestId="9119" GiverName="Ley-Keeper Caidanis" GiverId="15405" />
+	<PickUp QuestName="Roadside Ambush" QuestId="9035" GiverName="Apprentice Ralen" GiverId="15941" />
+	<TurnIn QuestName="Roadside Ambush" QuestId="9035" TurnInName="Apprentice Meledor" TurnInId="15945" />
+
+<!-- Soaked Pages -->
+	<PickUp QuestName="Soaked Pages" QuestId="9062" GiverName="Apprentice Meledor" GiverId="15945" />
+	<Objective QuestName="Soaked Pages" QuestId="9062" Type="CollectItem" ItemId="22414" CollectCount="1" />
+	<TurnIn QuestName="Soaked Pages" QuestId="9062" TurnInName="Apprentice Meledor" TurnInId="15945" />
+	
+	<PickUp QuestName="Taking the Fall" QuestId="9064" GiverName="Apprentice Meledor" GiverId="15945" />
+	<TurnIn QuestName="Taking the Fall" QuestId="9064" TurnInName="Instructor Antheol" TurnInId="15970" />
+
+<!-- Swift Discipline -->
+	<PickUp QuestName="Swift Discipline" QuestId="9066" GiverName="Instructor Antheol" GiverId="15970" />
+	<CustomBehavior File="InteractWith" QuestId="9066" QuestObjectiveIndex="2" MobId="15941" InteractByUsingItemId="22473"
+		Range="10" MinRange="5" X="9187.997" Y="-6719.933" Z="26.03933" />
+	<CustomBehavior File="InteractWith" QuestId="9066" QuestObjectiveIndex="1" MobId="15945" InteractByUsingItemId="22473"
+		Range="10" MinRange="5" X="9038.511" Y="-6700.229" Z="12.76909" />
+	<TurnIn QuestName="Swift Discipline" QuestId="9066" TurnInName="Instructor Antheol" TurnInId="15970" />
+
+	<TurnIn QuestName="Malfunction at the West Sanctum" QuestId="9119" TurnInName="Ley-Keeper Velania" TurnInId="15401" />
+	<PickUp QuestName="Arcane Instability" QuestId="8486" GiverName="Ley-Keeper Velania" GiverId="15401" />
+	
+<!-- Darnassian Intrusions/Arcane Instability/Incriminating Documents -->
+	<Objective QuestName="Darnassian Intrusions" QuestId="9352" Type="KillMob" MobId="15968" KillCount="1" />
+	<If Condition="HasItem(20765)" >
+		<PickUp QuestName="Incriminating Documents" QuestId="8482" GiverType="Item" GiverId="20765" />
+	</If>
+	<Objective QuestName="Arcane Instability" QuestId="8486" Type="KillMob" MobId="15648" KillCount="5" />
+	<Objective QuestName="Arcane Instability" QuestId="8486" Type="KillMob" MobId="15647" KillCount="5" />
+	<TurnIn QuestName="Darnassian Intrusions" QuestId="9352" TurnInName="Ley-Keeper Velania" TurnInId="15401" />
+	<TurnIn QuestName="Arcane Instability" QuestId="8486" TurnInName="Ley-Keeper Velania" TurnInId="15401" />
+	<If Condition="HasQuest(8482)" >
+		<TurnIn QuestName="Incriminating Documents" QuestId="8482" TurnInName="Aeldon Sunbrand" TurnInId="15403" />
+	</If>
+	
+	<PickUp QuestName="The Dwarven Spy" QuestId="8483" GiverName="Aeldon Sunbrand" GiverId="15403" />
 
 	<CustomBehavior File="Message" Text="Eversong Woods Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
