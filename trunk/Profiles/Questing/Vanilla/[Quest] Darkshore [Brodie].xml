@@ -113,8 +113,7 @@
 	</If>
 	
 	<If Condition="Me.ZoneId == 141 &amp;&amp; (Me.Z &lt; 100)" >
-		<RunTo X="8380.85" Y="982.09" Z="30.65" />
-		<CustomBehavior File="UserSettings" UseFlightPaths="True" />
+		<CustomBehavior File="TaxiRide" MobId="3838" TaxiNumber="1" />
 	</If>
 	
 <!-- The Last Wave of Survivors/Threat From the Water -->

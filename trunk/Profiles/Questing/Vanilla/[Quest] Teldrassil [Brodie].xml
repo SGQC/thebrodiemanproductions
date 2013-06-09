@@ -1,23 +1,23 @@
 <HBProfile>
 
-<Name>Teldrassil Quests ($Rev$)</Name>
-<MinLevel>1</MinLevel>
-<MaxLevel>15</MaxLevel>
+	<Name>Teldrassil Quests ($Rev$)</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>15</MaxLevel>
 
-<MinDurability>0.2</MinDurability>
-<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
 
-<MailGrey>False</MailGrey>
-<MailWhite>True</MailWhite>
-<MailGreen>True</MailGreen>
-<MailBlue>True</MailBlue>
-<MailPurple>True</MailPurple>
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
 
-<SellGrey>True</SellGrey>
-<SellWhite>True</SellWhite>
-<SellGreen>True</SellGreen>
-<SellBlue>False</SellBlue>
-<SellPurple>False</SellPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
 
 <AvoidMobs>
 	<Mob Name="Training Dummy" Entry="44614" /> <!-- Shadowglen -->
