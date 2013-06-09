@@ -1,6 +1,6 @@
 <HBProfile>
 
-	<Name>($Rev$)</Name>
+	<Name>Eversong Woods ($Rev$)</Name>
 	<MinLevel>4</MinLevel>
 	<MaxLevel>15</MaxLevel>
 
@@ -29,15 +29,20 @@
 
 	<Mailboxes>
 		<Mailbox X="9500.135" Y="-6842.25" Z="16.40702" />
+		<Mailbox X="8719.927" Y="-6665.389" Z="70.21574" />
 	</Mailboxes>
 
 	<Vendors>
 		<!-- Falconwing Square -->
 		<Vendor Name="Sleyin" Entry="18926" Type="Repair" X="9482.344" Y="-6805.512" Z="16.4937" />
 		<Vendor Name="Kyrenna" Entry="18929" Type="Food" X="9552.017" Y="-6825.112" Z="16.49393" />
+		<!-- Fairbreeze Village -->
+		<Vendor Name="Halis Dawnstrider" Entry="16444" Type="Food" X="8731.693" Y="-6656.498" Z="70.58613" />
+		<Vendor Name="Sathiel" Entry="16261" Type="Repair" X="8692.212" Y="-6639.568" Z="72.74725" />
 	</Vendors>
 
 <!-- Quest Overrides -->
+
 <Quest Id="8472" Name="Major Malfunction" >
 	<Objective Type="CollectItem" ItemId="21808" CollectCount="6" >
 		<CollectFrom>
@@ -51,6 +56,18 @@
 		</Hotspots>
 	</Objective>
 </Quest>
+
+<Quest QuestName="The Dwarven Spy" QuestId="8483" >
+	<Objective Type="CollectItem" ItemId="20764" CollectCount="1" >
+		<CollectFrom>
+			<Mob Name="Prospector Anvilward" Id="15420" />
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="9288.754" Y="-6656.354" Z="31.83179" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -119,9 +136,47 @@
 	<If Condition="HasQuest(8482)" >
 		<TurnIn QuestName="Incriminating Documents" QuestId="8482" TurnInName="Aeldon Sunbrand" TurnInId="15403" />
 	</If>
-	
-	<PickUp QuestName="The Dwarven Spy" QuestId="8483" GiverName="Aeldon Sunbrand" GiverId="15403" />
 
+<!-- The Dwarven Spy -->
+	<PickUp QuestName="The Dwarven Spy" QuestId="8483" GiverName="Aeldon Sunbrand" GiverId="15403" />
+	<If Condition="HasQuest(8483) &amp;&amp; !IsQuestCompleted(8483)" >
+		<CustomBehavior File="InteractWith" QuestId="8483" MobId="15420" InteractByGossipOptions="1,1" 
+			NonCompeteDistance="0" X="9294.647" Y="-6683.676" Z="22.42652" />
+		<RunTo X="9288.754" Y="-6656.354" Z="31.83179" />
+		<Objective QuestName="The Dwarven Spy" QuestId="8483" Type="CollectItem" ItemId="20764" CollectCount="1" />
+	</If>
+	<TurnIn QuestName="The Dwarven Spy" QuestId="8483" TurnInName="Aeldon Sunbrand" TurnInId="15403" />
+	
+	<PickUp QuestName="Fairbreeze Village" QuestId="9256" GiverName="Aeldon Sunbrand" GiverId="15403" />
+	<If Condition="HasQuest(9256)" >
+		<CustomBehavior File="SetHearthstone" MobId="15397" X="8700.38" Y="-6638.36" Z="72.75" />
+		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<TurnIn QuestName="Fairbreeze Village" QuestId="9256" TurnInName="Ranger Degolien" TurnInId="15939" />
+	</If>
+	
+	<CustomBehavior File="Message" Text="Compiling Fairbreeze Village Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="Situation at Sunsail Anchorage" QuestId="8892" GiverName="Ranger Degolien" GiverId="15939" />
+	<PickUp QuestName="Saltheril's Haven" QuestId="9395" GiverName="Magistrix Landra Dawnstrider" GiverId="16210" />
+	<PickUp QuestName="The Wayward Apprentice" QuestId="9254" GiverName="Magistrix Landra Dawnstrider" GiverId="16210" />
+	<PickUp QuestName="The Scorched Grove" QuestId="9258" GiverName="Ardeyn Riverwind" GiverId="16397" />
+	<PickUp QuestName="Ranger Sareyn" QuestId="9358" GiverName="Marniel Amberlight" GiverId="15397" />
+	<PickUp QuestName="Goods from Silvermoon City" QuestId="9130" GiverName="Sathiel" GiverId="16261" />
+	<PickUp QuestName="Pelt Collection" QuestId="8491" GiverName="Velan Brightoak" GiverId="15417" />
+	
+	<TurnIn QuestName="Goods from Silvermoon City" QuestId="9130" TurnInName="Skymaster Brightdawn" TurnInId="44036" />
+	<TurnIn QuestName="Ranger Sareyn" QuestId="9358" TurnInName="Ranger Sareyn" TurnInId="15942" />
+
+<!-- Defending Fairbreeze Village -->
+	<PickUp QuestName="Defending Fairbreeze Village" QuestId="9252" GiverName="Ranger Sareyn" GiverId="15942" />
+	<Objective QuestName="Defending Fairbreeze Village" QuestId="9252" Type="KillMob" MobId="15658" KillCount="4" />
+	<Objective QuestName="Defending Fairbreeze Village" QuestId="9252" Type="KillMob" MobId="15657" KillCount="4" />
+	<TurnIn QuestName="Defending Fairbreeze Village" QuestId="9252" TurnInName="Ranger Sareyn" TurnInId="15942" />
+
+	<PickUp QuestName="Runewarden Deryan" QuestId="9253" GiverName="Ranger Sareyn" GiverId="15942" />
+	
+	<Objective QuestName="Pelt Collection" QuestId="8491" Type="CollectItem" ItemId="20772" CollectCount="6" />
+	
 	<CustomBehavior File="Message" Text="Eversong Woods Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		

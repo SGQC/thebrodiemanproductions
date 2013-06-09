@@ -1,5 +1,13 @@
 Patch Notes
 
+6/9/13
+
+r322
+Profile Swapper
+-- Name change to separate from Profile Changer
+-- Updated code cleanup, much smaller
+-- Fixed the always need to save bug. Will now run all profiles intended from start.
+
 6/8/13
 
 r321

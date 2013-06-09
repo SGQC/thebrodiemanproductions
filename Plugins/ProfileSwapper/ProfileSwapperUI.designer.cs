@@ -16,7 +16,6 @@ using System.Windows.Media;
 using System.Net;
 using System.Globalization;
 
-
 using Styx;
 using Styx.Common;
 using Styx.CommonBot;
@@ -26,9 +25,9 @@ using Styx.WoWInternals.WoWObjects;
 using Styx.Plugins;
 using Styx.Pathing;
 
-namespace ProfileChanger
+namespace ProfileSwapper
 {
-	partial class ProfileChangerUI
+	partial class ProfileSwapperUI
 	{
 		/// <summary>
 		/// Erforderliche Designervariable.
@@ -512,7 +511,7 @@ namespace ProfileChanger
 			this.label16.TabIndex = 45;
 			this.label16.Text = "Select your profiles:";
 			// 
-			// ProfileChangerUI
+			// ProfileSwapperUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -560,9 +559,9 @@ namespace ProfileChanger
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Name = "ProfileChangerUI";
-			this.Text = "Profile Changer";
-			this.Load += new System.EventHandler(this.ProfileChangerUI_Load);
+			this.Name = "ProfileSwapperUI";
+			this.Text = "Profile Swapper";
+			this.Load += new System.EventHandler(this.ProfileSwapperUI_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
