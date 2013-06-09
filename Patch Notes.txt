@@ -2,6 +2,10 @@ Patch Notes
 
 6/8/13
 
+r321
+The Level Grind
+-- Changed quest completion check to make sure we turned it in as well as just finished it.
+
 r320
 The Level Grind
 -- Eversong Woods Updated
