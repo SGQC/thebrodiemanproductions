@@ -450,9 +450,7 @@
 		<CustomBehavior File="InteractWith" QuestId="31128" QuestObjectiveIndex="1" NumOfTimes="100" MobId="62978" InteractByGossipOptions="1" PreInteractDismountStrategy="Dismount" X="1803.88" Y="4247.88" Z="148.80" />
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(31128)" >
-			<CustomBehavior File="InteractWith" QuestId="31128" WaitForNpcs="False" MobId="63135" InteractByGossipOptions="1" X="1959.65" Y="4175.24" Z="138.47" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="31128" MobId="63135" InteractByGossipOptions="1" NumOfTimes="100" X="1959.65" Y="4175.24" Z="138.47" />
 		<CustomBehavior File="FlyTo" X="1831.925" Y="4258.577" Z="149.2426" />
 		<CustomBehavior File="ForcedDismount" />
 		<TurnIn QuestName="The Challenger's Ring: Lao-Chin the Iron Belly" QuestId="31128" TurnInName="Master Snowdrift" TurnInId="63009" />
@@ -465,9 +463,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31221" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1842.04" Y="4264.08" Z="148.88" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsObjectiveComplete(1,31221)" >
-			<CustomBehavior File="InteractWith" MobId="63616" InteractByGossipOptions="1" X="1830.88" Y="4271.50" Z="149.08" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="31221" QuestObjectiveIndex="1" MobId="63616" InteractByGossipOptions="1" NumOfTimes="100" X="1830.88" Y="4271.50" Z="149.08" />
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31221)" >
@@ -485,9 +481,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31220" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1842.04" Y="4264.08" Z="148.88" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsObjectiveComplete(1,31220)" >
-			<CustomBehavior File="InteractWith" MobId="63618" InteractByGossipOptions="1" X="1842.04" Y="4264.08" Z="148.88" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="31220" QuestObjectiveIndex="1" MobId="63618" InteractByGossipOptions="1" NumOfTimes="100" X="1842.04" Y="4264.08" Z="148.88" />
 		<CustomBehavior File="FlyTo" X="1946.56" Y="4194.15" Z="138.47" />
 		<CustomBehavior File="ForcedDismount" />
 		<While Condition="!IsQuestCompleted(31220)" >
@@ -567,17 +561,17 @@
 			<If Condition="!IsObjectiveComplete(1, 30201)" >
 				<CustomBehavior File="FlyTo" X="2510.26" Y="6041.46" Z="55.22" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64461" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64461" ProactiveCombatStrategy="NoClear" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(2, 30201)" >
 				<CustomBehavior File="FlyTo" X="2381.62" Y="6078.68" Z="54.32" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64460" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64460" ProactiveCombatStrategy="NoClear" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(3, 30201)" >
 				<CustomBehavior File="FlyTo" X="2336.98" Y="6065.93" Z="54.23" />
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64459" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" WaitForNpcs="False" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" QuestId="31201" MobId="64459" ProactiveCombatStrategy="NoClear" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" WaitForNpcs="False" />
 			</If>
 		</While>
 		<CustomBehavior File="FlyTo" X="2491.74" Y="5949.21" Z="91.05" />
@@ -590,30 +584,26 @@
 		<If Condition="!IsObjectiveComplete(2,31199)" >
 			<CustomBehavior File="FlyTo" X="2450.843" Y="5500.398" Z="83.84156" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="!IsObjectiveComplete(2,31199)" >
-				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" QuestId="31199" MobId="213308" CollectionDistance="200" X="2460.637" Y="5504.174" Z="82.54575" />
-			</While>
+			<CustomBehavior File="InteractWith" QuestId="31199" QuestObjectiveIndex="2" IgnoreCombat="True" MobId="213308" 
+				NumOfTimes="100" CollectionDistance="200" X="2460.637" Y="5504.174" Z="82.54575" />
 		</If>
 		<If Condition="!IsObjectiveComplete(1,31199)" >
 			<CustomBehavior File="FlyTo" X="2510.925" Y="5609.593" Z="71.19161" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="!IsObjectiveComplete(1,31199)" >
-				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" QuestId="31199" MobId="213307" CollectionDistance="200" X="2506.641" Y="5599.797" Z="70.86126" />
-			</While>
+			<CustomBehavior File="InteractWith" QuestId="31199" QuestObjectiveIndex="1" IgnoreCombat="True" MobId="213307" 
+				NumOfTimes="100" CollectionDistance="200" X="2506.641" Y="5599.797" Z="70.86126" />
 		</If>
 		<If Condition="!IsObjectiveComplete(3,31199)" >
 			<CustomBehavior File="FlyTo" X="2971.075" Y="5517.408" Z="62.43878" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="!IsObjectiveComplete(3,31199)" >
-				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" QuestId="31199" MobId="213310" CollectionDistance="200" X="2983.526" Y="5517.333" Z="62.43768" />
-			</While>
+			<CustomBehavior File="InteractWith" QuestId="31199" QuestObjectiveIndex="3" IgnoreCombat="True" MobId="213310"
+				NumOfTimes="100" CollectionDistance="200" X="2983.526" Y="5517.333" Z="62.43768" />
 		</If>
 		<If Condition="!IsObjectiveComplete(4,31199)" >
 			<CustomBehavior File="FlyTo" X="3034.689" Y="5576.127" Z="75.41873" />
 			<CustomBehavior File="ForcedDismount"/>
-			<While Condition="!IsObjectiveComplete(4,31199)" >
-				<CustomBehavior File="InteractWith" IgnoreCombat="True" WaitForNpcs="False" QuestId="31199" MobId="213311" CollectionDistance="200" X="3029.808" Y="5582.784" Z="75.59239" />
-			</While>
+			<CustomBehavior File="InteractWith" QuestId="31199" QuestObjectiveIndex="4" IgnoreCombat="True" MobId="213311"
+				NumOfTimes="100" CollectionDistance="200" X="3029.808" Y="5582.784" Z="75.59239" />
 		</If>
 	</If>
 
