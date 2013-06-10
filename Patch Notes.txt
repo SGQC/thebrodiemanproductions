@@ -2,6 +2,11 @@ Patch Notes
 
 6/10/13
 
+r325
+Profile Swapper
+-- Removed more redundant code
+-- Corrected "skip to the end" bug
+
 r324
 August Celestials
 -- In Battle's Shadow - Cleanup on IW code, flight support, smarter on mob pulls
