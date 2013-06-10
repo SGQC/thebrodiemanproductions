@@ -171,23 +171,13 @@
 		<CustomBehavior File="UserSettings" QuestId="30958" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="2240.42" Y="4726.178" Z="146.8373" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30958)" >
-			<If Condition="!IsQuestCompleted(30958)" >
-				<CustomBehavior File="FlyTo" X="2135.29" Y="4736.10" Z="155.08" />
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
-			</If>
-			<If Condition="!IsQuestCompleted(30958)" >
-				<CustomBehavior File="FlyTo" X="2229.70" Y="4605.89" Z="155.08" />
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
-			</If>
-			<If Condition="!IsQuestCompleted(30958)" >
-				<CustomBehavior File="FlyTo" X="2369.13" Y="4696.05" Z="155.09" />
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" WaitForNpcs="False" WaitTime="1000" CollectionDistance="25" NumOfTimes="4" />
-			</If>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30958" MobId="211752" NumOfTimes="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="30" >
+			<HuntingGrounds>
+				<Hotspot X="2135.29" Y="4736.10" Z="155.08" />
+				<Hotspot X="2229.70" Y="4605.89" Z="155.08" />
+				<Hotspot X="2369.13" Y="4696.05" Z="155.09" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- Paying Tribute -->
@@ -228,14 +218,15 @@
  	<If Condition="HasQuest(30959) &amp;&amp; !IsQuestCompleted(30959)">
 		<CustomBehavior File="Message" Text="Starting The Big Guns" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30959" LootMobs="True" PullDistance="1" />
-		<While Condition="!IsQuestCompleted(30959)" >
-			<CustomBehavior File="FlyTo" X="2155.876" Y="4574.692" Z="152.7922" />
-			<CustomBehavior File="ForcedDismount"/>	
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="82346" MobId="61510" Range="30" WaitForNpcs="False" />
-			<CustomBehavior File="FlyTo" X="2322.519" Y="4582.979" Z="157.6676" />
-			<CustomBehavior File="ForcedDismount"/>	
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="82346" MobId="61510" Range="30" WaitForNpcs="False" />
-		</While>
+		<CustomBehavior File="FlyTo" X="2155.876" Y="4574.692" Z="152.7922" />
+		<CustomBehavior File="ForcedDismount"/>	
+		<CustomBehavior File="InteractWith" QuestId="30959" MobId="61510" InteractByUsingItemId="82346" Range="30" NumOfTimes="1000" 
+			ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" >
+			<HuntingGrounds>
+				<Hotspot X="2155.876" Y="4574.692" Z="152.7922" />
+				<Hotspot X="2322.519" Y="4582.979" Z="157.6676" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- The Overwhelming Swarm Coded by lanbo -->
@@ -296,18 +287,6 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
-	
-<!--
-	<CustomBehavior File="ForcedDismount" />
-	<If Condition="HasItem(64488)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
-	</If>
-	<If Condition="HasItem(6948)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
-	</If>
--->
-
-<!-- <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of August Celestials Dailies" />
 

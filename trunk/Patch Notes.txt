@@ -1,5 +1,15 @@
 Patch Notes
 
+6/10/13
+
+r324
+August Celestials
+-- In Battle's Shadow - Cleanup on IW code, flight support, smarter on mob pulls
+-- The Big Guns - Cleanup on IW code, flight support, smarter on mob pulls
+-- Hidden Power - Cleanup on IW code, smarter on mob pulls
+Shado Pan
+-- Code cleanup - If/While converted to QuestObjectiveIndex
+
 6/9/13
 
 r323

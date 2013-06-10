@@ -137,7 +137,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30064" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="1277.841" Y="-2479.687" Z="143.5502" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" ObjectId="210085" QuestId="30064" CollectUntil="QuestComplete" NonCompeteDistance="1" HuntingGroundRadius="200" PostInteractDelay="1000" X="1277.841" Y="-2479.687" Z="143.5502" />
+		<CustomBehavior File="CollectThings" QuestId="30064" ObjectId="210085" CollectUntil="QuestComplete" NonCompeteDistance="1" 
+			HuntingGroundRadius="200" PostInteractDelay="1000" X="1277.841" Y="-2479.687" Z="143.5502" />
 	</If>
 
 <!-- Behind the Masks -->
@@ -164,9 +165,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30066" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1005.98" Y="-2331.211" Z="155.51" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30066)" >
-			<CustomBehavior File="InteractWith" AuraIdMissingFromMob="108868" Range="10" MobId="57316" MobId2="57400" InteractByUsingItemId="77475" CollectionDistance="1000" WaitForNpcs="False" WaitTime="1000" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30066" MobId="57316" MobId2="57400" InteractByUsingItemId="77475" AuraIdMissingFromMob="108868" Range="10" 
+			CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" X="1005.98" Y="-2331.211" Z="155.51" />
 	</If>
 
 <!-- Jade Serpent Turn Ins -->
@@ -224,7 +224,7 @@
 		</While>
 	</If> -->
 
-<!-- The Shadow of Doubt -->
+<!-- The Shadow of Doubt --> <!-- NEEDS QB FOR MECHANICS -->
 	<If Condition="(HasQuest(30067) &amp;&amp; !IsQuestCompleted(30067))" >
 		<CustomBehavior File="Message" Text="Starting The Shadow of Doubt" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30067" LootMobs="True" PullDistance="20" />
@@ -251,18 +251,6 @@
 	<While Condition="(GetItemCount(89112) &gt; 10)">
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
-	
-<!--
-	<CustomBehavior File="ForcedDismount" />
-	<If Condition="HasItem(64488)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" />
-	</If>
-	<If Condition="HasItem(6948)" >
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" />
-	</If>
--->
-
-<!-- <CustomBehavior File="LoadProfile" ProfileName="..\[Rep] Dailies [Brodie]" /> -->
 
 <CustomBehavior File="UserDialog"  Title="title" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="1" Text="End of August Celestials Dailies" />
 
