@@ -61,66 +61,10 @@
 		Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 425 || Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 475 ||
 		Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 500 || Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 525 ||
 		Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 550" >
-		<If Condition="Me.ZoneId == 5841" > <!-- Kun-Lai Summit -->
-			<CustomBehavior File="ForceTrainRiding" MobId="59077" />
-		<ElseIf Condition="Me.ZoneId == 210" > <!-- Icecrown -->
-			<CustomBehavior File="ForceTrainRiding" MobId="33589" />
-		</ElseIf>
-		</If>
-		<If Condition="Me.IsHorde" >
-			<If Condition="Me.ZoneId == 3430" > <!-- Eversong Woods -->
-				<CustomBehavior File="ForceTrainRiding" MobId="16272" />
-			<ElseIf Condition="Me.ZoneId == 3433 || Me.ZoneId == 3487" > <!-- Ghostlands/Silvermoon -->
-				<CustomBehavior File="ForceTrainRiding" MobId="16662" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 16" > <!-- The Lost Isles -->
-				<CustomBehavior File="ForceTrainRiding" MobId="36615" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 16" > <!-- Azshara -->
-				<CustomBehavior File="ForceTrainRiding" MobId="49879" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 14" > <!-- Durotar -->
-				<CustomBehavior File="ForceTrainRiding" MobId="5943" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 215" > <!-- Mulgore -->
-				<CustomBehavior File="ForceTrainRiding" MobId="5939" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 1638" > <!-- Thunder Bluff -->
-				<CustomBehavior File="ForceTrainRiding" MobId="2798" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 85" > <!-- Tirisfal Glades -->
-				<CustomBehavior File="ForceTrainRiding" MobId="5759" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 3522" > <!-- Blade's Edge Mountains -->
-				<CustomBehavior File="ForceTrainRiding" MobId="19478" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
-				<CustomBehavior File="ForceTrainRiding" MobId="18991" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 3537" > <!-- Borean Tundra -->
-				<CustomBehavior File="ForceTrainRiding" MobId="29233" />
-			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 5785" > <!-- Jade Forest -->
-				<CustomBehavior File="ForceTrainRiding" MobId="66222" />
-			</ElseIf>
-			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Orgrimmar -->
-				<CustomBehavior File="ForceTrainRiding" MobId="45540" />
-			</ElseIf>
-			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Undercity -->
-				<CustomBehavior File="ForceTrainRiding" MobId="4591" />
-			</ElseIf>
-			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands, head to Shatt -->
-				<CustomBehavior File="ForceTrainRiding" MobId="19184" />
-			</ElseIf>
-			<ElseIf Condition="Me.MapId == 870" > <!-- Pandaria, head to Factional City -->
-				<CustomBehavior File="ForceTrainRiding" MobId="65862" />
-			</ElseIf>
-			</If>
-		</If>
 		<If Condition="Me.IsAlliance" >
 			<If Condition="Me.ZoneId == 3524" > <!-- Azuremyst Isle -->
 				<CustomBehavior File="ForceTrainRiding" MobId="17214" />
-			<ElseIf Condition="Me.ZoneId == 3525 || Me.ZoneId == 3557" > <!-- The Exodar/Bloodmyst Isle -->
+			<ElseIf Condition="(Me.ZoneId == 3525 || Me.ZoneId == 3557)" > <!-- The Exodar/Bloodmyst Isle -->
 				<CustomBehavior File="ForceTrainRiding" MobId="16731" />
 			</ElseIf>
 			<ElseIf Condition="Me.ZoneId == 12" > <!-- Elwynn Forest -->
@@ -141,8 +85,17 @@
 			<ElseIf Condition="Me.ZoneId == 4714 || Me.ZoneId == 4755" > <!-- Gilneas -->
 				<CustomBehavior File="ForceTrainRiding" MobId="50574" />
 			</ElseIf>
-			<ElseIf Condition="Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
+			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Darnassus -->
+				<CustomBehavior File="ForceTrainRiding" MobId="4211" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Stormwind -->
+				<CustomBehavior File="ForceTrainRiding" MobId="56796" />
+			</ElseIf>
+			<ElseIf Condition="Me.IsAlliance &amp;&amp; Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
 				<CustomBehavior File="ForceTrainRiding" MobId="18990" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands -->
+				<CustomBehavior File="ForceTrainRiding" MobId="19184" /> <!-- Shattrath -->
 			</ElseIf>
 			<ElseIf Condition="Me.ZoneId == 3537" > <!-- Borean Tundra -->
 				<CustomBehavior File="ForceTrainRiding" MobId="26992" />
@@ -150,27 +103,84 @@
 			<ElseIf Condition="Me.ZoneId == 495" > <!-- Howling Fjord -->
 				<CustomBehavior File="ForceTrainRiding" MobId="23734" />
 			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 210" > <!-- Icecrown -->
+				<CustomBehavior File="ForceTrainRiding" MobId="33589" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 571" > <!-- Northrend -->
+				<CustomBehavior File="ForceTrainRiding" MobId="28706" /> <!-- Dalaran -->
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5841" > <!-- Kun-Lai Summit -->
+				<CustomBehavior File="ForceTrainRiding" MobId="59077" />
+			</ElseIf>
 			<ElseIf Condition="Me.ZoneId == 5785" > <!-- Jade Forest -->
 				<CustomBehavior File="ForceTrainRiding" MobId="65983" />
 			</ElseIf>
-			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Darnassus -->
-				<CustomBehavior File="ForceTrainRiding" MobId="4211" />
-			</ElseIf>
-			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Stormwind -->
-				<CustomBehavior File="ForceTrainRiding" MobId="56796" />
-			</ElseIf>
-			<ElseIf Condition="Me.MapId == 870" > <!-- Pandaria, head to Factional City -->
-				<CustomBehavior File="ForceTrainRiding" MobId="64482" />
+			<ElseIf Condition="Me.MapId == 870" > <!-- Factional City -->
+				<CustomBehavior File="ForceTrainRiding" MobId="64482" /> 
 			</ElseIf>
 			</If>
-		</If>
-		<If Condition="Me.MapId == 530" > <!-- Outlands, head to Shatt -->
-			<CustomBehavior File="ForceTrainRiding" MobId="19184" />
-		<ElseIf Condition="Me.MapId == 571" > <!-- Northrend, head to Dalaran -->
-			<CustomBehavior File="ForceTrainRiding" MobId="28706" />
+		<ElseIf Condition="Me.IsHorde" >
+			<If Condition="Me.ZoneId == 16" > <!-- The Lost Isles -->
+				<CustomBehavior File="ForceTrainRiding" MobId="36615" />
+			<ElseIf Condition="Me.ZoneId == 16" > <!-- Azshara -->
+				<CustomBehavior File="ForceTrainRiding" MobId="49879" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 14" > <!-- Durotar -->
+				<CustomBehavior File="ForceTrainRiding" MobId="5943" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 215" > <!-- Mulgore -->
+				<CustomBehavior File="ForceTrainRiding" MobId="5939" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 1638" > <!-- Thunder Bluff -->
+				<CustomBehavior File="ForceTrainRiding" MobId="2798" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 85" > <!-- Tirisfal Glades -->
+				<CustomBehavior File="ForceTrainRiding" MobId="5759" />
+			</ElseIf>
+			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3430" > <!-- Eversong Woods -->
+				<CustomBehavior File="ForceTrainRiding" MobId="16272" />
+			</ElseIf>
+			<ElseIf Condition="Me.IsHorde &amp;&amp; (Me.ZoneId == 3433 || Me.ZoneId == 3487)" > <!-- Ghostlands/Silvermoon -->
+				<CustomBehavior File="ForceTrainRiding" MobId="16662" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Orgrimmar -->
+				<CustomBehavior File="ForceTrainRiding" MobId="45540" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Undercity -->
+				<CustomBehavior File="ForceTrainRiding" MobId="4591" />
+			</ElseIf>
+			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3522" > <!-- Blade's Edge Mountains -->
+				<CustomBehavior File="ForceTrainRiding" MobId="19478" />
+			</ElseIf>
+			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
+				<CustomBehavior File="ForceTrainRiding" MobId="18991" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands -->
+				<CustomBehavior File="ForceTrainRiding" MobId="19184" /> <!-- Shattrath -->
+			</ElseIf>
+			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3537" > <!-- Borean Tundra -->
+				<CustomBehavior File="ForceTrainRiding" MobId="29233" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 210" > <!-- Icecrown -->
+				<CustomBehavior File="ForceTrainRiding" MobId="33589" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 571" > <!-- Northrend -->
+				<CustomBehavior File="ForceTrainRiding" MobId="28706" /> <!-- Dalaran -->
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5841" > <!-- Kun-Lai Summit -->
+				<CustomBehavior File="ForceTrainRiding" MobId="59077" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5785" > <!-- Jade Forest -->
+				<CustomBehavior File="ForceTrainRiding" MobId="66222" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 870" > <!-- Factional City -->
+				<CustomBehavior File="ForceTrainRiding" MobId="65862" />
+			</ElseIf>
+			</If>
 		</ElseIf>
 		</If>
 	</If>
+	
 	<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt; 0" >
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).MaxValue == 600" >
 			<CustomBehavior File="CastSpell" MobId="0" SpellId="110406" />

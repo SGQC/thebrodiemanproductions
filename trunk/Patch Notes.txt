@@ -2,6 +2,13 @@ Patch Notes
 
 6/10/13
 
+r329
+The Level Grind
+-- Professions - Logic Updates to locations and vendors to visit
+
+r328
+Updates for versions only
+
 r327
 The Level Grind
 -- Professions Grind - Redundancy in case you are low level with high level cloth
