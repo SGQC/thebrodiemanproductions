@@ -205,7 +205,7 @@
 		</If>
 	</While>
 	<!-- Heavy Linen Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 80 &amp;&amp; GetItemCount(2589) &gt;= 2" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 40 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 80 &amp;&amp; GetItemCount(2589) &gt;= 2" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="2581" CastOnItemId="2589" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 50 &amp;&amp;
 			Me.GetSkill(Styx.SkillLine.FirstAid).MaxValue == 75" >
@@ -216,14 +216,14 @@
 		</If>
 	</While>
 	<!-- Wool Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 115 &amp;&amp; HasItem(2592)" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 80 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 115 &amp;&amp; HasItem(2592)" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="3530" CastOnItemId="2592" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 115" >
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
 		</If>
 	</While>
 	<!-- Heavy Wool Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 150 &amp;&amp; GetItemCount(2592) &gt;= 2" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 115 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 150 &amp;&amp; GetItemCount(2592) &gt;= 2" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="3531" CastOnItemId="2592" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 125 &amp;&amp;
 			Me.GetSkill(Styx.SkillLine.FirstAid).MaxValue == 150" >
@@ -234,14 +234,14 @@
 		</If>
 	</While>
 	<!-- Silk Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 180 &amp;&amp; HasItem(4306)" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 150 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 180 &amp;&amp; HasItem(4306)" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="7928" CastOnItemId="4306" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 180" >
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
 		</If>
 	</While>
 	<!-- Heavy Silk Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 210 &amp;&amp; GetItemCount(4306) &gt;= 2" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 180 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 210 &amp;&amp; GetItemCount(4306) &gt;= 2" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="7929" CastOnItemId="4306" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 200 &amp;&amp;
 			Me.GetSkill(Styx.SkillLine.FirstAid).MaxValue == 225" >
@@ -252,21 +252,21 @@
 		</If>
 	</While>
 	<!-- Mageweave Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 240 &amp;&amp; HasItem(4338)" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 210 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 240 &amp;&amp; HasItem(4338)" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="10840" CastOnItemId="4338" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 240" >
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
 		</If>
 	</While>
 	<!-- Heavy Mageweave Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 260 &amp;&amp; GetItemCount(4338) &gt;= 2" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 240 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 260 &amp;&amp; GetItemCount(4338) &gt;= 2" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="10841" CastOnItemId="4338" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 260" >
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
 		</If>
 	</While>
 	<!-- Runecloth Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 290 &amp;&amp; HasItem(14047)" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 260 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 290 &amp;&amp; HasItem(14047)" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="18629" CastOnItemId="14047" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 275 &amp;&amp;
 			Me.GetSkill(Styx.SkillLine.FirstAid).MaxValue == 300" >
@@ -277,14 +277,14 @@
 		</If>
 	</While>
 	<!-- Heavy Runecloth Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 300 &amp;&amp; GetItemCount(14047) &gt;= 2" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 290 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 300 &amp;&amp; GetItemCount(14047) &gt;= 2" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="18630" CastOnItemId="14047" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 300" >
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
 		</If>
 	</While>
 	<!-- Netherweave Bandage -->
-	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 330 &amp;&amp; HasItem(21877)" >
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 300 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 330 &amp;&amp; HasItem(21877)" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="27032" CastOnItemId="21877" NumOfTimes="1" />
 		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 330" >
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
