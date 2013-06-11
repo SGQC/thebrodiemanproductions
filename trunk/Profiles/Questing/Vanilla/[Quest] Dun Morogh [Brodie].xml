@@ -83,17 +83,17 @@
 		<TurnIn QuestName="On to Kharanos" QuestId="26373" TurnInName="Captain Tharran" TurnInId="40950" />
 		<TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" />
 		<CustomBehavior File="SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	<ElseIf Condition="!HasQuest(26380) &amp;&amp; !IsQuestCompleted(26380) &amp;&amp; Me.Race == WoWRace.Gnome" >
 		<PickUp QuestName="Bound for Kharanos" QuestId="26380" GiverName="Ciara Deepstone" GiverId="42933" />
 		<TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" />
 		<CustomBehavior File="SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</ElseIf>
 	<ElseIf Condition="HasQuest(26380)" >
 		<TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" />
 		<CustomBehavior File="SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</ElseIf>
 	</If>
 <!-- End of Gnomes Only -->
@@ -178,10 +178,10 @@
 	<If Condition="(!HasQuest(25882) &amp;&amp; !IsQuestCompleted(25882)) &amp;&amp; IsQuestCompleted(25841)" >
 		<PickUp QuestName="A Hand at the Ranch" QuestId="25882" GiverName="Slamp Wobblecog" GiverId="41298" />
 		<TurnIn QuestName="A Hand at the Ranch" QuestId="25882" TurnInName="Sergeant Flinthammer" TurnInId="41578" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	<ElseIf Condition="HasQuest(25882)" >
 		<TurnIn QuestName="A Hand at the Ranch" QuestId="25882" TurnInName="Sergeant Flinthammer" TurnInId="41578" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</ElseIf>
 	</If>
 	

@@ -126,7 +126,7 @@
 		<PickUp QuestName="Out of Gnoll-where" QuestId="26842" GiverName="Mountaineer Kadrell" GiverId="1340" />
 		<PickUp QuestName="Stormpike's Orders" QuestId="13636" GiverName="Mountaineer Kadrell" GiverId="1340" />
 		<CustomBehavior File="SetHearthstone" MobId="6734" X="-5377.91" Y="-2973.91" Z="323.17" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Thelsamar Quests" LogColor="CornflowerBlue" />
@@ -190,9 +190,9 @@
 <!-- Suddenly, Murlocs! -->
 	<PickUp QuestName="Suddenly, Murlocs!" QuestId="26927" GiverName="Mountaineer Kadrell" GiverId="1340" />
 	<If Condition="HasQuest(26927)" >
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<TurnIn QuestName="Suddenly, Murlocs!" QuestId="26927" TurnInName="Cannary Caskshot" TurnInId="44345" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
-	<TurnIn QuestName="Suddenly, Murlocs!" QuestId="26927" TurnInName="Cannary Caskshot" TurnInId="44345" />
 	
 	<If Condition="Me.LevelFraction &gt;= 17" >
 		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />

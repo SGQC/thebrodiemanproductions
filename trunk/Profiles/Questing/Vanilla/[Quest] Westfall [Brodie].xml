@@ -329,7 +329,7 @@
 	<TurnIn QuestName="Its Alive" QuestId="26257" TurnInName="Farmer Saldean" TurnInId="233" />
 	<If Condition="HasQuest(26266)" >
 		<TurnIn QuestName="Hope for the People" QuestId="26266" TurnInName="Hope Saldean" TurnInId="42575" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Sentinel Hill Quests" LogColor="CornflowerBlue" />
@@ -391,8 +391,8 @@
 	<PickUp QuestName="Big Trouble in Moonbrook" QuestId="26291" GiverName="Agent Kearnen" GiverId="7024" />
 	
 	<If Condition="HasQuest(26288) &amp;&amp; IsQuestCompleted(26288)" >
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="Jango Spothide" QuestId="26288" TurnInName="Captain Danuvin" TurnInId="821" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<TurnIn QuestName="Big Trouble in Moonbrook" QuestId="26291" TurnInName="Marshal Gryan Stoutmantle" TurnInId="234" />
 	<PickUp QuestName="To Moonbrook!" QuestId="26292" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />
@@ -461,8 +461,8 @@
 	<CustomBehavior File="Message" Text="Compiling Sentinel Hill Attack Quests" LogColor="CornflowerBlue" />
 	
 	<If Condition="HasQuest(26320) &amp;&amp; IsQuestCompleted(26320)" >
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="A Vision of the Past" QuestId="26320" TurnInName="Marshal Gryan Stoutmantle" TurnInId="234" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<PickUp QuestName="Rise of the Brotherhood" QuestId="26322" GiverName="Marshal Gryan Stoutmantle" GiverId="234" />

@@ -74,7 +74,7 @@
 	<If Condition="HasQuest(13647)" >
 		<TurnIn QuestName="Joining the Hunt" QuestId="13647" TurnInName="Marek Ironheart" TurnInId="1154" />
 		<CustomBehavior File="SetHearthstone" MobId="1156" X="-5676.20" Y="-4253.09" Z="407.01" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 <!-- Hornet Hunting/Foxtails By The Handful/Thistle While You Work/Wing Nut/Joy of Boar Hunting -->

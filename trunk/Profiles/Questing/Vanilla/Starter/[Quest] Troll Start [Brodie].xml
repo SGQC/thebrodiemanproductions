@@ -487,7 +487,7 @@
 	<TurnIn QuestName="Sen'jin Village" QuestId="25073" TurnInName="Master Gadrin" TurnInId="3188" />
 
 	<CustomBehavior File="Message" Text="Echo Isles Quests Complete" LogColor="Orange" />
-	<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] The Level Grind [Brodie]" /> 
+	<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] The Level Grind [Brodie]" />
 		
 </QuestOrder>
 </HBProfile>

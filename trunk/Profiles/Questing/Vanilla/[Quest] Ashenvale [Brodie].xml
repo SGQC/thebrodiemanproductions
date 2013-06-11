@@ -77,6 +77,8 @@
 	<PickUp QuestName="Of Their Own Design" QuestId="13595" GiverName="Bathran" GiverId="33182" />
 	<Objective QuestName="Bathran's Hair" QuestId="26473" Type="CollectItem" ItemId="5437" CollectCount="8" />
 	<Objective QuestName="Don't Forget the Horde" QuestId="13594" Type="KillMob" MobId="3734" KillCount="10" />
+	
+	<TurnIn QuestName="Bathran's Hair" QuestId="26473" TurnInName="Evenar Stillwhisper" TurnInId="33204" />
 	<TurnIn QuestName="Don't Forget the Horde" QuestId="13594" TurnInName="Sentinel Shyela" TurnInId="33187" />
 
 	<CustomBehavior File="Message" Text="Ashenvale Quests Complete" LogColor="Orange" />

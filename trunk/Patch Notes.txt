@@ -2,6 +2,11 @@ Patch Notes
 
 6/10/13
 
+r326
+The Level Grind
+-- Added First Aid Grinding support (up to Netherweave Bandage)
+-- All Forced Vendoring replaced with Professions Grinding (to be expanded)
+
 r325
 Profile Swapper
 -- Removed more redundant code

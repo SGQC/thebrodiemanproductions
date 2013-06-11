@@ -119,9 +119,6 @@
 		<TurnIn QuestName="Simple Letter" QuestId="3100" TurnInName="Llane Beshere" TurnInId="911" />
 		
 		<PickUp QuestName="Charging into Battle" QuestId="26913" GiverName="Llane Beshere" GiverId="911" />
-		<If Condition="!Styx.CommonBot.SpellManager.HasSpell(100)">
-			<CustomBehavior File="ForceSetVendor" DoSell="True" />
-		</If>
 		<While Condition="HasQuest(26913) &amp;&amp; !IsQuestCompleted(26913)">
 			<RunTo X="-8963.851" Y="-145.0901" Z="81.67974" />
 			<CustomBehavior File="InteractWith" QuestId="26913" MobId="44548" WaitTime="8000" X="-8963.851" Y="-145.0901" Z="81.67974" />	
@@ -159,9 +156,6 @@
 		<TurnIn QuestName="Etched Letter" QuestId="26910" TurnInName="Ashley Blank" TurnInId="43278" />
 		
 		<PickUp QuestName="The Hunter's Path" QuestId="26917" GiverName="Ashley Blank" GiverId="43278" />
-		<If Condition="!Styx.CommonBot.SpellManager.HasSpell(56641)">
-			<CustomBehavior File="ForceSetVendor" DoSell="True" />
-		</If>
 		<If Condition="HasQuest(26917) &amp;&amp; !IsQuestCompleted(26917)">
 			<CustomBehavior File="CastSpellOn" QuestId="26917" SpellId="56641" MobId="44548" NumOfTimes="5" MobHpPercentLeft="100" MinRange="14" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</If>
@@ -196,9 +190,6 @@
 		<TurnIn QuestName="Tainted Letter" QuestId="3105" TurnInName="Drusilla La Salle" TurnInId="459" />
 		
 		<PickUp QuestName="Immolation" QuestId="26914" GiverName="Drusilla La Salle" GiverId="459" />
-		<If Condition="!Styx.CommonBot.SpellManager.HasSpell(348)">
-			<CustomBehavior File="ForceSetVendor" DoSell="True" />
-		</If>
 		<If Condition="HasQuest(26914) &amp;&amp; !IsQuestCompleted(26914)">
 			<CustomBehavior File="CastSpellOn" QuestId="26914" SpellId="172" MobId="44548" NumOfTimes="5" MobHpPercentLeft="100" MinRange="14" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</If>
@@ -302,9 +293,6 @@
 		<TurnIn QuestName="Hallowed Letter" QuestId="3103" TurnInName="Priestess Anetta" TurnInId="375" />
 		
 		<PickUp QuestName="Healing the Wounded" QuestId="26919" GiverName="Priestess Anetta" GiverId="375" />
-		<If Condition="!Styx.CommonBot.SpellManager.HasSpell(2061)">
-			<CustomBehavior File="ForceSetVendor" DoSell="True" />
-		</If>
 		<If Condition="HasQuest(26919) &amp;&amp; !IsQuestCompleted(26919)">
 			<CustomBehavior File="CastSpellOn" QuestId="26919" SpellId="589" MobId="44548" NumOfTimes="5" MobHpPercentLeft="100" MinRange="3" X="-8858.6" Y="-197.16" Z="81.92604" />
 		</If>
@@ -339,9 +327,6 @@
 		<TurnIn QuestName="Glyphic Letter" QuestId="3104" TurnInName="Khelden Bremen" TurnInId="198" />
 		
 		<PickUp QuestName="Mastering the Arcane" QuestId="26916" GiverName="Khelden Bremen" GiverId="198" />
-		<If Condition="!Styx.CommonBot.SpellManager.HasSpell(5143)">
-			<CustomBehavior File="ForceSetVendor" DoSell="True" />
-		</If>
 		<While Condition="HasQuest(26916) &amp;&amp; !IsQuestCompleted(26916)">
 			<CustomBehavior File="CastSpellOn" SpellId="122" MobId="44548" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>

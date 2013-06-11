@@ -711,7 +711,7 @@
 	<PickUp QuestName="Rascals" QuestId="29769" GiverName="Ji Firepaw" GiverId="55477" X="629.354" Y="3139.15" Z="87.74126" />
 	<If Condition="!HasQuest(29770) &amp;&amp; !IsQuestCompleted(29770)" >
 		<PickUp QuestName="Still Good!" QuestId="29770" GiverName="Gao Summerdraft" GiverId="55479" X="603.9965" Y="3159.637" Z="87.78911" />
-		<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] Professions [Brodie]" />
 	</If>
 	<Objective QuestName="Still Good!" QuestId="29770" Type="CollectItem" ItemId="74296" CollectCount="3" />
 	<Objective QuestName="Still Good!" QuestId="29770" Type="CollectItem" ItemId="74295" CollectCount="3" />
@@ -880,7 +880,7 @@
 <!-- Bidden to Greatness -->
 	<If Condition="!HasQuest(29792) &amp;&amp; !IsQuestCompleted(29792)" >
 		<PickUp QuestName="Bidden to Greatness" QuestId="29792" GiverName="Elder Shaopai" GiverId="56012" X="926.3021" Y="3608.648" Z="196.337" />
-		<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] Professions [Brodie]" />
 	</If>
 	<If Condition="HasQuest(29792) &amp;&amp; !IsQuestCompleted(29792)" >
 		<If Condition="!IsObjectiveComplete(1, 29792)">
@@ -966,7 +966,7 @@
 		<TurnIn QuestName="The Healing of Shen-zin Su" QuestId="29799" TurnInName="Ji Firepaw" TurnInId="56418" X="251.6389" Y="3929.475" Z="66.6363" />
 		<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for quest to complete {TimeRemaining}" />
-		<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] Professions [Brodie]" />
 	</If>
 	
 <!-- New Allies -->

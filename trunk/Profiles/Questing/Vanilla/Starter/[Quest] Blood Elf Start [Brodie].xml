@@ -186,11 +186,11 @@
 	<If Condition="HasQuest(8350)" >
 		<TurnIn QuestName="Completing the Delivery" QuestId="8350" TurnInName="Innkeeper Delaniel" TurnInId="15433" />
 		<CustomBehavior File="SetHearthstone" MobId="15433" X="9476.91" Y="-6859.21" Z="17.34" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] Professions [Brodie]" />
 	</If>
 
 	<CustomBehavior File="Message" Text="Blood Elf Starter Complete" LogColor="Orange" />
-	<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] The Level Grind [Brodie]" /> 
+	<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] The Level Grind [Brodie]" />
 		
 </QuestOrder>
 </HBProfile>
