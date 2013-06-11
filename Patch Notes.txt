@@ -1,10 +1,16 @@
 Patch Notes
 
-6/10/13
+6/11/13
+
+r330
+Mistfall Village
+-- Blooming Blossoms - Corrected repeating profile load bug
 
 r329
 The Level Grind
 -- Professions - Logic Updates to locations and vendors to visit
+
+6/10/13
 
 r328
 Updates for versions only

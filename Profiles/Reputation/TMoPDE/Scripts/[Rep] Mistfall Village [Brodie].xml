@@ -610,7 +610,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30195" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="843.9984" Y="1664.918" Z="354.8506" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" MobId="210537" MobId2="210538" MobId3="210539" QuestId="30195" CollectionDistance="200" NonCompeteDistance="2" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+		<CustomBehavior File="InteractWith" QuestId="30195" MobId="210537" MobId2="210538" MobId3="210539" CollectionDistance="200" NonCompeteDistance="2" 
+			PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NumOfTimes="1000" >
 			<HuntingGrounds>
 				<Hotspot X="810.6406" Y="1728.716" Z="355.9357" />
 				<Hotspot X="860.7175" Y="1657.399" Z="356.4393" />
