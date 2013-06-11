@@ -101,10 +101,10 @@
 	<If Condition="(!HasQuest(25933) &amp;&amp; !IsQuestCompleted(25933)) &amp;&amp; (IsQuestCompleted(25905) &amp;&amp; IsQuestCompleted(314))" >
 		<PickUp QuestName="Help for the Quarry" QuestId="25933" GiverName="Sergeant Flinthammer" GiverId="41578" />
 		<TurnIn QuestName="Help for the Quarry" QuestId="25933" TurnInName="Foreman Stonebrow" TurnInId="1254" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	<ElseIf Condition="HasQuest(25933)" >
 		<TurnIn QuestName="Help for the Quarry" QuestId="25933" TurnInName="Foreman Stonebrow" TurnInId="1254" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</ElseIf>
 	</If>
 	

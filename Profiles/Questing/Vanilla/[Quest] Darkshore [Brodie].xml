@@ -120,7 +120,7 @@
 	<If Condition="!HasQuest(13518) &amp;&amp; !IsQuestCompleted(13518)" >
 		<PickUp QuestName="The Last Wave of Survivors" QuestId="13518" GiverName="Dentaria Silverglade" GiverId="32973" />
 		<CustomBehavior File="SetHearthstone" MobId="43420" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<PickUp QuestName="Threat from the Water" QuestId="13522" GiverName="Ranger Glynda Nal'Shea" GiverId="32971" />
 	<CustomBehavior File="InteractWith" QuestObjectiveIndex="4" QuestId="13518" NumOfTimes="10" MobId="33094" X="7439.48" Y="106.23" Z="0.28" />
@@ -252,7 +252,7 @@
 	<TurnIn QuestName="A Love Eternal" QuestId="13563" TurnInName="Cerellean Whiteclaw" TurnInId="32959" />
 	<If Condition="HasQuest(13599)" >
 		<TurnIn QuestName="Grimclaw's Return" QuestId="13599" TurnInName="Serendia Oakwhisper" TurnInId="32972" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 <!-- An Ocean Not So Deep/The Shatterspear Invaders -->
@@ -337,7 +337,7 @@
 	<TurnIn QuestName="War Supplies" QuestId="13509" TurnInName="Lt. Morra Starbreeze" TurnInId="32963" />
 	<If Condition="HasQuest(13507)" >
 		<TurnIn QuestName="Denying Manpower" QuestId="13507" TurnInName="Sentinel Tysha Moonblade" TurnInId="32965" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<If Condition="Me.LevelFraction &gt;= 20" >
@@ -453,7 +453,7 @@
 	
 	<If Condition="!HasQuest(13601) &amp;&amp; !IsQuestCompeted(13601)" >
 		<PickUp QuestName="In Aid of the Refugees" QuestId="13601" GiverName="Sentinel Lendra" GiverId="32912" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<TurnIn QuestName="In Aid of the Refugees" QuestId="13601" TurnInName="Priestess Alinya" TurnInId="33107" />
 	
@@ -620,7 +620,7 @@
 	<PickUp QuestName="Mounting the Offensive" QuestId="13902" GiverName="Malfurion Stormrage" GiverId="33091" />
 	<If Condition="HasQuest(13902)" >
 		<TurnIn QuestName="Mounting the Offensive" QuestId="13902" TurnInName="Balren of the Claw" TurnInId="34402" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<If Condition="Me.LevelFraction &gt;= 20" >

@@ -158,7 +158,7 @@
 	<PickUp QuestName="Elekks are Serious Business" QuestId="9625" GiverName="Torallius the Pack Handler" GiverId="17584" />
 	<If Condition="HasQuest(9625)" >
 		<TurnIn QuestName="Elekks are Serious Business" QuestId="9625" TurnInName="Vorkhan the Elekk Herder" TurnInId="17586" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Kessel's Crossing Quests" LogColor="CornflowerBlue" />
@@ -199,9 +199,9 @@
 <!-- Report to Exarch Admetius -->
 	<PickUp QuestName="Report to Exarch Admetius" QuestId="9668" GiverName="Kessel" GiverId="17649" />
 	<If Condition="HasQuest(9668)" >
-		<CustomBehavior File="SetHearthstone" MobId="17553" X="-2059.20" Y="-11897.04" Z="45.66" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="Report to Exarch Admetius" QuestId="9668" TurnInName="Exarch Admetius" TurnInId="17658" />
+		<CustomBehavior File="SetHearthstone" MobId="17553" X="-2059.20" Y="-11897.04" Z="45.66" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<PickUp QuestName="What Argus Means To Me" QuestId="9693" GiverName="Exarch Admetius" GiverId="17658" />
 	<PickUp QuestName="Learning from the Crystals" QuestId="9581" GiverName="Harbringer Mikolaas" GiverId="17423" />

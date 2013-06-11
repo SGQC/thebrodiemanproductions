@@ -140,9 +140,9 @@
 <!-- Parker's Report -->
 	<PickUp QuestName="Parker's Report" QuestId="26505" GiverName="Watch Captain Parker" GiverId="464" />
 	<If Condition="HasQuest(26505)" >
-		<CustomBehavior File="SetHearthstone" MobId="6727" X="-9223.98" Y="-2157.12" Z="63.73" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="Parker's Report" QuestId="26505" TurnInName="Magistrate Solomon" TurnInId="344" />
+		<CustomBehavior File="SetHearthstone" MobId="6727" X="-9223.98" Y="-2157.12" Z="63.73" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<If Condition="HasQuest(26761)" >
 		<TurnIn QuestName="Threat to the Kingdom" QuestId="26761" TurnInName="Magistrate Solomon" TurnInId="344" />
@@ -256,8 +256,8 @@
 	
 	<PickUp QuestName="John J. Keeshan" QuestId="26567" GiverName="Colonel Troteman" GiverId="43221" />
 	<If Condition="HasQuest(26567)" >
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="John J. Keeshan" QuestId="26567" TurnInName="John J. Keeshan" TurnInId="43184" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<PickUp QuestName="This Ain't My War" QuestId="26568" GiverName="John J. Keeshan" GiverId="43184" />
 	<TurnIn QuestName="This Ain't My War" QuestId="26568" TurnInName="Colonel Troteman" TurnInId="43221" />

@@ -168,9 +168,9 @@
 	
 	<PickUp QuestName="Fairbreeze Village" QuestId="9256" GiverName="Aeldon Sunbrand" GiverId="15403" />
 	<If Condition="HasQuest(9256)" >
-		<CustomBehavior File="SetHearthstone" MobId="15397" X="8700.38" Y="-6638.36" Z="72.75" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 		<TurnIn QuestName="Fairbreeze Village" QuestId="9256" TurnInName="Ranger Degolien" TurnInId="15939" />
+		<CustomBehavior File="SetHearthstone" MobId="15397" X="8700.38" Y="-6638.36" Z="72.75" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	
 	<CustomBehavior File="Message" Text="Compiling Fairbreeze Village Quests" LogColor="CornflowerBlue" />

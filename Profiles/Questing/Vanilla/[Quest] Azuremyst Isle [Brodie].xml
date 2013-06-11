@@ -110,7 +110,7 @@
 	<If Condition="!HasQuest(9603) &amp;&amp; !IsQuestCompleted(9603)" >
 		<PickUp QuestName="Beds, Bandages, and Beyond" QuestId="9603" GiverName="Caregiver Chellan" GiverId="16553" />
 		<CustomBehavior File="SetHearthstone" MobId="16553" X="-4127.80" Y="-12467.71" Z="44.09" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<PickUp QuestName="Medicinal Purpose" QuestId="9463" GiverName="Anchorite Fateema" GiverId="17214" />
 	<PickUp QuestName="The Great Moongraze Hunt" QuestId="9454" GiverName="Aceton" GiverId="17110" />

@@ -133,7 +133,7 @@
 	<If Condition="!HasQuest(60) &amp;&amp; !IsQuestCompleted(60)" >
 		<CustomBehavior File="SetHearthstone" MobId="295" X="-9462.66" Y="16.19" Z="56.96" />
 		<PickUp QuestName="Kobold Candles" QuestId="60" GiverName="William Pestle" GiverId="253" />
-		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] Professions [Brodie]" />
 	</If>
 	<PickUp QuestName="A Swift Message" QuestId="26393" GiverName="Smith Argus" GiverId="514" />
 	<PickUp QuestName="The Fargodeep Mine" QuestId="62" GiverName="Marshal Dughan" GiverId="240" />
