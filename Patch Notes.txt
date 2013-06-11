@@ -2,6 +2,10 @@ Patch Notes
 
 6/10/13
 
+r327
+The Level Grind
+-- Professions Grind - Redundancy in case you are low level with high level cloth
+
 r326
 The Level Grind
 -- Added First Aid Grinding support (up to Netherweave Bandage)
