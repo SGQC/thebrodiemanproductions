@@ -36,6 +36,7 @@
 		<!-- Falconwing Square -->
 		<Vendor Name="Sleyin" Entry="18926" Type="Repair" X="9482.344" Y="-6805.512" Z="16.4937" />
 		<Vendor Name="Kyrenna" Entry="18929" Type="Food" X="9552.017" Y="-6825.112" Z="16.49393" />
+		<Vendor Name="Vara" Entry="16186" Type="Repair" X="9473.869" Y="-6845.838" Z="28.37909" />
 		<!-- Fairbreeze Village -->
 		<Vendor Name="Halis Dawnstrider" Entry="16444" Type="Food" X="8731.693" Y="-6656.498" Z="70.58613" />
 		<Vendor Name="Sathiel" Entry="16261" Type="Repair" X="8692.212" Y="-6639.568" Z="72.74725" />

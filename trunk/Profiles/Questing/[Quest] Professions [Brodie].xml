@@ -91,7 +91,7 @@
 			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Stormwind -->
 				<CustomBehavior File="ForceTrainRiding" MobId="56796" />
 			</ElseIf>
-			<ElseIf Condition="Me.IsAlliance &amp;&amp; Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
+			<ElseIf Condition="Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
 				<CustomBehavior File="ForceTrainRiding" MobId="18990" />
 			</ElseIf>
 			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands -->
@@ -137,10 +137,10 @@
 			<ElseIf Condition="Me.ZoneId == 85" > <!-- Tirisfal Glades -->
 				<CustomBehavior File="ForceTrainRiding" MobId="5759" />
 			</ElseIf>
-			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3430" > <!-- Eversong Woods -->
+			<ElseIf Condition="Me.ZoneId == 3430" > <!-- Eversong Woods -->
 				<CustomBehavior File="ForceTrainRiding" MobId="16272" />
 			</ElseIf>
-			<ElseIf Condition="Me.IsHorde &amp;&amp; (Me.ZoneId == 3433 || Me.ZoneId == 3487)" > <!-- Ghostlands/Silvermoon -->
+			<ElseIf Condition="(Me.ZoneId == 3433 || Me.ZoneId == 3487)" > <!-- Ghostlands/Silvermoon -->
 				<CustomBehavior File="ForceTrainRiding" MobId="16662" />
 			</ElseIf>
 			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Orgrimmar -->
@@ -149,16 +149,16 @@
 			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Undercity -->
 				<CustomBehavior File="ForceTrainRiding" MobId="4591" />
 			</ElseIf>
-			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3522" > <!-- Blade's Edge Mountains -->
+			<ElseIf Condition="Me.ZoneId == 3522" > <!-- Blade's Edge Mountains -->
 				<CustomBehavior File="ForceTrainRiding" MobId="19478" />
 			</ElseIf>
-			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
+			<ElseIf Condition="Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
 				<CustomBehavior File="ForceTrainRiding" MobId="18991" />
 			</ElseIf>
 			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands -->
 				<CustomBehavior File="ForceTrainRiding" MobId="19184" /> <!-- Shattrath -->
 			</ElseIf>
-			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3537" > <!-- Borean Tundra -->
+			<ElseIf Condition="Me.ZoneId == 3537" > <!-- Borean Tundra -->
 				<CustomBehavior File="ForceTrainRiding" MobId="29233" />
 			</ElseIf>
 			<ElseIf Condition="Me.ZoneId == 210" > <!-- Icecrown -->
@@ -207,6 +207,7 @@
 			<CustomBehavior File="CastSpell" MobId="0" SpellId="3273" />
 		</If>
 	</If>
+	
 	<!-- Linen Bandage -->
 	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 40 &amp;&amp; HasItem(2589)" >
 		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="1251" CastOnItemId="2589" NumOfTimes="1" />
@@ -300,6 +301,191 @@
 			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
 		</If>
 	</While>
+	<!-- Heavy Netherweave Bandage -->
+	<While Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &gt;= 330 &amp;&amp; Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue &lt; 350 &amp;&amp; GetItemCount(21877) &gt;= 2" >
+		<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="27033" CastOnItemId="21877" NumOfTimes="1" />
+		<If Condition="Me.GetSkill(Styx.SkillLine.FirstAid).CurrentValue == 350" >
+			<CustomBehavior File="LoadProfile" ProfileName="[Quest] Professions [Brodie]" />
+		</If>
+	</While>
+	<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
+<!-- End of First Aid -->
+
+<!-- Cooking -->
+	<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue == 0 ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 50 &amp;&amp; Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 75) ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 125 &amp;&amp;	Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 150) ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 200 &amp;&amp;	Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 225) ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 275 &amp;&amp;	Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 300) ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 350 &amp;&amp;	Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 375) ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 425 &amp;&amp;	Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 450) ||
+		(Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt;= 500 &amp;&amp;	Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 525)" >
+		<If Condition="Me.IsAlliance" >
+			<If Condition="Me.ZoneId == 3524" > <!-- Azuremyst Isle -->
+				<CustomBehavior File="ForceTrainRiding" MobId="17246" />
+			<ElseIf Condition="(Me.ZoneId == 3525 || Me.ZoneId == 3557)" > <!-- The Exodar/Bloodmyst Isle -->
+				<CustomBehavior File="ForceTrainRiding" MobId="16719" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 12" > <!-- Elwynn Forest -->
+				<CustomBehavior File="ForceTrainRiding" MobId="1430" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 141" > <!-- Teldrassil -->
+				<CustomBehavior File="ForceTrainRiding" MobId="6286" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 1" > <!-- Dun Morogh -->
+				<CustomBehavior File="ForceTrainRiding" MobId="1699" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 1537" > <!-- Ironforge -->
+				<CustomBehavior File="ForceTrainRiding" MobId="5159" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 44" > <!-- Redridge Mountains -->
+				<CustomBehavior File="ForceTrainRiding" MobId="3087" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5287" > <!-- The Cape of Stranglethorn -->
+				<CustomBehavior File="ForceTrainRiding" MobId="54232" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 4714 || Me.ZoneId == 4755" > <!-- Gilneas -->
+				<CustomBehavior File="ForceTrainRiding" MobId="50567" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Darnassus -->
+				<CustomBehavior File="ForceTrainRiding" MobId="4210" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Stormwind -->
+				<CustomBehavior File="ForceTrainRiding" MobId="42288" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
+				<CustomBehavior File="ForceTrainRiding" MobId="18987" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3521" > <!-- Zangarmarsh, may require IW -->
+				<CustomBehavior File="ForceTrainRiding" MobId="18993" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3520" > <!-- Shadowmoon Valley -->
+				<CustomBehavior File="ForceTrainRiding" MobId="19369" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands -->
+				<CustomBehavior File="ForceTrainRiding" MobId="19185" /> <!-- Shattrath -->
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3537" > <!-- Borean Tundra -->
+				<CustomBehavior File="ForceTrainRiding" MobId="26989" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 495" > <!-- Howling Fjord -->
+				<CustomBehavior File="ForceTrainRiding" MobId="26905" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 210" > <!-- Icecrown -->
+				<CustomBehavior File="ForceTrainRiding" MobId="33587" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 571" > <!-- Northrend -->
+				<CustomBehavior File="ForceTrainRiding" MobId="28705" /> <!-- Dalaran -->
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5785" > <!-- Jade Forest -->
+				<CustomBehavior File="ForceTrainRiding" MobId="56707" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 870" > <!-- Valley of the 4 Winds, Guide of Ways, needs IW -->
+				<CustomBehavior File="ForceTrainRiding" MobId="64231" />
+			</ElseIf>
+			</If>
+		<ElseIf Condition="Me.IsHorde" >
+			<If Condition="Me.ZoneId == 16" > <!-- The Lost Isles, requires IW -->
+				<CustomBehavior File="ForceTrainRiding" MobId="45286" />
+			<ElseIf Condition="Me.ZoneId == 16" > <!-- Azshara, requires IW -->
+				<CustomBehavior File="ForceTrainRiding" MobId="49885" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 45" > <!-- Arathi Highlands -->
+				<CustomBehavior File="ForceTrainRiding" MobId="2818" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 17" > <!-- Northern Barrens -->
+				<CustomBehavior File="ForceTrainRiding" MobId="8306" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 33" > <!-- Northern Stranglethorn -->
+				<CustomBehavior File="ForceTrainRiding" MobId="1382" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5287" > <!-- The Cape of Stranglethorn -->
+				<CustomBehavior File="ForceTrainRiding" MobId="54232" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 215" > <!-- Mulgore -->
+				<CustomBehavior File="ForceTrainRiding" MobId="3067" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 1638" > <!-- Thunder Bluff -->
+				<CustomBehavior File="ForceTrainRiding" MobId="3026" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 85" > <!-- Tirisfal Glades -->
+				<CustomBehavior File="ForceTrainRiding" MobId="47405" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3430" > <!-- Eversong Woods -->
+				<CustomBehavior File="ForceTrainRiding" MobId="16277" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3433" > <!-- Ghostlands -->
+				<CustomBehavior File="InteractWith" MobId="16253" InteractByGossipOptions="1" X="7585.244" Y="-6878.835" Z="95.01161" />
+				<CustomBehavior File="ForceTrainRiding" MobId="16253" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3487" > <!-- Silvermoon -->
+				<CustomBehavior File="ForceTrainRiding" MobId="16676" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 1" > <!-- Kalimdor, head to Orgrimmar -->
+				<CustomBehavior File="ForceTrainRiding" MobId="42506" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 0" > <!-- Eastern Kingdoms, head to Undercity -->
+				<CustomBehavior File="ForceTrainRiding" MobId="4552" />
+			</ElseIf>
+			<ElseIf Condition="Me.IsHorde &amp;&amp; Me.ZoneId == 3483" > <!-- Hellfire Peninsula -->
+				<CustomBehavior File="ForceTrainRiding" MobId="49789" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3521" > <!-- Zangarmarsh, may require IW -->
+				<CustomBehavior File="ForceTrainRiding" MobId="18993" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 530" > <!-- Outlands -->
+				<CustomBehavior File="ForceTrainRiding" MobId="19185" /> <!-- Shattrath -->
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 3537" > <!-- Borean Tundra -->
+				<CustomBehavior File="ForceTrainRiding" MobId="26972" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 495" > <!-- Howling Fjord -->
+				<CustomBehavior File="ForceTrainRiding" MobId="26953" />
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 210" > <!-- Icecrown -->
+				<CustomBehavior File="ForceTrainRiding" MobId="33587" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 571" > <!-- Northrend -->
+				<CustomBehavior File="ForceTrainRiding" MobId="29631" /> <!-- Dalaran -->
+			</ElseIf>
+			<ElseIf Condition="Me.ZoneId == 5785" > <!-- Jade Forest -->
+				<CustomBehavior File="ForceTrainRiding" MobId="56707" />
+			</ElseIf>
+			<ElseIf Condition="Me.MapId == 870" > <!-- Valley of the 4 Winds, requires IW -->
+				<CustomBehavior File="ForceTrainRiding" MobId="64231" />
+			</ElseIf>
+			</If>
+		</ElseIf>
+		</If>
+	</If>
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).CurrentValue &gt; 0" >
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 600" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="104381" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 525" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="88053" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 450" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="51296" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 375" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="33359" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 300" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="18260" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 225" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="3413" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 150" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="3102" />
+		</If>
+		<If Condition="Me.GetSkill(Styx.SkillLine.Cooking).MaxValue == 75" >
+			<CustomBehavior File="CastSpell" MobId="0" SpellId="2550" />
+		</If>
+	</If>
+	
 	<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 	
 	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />

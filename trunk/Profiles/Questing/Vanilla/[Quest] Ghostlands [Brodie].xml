@@ -1,0 +1,119 @@
+<HBProfile>
+
+	<Name>Ghostlands ($Rev$)</Name>
+	<MinLevel>8</MinLevel>
+	<MaxLevel>25</MaxLevel>
+
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<TargetElites>False</TargetElites>
+
+	<AvoidMobs>
+	</AvoidMobs>
+
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+		<Mailbox X="7579.02" Y="-6860.12" Z="93.34931" />
+	</Mailboxes>
+
+	<Vendors>
+		<!-- Tranquillien -->
+		<Vendor Name="Quartermaster Lymel" Entry="16187" Type="Food" X="7622.968" Y="-6845.611" Z="83.89045" />
+		<Vendor Name="Blacksmith Frances" Entry="17655" Type="Repair" X="7600.523" Y="-6904.995" Z="93.78819" />
+		<Vendor Name="Eralan" Entry="16268" Type="Repair" X="7511.88" Y="-6841.079" Z="83.6666" />
+	</Vendors>
+
+<!-- Quest Overrides -->
+<!-- End of Quest Overrides -->
+
+<QuestOrder>
+
+	<If Condition="Me.IsAlliance">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(9144) &amp;&amp; !IsQuestCompleted(9144)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Ghostlands Quests" LogColor="Green" />
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+	
+	<If Condition="!HasQuest(9144) &amp;&amp; !IsQuestCompleted(9144)" >
+		<CustomBehavior File="Message" Text="Compiling Kicker Quest" LogColor="CornflowerBlue" />
+		<PickUp QuestName="Missing in the Ghostlands" QuestId="9144" GiverName="Magistrix Landra Dawnstrider" GiverId="16210" />
+	</If>
+	<TurnIn QuestName="Missing in the Ghostlands" QuestId="9144" TurnInName="Courier Dawnstrider" TurnInId="16183" />
+	
+	<CustomBehavior File="Message" Text="Compiling Eversong Woods Border Quests" LogColor="CornflowerBlue" />
+
+<!-- The Fallen Courier -->
+	<PickUp QuestName="The Fallen Courier" QuestId="9147" GiverName="Apothecary Thedra" GiverId="16196" />
+	<Objective QuestName="The Fallen Courier" QuestId="9147" Type="CollectItem" ItemId="22570" CollectCount="4" />
+	<TurnIn QuestName="The Fallen Courier" QuestId="9147" TurnInName="Apothecary Thedra" TurnInId="16196" />
+	
+	<PickUp QuestName="Delivery to Tranquillien" QuestId="9148" GiverName="Courier Dawnstrider" GiverId="16183" />
+	<TurnIn QuestName="Delivery to Tranquillien" QuestId="9148" TurnInName="Arcanist Vandril" TurnInId="16197" />
+	
+	<CustomBehavior File="Message" Text="Compiling Tranquillien Quests" LogColor="CornflowerBlue" />
+	
+	<If Condition="Me.Race == WoWRace.BloodElf" >
+		<PickUp QuestName="The Forsaken" QuestId="9327" GiverName="Arcanist Vandril" GiverId="16197" />
+		<TurnIn QuestName="The Forsaken" QuestId="9327" TurnInName="High Executor Mavren" TurnInId="16252" />
+	<Else>
+		<PickUp QuestName="The Forsaken" QuestId="9329" GiverName="Arcanist Vandril" GiverId="16197" />
+		<TurnIn QuestName="The Forsaken" QuestId="9329" TurnInName="High Executor Mavren" TurnInId="16252" />
+	</Else>
+	</If>
+	
+	<PickUp QuestName="Return to Arcanist Vandril" QuestId="9758" GiverName="High Executor Mavren" GiverId="16252" />
+	<TurnIn QuestName="Return to Arcanist Vandril" QuestId="9758" TurnInName="Arcanist Vandril" TurnInId="16197" />
+	
+	<PickUp QuestName="Suncrown Village" QuestId="9138" GiverName="Arcanist Vandril" GiverId="16197" />
+	<PickUp QuestName="Tomber's Supplies" QuestId="9152" GiverName="Rathis Tomber" GiverId="16224" />
+	<PickUp QuestName="Wanted: Knucklerot and Luzran" QuestId="9156" GiverType="Object" GiverName="Wanted Poster" 
+		GiverId="181147" X="7569.912" Y="-6878.853" Z="96.03343" />
+	<PickUp QuestName="The Plagued Coast" QuestId="9149" GiverName="Apothecary Renzithen" GiverId="16198" />
+	
+	<PickUp QuestName="Anok'suten" QuestId="9315" GiverName="Dying Blood Elf" GiverId="16601" />
+<!-- Suncrown Village/Anok'suten -->
+	<Objective QuestName="Suncrown Village" QuestId="9138" Type="KillMob" MobId="16313" KillCount="10" />
+	<Objective QuestName="Anok'suten" QuestId="9315" Type="KillMob" MobId="16357" KillCount="1" />
+	<TurnIn QuestName="Anok'suten" QuestId="9315" TurnInName="Arcanist Vandril" TurnInId="16197" />
+	<TurnIn QuestName="Suncrown Village" QuestId="9138" TurnInName="Arcanist Vandril" TurnInId="16197" />
+	
+	<PickUp QuestName="Goldenmist Village" QuestId="9139" GiverName="Arcanist Vandril" GiverId="16197" />
+	<PickUp QuestName="Salvaging the Past" QuestId="9150" GiverName="Magister Darenis" GiverId="16199" />
+	<PickUp QuestName="Help Ranger Valanna!" QuestId="9145" GiverName="Ranger Lethvalin" GiverId="16213" />
+	<PickUp QuestName="Investigate An'daroth" QuestId="9160" GiverName="Dame Auriferous" GiverId="16231" />
+	<PickUp QuestName="Trouble at the Underlight Mines" QuestId="9192" GiverName="Deathstalker Maltendis" GiverId="16251" />
+	<PickUp QuestName="Down the Dead Scar" QuestId="9155" GiverName="Deathstalker Rathiel" GiverId="16200" />
+	
+<!-- Investigate An'daroth/Goldenmist Village -->
+	<Objective QuestName="Investigate An'daroth" QuestId="9160" Type="KillMob" MobId="16330" KillCount="12" />
+	<If Condition="HasQuest(9160) &amp;&amp; !IsObjectiveComplete(2,9160)" >
+		<RunTo X="7923.504" Y="-6511.445" Z="46.87927" />
+	</If>
+	<Objective QuestName="Goldenmist Village" QuestId="9139" Type="KillMob" MobId="16325" KillCount="6" />
+	<Objective QuestName="Goldenmist Village" QuestId="9139" Type="KillMob" MobId="16326" KillCount="4" />
+
+	<CustomBehavior File="Message" Text="Section Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+		
+</QuestOrder>
+</HBProfile>
