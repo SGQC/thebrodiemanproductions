@@ -2,6 +2,16 @@ Patch Notes
 
 6/11/13
 
+r331
+The Level Grind
+-- Professions - Added Cooking training and casting, no recipes YET
+-- Eversong Woods - Added more vendors
+-- Added Ghostlands - Partial
+Quest Behaviors
+-- Updates from CJ
+The Anglers
+-- Added InteractByQuestFrameDisposition="Ignore" to NPC quest givers
+
 r330
 Mistfall Village
 -- Blooming Blossoms - Corrected repeating profile load bug

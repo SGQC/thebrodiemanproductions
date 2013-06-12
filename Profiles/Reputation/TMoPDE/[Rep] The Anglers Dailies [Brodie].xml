@@ -178,7 +178,7 @@
 <!-- John Big Hook Marsock -->
 	<While Condition="HasQuestAvailable(60674)" >
 		<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
-		<CustomBehavior File="InteractWith" MobId="60674" PreInteractMountStrategy="Dismount" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="60674" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
@@ -239,7 +239,7 @@
 			</While>
 			<If Condition="!IsQuestCompleted(30753)" >
 				<CustomBehavior File="FlyTo" X="-1465.597" Y="-253.7264" Z="0.3228427" />
-				<CustomBehavior File="InteractWith" MobId="60674" InteractByGossipOptions="1" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="60674" InteractByQuestFrameDisposition="Ignore" InteractByGossipOptions="1" WaitTime="1000" />
 			</If>
 		</While>
 	</If>
