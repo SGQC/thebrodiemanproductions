@@ -1,5 +1,12 @@
 Patch Notes
 
+6/14/13
+
+r332
+Quest Behaviors
+-- Updates to v631 - Removed all redundant QBs
+-- Added recent Core updates from CJ
+
 6/11/13
 
 r331
