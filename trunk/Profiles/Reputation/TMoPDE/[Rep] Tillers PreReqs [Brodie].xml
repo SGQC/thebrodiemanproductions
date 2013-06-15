@@ -47,9 +47,9 @@
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<PickUp QuestName="A Helping Hand" QuestId="30252" GiverName="Farmer Yoon" GiverId="58721" />
 	</If>
-	<While Condition="HasQuest(30252) &amp;&amp; !IsQuestCompleted(30252)" >
-		<CustomBehavior File="InteractWith" QuestId="30252" MobId="58719" NumOfTimes="8" WaitTime="2000" CollectionDistance="150" X="-178.1711" Y="641.2398" Z="165.4093" />
-	</While>
+	
+	<CustomBehavior File="InteractWith" QuestId="30252" MobId="58719" NumOfTimes="80" CollectionDistance="150" X="-178.1711" Y="641.2398" Z="165.4093" />
+
 	<If Condition="HasQuest(30252) &amp;&amp; IsQuestCompleted(30252)" >
 		<TurnIn QuestName="A Helping Hand" QuestId="30252" TurnInName="Farmer Yoon" TurnInId="58646" />
 		<CustomBehavior File="WaitTimer" WaitTime="60000" />
@@ -76,16 +76,10 @@
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
 		<PickUp QuestName="Learn and Grow II: Tilling and Planting"  QuestId="30254" GiverName="Farmer Yoon" GiverId="58646" X="-179.0962" Y="633.9905" Z="165.4103" />
 	</If>
-	<While Condition="HasQuest(30254) &amp;&amp; !IsQuestCompleted(30254)" >
-		<RunTo X="-169.0728" Y="638.5255" Z="165.4094" />
-		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30254) &amp;&amp; !IsObjectiveComplete(1,30254)">
-			<CustomBehavior File="InteractWith" MobId="59985" WaitForNpcs="False" NumOfTimes="2" CollectionDistance="15" WaitTime="2000" />
-		</While>
-		<While Condition="HasQuest(30254) &amp;&amp; !IsObjectiveComplete(2,30254)">
-			<CustomBehavior File="UseItemOn" MobId="59990" ItemId="80302" WaitTime="3000" WaitForNpcs="False" CollectionDistance="15"  />
-		</While>
-	</While>
+
+	<CustomBehavior File="InteractWith" QuestId="30254" QuestObjectiveIndex="1" MobId="59985" NumOfTimes="20" CollectionDistance="100" X="-169.0728" Y="638.5255" Z="165.4094" />
+	<CustomBehavior File="InteractWith" QuestId="30254" QuestObjectiveIndex="2" MobId="59990" InteractByUsingItemId="80302" CollectionDistance="100" X="-169.0728" Y="638.5255" Z="165.4094" />
+
 	<If Condition="HasQuest(30254) &amp;&amp; IsQuestCompleted(30254)" >
 		<TurnIn QuestName="Learn and Grow II: Tilling and Planting" QuestId="30254" TurnInName="Farmer Yoon" TurnInId="58646" X="-179.0962" Y="633.9905" Z="165.4103" />
 	</If>
@@ -95,10 +89,8 @@
 		<PickUp QuestName="Learn and Grow III: Tending Crops" QuestId="30255" GiverName="Farmer Yoon" GiverId="58646" X="-179.0962" Y="633.9905" Z="165.4103" />
 	</If>
 
-	<While Condition="HasQuest(30255) &amp;&amp; !IsQuestCompleted(30255)" >
-		<CustomBehavior File="UseItemOn" MobId="59987" ItemId="79104" WaitTime="4000" WaitForNpcs="False" NumOfTimes="2" CollectionDistance="15"  />
-	</While>
-	
+	<CustomBehavior File="InteractWith" QuestId="30255" MobId="59987" InteractByUsingItemId="79104" NumOfTimes="20" CollectionDistance="100" X="-179.0962" Y="633.9905" Z="165.4103" />
+
 	<If Condition="HasQuest(30255) &amp;&amp; IsQuestCompleted(30255)" >
 		<TurnIn QuestName="Learn and Grow III: Tending Crops" QuestId="30255" TurnInName="Farmer Yoon" TurnInId="58646" X="-179.0962" Y="633.9905" Z="165.4103" />
 	</If>
@@ -108,9 +100,7 @@
 		<PickUp QuestName="Learn and Grow IV: Harvesting" QuestId="30256" GiverName="Farmer Yoon" GiverId="58646" />
 	</If>
 
-	<While Condition="HasQuest(30256) &amp;&amp; !IsQuestCompleted(30256)" >
-		<CustomBehavior File="InteractWith" QuestId="30256" MobId="59833" CollectionDistance="15" NumOfTimes="2" WaitTime="2000" WaitForNpcs="False" />
-	</While>
+	<CustomBehavior File="InteractWith" QuestId="30256" MobId="59833" CollectionDistance="100" NumOfTimes="20" X="-179.0962" Y="633.9905" Z="165.4103" />
 
 	<If Condition="HasQuest(30256) &amp;&amp; IsQuestCompleted(30256)" >
 		<TurnIn QuestName="Learn and Grow IV: Harvesting" QuestId="30256" TurnInName="Farmer Yoon" TurnInId="58646" />
@@ -121,9 +111,7 @@
 		<PickUp QuestName="Learn and Grow V: Halfhill Market" QuestId="30257" GiverName="Farmer Yoon" GiverId="58646" />
 	</If>
 
-	<While Condition="HasQuest(30257) &amp;&amp; !IsQuestCompleted(30257)" >
-		<CustomBehavior File="InteractWith" MobId="210582" ObjectType="GameObject" Range="10" X="-161.3544" Y="609.952" Z="168.9081" WaitTime="2000" />
-	</While>
+	<CustomBehavior File="InteractWith" QuestId="30257" MobId="210582" Range="10" X="-161.3544" Y="609.952" Z="168.9081" NumOfTimes="100" />
 
 	<If Condition="HasQuest(30257) &amp;&amp; IsQuestCompleted(30257)" >
 		<TurnIn QuestName="Learn and Grow V: Halfhill Market" QuestId="30257" TurnInName="Gina Mudclaw" TurnInId="58706" X="-259.5399" Y="592.5469" Z="167.5479" />
@@ -144,7 +132,7 @@
 			<If Condition="!HasItem(80591)" >
 				<CustomBehavior File="Message" Text="I don't have the seed I need. Going to buy one." LogColor="LawnGreen" />
 				<CustomBehavior File="FlyTo" DestName="Buying Seeds" X="-267.1079" Y="603.3618" Z="167.5482"   />
-				<CustomBehavior File="InteractWith" MobId="58718" BuyItemId="80591" BuyItemCount="1" />
+				<CustomBehavior File="InteractWith" MobId="58718" InteractByBuyingItemId="80591" BuyItemCount="1" />
 			</If>
 			<If Condition="HasItem(80591)" >
 				<CustomBehavior File="FlyTo" DestName="My Farm" X="-169.0728" Y="638.5255" Z="165.4094" />

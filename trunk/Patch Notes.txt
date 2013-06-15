@@ -1,5 +1,12 @@
 Patch Notes
 
+6/15/13
+
+r334
+Tillers PreReqs
+-- Multiple updates to UseItemOn, converted to InteractWith
+-- Added Hotpost support to Item usage, causing failures if outside the farm
+
 6/14/13
 
 r333
