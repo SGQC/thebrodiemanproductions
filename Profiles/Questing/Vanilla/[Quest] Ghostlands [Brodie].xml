@@ -22,6 +22,7 @@
 	<TargetElites>False</TargetElites>
 
 	<AvoidMobs>
+		<Mob Name="Luzran" Id="16245" />
 	</AvoidMobs>
 
 	<Blackspots>
@@ -111,6 +112,32 @@
 	</If>
 	<Objective QuestName="Goldenmist Village" QuestId="9139" Type="KillMob" MobId="16325" KillCount="6" />
 	<Objective QuestName="Goldenmist Village" QuestId="9139" Type="KillMob" MobId="16326" KillCount="4" />
+	
+<!-- The Plagued Coast -->
+	<Objective QuestName="The Plagued Coast" QuestId="9149" Type="CollectItem" ItemId="22579" CollectCount="6" />
+	
+<!-- Tomber's Supplies -->
+	<CustomBehavior File="InteractWith" QuestId="9152" MobId="181133" NumOfTimes="100" X="7687.207" Y="-6391.498" Z="20.29264" />
+	
+<!-- Salvaging the Past -->
+	<Objective QuestName="Salvaging the Past" QuestId="9150" Type="CollectItem" ItemId="22580" CollectCount="8" />
+	
+<!-- Down the Dead Scar -->
+	<Objective QuestName="Down the Dead Scar" QuestId="9155" Type="KillMob" MobId="16301" KillCount="10" />
+	<Objective QuestName="Down the Dead Scar" QuestId="9155" Type="KillMob" MobId="16309" KillCount="10" />
+
+	<TurnIn QuestName="The Plagued Coast" QuestId="9149" TurnInName="Apothecary Renzithen" TurnInId="16198" />
+	<TurnIn QuestName="Down the Dead Scar" QuestId="9155" TurnInName="Deathstalker Rathiel" TurnInId="16200" />
+	<TurnIn QuestName="Investigate An'daroth" QuestId="9160" TurnInName="Dame Auriferous" TurnInId="16231" />
+	<PickUp QuestName="Into Occupied Territory" QuestId="9163" GiverName="Dame Auriferous" GiverId="16231" />
+	<TurnIn QuestName="Salvaging the Past" QuestId="9150" TurnInName="Magister Darenis" TurnInId="16199" />
+	
+	<PickUp QuestName="Culinary Crunch" QuestId="9171" GiverName="Master Chef Mouldier" GiverId="16253" />
+	
+	<TurnIn QuestName="Tomber's Supplies" QuestId="9152" TurnInName="Rathis Tomber" TurnInId="16224" />
+	<TurnIn QuestName="Goldenmist Village" QuestId="9139" TurnInName="Arcanist Vandril" TurnInId="16197" />
+	
+	<PickUp QuestName="Windrunner Village" QuestId="9140" GiverName="Arcanist Vandril" GiverId="16197" />
 
 	<CustomBehavior File="Message" Text="Section Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />

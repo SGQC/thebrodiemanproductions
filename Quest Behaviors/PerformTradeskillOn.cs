@@ -24,7 +24,6 @@ using Styx.WoWInternals.WoWObjects;
 
 using Action = Styx.TreeSharp.Action;
 
-
 namespace Honorbuddy.Quest_Behaviors.PerformTradeskillOn
 {
     [CustomBehaviorFileName(@"PerformTradeskillOn")]
