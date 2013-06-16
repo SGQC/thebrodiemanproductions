@@ -2,6 +2,10 @@ Patch Notes
 
 6/16/13
 
+r337
+Quest Behaviors
+-- Merging error. Please delete the extra QuestBehaviors folder inside Quest Behaviors
+
 r336
 Quest Behaviors
 -- Updates from CJ
