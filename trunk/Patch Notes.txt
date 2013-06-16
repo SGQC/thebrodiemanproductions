@@ -2,6 +2,10 @@ Patch Notes
 
 6/16/13
 
+r336
+Quest Behaviors
+-- Updates from CJ
+
 r335
 The Level Grind
 -- Ghostlands updated (17/50 Loremaster)
