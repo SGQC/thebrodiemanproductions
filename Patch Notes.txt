@@ -1,5 +1,11 @@
 Patch Notes
 
+6/18/13
+
+r338
+Mistfall Village
+-- My Town, It's On Fire Again - Updated MobIds
+
 6/16/13
 
 r337
