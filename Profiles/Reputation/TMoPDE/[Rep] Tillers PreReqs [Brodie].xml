@@ -77,8 +77,8 @@
 		<PickUp QuestName="Learn and Grow II: Tilling and Planting"  QuestId="30254" GiverName="Farmer Yoon" GiverId="58646" X="-179.0962" Y="633.9905" Z="165.4103" />
 	</If>
 
-	<CustomBehavior File="InteractWith" QuestId="30254" QuestObjectiveIndex="1" MobId="59985" NumOfTimes="20" CollectionDistance="100" X="-169.0728" Y="638.5255" Z="165.4094" />
-	<CustomBehavior File="InteractWith" QuestId="30254" QuestObjectiveIndex="2" MobId="59990" InteractByUsingItemId="80302" CollectionDistance="100" X="-169.0728" Y="638.5255" Z="165.4094" />
+	<CustomBehavior File="InteractWith" QuestId="30254" QuestObjectiveIndex="1" MobId="59985" NumOfTimes="20" PreInteractMountStrategy="DismountOrCancelShapeshift" CollectionDistance="100" X="-169.0728" Y="638.5255" Z="165.4094" />
+	<CustomBehavior File="InteractWith" QuestId="30254" QuestObjectiveIndex="2" MobId="59990" InteractByUsingItemId="80302" PreInteractMountStrategy="DismountOrCancelShapeshift" CollectionDistance="100" X="-169.0728" Y="638.5255" Z="165.4094" />
 
 	<If Condition="HasQuest(30254) &amp;&amp; IsQuestCompleted(30254)" >
 		<TurnIn QuestName="Learn and Grow II: Tilling and Planting" QuestId="30254" TurnInName="Farmer Yoon" TurnInId="58646" X="-179.0962" Y="633.9905" Z="165.4103" />

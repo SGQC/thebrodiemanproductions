@@ -1,5 +1,13 @@
 Patch Notes
 
+6/19/13
+
+r339
+Tillers PreReqs
+-- Learn & Grow II - Should now dismount or cancel shapeshift before interactions
+Quest Behaviors
+-- Updates from ChinaJade
+
 6/18/13
 
 r338
