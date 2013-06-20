@@ -1,5 +1,15 @@
 Patch Notes
 
+6/20/13
+
+r342
+The Tillers
+-- A Gift for Haohan - Replaced IW with CollectThings, should pull mob instead of follow it.
+Cloud Serpents
+-- Flight Training - Added Azure and Jade serpent pickups
+The Level Grind
+-- Ghostlands - Updated
+
 6/19/13
 
 r341
