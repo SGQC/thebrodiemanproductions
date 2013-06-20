@@ -2,6 +2,11 @@ Patch Notes
 
 6/19/13
 
+r340
+Profile Swapper
+-- UI OVERHAUL!!!!!!!!!111!!1!1 :)
+-- Added Nat Pagle to the rotation AT THE END
+
 r339
 Tillers PreReqs
 -- Learn & Grow II - Should now dismount or cancel shapeshift before interactions
