@@ -32,7 +32,7 @@ namespace ProfileSwapper
 	{
 		public override string Name { get { return "Brodieman's Profile Swapper"; } }
 		public override string Author { get { return "Obliv & TheBrodieMan"; } }
-		private readonly Version _version = new Version(2,0);
+		private readonly Version _version = new Version(2,3);
 		public override Version Version { get { return _version; } }
 		public override string ButtonText { get { return "Settings"; } }
 		public override bool WantButton { get { return true; } }
