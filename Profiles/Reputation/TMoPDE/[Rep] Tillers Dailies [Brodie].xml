@@ -1169,9 +1169,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30477" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="348.98" Y="1021.83" Z="145.40" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30477)" >
-			<CustomBehavior File="InteractWith" QuestId="30477" MobId="59639" MobState="Alive" MovementBy="ClickToMoveOnly" WaitTime="1000" CollectionDistance="3000" />
-		</While>
+		<CustomBehavior File="CollectThings" QuestId="30477" MobId="59639" CollectUntil="QuestComplete" MobState="Alive" WaitTime="1000" 
+			HuntingGroundRadius="200" NonCompeteDistance="1" />
 		<CustomBehavior File="AscendInWater" />
 	</If>
 	

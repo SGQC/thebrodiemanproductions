@@ -1241,7 +1241,7 @@
 		<If Condition="!Me.HasAura(105080)" >
 			<CustomBehavior File="InteractWith" QuestId="30144" MobId="58420" InteractByGossipOptions="1" X="1620.606" Y="-2641.016" Z="149.9121" />
 			<CustomBehavior File="WaitTimer" WaitTime="10000" />
-			<CustomBehavior File="InteractWith" QuestId="30144" MobId="58428" X="1627.559" Y="-2638.84" Z="149.9324" />
+			<CustomBehavior File="InteractWith" QuestId="30144" MobId="58428" MobId2="58429" MobId3="58430" CollectionDistance="30" X="1627.559" Y="-2638.84" Z="149.9324" />
 		</If>
 		<If Condition="Me.HasAura(105080)" >
 			<CustomBehavior File="InteractWith" QuestId="30144" MobId1="58425" MobId2="58426" X="1739.285" Y="-2778.723" Z="164.9681" />

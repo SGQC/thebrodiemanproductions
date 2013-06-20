@@ -43,6 +43,19 @@
 	</Vendors>
 
 <!-- Quest Overrides -->
+
+<Quest Name="Curbing the Plague" Id="9159" >
+	<Objective Type="KillMob" MobId="16351" KillCount="8" >
+		<Hotspots>
+			<Hotspot X="7396.642" Y="-6420.696" Z="32.09044" />
+			<Hotspot X="7377.991" Y="-6341.356" Z="42.8056" />
+			<Hotspot X="7406.029" Y="-6240.438" Z="32.56119" />
+			<Hotspot X="7315.911" Y="-6189.064" Z="30.78055" />
+			<Hotspot X="7339.356" Y="-6092.94" Z="20.33039" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -180,7 +193,54 @@
 	<Objective QuestName="Spirits of the Drowned" QuestId="9274" Type="KillMob" MobId="16327" KillCount="8" />
 	<Objective QuestName="Spirits of the Drowned" QuestId="9274" Type="KillMob" MobId="16328" KillCount="8" />
 	<Objective QuestName="Bearers of the Plague" QuestId="9158" Type="KillMob" MobId="16348" KillCount="10" />
+	<TurnIn QuestName="Bearers of the Plague" QuestId="9158" TurnInName="Farstrider Sedina" TurnInId="16202" />
+	<PickUp QuestName="Curbing the Plague" QuestId="9159" GiverName="Farstrider Sedina" GiverId="16202" />
+	<TurnIn QuestName="Spirits of the Drowned" QuestId="9274" TurnInName="Ranger Krenn'an" TurnInId="16462" />
 
+<!-- Curbing the Plague -->
+	<Objective QuestName="Curbing the Plague" QuestId="9159" Type="KillMob" MobId="16354" KillCount="10" />
+	<PickUp QuestName="Troll Juju" QuestId="9199" GiverName="Deathstalker Maltendis" GiverId="16251" />
+	<PickUp QuestName="Investigate the Amani Catacombs" QuestId="9193" GiverName="Advisor Valwyn" GiverId="16289" />
+	<Objective QuestName="Curbing the Plague" QuestId="9159" Type="KillMob" MobId="16351" KillCount="8" /> <!-- Needs an Override -->
+	<If Condition="HasQuest(9171) &amp;&amp; !IsQuestCompleted(9171)" >
+		<CustomBehavior File="CollectThings" QuestId="9171" MobId="16351" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" NonCompeteDistance="1" >
+			<Hotspot X="7396.642" Y="-6420.696" Z="32.09044" />
+			<Hotspot X="7377.991" Y="-6341.356" Z="42.8056" />
+			<Hotspot X="7406.029" Y="-6240.438" Z="32.56119" />
+			<Hotspot X="7315.911" Y="-6189.064" Z="30.78055" />
+			<Hotspot X="7339.356" Y="-6092.94" Z="20.33039" />
+		</CustomBehavior>
+	</If>
+	
+<!-- Trouble at the Underlight Mines -->
+	<Objective QuestName="Trouble at the Underlight Mines" QuestId="9192" Type="KillMob" MobId="16334" KillCount="8" />
+	<Objective QuestName="Trouble at the Underlight Mines" QuestId="9192" Type="KillMob" MobId="16335" KillCount="6" />
+	<Objective QuestName="Trouble at the Underlight Mines" QuestId="9192" Type="KillMob" MobId="16337" KillCount="4" />
+	
+<!-- Windrunner Village -->
+	<Objective QuestName="Windrunner Village" QuestId="9140" Type="CollectItem" ItemId="22566" CollectCount="6" />
+	<Objective QuestName="Windrunner Village" QuestId="9140" Type="CollectItem" ItemId="22567" CollectCount="4" />
+	
+<!-- Into Occupied Territory -->
+	<CustomBehavior File="InteractWith" QuestId="9163" QuestObjectiveIndex="1" MobId="181138" X="7684.537" Y="-5768.306" Z="4.624454" />
+	<CustomBehavior File="InteractWith" QuestId="9163" QuestObjectiveIndex="2" MobId="181139" X="7715.949" Y="-5692.38" Z="3.577756" />
+	<CustomBehavior File="InteractWith" QuestId="9163" QuestObjectiveIndex="3" MobId="181140" X="7773.066" Y="-5632.977" Z="17.6742" />
+	
+	<TurnIn QuestName="Windrunner Village" QuestId="9140" TurnInName="Arcanist Vandril" TurnInId="16197" />
+	<TurnIn QuestName="Into Occupied Territory" QuestId="9163" TurnInName="Dame Auriferous" TurnInId="16231" />
+	<PickUp QuestName="Deliver the Plans to An'telas" QuestId="9166" GiverName="Dame Auriferous" GiverId="16231" />
+	<TurnIn QuestName="Trouble at the Underlight Mines" QuestId="9192" TurnInName="Deathstalker Maltendis" TurnInId="16251" />
+	<PickUp QuestName="Retaking Windrunner Spire" QuestId="9173" GiverName="High Executor Mavren" GiverId="16252" />
+	<TurnIn QuestName="Culinary Crunch" QuestId="9171" TurnInName="Master Chef Mouldier" TurnInId="16253" />
+	<PickUp QuestName="Spinal Dust" QuestId="9218" GiverName="Magistrix Aminel" GiverId="16205" />
+	<PickUp QuestName="Rotting Hearts" QuestId="9216" GiverName="Magistrix Aminel" GiverId="16205" />
+	
+<!-- Spinal Dust/Rotting Hearts -->
+	<Objective QuestName="Spinal Dust" QuestId="9218" Type="CollectItem" ItemId="22642" CollectCount="10" />
+	<Objective QuestName="Rotting Hearts" QuestId="9216" Type="CollectItem" ItemId="22641" CollectCount="10" />
+	<TurnIn QuestName="Spinal Dust" QuestId="9218" TurnInName="Magistrix Aminel" TurnInId="16205" />
+	<TurnIn QuestName="Rotting Hearts" QuestId="9216" TurnInName="Magistrix Aminel" TurnInId="16205" />
+	
 	<CustomBehavior File="Message" Text="Section Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		
