@@ -2,6 +2,12 @@ Patch Notes
 
 6/20/13
 
+r343
+The Level Grind
+-- Ghostlands -- Mostly finished
+Mistfall Village
+-- My Town, Its On Fire Again - Range of Bucket throw increased to 30 yds (hopefully a fix?)
+
 r342
 The Tillers
 -- A Gift for Haohan - Replaced IW with CollectThings, should pull mob instead of follow it.
