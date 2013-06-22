@@ -43,11 +43,12 @@
 	<If Condition="Me.IsAlliance" >
 
 		<!--Level 20-->
-		<If Condition="Me.Level &gt;= 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 4">
+		<If Condition="Me.Level &gt;= 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 4" >
 			<If Condition="Me.Race == WoWRace.Dwarf" >
 				<TurnIn QuestName="Learn To Ride" QuestId="32662" TurnInName="Ultham Ironhorn" TurnInId="4772" />
 				<CustomBehavior File="ForceTrainRiding" MobId="4772" />
-				<If Condition="Me.Gold &gt;= 1 &amp;&amp; !HasSpell(6898)" >
+				<If Condition="Me.Gold &gt;= 1 &amp;&amp; Mount.GroundMounts.Count() &lt;= 0" >
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
 					<CustomBehavior File="InteractWith" MobId="1261" InteractByBuyingItemId="5873" X="-5538.411" Y="-1323.057" Z="398.9364" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(5873)" />
 				</If>
@@ -56,6 +57,7 @@
 				<TurnIn QuestName="Learn To Ride" QuestId="32663" TurnInName="Binjy Featherwhistle" TurnInId="7954" />
 				<CustomBehavior File="ForceTrainRiding" MobId="7954" />
 				<If Condition="Me.Gold &gt;= 1 &amp;&amp; Mount.GroundMounts.Count() &lt;= 0" >
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
 					<CustomBehavior File="InteractWith" MobId="7955" InteractByBuyingItemId="8595" X="-5454.171" Y="-621.048" Z="393.3968" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8595)" />
 				</If>
@@ -64,6 +66,7 @@
 				<TurnIn QuestName="Learn To Ride" QuestId="32665" TurnInName="Mei Lin" TurnInId="70296" />
 				<CustomBehavior File="ForceTrainRiding" MobId="70296" />
 				<If Condition="Me.Gold &gt;= 1 &amp;&amp; Mount.GroundMounts.Count() &lt;= 0" >
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
 					<CustomBehavior File="InteractWith" MobId="65068" InteractByBuyingItemId="91009" X="-8209.379" Y="546.0261" Z="117.7685" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(91009)" />
 				</If>
@@ -72,6 +75,7 @@
 				<RunTo X="-8847.539" Y="501.144" Z="109.6118" />
 				<CustomBehavior File="ForceTrainRiding" MobId="43769" />
 				<If Condition="Me.Gold &gt;= 1 &amp;&amp; Mount.GroundMounts.Count() &lt;= 0" >
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
 					<CustomBehavior File="InteractWith" MobId="43694" InteractByBuyingItemId="2414" X="-8783.64" Y="386.509" Z="100.8159" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(2414)" />
 				</If>
@@ -83,6 +87,7 @@
 				<TurnIn QuestName="Learn To Ride" QuestId="32664" TurnInName="Jartsam" TurnInId="4753" />
 				<CustomBehavior File="ForceTrainRiding" MobId="4753" />
 				<If Condition="Me.Gold &gt;= 1 &amp;&amp; Mount.GroundMounts.Count() &lt;= 0" >
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
 					<CustomBehavior File="InteractWith" MobId="4730" InteractByBuyingItemId="8631" X="10129.91" Y="2533.245" Z="1323.271" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8631)" />
 				</If>
@@ -94,6 +99,7 @@
 				<TurnIn QuestName="Learn To Ride" QuestId="32661" TurnInName="Aalun" TurnInId="20914" />
 				<CustomBehavior File="ForceTrainRiding" MobId="20914" />
 				<If Condition="Me.Gold &gt;= 1 &amp;&amp; Mount.GroundMounts.Count() &lt;= 0" >
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
 					<CustomBehavior File="InteractWith" MobId="17584" InteractByBuyingItemId="29744" CollectionDistance="50" X="-3981.769" Y="-11929.14" Z="-0.2419412" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(29744)" />
 				</If>
@@ -101,6 +107,84 @@
 			<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0">
 				<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
 					Text="Unexpected Error with mount training!" />
+			</If>
+		</If>
+	</If>
+	
+	<If Condition="Me.IsHorde" >
+		<If Condition="Me.Level &gt;= 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 4" >
+			<If Condition="Me.Race == WoWRace.BloodElf" >
+				<TurnIn QuestName="Learn To Ride" QuestId="32668" TurnInName="Perascamin" TurnInId="16280" />
+				<CustomBehavior File="ForceTrainRiding" MobId="16280" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="16264" InteractByBuyingItemId="29221" X="9245.224" Y="-7495" Z="36.93785" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(29221)" />
+				</If>
+			</If>
+			<If Condition="Me.Race == WoWRace.Orc" >
+				<TurnIn QuestName="Learn To Ride" QuestId="32669" TurnInName="Kildar" TurnInId="4752" />
+				<CustomBehavior File="ForceTrainRiding" MobId="4752" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="3362" InteractByBuyingItemId="46099" X="2077.21" Y="-4566.8" Z="49.2534" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46099)" />
+				</If>
+			</If>
+			<If Condition="Me.Race == WoWRace.Tauren" >
+				<TurnIn QuestName="Learn To Ride" QuestId="32670" TurnInName="Kar Stormsinger" TurnInId="3690" />
+				<CustomBehavior File="ForceTrainRiding" MobId="3690" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="3685" InteractByBuyingItemId="15290" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(15290)" />
+				</If>
+			</If>
+			<If Condition="Me.Race == WoWRace.Troll">
+				<TurnIn QuestName="Learn To Ride" QuestId="32671" TurnInName="Xar'Ti" TurnInId="7953" />
+				<CustomBehavior File="ForceTrainRiding" MobId="7953" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="7952" InteractByBuyingItemId="18790" X="-858.092" Y="-4883.042" Z="22.11629" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(18790)" />
+				</If>
+			</If>
+			<If Condition="Me.Race == WoWRace.Undead" >
+				<TurnIn QuestName="Learn To Ride" QuestId="32672" TurnInName="Velma Warnam" TurnInId="4773" />
+				<CustomBehavior File="ForceTrainRiding" MobId="4773" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="4731" InteractByBuyingItemId="13331" X="2276.172" Y="240.7322" Z="33.39476" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(13331)" />
+				</If>
+			</If>
+			<If Condition="Me.Race == WoWRace.Goblin" >
+				<TurnIn QuestName="Learn To Ride" QuestId="32673" TurnInName="Revi Ramrod" TurnInId="48513" />
+				<CustomBehavior File="ForceTrainRiding" MobId="48513" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="48510" InteractByBuyingItemId="62461" InteractByGossipOptions="1" X="1482.96" Y="-4132.74" Z="52.5905" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(62461)" />
+				</If>
+			</If>
+			<If Condition="Me.Race == WoWRace.Pandaren">
+				<TurnIn QuestName="Learn To Ride" QuestId="32667" TurnInName="Softpaws" TurnInId="70301" />
+				<CustomBehavior File="ForceTrainRiding" MobId="70301" />
+				<If Condition="Mount.GroundMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 1">
+					<CustomBehavior File="Message" Text="Buying 1 mount!" LogColor="Aquamarine" />
+					<CustomBehavior File="InteractWith" MobId="66022" InteractByBuyingItemId="91007" X="2009.267" Y="-4721.249" Z="29.5149" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(91007)" />
+				</If>
+			</If>
+			<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0">
+				<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+					Text="For some reason we didn't get trained. Please train Apprentice Riding before restarting." />
+				<CustomBehavior File="Halt" />
+			</If>
+			<If Condition="Mount.GroundMounts.Count() &lt;= 0">
+				<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+					Text="For some reason we don't have a mount. Please Buy a ground mount before restarting." />
+				<CustomBehavior File="Halt" />
 			</If>
 		</If>
 	</If>
