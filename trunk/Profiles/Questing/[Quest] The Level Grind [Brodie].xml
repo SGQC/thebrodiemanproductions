@@ -40,6 +40,9 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Undead Start [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.BloodElf" >
+				<If Condition="Me.LevelFraction &gt;= 20 &amp;&amp; (!HasQuest(9621) &amp;&amp; IsQuestCompleted(9621))" >
+					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Hillsbrad Foothills [Brodie]" />
+				</If>	
 				<If Condition="Me.LevelFraction &gt;= 10" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Ghostlands [Brodie]" />
 				</If>

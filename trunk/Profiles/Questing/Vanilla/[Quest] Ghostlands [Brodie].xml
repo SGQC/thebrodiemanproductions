@@ -87,6 +87,21 @@
 	</Objective>
 </Quest>
 
+<Quest Name="Dar'Khan's Lieutenants" Id="9170" >
+	<Objective Type="KillMob" MobId="16247" KillCount="1" >
+		<Hotspots>
+			<Hotspot X="6435.98" Y="-6621.437" Z="107.438" />
+			<Hotspot X="6291.479" Y="-6363.143" Z="78.01933" />
+		</Hotspots>
+	</Objective>
+	<Objective Type="KillMob" MobId="16249" KillCount="1" >
+		<Hotspots>
+			<Hotspot X="6311.542" Y="-6471.57" Z="83.01143" />
+			<Hotspot X="6326.189" Y="-6263.25" Z="80.81287" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -396,18 +411,29 @@
 	<TurnIn QuestName="A Restorative Draught" QuestId="9877" TurnInName="Apothecary Renzithen" TurnInId="16198" />
 	<PickUp QuestName="Captives at Deatholme" QuestId="9164" GiverName="Apothecary Renzithen" GiverId="16198" />
 	
-	<Objective QuestName="Dar'khan's Lieutenants" QuestId="9170" Type="KillMob" MobId="16247" KillCount="1" />
 	<Objective QuestName="Dar'khan's Lieutenants" QuestId="9170" Type="KillMob" MobId="16248" KillCount="1" />
-	<Objective QuestName="Dar'khan's Lieutenants" QuestId="9170" Type="KillMob" MobId="16249" KillCount="1" />
+	<CustomBehavior File="InteractWith" QuestId="9164" QuestObjectiveIndex="1" InteractByGossipOptions="1,1,1" MobId="16208" NumOfTimes="100" X="6644.565" Y="-6343.801" Z="9.439247" />
 	<Objective QuestName="Dar'khan's Lieutenants" QuestId="9170" Type="KillMob" MobId="16250" KillCount="1" />
+	<Objective QuestName="Dar'khan's Lieutenants" QuestId="9170" Type="KillMob" MobId="16247" KillCount="1" />
+	<CustomBehavior File="InteractWith" QuestId="9164" QuestObjectiveIndex="2" InteractByGossipOptions="1,1,1" MobId="16206" NumOfTimes="100" X="6435.98" Y="-6621.437" Z="107.438" />
+	<Objective QuestName="Dar'khan's Lieutenants" QuestId="9170" Type="KillMob" MobId="16249" KillCount="1" />
+	<CustomBehavior File="InteractWith" QuestId="9164" QuestObjectiveIndex="3" InteractByGossipOptions="1,1,1" MobId="16209" NumOfTimes="100" X="6291.479" Y="-6363.143" Z="78.01933" />
 	
 	<Objective QuestName="The Traitor's Destruction" QuestId="9167" Type="CollectItem" ItemId="22653" CollectCount="1" />
 	<TurnIn QuestName="Dar'khan's Lieutenants" QuestId="9170" TurnInName="Magister Idonis" TurnInId="16204" />
+	<TurnIn QuestName="Captives at Deatholme" QuestId="9164" TurnInName="Arcanist Janeda" TurnInId="16240" />
 	<TurnIn QuestName="The Traitor's Destruction" QuestId="9167" TurnInName="Magister Kaendris" TurnInId="16239" />
 	
 	<If Condition="Me.Race == WoWRace.BloodElf" >
 		<PickUp QuestName="Hero of the Sin'dorei" QuestId="9328" GiverName="Magister Kaendris" GiverId="16239" />
 		<TurnIn QuestName="Hero of the Sin'dorei" QuestId="9328" TurnInName="Lor'themar Theron" TurnInId="16802" />
+		<PickUp QuestName="Envoy to the Horde" QuestId="9621" GiverName="Lor'themar Theron" GiverId="16802" />
+		<If Condition="HasQuest(9621)" >
+			<If Condition="Me.ZoneId == 3487 || Me.ZoneId == 3433 || Me.ZoneId == 3430" >
+				<CustomBehavior File="InteractWith" MobId="184502" WaitTime="10000" X="10009.28" Y="-7027.485" Z="50.13657" />
+			</If>
+			<TurnIn QuestName="Envoy to the Horde" QuestId="9621" TurnInName="Lady Sylvanas Windrunner" TurnInId="10181" />
+		</If>
 	<Else>
 		<PickUp QuestName="Friend of the Sin'dorei" QuestId="9811" GiverName="Magister Kaendris" GiverId="16239" />
 		<TurnIn QuestName="Friend of the Sin'dorei" QuestId="9811" TurnInName="Lor'themar Theron" TurnInId="16802" />

@@ -1,5 +1,12 @@
 Patch Notes
 
+6/22/13
+
+r344
+The Level Grind
+-- Ghostlands - Completed
+-- Level Grind - Updated to send Blood Elves to Hillsbrad Foothills at 20+ (profile not yet implemented)
+
 6/20/13
 
 r343
