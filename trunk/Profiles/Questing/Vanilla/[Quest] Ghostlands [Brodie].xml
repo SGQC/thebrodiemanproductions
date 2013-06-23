@@ -440,7 +440,7 @@
 	</Else>
 	</If>
 	
-	<CustomBehavior File="Message" Text="Section Complete" LogColor="Orange" />
+	<CustomBehavior File="Message" Text="Ghostlands Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 		
 </QuestOrder>
