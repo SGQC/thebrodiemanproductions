@@ -20,7 +20,6 @@
 	<SellPurple>False</SellPurple>
 	
 	<AvoidMobs>
-		<Mob Name="Enforcer Emilgund" Entry="5787" />
 		<Mob Name="Training Dummy" Entry="44937" />
 		<Mob Name="Training Dummy" Entry="44848" />
 	</AvoidMobs>
@@ -29,7 +28,7 @@
 		<!--Camp Narache Mailbox-->
 		<Mailbox X="-2898.371" Y="-240.4763" Z="60.04997" />
 		<!--Bloodhoof Village Mailbox-->
-		<Mailbox X="-2336.538" Y="-368.1059" Z="-8.463984" />	
+		<Mailbox X="-2336.538" Y="-368.1059" Z="-8.463984" />
 	</Mailboxes>
 
 	<Vendors>
