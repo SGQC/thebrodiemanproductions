@@ -21,10 +21,17 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
 			</If>
 		</If>
-		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll || Me.Race == WoWRace.Tauren" >
+		<If Condition="Me.Race == WoWRace.Goblin || Me.Race == WoWRace.Tauren" >
+			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; IsQuestCompleted(26397)" >
+			</If>
 			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(24215)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Mulgore [Brodie]" />
 			</If>
+			<If Condition="Me.Race == WoWRace.Tauren" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Tauren Start [Brodie]" />
+			</If>
+		</If>
+		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll" >
 			<If Condition="Me.Race == WoWRace.Orc &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25133)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
 			</If>
@@ -33,9 +40,6 @@
 			</If>
 			<If Condition="Me.Race == WoWRace.Orc" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Orc Start [Brodie]" />
-			</If>
-			<If Condition="Me.Race == WoWRace.Tauren" >
-				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Tauren Start [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Troll" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Troll Start [Brodie]" />
