@@ -1,5 +1,12 @@
 Patch Notes
 
+6/24/13
+
+r348
+The Level Grind
+-- Level Grind - Reorganized for Tauren and Goblin to share paths
+-- Mulgore - Completed, ends in Orgrimmar
+
 6/23/13
 
 r347

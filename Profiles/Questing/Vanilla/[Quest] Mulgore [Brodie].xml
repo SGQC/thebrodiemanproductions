@@ -228,6 +228,14 @@
 	<TurnIn QuestName="A Sacred Burial" QuestId="833" TurnInName="Lorekeeper Raintotem" TurnInId="3233" />
 	
 	<PickUp QuestName="Journey into Thunder Bluff" QuestId="24550" GiverName="Una Wildmane" GiverId="37024" />
+	<TurnIn QuestName="Journey into Thunder Bluff" QuestId="24550" TurnInName="Baine Bloodhoof" TurnInId="36648" />
+	
+	<PickUp QuestName="War Dance" QuestId="24540" GiverName="Baine Bloodhoof" GiverId="36648" />
+	<Objective QuestName="War Dance" QuestId="24540" Type="KillMob" MobId="36931" KillCount="1" />
+	<TurnIn QuestName="War Dance" QuestId="24540" TurnInName="Baine Bloodhoof" TurnInId="36648" />
+	
+	<PickUp QuestName="Walk With The Earth Mother" QuestId="26397" GiverName="Baine Bloodhoof" GiverId="36648" />
+	<TurnIn QuestName="Walk With The Earth Mother" QuestId="26397" TurnInName="Garrosh Hellscream" TurnInId="39605" />
 
 	<CustomBehavior File="Message" Text="Mulgore Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
