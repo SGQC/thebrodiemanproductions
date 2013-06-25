@@ -35,14 +35,14 @@
 	</Mailboxes>
 
 	<Vendors>
-		<!-- Azure Watch Vendors -->
+		<!-- Azure Watch -->
 		<Vendor Name="Caregiver Chellan" Entry="16553" Type="Food" X="-4127.806" Y="-12467.68" Z="44.08744" />
 		<Vendor Name="Otonambusi" Entry="18810" Type="Food" X="-4209.451" Y="-12456.21" Z="45.54395" />
 		<Vendor Name="Nabek" Entry="17930" Type="Repair" X="-4235.529" Y="-12518.16" Z="46.20815" />
 		<Vendor Name="Diktynna" Entry="17101" Type="Sell" X="-4266.344" Y="-12985.36" Z="2.272953" />
-		<!-- Kessel's Crossing Vendors -->
+		<!-- Kessel's Crossing -->
 		<Vendor Name="Little Azimi" Entry="21145" Type="Food" X="-2655.952" Y="-12132.31" Z="16.91483" />
-		<!-- Blood Watch Vendors -->
+		<!-- Blood Watch -->
 		<Vendor Name="Caregiver Topher Loaal" Entry="17553" Type="Food" X="-2059.199" Y="-11897.04" Z="45.65863" />
 		<Vendor Name="Beega" Entry="17667" Type="Repair" X="-1990.958" Y="-11814.47" Z="54.50079" />
 		<Vendor Name="Clopper Wizbang" Entry="17421" Type="Food" X="-1219.877" Y="-11450" Z="0.9981117" />
@@ -165,15 +165,17 @@
 	
 <!-- The Kessel Run -->
 	<PickUp QuestName="The Kessel Run" QuestId="9663" GiverName="Kessel" GiverId="17649" />
-	<CustomBehavior File="UserSettings" QuestId="9663" UseFlightPaths="False" PullDistance="0" />
+	<DisableBehavior Name="Combat, Loot" />
+	<CustomBehavior File="UserSettings" QuestId="9663" UseFlightPaths="False" />
 	<CustomBehavior File="InteractWith" QuestId="9663" QuestObjectiveIndex="1" MobId="17440" ProactiveCombatStrategy="NoClear" X="-3357.455" Y="-12397.28" Z="25.19392" />
 	<CustomBehavior File="InteractWith" QuestId="9663" QuestObjectiveIndex="2" MobId="17116" ProactiveCombatStrategy="NoClear" X="-4167.066" Y="-12422.21" Z="42.36566" />
 	<CustomBehavior File="InteractWith" QuestId="9663" QuestObjectiveIndex="3" MobId="17240" ProactiveCombatStrategy="NoClear" X="-4700.432" Y="-12413.37" Z="11.61146" />
 	<If Condition="HasQuest(9663)" >
 		<CustomBehavior File="NoCombatMoveTo" X="-2664.555" Y="-12135.26" Z="16.8898" />
-		<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
+		<CustomBehavior File="UserSettings" UseFlightPaths="True" />
 	</If>
 	<TurnIn QuestName="The Kessel Run" QuestId="9663" TurnInName="Kessel" TurnInId="17649" />
+	<EnableBehavior Name="Combat, Loot" />
 	
 <!-- A Favorite Treat/Alien Predators/Saving Princess Stillpine/Declaration of Power -->
 	<PickUp QuestName="Declaration of Power" QuestId="9666" GiverName="Kessel" GiverId="17649" />

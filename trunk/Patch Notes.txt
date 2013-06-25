@@ -1,5 +1,14 @@
 Patch Notes
 
+6/25/13
+
+r349
+The Level Grind
+-- Level Grind - Added Goblin Starter Support
+-- Bloodmyst Isle - Kessel Run - Converted PullDistance changes to Disable/EnableBehavior
+Quest Behaviors
+-- Updated to reflect v627
+
 6/24/13
 
 r348
