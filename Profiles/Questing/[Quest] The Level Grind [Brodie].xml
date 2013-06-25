@@ -27,6 +27,9 @@
 			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(24215)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Mulgore [Brodie]" />
 			</If>
+			<If Condition="Me.Race == WoWRace.Goblin" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Goblin Start [Brodie]" />
+			</If>
 			<If Condition="Me.Race == WoWRace.Tauren" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Tauren Start [Brodie]" />
 			</If>
