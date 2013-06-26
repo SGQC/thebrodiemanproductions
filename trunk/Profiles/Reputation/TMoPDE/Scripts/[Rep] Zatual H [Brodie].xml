@@ -219,9 +219,10 @@
 					HasQuest(32215) &amp;&amp; IsQuestCompleted(32215) ||
 					HasQuest(32216) &amp;&amp; IsQuestCompleted(32216)" >
 		<CustomBehavior File="Message" Text="Heading back to Zu'Tual to Turn-In" LogColor="Green" />
-		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" />
+		<DisableBehavior Name="Combat, Loot" />
 		<RunTo X="6362.73" Y="6133.87" Z="20.99" />
 		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<EnableBehavior Name="Combat, Loot" />
 	</If>
 	
 	<If Condition="HasQuest(32200) &amp;&amp; IsQuestCompleted(32200)" >

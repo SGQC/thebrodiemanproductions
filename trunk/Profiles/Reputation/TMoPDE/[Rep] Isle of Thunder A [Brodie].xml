@@ -75,7 +75,7 @@
 
 <CustomBehavior File="Message" Text="Beginning Isle of Thunder Quests." LogColor="Green"  />
 
-	<If Condition="!(Me.ZoneId==6507)" >
+	<If Condition="!(Me.ZoneId == 6507)" >
 		<CustomBehavior File="Message" Text="Moving to Shado Pan Garrison." LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="1921.81" Y="4223.25" Z="132.44" />
 		<CustomBehavior File="ForcedDismount" />
