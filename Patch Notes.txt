@@ -2,6 +2,14 @@ Patch Notes
 
 6/25/13
 
+r351
+The Level Grind
+-- Level Grind - Updated to support Azshara (Tauren and Goblin only)
+-- Added Goblin Starter - complete
+Quest Behaviors
+-- Additions and modifications to Goblin Starter quests
+-- Updates from CJ
+
 r350
 August Celestials
 -- Added profile swapper support to end of all sections, will now move on to Nat Pagle at the end!

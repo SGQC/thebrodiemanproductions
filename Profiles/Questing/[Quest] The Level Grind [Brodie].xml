@@ -22,7 +22,9 @@
 			</If>
 		</If>
 		<If Condition="Me.Race == WoWRace.Goblin || Me.Race == WoWRace.Tauren" >
-			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; IsQuestCompleted(26397)" >
+			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; IsQuestCompleted(26397) ||
+							Me.Race == WoWRace.Goblin &amp;&amp; IsQuestCompleted(25267)" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Azshara [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(24215)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Mulgore [Brodie]" />

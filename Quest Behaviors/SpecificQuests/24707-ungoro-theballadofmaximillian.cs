@@ -23,17 +23,18 @@ using Styx.WoWInternals.WoWObjects;
 using Action = Styx.TreeSharp.Action;
 
 
-namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.theballadofmaximillian
 {
-    [CustomBehaviorFileName(@"SpecificQuests\24697-ungoro-howtomakemeatfresh")]
-    public class howtomakemeatfresh : CustomForcedBehavior
+    
+    [CustomBehaviorFileName(@"SpecificQuests\24707-ungoro-theballadofmaximillian")]
+    public class theballadofmaximillian : CustomForcedBehavior
     {
-        ~howtomakemeatfresh()
+        ~theballadofmaximillian()
         {
             Dispose(false);
         }
 
-        public howtomakemeatfresh(Dictionary<string, string> args)
+        public theballadofmaximillian(Dictionary<string, string> args)
             : base(args)
         {
             try
@@ -42,7 +43,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
                 //    http://www.thebuddyforum.com/mediawiki/index.php?title=Honorbuddy_Programming_Cookbook:_QuestId_for_Custom_Behaviors
                 // ...and also used for IsDone processing.
 
-                QuestId = 24697;
+                QuestId = 24707;
                 QuestRequirementComplete = GetAttributeAsNullable<QuestCompleteRequirement>("QuestCompleteRequirement", false, null, null) ?? QuestCompleteRequirement.NotComplete;
                 QuestRequirementInLog = GetAttributeAsNullable<QuestInLogRequirement>("QuestInLogRequirement", false, null, null) ?? QuestInLogRequirement.InLog;
 
@@ -110,7 +111,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
             }
             //Logging.Write("Disposing");
 
-            LevelBot.BehaviorFlags |= ~BehaviorFlags.Combat;
+            //LevelBot.BehaviorFlags |= ~BehaviorFlags.Combat;
 
             _isDisposed = true;
         }
@@ -159,36 +160,25 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
 
 
 
-        //<Vendor Name="Young Diemetradon" Entry="9162" Type="Repair" X="-7518.554" Y="-1351.945" Z="-270.8233" />
-        public WoWUnit Dino
+        //<Vendor Name="Devilsaur Queen" Entry="38708" Type="Repair" X="-7933.465" Y="-689.9974" Z="-258.6719" />
+        public WoWUnit Dragon
         {
-            get { return ObjectManager.GetObjectsOfType<WoWUnit>().Where(r => (r.Entry == 9162 || r.Entry == 9163) && r.IsAlive).OrderBy(r=>r.Distance).FirstOrDefault(); }
+            get { return ObjectManager.GetObjectsOfType<WoWUnit>().FirstOrDefault(r => r.Entry == 38708 && r.IsAlive); }
         }
 
-
-
-        //<Vendor Name="dasd" Entry="0" Type="Repair" X="-7531.042" Y="-1459.93" Z="-279.5515" />
-        public WoWPoint Gooby = new WoWPoint(-7531.042,-1459.93,-279.5515);
-        //<Vendor Name="start" Entry="0" Type="Repair" X="-7537.472" Y="-1421.281" Z="-272.6569" />
-        public WoWPoint start = new WoWPoint(-7537.472,-1421.281,-272.6569);
-
-
-        public WoWItem Meat
+        public WoWItem armor
         {
-            get { return Me.BagItems.FirstOrDefault(r => r.Entry == 50430); }
+            get { return Me.BagItems.FirstOrDefault(r => r.Entry == 51794); }
         }
 
-        public bool gotthere = false;
-        public Composite GetToSpot
+        public WoWItem rock
         {
-            get
-            {
-                return new Decorator(r => !gotthere,new PrioritySelector(
-                    new Decorator(r=> start.Distance(Me.Location) > 10, new Action(r=>Navigator.MoveTo(start))),
-                    new Decorator(r => start.Distance(Me.Location) < 10, new Action(r => gotthere = true))
-                    
-                    ));
-            }
+            get { return Me.BagItems.FirstOrDefault(r => r.Entry == 51780); }
+        }
+
+        public Composite shoot(int which)
+        {
+            return new Action(r => Lua.DoString("CastPetAction({0})", which));
         }
 
         public Composite GoobyPls
@@ -197,17 +187,17 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
             get
             {
                 return new PrioritySelector(
-                    new Decorator(r=>Me.Combat,new Action(r=>Navigator.MoveTo(Gooby))),
-                    new Decorator(r=>!Me.Combat && Dino != null && Dino.Distance < 40,new Action(r =>
-                        {
-                            Navigator.PlayerMover.MoveStop();
-                            Dino.Target();
-                            Meat.Use();
 
-                        }
-                                                                                          )),
-                     new Decorator(r=>!Me.Combat && Dino != null && Dino.Distance > 40,new Action(r=>Navigator.MoveTo(Dino.Location))),
-                     new Decorator(r=>!Me.Combat && Dino == null, new Action(r=>Navigator.MoveTo(start)))
+                     new Decorator(r => Dragon == null, shoot(1)),
+                     new Decorator(r => Dragon != null && Me.CurrentTarget != Dragon, new Action(r=>Dragon.Target())),
+                     new Decorator(r => Dragon != null, new Action(r =>
+                         {
+                             if (Dragon.Distance <= 12) {Lua.DoString("CastPetAction({0})", 1);}
+                             if (rock != null){Lua.DoString("CastPetAction({0})", 2);}
+                             if (armor != null) {Lua.DoString("CastPetAction({0})", 3);}
+
+
+                         }))
                      
                         
                     
@@ -220,7 +210,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
         protected override Composite CreateBehavior()
         {
 
-            return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(DoneYet, GetToSpot,GoobyPls, new ActionAlwaysSucceed())));
+            return _root ?? (_root = new Decorator(ret => !_isBehaviorDone, new PrioritySelector(DoneYet,GoobyPls, new ActionAlwaysSucceed())));
         }
 
         public override void Dispose()
@@ -259,7 +249,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.howtomakemeatfresh
             if (!IsDone)
             {
 
-                LevelBot.BehaviorFlags &= ~BehaviorFlags.Combat;
+                //LevelBot.BehaviorFlags &= ~BehaviorFlags.Combat;
 
 
                 PlayerQuest quest = StyxWoW.Me.QuestLog.GetQuestById((uint)QuestId);
