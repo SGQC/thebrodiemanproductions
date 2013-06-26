@@ -1,5 +1,11 @@
 Patch Notes
 
+6/26/13
+
+r353
+Isle of Thunder
+-- Za'tual - Replaced lower pull distances with Disable/EnableBehavior Combat/Loot
+
 6/25/13
 
 r352
