@@ -2,6 +2,10 @@ Patch Notes
 
 6/25/13
 
+r352
+The Level Grind
+-- Level Grind - Updated logic on Azshara decision to run
+
 r351
 The Level Grind
 -- Level Grind - Updated to support Azshara (Tauren and Goblin only)
