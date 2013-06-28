@@ -2,7 +2,13 @@ Patch Notes
 
 6/28/13
 
+r356
+Quest Behaviors
+-- Updates from ChinaJade (InteractWith)
+
 r355
+The Level Grind
+-- Support for Durotar and Silverpine Forest added
 Golden Lotus
 -- Given a Second Chance - CombatStrategy added
 -- Given a Second Chance - Removed obsolete While loop
