@@ -187,18 +187,6 @@
 		</Objective>
 	</Quest>
 
-<!-- Infection -->
-	<Quest Id="31272" Name="Infection">
-		<Objective Type="KillMob" MobId="63726" KillCount="6">
-			<Hotspots>
-				<Hotspot X="-959.0073" Y="2815.508" Z="104.5094" />
-				<Hotspot X="-1058.553" Y="2810.459" Z="93.06223" />
-				<Hotspot X="-1111.397" Y="2765.706" Z="80.81642" />
-				<Hotspot X="-1168.414" Y="2728.548" Z="77.5346" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
 <!-- Sonic Disruption -->
 	<Quest Id="31487" Name="Sonic Disruption">
 		<Objective Type="KillMob" MobId="64717" KillCount="4">
@@ -592,47 +580,47 @@
 		<While Condition="!IsQuestCompleted(31494)" >
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<CustomBehavior File="FlyTo" X="117.7218" Y="3590.625" Z="233.62" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" Range="50" MinRange="8" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" Range="50" MinRange="8" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="124.2532" Y="3545.715" Z="233.6779" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="174.4177" Y="3522.092" Z="240.2173" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="195.3123" Y="3505.958" Z="243.612" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="223.2865" Y="3534.368" Z="243.4393" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="249.5217" Y="3543.792" Z="243.4423" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="271.6865" Y="3523.812" Z="243.8412" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="331.1143" Y="3585.448" Z="243.4435" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="312.3785" Y="3631.742" Z="243.7822" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="312.691" Y="3660.906" Z="245.142" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="8" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 			<If Condition="!IsObjectiveComplete(1,31494)" >
 				<RunTo X="312.078" Y="3689.349" Z="243.4429" />
-				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="6" Range="50" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" MobId="214292" QuestId="31494" MinRange="6" Range="50" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" CollectionDistance="1000" WaitTime="1000" WaitForNpcs="False" />
 			</If>
 		</While>
 	</If>
@@ -823,7 +811,7 @@
 		<CustomBehavior File="UserSettings" QuestId="31272" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-931.72" Y="2870.85" Z="110.00"  />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" MobId1="63726" MobId2="63729" MobId3="63725" MobId4="65118" CollectUntil="QuestComplete" QuestId="31272" HuntingGroundRadius="200" NonCompeteDistance="5" >
+		<CustomBehavior File="CollectThings" QuestId="31272" MobId1="63726" MobId2="63729" MobId3="65118" CollectUntil="QuestComplete" HuntingGroundRadius="200" NonCompeteDistance="5" >
 			<Hotspot X="-936.68" Y="2746.52" Z="114.49" />
 			<Hotspot X="-1076.50" Y="2683.50" Z="102.11" />
 			<Hotspot X="-845.61" Y="2886.35" Z="129.94" />

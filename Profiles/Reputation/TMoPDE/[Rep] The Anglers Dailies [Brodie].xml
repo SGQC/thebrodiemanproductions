@@ -186,7 +186,7 @@
 	<If Condition="(!HasQuest(30584) &amp;&amp; !HasQuest(30588) &amp;&amp; 
 			!HasQuest(30700) &amp;&amp; !HasQuest(30678) &amp;&amp; !HasQuest(30586))" >
 		<CustomBehavior File="ForcedMount" MountType="Flying" />
-		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
+		<CustomBehavior File="FlyTo" X="-1477.431" Y="-247.1234" Z="5.103402" />
 	</If>
 
 <!-- Angler Shen -->
@@ -486,7 +486,7 @@
 			(HasQuest(30678) &amp;&amp; IsQuestCompleted(30678)) || 
 			(HasQuest(30586) &amp;&amp; IsQuestCompleted(30586)))" >
 		<CustomBehavior File="ForcedMount" />
-		<CustomBehavior File="FlyTo" X="-1484.723" Y="-249.0364" Z="17.93052" />
+		<CustomBehavior File="FlyTo" X="-1477.431" Y="-247.1234" Z="5.103402" />
 	</If>
 
   	<If Condition="HasQuest(30588) &amp;&amp; IsQuestCompleted(30588)" >

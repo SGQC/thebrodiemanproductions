@@ -252,8 +252,8 @@ namespace Honorbuddy.Quest_Behaviors.DeathknightStart.WaitForPatrol
         #endregion
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: WaitForPatrol.cs 569 2013-06-26 02:37:28Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 569 $"); } }
+        public override string SubversionId { get { return ("$Id: WaitForPatrol.cs 574 2013-06-28 08:54:59Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 574 $"); } }
 
 
         #region Destructor, Dispose, and cleanup
@@ -344,10 +344,22 @@ namespace Honorbuddy.Quest_Behaviors.DeathknightStart.WaitForPatrol
             return _mainBehavior ?? (_mainBehavior =
                 new PrioritySelector(
                     new Decorator(context => !Query.IsViable(Mob_ToAvoid),
-                        new ActionFail(context => { Mob_ToAvoid = Query.FindUnitsFromIds(Utility.ToEnumerable<int>(MobIdToAvoid)).FirstOrDefault(); })),
+                        new ActionFail(context =>
+                        {
+                            Mob_ToAvoid =
+                                Query.FindMobsAndFactions(Utility.ToEnumerable<int>(MobIdToAvoid))
+                                .FirstOrDefault()
+                                as WoWUnit;
+                        })),
 
                     new Decorator(context => !Query.IsViable(Mob_ToMoveNear),
-                        new ActionFail(context => { Mob_ToMoveNear = Query.FindUnitsFromIds(Utility.ToEnumerable<int>(MobIdToMoveNear)).FirstOrDefault(); })),
+                        new ActionFail(context =>
+                        {
+                            Mob_ToMoveNear =
+                                Query.FindMobsAndFactions(Utility.ToEnumerable<int>(MobIdToMoveNear))
+                                .FirstOrDefault()
+                                as WoWUnit;
+                        })),
 
                     // Stateful Operation:
                     // NB: We do not allow combat in all states.  Fighting is mostl limited to our 'safespot' position.

@@ -33,6 +33,10 @@
    
 	<Blackspots>
 	</Blackspots>
+	
+	<Blacklist>
+		<Mob Name="Golden Lotus Guard" Entry="64200" Flags="Combat, Pull" />
+	</Blacklist>
 
 <!-- Quest Overrides -->
 
@@ -80,6 +84,7 @@
 				<Mob Name="Shao-Tien Subjugator" Id="64201" />
 				<Mob Name="Shao-Tien Pillager" Id="63948" />
 				<Mob Name="Shao-Tien Subjugator" Id="63947" />
+				<GameObject Name="Wukao Scouting Report" Id="213640" />
 			</CollectFrom>
 			<Hotspots>
 				<Hotspot X="728.04" Y="1618.37" Z="377.86" />
@@ -95,20 +100,6 @@
 <!-- Stonebound Killers -->
 	<Quest Id="30290" Name="Stonebound Killers"> 
 		<Objective Type="KillMob" MobId="64186" KillCount="8">
-			<Hotspots>
-				<Hotspot X="728.04" Y="1618.37" Z="377.86" />
-				<Hotspot X="730.07" Y="1583.43" Z="375.32" />
-				<Hotspot X="776.72" Y="1574.25" Z="371.45" />
-				<Hotspot X="772.47" Y="1627.70" Z="370.36" />
-				<Hotspot X="732.57" Y="1661.98" Z="377.58" />
-				<Hotspot X="691.56" Y="1637.56" Z="377.75" />
-			</Hotspots>
-		</Objective>
-	</Quest>
-
-<!-- Freeing Mind and Body -->
-	<Quest Id="30289" Name="Freeing Mind and Body"> 
-		<Objective Type="KillMob" MobId="64201" KillCount="6">
 			<Hotspots>
 				<Hotspot X="728.04" Y="1618.37" Z="377.86" />
 				<Hotspot X="730.07" Y="1583.43" Z="375.32" />
@@ -403,23 +394,22 @@
 	</If>
 
 <!-- Freeing Mind and Body -->
-	<If Condition="(HasQuest(30289) &amp;&amp; !IsQuestCompleted(30289))" >
+	<If Condition="HasQuest(30289) &amp;&amp; !IsQuestCompleted(30289)" >
 		<CustomBehavior File="Message" Text="Starting Freeing Mind and Body" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30289" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="728.0411" Y="1618.365" Z="377.862" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30289)" >
-			<CustomBehavior File="InteractWith" QuestId="30289" MobId="64201" MobState="Alive" CollectionDistance="1000" NonCompeteDistance="1" ProactiveCombatStrategy="NoClear" >
-				<HuntingGrounds>
-					<Hotspot X="728.04" Y="1618.37" Z="377.86" />
-					<Hotspot X="730.07" Y="1583.43" Z="375.32" />
-					<Hotspot X="776.72" Y="1574.25" Z="371.45" />
-					<Hotspot X="772.47" Y="1627.70" Z="370.36" />
-					<Hotspot X="732.57" Y="1661.98" Z="377.58" />
-					<Hotspot X="691.56" Y="1637.56" Z="377.75" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30289" MobId="64201" MobState="Alive" CollectionDistance="1000" NonCompeteDistance="0" 
+			ProactiveCombatStrategy="ClearMobsTargetingUs" NumOfTimes="1000" >
+			<HuntingGrounds>
+				<Hotspot X="728.04" Y="1618.37" Z="377.86" />
+				<Hotspot X="730.07" Y="1583.43" Z="375.32" />
+				<Hotspot X="776.72" Y="1574.25" Z="371.45" />
+				<Hotspot X="772.47" Y="1627.70" Z="370.36" />
+				<Hotspot X="732.57" Y="1661.98" Z="377.58" />
+				<Hotspot X="691.56" Y="1637.56" Z="377.75" />
+			</HuntingGrounds>
+		</CustomBehavior>
 	</If>
 
 <!-- Backed Into a Corner -->
@@ -479,7 +469,7 @@
 	</If>
 
 <!-- Steer Clear of the Beer Here -->
-	<If Condition="(HasQuest(30191) &amp;&amp; !IsQuestCompleted(30191))" >
+	<If Condition="HasQuest(30191) &amp;&amp; !IsQuestCompleted(30191)" >
 		<CustomBehavior File="Message" Text="Starting Steer Clear of the Beer Here" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30191" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="671.46" Y="1547.54" Z="381.88" />
@@ -488,7 +478,7 @@
 	</If>
 
 <!-- Sprite Plight -->
-	<If Condition="(HasQuest(30190) &amp;&amp; !IsQuestCompleted(30190))" >
+	<If Condition="HasQuest(30190) &amp;&amp; !IsQuestCompleted(30190)" >
 		<CustomBehavior File="Message" Text="Starting Sprite Plight" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30190" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="671.46" Y="1547.54" Z="381.88" />
@@ -497,7 +487,7 @@
 	</If>
 
 <!-- Encroaching Storm -->
-	<If Condition="(HasQuest(30194) &amp;&amp; !IsQuestCompleted(30194))" >
+	<If Condition="HasQuest(30194) &amp;&amp; !IsQuestCompleted(30194)" >
 		<CustomBehavior File="Message" Text="Starting Encroaching Storm" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30194" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="610.6818" Y="1876.613" Z="381.9333" />
@@ -506,7 +496,7 @@
 	</If>
 
 <!-- Meating Expectations -->
-	<If Condition="(HasQuest(30193) &amp;&amp; !IsQuestCompleted(30193))" >
+	<If Condition="HasQuest(30193) &amp;&amp; !IsQuestCompleted(30193)" >
 		<CustomBehavior File="Message" Text="Starting Meating Expectations" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30193" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1016.52" Y="1652.84" Z="355.04" />
@@ -515,7 +505,7 @@
 	</If>
 
 <!-- Pomfruit Pickup -->
-	<If Condition="(HasQuest(30231) &amp;&amp; !IsQuestCompleted(30231))" >
+	<If Condition="HasQuest(30231) &amp;&amp; !IsQuestCompleted(30231)" >
 		<CustomBehavior File="Message" Text="Starting Pomfruit Pickup" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30190" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1026.936" Y="1649.619" Z="352.506" />
@@ -527,7 +517,7 @@
 	</If>
 
 <!-- Clearing in the Forest -->
-	<If Condition="(HasQuest(30263) &amp;&amp; !IsQuestCompleted(30263))" >
+	<If Condition="HasQuest(30263) &amp;&amp; !IsQuestCompleted(30263)" >
 		<CustomBehavior File="Message" Text="Starting Clearing in the Forest" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30263" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1016.52" Y="1652.84" Z="355.04" />
@@ -535,7 +525,7 @@
 		<Objective QuestName="Clearing in the Forest" QuestId="30263" Type="KillMob" MobId="65131" KillCount="6" />
 	</If>
 
-<!-- Ruffling Some Feathers Coded mostly from Vego-->
+<!-- Ruffling Some Feathers Coded mostly from Vego -->
 	<If Condition="HasQuest(30232) &amp;&amp; !IsQuestCompleted(30232)" >
 		<CustomBehavior File="Message" Text="Starting Ruffling Some Feathers" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30232" LootMobs="True" PullDistance="30" />
