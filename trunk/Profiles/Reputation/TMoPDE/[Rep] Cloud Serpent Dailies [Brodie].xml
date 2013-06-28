@@ -955,7 +955,7 @@
 				</CustomBehavior>
 			</If>
 			<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
-			<CustomBehavior File="CastSpell" MobId="0" SpellId="110406" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="110406" />
 			<While Condition="HasItem(72988) &amp;&amp; GetItemCount(72985) &lt;= 7" >
 				<CustomBehavior File="PerformTradeskillOn" TradeSkillId="129" TradeSkillItemId="72985" CastOnItemId="72988" NumOfTimes="1" />
 			</While>
@@ -1004,32 +1004,32 @@
 			</If>
 		</If>
 		<If Condition="!Me.HasAura(7353)" >
-			<CustomBehavior File="CastSpell" SpellId="818" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="818" />
 		</If>
 		<CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 
 		<If Condition="HasSpell(104381)" >
-			<CustomBehavior File="CastSpell" SpellId="104381" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="104381" />
 		<ElseIf Condition="HasSpell(88053)" >
-			<CustomBehavior File="CastSpell" SpellId="88053" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="88053" />
 		</ElseIf>
 		<ElseIf Condition="HasSpell(51296)" >
-			<CustomBehavior File="CastSpell" SpellId="51296" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="51296" />
 		</ElseIf>
 		<ElseIf Condition="HasSpell(33359)" >
-			<CustomBehavior File="CastSpell" SpellId="33359" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="33359" />
 		</ElseIf>
 		<ElseIf Condition="HasSpell(18260)" >
-			<CustomBehavior File="CastSpell" SpellId="18260" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="18260" />
 		</ElseIf>
 		<ElseIf Condition="HasSpell(3413)" >
-			<CustomBehavior File="CastSpell" SpellId="3413" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="3413" />
 		</ElseIf>
 		<ElseIf Condition="HasSpell(3102)" >
-			<CustomBehavior File="CastSpell" SpellId="3102" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="3102" />
 		</ElseIf>
 		<ElseIf Condition="HasSpell(2550)" >
-			<CustomBehavior File="CastSpell" SpellId="2550" MobId="0" />
+			<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="2550" />
 		</ElseIf>
 		<Else>
 			<CustomBehavior File="Message" Text="You don't have cooking. Don't know how you got here, but unfortunately you can't finish this quest!" LogColor="Green"  />
@@ -1511,7 +1511,7 @@
 	
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="Me.Class == WoWClass.Shaman" >
-		<CustomBehavior File="CastSpell" SpellId="556" MobId="0" />
+		<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="556" />
 	<ElseIf Condition="HasItem(60498)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60498)" />
 	</ElseIf>

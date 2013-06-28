@@ -261,18 +261,17 @@
 <!-- Phase 1 Quests -->
 
 <!-- Given a Second Chance -->
-	<If Condition="(HasQuest(30312) &amp;&amp; !IsQuestCompleted(30312))" >
+	<If Condition="HasQuest(30312) &amp;&amp; !IsQuestCompleted(30312)" >
 		<CustomBehavior File="Message" Text="Starting Given a Second Chance" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30312" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1419.408" Y="1197.767" Z="413.5989" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30312)" >
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="84242" PreInteractMountStrategy="Dismount" MobId="59183" MobState="BelowHp" MobHpPercentLeft="50" WaitTime="1000" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30312" MobId="59183" MobState="BelowHp" InteractByUsingItemId="84242" PreInteractMountStrategy="Dismount" 
+			ProactiveCombatStrategy="ClearMobsTargetingUs" MobHpPercentLeft="50" WaitTime="1000" NumOfTimes="1000" />
 	</If>
 
 <!-- Laosy Scouting -->
-	<If Condition="(HasQuest(31758) &amp;&amp; !IsQuestCompleted(31758))" >
+	<If Condition="HasQuest(31758) &amp;&amp; !IsQuestCompleted(31758)" >
 		<CustomBehavior File="Message" Text="Starting Laosy Scouting" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31758" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1667.50" Y="1364.39" Z="473.09" />
@@ -356,7 +355,7 @@
 	</If>
 
 <!-- Crumbling Behemoth -->
-	<If Condition="(HasQuest(31762) &amp;&amp; !IsQuestCompleted(31762))" >
+	<If Condition="HasQuest(31762) &amp;&amp; !IsQuestCompleted(31762)" >
 		<CustomBehavior File="Message" Text="Starting Crumbling Behemoth" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31762" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="1681.209" Y="1362.486" Z="453.5922" />
@@ -365,7 +364,7 @@
 	</If>
 
 <!-- Striking First -->
-	<If Condition="(HasQuest(31760) &amp;&amp; !IsQuestCompleted(31760))" >
+	<If Condition="HasQuest(31760) &amp;&amp; !IsQuestCompleted(31760)" >
 		<CustomBehavior File="Message" Text="Starting Striking First" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="31760" LootMobs="True" PullDistance="15" />
 		<CustomBehavior File="FlyTo" X="1673.236" Y="1364.457" Z="453.5921" />

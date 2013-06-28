@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+
 using CommonBehaviors.Actions;
 using Styx;
 using Styx.Common;
@@ -11,14 +12,16 @@ using Styx.Pathing;
 using Styx.TreeSharp;
 using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
+
 using Action = Styx.TreeSharp.Action;
+
 
 namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 {
 	[CustomBehaviorFileName(@"SpecificQuests\31758-VOEB-LaosyScouting")]
-	public class LaosyScouting : CustomForcedBehavior
+	public class Blastranaar : CustomForcedBehavior
 	{
-		public LaosyScouting(Dictionary<string, string> args)
+		public Blastranaar(Dictionary<string, string> args)
 			: base(args)
 		{
 			try
@@ -34,8 +37,8 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 		private bool _isBehaviorDone;
 		public int MobIdLao = 65868;
 		private Composite _root;
-		public WoWPoint Location1 = new WoWPoint(1573.43, 1432.78, 441.81);
-		public WoWPoint Location2 = new WoWPoint(1572.78, 1254.33, 456.19);
+		public WoWPoint Location1 = new WoWPoint(1578.794, 1446.312, 512.7374);
+		public WoWPoint Location2 = new WoWPoint(1574.712, 1428.84, 484.7786);
 		public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
 		public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
 		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }
@@ -68,12 +71,13 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 				return ObjectManager.GetObjectsOfType<WoWUnit>().Where(u => u.Entry == MobIdLao && !u.IsDead && u.Distance < 10000).OrderBy(u => u.Distance).ToList();
 			}
 		}
-	
+
 		public bool IsQuestComplete()
 		{
 			var quest = StyxWoW.Me.QuestLog.GetQuestById((uint)QuestId);
 			return quest == null || quest.IsCompleted;
 		}
+
 		private bool IsObjectiveComplete(int objectiveId, uint questId)
 		{
 			if (Me.QuestLog.GetQuestById(questId) == null)
@@ -91,12 +95,13 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 			get
 			{
 				return
-					new Decorator(ret => IsObjectiveComplete(1, (uint)QuestId), new Action(delegate
+					new Decorator(ret => IsQuestComplete(), new Action(delegate
 					{
 						TreeRoot.StatusText = "Finished!";
 						_isBehaviorDone = true;
 						return RunStatus.Success;
 					}));
+
 			}
 		}
 
@@ -105,45 +110,31 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 			get
 			{
 				return
-					new Decorator(ret => !IsObjectiveComplete(1, (uint)QuestId), new PrioritySelector(
+					new Decorator(ret => !IsQuestComplete(), new PrioritySelector(
+						new Decorator(ret => Lao.Count > 0, 
+							new Sequence(
+								new Action(c => TreeRoot.StatusText = "Got Lao, moving to him"),
+								new Action(c => Lao[0].Target()),
+								new Action(c => Flightor.MoveTo(Lao[0].Location)),
+								new DecoratorContinue(c => Lao[0].Location.Distance(Me.Location) < 10,
+									new Sequence(
+										new Action(c => TreeRoot.StatusText = "Finished!"),
+										new Action(c => _isBehaviorDone = true),
+										new ActionAlwaysSucceed())),
+								new ActionAlwaysSucceed())),
 
-						new Decorator(ret => Lao.Count > 0, new Action(c =>
-			{
-			  TreeRoot.StatusText = "Got Lao, moving to him";
-			  Lao[0].Target();
-			  Flightor.MoveTo(Lao[0].Location);
-
-				if(Lao[0].Location.Distance(Me.Location) < 10)
-				{
-								TreeRoot.StatusText = "Finished!";
-								_isBehaviorDone = true;
-								return RunStatus.Success;
-				}
-						  return RunStatus.Success;
-			})),
 						new Decorator(ret => Lao.Count == 0, new PrioritySelector(
-						  new Decorator(ret => Location1.Distance(Me.Location) > 30  && Me.CurrentTarget == null, new Action(c =>
-			  {
-			  TreeRoot.StatusText = "Moving to 1st location";
-			  Flightor.MoveTo(Location1);
-				if(Lao.Count > 0)
-				{
-			  	Lao[0].Target();
-				}
-						  return RunStatus.Success;
-			  }
-			  )),
-						  new Decorator(ret => Location2.Distance(Me.Location) > 50 && Me.CurrentTarget == null, new Action(c =>
-			  {
-			  TreeRoot.StatusText = "Moving to 2nd location";
-			  Flightor.MoveTo(Location2);
-			  if(Lao.Count > 0)
-			  {
-			  Lao[0].Target();
-			  }
-					return RunStatus.Success;
-			  }
-			  ))))));
+							new DecoratorContinue(ret => Location1.Distance(Me.Location) > 50  && Me.CurrentTarget == null,
+								new Sequence(
+									new Action(c => TreeRoot.StatusText = "Moving to 1st location"),
+									new Action(c => Flightor.MoveTo(Location1)),
+									new ActionAlwaysSucceed())),
+
+							new DecoratorContinue(ret => Location2.Distance(Me.Location) > 50 && Me.CurrentTarget == null,
+								new Sequence(
+									new Action(c => TreeRoot.StatusText = "Moving to 2nd location"),
+									new Action(c => Flightor.MoveTo(Location2)),
+									new ActionAlwaysSucceed()))));
 			}
 		}
 

@@ -906,7 +906,7 @@
 
 <!-- Quest Turn ins -->
 
-	<If Condition="HasAura(122766)" > <!-- Yalia -->
+	<If Condition="Me.HasAura(122766)" > <!-- Yalia -->
 		<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
 			<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
 		</If>
@@ -943,7 +943,7 @@
 		<If Condition="HasQuest(31106) &amp;&amp; IsQuestCompleted(31106)" >
 			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Yalia Sagewhisper" TurnInId="62303" />
 		</If>
-	<ElseIf Condition="HasAura(122298)" > <!-- Fei Li -->
+	<ElseIf Condition="Me.HasAura(122298)" > <!-- Fei Li -->
 		<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
 			<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Fei Li" TurnInId="62354" />
 		</If>
@@ -981,7 +981,7 @@
 			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Fei Li" TurnInId="62354" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(122765)" > <!-- Snow Blossom -->
+	<ElseIf Condition="Me.HasAura(122765)" > <!-- Snow Blossom -->
 		<If Condition="HasQuest(31040) &amp;&amp; IsQuestCompleted(31040)" >
 			<TurnIn QuestName="Spiteful Sprites" QuestId="31040" TurnInName="Snow Blossom" TurnInId="62380" />
 		</If>
@@ -1019,7 +1019,7 @@
 			<TurnIn QuestName="The Mogu Menace" QuestId="31106" TurnInName="Snow Blossom" TurnInId="62380" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(124165)" > <!-- Tenwu -->
+	<ElseIf Condition="Me.HasAura(124165)" > <!-- Tenwu -->
 		<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
 			<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
 		</If>
@@ -1039,7 +1039,7 @@
 			<TurnIn QuestName="Friends, Not Food" QuestId="31201" TurnInName="Tenwu of the Red Smoke" TurnInId="63616" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(124166)" > <!-- Taoshi -->
+	<ElseIf Condition="Me.HasAura(124166)" > <!-- Taoshi -->
 		<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
 			<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Taoshi" TurnInId="63617" />
 		</If>
@@ -1059,7 +1059,7 @@
 			<TurnIn QuestName="Friends, Not Food" QuestId="31201" TurnInName="Taoshi" TurnInId="63617" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(124167)" > <!-- Nurong -->
+	<ElseIf Condition="Me.HasAura(124167)" > <!-- Nurong -->
 		<If Condition="HasQuest(31199) &amp;&amp; IsQuestCompleted(31199)" >
 			<TurnIn QuestName="Destroy The Siege Weapons" QuestId="31199" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
 		</If>
@@ -1079,7 +1079,7 @@
 			<TurnIn QuestName="Friends, Not Food" QuestId="31201" TurnInName="Hawkmaster Nurong" TurnInId="63618" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(122830)" > <!-- Chao the Voice -->
+	<ElseIf Condition="Me.HasAura(122830)" > <!-- Chao the Voice -->
 		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
 			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Chao the Voice" TurnInId="62550" />
 		</If>
@@ -1096,7 +1096,7 @@
 			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Chao the Voice" TurnInId="62550" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(122793)" > <!-- Protector Yi -->
+	<ElseIf Condition="Me.HasAura(122793)" > <!-- Protector Yi -->
 		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
 			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Protector Yi" TurnInId="62546" />
 		</If>
@@ -1113,7 +1113,7 @@
 			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Protector Yi" TurnInId="62546" />
 		</If>
 	</ElseIf>
-	<ElseIf Condition="HasAura(123047)" > <!-- Lao-Chin the Iron Belly -->
+	<ElseIf Condition="Me.HasAura(123047)" > <!-- Lao-Chin the Iron Belly -->
 		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
 			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Lao-Chin the Iron Belly" TurnInId="62978" />
 		</If>

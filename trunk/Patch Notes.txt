@@ -2,6 +2,28 @@ Patch Notes
 
 6/28/13
 
+r355
+Golden Lotus
+-- Given a Second Chance - CombatStrategy added
+-- Given a Second Chance - Removed obsolete While loop
+Mistfall Village
+-- Freeing Mind and Body - CombatStrategy added
+-- Freeing Mind and Body - Removed obsolete While loop and Overrides
+-- Freeing Mind and Body - Golden Lotus Guards BLACKLISTED from combat and pulls
+-- Minor code cleanup
+Cloud Serpent
+-- Converted CastSpell -> InteractWith, new setting. TESTING
+The Anglers
+-- Moved flight point for upper deck quests, incase you are running thru profiles you've already done.
+The Klaxxi
+-- Infection - Removed Moths from list to kill, too many above ground, bot wouldn't pull.
+-- Infection - Removed obsolete Overrides
+Shado Pan
+-- Correction to turn in code, should now turn in to companions in the field
+Quest Behaviors
+-- Laosy Scouting - Overhaul into true BT format, no hooks
+-- Updates from ChinaJade
+
 r354
 The Level Grind
 -- Added Tirisfal Glades - Complete
