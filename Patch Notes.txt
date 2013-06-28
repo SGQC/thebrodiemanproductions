@@ -1,5 +1,14 @@
 Patch Notes
 
+6/28/13
+
+r354
+The Level Grind
+-- Added Tirisfal Glades - Complete
+Quest Behaviors
+-- Tirisfal Glades quests
+-- Updates to reflect latest HB version
+
 6/26/13
 
 r353
