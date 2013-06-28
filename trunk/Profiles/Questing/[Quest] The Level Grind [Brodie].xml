@@ -52,6 +52,9 @@
 		</If>
 		<If Condition="Me.Race == WoWRace.Undead || Me.Race == WoWRace.BloodElf" >
 			<If Condition="Me.Race == WoWRace.Undead" >
+				<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; (!HasQuest(24972) &amp;&amp; IsQuestCompleted(24972))" >
+					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Tirisfal Glades [Brodie]" />
+				</If>
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Undead Start [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.BloodElf" >
