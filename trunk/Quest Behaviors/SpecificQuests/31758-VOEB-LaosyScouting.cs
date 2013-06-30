@@ -134,7 +134,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.LaosyScouting
 								new Sequence(
 									new Action(c => TreeRoot.StatusText = "Moving to 2nd location"),
 									new Action(c => Flightor.MoveTo(Location2)),
-									new ActionAlwaysSucceed()))));
+									new ActionAlwaysSucceed()))))));
 			}
 		}
 

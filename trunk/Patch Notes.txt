@@ -1,5 +1,12 @@
 Patch Notes
 
+6/30/13
+
+r357
+Quest Behaviors
+-- Updates from CJ
+-- Fixed Laosy Scouting missing '))'
+
 6/28/13
 
 r356

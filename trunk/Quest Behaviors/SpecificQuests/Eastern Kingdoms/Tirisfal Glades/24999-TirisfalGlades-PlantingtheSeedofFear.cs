@@ -69,7 +69,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.PlantingtheSeedofFear
 		{
 			return new Decorator(context => !IsDone,
 				new PrioritySelector(
-					// Disable the CombatRoutine
+					// Disable the LootRoutine
 					DoneYet, Scare, new ActionAlwaysSucceed()
 			));
 		}
