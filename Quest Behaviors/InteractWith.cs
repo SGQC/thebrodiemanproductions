@@ -549,6 +549,10 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                 MobIdIncludesSelf && !((InteractByCastingSpellId > 0) || (InteractByUsingItemId > 0)),
                 context => "When \"MobIdIncludesSelf\" is specified, one of the following attributes must also be specified:"
                             + "InteractByCastingSpellId, InteractByUsingItemId");
+
+            UsageCheck_SemanticCoherency(xElement,
+                (MobHpPercentLeft < 100.0) && (MobState != MobStateType.BelowHp),
+                context => "If \"MobHpPercentLeft\" is specified, then \"MobState\" must be \"BelowHp\".");
         }
         #endregion
 
@@ -576,8 +580,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _timerToReachDestination = null;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 576 2013-06-28 19:33:06Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 576 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 578 2013-06-29 19:38:40Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 578 $"); } }
         #endregion
 
 
