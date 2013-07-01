@@ -2,6 +2,12 @@ Patch Notes
 
 6/30/13
 
+r359
+Profile Swapper
+-- Changes made that if you have not yet updated the location of Daily Grind, it will lockout choosing reps. (First use only)
+Isle of Thunder
+-- Sensitivity of Assignment Map detection increased (would sometimes blacklist, saying too far from you)
+
 r358
 The Tillers
 -- Water, Water Everywhere - Updated Wing Nga interaction location and distance detection
