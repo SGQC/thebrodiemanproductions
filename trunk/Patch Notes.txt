@@ -2,6 +2,12 @@ Patch Notes
 
 6/30/13
 
+r358
+The Tillers
+-- Water, Water Everywhere - Updated Wing Nga interaction location and distance detection
+Cloud Serpent
+-- Just a Flesh Wound - Updated MobState to BelowHP
+
 r357
 Quest Behaviors
 -- Updates from CJ
