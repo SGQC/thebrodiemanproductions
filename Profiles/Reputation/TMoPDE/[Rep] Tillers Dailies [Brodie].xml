@@ -739,12 +739,12 @@
 
 <!-- Water, Water Everywhere -->
  	<If Condition="HasQuest(30317) &amp;&amp; !IsQuestCompleted(30317)">
-		<CustomBehavior File="Message" Text="Starting Water, Water Everywhere" LogColor="Green"  />
+		<CustomBehavior File="Message" Text="Starting Water, Water Everywhere" LogColor="Green" />
 		<CustomBehavior File="FlyTo" X="-221.92" Y="461.65" Z="185.44" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" InteractByGossipOptions="1,1" MobId="60231" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" QuestId="30317" MobId="60231" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" InteractByGossipOptions="1,1" CollectionDistance="1000" X="-221.92" Y="461.65" Z="185.44" />
 		<While Condition="!IsObjectiveComplete(1,30317)">
-			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2"/>
+			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2" />
 		</While>
 	</If>
 
