@@ -130,11 +130,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active1.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile1");
-                if (xvar != null)
-                {
-                    Profile1 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile1.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile1 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile1.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active2");
 				if (xvar != null)
 				{
@@ -142,11 +142,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active2.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile2");
-                if (xvar != null)
-                {
-                    Profile2 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile2.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile2 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile2.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active3");
 				if (xvar != null)
 				{
@@ -154,11 +154,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active3.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile3");
-                if (xvar != null)
-                {
-                    Profile3 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile3.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile3 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile3.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active4");
 				if (xvar != null)
 				{
@@ -166,11 +166,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active4.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile4");
-                if (xvar != null)
-                {
-                    Profile4 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile4.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile4 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile4.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active5");
 				if (xvar != null)
 				{
@@ -178,11 +178,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active5.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile5");
-                if (xvar != null)
-                {
-                    Profile5 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile5.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile5 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile5.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active6");
 				if (xvar != null)
 				{
@@ -190,11 +190,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active6.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile6");
-                if (xvar != null)
-                {
-                    Profile6 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile6.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile6 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile6.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active7");
 				if (xvar != null)
 				{
@@ -202,11 +202,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active7.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile7");
-                if (xvar != null)
-                {
-                    Profile7 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile7.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile7 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile7.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active8");
 				if (xvar != null)
 				{
@@ -214,11 +214,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active8.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile8");
-                if (xvar != null)
-                {
-                    Profile8 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile8.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile8 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile8.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active9");
 				if (xvar != null)
 				{
@@ -226,11 +226,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active9.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile9");
-                if (xvar != null)
-                {
-                    Profile9 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile9.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile9 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile9.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active10");
 				if (xvar != null)
 				{
@@ -238,11 +238,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active10.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile10");
-                if (xvar != null)
-                {
-                    Profile10 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile10.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile10 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile10.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active11");
 				if (xvar != null)
 				{
@@ -250,11 +250,11 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active11.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile11");
-                if (xvar != null)
-                {
-                    Profile11 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile11.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile11 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile11.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Active12");
 				if (xvar != null)
 				{
@@ -262,16 +262,16 @@ namespace ProfileSwapper
 					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Active12.ToString());
 				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/Profile12");
-                if (xvar != null)
-                {
-                    Profile12 = Convert.ToString(xvar.InnerText);
-                    Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile12.ToString());
-                }
+				if (xvar != null)
+				{
+					Profile12 = Convert.ToString(xvar.InnerText);
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile12.ToString());
+				}
 				xvar = xml.SelectSingleNode("//ProfileSwapper/DGProfile");
 				if (xvar != null)
 				{
 					DGProfile = Convert.ToString(xvar.InnerText);
-					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + Profile1.ToString());
+					Logging.WriteDiagnostic("Profile Swapper Load: " + xvar.Name + "=" + DGProfile.ToString());
 				}
 			}
 			catch (Exception e)

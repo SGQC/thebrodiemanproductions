@@ -102,7 +102,7 @@
 					!HasQuest(32554) &amp;&amp; !HasQuest(32583) &amp;&amp; !HasQuest(32582) &amp;&amp; !HasQuest(32568) &amp;&amp;
 					!HasQuest(32555) &amp;&amp; !HasQuest(32558) &amp;&amp; !HasQuest(32560) &amp;&amp; !HasQuest(32586) &amp;&amp;
 					!HasQuest(32587) &amp;&amp; !HasQuest(32588))" >
-		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" Range="6" MinRange="3" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" MobId="70561" WaitForNpcs="False" Range="6" MinRange="3" IgnoreLoSToTarget="True" NonCompeteDistance="0" WaitTime="1000" ColectionDistance="1000" />
 		<CustomBehavior File="RunMacro" Macro="/run QuestChoiceFrameOption1.OptionButton:Click()"/>
 		<CustomBehavior File="WaitTimer" WaitTime="1000" />
 	</If>
