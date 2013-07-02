@@ -144,25 +144,15 @@
 <!-- Stone Cold -->
 	<If Condition="HasQuest(32533) &amp;&amp; !IsQuestCompleted(32533)" >
 		<CustomBehavior File="Message" Text="Starting Stone Cold" LogColor="Green" />
-		<CustomBehavior File="UserSettings" QuestId="32533" LootMobs="True" KillBetweenHotspots="True" PullDistance="10" /> 
-		<While Condition="!IsQuestCompleted(32533)" >
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6567.13" Y="6108.35" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6561.52" Y="6201.09" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6474.34" Y="6107.52" Z="36.27" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-			<If Condition="!IsQuestCompleted(32533)" >
-				<RunTo X="6514.89" Y="6085.92" Z="39.40" />
-				<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="1000" WaitForNpcs="False" NumOfTimes="4" WaitTime="1000" />
-			</If>
-		</While>
+		<CustomBehavior File="UserSettings" LootMobs="True" KillBetweenHotspots="True" PullDistance="10" /> 
+		<CustomBehavior File="InteractWith" QuestId="32533" MobState="Alive" MobId="69894" MobId2="69240" CollectionDistance="200" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+			<Hotspots>
+				<Hotspot X="6567.13" Y="6108.35" Z="36.27" />
+				<Hotspot X="6561.52" Y="6201.09" Z="36.27" />
+				<Hotspot X="6474.34" Y="6107.52" Z="36.27" />
+				<Hotspot X="6514.89" Y="6085.92" Z="39.40" />
+			</Hotspots>
+		</CustomBehavior>
 	</If>
 	
 <!-- Soul Surrender -->
