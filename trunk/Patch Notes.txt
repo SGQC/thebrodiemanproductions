@@ -1,5 +1,11 @@
 Patch Notes
 
+7/1/13
+
+r360
+Isle of Thunder
+-- Corrected Type in CollectionDistance to Assignment Map. Should now scan beyond 100 yds.
+
 6/30/13
 
 r359
