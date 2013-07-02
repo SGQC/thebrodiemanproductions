@@ -2,6 +2,10 @@ Patch Notes
 
 7/1/13
 
+r361
+Level Grind
+-- Updated Durotar - Near complete
+
 r360
 Isle of Thunder
 -- Corrected Type in CollectionDistance to Assignment Map. Should now scan beyond 100 yds.
