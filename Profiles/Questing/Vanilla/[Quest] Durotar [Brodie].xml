@@ -43,6 +43,18 @@
 	</Vendors>
 
 <!-- Quest Overrides -->
+
+<Quest Name="Unbidden Visitors" Id="25194" >
+	<Objective Type="KillMob" MobId="39337" KillCount="3" >
+		<Hotspots>
+			<Hotspot X="251.8288" Y="-3806.865" Z="20.69249" />
+			<Hotspot X="202.3759" Y="-3840.742" Z="20.39097" />
+			<Hotspot X="81.32127" Y="-3813.332" Z="20.38975" />
+			<Hotspot X="3.939434" Y="-3815.487" Z="20.63608" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -126,6 +138,26 @@
 	<CustomBehavior File="Message" Text="Compiling Watershed Patrol Quests" LogColor="CornflowerBlue" />
 	
 	<PickUp QuestName="Lost But Not Forgotten" QuestId="25193" GiverName="Misha Tor'kren" GiverId="3193" />
+	<Objective QuestName="Lost But Not Forgotten" QuestId="25193" Type="CollectItem" ItemId="60615" CollectCount="250" />
+	<TurnIn QuestName="Lost But Not Forgotten" QuestId="25193" TurnInName="Misha Tor'kren" TurnInId="3193" />
+	
+	<PickUp QuestName="Spirits Be Praised" QuestId="25189" GiverName="Grandmatron Tekla" GiverId="39325" />
+	<CustomBehavior File="EscortGroup" QuestId="25189" EscortNpcId="39325" />
+	<TurnIn QuestName="Spirits Be Praised" QuestId="25189" TurnInName="Raggaran" TurnInId="39326" />
+	
+	<PickUp QuestName="Raggaran's Rage" QuestId="25190" GiverName="Raggaran" GiverId="39326" />
+	<Objective QuestName="Raggaran's Rage" QuestId="25190" Type="KillMob" MobId="3111" KillCount="4" />
+	<Objective QuestName="Raggaran's Rage" QuestId="25190" Type="KillMob" MobId="3112" KillCount="4" />
+	<TurnIn QuestName="Raggaran's Rage" QuestId="25190" TurnInName="Raggaran" TurnInId="39326" />
+	
+	<PickUp QuestName="Raggaran's Fury" QuestId="25192" GiverName="Raggaran" GiverId="39326" />
+	<Objective QuestName="Raggaran's Fury" QuestId="25192" Type="KillMob" MobId="3113" KillCount="5" />
+	<Objective QuestName="Raggaran's Fury" QuestId="25192" Type="KillMob" MobId="3114" KillCount="5" />
+	<TurnIn QuestName="Raggaran's Fury" QuestId="25192" TurnInName="Raggaran" TurnInId="39326" />
+	
+	<PickUp QuestName="Unbidden Visitors" QuestId="25194" GiverName="Zen'Taji" GiverId="39324" />
+	<Objective QuestName="Unbidden Visitors" QuestId="25194" Type="KillMob" MobId="39337" KillCount="3" />
+	<TurnIn QuestName="Unbidden Visitors" QuestId="25194" TurnInName="Zen'Taji" TurnInId="39324" />
 	
 	<CustomBehavior File="Message" Text="Durotar Section Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
