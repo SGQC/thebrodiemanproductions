@@ -1,5 +1,14 @@
 Patch Notes
 
+7/2/13
+
+r362
+Pandaria Dailies v2
+-- Removed interact force for Isle of Thunder Grave Guardians
+-- Updated spell avoidance on Mighty Devilsaur! - Will avoid Fetid Quake, will avoid Vile Spit spots MOST of the time (once 4-5 are on the ground, it gets messy and bot can get confused)
+Isle of Thunder
+-- Stone Cold - Redo of InteractWith to include hotspots. Smarter target seeking.
+
 7/1/13
 
 r361

@@ -595,7 +595,7 @@
 
 	<CustomBehavior File="ForcedDismount" />
 	<If Condition="Me.Class == WoWClass.Shaman" >
-		<CustomBehavior File="CastSpell" SpellId="556" MobId="0" />
+		<CustomBehavior File="InteractWith" MobIdIncludesSelf="True" InteractByCastingSpellId="556" />
 	<ElseIf Condition="HasItem(60498)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(60498)" />
 	</ElseIf>
