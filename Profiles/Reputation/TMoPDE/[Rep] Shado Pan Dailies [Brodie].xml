@@ -846,11 +846,13 @@
 			<While Condition="(GetItemCount(84762) &lt; 10)" >
 				<CustomBehavior File="InteractWith" MobId="212877" IgnoreMobsInBlackspots="True" Range="5" WaitTime="100" CollectionDistance="2000" WaitForNpcs="False" ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" />
 			</While>
+			<DisableBehavior Name="Combat" />
 			<CustomBehavior File="FlyTo" X="2704.885" Y="3608.939" Z="315.2162" />
 			<While Condition="(GetItemCount(84762) &gt; 1) &amp;&amp; !IsQuestCompleted(31119)" >
 				<CustomBehavior File="UseItemTargetLocation" ItemId="84762" UseType="ToObject" ObjectId="62572" Range="100" NumOfTimes="1" WaitTime="2000" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 			</While>
+			<EnableBehavior Name="Combat" />
 		</While>
 	</If>
 

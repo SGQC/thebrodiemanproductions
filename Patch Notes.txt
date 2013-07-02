@@ -2,6 +2,10 @@ Patch Notes
 
 7/2/13
 
+r363
+Shado Pan
+-- Enemy of my Enemy... - Forced DisableBehavior Combat whenever flying over the crowd to bomb...UNTESTED
+
 r362
 Pandaria Dailies v2
 -- Removed interact force for Isle of Thunder Grave Guardians
