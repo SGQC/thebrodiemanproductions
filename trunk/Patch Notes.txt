@@ -2,6 +2,11 @@ Patch Notes
 
 7/2/13
 
+r364
+The Level Grind
+-- Level Grind - Updated to include Northern Barrens (minimum L10, no quest requirement)
+-- Durotar - Completed
+
 r363
 Shado Pan
 -- Enemy of my Enemy... - Forced DisableBehavior Combat whenever flying over the crowd to bomb...UNTESTED

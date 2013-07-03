@@ -1,4 +1,4 @@
-<HBProfile>
+	<HBProfile>
 <Name>The Complete WoW Leveling Experience ($Rev$)</Name>
 	
 <QuestOrder>
@@ -37,6 +37,9 @@
 			</If>
 		</If>
 		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll" >
+			<If Condition="Me.LevelFraction &gt;= 10" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
+			</If>
 			<If Condition="Me.Race == WoWRace.Orc &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25133)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
 			</If>

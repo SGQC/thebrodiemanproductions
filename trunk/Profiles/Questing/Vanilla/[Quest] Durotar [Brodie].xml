@@ -25,6 +25,7 @@
 	</AvoidMobs>
 
 	<Blackspots>
+		<Blackspot X="943.5986" Y="-4226.784" Z="-5.198198" Radius="8" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -158,6 +159,56 @@
 	<PickUp QuestName="Unbidden Visitors" QuestId="25194" GiverName="Zen'Taji" GiverId="39324" />
 	<Objective QuestName="Unbidden Visitors" QuestId="25194" Type="KillMob" MobId="39337" KillCount="3" />
 	<TurnIn QuestName="Unbidden Visitors" QuestId="25194" TurnInName="Zen'Taji" TurnInId="39324" />
+	
+	<PickUp QuestName="That's the End of That Raptor" QuestId="25195" GiverName="Zen'Taji" GiverId="39324" />
+	<Objective QuestName="That's the End of That Raptor" QuestId="25195" Type="KillMob" MobId="39385" KillCount="1" />
+	<TurnIn QuestName="That's the End of That Raptor" QuestId="25195" TurnInName="Zen'Taji" TurnInId="39324" />
+	
+	<TurnIn QuestName="Watershed Patrol" QuestId="25188" TurnInName="Thonk" TurnInId="39323" />
+	
+	<CustomBehavior File="Message" Text="Compiling Northern Durotar Quests" LogColor="CornflowerBlue" />
+	
+	<Objective QuestName="The Burning Blade" QuestId="25232" Type="CollectItem" ItemId="52564" CollectCount="6" />
+	<TurnIn QuestName="The Burning Blade" QuestId="25232" TurnInName="Orgnil Soulscar" TurnInId="3142" />
+	
+	<PickUp QuestName="The Dranosh'ar Blockade" QuestId="25196" GiverName="Orgnil Soulscar" GiverId="3142" />
+	<TurnIn QuestName="The Dranosh'ar Blockade" QuestId="25196" TurnInName="Gor the Enforcer" TurnInId="39379" />
+	
+	<PickUp QuestName="Thunder Down Under" QuestId="25236" GiverName="Gor the Enforcer" GiverId="39379" />
+	<PickUp QuestName="Fizzled" QuestId="25260" GiverName="Gor the Enforcer" GiverId="39379" />
+	<CustomBehavior File="InteractWith" QuestId="25260" MobId="3203" InteractByGossipOptions="1,1" X="870.7054" Y="-4185.419" Z="-8.620256" />
+	<CustomBehavior File="InteractWith" QuestId="25236" MobId="39464" NumOfTimes="100" CollectionDistance="500" X="945.1332" Y="-4170.953" Z="-5.353147" />
+	<If Condition="(HasQuest(25236) &amp;&amp; IsQuestCompleted(25236)) ||
+					(HasQuest(25260) &amp;&amp; IsQuestCompleted(25260))" >
+		<CustomBehavior File="AscendInWater" />
+	</If>
+	<TurnIn QuestName="Thunder Down Under" QuestId="25236" TurnInName="Gor the Enforcer" TurnInId="39379" />
+	<TurnIn QuestName="Fizzled" QuestId="25260" TurnInName="Gor the Enforcer" TurnInId="39379" />
+	
+	<PickUp QuestName="Margoz" QuestId="25261" GiverName="Gor the Enforcer" GiverId="39379" />
+	<TurnIn QuestName="Margoz" QuestId="25261" TurnInName="Margoz" TurnInId="3208" />
+	
+	<PickUp QuestName="Skull Rock" QuestId="25262" GiverName="Margoz" GiverId="3208" />
+	<PickUp QuestName="Sent for Help" QuestId="25256" GiverName="Vek'nag" GiverId="39604" />
+	<TurnIn QuestName="Sent for Help" QuestId="25256" TurnInName="Spiketooth" TurnInId="39590" />
+	<PickUp QuestName="Gaur Icehorn" QuestId="25259" GiverName="Spiketooth" GiverId="39590" />
+	<PickUp QuestName="Ghislania" QuestId="25257" GiverName="Spiketooth" GiverId="39590" />
+	<PickUp QuestName="Griswold Hanniston" QuestId="25258" GiverName="Spiketooth" GiverId="39590" />
+	<CustomBehavior File="InteractWith" QuestId="25258" MobId="39353" InteractByGossipOptions="1" NumOfTimes="10" X="1020.437" Y="-5083.247" Z="2.454849" />
+	<CustomBehavior File="InteractWith" QuestId="25257" MobId="39351" InteractByGossipOptions="1" NumOfTimes="10" X="1020.437" Y="-5083.247" Z="2.454849" />
+	<CustomBehavior File="InteractWith" QuestId="25259" MobId="39352" InteractByGossipOptions="1" NumOfTimes="10" X="1020.437" Y="-5083.247" Z="2.454849" />
+	<TurnIn QuestName="Gaur Icehorn" QuestId="25259" TurnInName="Spiketooth" TurnInId="39590" />
+	<TurnIn QuestName="Ghislania" QuestId="25257" TurnInName="Spiketooth" TurnInId="39590" />
+	<TurnIn QuestName="Griswold Hanniston" QuestId="25258" TurnInName="Spiketooth" TurnInId="39590" />
+	
+	<Objective QuestName="Skull Rock" QuestId="25262" Type="CollectItem" ItemId="4871" CollectCount="6" />
+	<TurnIn QuestName="Skull Rock" QuestId="25262" TurnInName="Margoz" TurnInId="3208" />
+	
+	<PickUp QuestName="Neeru Fireblade" QuestId="25263" GiverName="Margoz" GiverId="3208" />
+	<TurnIn QuestName="Neeru Fireblade" QuestId="25263" TurnInName="Neeru Fireblade" TurnInId="3216" />
+	
+	<PickUp QuestName="Ak'Zeloth" QuestId="25264" GiverName="Neeru Fireblade" GiverId="3216" />
+	<TurnIn QuestName="Ak'Zeloth" QuestId="25264" TurnInName="Ak'Zeloth" TurnInId="3521" />
 	
 	<CustomBehavior File="Message" Text="Durotar Section Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
