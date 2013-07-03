@@ -166,7 +166,10 @@ namespace Honorbuddy.Quest_Behaviors.TargetAndMoveToMob
                 // NB: Core attributes are parsed by QuestBehaviorBase parent (e.g., QuestId, NonCompeteDistance, etc)
 
                 // Primary attributes...
-                MobIds = GetNumberedAttributesAsArray<int>("MobId", 1, ConstrainAs.MobId, null);
+                MobIds = GetAttributeAsArray<int>("MobIds", false, ConstrainAs.MobId, new[] { "NpcIds" }, null);
+
+                if (MobIds != null && MobIds.Count() == 0)
+                    MobIds = GetNumberedAttributesAsArray<int>("MobId", 1, ConstrainAs.MobId, new[] { "NpcId" });
 
                 // Qualifiers
                 TargetOnlyIfHealthPercentAbove = GetAttributeAsNullable<double>("TargetOnlyIfHealthPercentAbove", false, ConstrainAs.Percent, null) ?? 0.0;

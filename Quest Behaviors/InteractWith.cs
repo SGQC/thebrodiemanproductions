@@ -551,8 +551,10 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
                             + "InteractByCastingSpellId, InteractByUsingItemId");
 
             UsageCheck_SemanticCoherency(xElement,
-                (MobHpPercentLeft < 100.0) && (MobState != MobStateType.BelowHp),
-                context => "If \"MobHpPercentLeft\" is specified, then \"MobState\" must be \"BelowHp\".");
+                MobState == MobStateType.BelowHp,
+                context => "Please remove the 'MobState=\"BelowHp\"' attribute."
+                            + "  The \"BelowHp\" value is no longer used, and has been deprecated."
+                            + "  The \"MobHpPercentLeft\" attribute alone is sufficient to capture intent.");
         }
         #endregion
 
@@ -580,8 +582,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _timerToReachDestination = null;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 578 2013-06-29 19:38:40Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 578 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 587 2013-07-03 09:15:58Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 587 $"); } }
         #endregion
 
 
@@ -1517,8 +1519,9 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
             TargetExclusionAnalysis.CheckAuras(exclusionReasons, wowObject, AuraIdsOnMob, AuraIdsMissingFromMob);
             TargetExclusionAnalysis.CheckMobState(exclusionReasons, wowObject, MobState, MobHpPercentLeft);
 
-            if (wowObject.CollectionDistance() > CollectionDistance)
-                { exclusionReasons.Add(string.Format("ExceedsCollectionDistance({0})", CollectionDistance)); }
+            var objectCollectionDistance = wowObject.CollectionDistance();
+            if (objectCollectionDistance > CollectionDistance)
+                { exclusionReasons.Add(string.Format("ExceedsCollectionDistance({0:F1}, saw {1:F1})", CollectionDistance, objectCollectionDistance)); }
 
             var wowUnit = wowObject as WoWUnit;
             if (wowUnit != null)

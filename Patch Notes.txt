@@ -1,5 +1,11 @@
 Patch Notes
 
+7/3/13
+
+r365
+Quest Behaviors
+-- Updates to InteractWith and QBCore (From Chinajade)
+
 7/2/13
 
 r364
