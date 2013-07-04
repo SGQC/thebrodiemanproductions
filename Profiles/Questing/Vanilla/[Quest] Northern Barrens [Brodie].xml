@@ -1,0 +1,653 @@
+<HBProfile>
+	<Name>Northern Barrens ($Rev$)</Name>
+	<MinLevel>8</MinLevel>
+	<MaxLevel>25</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>True</TargetElites>
+
+	<Vendors>
+		<Vendor Name="Martang" Entry="43949" Type="Repair" X="296.017" Y="-3650.72" Z="27.32887" />
+	</Vendors>
+  
+	<AvoidMobs>
+	</AvoidMobs>
+   
+	<Blackspots>
+		<Blackspot X="-100.24" Y="-3654.582" Z="27.184" Radius="4" Height="4" /> <!-- Bonfire at Razormane Area 1 -->
+	</Blackspots>
+
+<!-- Quest Overrides -->
+
+<!-- Plainstrider Menace -->
+	<Quest Id="844" Name="Plainstrider Menace"> 
+		<Objective Type="CollectItem" ItemId="5087" CollectCount="7">
+			<CollectFrom>
+				<Mob Name="Greater Plainstrider" Id="3244" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="339.34" Y="-3629.32" Z="28.91" />
+				<Hotspot X="405.80" Y="-3638.04" Z="27.38" />
+				<Hotspot X="466.27" Y="-3711.76" Z="29.15" />
+				<Hotspot X="556.11" Y="-3688.99" Z="27.25" />
+				<Hotspot X="689.37" Y="-3700.55" Z="30.23" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- In Defense of Far Watch -->
+	<Quest Id="871" Name="In Defense of Far Watch"> 
+		<Objective Type="KillMob" MobId="3267" KillCount="8">
+			<Hotspots>
+				<Hotspot X="-182.88" Y="-3644.42" Z="28.17" />
+				<Hotspot X="-191.22" Y="-3716.36" Z="30.22" />
+				<Hotspot X="-102.34" Y="-3689.46" Z="27.18" />
+				<Hotspot X="-83.82" Y="-3618.83" Z="29.28" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="3265" KillCount="3">
+			<Hotspots>
+				<Hotspot X="-182.88" Y="-3644.42" Z="28.17" />
+				<Hotspot X="-191.22" Y="-3716.36" Z="30.22" />
+				<Hotspot X="-102.34" Y="-3689.46" Z="27.18" />
+				<Hotspot X="-83.82" Y="-3618.83" Z="29.28" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Supplies For The Crossroads -->
+	<Quest Id="5041" Name="Supplies For The Crossroads"> 
+		<Objective Type="CollectItem" ItemId="12708" CollectCount="5">
+			<CollectFrom>
+				<GameObject Name="Crossroads Supply Crate" Id="175708" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-278.30" Y="-3550.44" Z="27.73" />
+				<Hotspot X="-222.25" Y="-3487.22" Z="29.30" />
+				<Hotspot X="-295.26" Y="-3468.46" Z="40.67" />
+				<Hotspot X="-342.58" Y="-3417.63" Z="40.29" />
+				<Hotspot X="-250.46" Y="-3550.33" Z="58.77" />
+				<Hotspot X="-291.34" Y="-3490.31" Z="56.39" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- The Far Watch Offensive -->
+	<Quest Id="872" Name="The Far Watch Offensive"> 
+		<Objective Type="KillMob" MobId="3268" KillCount="5">
+			<Hotspots>
+				<Hotspot X="-278.30" Y="-3550.44" Z="27.73" />
+				<Hotspot X="-222.25" Y="-3487.22" Z="29.30" />
+				<Hotspot X="-295.26" Y="-3468.46" Z="40.67" />
+				<Hotspot X="-342.58" Y="-3417.63" Z="40.29" />
+				<Hotspot X="-250.46" Y="-3550.33" Z="58.77" />
+				<Hotspot X="-291.34" Y="-3490.31" Z="56.39" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="3266" KillCount="5">
+			<Hotspots>
+				<Hotspot X="-278.30" Y="-3550.44" Z="27.73" />
+				<Hotspot X="-222.25" Y="-3487.22" Z="29.30" />
+				<Hotspot X="-295.26" Y="-3468.46" Z="40.67" />
+				<Hotspot X="-342.58" Y="-3417.63" Z="40.29" />
+				<Hotspot X="-250.46" Y="-3550.33" Z="58.77" />
+				<Hotspot X="-291.34" Y="-3490.31" Z="56.39" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="CollectItem" ItemId="5063" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="Kreenig Snarlsnout" Id="3438" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-291.34" Y="-3490.31" Z="56.39" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Consumed By Hatred -->
+	<Quest Id="899" Name="Consumed By Hatred"> 
+		<Objective Type="CollectItem" ItemId="5085" CollectCount="30">
+			<CollectFrom>
+				<Mob Name="Razormane Pillager" Id="34503" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="218.73" Y="-2858.04" Z="91.48" />
+				<Hotspot X="151.00" Y="-2857.43" Z="93.63" />
+				<Hotspot X="158.63" Y="-2812.25" Z="91.68" />
+				<Hotspot X="230.19" Y="-2812.39" Z="92.71" />
+				<Hotspot X="220.04" Y="-2768.57" Z="91.67" />
+				<Hotspot X="149.96" Y="-2759.93" Z="93.03" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- The Grol'dom Militia -->
+	<Quest Id="13973" Name="The Grol'dom Militia"> 
+		<Objective Type="KillMob" MobId="34503" KillCount="6">
+			<Hotspots>
+				<Hotspot X="218.73" Y="-2858.04" Z="91.48" />
+				<Hotspot X="151.00" Y="-2857.43" Z="93.63" />
+				<Hotspot X="158.63" Y="-2812.25" Z="91.68" />
+				<Hotspot X="230.19" Y="-2812.39" Z="92.71" />
+				<Hotspot X="220.04" Y="-2768.57" Z="91.67" />
+				<Hotspot X="149.96" Y="-2759.93" Z="93.03" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Animal Services -->
+	<Quest Id="899" Name="Consumed By Hatred"> 
+		<Objective Type="CollectItem" ItemId="46742" CollectCount="5">
+			<CollectFrom>
+				<GameObject Name="Stolen Grain Sack" Id="195118" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-96.88" Y="-3163.47" Z="92.11" />
+				<Hotspot X="-51.43" Y="-3380.58" Z="91.81" />
+				<Hotspot X="-223.26" Y="-3324.14" Z="91.67" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- The Tortusk Takedown -->
+	<Quest Id="13978" Name="The Tortusk Takedown"> 
+		<Objective Type="KillMob" MobId="34544" KillCount="1">
+			<Hotspots>
+				<Hotspot X="-54.66" Y="-3369.05" Z="91.66" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- The Zhevra -->
+	<Quest Id="845" Name="The Zhevra"> 
+		<Objective Type="CollectItem" ItemId="5086" CollectCount="4">
+			<CollectFrom>
+				<Mob Name="Zhevra Runner" Id="3242" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-446.12" Y="-2763.10" Z="92.32" />
+				<Hotspot X="-383.01" Y="-2819.22" Z="92.55" />
+				<Hotspot X="-451.58" Y="-2853.04" Z="94.14" />
+				<Hotspot X="-549.08" Y="-2774.98" Z="94.50" />
+				<Hotspot X="-620.26" Y="-2758.52" Z="92.26" />
+				<Hotspot X="-661.64" Y="-2745.96" Z="94.57" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Hunting the Huntress -->
+	<Quest Id="903" Name="Hunting the Huntress"> 
+		<Objective Type="CollectItem" ItemId="5096" CollectCount="5">
+			<CollectFrom>
+				<Mob Name="Savannah Huntress" Id="3415" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-238.95" Y="-2785.64" Z="93.01" />
+				<Hotspot X="-301.58" Y="-2828.37" Z="93.59" />
+				<Hotspot X="-360.06" Y="-2856.89" Z="94.05" />
+				<Hotspot X="-424.56" Y="-2898.76" Z="91.68" />
+				<Hotspot X="-469.50" Y="-2922.38" Z="92.66" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Fungal Spores -->
+	<Quest Id="848" Name="Fungal Spores"> 
+		<Objective Type="CollectItem" ItemId="5012" CollectCount="5">
+			<CollectFrom>
+				<GameObject Name="Laden Mushroom" Id="3640" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="53.82" Y="-1962.70" Z="93.49" />
+				<Hotspot X="-3.80" Y="-1980.28" Z="93.14" />
+				<Hotspot X="126.30" Y="-1962.49" Z="92.03" />
+				<Hotspot X="61.14" Y="-1892.32" Z="93.01" />
+				<Hotspot X="-21.15" Y="-1923.08" Z="91.92" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Kolkar Leaders -->
+	<Quest Id="850" Name="Kolkar Leaders"> 
+		<Objective Type="CollectItem" ItemId="5022" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="Barak Kodobane" Id="3394" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="23.14" Y="-1715.38" Z="101.55" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- A Little Diversion -->
+	<Quest Id="13992" Name="A Little Diversion"> 
+		<Objective Type="KillMob" MobId="3273" MobId2="3272" KillCount="8">
+			<Hotspots>
+				<Hotspot X="20.50" Y="-1781.42" Z="92.08" />
+				<Hotspot X="8.50" Y="-1708.80" Z="94.50" />
+				<Hotspot X="-62.58" Y="-1631.12" Z="91.67" />
+				<Hotspot X="-201.48" Y="-1649.08" Z="107.93" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Flushing Out Verog -->
+	<Quest Id="14072" Name="Flushing Out Verog"> 
+		<Objective Type="CollectItem" ItemId="46857" CollectCount="4">
+			<CollectFrom>
+				<GameObject Name="Centaur Intelligence" Id="195240" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-1331.26" Y="-3121.18" Z="91.67" />
+				<Hotspot X="-1162.30" Y="-3154.57" Z="91.67" />
+				<Hotspot X="-1108.08" Y="-2804.17" Z="92.61" />
+				<Hotspot X="-1274.97" Y="-2830.02" Z="93.13" />
+				<Hotspot X="-1530.88" Y="-2899.20" Z="94.10" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Verog the Dervish -->
+	<Quest Id="851" Name="Verog the Dervish"> 
+		<Objective Type="CollectItem" ItemId="5023" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="Verog the Dervish" Id="3395" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-1211.00" Y="-2724.12" Z="106.70" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Altered Beings -->
+	<Quest Id="880" Name="Altered Beings"> 
+		<Objective Type="CollectItem" ItemId="5098" CollectCount="6">
+			<CollectFrom>
+				<Mob Name="Oasis Snapjaw" Id="3461" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-1259.16" Y="-3058.90" Z="89.41" />
+				<Hotspot X="-1204.95" Y="-3021.97" Z="91.71" />
+				<Hotspot X="-1190.12" Y="-2964.61" Z="90.82" />
+				<Hotspot X="-1256.84" Y="-2945.00" Z="93.66" />
+				<Hotspot X="-1333.72" Y="-2984.66" Z="92.85" />
+				<Hotspot X="-1329.30" Y="-3052.05" Z="90.77" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- The Stolen Silver -->
+	<Quest Id="14067" Name="The Stolen Silver"> 
+		<Objective Type="CollectItem" ItemId="5061" CollectCount="1">
+			<CollectFrom>
+				<GameObject Name="Stolen Silver Lockbox" Id="195224" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-441.8125" Y="-3459.047" Z="94.51412" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="44164" KillCount="8">
+			<Hotspots>
+				<Hotspot X="-441.81" Y="-3459.05" Z="94.52" />
+				<Hotspot X="-534.21" Y="-3385.03" Z="91.67" />
+				<Hotspot X="-442.87" Y="-3409.99" Z="91.71" />
+				<Hotspot X="-393.61" Y="-3386.40" Z="91.67" />
+				<Hotspot X="-371.88" Y="-3465.03" Z="91.91" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="3256" KillCount="4">
+			<Hotspots>
+				<Hotspot X="-441.81" Y="-3459.05" Z="94.52" />
+				<Hotspot X="-534.21" Y="-3385.03" Z="91.67" />
+				<Hotspot X="-442.87" Y="-3409.99" Z="91.71" />
+				<Hotspot X="-393.61" Y="-3386.40" Z="91.67" />
+				<Hotspot X="-371.88" Y="-3465.03" Z="91.91" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- Its Gotta be the Horn -->
+	<Quest Id="865" Name="Its Gotta be the Horn"> 
+		<Objective Type="CollectItem" ItemId="46850" CollectCount="1">
+			<CollectFrom>
+				<Mob Name="King Reaperclaw" Id="34829" />
+			</CollectFrom>
+			<Hotspots>
+				<Hotspot X="-366.17" Y="-3512.28" Z="92.25" />
+				<Hotspot X="-475.54" Y="-3547.63" Z="91.69" />
+				<Hotspot X="-555.59" Y="-3561.42" Z="93.31" />
+				<Hotspot X="-326.14" Y="-3457.57" Z="91.67" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+<!-- End of Quest Overrides --> 
+
+<QuestOrder>
+
+	<If Condition="Me.IsAlliance">
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(871) &amp;&amp; !IsQuestCompleted(871)" >
+		<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+	</If>
+
+	<CustomBehavior File="Message" Text="Compiling Northern Barrens Quests" LogColor="Green"  />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="20" />
+	<CustomBehavior File="Message" Text="Compiling Far Watch Post Quests" LogColor="Cornflowerblue" />
+
+	<PickUp QuestName="In Defense of Far Watch" QuestId="871" GiverName="Kargal Battlescar" GiverId="3337" />
+	<PickUp QuestName="Plainstrider Menace" QuestId="844" GiverName="Halga Bloodeye" GiverId="34258" />
+	<Objective QuestName="Plainstrider Menace" QuestId="844" Type="CollectItem" ItemId="5087" CollectCount="7" />
+	<TurnIn QuestName="Plainstrider Menace" QuestId="844" TurnInName="Halga Bloodeye" TurnInId="34258" />
+
+	<PickUp QuestName="Through Fire and Flames" QuestId="13878" GiverName="Dorak" GiverId="34284" />
+	<CustomBehavior File="InteractWith" QuestId="13878" MobId="195001" MobId2="195003" MobId3="195004" NumOfTimes="100" CollectionDistance="1000" X="8.46" Y="-3616" Z="27.23" />
+	<Objective QuestName="In Defense of Far Watch" QuestId="871" Type="KillMob" MobId="3267" KillCount="8" />
+	<Objective QuestName="In Defense of Far Watch" QuestId="871" Type="KillMob" MobId="3265" KillCount="3" />
+	<TurnIn QuestName="Through Fire and Flames" QuestId="13878" TurnInName="Dorak" TurnInId="34284" />
+	<TurnIn QuestName="In Defense of Far Watch" QuestId="871" TurnInName="Kargal Battlescar" TurnInId="3337" />
+
+	<PickUp QuestName="The Far Watch Offensive" QuestId="872" GiverName="Kargal Battlescar" GiverId="3337" />
+	<PickUp QuestName="Supplies For The Crossroads" QuestId="5041" GiverName="Halga Bloodeye" GiverId="34258" />
+	<Objective QuestName="Supplies For The Crossroads" QuestId="5041" Type="CollectItem" ItemId="12708" CollectCount="5" />
+	<Objective QuestName="The Far Watch Offensive" QuestId="872" Type="KillMob" MobId="3268" KillCount="5" />
+	<Objective QuestName="The Far Watch Offensive" QuestId="872" Type="KillMob" MobId="3268" KillCount="5" />
+	<Objective QuestName="The Far Watch Offensive" QuestId="872" Type="CollectItem" ItemId="5063" CollectCount="1" />
+	<TurnIn QuestName="The Far Watch Offensive" QuestId="872" TurnInName="Kargal Battlescar" TurnInId="3337" />
+	<TurnIn QuestName="Supplies For The Crossroads" QuestId="5041" TurnInName="Halga Bloodeye" TurnInId="34258" />
+
+	<PickUp QuestName="Crossroads Caravan Pickup" QuestId="13949" GiverName="Halga Bloodeye" GiverId="34258" />
+	<If Condition="HasQuest(13949) &amp;&amp; !IsQuestCompleted(13949)" >
+		<DisableBehavior Name="Combat, Loot" />
+		<While Condition="!IsQuestCompleted(13949)" >
+			<CustomBehavior File="InteractWith" QuestId="13949" MobId="34258" CollectionDistance="200" InteractByGossipOptions="1" X="320.53" Y="-3677.66" Z="27.18" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<CustomBehavior File="InteractWith" QuestId="13949" MobId="34430" Range="2" WaitForNpcs="False" CollectionDistance="200" />
+			<If Condition="Me.IsOnTransport" >
+				<CustomBehavior File="NoControlVehicle" QuestId="13949" TargetId="34487" NumOfTimes="30" AttackButton="1" OftenToUse="500" />
+			</If>
+		</While>
+		<CustomBehavior File="WaitTimer" WaitTime="12000" />
+		<EnableBehavior Name="Combat, Loot" />
+	</If>
+	
+	<TurnIn QuestName="Crossroads Caravan Pickup" QuestId="13949" TurnInName="Kranal Fiss" TurnInId="5907" />
+
+	<CustomBehavior File="Message" Text="Compiling Grol'dom Farm Quests" LogColor="Cornflowerblue"  />
+
+	<PickUp QuestName="Drag It Out Of Them" QuestId="13961" GiverName="Togrik" GiverId="34513" />
+	<While Condition="HasQuest(13961) &amp;&amp; !IsQuestCompleted(13961)" >
+		<CustomBehavior File="InteractWith" QuestId="13961" MobId="34503" MobState="Alive" InteractByUsingItemId="46722" Range="10" CollectionDistance="10000" X="135.47" Y="-3033.24" Z="91.70" />
+		<CustomBehavior File="InteractWith" MobId="34503" CollectionDistance="10" InteractWithGossipOptions="1" WaitForNpcs="False" />
+		<If Condition="Me.HasAura(65601)" >
+			<RunTo DestName="Togrik's Pen" X="269.43" Y="-3055.66" Z="97.33" />
+		</If>
+	</While>
+	<TurnIn QuestName="Drag It Out Of Them" QuestId="13961" TurnInName="Togrik" TurnInId="34513" />
+
+	<PickUp QuestName="By Hook or By Crook" QuestId="13963" GiverName="Togrik" GiverId="34513" />
+
+	<If Condition="HasQuest(13963) &amp;&amp; !IsQuestCompleted(13963)" >
+		<CustomBehavior File="InteractWith" QuestId="13963" MobId="34513" InteractByGossipOptions="1" CollectionDistance="1000" X="257.16" Y="-3042.27" Z="96.23" />
+		<CustomBehavior File="MyCTM" X="270.77" Y="-3055.56" Z="97.08" />
+		<CustomBehavior File="MyCTM" X="282.26" Y="-3050.88" Z="95.90" />
+		<While Condition="!IsQuestCompleted(13963)" >
+			<CustomBehavior File="InteractWith" QuestId="13963" MobId="34523" CollectionDistance="50" InteractByGossipOptions="1" WaitTime="1000" X="281.6115" Y="-3050.285" Z="95.92966" />
+			<CustomBehavior File="InteractWith" QuestId="13963" MobId="34523" CollectionDistance="50" InteractByGossipOptions="2" WaitTime="1000" X="281.6115" Y="-3050.285" Z="95.92966" />
+		</While>
+		<CustomBehavior File="MyCTM" X="270.77" Y="-3055.56" Z="97.08" />
+	</If>
+
+	<TurnIn QuestName="By Hook or By Crook" QuestId="13963" TurnInName="Togrik" TurnInId="34513" />
+
+	<PickUp QuestName="The Tortusk Takedown" QuestId="13968" GiverName="Togrik" GiverId="34513" />
+	<PickUp QuestName="Grol'doms Missing Kodo" QuestId="13969" GiverName="Kranal Fiss" GiverId="5907" />
+	<PickUp QuestName="Consumed By Hatred" QuestId="899" GiverName="Mankrik" GiverId="3432" />
+	<PickUp QuestName="The Grol'dom Militia" QuestId="13973" GiverName="Una Wolfclaw" GiverId="34560" />
+
+	<Objective QuestName="The Grol'dom Militia" QuestId="13973" Type="KillMob" MobId="34503" KillCount="6" />
+	<TurnIn QuestName="The Grol'dom Militia" QuestId="13973" TurnInName="Una Wolfclaw" TurnInId="34560" />
+
+	<TurnIn QuestName="Grol'doms Missing Kodo" QuestId="13969" TurnInName="Grol'dom Kodo" TurnInId="34547" />
+	<PickUp QuestName="Animal Services" QuestId="13970" GiverName="Grol'dom Kodo" GiverId="34547" />
+	<Objective QuestName="Animal Services" QuestId="13970" Type="CollectItem" ItemId="46742" CollectCount="5" />
+
+	<Objective QuestName="The Tortusk Takedown" QuestId="13968" Type="KillMob" MobId="34544" KillCount="1" />
+
+	<TurnIn QuestName="Animal Services" QuestId="13970" TurnInName="Grol'dom Kodo" TurnInId="34547" />
+
+	<PickUp QuestName="The Kodo's Return" QuestId="13971" GiverName="Grol'dom Kodo" GiverId="34547" />
+	<TurnIn QuestName="The Kodo's Return" QuestId="13971" TurnInName="Kranal Fiss" TurnInId="5907" />
+
+	<TurnIn QuestName="The Tortusk Takedown" QuestId="13968" TurnInName="Togrik" TurnInId="34513" />
+
+	<Objective QuestName="Consumed By Hatred" QuestId="899" Type="CollectItem" ItemId="5085" CollectItemCount="30" />
+	<TurnIn QuestName="Consumed By Hatred" QuestId="899" TurnInName="Mankrik" TurnInId="3432" />
+
+	<PickUp QuestName="Crossroads Caravan Delivery" QuestId="13975" GiverName="Rocco Whipshank" GiverId="34578" />
+
+	<If Condition="HasQuest(13975) &amp;&amp; !IsQuestCompleted(13975)" >
+		<DisableBehavior Name="Combat, Loot" />
+		<While Condition="!IsQuestCompleted(13975)" >
+			<CustomBehavior File="InteractWith" MobId="34578" CollectionDistance="200" InteractByGossipOptions="1" X="220.2908" Y="-2939.513" Z="91.89359" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<CustomBehavior File="InteractWith" MobId="34577" Range="2" WaitForNpcs="False" CollectionDistance="200" />
+			<If Condition="Me.IsOnTransport" >
+				<CustomBehavior File="NoControlVehicle" QuestId="13975" TargetId="34594" NumOfTimes="20" AttackButton="1" OftenToUse="1000" />
+			</If>
+		</While>
+		<CustomBehavior File="WaitTimer" WaitTime="12000" />
+		<EnableBehavior Name="Combat, Loot" />
+	</If>
+	
+	<TurnIn QuestName="Crossroads Caravan Delivery" QuestId="13975" TurnInName="Thork" TurnInId="3429" />
+
+	<CustomBehavior File="Message" Text="Compiling Crossroads Quests" LogColor="Cornflowerblue"  />
+
+	<PickUp QuestName="Fungal Spores" QuestId="848" GiverName="Apothecary Helbrim" GiverId="3390" />
+	<PickUp QuestName="The Forgotten Pools" QuestId="870" GiverName="Tonga Runetotem" GiverId="3448" />
+	<PickUp QuestName="The Zhevra" QuestId="845" GiverName="Sergra Darkthorn" GiverId="3338" />
+	<PickUp QuestName="Hunting the Huntress" QuestId="903" GiverName="Sergra Darkthorn" GiverId="3338" />
+
+	<Objective QuestName="The Zhevra" QuestId="845" Type="CollectItem" ItemId="5086" CollectCount="4" />
+	<Objective QuestName="Hunting the Huntress" QuestId="903" Type="CollectItem" ItemId="5096" CollectCount="5" />
+
+	<TurnIn QuestName="The Zhevra" QuestId="845" TurnInName="Sergra Darkthorn" TurnInId="3338" />
+	<TurnIn QuestName="Hunting the Huntress" QuestId="903" TurnInName="Sergra Darkthorn" TurnInId="3338" />
+
+	<PickUp QuestName="Echeyakee" QuestId="881" GiverName="Sergra Darkthorn" GiverId="3338" />
+	<PickUp QuestName="Kolkar Leaders" QuestId="850" GiverName="Telar Highstrider" GiverId="34841" />
+	<PickUp QuestName="A Little Diversion" QuestId="13992" GiverName="Tajari" GiverId="34613" />
+
+	<Objective QuestName="Fungal Spores" QuestId="848" Type="CollectItem" ItemId="5012" CollectCount="5" />
+	<If Condition="HasQuest(870) &amp;&amp; !IsQuestCompleted(870)" >
+		<RunTo DestName="Forgotten Pool" X="86.64" Y="-1948.33" Z="90.35" />
+		<CustomBehavior File="MyCTM" X="89.63" Y="-1944.45" Z="80.34" />
+		<CustomBehavior File="AscendInWater" />
+	</If>
+
+	<Objective QuestName="Kolkar Leaders" QuestId="850" Type="CollectItem" ItemId="5022" CollectCount="1" />
+	<Objective QuestName="A Little Diversion" QuestId="13992" Type="KillMob" MobId="3273" MobId2="3272" KillCount="8" />
+	<TurnIn QuestName="Kolkar Leaders" QuestId="850" TurnInName="Telar Highstrider" TurnInId="34841" />
+	<TurnIn QuestName="A Little Diversion" QuestId="13992" TurnInName="Tajari" TurnInId="34613" />
+
+	<If Condition="HasQuest(881) &amp;&amp; !IsQuestCompleted(881)" >
+		<RunTo DestName="Echeyakee Graveyard" X="-21.34" Y="-2381.47" Z="91.67" />
+		<While Condition="!IsQuestCompleted(881)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(10327)" WaitTime="1000" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<CustomBehavior File="InteractWith" MobId="3475" MobState="Alive" WaitForNpcs="False" CollectionDistance="100" X="-21.34" Y="-2381.47" Z="91.67" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</While>
+	</If>
+
+	<TurnIn QuestName="Fungal Spores" QuestId="848" TurnInName="Apothecary Helbrim" TurnInId="3390" />
+	<PickUp QuestName="In Fungus We Trust" QuestId="13998" GiverName="Apothecary Helbrim" GiverId="3390" />
+
+	<TurnIn QuestName="The Forgotten Pools" QuestId="870" TurnInName="Tonga Runetotem" TurnInId="3448" />
+	<PickUp QuestName="A Growing Problem" QuestId="13988" GiverName="Tonga Runetotem" GiverId="3448" />
+
+	<TurnIn QuestName="Echeyakee" QuestId="881" TurnInName="Sergra Darkthorn" TurnInId="3338" />
+	<PickUp QuestName="Into the Raptors Den" QuestId="905" GiverName="Sergra Darkthorn" GiverId="3338" />
+
+	<If Condition="HasQuest(905) &amp;&amp; !IsQuestCompleted(905)" >
+		<If Condition="!HasItem(5165)" >
+			<CustomBehavior File="CollectThings" MobId="3254" MobId2="3255" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="5165" HuntingGroundRadius="200" X="-1033.02" Y="-2600.63" Z="91.51" />
+		</If>
+		<CustomBehavior File="InteractWith" QuestId="905" QuestObjectiveIndex="3" MobId="195311" InteractByUsingItemId="5165" NumOfTimes="10" CollectionDistance="5" X="-1056.46" Y="-2588.71" Z="91.63" />
+		<If Condition="!HasItem(5165)" >
+			<CustomBehavior File="CollectThings" MobId="3254" MobId2="3255" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="5165" HuntingGroundRadius="200" X="-1033.02" Y="-2600.63" Z="91.51" />
+		</If>
+		<CustomBehavior File="InteractWith" QuestId="905" QuestObjectiveIndex="1" MobId="195311" InteractByUsingItemId="5165" NumOfTimes="10" CollectionDistance="5" X="-1068.43" Y="-2652.30" Z="91.79" />
+		<If Condition="!HasItem(5165)" >
+			<CustomBehavior File="CollectThings" MobId="3254" MobId2="3255" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="5165" HuntingGroundRadius="200" X="-1033.02" Y="-2600.63" Z="91.51" />
+		</If>
+		<CustomBehavior File="InteractWith" QuestId="905" QuestObjectiveIndex="2" MobId="195311" InteractByUsingItemId="5165" NumOfTimes="10" CollectionDistance="5" X="-1106.75" Y="-2557.45" Z="117.73" />
+	</If>
+
+	<If Condition="HasQuest(13998) &amp;&amp; !IsQuestCompleted(13998)" >
+		<RunTo DestName="Stagnant Oasis" X="-1197.74" Y="-2959.71" Z="89.33" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46789)" WaitTime="3000" />
+	</If>
+
+	<PickUp QuestName="Flushing Out Verog" QuestId="14072" GiverName="Shoe" GiverId="34638" />
+	
+	<PickUp QuestName="King of Centaur Mountain" QuestId="13995" GiverName="Gorgal Angerscar" GiverId="34634" />
+	<CustomBehavior File="EscortGroup" QuestId="13995" EscortNpcId="34634" />
+	<TurnIn QuestName="King of Centaur Mountain" QuestId="13995" TurnInName="Shoe" TurnInId="34638" />
+
+	<Objective QuestName="Flushing Out Verog" QuestId="14072" Type="CollectItem" ItemId="46857" CollectCount="4" />
+	<TurnIn QuestName="Flushing Out Verog" QuestId="14072" TurnInName="Shoe" TurnInId="34638" />
+
+	<PickUp QuestName="Verog the Dervish" QuestId="851" GiverName="Shoe" GiverId="34638" />
+
+	<If Condition="HasQuest(851) &amp;&amp; !IsQuestCompleted(851)" >
+		<CustomBehavior File="InteractWith" QuestId="851" MobId="34846" MobState="Alive" X="-1208.80" Y="-2745.23" Z="102.35" />
+		<Objective QuestName="Verog the Dervish" QuestId="851" Type="CollectItem" ItemId="5023" CollectCount="1" />
+	</If>
+	<TurnIn QuestName="Verog the Dervish" QuestId="851" TurnInName="Shoe" TurnInId="34638" />
+
+	<If Condition="HasQuest(13988) &amp;&amp; !IsQuestCompleted(13988)" >
+		<RunTo DestName="Thunderhead Summit" X="-1473.21" Y="-3296.96" Z="210.77" />
+		<CustomBehavior File="WaitTimer" WaitTime="25000" />
+		<If Condition="!IsQuestCompleted(13988)" >
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46782)" />
+			<CustomBehavior File="WaitTimer" WaitTime="25000" />
+		</If>
+	</If>
+	<TurnIn QuestName="A Growing Problem" QuestId="13988" TurnInName="Jerrik Highmountain" TurnInId="34626" />
+	
+	<PickUp QuestName="The Stagnant Oasis" QuestId="877" GiverName="Jerrik Highmountain" GiverId="34626" />
+	<PickUp QuestName="Altered Beings" QuestId="880" GiverName="Jerrik Highmountain" GiverId="34626" />
+
+	<Objective QuestName="Altered Beings" QuestId="880" Type="CollectItem" ItemId="5098" CollectCount="6" />
+	<If Condition="HasQuest(877) &amp;&amp; !IsQuestCompleted(877)" >
+		<CustomBehavior File="InteractWith" QuestId="877" MobId="3737" X="-1276.99" Y="-3012.28" Z="92.60" />
+		<CustomBehavior File="AscendInWater" />
+	</If>
+
+	<TurnIn QuestName="In Fungus We Trust" QuestId="13998" TurnInName="Apothecary Helbrim" TurnInId="3390" />
+	<PickUp QuestName="Whos Shroomin Who" QuestId="13999" GiverName="Apothecary Helbrim" GiverId="3390" />
+
+	<TurnIn QuestName="The Stagnant Oasis" QuestId="877" TurnInName="Tonga Runetotem" TurnInId="3448" />
+	<TurnIn QuestName="Altered Beings" QuestId="880" TurnInName="Tonga Runetotem" TurnInId="3448" />
+	<TurnIn QuestName="Into the Raptors Den" QuestId="905" TurnInName="Sergra Darkthorn" TurnInId="3338" />
+	<PickUp QuestName="The Purloined Payroll" QuestId="13991" GiverName="Sergra Darkthorn" GiverId="3338" />
+
+	<CustomBehavior File="Message" Text="Compiling Ratchet Quests" LogColor="Cornflowerblue"  />
+
+	<PickUp QuestName="The Purloined Payroll" QuestId="13991" GiverName="Sergra Darkthorn" GiverId="3338" />
+	<PickUp QuestName="Deathgates Reinforcements" QuestId="14073" GiverName="Thork" GiverId="3429" />
+
+	<TurnIn QuestName="The Purloined Payroll" QuestId="13991" TurnInName="Gazrog" TurnInId="3464" />
+	<PickUp QuestName="Investigate the Wreckage" QuestId="14066" GiverName="Gazrog" GiverId="3464" />
+
+	<TurnIn QuestName="Whos Shroomin Who" QuestId="13999" TurnInName="Sashya" TurnInId="34651" />
+
+	<PickUp QuestName="A Captains Vengeance" QuestId="891" GiverName="Captain Thalo'thas Brightsun" GiverId="3339" />
+	<PickUp QuestName="Its Gotta Be The Horn" QuestId="865" GiverName="Mebok Mizzyrix" GiverId="3446" />
+	<PickUp QuestName="Wanted Capn Garvey" QuestId="895" GiverName="WANTED" GiverId="3972" GiverType="Object" X="-918.8214" Y="-3719.887" Z="10.31432" />
+
+	<PickUp QuestName="Club Foote" QuestId="14034" GiverName="Gazlowe" GiverId="3391" />
+	<PickUp QuestName="Find Baron Longshore" QuestId="14045" GiverName="Gazlowe" GiverId="3391" />
+	<PickUp QuestName="Southsea Freebooters" QuestId="887" GiverName="Wharfmaster Dizzywig" GiverId="3453" />
+	<PickUp QuestName="Take it up with Tony" QuestId="14052" GiverName="Wharfmaster Dizzywig" GiverId="3453" />
+
+	<CustomBehavior File="InteractWith" QuestId="14034" MobId="34754" InteractByGossipOptions="1" NumOfTimes="10" WaitTime="2000" X="-1032.47" Y="-3669.70" Z="23.03" />
+
+	<If Condition="HasQuest(14066) &amp;&amp; !IsQuestCompleted(14066)" >
+		<RunTo DestName="Wreckage" X="-774.04" Y="-3188.903" Z="91.67" />
+		<CustomBehavior File="CompleteLogQuest" QuestId="14066" />
+	</If>
+
+	<PickUp QuestName="Waptor Twapping" QuestId="14068" GiverName="Kalama" GiverId="34828" />
+
+	<If Condition="HasQuest(14068) &amp;&amp; !IsQuestCompleted(14068)" >
+		<RunTo DestName="Waptor Field" X="-460.56" Y="-3397.95" Z="91.93" />
+		<CustomBehavior File="UserSettings" QuestId="14068" LootMobs="True" PullDistance="1" />
+		<While Condition="!IsQuestCompleted(14068)" >
+			<CustomBehavior File="InteractWith" QuestId="14068" MobId="3255" MobId2="3256" MobId3="44164" InteractByUsingItemId="46853" Range="20" CollectionDistance="500" X="-460.56" Y="-3397.95" Z="91.93" />
+			<RunTo X="-480.25" Y="-3412.75" Z="91.72" />
+			<CustomBehavior File="WaitTimer" WaitTime="15000" />
+			<CustomBehavior File="InteractWith" QuestId="14068" IgnoreCombat="True" MobId="195239" CollectionDistance="1000" WaitForNpcs="False" />
+		</While>
+	</If>
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="15" />
+	<TurnIn QuestName="Waptor Twapping" QuestId="14068" TurnInName="Kalama" TurnInId="34828" />
+
+	<If Condition="HasQuest(869)" >
+		<RunTo DestName="Footprints" X="-505.90" Y="-3377.51" Z="97.72" />
+		<CustomBehavior File="CompleteLogQuest" QuestId="869" />
+	</If>
+
+	<Objective QuestName="The Stolen Silver" QuestId="14067" Type="CollectItem" ItemId="5061" CollectCount="1" />
+	<Objective QuestName="The Stolen Silver" QuestId="14067" Type="KillMob" MobId="44164" KillCount="8" />
+	<Objective QuestName="The Stolen Silver" QuestId="14067" Type="KillMob" MobId="3256" KillCount="4" />
+
+	<Objective QuestName="Its Gotta be the Horn" QuestId="865" Type="CollectItem" ItemId="46850" CollectCount="1" />
+
+	<TurnIn QuestName="Club Foote" QuestId="14034" TurnInName="Gazlowe" TurnInId="3391" />
+	<PickUp QuestName="Love It or Limpet" QuestId="14038" GiverName="Gazlowe" GiverId="3391" />
+
+	<TurnIn QuestName="Its Gotta be the Horn" QuestId="865" TurnInName="Mebok Mizzyrix" TurnInId="3446" />
+	<TurnIn QuestName="The Stolen Silver" QuestId="14067" TurnInName="Gazrog" TurnInId="3464" />
+
+	<TurnIn QuestName="Find Baron Longshore" QuestId="14045" TurnInName="Baron Longshore" TurnInId="3467" />
+	<PickUp QuestName="The Barons Demands" QuestId="14046" GiverName="Baron Longshore" GiverId="3467" />
+	<CustomBehavior File="InteractWith" QuestId="14046" MobId="3467" InteractByGossipOptions="2" X="-1454.44" Y="-3819.38" Z="21.46" />
+
+	<If Condition="HasQuest(14046) &amp;&amp; IsQuestCompleted(14046)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="14046" />
+	</If>
+
+	<PickUp QuestName="A Most Unusual Map" QuestId="14049" GiverName="Baron Longshore" GiverId="3467" />
+	<CustomBehavior File="InteractWith" QuestId="14049" MobId="195205" X="-1308.17" Y="-3785.69" Z="19.87" />
+	<TurnIn QuestName="A Most Unusual Map" QuestId="14049" TurnInName="Gazlowe" TurnInId="3391" />
+	
+	<PickUp QuestName="Gazlowes Fortune" QuestId="14050" GiverName="Gazlowe" GiverId="3391" />
+	<CustomBehavior File="InteractWith" QuestId="14050" MobId="195206" X="-1159.14" Y="-3611.36" Z="94.93" />
+	<TurnIn QuestName="Gazlowes Fortune" QuestId="14050" TurnInName="Gazlowe" TurnInId="3391" />
+	<PickUp QuestName="Raging River Ride" QuestId="26769" GiverName="Gazlowe" GiverId="3391" />
+	
+	<CustomBehavior File="Message" Text="Northern Barrens Complete" LogColor="Orange" />
+	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+
+</QuestOrder>
+</HBProfile>
