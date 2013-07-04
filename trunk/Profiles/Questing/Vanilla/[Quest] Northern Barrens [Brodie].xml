@@ -21,8 +21,17 @@
 	<TargetElites>True</TargetElites>
 
 	<Vendors>
+		<!-- East Watch Post -->
 		<Vendor Name="Martang" Entry="43949" Type="Repair" X="296.017" Y="-3650.72" Z="27.32887" />
+		<!-- The Crossroads -->
+		<Vendor Name="Tari'qa" Entry="3482" Type="Food" X="-416.9152" Y="-2614.444" Z="95.67958" />
+		<Vendor Name="Nargal Deatheye" Entry="3479" Type="Repair" X="-356.9962" Y="-2568.861" Z="95.78758" />
 	</Vendors>
+	
+	<Mailboxes>
+		<!-- The Crossroads -->
+		<Mailbox X="-443.6927" Y="-2649.078" Z="95.77381" />
+	</Mailboxes>
   
 	<AvoidMobs>
 	</AvoidMobs>
@@ -473,7 +482,7 @@
 	<TurnIn QuestName="Hunting the Huntress" QuestId="903" TurnInName="Sergra Darkthorn" TurnInId="3338" />
 
 	<PickUp QuestName="Echeyakee" QuestId="881" GiverName="Sergra Darkthorn" GiverId="3338" />
-	<PickUp QuestName="Kolkar Leaders" QuestId="850" GiverName="Telar Highstrider" GiverId="34841" />
+	<PickUp QuestName="Kolkar Leaders" QuestId="850" GiverName="Regthar Deathgate" GiverId="3389" />
 	<PickUp QuestName="A Little Diversion" QuestId="13992" GiverName="Tajari" GiverId="34613" />
 
 	<Objective QuestName="Fungal Spores" QuestId="848" Type="CollectItem" ItemId="5012" CollectCount="5" />
