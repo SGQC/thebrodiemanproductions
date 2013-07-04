@@ -266,7 +266,7 @@
 		<CustomBehavior File="UserSettings" QuestId="30312" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="1419.408" Y="1197.767" Z="413.5989" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="InteractWith" QuestId="30312" MobId="59183" MobState="BelowHp" InteractByUsingItemId="84242" PreInteractMountStrategy="Dismount" 
+		<CustomBehavior File="InteractWith" QuestId="30312" MobId="59183" InteractByUsingItemId="84242" PreInteractMountStrategy="Dismount" 
 			ProactiveCombatStrategy="ClearMobsTargetingUs" MobHpPercentLeft="50" WaitTime="1000" NumOfTimes="1000" />
 	</If>
 

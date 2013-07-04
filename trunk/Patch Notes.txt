@@ -1,5 +1,13 @@
 Patch Notes
 
+7/4/13
+
+r366
+Golden Lotus
+-- Removed BelowHp state check
+Cloud Serpent
+-- Removed BelowHp state check
+
 7/3/13
 
 r365
