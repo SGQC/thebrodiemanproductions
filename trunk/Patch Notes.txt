@@ -2,6 +2,14 @@ Patch Notes
 
 7/4/13
 
+r369
+The Leveling Grind
+-- Northern Barrens - Corrected NPC locations to allow bot to find them
+-- Northern Barrens - Forgotten Pool waypoint corrected
+-- Northern Barrens - Echeyakee waypoint corrected
+-- Northern Barrens - Lots of 5.3 location changes
+-- Northern Barrens - Updated 52/70
+
 r368
 The Leveling Grind
 -- Northern Barrens - Added Crossroads Vendors
@@ -10,7 +18,7 @@ The Leveling Grind
 
 r367
 The Leveling Grind
--- Northern Barrens added - 42/90 complete
+-- Northern Barrens added - 42/70 complete
 
 r366
 Golden Lotus
