@@ -1,5 +1,15 @@
 Patch Notes
 
+7/6/13
+
+r370
+Ruins of Guo-Lai
+-- That's Not a Rock - Converted from While to true InteractWith monitoring. Needs Hotspot support.
+The Tillers
+-- Gift for Haohan - Converted to InteractWith with spellcast support. Untested.
+Quest Behaviors
+-- Updates from ChinaJade
+
 7/4/13
 
 r369
