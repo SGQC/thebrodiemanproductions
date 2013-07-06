@@ -29,22 +29,22 @@
 	</AvoidMobs>
    
 	<Blackspots>
-		<Blackspot X="-229.8389" Y="1422.793" Z="223.3444" Radius="2"/>
-		<!--<Blackspot X="-260.692" Y="610.3264" Z="168.9762" Radius="2"/>--> <!-- Antheas Pot -->
+		<Blackspot X="-229.8389" Y="1422.793" Z="223.3444" Radius="2" />
+		<!--<Blackspot X="-260.692" Y="610.3264" Z="168.9762" Radius="2" />--> <!-- Antheas Pot -->
 	</Blackspots>
 
 <!-- Quest Overrides -->
 
 <!-- Not in Chee Chee's Backyard -->
-	<Quest Id="30324" Name="Not in Chee Chee's Backyard"> 
-		<Objective Type="KillMob" MobId="59120" KillCount="8">
+	<Quest Id="30324" Name="Not in Chee Chee's Backyard" > 
+		<Objective Type="KillMob" MobId="59120" KillCount="8" >
 		<Hotspots>
 			<Hotspot X="343.9983" Y="1484.133" Z="442.1457" />
 			<Hotspot X="401.656" Y="1428.688" Z="430.7724" />
 			<Hotspot X="460.0145" Y="1407.949" Z="415.3195" />		
 		</Hotspots>
 		</Objective>
-		<Objective Type="KillMob" MobId="59124" KillCount="8">
+		<Objective Type="KillMob" MobId="59124" KillCount="8" >
 		<Hotspots>
 			<Hotspot X="343.9983" Y="1484.133" Z="442.1457" />
 			<Hotspot X="401.656" Y="1428.688" Z="430.7724" />
@@ -54,8 +54,8 @@
 	</Quest>
 
 <!-- Where it Counts -->
-	<Quest Id="30325" Name="Where it Counts">
-		<Objective Type="KillMob" MobId="59123" KillCount="1">
+	<Quest Id="30325" Name="Where it Counts" >
+		<Objective Type="KillMob" MobId="59123" KillCount="1" >
 			<Hotspots>
 				<Hotspot X="192.4045" Y="1512.467" Z="427.4137" />
 			</Hotspots>
@@ -63,8 +63,8 @@
 	</Quest>
 
 <!-- They Don't Even Wear Them -->
-	<Quest Id="30323" Name="They Don't Even Wear Them"> 
-		<Objective Type="CollectItem" ItemId="80138" CollectCount="1">
+	<Quest Id="30323" Name="They Don't Even Wear Them" > 
+		<Objective Type="CollectItem" ItemId="80138" CollectCount="1" >
 		<CollectFrom>
 			<Mob Name="Springtail Littlewhisker" Id="59515" />
 			<Mob Name="Springtail Trapper" Id="59513" />
@@ -77,7 +77,7 @@
 			<Hotspot X="545.0652" Y="839.0911" Z="284.4408" />
 		</Hotspots>
 		</Objective>
-		<Objective Type="CollectItem" ItemId="80137" CollectCount="1">
+		<Objective Type="CollectItem" ItemId="80137" CollectCount="1" >
 		<CollectFrom>
 			<Mob Name="Springtail Littlewhisker" Id="59515" />
 			<Mob Name="Springtail Trapper" Id="59513" />
@@ -90,7 +90,7 @@
 			<Hotspot X="545.0652" Y="839.0911" Z="284.4408" />
 		</Hotspots>
 		</Objective>
-		<Objective Type="CollectItem" ItemId="80139" CollectCount="1">
+		<Objective Type="CollectItem" ItemId="80139" CollectCount="1" >
 		<CollectFrom>
 			<Mob Name="Springtail Littlewhisker" Id="59515" />
 			<Mob Name="Springtail Trapper" Id="59513" />
@@ -106,8 +106,8 @@
 	</Quest>
 
 <!-- A Gift for Chee Chee -->
-	<Quest Id="30471" Name="A Gift for Chee Chee"> 
-		<Objective Type="CollectItem" ItemId="79827" CollectCount="1">
+	<Quest Id="30471" Name="A Gift for Chee Chee" > 
+		<Objective Type="CollectItem" ItemId="79827" CollectCount="1" >
 		<CollectFrom>
 			<GameObject Name="Authentic Valley Stir Fry" Id="210803" />
 		</CollectFrom>
@@ -120,8 +120,8 @@
 	</Quest>
 
 <!-- A Gift for Ella -->
-	<Quest Id="30474" Name="A Gift for Ella"> 
-		<Objective Type="CollectItem" ItemId="79871" CollectCount="1">
+	<Quest Id="30474" Name="A Gift for Ella" > 
+		<Objective Type="CollectItem" ItemId="79871" CollectCount="1" >
 			<CollectFrom>
 				<Mob Name="Kunzen Ritualist" Id="59123" />
 				<Mob Name="Kunzen Hunter" Id="59121" />
@@ -134,8 +134,8 @@
 	</Quest>
 
 <!-- A Gift for Old Hillpaw -->
-	<Quest Id="30476" Name="A Gift For Old Hillpaw">
-		<Objective Type="CollectItem" ItemId="80229" CollectCount="1">
+	<Quest Id="30476" Name="A Gift For Old Hillpaw" >
+		<Objective Type="CollectItem" ItemId="80229" CollectCount="1" >
 			<CollectFrom>
 				<Mob Name="Freshwater Oyster" Id="211021" />
 			</CollectFrom>
@@ -150,8 +150,8 @@
 	</Quest>
 
 <!-- A Gift for Tina -->
-	<Quest Id="30470" Name="A Gift for Tina"> 
-		<Objective Type="CollectItem" ItemId="80134" CollectCount="1">
+	<Quest Id="30470" Name="A Gift for Tina" > 
+		<Objective Type="CollectItem" ItemId="80134" CollectCount="1" >
 		<CollectFrom>
 			<GameObject Name="Chrysoberyl Outcropping" Id="210958" />
 		</CollectFrom>
@@ -165,8 +165,8 @@
 	</Quest>
 
 <!-- The Lesser of Two Evils -->
-	<Quest Id="30333" Name="The Lesser of Two Evils">
-		<Objective Type="KillMob" MobId="59516" KillCount="1">
+	<Quest Id="30333" Name="The Lesser of Two Evils" >
+		<Objective Type="KillMob" MobId="59516" KillCount="1" >
 			<Hotspots>
 				<Hotspot X="601.6123" Y="771.0812" Z="252.7877" />
 			</Hotspots>
@@ -174,8 +174,8 @@
 	</Quest>
 
 <!-- Stealing is Bad...Re-Stealing is OK -->
-	<Quest Id="30334" Name="Stealing is Bad...Re-Stealing is OK"> 
-		<Objective Type="CollectItem" ItemId="79824" CollectCount="16">
+	<Quest Id="30334" Name="Stealing is Bad...Re-Stealing is OK" > 
+		<Objective Type="CollectItem" ItemId="79824" CollectCount="16" >
 			<CollectFrom>
 				<GameObject Name="Stolen Vegetable" Id="210763" />
 				<GameObject Name="Stolen Vegetable" Id="210764" />
@@ -198,8 +198,8 @@
 	</Quest>
 
 <!-- Stalling the Ravage -->
-	<Quest Id="30335" Name="Stalling the Ravage">
-		<Objective Type="KillMob" MobId="59124" KillCount="12">
+	<Quest Id="30335" Name="Stalling the Ravage" >
+		<Objective Type="KillMob" MobId="59124" KillCount="12" >
 			<Hotspots>
 				<Hotspot X="343.5628" Y="1509.567" Z="452.1451" />
 				<Hotspot X="356.53" Y="1464.07" Z="442.68" />
@@ -216,8 +216,8 @@
 	</Quest>
 
 <!-- Cindergut Peppers -->
-	<Quest Id="30329" Name="Cindergut Peppers">
-		<Objective Type="CollectItem" ItemId="79864" CollectCount="4">
+	<Quest Id="30329" Name="Cindergut Peppers" >
+		<Objective Type="CollectItem" ItemId="79864" CollectCount="4" >
 			<CollectFrom>
 				<Mob Name="Kunzen Ritualist" Id="59123" />
 				<Mob Name="Kunzen Hunter" Id="59121" />
@@ -239,8 +239,8 @@
 	</Quest>
 
 <!-- The Kunzen Hunter-Chief -->
-   	<Quest Id="30336" Name="Kunzen Hunter-Chief">
-       		<Objective Type="KillMob" MobId="59128" KillCount="1">
+   	<Quest Id="30336" Name="Kunzen Hunter-Chief" >
+       		<Objective Type="KillMob" MobId="59128" KillCount="1" >
            		<Hotspots>
            	 		<Hotspot X="-108.26" Y="1479.47" Z="340.46" />
            		</Hotspots>
@@ -248,8 +248,8 @@
    	</Quest>
 
 <!-- Fatty Goatsteak -->
-	<Quest Id="30332" Name="Fatty Goatsteak"> 
-		<Objective Type="CollectItem" ItemId="79867" CollectCount="4">
+	<Quest Id="30332" Name="Fatty Goatsteak" > 
+		<Objective Type="CollectItem" ItemId="79867" CollectCount="4" >
 			<CollectFrom>
 				<Mob Name="Stout Stafhorn" Id="59139" />
 			</CollectFrom>
@@ -570,7 +570,7 @@
 												MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
 												MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
 												MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
-												MobId41="63260" MobId42="66080" WaitForNpcs="False" WaitTime="10"/>
+												MobId41="63260" MobId42="66080" WaitForNpcs="False" WaitTime="10" />
 		</While>
 		<If Condition="HasQuest(32648) &amp;&amp; IsQuestCompleted(32648)" >
 			<TurnIn QuestName="Work Order: Golden Lotus II" QuestId="32648" TurnInType="Object" TurnInName="Empty Crate" TurnInId="218765" X="-177.908" Y="653.5" Z="166.1242" />
@@ -642,7 +642,7 @@
 											MobId26="60172" MobId27="65938" MobId28="65932" MobId29="65930" MobId30="65933"
 											MobId31="65929" MobId32="65931" MobId33="63157" MobId34="66108" MobId35="63158"
 											MobId36="63180" MobId37="63245" MobId38="63223" MobId39="63160" MobId40="66123"
-											MobId41="63260" MobId42="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10"/>
+											MobId41="63260" MobId42="66080" NumOfTimes="16" WaitForNpcs="False" WaitTime="10" />
 	</If>
 
 <!-- Starting Quests -->
@@ -712,25 +712,25 @@
 <!-- Money Matters -->
  	<If Condition="(HasQuest(30322) &amp;&amp; !IsQuestCompleted(30322))" >
 		<CustomBehavior File="Message" Text="Starting Money Matters" LogColor="Green"  />
-		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80215))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80215))" >
 			<CustomBehavior File="FlyTo" X="-203.3791" Y="496.2022" Z="187.179" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="59582" CollectionDistance="200" InteractByGossipOptions="1,1" WaitTime="1500" />
 		</While>
 		
-		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80213))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80213))" >
 			<CustomBehavior File="FlyTo" X="-140.0031" Y="505.1759" Z="209.4762" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="59581" CollectionDistance="200" InteractByGossipOptions="1,1" WaitTime="1500" />
 		</While>
 
-		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80216))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80216))" >
 			<CustomBehavior File="FlyTo" X="-270.4832" Y="497.3418" Z="168.56" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="59585" InteractByGossipOptions="1,1" CollectionDistance="200" WaitTime="1500" />
 		</While>
 		
-		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80214))">
+		<While Condition="(HasQuest(30322) &amp;&amp; !HasItem(80214))" >
 			<CustomBehavior File="FlyTo" X="-149.9961" Y="477.6948" Z="196.3098" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="InteractWith" MobId="59583" CollectionDistance="200" InteractByGossipOptions="1,1" WaitTime="1500" />
@@ -738,22 +738,22 @@
 	</If>
 
 <!-- Water, Water Everywhere -->
- 	<If Condition="HasQuest(30317) &amp;&amp; !IsQuestCompleted(30317)">
+ 	<If Condition="HasQuest(30317) &amp;&amp; !IsQuestCompleted(30317)" >
 		<CustomBehavior File="Message" Text="Starting Water, Water Everywhere" LogColor="Green" />
 		<CustomBehavior File="FlyTo" X="-221.92" Y="461.65" Z="185.44" />
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="30317" MobId="60231" PreInteractMountStrategy="Dismount" NonCompeteDistance="0" InteractByGossipOptions="1,1" CollectionDistance="1000" X="-221.92" Y="461.65" Z="185.44" />
-		<While Condition="!IsObjectiveComplete(1,30317)">
+		<While Condition="!IsObjectiveComplete(1,30317)" >
 			<CustomBehavior File="NoControlVehicle" QuestId="30317" VehicleMountId="63274" TargetId="59574" AttackButton="1" OftenToUse="2000" MaxRange="200" TypeId="2" />
 		</While>
 	</If>
 
 <!-- Chasing the Chicken -->
-	<If Condition="HasQuest(30318) &amp;&amp; !IsQuestCompleted(30318)">
+	<If Condition="HasQuest(30318) &amp;&amp; !IsQuestCompleted(30318)" >
 		<CustomBehavior File="Message" Text="Starting Chasing the Chicken" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" DestName="Chicken Chasing! Spot #2" X="-230.5073" Y="1385.025" Z="222.1091" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="HasQuest(30318) &amp;&amp; !HasItem(80223)">
+		<While Condition="HasQuest(30318) &amp;&amp; !HasItem(80223)" >
 			<CustomBehavior File="InteractWith" MobId="58918" PreInteractMountStrategy="DismountOrCancelShapeshift" CollectionDistance="250" ProactiveCombatStrategy="NoClear" />
 			<If Condition="Me.HasAura(114652)" >
 				<CustomBehavior File="InteractWith" MobId="210604" PreInteractMountStrategy="DismountOrCancelShapeshift" Range="8" MinRange="3" X="-225.0399" Y="1424.528" Z="223.0623" WaitForNpcs="False" />
@@ -773,12 +773,12 @@
 	</If>
 
 <!-- Pest Problems -->
-	<If Condition="HasQuest(30319) &amp;&amp; !IsQuestCompleted(30319)">
+	<If Condition="HasQuest(30319) &amp;&amp; !IsQuestCompleted(30319)" >
 		<CustomBehavior File="Message" Text="Starting Pest Problems" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="-94.36108" Y="1126.441" Z="171.5581" />
 		<CustomBehavior File="UserSettings" QuestId="30319" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsQuestCompleted(30319)">
+		<While Condition="!IsQuestCompleted(30319)" >
 			<CustomBehavior File="InteractWith" QuestId="30319" MobId="59532" NonCompeteDistance="0" InteractByGossipOptions="1" IgnoreLoSToTarget="True" WaitTime="2000" X="-92.06" Y="1126.441" Z="171.5581" />
 			<While Condition="(Me.HasAura(114573) || Me.HasAura(114517))" >
 				<CustomBehavior File="InteractWith" MobId="59530" WaitTime="100" NonCompeteDistance="1" Range="10" IgnoreCombat="True" MobState="Alive" WaitForNpcs="False" X="-85.90" Y="1118.68" Z="171.39" />
@@ -803,7 +803,7 @@
 	</If>
 	
 <!-- Lost Sheepie -->
-	<If Condition="HasQuest(31338) &amp;&amp; !IsQuestCompleted(31338)">
+	<If Condition="HasQuest(31338) &amp;&amp; !IsQuestCompleted(31338)" >
 		<CustomBehavior File="Message" Text="Starting Lost Sheepie" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31338" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="86.18186" Y="1307.803" Z="218.9255" />
@@ -813,7 +813,7 @@
 	</If>
 
 <!-- A Gift for Old Hillpaw -->
- 	<If Condition="HasQuest(30476) &amp;&amp; !IsQuestCompleted(30476)">
+ 	<If Condition="HasQuest(30476) &amp;&amp; !IsQuestCompleted(30476)" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Old Hillpaw" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30476" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="348.8154" Y="1011.628" Z="146.0121" />
@@ -838,7 +838,7 @@
 	</If>
 
 <!-- You Have to Burn the Ropes -->
-	<If Condition="HasQuest(30327) &amp;&amp; !IsQuestCompleted(30327)">
+	<If Condition="HasQuest(30327) &amp;&amp; !IsQuestCompleted(30327)" >
 		<CustomBehavior File="Message" Text="Starting You Have to Burn the Ropes" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30327" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="40.36983" Y="1480.113" Z="357.612" />
@@ -888,7 +888,7 @@
 		<CustomBehavior File="Message" Text="Starting The Mile-High Grub" LogColor="Green"  />
 		<CustomBehavior File="FlyTo" X="466.8641" Y="1400.579" Z="415.4039" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!IsObjectiveComplete(1,30331)">
+		<While Condition="!IsObjectiveComplete(1,30331)" >
 			<RunTo X="466.8641" Y="1400.579" Z="415.4039" />
 			<CustomBehavior File="ForcedDismount" />
 			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(79895)" />
@@ -897,7 +897,7 @@
 	</If>
 
 <!-- Where it Counts -->
-	<If Condition="HasQuest(30325) &amp;&amp; !IsQuestCompleted(30325)">
+	<If Condition="HasQuest(30325) &amp;&amp; !IsQuestCompleted(30325)" >
 		<CustomBehavior File="Message" Text="Starting Where It Counts" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30325" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="192.4045" Y="1512.467" Z="427.4137" />
@@ -909,7 +909,7 @@
 	</If>
 
 <!-- A Gift for Sho -->
-	<If Condition="HasQuest(30472) &amp;&amp; !IsQuestCompleted(30472)">
+	<If Condition="HasQuest(30472) &amp;&amp; !IsQuestCompleted(30472)" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Sho" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30472" LootMobs="True" PullDistance="1" />
 		<CustomBehavior File="FlyTo" X="192.4045" Y="1512.467" Z="427.4137" />
@@ -950,40 +950,40 @@
 	</If>
 
 <!-- Simian Sabotage -->
-	<If Condition="HasQuest(30337) &amp;&amp; !IsQuestCompleted(30337)">
+	<If Condition="HasQuest(30337) &amp;&amp; !IsQuestCompleted(30337)" >
 		<CustomBehavior File="Message" Text="Starting Simian Sabotage" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30337" LootMobs="True" PullDistance="5" />
-		<If Condition="!IsObjectiveComplete(1,30337)">
+		<If Condition="!IsObjectiveComplete(1,30337)" >
 			<CustomBehavior File="FlyTo" X="360.5863" Y="1480.488" Z="441.9997" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="!IsObjectiveComplete(1,30337)">
+			<While Condition="!IsObjectiveComplete(1,30337)" >
 				<RunTo X="360.5863" Y="1480.488" Z="441.9997" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(79885)" WaitTime="500" />
 				<CustomBehavior File="WaitTimer" WaitTime="6000" />
 			</While>
 		</If>
-		<If Condition="!IsObjectiveComplete(2,30337)">
+		<If Condition="!IsObjectiveComplete(2,30337)" >
 			<CustomBehavior File="FlyTo" X="301.3538" Y="1396.193" Z="406.4178" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="!IsObjectiveComplete(2,30337)">
+			<While Condition="!IsObjectiveComplete(2,30337)" >
 				<RunTo X="301.3538" Y="1396.193" Z="406.4178" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(79885)" WaitTime="500" />
 				<CustomBehavior File="WaitTimer" WaitTime="6000" />
 			</While>
 		</If>
-		<If Condition="!IsObjectiveComplete(3,30337)">
+		<If Condition="!IsObjectiveComplete(3,30337)" >
 			<CustomBehavior File="FlyTo" X="411.4637" Y="1422.371" Z="430.4197" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="!IsObjectiveComplete(3,30337)">
+			<While Condition="!IsObjectiveComplete(3,30337)" >
 				<RunTo X="411.4637" Y="1422.371" Z="430.4197" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(79885)" WaitTime="500" />
 				<CustomBehavior File="WaitTimer" WaitTime="6000" />
 			</While>
 		</If>
-		<If Condition="!IsObjectiveComplete(4,30337)">
+		<If Condition="!IsObjectiveComplete(4,30337)" >
 			<CustomBehavior File="FlyTo" X="521.8856" Y="1311.551" Z="383.7625" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="!IsObjectiveComplete(4,30337)">
+			<While Condition="!IsObjectiveComplete(4,30337)" >
 				<RunTo X="521.8856" Y="1311.551" Z="383.7625" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(79885)" WaitTime="500" />
 				<CustomBehavior File="WaitTimer" WaitTime="6000" />
@@ -1018,7 +1018,7 @@
 	</If>
 	
 <!-- Not in Chee Chee's Backyard -->
- 	<If Condition="HasQuest(30324) &amp;&amp; !IsQuestCompleted(30324)">
+ 	<If Condition="HasQuest(30324) &amp;&amp; !IsQuestCompleted(30324)" >
 		<CustomBehavior File="Message" Text="Starting Not in Chee Chee's Backyard" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="30327" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="343.9983" Y="1484.133" Z="442.1457" />
@@ -1082,7 +1082,7 @@
 	</If>
 
 <!-- A Gift for Ella --> <!-- Only farms the mobs, does not farm the item in the Hozen village -->
-	<If Condition="HasQuest(30474) &amp;&amp; !IsQuestCompleted(30474)">
+	<If Condition="HasQuest(30474) &amp;&amp; !IsQuestCompleted(30474)" >
 		<CustomBehavior File="Message" Text="Starting A Gift for Ella" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="30474" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="344.4392" Y="1442.505" Z="423.3759" />
@@ -1096,39 +1096,39 @@
 		<CustomBehavior File="UserSettings" QuestId="30475" LootMobs="True" PullDistance="30" />
 		<CustomBehavior File="FlyTo" X="-271.49" Y="555.9184" Z="182.68" />
 		<CustomBehavior File="ForcedDismount" />
-		<While Condition="!HasItem(80232)">
-			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="121733"/>
+		<While Condition="!HasItem(80232)" >
+			<If Condition="(Me.Class == WoWClass.Rogue)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="121733" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="172"/>
+			<If Condition="(Me.Class == WoWClass.Warlock)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="172" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="355"/>
+			<If Condition="(Me.Class == WoWClass.Warrior)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="355" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.DeathKnight )">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="49576"/>
+			<If Condition="(Me.Class == WoWClass.DeathKnight )" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="49576" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="8921"/>
+			<If Condition="(Me.Class == WoWClass.Druid)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="8921" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="3044"/>
+			<If Condition="(Me.Class == WoWClass.Hunter)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="3044" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="2136"/>
+			<If Condition="(Me.Class == WoWClass.Mage)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="2136" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="62124"/>
+			<If Condition="(Me.Class == WoWClass.Paladin)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="62124" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="589"/>
+			<If Condition="(Me.Class == WoWClass.Priest)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="589" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="403"/>
+			<If Condition="(Me.Class == WoWClass.Shaman)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="403" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="115546"/>
+			<If Condition="(Me.Class == WoWClass.Monk)" >
+				<CustomBehavior File="SpecificQuests\30475-FourWinds-AGiftForFung" SpellId="115546" />
 			</If>
 		</While>
 		<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
@@ -1150,15 +1150,15 @@
 		<While Condition="!IsQuestCompleted(30479)" >
 			<If Condition="!IsQuestCompleted(30479)" >
 				<CustomBehavior File="FlyTo" X="-182.8989" Y="878.6262" Z="243.2868" />
-				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" PreInteractMountStrategy="Dismount" />
 			</If>
 			<If Condition="!IsQuestCompleted(30479)" >
 				<CustomBehavior File="FlyTo" X="-29.69154" Y="1044.316" Z="219.5321" />
-				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" PreInteractMountStrategy="Dismount" />
 			</If>
 			<If Condition="!IsQuestCompleted(30479)" >
 				<CustomBehavior File="FlyTo" X="126.8075" Y="1218.519" Z="299.1005" />
-				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" />
+				<CustomBehavior File="InteractWith" QuestId="30479" MobId="211025" WaitForNpcs="False" PreInteractMountStrategy="Dismount" />
 			</If>
 		</While>
 	</If>
@@ -1169,8 +1169,41 @@
 		<CustomBehavior File="UserSettings" QuestId="30477" LootMobs="True" PullDistance="25" />
 		<CustomBehavior File="FlyTo" X="348.98" Y="1021.83" Z="145.40" />
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="CollectThings" QuestId="30477" MobId="59639" CollectUntil="QuestComplete" MobState="Alive" WaitTime="1000" 
-			HuntingGroundRadius="200" NonCompeteDistance="1" />
+		<While Condition="!IsQuestCompleted(30477)" >
+			<If Condition="(Me.Class == WoWClass.Rogue)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="121733" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Warlock)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="172" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Warrior)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="355" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.DeathKnight )" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="49576" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Druid)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="8921" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Hunter)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="3044" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Mage)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="2136" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Paladin)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="62124" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Priest)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="589" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Shaman)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="403" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+			<If Condition="(Me.Class == WoWClass.Monk)" >
+				<CustomBehavior File="InteractWith" MobId="59639" MobState="Alive" InteractByCastingSpellId="115546" Range="30" CollectionDistance="500" NonCompeteDistance="0" X="348.98" Y="1021.83" Z="145.40" />
+			</If>
+		</While>
 		<CustomBehavior File="AscendInWater" />
 	</If>
 	
@@ -1229,7 +1262,7 @@
 
 <!-- The Mile-High Grub -->
   	<If Condition="(HasQuest(30331) &amp;&amp; IsQuestCompleted(30331))" >
-		<TurnIn QuestName="The Mile-High Grub" QuestId="30331" TurnInName="Mei Mei Ironpaw" TurnInId="58714" X="-251.56" Y="614.06" Z="167.55"/>
+		<TurnIn QuestName="The Mile-High Grub" QuestId="30331" TurnInName="Mei Mei Ironpaw" TurnInId="58714" X="-251.56" Y="614.06" Z="167.55" />
 	</If>
 
 <!-- Cindergut Peppers -->
@@ -1373,22 +1406,22 @@
 	
 	<If Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 58761 &amp;&amp; u.Distance &lt;= 250)" >
 	<!-- Nice Necklace -->
-		<If Condition="HasQuest(31325)">
+		<If Condition="HasQuest(31325)" >
 			<TurnIn QuestName="A Very Nice Necklace" QuestId="31325" TurnInName="Tina Mudclaw" TurnInId="58761" />
 		</If>
 				
 	<!-- Tasteful Tiara -->
-		<If Condition="HasQuest(31326)">
+		<If Condition="HasQuest(31326)" >
 			<TurnIn QuestName="Tina's Tasteful Tiara" QuestId="31326" TurnInName="Tina Mudclaw" TurnInId="58761" />
 		</If>	
 				
 	<!-- Exquisite Earring -->
-		<If Condition="HasQuest(31328)">
+		<If Condition="HasQuest(31328)" >
 			<TurnIn QuestName="An Exquisite Earring" QuestId="31328" TurnInName="Tina Mudclaw" TurnInId="58761" />
 		</If>
 				
 	<!-- Beautiful Brooch -->
-		<If Condition="HasQuest(31329)">
+		<If Condition="HasQuest(31329)" >
 			<TurnIn QuestName="A Beautiful Brooch" QuestId="31329" TurnInName="Tina Mudclaw" TurnInId="58761" />
 		</If>
 	</If>
@@ -1440,7 +1473,7 @@
 		<TurnIn QuestName="Kunzen Hunter-Chief" QuestId="30336" TurnInName="Farmer Yoon" TurnInId="58646" />
 	</If>
 
-<If Condition="HasItem(86425)">
+<If Condition="HasItem(86425)" >
 	<CustomBehavior File="FlyTo" DestName="Halfhill" X="-239.3049" Y="586.3218" Z="167.5479" />
 	<CustomBehavior File="ForcedDismount" />
 	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(86425)" WaitTime="1000" />
@@ -1453,27 +1486,27 @@
 </If>
 
 <!-- Lesson 1: Sliced Peaches -->
-	<If Condition="HasQuest(31332) &amp;&amp; !IsQuestCompleted(31332)">
+	<If Condition="HasQuest(31332) &amp;&amp; !IsQuestCompleted(31332)" >
 		<CustomBehavior File="Message" Text="Starting Lesson 1: Sliced Peaches" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31332" LootMobs="True" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(31332)">
+		<While Condition="!IsQuestCompleted(31332)" >
 			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74660" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
 <!-- Lesson 2: Instant Noodles -->
-	<If Condition="HasQuest(31333) &amp;&amp; !IsQuestCompleted(31333)">
+	<If Condition="HasQuest(31333) &amp;&amp; !IsQuestCompleted(31333)" >
 		<CustomBehavior File="Message" Text="Starting Lesson 2: Instant Noodles" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31333" LootMobs="True" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(31333)">
+		<While Condition="!IsQuestCompleted(31333)" >
 			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74854" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
 <!-- Lesson 3: Toasted Fish Jerky -->
-	<If Condition="HasQuest(31334) &amp;&amp; !IsQuestCompleted(31334)">
+	<If Condition="HasQuest(31334) &amp;&amp; !IsQuestCompleted(31334)" >
 		<CustomBehavior File="Message" Text="Starting Lesson 3: Toasted Fish Jerky" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31334" LootMobs="True" PullDistance="5" />
 		<CustomBehavior File="FlyTo" X="-402.11" Y="384.63" Z="152.78" />
@@ -1483,20 +1516,20 @@
 	</If>
 
 <!-- Lesson 4: Dried Needle Mushrooms -->
-	<If Condition="HasQuest(31335) &amp;&amp; !IsQuestCompleted(31335)">
+	<If Condition="HasQuest(31335) &amp;&amp; !IsQuestCompleted(31335)" >
 		<CustomBehavior File="Message" Text="Starting Lesson 4: Dried Needle Mushrooms" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31335" LootMobs="True" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(31335)">
+		<While Condition="!IsQuestCompleted(31335)" >
 			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="85583" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 
 <!-- Lesson 5: Pounded Rice Cake -->
-	<If Condition="HasQuest(31336) &amp;&amp; !IsQuestCompleted(31336)">
+	<If Condition="HasQuest(31336) &amp;&amp; !IsQuestCompleted(31336)" >
 		<CustomBehavior File="Message" Text="Starting Lesson 5: Pounded Rice Cake" LogColor="Green"  />
 		<CustomBehavior File="UserSettings" QuestId="31336" LootMobs="True" PullDistance="5" />
-		<While Condition="!IsQuestCompleted(31336)">
+		<While Condition="!IsQuestCompleted(31336)" >
 			<CustomBehavior File="InteractWith" MobId="64231" InteractByGossipOptions="2" InteractByBuyingItemId="74851" BuyItemCount="5" />
 		</While>
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -1532,11 +1565,11 @@
 		<TurnIn QuestName="A Present for Teacher" QuestId="31820" TurnInName="Nomi" TurnInId="64337" />
 	</If>
 
-	<If Condition="HasItem(90735)">
+	<If Condition="HasItem(90735)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(90735)" WaitTime="1500" />
 	</If>
 
-	<While Condition="(GetItemCount(89112) &gt; 10)">
+	<While Condition="(GetItemCount(89112) &gt; 10)" >
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(89112)" WaitTime="1500" />
 	</While>
 

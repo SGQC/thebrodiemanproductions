@@ -241,10 +241,8 @@
 		<CustomBehavior File="UserSettings" QuestId="30204" LootMobs="True" PullDistance="10" />
 		<CustomBehavior File="FlyTo" X="1426.496" Y="1677.714" Z="344.2368" />
 		<CustomBehavior File="ForcedDismount"/>
-		<While Condition="!IsQuestCompleted(30204)">
-			<CustomBehavior File="InteractWith" InteractByUsingItemId="85261" MobId="210376" CollectionDistance="1000" Range="20" MinRange="14" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="30204" MobId="210376" InteractByUsingItemId="85261" CollectionDistance="1000" Range="20" MinRange="14" NumOfTimes="100" WaitTime="4000" 
+			ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="Dismount" />
 	</If>
 
 <!-- Runelocked -->
