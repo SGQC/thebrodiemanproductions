@@ -1083,19 +1083,19 @@
 	</ElseIf>
 	<ElseIf Condition="Me.HasAura(122830)" > <!-- Chao the Voice -->
 		<If Condition="HasQuest(31113) &amp;&amp; IsQuestCompleted(31113)" >
-			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Chao the Voice" TurnInId="62550" />
+			<TurnIn QuestName="Assault Fire Camp Gai-Cho" QuestId="31113" TurnInName="Chao the Voice" TurnInId="62890" />
 		</If>
 		<If Condition="HasQuest(31114) &amp;&amp; IsQuestCompleted(31114)" >
-			<TurnIn QuestName="Assault Deadtalker's Plateau" QuestId="31114" TurnInName="Chao the Voice" TurnInId="62550" />
+			<TurnIn QuestName="Assault Deadtalker's Plateau" QuestId="31114" TurnInName="Chao the Voice" TurnInId="62890" />
 		</If>
 		<If Condition="HasQuest(31118) &amp;&amp; IsQuestCompleted(31118)" >
-			<TurnIn QuestName="The Deadtalker's Cipher" QuestId="31118" TurnInName="Chao the Voice" TurnInId="62550" />
+			<TurnIn QuestName="The Deadtalker's Cipher" QuestId="31118" TurnInName="Chao the Voice" TurnInId="62890" />
 		</If>
 		<If Condition="HasQuest(31119) &amp;&amp; IsQuestCompleted(31119)" >
-			<TurnIn QuestName="The Enemy of My Enemy...Is Still My Enemy" QuestId="31119" TurnInName="Chao the Voice" TurnInId="62550" />
+			<TurnIn QuestName="The Enemy of My Enemy...Is Still My Enemy" QuestId="31119" TurnInName="Chao the Voice" TurnInId="62890" />
 		</If>
 		<If Condition="HasQuest(31116) &amp;&amp; IsQuestCompleted(31116)" >
-			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Chao the Voice" TurnInId="62550" />
+			<TurnIn QuestName="Spirit Dust" QuestId="31116" TurnInName="Chao the Voice" TurnInId="62890" />
 		</If>
 	</ElseIf>
 	<ElseIf Condition="Me.HasAura(122793)" > <!-- Protector Yi -->

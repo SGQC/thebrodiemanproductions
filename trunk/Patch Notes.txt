@@ -1,5 +1,11 @@
 Patch Notes
 
+7/7/13
+
+r371
+Shado Pan
+-- Correction to Chao the Voice turnin in the field's ID number
+
 7/6/13
 
 r370
