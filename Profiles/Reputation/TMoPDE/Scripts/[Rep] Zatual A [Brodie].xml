@@ -139,25 +139,14 @@
 			<Hotspot X="5920.20" Y="6445.44" Z="20.20" />
 		</CustomBehavior>
 	</If>
-	
+
 <!-- Heinous Sacrifice -->
 	<If Condition="HasQuest(32538) &amp;&amp; !IsQuestCompleted(32538)" >
 		<CustomBehavior File="Message" Text="Starting Heinous Sacrifice" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32538" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<While Condition="!IsQuestCompleted(32538)" >
-			<While Condition="!IsObjectiveComplete(1,32538)" >
-				<RunTo X="6047.05" Y="6245.00" Z="22.96" />
-				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218424" WaitForNpcs="False" WaitTime="1000" />
-			</While>
-			<While Condition="!IsObjectiveComplete(3,32538)" >
-				<RunTo X="5981.98" Y="6054.16" Z="58.59" />
-				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218426" WaitForNpcs="False" WaitTime="1000" />
-			</While>
-			<While Condition="!IsObjectiveComplete(2,32538)" >
-				<RunTo X="6348.41" Y="6015.33" Z="29.35" />
-				<CustomBehavior File="InteractWith" QuestId="32538" MobId="218425" WaitForNpcs="False" WaitTime="1000" />
-			</While>
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="32538" QuestObjectiveIndex="1" MobId="217201" MobId2="218424" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" NumOfTimes="100" X="6047.05" Y="6245.00" Z="22.96" />
+		<CustomBehavior File="InteractWith" QuestId="32538" QuestObjectiveIndex="3" MobId="217203" MobId2="218426" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" NumOfTimes="100" X="5981.98" Y="6054.16" Z="58.59" />
+		<CustomBehavior File="InteractWith" QuestId="32538" QuestObjectiveIndex="2" MobId="217202" MobId2="218425" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" NumOfTimes="100" X="6348.41" Y="6015.33" Z="29.35" />
 	</If>
 	
 <!-- Dark Offerings -->
@@ -204,15 +193,13 @@
 			<Hotspot X="6115.352" Y="6006.785" Z="50.47056" />
 		</CustomBehavior>
 	</If>
-	
+
 <!-- Pterrible Ptorment -->
 	<If Condition="HasQuest(32544) &amp;&amp; !IsQuestCompleted(32544)" >
 		<CustomBehavior File="Message" Text="Starting Pterrible Ptorment" LogColor="Green" />
 		<CustomBehavior File="UserSettings" QuestId="32544" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
-		<RunTo X="6213.471" Y="5955.08" Z="40.78753" />
-		<While Condition="!IsQuestCompleted(32544)" >
-			<CustomBehavior File="InteractWith" MobId="69224" CollectionDistance="500" WaitForNpcs="False" MobState="Alive" />
-		</While>
+		<CustomBehavior File="InteractWith" QuestId="32544" MobId="69224" MobState="Alive" CollectionDistance="500" NumOfTimes="1000" 
+			ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" X="6213.471" Y="5955.08" Z="40.78753" />
 	</If>
 	
 <!-- Dangers of Za'Tual -->
@@ -293,9 +280,8 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 	</While>
 	
-<!-- Do we have an ender? -->
-	<If Condition="HasQuest(32576) || HasQuest(32579)" >
-		<CustomBehavior File="LoadProfile" ProfileName="Scripts\[Rep] Thunder Boss [Brodie]" />
+	<If Condition="HasItem(94566)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(94566)" />
 	</If>
 	
 	<While Condition="(GetItemCount(89112) &gt; 10)">
