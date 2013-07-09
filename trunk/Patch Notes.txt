@@ -1,5 +1,22 @@
 Patch Notes
 
+7/8/13
+
+r373
+Isle of Thunder
+-- Heinous Sacrifice - Code Cleanup
+-- Pterrible Ptorment - Code Cleanup
+-- Pterrible Ptorment - Added NonCompeteDistance
+-- Za'Tual Alliance - Removed obsolete ender check
+-- Horde Quest Check for Map Use - Added Conqueror's Terrace Kicker to list (erroneously missed)
+-- Ashes of the Enemy - Code Cleanup
+-- Stone Cold - NonCompeteDistance removed
+-- Subtle Encouragement - Converted from CastSpellOn to InteractWith Casting
+-- The Skumblade Threat - Converted from CastSpellOn to InteractWith Casting
+-- Manipulating the Saurok - Code Cleanup (Partial)
+Quest Behaviors
+-- Core updates from CJ
+
 7/7/13
 
 r372

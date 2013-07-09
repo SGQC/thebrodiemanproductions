@@ -127,38 +127,38 @@
 		<CustomBehavior File="UserSettings" QuestId="32605" UseMount="False" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<While Condition="!IsQuestCompleted(32605)" >
-			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="121733"/>
+			<If Condition="(Me.Class == WoWClass.Rogue)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="121733" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="172"/>
+			<If Condition="(Me.Class == WoWClass.Warlock)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="172" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="355"/>
+			<If Condition="(Me.Class == WoWClass.Warrior)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="355" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.DeathKnight)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="49576"/>
+			<If Condition="(Me.Class == WoWClass.DeathKnight )" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="49576" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="8921"/>
+			<If Condition="(Me.Class == WoWClass.Druid)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="8921" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="3044"/>
+			<If Condition="(Me.Class == WoWClass.Hunter)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="3044" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="2136"/>
+			<If Condition="(Me.Class == WoWClass.Mage)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="2136" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="62124"/>
+			<If Condition="(Me.Class == WoWClass.Paladin)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="62124" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="589"/>
+			<If Condition="(Me.Class == WoWClass.Priest)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="589" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="403"/>
+			<If Condition="(Me.Class == WoWClass.Shaman)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="403" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="115546"/>
+			<If Condition="(Me.Class == WoWClass.Monk)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="115546" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
 			<CustomBehavior File="RunMacro" Macro="/click ExtraActionButton1" />
@@ -172,38 +172,38 @@
 		<CustomBehavior File="UserSettings" QuestId="32204" UseMount="False" LootMobs="True" KillBetweenHotspots="False" PullDistance="10" />
 		<RunTo X="6163.82" Y="5732.19" Z="6.01" />
 		<While Condition="!IsQuestCompleted(32204)">
-			<If Condition="(Me.Class == WoWClass.Rogue)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="121733"/>
+			<If Condition="(Me.Class == WoWClass.Rogue)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="121733" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Warlock)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="172"/>
+			<If Condition="(Me.Class == WoWClass.Warlock)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="172" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Warrior)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="355"/>
+			<If Condition="(Me.Class == WoWClass.Warrior)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="355" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.DeathKnight)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="49576"/>
+			<If Condition="(Me.Class == WoWClass.DeathKnight )" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="49576" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Druid)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="8921"/>
+			<If Condition="(Me.Class == WoWClass.Druid)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="8921" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Hunter)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="3044"/>
+			<If Condition="(Me.Class == WoWClass.Hunter)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="3044" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Mage)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="2136"/>
+			<If Condition="(Me.Class == WoWClass.Mage)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="2136" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Paladin)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="62124"/>
+			<If Condition="(Me.Class == WoWClass.Paladin)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="62124" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Priest)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="589"/>
+			<If Condition="(Me.Class == WoWClass.Priest)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="589" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Shaman)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="403"/>
+			<If Condition="(Me.Class == WoWClass.Shaman)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="403" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
-			<If Condition="(Me.Class == WoWClass.Monk)">
-				<CustomBehavior File="CastSpellOn" MobId="69210" MobId2="69227" SpellId="115546"/>
+			<If Condition="(Me.Class == WoWClass.Monk)" >
+				<CustomBehavior File="InteractWith" MobId="69210" MobId2="69227" MobState="Alive" InteractByCastingSpellId="115546" Range="30" CollectionDistance="500" NonCompeteDistance="0" />
 			</If>
 		</While>
 	</If>
@@ -219,12 +219,7 @@
 				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69310" WaitForNpcs="False" CollectionDistance="300" />
 			</While>
 		</If>
-		<If Condition="!IsObjectiveComplete(2,32254)" >
-			<RunTo X="5804.76" Y="5524.77" Z="40.25" />
-			<While Condition="!IsObjectiveComplete(2,32254)" >
-				<CustomBehavior File="InteractWith" IgnoreCombat="True" MobId="69309" WaitForNpcs="False" />
-			</While>
-		</If>
+		<CustomBehavior File="InteractWith" QuestId="32254" QuestObjectiveIndex="2" MobId="69309" IgnoreCombat="True" X="5804.76" Y="5524.77" Z="40.25" />
 		<If Condition="!IsObjectiveComplete(1,32254)" >
 			<RunTo X="5859.02" Y="5814.50" Z="20.52" />
 			<While Condition="!IsObjectiveComplete(1,32254)" >
