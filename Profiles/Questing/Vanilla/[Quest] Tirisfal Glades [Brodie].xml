@@ -70,9 +70,10 @@
 	<Objective QuestName="Fields of Grief" QuestId="24975" Type="CollectItem" ItemId="2846" CollectCount="10" />
 	<Objective QuestName="Reaping the Reapers" QuestId="24978" Type="KillMob" MobId="1935" KillCount="10" />
 	<While Condition ="HasQuest(24974) &amp;&amp; !IsQuestCompleted(24974)" >
-		<If Condition="!IsObjectiveComplete(1,24974)" >
-			<CustomBehavior File="CombatUseItemOnV2" MobId="1544" MobId2="1543" ItemId="52059" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" UseItemStrategy="UseItemOncePerTarget" UseWhenMobHasHealthPercent="35" X="2531.634" Y="1401.533" Z="2.424452" />
-		</If>
+		<While Condition="!IsObjectiveComplete(1,24974)" >
+			<CustomBehavior File="CombatUseItemOnV2" MobId="1544" MobId2="1543" ItemId="52059" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" UseItemStrategy="UseItemOncePerTarget" 
+				RecallPetAtMobPercentHealth="0" UseWhenMobHasHealthPercent="35" X="2531.634" Y="1401.533" Z="2.424452" />
+		</While>
 		<While Condition="((Me.Minions != null) &amp;&amp; (Me.Minions.Count &gt; 0)) &amp;&amp; !IsObjectiveComplete(2,24974)" >
 			<RunTo X="2224.128" Y="1010.833" Z="44.42552" />
 		</While>

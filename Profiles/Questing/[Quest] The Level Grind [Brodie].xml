@@ -1,5 +1,6 @@
-	<HBProfile>
-<Name>The Complete WoW Leveling Experience ($Rev$)</Name>
+<HBProfile>
+	
+	<Name>The Complete WoW Leveling Experience ($Rev$)</Name>
 	
 <QuestOrder>
 
@@ -16,17 +17,12 @@
 	</If>
 	
 	<If Condition="Me.IsHorde" >
-		<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; IsQuestCompleted(31014)" >
-			<If Condition="Me.LevelFraction &gt;= 10" >
-				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
-			</If>
-		</If>
 		<If Condition="Me.Race == WoWRace.Goblin || Me.Race == WoWRace.Tauren" >
 			<If Condition="(Me.Race == WoWRace.Tauren &amp;&amp; Me.LevelFraction &gt;= 10 &amp;&amp; IsQuestCompleted(26397)) ||
 							(Me.Race == WoWRace.Goblin &amp;&amp; Me.LevelFraction &gt;= 10 &amp;&amp; IsQuestCompleted(25267))" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Azshara [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(24215)" >
+			<If Condition="Me.Race == WoWRace.Tauren &amp;&amp; Me.LevelFraction &gt;= 4 &amp;&amp; IsQuestCompleted(24215)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Mulgore [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Goblin" >
@@ -36,14 +32,22 @@
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Tauren Start [Brodie]" />
 			</If>
 		</If>
-		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll" >
+		<If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Troll || Me.Race == WoWRace.Pandaren" >
+			<If Condition="Me.LevelFraction &gt;= 20" >
+				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Ashenvale - H [Brodie]" />
+			</If>
+			<If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; IsQuestCompleted(31014)" >
+				<If Condition="Me.LevelFraction &gt;= 10" >
+					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
+				</If>
+			</If>
 			<If Condition="Me.LevelFraction &gt;= 10" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Northern Barrens [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Orc &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25133)" >
+			<If Condition="Me.Race == WoWRace.Orc &amp;&amp; Me.LevelFraction &gt;= 4 &amp;&amp; IsQuestCompleted(25133)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Troll &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(25073)" >
+			<If Condition="Me.Race == WoWRace.Troll &amp;&amp; Me.LevelFraction &gt;= 4 &amp;&amp; IsQuestCompleted(25073)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Durotar [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Orc" >
@@ -58,7 +62,7 @@
 				<If Condition="Me.LevelFraction &gt;= 10" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Silverpine Forest [Brodie]" />
 				</If>
-				<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; (!HasQuest(24972) &amp;&amp; IsQuestCompleted(24972))" >
+				<If Condition="Me.LevelFraction &gt;= 4 &amp;&amp; (!HasQuest(24972) &amp;&amp; IsQuestCompleted(24972))" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Tirisfal Glades [Brodie]" />
 				</If>
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Undead Start [Brodie]" />
@@ -70,7 +74,7 @@
 				<If Condition="Me.LevelFraction &gt;= 10" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Ghostlands [Brodie]" />
 				</If>
-				<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; (!HasQuest(8350) &amp;&amp; IsQuestCompleted(8350))" >
+				<If Condition="Me.LevelFraction &gt;= 4 &amp;&amp; (!HasQuest(8350) &amp;&amp; IsQuestCompleted(8350))" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Eversong Woods [Brodie]" />
 				</If>
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Blood Elf Start [Brodie]" />
@@ -92,10 +96,10 @@
 			<If Condition="Me.LevelFraction &gt;= 8" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Dun Morogh 2 [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Dwarf &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(24493)" >
+			<If Condition="Me.Race == WoWRace.Dwarf &amp;&amp; Me.LevelFraction &gt;= 4 &amp;&amp; IsQuestCompleted(24493)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Dun Morogh [Brodie]" />
 			</If>
-			<If Condition="Me.Race == WoWRace.Gnome &amp;&amp; Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(26373)" >
+			<If Condition="Me.Race == WoWRace.Gnome &amp;&amp; Me.LevelFraction &gt;= 4 &amp;&amp; IsQuestCompleted(26373)" >
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Dun Morogh [Brodie]" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Dwarf" >
@@ -113,7 +117,7 @@
 				<If Condition="Me.LevelFraction &gt;= 10" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Darkshore [Brodie]" />
 				</If>
-				<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; IsQuestCompleted(28731)" >
+				<If Condition="Me.LevelFraction &gt;= 4 &amp;&amp; IsQuestCompleted(28731)" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Teldrassil [Brodie]" />
 				</If>
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Night Elf Start [Brodie]" />
@@ -128,7 +132,7 @@
 				<If Condition="Me.LevelFraction &gt;= 10" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Bloodmyst Isle [Brodie]" />
 				</If>
-				<If Condition="Me.LevelFraction &gt;= 5 &amp;&amp; (!HasQuest(9313) &amp;&amp; IsQuestCompleted(9313)) &amp;&amp; (!HasQuest(9314) &amp;&amp; IsQuestCompleted(9314))" >
+				<If Condition="Me.LevelFraction &gt;= 4 &amp;&amp; (!HasQuest(9313) &amp;&amp; IsQuestCompleted(9313)) &amp;&amp; (!HasQuest(9314) &amp;&amp; IsQuestCompleted(9314))" >
 					<CustomBehavior File="LoadProfile" ProfileName="Vanilla\[Quest] Azuremyst Isle [Brodie]" />
 				</If>
 				<CustomBehavior File="LoadProfile" ProfileName="Vanilla\Starter\[Quest] Draenei Start [Brodie]" />

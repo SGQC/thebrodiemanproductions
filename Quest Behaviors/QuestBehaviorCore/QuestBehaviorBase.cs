@@ -24,11 +24,6 @@
 //          The argument specifies the index of the sub-goal of a quest.
 //
 // Tunables (ideally, the profile would _never_ provide these arguments):
-//      CombatMaxEngagementDistance [optional; Default: 23.0]
-//          This is a work around for some buggy Combat Routines.  If a targetted mob is
-//          "too far away", some Combat Routines refuse to engage it for killing.  This
-//          value moves the toon within an appropriate distance to the requested target
-//          so the Combat Routine will perform as expected.
 //      IgnoreMobsInBlackspots [optional; Default: true]
 //          When true, any mobs within (or too near) a blackspot will be ignored
 //          in the list of viable targets that are considered for item use.
@@ -44,11 +39,67 @@
 //          be going for the same target, and we don't want to draw attention.
 //          Shared resources, such as Vendors, Innkeepers, Trainers, etc. are never considered
 //          to be "in competition".
+//      TerminateWhen [optional; Default: "false"]
+//          Defines a string that will be evaluated as an alternative termination condition
+//          for the behavior.  The string represents a boolean expression.  When the expression
+//          evaluates to 'true', the behavior will be terminated.
+//          NB: the behavior may also terminate due to other reasons.  For instance, a required
+//          item is not in inventory, the quest is already complete, etc.
+//
+// BEHAVIOR EXTENSION ELEMENTS (goes between <CustomBehavior ...> and </CustomBehavior> tags)
+// See the "Examples" section for typical usage.
+//      AvoidMobs [optional; Default: none]
+//          Specifies a set of 'avoid mobs' that will be temporarily installed while the behavior
+//          is running.  When the behavior completes, or the Honorbuddy is stopped, these temporary
+//          'avoid mobs' will be removed.
+//          This element expects a list of <Mob> sub-elements.
+//
+//          Mob
+//              Specifies a single blackspot with the following attributes:
+//                  Name [optional; ""]
+//                      The name of mob to be avoided.
+//                  Entry [required]
+//                      The ID of the mob to be avoided.
+//
+//      Blackspots [optional; Default: none]
+//          Specifies a set of blackspots that will be temporarily installed while the behavior
+//          is running.  When the behavior completes, or the Honorbuddy is stopped, these temporary
+//          blackspots will be removed.
+//          This element expects a list of <Blackspot> sub-elements.
+//
+//          Blackspot
+//              Specifies a single blackspot with the following attributes:
+//                  Name [optional; Default: X/Y/Z location of the blackspot]
+//                      The name of the waypoint is presented to the user as it is visited.
+//                      This can be useful for debugging purposes, and for making minor adjustments
+//                      (you know which waypoint to be fiddling with).
+//                  X/Y/Z [REQUIRED; Default: none]
+//                      The world coordinates of the blackspot.
+//                  Radius [optional; Default: 10.0]
+//                      The radius of the blackspot.
+//                  Height [optional; Default 1.0]
+//                      The height of the blackspot.
 //
 // THINGS TO KNOW:
 //
-// EXAMPLE:
-//     <CustomBehavior File="TEMPLATE" />
+// EXAMPLES:
+// Usage of an arbitrary terminating condition:
+//      <CustomBehavior File="InteractWith" MobId="12345" TerminateWhen="GetItemCount(39328) &gt; 12" >
+//
+// Usage of AvoidMobs and Blackspots:
+//      <CustomBehavior File="InteractWith" MobId="12345" >
+//          <AvoidMobs>
+//              <Mob Name="Stable Master Kitrik" Entry="28683" />
+//              <Mob Name="Initiate's Training Dummy" Entry="32541" />
+//              <Mob Name="Scarlet Lord Jesseriah McCree" Entry="28964" />
+//          </AvoidMobs>
+//          <Blackspots>
+//              <Blackspot X="2053.501" Y="-5783.61" Z="101.3919" Radius="15.69214" />
+//              <Blackspot X="1639.395" Y="-5847.581" Z="116.1873" Radius="18.69113" />
+//              <Blackspot X="1758.225" Y="-5873.512" Z="116.1236" Radius="30.69964" />
+//              <Blackspot X="1777.866" Y="-5923.742" Z="116.1065" Radius="5.556122" />
+//          </Blackspots>
+//      </CustomBehavior>
 #endregion
 
 #region Usings
@@ -57,10 +108,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
+using Bots.Grind;
+
+using Honorbuddy.QuestBehaviorCore.XmlElements;
+
 using Styx;
 using Styx.Common;
 using Styx.CommonBot;
 using Styx.CommonBot.Profiles;
+using Styx.CommonBot.Profiles.Quest.Order;
+using Styx.Pathing;
 using Styx.TreeSharp;
 using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
@@ -92,11 +149,13 @@ namespace Honorbuddy.QuestBehaviorCore
                 QuestObjectiveIndex = GetAttributeAsNullable<int>("QuestObjectiveIndex", false, new ConstrainTo.Domain<int>(1, 5), null) ?? 0;
 
                 // Tunables...
-                CombatMaxEngagementDistance = GetAttributeAsNullable<double>("CombatMaxEngagementDistance", false, new ConstrainTo.Domain<double>(1.0, 40.0), null) ?? 23.0;
                 IgnoreMobsInBlackspots = GetAttributeAsNullable<bool>("IgnoreMobsInBlackspots", false, null, null) ?? true;
                 MaxDismountHeight = GetAttributeAsNullable<double>("MaxDismountHeight", false, new ConstrainTo.Domain<double>(1.0, 75.0), null) ?? 8.0;
                 MovementBy = GetAttributeAsNullable<MovementByType>("MovementBy", false, null, null) ?? MovementByType.FlightorPreferred;
                 NonCompeteDistance = GetAttributeAsNullable<double>("NonCompeteDistance", false, new ConstrainTo.Domain<double>(0.0, 50.0), null) ?? 20.0;
+
+                var terminateWhenExpression = GetAttributeAs<string>("TerminateWhen", false, ConstrainAs.StringNonEmpty, null) ?? "false";
+                TerminateWhen = ConditionHelper.ParseConditionString(terminateWhenExpression);
             }
 
             catch (Exception except)
@@ -118,23 +177,24 @@ namespace Honorbuddy.QuestBehaviorCore
 
 
         // Variables for Attributes provided by caller
-        public double CombatMaxEngagementDistance { get; private set; }
         public bool IgnoreMobsInBlackspots { get; private set; }
         public double MaxDismountHeight { get; private set; }
         public MovementByType MovementBy { get; set; }
+        public double NonCompeteDistance { get; private set; }
         public int QuestId { get; private set; }
         public int QuestObjectiveIndex { get; private set; }
         public QuestCompleteRequirement QuestRequirementComplete { get; private set; }
         public QuestInLogRequirement QuestRequirementInLog { get; private set; }
-        public double NonCompeteDistance { get; private set; }
+        public Func<bool> TerminateWhen { get; private set; }
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return "$Id: QuestBehaviorBase.cs 574 2013-06-28 08:54:59Z chinajade $"; } }
-        public override string SubversionRevision { get { return "$Rev: 574 $"; } }
+        public override string SubversionId { get { return "$Id: QuestBehaviorBase.cs 609 2013-07-10 10:51:27Z chinajade $"; } }
+        public override string SubversionRevision { get { return "$Rev: 609 $"; } }
         #endregion
 
 
         #region Private and Convenience variables
+        protected BehaviorFlags? _behaviorFlagsOriginal;
         private Composite _behaviorTreeHook_CombatMain;
         private Composite _behaviorTreeHook_CombatOnly;
         private Composite _behaviorTreeHook_DeathMain;
@@ -144,6 +204,8 @@ namespace Honorbuddy.QuestBehaviorCore
         private bool _isBehaviorDone;
         private bool _isDoneChecksQuestProgress;
         protected bool _isDisposed { get; private set; }
+        private AvoidMobsType _temporaryAvoidMobs { get; set; }
+        private BlackspotsType _temporaryBlackspots { get; set; }
         #endregion
 
 
@@ -159,6 +221,8 @@ namespace Honorbuddy.QuestBehaviorCore
         {
             if (!_isDisposed)
             {
+                BotEvents.OnBotStop -= BotEvents_OnBotStop;
+
                 // NOTE: we should call any Dispose() method for any managed or unmanaged
                 // resource, if that resource provides a Dispose() method.
 
@@ -169,6 +233,14 @@ namespace Honorbuddy.QuestBehaviorCore
                 }
 
                 // Clean up unmanaged resources (if any) here...
+
+                if (Targeting.Instance != null)
+                {
+                    Targeting.Instance.IncludeTargetsFilter -= TargetFilter_IncludeTargets;
+                    Targeting.Instance.RemoveTargetsFilter -= TargetFilter_RemoveTargets;
+                    Targeting.Instance.WeighTargetsFilter -= TargetFilter_WeighTargets;
+                }
+
 
                 // NB: we don't unhook _behaviorTreeHook_Main
                 // This was installed when HB created the behavior, and its up to HB to unhook it
@@ -197,13 +269,31 @@ namespace Honorbuddy.QuestBehaviorCore
                     _behaviorTreeHook_DeathMain = null;
                 }
 
-                BotEvents.OnBotStop -= BotEvents_OnBotStop;
+                // Remove temporary 'avoid mobs'...
+                if (_temporaryAvoidMobs != null)
+                {
+                    AvoidanceManager.RemoveAll(_temporaryAvoidMobs.GetAvoidMobIds());
+                    _temporaryAvoidMobs = null;
+                }
+
+                // Remove temporary blackspots...
+                if (_temporaryBlackspots != null)
+                {
+                    BlackspotManager.RemoveBlackspots(_temporaryBlackspots.GetBlackspots());
+                    _temporaryBlackspots = null;
+                }
 
                 // Restore configuration...
                 if (_mementoSettings != null)
                 {
                     _mementoSettings.Dispose();
                     _mementoSettings = null;
+                }
+
+                if (_behaviorFlagsOriginal.HasValue)
+                {
+                    LevelBot.BehaviorFlags = _behaviorFlagsOriginal.Value;
+                    _behaviorFlagsOriginal = null;
                 }
 
                 TreeRoot.GoalText = string.Empty;
@@ -245,6 +335,7 @@ namespace Honorbuddy.QuestBehaviorCore
             get
             { 
                 return _isBehaviorDone     // normal completion
+                        || TerminateWhen()
                         || Me.IsQuestObjectiveComplete(QuestId, QuestObjectiveIndex)
                         || (_isDoneChecksQuestProgress
                             && !UtilIsProgressRequirementsMet(QuestId, QuestRequirementInLog, QuestRequirementComplete));
@@ -305,9 +396,33 @@ namespace Honorbuddy.QuestBehaviorCore
                 //     http://www.thebuddyforum.com/mediawiki/index.php?title=Honorbuddy_Programming_Cookbook:_Saving_and_Restoring_User_Configuration
                 _mementoSettings = new ConfigMemento();
 
+                // Preserved (and restore on dispose) the BehaviorFlags , in case the child needs to change them...
+                _behaviorFlagsOriginal = LevelBot.BehaviorFlags;
+
                 BotEvents.OnBotStop += BotEvents_OnBotStop;
 
+                if (Targeting.Instance != null)
+                {
+                    Targeting.Instance.IncludeTargetsFilter += TargetFilter_IncludeTargets;
+                    Targeting.Instance.RemoveTargetsFilter += TargetFilter_RemoveTargets;
+                    Targeting.Instance.WeighTargetsFilter += TargetFilter_WeighTargets;
+                }
+
                 Query.BlacklistsReset();
+
+                // Add temporary avoid mobs, if any were specified...
+                // NB: Ideally, we'd save and restore the original 'avoid mob' list.  However,
+                // AvoidanceManager does not currently give us a way to "see" hat is currently
+                // on the list.
+                _temporaryAvoidMobs = AvoidMobsType.GetOrCreate(Element, "AvoidMobs");
+                AvoidanceManager.AddAll(_temporaryAvoidMobs.GetAvoidMobIds());
+
+                // Add temporary blackspots, if any were specified...
+                // NB: Ideally, we'd save and restore the original blackspot list.  However,
+                // BlackspotManager does not currently give us a way to "see" what is currently
+                // on the list.
+                _temporaryBlackspots = BlackspotsType.GetOrCreate(Element, "Blackspots");
+                BlackspotManager.AddBlackspots(_temporaryBlackspots.GetBlackspots());
 
                 UpdateGoalText(extraGoalTextDescription);
 
@@ -371,6 +486,123 @@ namespace Honorbuddy.QuestBehaviorCore
         //}
 
 
+
+        #region TargetFilters
+        /// <summary>
+        /// <para>HBcore runs the TargetFilter_RemoveTargets before the TargetFilter_IncludeTargets.</para>
+        /// </summary>
+        /// <param name="units"></param>
+        protected virtual void TargetFilter_IncludeTargets(List<WoWObject> incomingWowObjects, HashSet<WoWObject> outgoingWowObjects)
+        {
+            // We expect the child to override this behavior
+
+            for (int i = incomingWowObjects.Count - 1; i >= 0; --i)
+            {
+                var wowObject = incomingWowObjects[i];
+
+                try
+                {
+                    // Skip invalid objects...
+                    if (!Query.IsViable(wowObject))
+                        { continue; }
+
+                    // Custom logic here...
+
+                    outgoingWowObjects.Add(wowObject);
+                }
+                catch (System.AccessViolationException)
+                {
+                    // empty
+                }
+                catch (Styx.InvalidObjectPointerException)
+                {
+                    // empty
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// <para>HBcore runs the TargetFilter_RemoveTargets before the TargetFilter_IncludeTargets.</para>
+        /// </summary>
+        /// <param name="wowObjects"></param>
+        protected virtual void TargetFilter_RemoveTargets(List<WoWObject> wowObjects)
+        {
+            // We expect the child to override this behavior
+
+            for (int i = wowObjects.Count - 1; i >= 0; --i)
+            {
+                try
+                {
+                    var wowObject = wowObjects[i];
+
+                    // Remove invalid units...
+                    if (!Query.IsViable(wowObject))
+                    {
+                        wowObjects.RemoveAt(i);
+                        continue;
+                    }
+
+                    // Custom logic here...
+                }
+                catch (Styx.InvalidObjectPointerException)
+                {
+                    wowObjects.RemoveAt(i);
+                    continue;
+                }
+                catch (System.AccessViolationException)
+                {
+                    wowObjects.RemoveAt(i);
+                    continue;
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// <para>When scoring targets, a higher value of TargetPriority.Score makes the target more valuable.</para>
+        /// </summary>
+        /// <param name="units"></param>
+        protected virtual void TargetFilter_WeighTargets(List<Targeting.TargetPriority> targetPriorities)
+        {
+            // empty--left for child to override
+
+            const float InvalidTargetScore = -1000000f;
+
+            for (int i = targetPriorities.Count - 1; i >= 0; --i)
+            {
+                var priority = targetPriorities[i];
+
+                try
+                {
+                    // Remove invalid units...
+                    var wowUnit = priority.Object as WoWUnit;
+                    if (!Query.IsViable(wowUnit))
+                    {
+                        priority.Score = InvalidTargetScore;
+                        targetPriorities.RemoveAt(i);
+                        continue;
+                    }
+
+                    // Custom weighting logic here...
+                }
+                catch (Styx.InvalidObjectPointerException)
+                {
+                    priority.Score = InvalidTargetScore;
+                    targetPriorities.RemoveAt(i);
+                    continue;
+                }
+                catch (System.AccessViolationException)
+                {
+                    priority.Score = InvalidTargetScore;
+                    targetPriorities.RemoveAt(i);
+                    continue;
+                }
+            }
+        }
+        #endregion
+
+
         #region Main Behaviors
         protected virtual Composite CreateBehavior_CombatMain()
         {
@@ -411,7 +643,6 @@ namespace Honorbuddy.QuestBehaviorCore
                 );
         }
         #endregion
-
 
 
         #region Helpers

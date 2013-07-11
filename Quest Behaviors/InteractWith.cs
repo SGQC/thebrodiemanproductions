@@ -212,13 +212,13 @@
 //              multiple bos are running the same quest.
 //          Each Waypoint is provided by a <Hotspot ... /> element with the following
 //          attributes:
-//              Name [optional; Default: ""]
+//              Name [optional; Default: X/Y/Z location of the waypoint]
 //                  The name of the waypoint is presented to the user as it is visited.
 //                  This can be useful for debugging purposes, and for making minor adjustments
 //                  (you know which waypoint to be fiddling with).
 //              X/Y/Z [REQUIRED; Default: none]
 //                  The world coordinates of the waypoint.
-//              Radius [optional; Default: 7.0]
+//              Radius [optional; Default: 10.0]
 //                  Once the toon gets within Radius of the waypoint, the next waypoint
 //                  will be sought.
 //
@@ -450,7 +450,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
                 // Deprecated attributes...
                 InteractByBuyingItemInSlotNum = GetAttributeAsNullable<int>("InteractByBuyingItemInSlotNum", false, new ConstrainTo.Domain<int>(-1, 100), new [] { "BuySlot" }) ?? -1;
-                GetAttributeAsNullable<MobType>("ObjectType", false, null, new[] { "MobType" }); // Deprecated--no longer used
+                GetAttributeAsNullable<Deprecated_MobType>("ObjectType", false, null, new[] { "MobType" }); // Deprecated--no longer used
                 var navigationMode = GetAttributeAsNullable<NavigationModeType>("Nav", false, null, new[] { "Navigation" });
                 if (navigationMode != null)
                 {
@@ -585,8 +585,8 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
         private WaitTimer _timerToReachDestination = null;
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return ("$Id: InteractWith.cs 589 2013-07-06 02:39:23Z chinajade $"); } }
-        public override string SubversionRevision { get { return ("$Revision: 589 $"); } }
+        public override string SubversionId { get { return ("$Id: InteractWith.cs 603 2013-07-09 17:47:04Z chinajade $"); } }
+        public override string SubversionRevision { get { return ("$Revision: 603 $"); } }
         #endregion
 
 
@@ -896,7 +896,14 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
                                 // Interact by item use...
                                 new DecoratorContinue(context => InteractByUsingItemId > 0,
-                                    new UtilityBehaviorSeq.UseItem(context => InteractByUsingItemId, context => SelectedTarget)),
+                                    new UtilityBehaviorSeq.UseItem(
+                                        context => InteractByUsingItemId,
+                                        context => SelectedTarget,
+                                        context =>
+                                        {
+                                            BehaviorDone(string.Format("Terminating behavior due to missing {0}",
+                                                Utility.GetItemNameFromId(InteractByUsingItemId)));
+                                        })),
 
                                 // Interact by right-click...
                                 new DecoratorContinue(context => !((InteractByUsingItemId > 0) || (InteractByCastingSpellId > 0)),
@@ -1372,7 +1379,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
 
             var entities =
                 from wowObject in Query.FindMobsAndFactions(MobIds, MobIdIncludesSelf, FactionIds)
-                let objectCollectionDistance = wowObject.CollectionDistance()
+                let objectCollectionDistance = wowObject.Location.CollectionDistance()
                 where
                     Query.IsViable(wowObject)
                     && (objectCollectionDistance <= CollectionDistance)
@@ -1522,7 +1529,7 @@ namespace Honorbuddy.Quest_Behaviors.InteractWith
             TargetExclusionAnalysis.CheckAuras(exclusionReasons, wowObject, AuraIdsOnMob, AuraIdsMissingFromMob);
             TargetExclusionAnalysis.CheckMobState(exclusionReasons, wowObject, MobState, MobHpPercentLeft);
 
-            var objectCollectionDistance = wowObject.CollectionDistance();
+            var objectCollectionDistance = wowObject.Location.CollectionDistance();
             if (objectCollectionDistance > CollectionDistance)
                 { exclusionReasons.Add(string.Format("ExceedsCollectionDistance({0:F1}, saw {1:F1})", CollectionDistance, objectCollectionDistance)); }
 
