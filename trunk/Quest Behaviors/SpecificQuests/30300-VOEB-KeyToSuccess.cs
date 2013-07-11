@@ -42,7 +42,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.KeyToSuccess
 		public WoWPoint Location4 = new WoWPoint(1405.447, 1691.386, 358.1148);
 		public QuestCompleteRequirement questCompleteRequirement = QuestCompleteRequirement.NotComplete;
 		public QuestInLogRequirement questInLogRequirement = QuestInLogRequirement.InLog;
-		static public bool InVehicle { get { return Lua.GetReturnVal<int>("if IsPossessBarVisible() or UnitInVehicle('player') or not(GetBonusBarOffset()==0) then return 1 else return 0 end", 0) == 1; } }
+		
 		public override bool IsDone
 		{
 			get
@@ -50,6 +50,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.KeyToSuccess
 				return _isBehaviorDone;
 			}
 		}
+		
 		private LocalPlayer Me
 		{
 			get { return (StyxWoW.Me); }
@@ -89,12 +90,12 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.KeyToSuccess
 			}
 		}
 
-	
 		public bool IsQuestComplete()
 		{
 			var quest = StyxWoW.Me.QuestLog.GetQuestById((uint)QuestId);
 			return quest == null || quest.IsCompleted;
 		}
+
 		private bool IsObjectiveComplete(int objectiveId, uint questId)
 		{
 			if (Me.QuestLog.GetQuestById(questId) == null)
@@ -127,21 +128,19 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.KeyToSuccess
 			{
 				return
 					new Decorator(ret => !IsObjectiveComplete(2, (uint)QuestId), new PrioritySelector(
-						new Decorator(ret => CaptiveA.Count > 0, new Action(c =>
-			{
-				TreeRoot.StatusText = "Got a Captive, moving to them!";
-				CaptiveA[0].Target();
-				Flightor.MoveTo(CaptiveA[0].Location);
-
-				if(CaptiveA[0].Location.Distance(Me.Location) < 10)
-				{
-					TreeRoot.StatusText = "Finished!";
-					_isBehaviorDone = true;
-					return RunStatus.Success;
-				}
-
-				return RunStatus.Success;
-			})),
+						new Decorator(ret => CaptiveA.Count > 0, 
+							new Sequence(
+								new Action(c =>	TreeRoot.StatusText = "Got a Captive, moving to them!"),
+								new Action(c => CaptiveA[0].Target()),
+								new Action(c => Flightor.MoveTo(CaptiveA[0].Location)),
+								new Decorator(ret => CaptiveA[0].Location.Distance(Me.Location) < 10,
+									new Action(c =>
+									{
+										TreeRoot.StatusText = "Finished!";
+										_isBehaviorDone = true;
+										return RunStatus.Success;
+									})),
+								new ActionAlwaysSucceed())),
 						new Decorator(ret => CaptiveB.Count > 0, new Action(c =>
 			{
 				TreeRoot.StatusText = "Got a Captive, moving to them!";
