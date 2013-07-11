@@ -461,8 +461,10 @@
 	<CustomBehavior File="Message" Text="Compiling Shipwreck Quests" LogColor="CornflowerBlue" />
 
 	<If Condition="!IsQuestCompleted(14239)" >
+		<DisableBehavior Name="Combat, Loot" />
 		<CustomBehavior File="InteractWith" MobId="36608" />
-		<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />	
+		<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
+		<EnableBehavior Name="Combat, Loot" />
 	</If>
 	
 	<If Condition="Me.Class == WoWClass.Mage || Me.Class == WoWClass.Priest || Me.Class == WoWClass.Warlock" >

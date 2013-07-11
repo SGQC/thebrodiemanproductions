@@ -29,6 +29,9 @@
 		<!-- Ratchet -->
 		<Vendor Name="Zizzek" Entry="3572" Type="Food" X="-1031.987" Y="-3659.054" Z="22.77675" />
 		<Vendor Name="Ironzar" Entry="3491" Type="Repair" X="-1009.115" Y="-3652.264" Z="20.06575" />
+		<!-- Nozzlepot Outpost -->
+		<Vendor Name="Frazzik" Entry="43957" Type="Repair" X="1167.52" Y="-3401.44" Z="91.66694" />
+		<Vendor Name="Niriap" Entry="43953" Type="Food" X="1151.6" Y="-3418.52" Z="91.66868" />
 		
 	</Vendors>
 	
@@ -582,16 +585,25 @@
 	<TurnIn QuestName="Altered Beings" QuestId="880" TurnInName="Tonga Runetotem" TurnInId="3448" />
 	<TurnIn QuestName="Into the Raptors Den" QuestId="905" TurnInName="Sergra Darkthorn" TurnInId="3338" />
 	<PickUp QuestName="The Purloined Payroll" QuestId="13991" GiverName="Sergra Darkthorn" GiverId="3338" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 
 	<CustomBehavior File="Message" Text="Compiling Ratchet Quests" LogColor="Cornflowerblue" />
 
 	<PickUp QuestName="The Purloined Payroll" QuestId="13991" GiverName="Sergra Darkthorn" GiverId="3338" />
-	<PickUp QuestName="Deathgates Reinforcements" QuestId="14073" GiverName="Thork" GiverId="3429" />
 
 	<TurnIn QuestName="The Purloined Payroll" QuestId="13991" TurnInName="Gazrog" TurnInId="3464" />
 	<PickUp QuestName="Investigate the Wreckage" QuestId="14066" GiverName="Gazrog" GiverId="3464" />
 
 	<TurnIn QuestName="Whos Shroomin Who" QuestId="13999" TurnInName="Sashya" TurnInId="34651" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 
 	<PickUp QuestName="A Captains Vengeance" QuestId="891" GiverName="Captain Thalo'thas Brightsun" GiverId="3339" />
 	<PickUp QuestName="Its Gotta Be The Horn" QuestId="865" GiverName="Mebok Mizzyrix" GiverId="3446" />
@@ -611,6 +623,11 @@
 	
 	<If Condition="HasQuest(14066) &amp;&amp; IsQuestCompleted(14066)" >
 		<CustomBehavior File="CompleteLogQuest" QuestId="14066" />
+	</If>
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
 	</If>
 
 	<PickUp QuestName="Waptor Twapping" QuestId="14068" GiverName="Kalama" GiverId="34828" />
@@ -632,6 +649,11 @@
 		<CustomBehavior File="CompleteLogQuest" QuestId="869" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 
 	<Objective QuestName="The Stolen Silver" QuestId="14067" Type="CollectItem" ItemId="5061" CollectCount="1" />
 	<Objective QuestName="The Stolen Silver" QuestId="14067" Type="KillMob" MobId="44164" KillCount="8" />
@@ -646,6 +668,12 @@
 	<TurnIn QuestName="The Stolen Silver" QuestId="14067" TurnInName="Gazrog" TurnInId="3464" />
 
 	<TurnIn QuestName="Find Baron Longshore" QuestId="14045" TurnInName="Baron Longshore" TurnInId="3467" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<PickUp QuestName="The Barons Demands" QuestId="14046" GiverName="Baron Longshore" GiverId="3467" />
 	<CustomBehavior File="InteractWith" QuestId="14046" MobId="3467" InteractByGossipOptions="2" X="-1454.44" Y="-3819.38" Z="21.46" />
 
@@ -661,9 +689,19 @@
 	<Objective QuestName="Glomp is Sitting On It" QuestId="14056" Type="CollectItem" ItemId="46834" CollectCount="1" />
 	<TurnIn QuestName="Glomp is Sitting On It" QuestId="14056" TurnInName="Tony Two-Tusk" TurnInId="34749" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<PickUp QuestName="Guns. We Need Guns." QuestId="14057" GiverName="Tony Two-Tusk" GiverId="34749" />
 	<Objective QuestName="Guns. We Need Guns." QuestId="14057" Type="CollectItem" ItemId="46836" CollectCount="6" />
 	<TurnIn QuestName="Guns. We Need Guns." QuestId="14057" TurnInName="Tony Two-Tusk" TurnInId="34749" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 	<PickUp QuestName="Mutiny, Mon!" QuestId="14063" GiverName="Tony Two-Tusk" GiverId="34749" />
 	<If Condition="HasQuest(14063) &amp;&amp; !IsQuestCompleted(14063)" >
@@ -698,9 +736,19 @@
 	<TurnIn QuestName="Ammo Kerblammo" QuestId="14042" TurnInName="Gazlowe" TurnInId="3391" />
 	<TurnIn QuestName="WANTED: Cap'n Garvey" QuestId="895" TurnInName="Gazlowe" TurnInId="3391" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<PickUp QuestName="Gazlowes Fortune" QuestId="14050" GiverName="Gazlowe" GiverId="3391" />
 	<CustomBehavior File="InteractWith" QuestId="14050" MobId="195206" NumOfTimes="100" X="-1159.14" Y="-3611.36" Z="94.93" />
 	<TurnIn QuestName="Gazlowes Fortune" QuestId="14050" TurnInName="Gazlowe" TurnInId="3391" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
 	
 	<PickUp QuestName="Raging River Ride" QuestId="26769" GiverName="Gazlowe" GiverId="3391" />
 	<If Condition="HasQuest(26769) &amp;&amp; !IsQuestCompleted(26769)" >
@@ -709,7 +757,137 @@
 	</If>
 	<TurnIn QuestName="Raging River Ride" QuestId="26769" TurnInName="Nozzlepot" TurnInId="34698" />
 	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
 	<CustomBehavior File="Message" Text="Compiling Nozzlepot's Outpost Quests" LogColor="CornflowerBlue" />
+	
+	<PickUp QuestName="Sludge Investigation" QuestId="29087" GiverName="Nozzlepot" GiverId="34698" />
+	<PickUp QuestName="Hyena Extermination" QuestId="29088" GiverName="Nozzlepot" GiverId="34698" />
+	<PickUp QuestName="Competition Schmompetition" QuestId="29086" GiverName="Sputtervalve" GiverId="3442" />
+	<PickUp QuestName="Samophlange" QuestId="29021" GiverName="Sputtervalve" GiverId="3442" />
+	
+<!-- Sludge Investigation/Competition Schmompetition/Ignition -->
+	<CustomBehavior File="InteractWith" QuestId="29087" MobId="52171" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="250" NumOfTimes="100" >
+		<HuntingGrounds>
+			<Hotspot X="1059.358" Y="-3193.321" Z="81.67689" />
+			<Hotspot X="1106.152" Y="-3182.764" Z="85.42334" />
+			<Hotspot X="1124.348" Y="-3127.88" Z="85.4218" />
+			<Hotspot X="1111.634" Y="-3088.591" Z="85.8889" />
+			<Hotspot X="1062.866" Y="-3017.365" Z="85.27052" />
+			<Hotspot X="1013.493" Y="-3035.488" Z="85.78673" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<If Condition="HasQuest(29087) &amp;&amp; IsQuestCompleted(29087)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="29087" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+	</If>
+	<CustomBehavior File="InteractWith" QuestId="29089" MobId="208343" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" NumOfTimes="100" WaitTime="2000" X="1066.353" Y="-3139.854" Z="67.15554" />
+	<PickUp QuestName="Ignition" QuestId="858" GiverName="Wizzlecrank's Shredder" GiverId="3439" />
+	<Objective QuestName="Ignition" QuestId="858" Type="CollectItem" ItemId="5050" CollectCount="1" />
+	<Objective QuestName="Competition Schmompetition" QuestId="29086" Type="CollectItem" ItemId="68820" CollectCount="6" />
+	<TurnIn QuestName="Ignition" QuestId="858" TurnInName="Wizzlecrank's Shredder" TurnInId="3439" />
+	
+	<PickUp QuestName="The Escape" QuestId="863" GiverName="Wizzlecrank's Shredder" GiverId="3439" />
+	<CustomBehavior File="EscortGroup" QuestId="863" EscortNpcId="3439" />
+	
+	<Objective QuestName="Hyena Extermination" QuestId="29088" Type="KillMob" MobId="4127" KillCount="5" />
+	<TurnIn QuestName="Samophlange" QuestId="29021" TurnInName="Control Console" TurnInId="4141" />
+	<PickUp QuestName="Samophlange" QuestId="29022" GiverName="Control Console" GiverId="4141" />
+	<CustomBehavior File="InteractWith" QuestId="29022" QuestObjectiveIndex="2" MobId="61936" NumOfTimes="100" X="844.0188" Y="-2688.93" Z="91.66666" />
+	<CustomBehavior File="InteractWith" QuestId="29022" QuestObjectiveIndex="3" MobId="61935" NumOfTimes="100" X="844.0188" Y="-2688.93" Z="91.66666" />
+	<CustomBehavior File="InteractWith" QuestId="29022" QuestObjectiveIndex="1" MobId="4072" NumOfTimes="100" X="844.0188" Y="-2688.93" Z="91.66666" />
+	<TurnIn QuestName="Samophlange" QuestId="29022" TurnInName="Control Console" TurnInId="4141" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(29023) &amp;&amp; !IsQuestCompleted(29023)" >
+		<CustomBehavior File="InteractWith" MobId="4141" InteractByQuestFrameDisposition="Accept" WaitTime="1000" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" X="828.7782" Y="-2697.759" Z="91.66695" />
+	</If>
+	<Objective QuestName="Samophlange" QuestId="29023" Type="CollectItem" ItemId="5089" CollectCount="1" />
+	<TurnIn QuestName="Samophlange" QuestId="29023" TurnInName="Control Console" TurnInId="4141" />
+	<If Condition="!HasQuest(29024) &amp;&amp; !IsQuestCompleted(29024)" >
+		<CustomBehavior File="InteractWith" MobId="4141" InteractByQuestFrameDisposition="Accept" WaitTime="1000" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" X="828.7782" Y="-2697.759" Z="91.66695" />
+	</If>
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<TurnIn QuestName="Competition Schmompetition" QuestId="29086" TurnInName="Sputtervalve" TurnInId="3442" />
+	<TurnIn QuestName="The Escape" QuestId="863" TurnInName="Sputtervalve" TurnInId="3442" />
+	<TurnIn QuestName="Samophlange" QuestId="29024" TurnInName="Sputtervalve" TurnInId="3442" />
+	<PickUp QuestName="Samophlange Repair" QuestId="14003" GiverName="Sputtervalve" GiverId="3442" />
+	<TurnIn QuestName="Sludge Beast!" QuestId="29089" TurnInName="Nozzlepot" TurnInId="34698" />
+	<TurnIn QuestName="Hyena Extermination" QuestId="29088" TurnInName="Nozzlepot" TurnInId="34698" />
+	<TurnIn QuestName="Samoplange Repair" QuestId="14003" TurnInName="Brak Blusterpipe" TurnInId="34674" />
+	<If Condition="!HasQuest(29026) &amp;&amp; !IsQuestCompleted(29026)" >
+		<PickUp QuestName="Wenikee Boltbucket" QuestId="29026" GiverName="Brak Blusterpipe" GiverId="34674" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<CustomBehavior File="InteractWith" MobId="34674" InteractByGossipOptions="1" WaitTime="10000" />
+	</If>
+	<TurnIn QuestName="Wenikee Boltbucket" QuestId="29026" TurnInName="Wenikee Boltbucket" TurnInId="9316" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<PickUp QuestName="Nugget Slugs" QuestId="29027" GiverName="Wenikee Boltbucket" GiverId="9316" />
+	<PickUp QuestName="A Burning Threat" QuestId="29090" GiverName="Brogor" GiverId="52192" />
+	<Objective QuestName="Nugget Slugs" QuestId="29027" Type="CollectItem" ItemId="11143" CollectCount="10" />
+	<Objective QuestName="A Burning Threat" QuestId="29090" Type="KillMob" MobId="3379" KillCount="8" />
+	<TurnIn QuestName="Nugget Slugs" QuestId="29027" TurnInName="Wenikee Boltbucket" TurnInId="9316" />
+	<TurnIn QuestName="A Burning Threat" QuestId="29090" TurnInName="Brogor" TurnInId="52192" />
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<If Condition="!HasQuest(14004) &amp;&amp; !IsQuestCompleted(14004)" >
+		<PickUp QuestName="Return to Samophlanger" QuestId="14004" GiverName="Wenikee Boltbucket" GiverId="9316" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		<CustomBehavior File="InteractWith" MobId="9316" InteractByGossipOptions="1" WaitTime="10000" />
+	</If>
+	<TurnIn QuestName="Return to Samophlanger" QuestId="14004" TurnInName="Sputtervalve" TurnInId="3442" />
+	<PickUp QuestName="Read the Manual" QuestId="14006" GiverName="Sputtervalve" GiverId="3442" />
+	<PickUp QuestName="Miner's Fortune" QuestId="29015" GiverName="Brak Blusterpipe" GiverId="34674" />
+	<Objective QuestName="Miner's Fortune" QuestId="29015" Type="CollectItem" ItemId="5097" CollectCount="1" />
+	<CustomBehavior File="InteractWith" QuestId="14006" MobId="9336" TerminateWhen="HasItem(11147)" X="1341.065" Y="-3493.27" Z="93.54988" />
+	<CustomBehavior File="InteractWith" QuestId="14006" MobId="3283" MobId2="3286" TerminateWhen="GetItemCount(11148) &gt;= 5" >
+		<HuntingGrounds>
+			<Hotspot X="1261.725" Y="-3621.95" Z="90.01929" />
+			<Hotspot X="1308.001" Y="-3625.193" Z="92.07192" />
+			<Hotspot X="1346.243" Y="-3570.672" Z="92.09566" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	<If Condition="HasItem(11147) &amp;&amp; GetItemCount(11148) &gt;= 5" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(11148)" WaitTime="2000" />
+	</If>
+	<TurnIn QuestName="Miner's Fortune" QuestId="29015" TurnInName="Brak Blusterpipe" TurnInId="34674" />
+	<If Condition="HasQuest(14006) &amp;&amp; IsQuestCompleted(14006)" >
+		<TurnIn QuestName="Read the Manual" QuestId="14006" TurnInName="Sputtervalve" TurnInId="3442" />
+		<CustomBehavior File="WaitTimer" WaitTime="30000" />
+	</If>
+	
+	<If Condition="Me.LevelFraction &gt;= 20" >
+		<CustomBehavior File="Message" Text="Northern Barrens Leveling Complete" LogColor="Orange" />
+		<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />
+	</If>
+	
+	<PickUp QuestName="The Short Way Home" QuestId="29094" GiverName="Sputtervalve" GiverId="3442" />
+	<If Condition="HasQuest(29094) &amp;&amp; !IsQuestCompleted(29094)" >
+		<CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="52203" X="1144.49" Y="-3382.749" Z="92.13802" />
+		<While Condition="Me.IsOnTransport" />
+	</If>
+	<TurnIn QuestName="The Short Way Home" QuestId="29094" TurnInName="Darsok Swiftdagger" TurnInId="3449" />
 	
 	<CustomBehavior File="Message" Text="Northern Barrens Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\[Quest] The Level Grind [Brodie]" />

@@ -1,5 +1,17 @@
 Patch Notes
 
+7/10/13
+
+r374
+Level Grind
+-- Northern Barrens Complete
+-- Ashenvale (Horde) support added, profile not ready
+-- Level Grind low level values adjusted
+-- Goblin starter - Disabling CC when "Near Death"
+-- Added Silverpine Forest (Partial)
+Quest Behaviors
+-- Updates from CJ
+
 7/8/13
 
 r373
