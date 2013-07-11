@@ -108,8 +108,8 @@ namespace Honorbuddy.QuestBehaviors.BallisticVehicle
         public WoWPoint VehicleAcquisitionArea { get; private set; }
 
         // DON'T EDIT THESE--they are auto-populated by Subversion
-        public override string SubversionId { get { return "$Id: BallisticVehicle.cs 574 2013-06-28 08:54:59Z chinajade $"; } }
-        public override string SubversionRevision { get { return "$Rev: 574 $"; } }
+        public override string SubversionId { get { return "$Id: BallisticVehicle.cs 601 2013-07-09 17:34:22Z chinajade $"; } }
+        public override string SubversionRevision { get { return "$Rev: 601 $"; } }
 
 
         protected override void EvaluateUsage_DeprecatedAttributes(XElement xElement)
@@ -313,7 +313,7 @@ namespace Honorbuddy.QuestBehaviors.BallisticVehicle
                                 new Decorator(context => Query.IsViable(SelectedTarget),
                                     new PrioritySelector(
                                         // Make certain were within the prescribed range for engagement...
-                                        new Decorator(context => Me.Location.Distance(SelectedTarget.Location) > CombatMaxEngagementDistance,
+                                        new Decorator(context => Me.Location.Distance(SelectedTarget.Location) > CharacterSettings.Instance.PullDistance,
                                             new UtilityBehaviorPS.MoveTo(
                                                 context => SelectedTarget.Location,
                                                 context => string.Format("within range of '{0}'", SelectedTarget.Name),
