@@ -47,6 +47,19 @@
 	</Vendors>
 
 <!-- Quest Overrides -->
+
+<Quest Name="The Scarlet Palisade" Id="24980" >
+	<Objective Type="KillMob" MobId="1535" KillCount="10" >
+		<Hotspots>
+			<Hotspot X="2440.157" Y="1537.791" Z="35.64959" />
+			<Hotspot X="2408.514" Y="1503.221" Z="35.20585" />
+			<Hotspot X="2359.505" Y="1516.638" Z="35.93795" />
+			<Hotspot X="2322.241" Y="1558.105" Z="34.37236" />
+			<Hotspot X="2333.527" Y="1611.573" Z="35.67821" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
 <!-- End of Quest Overrides -->
 
 <QuestOrder>
@@ -97,7 +110,7 @@
 		<PickUp QuestName="A Scarlet Letter" QuestId="24979" GiverType="Item" GiverId="52079" />
 	</If>
 	<If Condition="HasQuest(24979) &amp;&amp; !IsQuestCompleted(24979)" >
-		<CustomBehavior File="InteractWith" QuestId="24979" MobId="38999" InteractByGossipOptions="1,1,1" NonCompeteDistance="0" NumOfTimes="100" WaitTime="30000" X="2442.11" Y="1597.152" Z="72.15609" />
+		<CustomBehavior File="InteractWith" QuestId="24979" MobId="38999" InteractByGossipOptions="1,1,1" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" NumOfTimes="100" WaitTime="30000" X="2442.11" Y="1597.152" Z="72.15609" />
 	</If>
 	<TurnIn QuestName="Variety is the Spice of Death" QuestId="24976" TurnInName="Apothecary Johaan" TurnInId="1518" />
 	<TurnIn QuestName="The Scarlet Palisade" QuestId="24980" TurnInName="Deathguard Simmer" TurnInId="1519" />
@@ -131,6 +144,7 @@
 
 	<If Condition="HasQuest(24992)" >
 		<TurnIn QuestName="Escaped from Gilneas" QuestId="24992" TurnInName="Executor Zygand" TurnInId="1515" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" />
 	</If>
 	
 	<If Condition="!HasQuest(24992) &amp;&amp; IsQuestCompleted(24992)" >

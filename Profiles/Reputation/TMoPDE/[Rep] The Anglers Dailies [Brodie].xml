@@ -192,6 +192,7 @@
 <!-- Angler Shen -->
 	<While Condition="HasQuestAvailable(59586)" >
 		<CustomBehavior File="FlyTo" X="-1469.85" Y="-218.82" Z="5.43" />
+		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="59586" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
@@ -200,6 +201,7 @@
 <!-- Fiznix -->
 	<While Condition="HasQuestAvailable(60136)" >
 		<CustomBehavior File="FlyTo" X="-1503.70" Y="-219.3447" Z="0.643862" />
+		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" MobId="60136" InteractByQuestFrameDisposition="Ignore" PreInteractMountStrategy="Dismount" WaitTime="1000" />
 		<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />

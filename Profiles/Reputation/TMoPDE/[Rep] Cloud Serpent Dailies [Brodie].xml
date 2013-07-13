@@ -1250,6 +1250,7 @@
 	
 	<If Condition="HasQuest(30144) &amp;&amp; IsQuestCompleted(30144)" >
 		<CustomBehavior File="FlyTo" DestName="Instructor Windblade" X="1620.606" Y="-2641.016" Z="149.9121" />
+		<CustomBehavior File="EjectVeh" />
 		<TurnIn QuestName="Flight Training: Ring Round-Up" QuestId="30144" TurnInName="Instructor Windblade" TurnInId="58420" X="1620.606" Y="-2641.016" Z="149.9121" />
 	</If>
 
