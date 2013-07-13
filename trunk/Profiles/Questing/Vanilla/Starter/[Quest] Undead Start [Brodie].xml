@@ -335,7 +335,9 @@
 	<PickUp QuestName="Assault on the Rotbrain Encampment" QuestId="24971" GiverName="Darnell" GiverId="49425" />
 	<Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49424" KillCount="1" />
 	<Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49422" KillCount="8" />
+	<DisableBehavior Name="Combat, Loot" />
 	<TurnIn QuestName="Assault on the Rotbrain Encampment" QuestId="24971" TurnInName="Shadow Priest Sarvis" TurnInId="1569" />
+	<EnableBehavior Name="Combat, Loot" />
 
 	<PickUp QuestName="Vital Intelligence" QuestId="24972" GiverName="Shadow Priest Sarvis" GiverId="1569" />
 	<TurnIn QuestName="Vital Intelligence" QuestId="24972" TurnInName="Deathguard Simmer" TurnInId="1519" X="2222.186" Y="1012.801" Z="37.12211" />

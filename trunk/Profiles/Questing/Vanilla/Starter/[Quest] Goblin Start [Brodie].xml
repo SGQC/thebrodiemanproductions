@@ -1095,6 +1095,8 @@
 		<CustomBehavior File="WaitTimer" WaitTime="62000" GoalText="Waiting for ride {TimeRemaining}" />
 	</If>
 	<TurnIn QuestName="Message for Garrosh" QuestId="25267" TurnInName="Message for Garrosh" TurnInId="39605" X="1668.852" Y="-4343.63" Z="28.32091" />
+	
+	<PickUp QuestName="Report to the Labor Captain" QuestId="25275" GiverName="Garrosh Hellscream" GiverId="39605" X="1668.852" Y="-4343.63" Z="28.32091" />
 
 	<CustomBehavior File="Message" Text="Goblin Starter Quests Complete" LogColor="Orange" />
 	<CustomBehavior File="LoadProfile" ProfileName="..\..\[Quest] The Level Grind [Brodie]" />

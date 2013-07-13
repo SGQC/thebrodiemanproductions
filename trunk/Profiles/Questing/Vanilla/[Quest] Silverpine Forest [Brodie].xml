@@ -38,7 +38,7 @@
 	</Mailboxes>
   
 	<AvoidMobs>
-		<Mob Name="Forest Ettin" Entry="44367" />
+		<Mob Name="Korok the Colossus" Entry="45301" />
 	</AvoidMobs>
    
 	<Blackspots>
@@ -132,7 +132,7 @@
 	<Objective QuestName="Give Em Hell" QuestId="27073" Type="KillMob" MobId="44547" KillCount="10" />
 
 	<CustomBehavior File="InteractWith" QuestId="27088" MobId="44367" MobState="Alive" InteractByUsingItemId="60808" 
-		CollectionDistance="1000" NumOfTimes="1000" NonCompeteDistance="0" X="854.54" Y="1759.30" Z="14.25" />
+		CollectionDistance="1000" NumOfTimes="1000" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="15" X="854.54" Y="1759.30" Z="14.25" />
 	<TurnIn QuestName="It's Only Poisonous if You Ingest It" QuestId="27088" TurnInName="Apothecary Wormcrud" TurnInId="44912" />
 	<TurnIn QuestName="Steel Thunder" QuestId="27069" TurnInName="Admiral Hatchet" TurnInId="44916" />
 	<TurnIn QuestName="Give Em Hell" QuestId="27073" TurnInName="Warlord Torok" TurnInId="44917" />
@@ -234,7 +234,7 @@
 
 	<PickUp QuestName="Seek and Destroy" QuestId="27193" GiverName="Lady Sylvanas Windrunner" GiverId="44365" />
 	<If Condition="HasQuest(27193) &amp;&amp; !IsQuestCompleted(27193)" >
-		<RunTo X="142.8711" Y="1532.819" Z="114.9757" />
+		<!--<RunTo X="142.8711" Y="1532.819" Z="114.9757" /> -->
 		<Objective QuestName="Seek and Destroy" QuestId="27193" Type="CollectItem" ItemId="60867" CollectCount="1" />
 	</If>
 	<If Condition="HasQuest(27193) &amp;&amp; IsQuestCompleted(27193)" >
@@ -257,6 +257,16 @@
 	</If>
 	<TurnIn QuestName="To Forsaken Forward Command" QuestId="27290" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" />
 	<EnableBehavior Name="Combat" />
+	
+	<PickUp QuestName="In Time, All Will Be Revealed" QuestId="27342" GiverName="Deathstalker Commander Belmont" GiverId="45312" />
+	<PickUp QuestName="Losing Ground" QuestId="27333" GiverName="Forward Commander Onslaught" GiverId="45315" />
+	<PickUp QuestName="The F.C.D." QuestId="27345" GiverName="Forward Commander Onslaught" GiverId="45315" />
+	<Objective QuestName="The F.C.D." QuestId="27345" Type="CollectItem" ItemId="60953" CollectCount="1" />
+	<Objective QuestName="In Time, All Will Be Revealed" QuestId="27342" Type="CollectItem" ItemId="60958" CollectCount="6" />
+	<Objective QuestName="Losing Ground" QuestId="27333" Type="KillMob" MobId="45292" KillCount="12" />
+	<TurnIn QuestName="Losing Ground" QuestId="27333" TurnInName="Forward Commander Onslaught" TurnInId="45315" />
+	<TurnIn QuestName="The F.C.D." QuestId="27345" TurnInName="Forward Commander Onslaught" TurnInId="45315" />
+	<TurnIn QuestName="In Time, All Will Be Revealed" QuestId="27342" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" />
 	
 
 	<CustomBehavior File="Message" Text="Silverpine Forest Complete" LogColor="Orange" />
