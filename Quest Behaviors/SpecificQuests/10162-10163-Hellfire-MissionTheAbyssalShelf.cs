@@ -1,4 +1,4 @@
-// Behavior originally contributed by mastahg / rework by chinajadeb
+// Behavior originally contributed by mastahg / rework by chinajade
 //
 // DOCUMENTATION:
 //     
@@ -22,20 +22,19 @@ using Styx.CommonBot;
 using Styx.CommonBot.Frames;
 using Styx.CommonBot.Profiles;
 using Styx.TreeSharp;
-using Styx.WoWInternals;
 using Styx.WoWInternals.WoWObjects;
 
 using Action = Styx.TreeSharp.Action;
 #endregion
 
 
-namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
+namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MissionTheAbyssalShelf
 {
-    [CustomBehaviorFileName(@"SpecificQuests\10129-10146-Hellfire-MurkethAndShaadraz")]
-    public class MurkethAndShaadraz : QuestBehaviorBase
+    [CustomBehaviorFileName(@"SpecificQuests\10162-10163-Hellfire-MissionTheAbyssalShelf")]
+    public class MissionTheAbyssalShelf : QuestBehaviorBase
     {
         #region Constructor and Argument Processing
-        public MurkethAndShaadraz(Dictionary<string, string> args)
+        public MissionTheAbyssalShelf(Dictionary<string, string> args)
             : base(args)
         {
             try
@@ -71,12 +70,13 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
 
 
         // Attributes provided by caller
-        private double BombRange = 90.0;    // Range is actually 100.0, but we allow for factor of safety
-        private const int ItemId_Bomb = 28038;
-        private int MobId_FlightMaster { get; set; }    // changes based on faction--set in OnStart()
-        private const int MobId_GatewayMurketh = 19291;
-        private const int MobId_GatewayShaadraz = 19292;
-        private WoWPoint WaitLocation { get; set; }     // changes based on faction--set in OnStart()
+        private double BombRange = 73.0;    // Range is actually 80.0, but we allow for factor of safety
+        private const int ItemId_Bomb = 28132;
+        private const int MobId_FelCannon = 19399;
+        private const int MobId_GanArgPeon = 19398;
+        private int MobId_FlightMaster { get; set; }        // changes based on faction--set in OnStart()
+        private const int MobId_MoargOverseer = 19397;
+        private WoWPoint WaitLocation { get; set; }         // changes based on faction--set in OnStart()
         #endregion
 
 
@@ -90,7 +90,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
         }
 
         private WoWUnit FlightMaster { get; set; }
-        private WoWObject SelectedTarget { get; set; }
+        private WoWUnit SelectedTarget { get; set; }
 
         private Composite _behaviorTreeHook_TaxiCheck = null;
         private WoWItem _bomb = null;
@@ -98,7 +98,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
 
 
         #region Destructor, Dispose, and cleanup
-        ~MurkethAndShaadraz()
+        ~MissionTheAbyssalShelf()
         {
             Dispose(false);
         }
@@ -130,12 +130,13 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
             // So we don't want to falsely inform the user of things that will be skipped.
             if (!IsDone)
             {
-                MobId_FlightMaster = Me.IsAlliance
-                    ? 19409     // Wing Commander Dabir'ee
+                MobId_FlightMaster =
+                    Me.IsAlliance
+                    ? 20235     // Gryphoneer Windbellow
                     : 19401;    // Wing Commander Brack
                 WaitLocation =
                     Me.IsAlliance
-                    ? new WoWPoint(-670.4271, 1851.844, 66.9099).FanOutRandom(4.0)      // Wing Commander Dabir'ee
+                    ? new WoWPoint(294.6884, 1498.062, -14.59722).FanOutRandom(4.0)     // Gryphoneer Windbellow
                     : new WoWPoint(-24.09538, 2125.857, 112.7034).FanOutRandom(4.0);    // Wing Commander Brack
 
                 _behaviorTreeHook_TaxiCheck = new ExceptionCatchingWrapper(this, CreateBehavior_TaxiCheck());
@@ -159,9 +160,11 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
                     new Decorator(context => Bomb.Cooldown > 0,
                         new ActionAlwaysSucceed()),
 
-                    // Bomb Targets...
-                    SubBehavior_BombTarget(context => 1, context => MobId_GatewayMurketh),
-                    SubBehavior_BombTarget(context => 2, context => MobId_GatewayShaadraz)
+                    // Take out targets...
+                    // NB: We save peons as lowest priority, since they are more plentiful...
+                    SubBehavior_BombTarget(context => 2, context => MobId_MoargOverseer),
+                    SubBehavior_BombTarget(context => 3, context => MobId_FelCannon),
+                    SubBehavior_BombTarget(context => 1, context => MobId_GanArgPeon)
                 ));
         }
 
@@ -218,7 +221,7 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
                                     new Action(context => { Mount.Dismount(); })),
                                 new Decorator(context => !GossipFrame.Instance.IsVisible,
                                     new Action(context => { FlightMaster.Interact(); })),
-                                new Action(context => { GossipFrame.Instance.SelectGossipOption(0); })
+                                new Action(context => { GossipFrame.Instance.SelectGossipOption(1); })
                             ))
                     ))
             );
@@ -233,25 +236,33 @@ namespace Honorbuddy.Quest_Behaviors.SpecificQuests.MurkethAndShaadraz
             Contract.Requires(mobIdDelegate != null, context => "mobIdDelegate != null");
 
             return new Decorator(context =>
-            {
-                var questObjectiveIndex = questObjectiveIndexDelegate(context);
-                var mobId = mobIdDelegate(context);
+                {
+                    var questObjectiveIndex = questObjectiveIndexDelegate(context);
+                    var mobId = mobIdDelegate(context);
 
-                if (Me.IsQuestObjectiveComplete(QuestId, questObjectiveIndex))
-                    { return false; }
+                    if (Me.IsQuestObjectiveComplete(QuestId, questObjectiveIndex))
+                        { return false; }
 
-                SelectedTarget = ObjectManager.ObjectList.FirstOrDefault(o => o.Entry == mobId);
-                if (!Query.IsViable(SelectedTarget))
-                    { return false; }
+                    SelectedTarget =
+                       (from wowObject in Query.FindMobsAndFactions(Utility.ToEnumerable((int)mobId))
+                        let wowUnit = wowObject as WoWUnit
+                        where
+                            Query.IsViable(wowUnit)
+                            && wowUnit.IsAlive
+                        orderby wowUnit.DistanceSqr
+                        select wowUnit)
+                        .FirstOrDefault();
 
-                return Me.Location.Distance(SelectedTarget.Location) <= BombRange;
-            },
+                    if (!Query.IsViable(SelectedTarget))
+                        { return false; }
+
+                    return Me.Location.Distance(SelectedTarget.Location) <= BombRange;
+                },
                     new Action(context =>
                     {
                         QBCLog.DeveloperInfo("Bombing {0}", SelectedTarget.SafeName());
                         Bomb.Use();
-                        // NB: The "FanOutRandom()" simulates imperfect human aim.
-                        SpellManager.ClickRemoteLocation(SelectedTarget.Location.FanOutRandom(7.5));
+                        SpellManager.ClickRemoteLocation(SelectedTarget.Location);
                     }));
         }
     }
